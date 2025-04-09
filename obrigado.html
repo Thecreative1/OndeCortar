@@ -52,5 +52,12 @@
     Caso seja necessária alguma correção ou informação adicional, entraremos em contacto consigo por email.</p>
     <a href="index.html" class="botao">Voltar à página inicial</a>
   </div>
+
+  <script>
+    // Redireciona automaticamente para esta página se vier da Formspree
+    if (window.location.href.includes("formspree.io")) {
+      window.location.href = "/obrigado.html";
+    }
+  </script>
 </body>
 </html>
