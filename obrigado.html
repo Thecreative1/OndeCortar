@@ -3,29 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Regista a tua barbearia</title>
+  <title>Obrigado - OndeCortar.pt</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      text-align: center;
+      padding: 5rem;
+    }
+    .caixa {
+      background: white;
+      padding: 3rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+    a {
+      margin-top: 2rem;
+      display: inline-block;
+      color: white;
+      background-color: #e63946;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Regista a tua barbearia</h1>
-  <form action="https://formspree.io/f/xxxxx" method="POST">
-    <input type="hidden" name="_redirect" value="https://www.ondecortar.pt/obrigado.html">
-
-    <label for="nome">Nome da barbearia:</label><br>
-    <input type="text" id="nome" name="nome" required><br><br>
-
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <label for="telefone">Telefone:</label><br>
-    <input type="text" id="telefone" name="telefone" required><br><br>
-
-    <label for="morada">Morada:</label><br>
-    <input type="text" id="morada" name="morada" required><br><br>
-
-    <label for="mensagem">Mensagem (opcional):</label><br>
-    <textarea id="mensagem" name="mensagem"></textarea><br><br>
-
-    <button type="submit">Submeter</button>
-  </form>
+  <div class="caixa">
+    <h1>Registo enviado com sucesso!</h1>
+    <p>Obrigado por submeter os dados. A sua barbearia será avaliada e publicada brevemente.</p>
+    <a href="index.html">Voltar ao início</a>
+  </div>
 </body>
 </html>
