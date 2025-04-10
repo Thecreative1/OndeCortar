@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OndeCortar.pt</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+    }
+    header {
+      background-color: #111;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    .search-box {
+      max-width: 600px;
+      margin: 1rem auto;
+      display: flex;
+    }
+    .search-box input {
+      flex-grow: 1;
+      padding: 0.5rem;
+    }
+    .map-container {
+      height: 400px;
+    }
+    .cta {
+      background-color: #eafbee;
+      text-align: center;
+      padding: 2rem;
+    }
+    .cta h2 {
+      color: #1c5d39;
+    }
+    .cta a.btn {
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bem-vindo ao OndeCortar.pt</h1>
+  <header>
+    <h1><strong>OndeCortar.pt</strong></h1>
+    <p>Descubra barbeiros perto de si – fácil, rápido e gratuito</p>
+    <div class="search-box">
+      <input type="text" placeholder="Ex: Barbeiro no centro, Guimarães" />
+      <button class="btn btn-danger">🔍</button>
+    </div>
+  </header>
+
+  <div id="map" class="map-container"></div>
+
+  <section class="cta">
+    <h2>É barbeiro?</h2>
+    <p>Adicione o seu espaço gratuitamente e comece a receber novos clientes hoje mesmo.</p>
+    <a href="registar.html" class="btn btn-danger">Quero aparecer no OndeCortar.pt</a>
+  </section>
+
+  <script>
+    const map = L.map('map').setView([41.4432, -8.2962], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Exemplo de barbearias
+    const barbearias = [
+      { nome: "Barbearia Central", coords: [41.4415, -8.2965] },
+      { nome: "Corte Fino", coords: [41.4442, -8.2910] }
+    ];
+    barbearias.forEach(b => {
+      L.marker(b.coords).addTo(map).bindPopup(b.nome);
+    });
+  </script>
 </body>
 </html>
