@@ -50,6 +50,17 @@
       padding: 2rem;
       font-size: 0.9rem;
     }
+    .popup-card {
+      max-width: 250px;
+      font-size: 0.9rem;
+    }
+    .popup-card strong {
+      font-size: 1rem;
+    }
+    .popup-card a {
+      color: #0d6efd;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -76,14 +87,23 @@
 </footer>
 
 <script>
-  const map = L.map('map').setView([41.4432, -8.2962], 14);
+  const map = L.map('map').setView([41.4432, -8.2962], 13);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
   if (typeof barbearias !== 'undefined') {
     barbearias.forEach(b => {
-      L.marker(b.coords).addTo(map).bindPopup(b.nome);
+      const popupContent = `
+        <div class="popup-card">
+          <strong>${b.name}</strong><br>
+          ${b.morada ? `📍 ${b.morada}<br>` : ''}
+          ${b.telefone ? `📞 ${b.telefone}<br>` : ''}
+          ${b.website ? `🌐 <a href="${b.website}" target="_blank">${b.website}</a><br>` : ''}
+          ${b.email ? `✉️ <a href="mailto:${b.email}">${b.email}</a>` : ''}
+        </div>
+      `;
+      L.marker(b.coords).addTo(map).bindPopup(popupContent);
     });
   } else {
     console.error("Lista de barbearias não encontrada. Verifique se barbeiros.js está carregado corretamente.");
