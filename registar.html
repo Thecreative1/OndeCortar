@@ -3,14 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registo de Barbearia</title>
+  <title>Regista a tua barbearia</title>
+  <script>
+    function redirecionarDepoisDeSubmeter(event) {
+      event.preventDefault();
+      const form = event.target;
+
+      const dados = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: dados,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(res => {
+        if (res.ok) {
+          window.location.href = "https://www.ondecortar.pt/obrigado.html";
+        } else {
+          alert("Erro ao submeter o formulário. Tenta novamente.");
+        }
+      }).catch(() => {
+        alert("Erro ao submeter o formulário. Tenta novamente.");
+      });
+    }
+  </script>
 </head>
 <body>
-
   <h1>Regista a tua barbearia</h1>
-
-  <form action="https://formspree.io/f/mkgjknvn" method="POST">
-    <input type="hidden" name="_redirect" value="https://ondecortar.pt/obrigado.html">
+  <form action="https://formspree.io/f/xxxxx" method="POST" onsubmit="redirecionarDepoisDeSubmeter(event)">
 
     <label for="nome">Nome da barbearia:</label><br>
     <input type="text" id="nome" name="nome" required><br><br>
@@ -19,16 +39,15 @@
     <input type="email" id="email" name="email" required><br><br>
 
     <label for="telefone">Telefone:</label><br>
-    <input type="tel" id="telefone" name="telefone"><br><br>
+    <input type="text" id="telefone" name="telefone" required><br><br>
 
     <label for="morada">Morada:</label><br>
-    <input type="text" id="morada" name="morada"><br><br>
+    <input type="text" id="morada" name="morada" required><br><br>
 
     <label for="mensagem">Mensagem (opcional):</label><br>
     <textarea id="mensagem" name="mensagem"></textarea><br><br>
 
     <button type="submit">Submeter</button>
   </form>
-
 </body>
 </html>
