@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="barbeiros/barbeiros.js"></script>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -71,7 +72,7 @@
 </section>
 
 <footer>
-  <p>© 2025 OndeCortar.pt | Feito com ❤️ em Portugal</p>
+  <p>© 2025 OndeCortar.pt | Feito com ❤️ em Guimarães</p>
 </footer>
 
 <script>
@@ -80,13 +81,13 @@
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
-  const barbearias = [
-    { nome: "Barbearia Central", coords: [41.4415, -8.2965] },
-    { nome: "Corte Fino", coords: [41.4442, -8.2910] }
-  ];
-  barbearias.forEach(b => {
-    L.marker(b.coords).addTo(map).bindPopup(b.nome);
-  });
+  if (typeof barbearias !== 'undefined') {
+    barbearias.forEach(b => {
+      L.marker(b.coords).addTo(map).bindPopup(b.nome);
+    });
+  } else {
+    console.error("Lista de barbearias não encontrada. Verifique se barbeiros.js está carregado corretamente.");
+  }
 </script>
 
 </body>
