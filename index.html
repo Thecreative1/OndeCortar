@@ -53,6 +53,8 @@
     .popup-card {
       max-width: 250px;
       font-size: 0.9rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     .popup-card strong {
       font-size: 1rem;
@@ -60,6 +62,7 @@
     .popup-card a {
       color: #0d6efd;
       text-decoration: none;
+      word-break: break-word;
     }
   </style>
 </head>
@@ -83,7 +86,7 @@
 </section>
 
 <footer>
-  <p>© 2025 OndeCortar.pt | Feito com ❤️ em Guimarães</p>
+  <p>© 2025 OndeCortar.pt | Feito com ❤️ em Portugal</p>
 </footer>
 
 <script>
@@ -96,7 +99,7 @@
     barbearias.forEach(b => {
       const popupContent = `
         <div class="popup-card">
-          <strong>${b.name}</strong><br>
+          <strong>${b.name || b.nome || 'Barbearia'}</strong><br>
           ${b.morada ? `📍 ${b.morada}<br>` : ''}
           ${b.telefone ? `📞 ${b.telefone}<br>` : ''}
           ${b.website ? `🌐 <a href="${b.website}" target="_blank">${b.website}</a><br>` : ''}
