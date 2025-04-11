@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OndeCortar.pt</title>
+  <title>OndeCortar.pt - Encontre Barbeiros em Portugal Rápido e Grátis</title>
+  <meta name="description" content="Descubra facilmente onde cortar o cabelo em Portugal. Barbeiros locais com contactos, localização no mapa e sem custos. Encontre já o seu barbeiro!">
+  <meta name="keywords" content="barbearia Portugal, onde cortar cabelo, barbeiro perto de mim, onde cortar.pt" />
+  <meta property="og:title" content="OndeCortar.pt - Encontre Barbeiros em Portugal Rápido e Grátis" />
+  <meta property="og:description" content="Barbeiros locais com contactos, localização e mapa. Sem custos, sem confusões. Simples." />
+  <meta property="og:url" content="https://ondecortar.pt/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ondecortar.pt/imagem_preview.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -72,7 +79,7 @@
   <h1><strong>OndeCortar.pt</strong></h1>
   <p>Descubra barbeiros perto de si – fácil, rápido e gratuito</p>
   <div class="search-box">
-    <input type="text" placeholder="Ex: Barbeiro no centro, Guimarães" />
+    <input type="text" placeholder="Ex: Barbeiro em Lisboa, Porto, Faro..." />
     <button class="btn btn-danger">🔍</button>
   </div>
 </header>
@@ -90,7 +97,7 @@
 </footer>
 
 <script>
-  const map = L.map('map').setView([41.4432, -8.2962], 13);
+  const map = L.map('map').setView([39.5, -8.0], 7);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
