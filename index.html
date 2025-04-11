@@ -107,6 +107,13 @@
 
   let markers = [];
 
+  function normalizar(texto) {
+    return texto
+      .normalize("NFD") // separa acentos
+      .replace(/[\u0300-\u036f]/g, "") // remove acentos
+      .toLowerCase();
+  }
+
   function adicionarMarcadores(lista) {
     markers.forEach(m => map.removeLayer(m));
     markers = [];
@@ -127,7 +134,7 @@
   }
 
   function buscarBarbearia() {
-    const termo = document.getElementById("searchInput").value.toLowerCase();
+    const termo = normalizar(document.getElementById("searchInput").value);
     if (!termo || termo.length < 2) {
       adicionarMarcadores(barbearias);
       return;
@@ -135,7 +142,7 @@
     const filtradas = barbearias.filter(b => {
       const nome = b.name || b.nome || "";
       const morada = b.morada || "";
-      return nome.toLowerCase().includes(termo) || morada.toLowerCase().includes(termo);
+      return normalizar(nome).includes(termo) || normalizar(morada).includes(termo);
     });
     adicionarMarcadores(filtradas);
   }
@@ -147,5 +154,3 @@
   }
 </script>
 
-</body>
-</html>
