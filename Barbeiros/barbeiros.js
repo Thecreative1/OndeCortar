@@ -1,6 +1,7 @@
 const barbearias = [
-  {
 
+// === GUIMARÃES ===
+  {
     nome: "Barbearia Fora D’Horas",
     coords: [41.462816, -8.320178],
     morada: "Rua de Santa Eulália, Guimarães, Braga 4800-098",
@@ -41,5 +42,22 @@ const barbearias = [
     morada: "GuimarãeShopping, Guimarães",
     website: "https://www.guimaraeshopping.pt/lojas/1920-barber-shop/",
     coords: [41.4375, -8.2910]
+  },
+
+  // === FAFE ===
+  {
+    nome: "Barbearia Fafense",
+    morada: "Rua Ponte do Ranha, nº 298, Fafe",
+    website: "https://www.instagram.com/barbearia_fafense/",
+    coords: [41.4515, -8.1680]
+  },
+  {
+    nome: "Barbershop DuArt",
+    morada: "Rua dos Aliados, Loja 5, 4820-248 Fafe",
+    telefone: "+351 253 176 410",
+    email: "duart_l@hotmail.com",
+    website: "https://barbershopduart.ongenda.com/",
+    coords: [41.4540, -8.1685]
   }
+
 ];
