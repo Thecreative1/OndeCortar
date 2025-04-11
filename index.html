@@ -36,6 +36,9 @@
       flex-grow: 1;
       padding: 0.5rem;
     }
+    .search-box button {
+      padding: 0.5rem 1rem;
+    }
     .map-container {
       height: 400px;
     }
@@ -79,8 +82,8 @@
   <h1><strong>OndeCortar.pt</strong></h1>
   <p>Descubra barbeiros perto de si – fácil, rápido e gratuito</p>
   <div class="search-box">
-    <input type="text" placeholder="Ex: Barbeiro em Lisboa, Porto, Faro..." />
-    <button class="btn btn-danger">🔍</button>
+    <input type="text" id="searchInput" placeholder="Ex: Barbeiro em Lisboa, Porto, Faro..." />
+    <button class="btn btn-danger" onclick="buscarBarbearia()">🔍</button>
   </div>
 </header>
 
@@ -102,8 +105,13 @@
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
-  if (typeof barbearias !== 'undefined') {
-    barbearias.forEach(b => {
+  let markers = [];
+
+  function adicionarMarcadores(lista) {
+    markers.forEach(m => map.removeLayer(m));
+    markers = [];
+
+    lista.forEach(b => {
       const popupContent = `
         <div class="popup-card">
           <strong>${b.name || b.nome || 'Barbearia'}</strong><br>
@@ -113,8 +121,27 @@
           ${b.email ? `✉️ <a href="mailto:${b.email}">${b.email}</a>` : ''}
         </div>
       `;
-      L.marker(b.coords).addTo(map).bindPopup(popupContent);
+      const marker = L.marker(b.coords).addTo(map).bindPopup(popupContent);
+      markers.push(marker);
     });
+  }
+
+  function buscarBarbearia() {
+    const termo = document.getElementById("searchInput").value.toLowerCase();
+    if (!termo || termo.length < 2) {
+      adicionarMarcadores(barbearias);
+      return;
+    }
+    const filtradas = barbearias.filter(b => {
+      const nome = b.name || b.nome || "";
+      const morada = b.morada || "";
+      return nome.toLowerCase().includes(termo) || morada.toLowerCase().includes(termo);
+    });
+    adicionarMarcadores(filtradas);
+  }
+
+  if (typeof barbearias !== 'undefined') {
+    adicionarMarcadores(barbearias);
   } else {
     console.error("Lista de barbearias não encontrada. Verifique se barbeiros.js está carregado corretamente.");
   }
