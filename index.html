@@ -94,6 +94,11 @@
       max-width: 600px;
       margin: 2rem;
     }
+    #sobreModalContent .btn {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      color: #000;
+    }
   </style>
 </head>
 <body>
@@ -124,7 +129,7 @@
     <p>Se desejar <strong>adicionar, atualizar ou remover</strong> a sua barbearia, por favor envie um email para: <a href="mailto:contacto@ondecortar.pt">contacto@ondecortar.pt</a>.</p>
     <p>Obrigado por fazer parte da rede de barbearias em Portugal!</p>
     <div class="text-end">
-      <button class="btn btn-light" onclick="fecharSobre()">Fechar</button>
+      <button class="btn" onclick="fecharSobre()">Fechar</button>
     </div>
   </div>
 </div>
@@ -143,7 +148,7 @@
   let markers = [];
 
   function normalizar(texto) {
-    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    return texto.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
   }
 
   function adicionarMarcadores(lista) {
