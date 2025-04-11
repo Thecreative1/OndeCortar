@@ -74,26 +74,6 @@
       text-decoration: none;
       word-break: break-word;
     }
-    #sobreModal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
-    }
-    #sobreModalContent {
-      background: #fff;
-      color: #000;
-      padding: 2rem;
-      border-radius: 8px;
-      max-width: 600px;
-      margin: 2rem;
-    }
   </style>
 </head>
 <body>
@@ -115,23 +95,8 @@
   <a href="registar.html" class="btn btn-danger">Quero aparecer no OndeCortar.pt</a>
 </section>
 
-<!-- Modal Sobre o Site -->
-<div id="sobreModal">
-  <div id="sobreModalContent">
-    <h5>Sobre o OndeCortar.pt</h5>
-    <p>OndeCortar.pt é uma plataforma independente que ajuda pessoas a encontrarem barbearias em Portugal de forma rápida e visual.</p>
-    <p>Todas as informações foram recolhidas de fontes públicas disponíveis online.</p>
-    <p>Se desejar <strong>adicionar, atualizar ou remover</strong> a sua barbearia, por favor envie um email para: <a href="mailto:contacto@ondecortar.pt">contacto@ondecortar.pt</a>.</p>
-    <p>Obrigado por fazer parte da rede de barbearias em Portugal!</p>
-    <div class="text-end">
-      <button class="btn btn-light" onclick="fecharSobre()">Fechar</button>
-    </div>
-  </div>
-</div>
-
 <footer>
   <p>© 2025 OndeCortar.pt | Feito com ❤️ em Portugal</p>
-  <p><a href="#" onclick="abrirSobre()">Sobre o site</a></p>
 </footer>
 
 <script>
@@ -143,7 +108,10 @@
   let markers = [];
 
   function normalizar(texto) {
-    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    return texto
+      .normalize("NFD") // separa acentos
+      .replace(/[\u0300-\u036f]/g, "") // remove acentos
+      .toLowerCase();
   }
 
   function adicionarMarcadores(lista) {
@@ -179,14 +147,6 @@
     adicionarMarcadores(filtradas);
   }
 
-  function abrirSobre() {
-    document.getElementById("sobreModal").style.display = "flex";
-  }
-
-  function fecharSobre() {
-    document.getElementById("sobreModal").style.display = "none";
-  }
-
   if (typeof barbearias !== 'undefined') {
     adicionarMarcadores(barbearias);
   } else {
@@ -194,5 +154,3 @@
   }
 </script>
 
-</body>
-</html>
