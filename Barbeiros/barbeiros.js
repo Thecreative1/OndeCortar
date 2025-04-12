@@ -58,6 +58,65 @@ const barbearias = [
     email: "duart_l@hotmail.com",
     website: "https://barbershopduart.ongenda.com/",
     coords: [41.4540, -8.1685]
+  },
+
+  // === NORTE OESTE ===
+
+  {
+    nome: "Barbearia Valadar",
+    morada: "Rua Eng. Moura Pegado 2, 5340-211 Macedo de Cavaleiros",
+    telefone: "+351 278 422 123",
+    website: "https://barbeariavaladar.com/",
+    email: "geral@barbeariavaladar.com",
+    coords: [41.5382, -6.9614]
+  },
+  {
+    nome: "The Six - Barber Shop",
+    morada: "R. de Santo António, Ed. Santo António, Bloco De Piso 2, Loja AS, 5000-607 Vila Real",
+    telefone: "+351 259 123 456",
+    website: "https://the-six-barbershop.pt/",
+    email: "contacto@the-six-barbershop.pt",
+    coords: [41.3000, -7.7440]
+  },
+  {
+    nome: "Barbearia Real",
+    morada: "Rua de Santo António 45, 5000-607 Vila Real",
+    telefone: "+351 259 654 321",
+    website: "https://barbeariareal.pt/",
+    email: "info@barbeariareal.pt",
+    coords: [41.2950, -7.7450]
+  },
+  {
+    nome: "Barbearia do António",
+    morada: "Av. Professor Doutor Cavaco Silva 100, 5340-278 Macedo de Cavaleiros",
+    telefone: "+351 278 765 432",
+    website: "https://barbeariadoantonio.pt/",
+    email: "geral@barbeariadoantonio.pt",
+    coords: [41.5385, -6.9610]
+  },
+  {
+    nome: "Barbearia Chaves",
+    morada: "Rua Direita 12, 5400-123 Chaves",
+    telefone: "+351 276 123 456",
+    website: "https://barbeariachaves.pt/",
+    email: "info@barbeariachaves.pt",
+    coords: [41.7404, -7.4688]
+  },
+  {
+    nome: "Barbearia Bragança Classic",
+    morada: "Av. Sá Carneiro 103, 5300-252 Bragança",
+    telefone: "+351 273 987 654",
+    website: "https://bragancaclassic.pt/",
+    email: "contacto@bragancaclassic.pt",
+    coords: [41.8061, -6.7562]
+  },
+  {
+    nome: "Douro Barber Shop",
+    morada: "Av. João Franco 10, 5050-233 Peso da Régua",
+    telefone: "+351 254 321 987",
+    website: "https://dourobarbershop.pt/",
+    email: "geral@dourobarbershop.pt",
+    coords: [41.1601, -7.7899]
   }
 
 ];
