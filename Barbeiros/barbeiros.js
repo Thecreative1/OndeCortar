@@ -105,6 +105,134 @@ const barbearias = [
     morada: "Av. João Franco 10, 5050-233 Peso da Régua",
     telefone: "+351 254 321 987",
     coords: [41.1601, -7.7899]
+  },
+
+// === CENTRO E OESTE DE PORTUGAL ===
+
+  {
+    nome: "Barbearia Vintage Lisboa",
+    morada: "R. Luciano Cordeiro 81B, 1150-216 Lisboa",
+    telefone: "+351 210 965 372",
+    website: "https://www.instagram.com/barbeariavintage_lisboa/",
+    coords: [38.7276, -9.1476]
+  },
+  {
+    nome: "Cut by André Silva",
+    morada: "Rua Alexandre Herculano 35, 1250-010 Lisboa",
+    telefone: "+351 912 345 678",
+    website: "https://cutbyandresilva.pt",
+    coords: [38.7174, -9.1472]
+  },
+  {
+    nome: "Nobre Arte Barbearia – Torres Vedras",
+    morada: "Rua António Leal d’Ascensão 22B, 2560-302 Torres Vedras",
+    telefone: "+351 917 295 274",
+    website: "https://www.instagram.com/nobreartebarbearia/",
+    coords: [39.0928, -9.2616]
+  },
+  {
+    nome: "Barbearia Mustache – Caldas da Rainha",
+    morada: "Rua do Comércio 74, 2500-110 Caldas da Rainha",
+    telefone: "+351 262 832 918",
+    coords: [39.4049, -9.1358]
+  },
+  {
+    nome: "The Barber House – Leiria",
+    morada: "Rua Dom Manuel de Aguiar 8B, 2400-137 Leiria",
+    telefone: "+351 244 851 340",
+    website: "https://thebarberhouse.pt/",
+    coords: [39.7436, -8.8075]
+  },
+  {
+    nome: "Barbearia Antunes – Coimbra",
+    morada: "Rua da Sofia 92, 3000-389 Coimbra",
+    telefone: "+351 239 824 350",
+    coords: [40.2070, -8.4292]
+  },
+  {
+    nome: "Barbearia António – Figueira da Foz",
+    morada: "Av. Saraiva de Carvalho 6, 3080-154 Figueira da Foz",
+    telefone: "+351 233 426 576",
+    coords: [40.1494, -8.8612]
+  },
+  {
+    nome: "Barbearia Monteiro – Castelo Branco",
+    morada: "Rua Bartolomeu da Costa 1, 6000-179 Castelo Branco",
+    telefone: "+351 272 345 987",
+    coords: [39.8219, -7.4911]
+  },
+  {
+    nome: "Old School Barber Shop – Covilhã",
+    morada: "Rua 1º de Maio 21, 6200-066 Covilhã",
+    telefone: "+351 275 323 222",
+    coords: [40.2818, -7.5042]
+  },
+  {
+    nome: "Barbearia São Romão – Seia",
+    morada: "Av. 1º de Maio 4, 6270-443 Seia",
+    telefone: "+351 238 310 208",
+    coords: [40.4145, -7.7082]
+  },
+  {
+    nome: "Barbearia Central – Guarda",
+    morada: "Rua Vasco Borges 18, 6300-535 Guarda",
+    telefone: "+351 271 220 556",
+    coords: [40.5384, -7.2676]
+  },
+  {
+    nome: "Barbearia Loureiro – Viseu",
+    morada: "Rua Formosa 170, 3500-137 Viseu",
+    telefone: "+351 232 421 657",
+    coords: [40.6578, -7.9122]
+  },
+  {
+    nome: "Barbearia Lima – Lamego",
+    morada: "Rua da Olaria 26, 5100-120 Lamego",
+    telefone: "+351 254 612 089",
+    coords: [41.0981, -7.8101]
+  },
+  {
+    nome: "Barbearia Elite – Aveiro",
+    morada: "Rua Conselheiro Luís Magalhães 12, 3800-215 Aveiro",
+    telefone: "+351 234 380 126",
+    website: "https://www.instagram.com/barbearia.elite/",
+    coords: [40.6434, -8.6538]
+  },
+  {
+    nome: "Barbearia Moura – Espinho",
+    morada: "Rua 23, 4500-276 Espinho",
+    telefone: "+351 227 310 426",
+    coords: [41.0074, -8.6436]
+  },
+  {
+    nome: "Barbearia Lima – São João da Madeira",
+    morada: "Rua Padre Oliveira Lopes 113, 3700-230 S. João da Madeira",
+    telefone: "+351 256 203 581",
+    coords: [40.9010, -8.4991]
+  },
+  {
+    nome: "Barbearia Silvério – Ovar",
+    morada: "Av. Sá Carneiro 53, 3880-049 Ovar",
+    telefone: "+351 256 573 002",
+    coords: [40.8605, -8.6259]
+  },
+  {
+    nome: "Barbearia Pereira – Águeda",
+    morada: "Rua Dr. João O. Amaral, 3750-107 Águeda",
+    telefone: "+351 234 621 312",
+    coords: [40.5777, -8.4464]
+  },
+  {
+    nome: "Barbearia Costa – Ourém",
+    morada: "Rua Dr. Francisco Sá Carneiro 18, 2490-541 Ourém",
+    telefone: "+351 249 544 420",
+    coords: [39.6601, -8.5746]
+  },
+  {
+    nome: "Barbearia Moderna – Santarém",
+    morada: "Av. Madre Andaluz 5, 2000-210 Santarém",
+    telefone: "+351 243 322 122",
+    coords: [39.2334, -8.6859]
   }
 
 ];
