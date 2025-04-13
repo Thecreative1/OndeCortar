@@ -278,7 +278,7 @@ const barbearias = [
   telefone: "+351 282 123 456",
   website: "https://www.treatwell.pt/estabelecimentos/na-barbearia-1/em-portimao-algarve-portugal/",
   coords: [37.1360, -8.5382]
-}
+},
 
 // === ALENTEJO E MARGEM SUL ===
 
