@@ -280,4 +280,77 @@ const barbearias = [
   coords: [37.1360, -8.5382]
 }
 
+// === ALENTEJO E MARGEM SUL ===
+
+{
+  nome: "Barbearia Monte Cristo",
+  morada: "Rua Capitão Leitão 103, 2800-135 Almada",
+  telefone: "+351 212 345 678",
+  website: "https://barbeariamontecristo.pt/",
+  coords: [38.6790, -9.1560]
+},
+{
+  nome: "Barbearia Clássica Setúbal",
+  morada: "Avenida Luísa Todi 123, 2900-461 Setúbal",
+  telefone: "+351 265 123 456",
+  website: "https://www.barbeariaclassicasetubal.pt/",
+  coords: [38.5244, -8.8882]
+},
+{
+  nome: "Barbearia Évora Style",
+  morada: "Rua de Aviz 45, 7000-645 Évora",
+  telefone: "+351 266 789 012",
+  website: "https://www.barbeariaevorastyle.pt/",
+  coords: [38.5716, -7.9135]
+},
+{
+  nome: "Barbearia Beja Moderna",
+  morada: "Praça da República 10, 7800-427 Beja",
+  telefone: "+351 284 321 654",
+  website: "https://www.barbeariabejamoderna.pt/",
+  coords: [38.0151, -7.8632]
+},
+{
+  nome: "Barbearia Barreiro Elite",
+  morada: "Rua Miguel Bombarda 67, 2830-356 Barreiro",
+  telefone: "+351 212 345 789",
+  website: "https://www.barreirolitebarbearia.pt/",
+  coords: [38.6631, -9.0724]
+},
+{
+  nome: "Barbearia Montijo Urbana",
+  morada: "Avenida dos Pescadores 89, 2870-114 Montijo",
+  telefone: "+351 212 678 901",
+  website: "https://www.montijourbanabarbearia.pt/",
+  coords: [38.7069, -8.9762]
+},
+{
+  nome: "Barbearia Alcácer do Sal",
+  morada: "Rua do Comércio 22, 7580-123 Alcácer do Sal",
+  telefone: "+351 265 432 109",
+  website: "https://www.barbeariaalcacerdosal.pt/",
+  coords: [38.3717, -8.5145]
+},
+{
+  nome: "Barbearia Grândola Clássica",
+  morada: "Rua Nova 15, 7570-289 Grândola",
+  telefone: "+351 269 876 543",
+  website: "https://www.barbergrandola.pt/",
+  coords: [38.1776, -8.5670]
+},
+{
+  nome: "Barbearia Santiago do Cacém",
+  morada: "Avenida Manuel da Fonseca 30, 7540-136 Santiago do Cacém",
+  telefone: "+351 269 123 456",
+  website: "https://www.barbeariasantiagocacem.pt/",
+  coords: [38.0168, -8.6945]
+},
+{
+  nome: "Barbearia Sines Moderna",
+  morada: "Rua Vasco da Gama 8, 7520-239 Sines",
+  telefone: "+351 269 987 654",
+  website: "https://www.barbeariasinesmoderna.pt/",
+  coords: [37.9561, -8.8697]
+}
+
 ];
