@@ -233,6 +233,51 @@ const barbearias = [
     morada: "Av. Madre Andaluz 5, 2000-210 Santarém",
     telefone: "+351 243 322 122",
     coords: [39.2334, -8.6859]
-  }
+  },
+
+// === ALGARVE ===
+
+{
+  nome: "Ruaça Barbershop",
+  morada: "R. Alexandre Herculano n.º 18, 8200-271 Albufeira",
+  telefone: "+351 968 403 959",
+  website: "https://xn--ruaa-barbershop-gmb.pt/",
+  coords: [37.0891, -8.2479]
+},
+{
+  nome: "Chacal's Barbearia",
+  morada: "Rua Cândido dos Reis 12, 8200-103 Albufeira",
+  telefone: "+351 289 589 123",
+  instagram: "https://www.instagram.com/chacals_barbearia/",
+  coords: [37.0885, -8.2500]
+},
+{
+  nome: "Patrick Barbershop",
+  morada: "Rua do Movimento das Forças Armadas 32, 8200-157 Albufeira",
+  telefone: "+351 912 345 678",
+  website: "https://www.treatwell.pt/estabelecimentos/na-barbearia-1/em-albufeira-portugal-2/",
+  coords: [37.0880, -8.2440]
+},
+{
+  nome: "1920 Barbershop – Faro",
+  morada: "Fórum Algarve, Loja 0.02, EN 125 - Km 103, 8009-020 Faro",
+  telefone: "+351 289 889 300",
+  website: "https://1920barbershop.pt/a-1920-barbershop/faro-forum-algarve/",
+  coords: [37.0194, -7.9304]
+},
+{
+  nome: "The Barbers",
+  morada: "Mar Shopping Algarve, Avenida do Algarve Loja 1.38, 8135-185 Almancil",
+  telefone: "+351 289 992 084",
+  website: "https://thebarbers.pt/",
+  coords: [37.0700, -8.0300]
+},
+{
+  nome: "Boss Barbearia",
+  morada: "Rua M de Albuquerque 1, 8500-510 Portimão",
+  telefone: "+351 282 123 456",
+  website: "https://www.treatwell.pt/estabelecimentos/na-barbearia-1/em-portimao-algarve-portugal/",
+  coords: [37.1360, -8.5382]
+}
 
 ];
