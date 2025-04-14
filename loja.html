@@ -2,127 +2,174 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Loja OndeCortar.pt</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background-color: #111;
-      color: #f8d24e;
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: white;
     }
+
+    header {
+      background-color: #000;
+      text-align: center;
+      padding: 30px 10px 20px;
+    }
+
+    header img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #ffc107;
+      margin-top: 10px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 40px auto;
+      gap: 20px;
+    }
+
     .card {
-      background-color: #1a1a1a;
-      border: 1px solid #f8d24e;
+      background-color: #000;
+      border: 2px solid #ffc107;
+      border-radius: 8px;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
-    .card-title {
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #fff;
+
+    .card img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.25;
+      z-index: 1;
     }
-    .card-text {
-      font-size: 0.95rem;
-      color: #ccc;
+
+    .card-content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
     }
-    .btn-warning {
-      background-color: #f8d24e;
+
+    .card h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #ffc107;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin: 10px 0 15px;
+      color: #ddd;
+    }
+
+    .card a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ffc107;
       color: #000;
-      font-weight: 600;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 1000px) {
+      .card {
+        width: 90%;
+      }
     }
   </style>
 </head>
 <body>
-<style>
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
-  }
 
-  .product-card {
-    height: 300px;
-    border: 2px solid gold;
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 1rem;
-  }
+  <header>
+    <img src="banner.png" alt="Banner OndeCortar.pt">
+    <h1>Loja OndeCortar.pt</h1>
+  </header>
 
-  .product-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 0;
-  }
+  <div class="container">
+    <div class="card">
+      <img src="maquinas.png" alt="Máquinas de Cortar">
+      <div class="card-content">
+        <h2>Máquinas de Cortar</h2>
+        <p>Aparelhos profissionais para um corte perfeito.</p>
+        <a href="#">Ver Produtos →</a>
+      </div>
+    </div>
 
-  .product-card h3,
-  .product-card p,
-  .product-card a {
-    position: relative;
-    z-index: 1;
-  }
+    <div class="card">
+      <img src="kits.png" alt="Kit de Barba">
+      <div class="card-content">
+        <h2>Kits de Barba</h2>
+        <p>Óleo, balm, escova e tudo para cuidar da tua barba.</p>
+        <a href="#">Ver Produtos →</a>
+      </div>
+    </div>
 
-  .product-card h3 {
-    font-size: 1.2rem;
-    color: gold;
-    margin-bottom: 0.5rem;
-  }
+    <div class="card">
+      <img src="cremes.png" alt="Cremes e Espumas">
+      <div class="card-content">
+        <h2>Cremes e Espumas</h2>
+        <p>Loções para um barbear mais suave, fresco e profissional.</p>
+        <a href="#">Ver Produtos →</a>
+      </div>
+    </div>
 
-  .product-card p {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
+    <div class="card">
+      <img src="navalhas.png" alt="Navalhas">
+      <div class="card-content">
+        <h2>Navalhas & Lâminas</h2>
+        <p>Cortes precisos com estilo clássico para barbeiros exigentes.</p>
+        <a href="#">Ver Produtos →</a>
+      </div>
+    </div>
 
-  .product-card a {
-    background-color: gold;
-    color: black;
-    text-decoration: none;
-    padding: 0.5rem;
-    border-radius: 4px;
-    font-weight: bold;
-    text-align: center;
-  }
-</style>
+    <div class="card">
+      <img src="escovas e pentes.png" alt="Escovas e Pentes">
+      <div class="card-content">
+        <h2>Escovas & Pentes</h2>
+        <p>Elegância e qualidade para manter a barba cuidada.</p>
+        <a href="#">Ver Produtos →</a>
+      </div>
+    </div>
 
-<div class="grid-container">
-  <div class="product-card" style="background-image: url('imagens/secoes/maquinas.png')">
-    <h3>Máquinas de Cortar</h3>
-    <p>Aparelhos profissionais para um corte perfeito. Qualidade para barbeiros e uso pessoal.</p>
-    <a href="#">Ver Produtos →</a>
+    <div class="card">
+      <img src="acessorios.png" alt="Acessórios de Barbeiro">
+      <div class="card-content">
+        <h2>Acessórios de Barbeiro</h2>
+        <p>Capas, toalhas e extras para um serviço completo.</p>
+        <a href="#">Ver Produtos →</a>
+      </div>
+    </div>
   </div>
-  <div class="product-card" style="background-image: url('imagens/secoes/kits.png')">
-    <h3>Kits de Barba</h3>
-    <p>Tudo o que precisas para cuidar da tua barba: óleo, balm, escova, pente e mais.</p>
-    <a href="#">Ver Produtos →</a>
-  </div>
-  <div class="product-card" style="background-image: url('imagens/secoes/cremes.png')">
-    <h3>Cremes e Espumas</h3>
-    <p>Cremes, espumas e loções para um barbear mais suave, fresco e profissional.</p>
-    <a href="#">Ver Produtos →</a>
-  </div>
-  <div class="product-card" style="background-image: url('imagens/secoes/navalhas.png')">
-    <h3>Navalhas & Lâminas</h3>
-    <p>Para cortes de precisão com estilo tradicional. Ideal para quem domina a arte do barbear.</p>
-    <a href="#">Ver Produtos →</a>
-  </div>
-  <div class="product-card" style="background-image: url('imagens/secoes/escovas e pentes.png')">
-    <h3>Escovas & Pentes</h3>
-    <p>Escovas e pentes de qualidade para manter a barba elegante e bem cuidada.</p>
-    <a href="#">Ver Produtos →</a>
-  </div>
-  <div class="product-card" style="background-image: url('imagens/secoes/acessorios.png')">
-    <h3>Acessórios de Barbeiro</h3>
-    <p>Toalhas, capas e outros elementos indispensáveis para um serviço completo.</p>
-    <a href="#">Ver Produtos →</a>
-  </div>
-</div>
+
+  <footer>
+    Feito com ❤️ em Portugal — 2025
+  </footer>
+
 </body>
 </html>
