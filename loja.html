@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -9,35 +8,64 @@
   <style>
     body {
       background-color: #111;
-      color: #ffc107;
       font-family: 'Segoe UI', sans-serif;
+      color: white;
     }
+
+    h1 {
+      color: #ffc107;
+      text-align: center;
+      margin: 40px 0 30px;
+    }
+
     .card {
-      background-color: #1a1a1a;
-      border: 1px solid #ffc107;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      border: 2px solid #ffc107;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
+
+    .card img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.4;
+      z-index: 1;
+    }
+
+    .card-body {
+      position: relative;
+      background: transparent;
+      z-index: 2;
+      padding: 1rem;
+      color: white;
+    }
+
     .card-title {
       color: #ffc107;
       font-weight: bold;
     }
+
     .btn-warning {
-      background-color: #ffc107;
-      border: none;
-      color: #111;
-    }
-    .btn-warning:hover {
-      background-color: #e0a800;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="container py-5">
-    <h1 class="text-center mb-5">Loja OndeCortar.pt</h1>
+  <div class="container">
+    <h1>Loja OndeCortar.pt</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4">
 
       <div class="col">
         <div class="card h-100">
-          <img src="imagens/secoes/maquinas.png" class="card-img-top" alt="Máquina de Cortar" style="opacity: 0.85;">
+          <img src="imagens/secoes/maquinas.png" alt="Máquinas de Cortar">
           <div class="card-body">
             <h5 class="card-title">Máquinas de Cortar</h5>
             <p class="card-text">Aparelhos profissionais para um corte perfeito. Qualidade para barbeiros e uso pessoal.</p>
@@ -48,7 +76,7 @@
 
       <div class="col">
         <div class="card h-100">
-          <img src="imagens/secoes/kits.png" class="card-img-top" alt="Kit de Barba" style="opacity: 0.85;">
+          <img src="imagens/secoes/kits.png" alt="Kits de Barba">
           <div class="card-body">
             <h5 class="card-title">Kits de Barba</h5>
             <p class="card-text">Tudo o que precisas para cuidar da tua barba: óleo, balm, escova, pente e mais.</p>
@@ -59,7 +87,7 @@
 
       <div class="col">
         <div class="card h-100">
-          <img src="imagens/secoes/cremes.png" class="card-img-top" alt="Creme de Barbear" style="opacity: 0.85;">
+          <img src="imagens/secoes/cremes.png" alt="Cremes e Espumas">
           <div class="card-body">
             <h5 class="card-title">Cremes e Espumas</h5>
             <p class="card-text">Cremes, espumas e loções para um barbear mais suave, fresco e profissional.</p>
@@ -70,7 +98,7 @@
 
       <div class="col">
         <div class="card h-100">
-          <img src="imagens/secoes/navalhas.png" class="card-img-top" alt="Navalhas" style="opacity: 0.85;">
+          <img src="imagens/secoes/navalhas.png" alt="Navalhas">
           <div class="card-body">
             <h5 class="card-title">Navalhas & Lâminas</h5>
             <p class="card-text">Para cortes de precisão com estilo tradicional. Ideal para quem domina a arte do barbear.</p>
@@ -81,7 +109,7 @@
 
       <div class="col">
         <div class="card h-100">
-          <img src="imagens/secoes/escovas e pentes.png" class="card-img-top" alt="Escova de Barba" style="opacity: 0.85;">
+          <img src="imagens/secoes/escovas e pentes.png" alt="Escovas e Pentes">
           <div class="card-body">
             <h5 class="card-title">Escovas & Pentes</h5>
             <p class="card-text">Escovas e pentes de qualidade para manter a barba elegante e bem cuidada.</p>
@@ -92,7 +120,7 @@
 
       <div class="col">
         <div class="card h-100">
-          <img src="imagens/secoes/acessorios.png" class="card-img-top" alt="Toalha de Barbeiro" style="opacity: 0.85;">
+          <img src="imagens/secoes/acessorios.png" alt="Acessórios">
           <div class="card-body">
             <h5 class="card-title">Acessórios de Barbeiro</h5>
             <p class="card-text">Toalhas, capas e outros elementos indispensáveis para um serviço completo.</p>
