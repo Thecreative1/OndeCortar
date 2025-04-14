@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -7,97 +6,136 @@
   <title>Loja OndeCortar.pt</title>
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
       background-color: #111;
+      font-family: Arial, sans-serif;
       color: #fff;
-    }
-    h1 {
       text-align: center;
-      color: #ffc107;
-      margin: 2rem 0 1rem;
+      margin: 0;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 0 1rem 3rem;
+
+    h1 {
+      color: #ffc400;
+      padding: 30px 0 20px;
     }
-    .card {
-      border: 2px solid #ffc107;
-      border-radius: 10px;
-      background-color: #1c1c1c;
-      padding: 1rem;
+
+    .container {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 280px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
+
+    .card {
+      background-color: #1a1a1a;
+      border: 2px solid #ffc400;
+      border-radius: 10px;
+      width: 300px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
     .card h2 {
-      color: #ffc107;
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
+      color: #ffc400;
+      font-size: 18px;
+      margin-bottom: 10px;
     }
+
     .card p {
-      flex-grow: 1;
-      color: #ccc;
+      font-size: 14px;
+      margin-bottom: 20px;
     }
+
     .card button {
-      background-color: #ffc107;
-      color: #000;
+      background-color: #ffc400;
       border: none;
-      padding: 0.6rem;
+      padding: 10px 20px;
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
+      transition: background 0.3s;
     }
+
+    .card button:hover {
+      background-color: #e6b800;
+    }
+
     footer {
-      text-align: center;
-      padding: 1rem;
-      color: #ccc;
-      font-size: 0.9rem;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #aaa;
     }
+
     footer span {
       color: red;
+    }
+
+    @media (max-width: 1000px) {
+      .card {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .card {
+        width: 90%;
+      }
     }
   </style>
 </head>
 <body>
   <h1>Loja OndeCortar.pt</h1>
-  <div class="grid">
+  <div class="container">
+    <!-- Linha 1 -->
     <div class="card">
+      <img src="imagens/secoes/maquinas.png" alt="Máquina de Cortar">
       <h2>Máquinas de Cortar</h2>
       <p>Aparelhos profissionais para um corte perfeito. Qualidade para barbeiros e uso pessoal.</p>
       <button>Ver Produtos →</button>
     </div>
     <div class="card">
+      <img src="imagens/secoes/kits.png" alt="Kit de Barba">
       <h2>Kits de Barba</h2>
       <p>Inclui óleo, balm, escova, pente e mais.</p>
       <button>Ver Produtos →</button>
     </div>
     <div class="card">
+      <img src="imagens/secoes/cremes.png" alt="Cremes e Espumas">
       <h2>Cremes e Espumas</h2>
       <p>Para um barbear suave, fresco e profissional.</p>
       <button>Ver Produtos →</button>
     </div>
+
+    <!-- Linha 2 -->
     <div class="card">
+      <img src="imagens/secoes/navalhas.png" alt="Navalhas e Lâminas">
       <h2>Navalhas & Lâminas</h2>
       <p>Estilo tradicional para cortes de precisão.</p>
       <button>Ver Produtos →</button>
     </div>
     <div class="card">
+      <img src="imagens/secoes/escovas e pentes.png" alt="Escovas e Pentes">
       <h2>Escovas & Pentes</h2>
       <p>Manutenção elegante da tua barba.</p>
       <button>Ver Produtos →</button>
     </div>
     <div class="card">
+      <img src="imagens/secoes/acessorios.png" alt="Acessórios de Barbeiro">
       <h2>Acessórios de Barbeiro</h2>
       <p>Toalhas, capas e extras essenciais.</p>
       <button>Ver Produtos →</button>
     </div>
   </div>
-  <footer>Feito com <span>❤️</span> em Portugal – 2025</footer>
+
+  <footer>
+    Feito com <span>❤️</span> em Portugal – 2025
+  </footer>
 </body>
 </html>
