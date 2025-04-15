@@ -7,24 +7,23 @@
   <style>
     body {
       background-color: #111;
-      color: #fff;
       font-family: Arial, sans-serif;
+      color: #fff;
       margin: 0;
-      padding: 0;
+      padding: 20px;
     }
 
     h1 {
       text-align: center;
       color: #ffc400;
-      padding: 20px;
+      margin-bottom: 40px;
     }
 
-    .products {
+    .container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      padding: 20px;
     }
 
     .product-card {
@@ -32,50 +31,53 @@
       border: 2px solid #ffc400;
       border-radius: 10px;
       width: 300px;
-      box-sizing: border-box;
       padding: 15px;
+      box-sizing: border-box;
+      text-align: center;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
+      justify-content: space-between;
+      height: 550px;
     }
 
     .product-card img {
-      width: 300px;
-      height: 360px;
-      object-fit: cover;
-      border-radius: 6px;
-      margin-bottom: 15px;
+      width: 100%;
+      max-height: 260px;
+      object-fit: contain;
+      border-radius: 5px;
+      margin-bottom: 10px;
     }
 
-    .product-card h3 {
+    .product-card h2 {
+      font-size: 16px;
       color: #ffc400;
-      font-size: 18px;
-      margin-bottom: 10px;
+      margin: 10px 0 5px 0;
     }
 
     .product-card p {
       font-size: 14px;
-      margin-bottom: 15px;
+      flex-grow: 1;
     }
 
-    .button {
+    .product-card a {
+      display: inline-block;
+      margin-top: 15px;
       background-color: #ffc400;
       color: #000;
-      text-decoration: none;
-      padding: 10px 20px;
       font-weight: bold;
+      padding: 10px 20px;
+      text-decoration: none;
       border-radius: 5px;
-      transition: background-color 0.3s;
+      transition: background 0.3s;
     }
 
-    .button:hover {
+    .product-card a:hover {
       background-color: #e6b800;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      margin-top: 40px;
       font-size: 13px;
       color: #aaa;
     }
@@ -86,33 +88,31 @@
   </style>
 </head>
 <body>
-
   <h1>Máquinas de Barbear Recomendadas</h1>
-
-  <div class="products">
-
-    <!-- Produto 1: Solati -->
+  <div class="container">
+    
+    <!-- Solati -->
     <div class="product-card">
       <img src="imagens/produtos/Solati.jpg" alt="Solati Aparador Masculino">
-      <h3>Solati Aparador Masculino</h3>
+      <h2>Solati Aparador Masculino</h2>
       <p>Aparador de corpo masculino com lâmina de cerâmica. Ideal para zonas sensíveis, resistente à água e com base de carregamento USB.</p>
-      <a href="https://amzn.to/42AvfqQ" class="button" target="_blank">Ver na Amazon</a>
+      <a href="https://amzn.to/42AvfqQ" target="_blank">Ver na Amazon</a>
     </div>
 
-    <!-- Produto 2: Hatteker 5-em-1 -->
+    <!-- Hatteker 5-em-1 -->
     <div class="product-card">
-      <img src="imagens/produtos/Hattekerkit.jpg" alt="Hatteker 5-em-1">
-      <h3>Hatteker 5-em-1</h3>
+      <img src="imagens/produtos/Hatteker.jpg" alt="Hatteker 5-em-1">
+      <h2>Hatteker 5-em-1</h2>
       <p>Máquina de cortar cabelo e barba multifunções com visor LED, lâminas em aço inox e carregamento USB. Inclui vários acessórios e cabeçotes.</p>
-      <a href="https://amzn.to/3ROlkJ7" class="button" target="_blank">Ver na Amazon</a>
+      <a href="https://amzn.to/3YrT2rC" target="_blank">Ver na Amazon</a>
     </div>
 
-    <!-- Produto 3: Hatteker Máquina Completa -->
+    <!-- Hatteker Completa -->
     <div class="product-card">
-      <img src="imagens/produtos/Hatteker.jpg" alt="Hatteker Máquina Completa">
-      <h3>Hatteker Máquina Completa</h3>
+      <img src="imagens/produtos/Hattekerkit.jpg" alt="Hatteker Máquina Completa">
+      <h2>Hatteker Máquina Completa</h2>
       <p>Kit multifunções com aparador de cabelo, barba e nariz. Bateria de longa duração e acessórios para todos os estilos.</p>
-      <a href="https://amzn.to/3YrT2rC" class="button" target="_blank">Ver na Amazon</a>
+      <a href="https://amzn.to/3ROlkJ7" target="_blank">Ver na Amazon</a>
     </div>
 
   </div>
@@ -120,6 +120,5 @@
   <footer>
     © 2025 OndeCortar.pt | Feito com <span>❤️</span> em Portugal
   </footer>
-
 </body>
 </html>
