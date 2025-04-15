@@ -1,0 +1,36 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://ondecortar.pt/#website",
+      "url": "https://ondecortar.pt/",
+      "name": "OndeCortar.pt",
+      "description": "Encontre barbearias em Portugal com mapa, contactos e links diretos. Descubra tamb\u00e9m a nossa loja de produtos para barbearia com envio da Amazon Espanha.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "OndeCortar.pt"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://ondecortar.pt/#barbearia",
+      "name": "Barbearias em Portugal",
+      "description": "Plataforma para descobrir barbeiros em Portugal e produtos de barbearia com entrega.",
+      "url": "https://ondecortar.pt/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "PT"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Portugal"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://ondecortar.pt/#map?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
