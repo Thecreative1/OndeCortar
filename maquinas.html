@@ -1,98 +1,124 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Máquinas de Cortar - OndeCortar.pt</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Máquinas de Barbear Recomendadas</title>
   <style>
     body {
       background-color: #111;
-      color: #f8d24e;
-      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding-bottom: 3rem;
+      padding: 0;
     }
-    .container {
-      padding-top: 3rem;
-    }
+
     h1 {
       text-align: center;
       color: #ffc400;
-      margin-bottom: 2rem;
+      padding: 20px;
     }
-    .card {
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product-card {
       background-color: #1a1a1a;
-      border: 1px solid #f8d24e;
+      border: 2px solid #ffc400;
+      border-radius: 10px;
+      width: 300px;
+      box-sizing: border-box;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-    .card-title {
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #fff;
+
+    .product-card img {
+      width: 300px;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 15px;
     }
-    .card-text {
-      font-size: 0.95rem;
-      color: #ccc;
+
+    .product-card h3 {
+      color: #ffc400;
+      font-size: 18px;
+      margin-bottom: 10px;
     }
-    .btn-warning {
-      background-color: #f8d24e;
+
+    .product-card p {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .button {
+      background-color: #ffc400;
       color: #000;
-      font-weight: 600;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s;
     }
+
+    .button:hover {
+      background-color: #e6b800;
+    }
+
     footer {
       text-align: center;
+      padding: 20px;
+      font-size: 13px;
       color: #aaa;
-      margin-top: 3rem;
+    }
+
+    footer span {
+      color: red;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>Máquinas de Barbear Recomendadas</h1>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+  <h1>Máquinas de Barbear Recomendadas</h1>
 
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/produtos/Solati.jpg" class="card-img-top" alt="Solati Aparador Masculino">
-          <div class="card-body">
-            <h5 class="card-title">Solati Aparador Masculino</h5>
-            <p class="card-text">
-              Aparador de corpo masculino com lâmina de cerâmica. Ideal para zonas sensíveis, resistente à água e com base de carregamento USB.
-            </p>
-            <a href="https://amzn.to/42AvfqQ" target="_blank" class="btn btn-warning w-100">Ver na Amazon</a>
-          </div>
-        </div>
-      </div>
+  <div class="products">
 
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://m.media-amazon.com/images/I/71K93FSPduL._AC_SL1500_.jpg" class="card-img-top" alt="Máquina 2">
-          <div class="card-body">
-            <h5 class="card-title">Philips OneBlade</h5>
-            <p class="card-text">Apara, contorna e barbeia pelos de qualquer comprimento. Perfeita para uso diário com lâminas substituíveis.</p>
-            <a href="https://amzn.to/3YrT2rC" target="_blank" class="btn btn-warning w-100">Ver na Amazon</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/produtos/hatteker.jpg" class="card-img-top" alt="Hatteker 5-em-1">
-          <div class="card-body">
-            <h5 class="card-title">Hatteker 5-em-1</h5>
-            <p class="card-text">Kit completo para barbear, aparar e cortar cabelo. Inclui vários acessórios, visor LED e autonomia de longa duração.</p>
-            <a href="https://amzn.to/3ROlkJ7" target="_blank" class="btn btn-warning w-100">Ver na Amazon</a>
-          </div>
-        </div>
-      </div>
-
+    <!-- Produto 1: Solati -->
+    <div class="product-card">
+      <img src="imagens/produtos/Solati.jpg" alt="Solati Aparador Masculino">
+      <h3>Solati Aparador Masculino</h3>
+      <p>Aparador de corpo masculino com lâmina de cerâmica. Ideal para zonas sensíveis, resistente à água e com base de carregamento USB.</p>
+      <a href="https://amzn.to/42AvfqQ" class="button" target="_blank">Ver na Amazon</a>
     </div>
+
+    <!-- Produto 2: Hatteker 5-em-1 -->
+    <div class="product-card">
+      <img src="imagens/produtos/Hattekerkit.jpg" alt="Hatteker 5-em-1">
+      <h3>Hatteker 5-em-1</h3>
+      <p>Máquina de cortar cabelo e barba multifunções com visor LED, lâminas em aço inox e carregamento USB. Inclui vários acessórios e cabeçotes.</p>
+      <a href="https://amzn.to/3ROlkJ7" class="button" target="_blank">Ver na Amazon</a>
+    </div>
+
+    <!-- Produto 3: Hatteker Máquina Completa -->
+    <div class="product-card">
+      <img src="imagens/produtos/Hatteker.jpg" alt="Hatteker Máquina Completa">
+      <h3>Hatteker Máquina Completa</h3>
+      <p>Kit multifunções com aparador de cabelo, barba e nariz. Bateria de longa duração e acessórios para todos os estilos.</p>
+      <a href="https://amzn.to/3YrT2rC" class="button" target="_blank">Ver na Amazon</a>
+    </div>
+
   </div>
 
   <footer>
-    <p>© 2025 OndeCortar.pt | Feito com ❤️ em Portugal</p>
+    © 2025 OndeCortar.pt | Feito com <span>❤️</span> em Portugal
   </footer>
 
 </body>
