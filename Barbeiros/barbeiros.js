@@ -390,4 +390,42 @@ const barbearias = [
   coords: [37.7411, -25.6689]
 },
 
+// === AÇORES – OUTRAS ILHAS ===
+
+{
+  nome: "Barbearia António e Caetano",
+  morada: "Rua de São João, Angra do Heroísmo, Ilha Terceira",
+  telefone: "+351 295 215 123",
+  google: "https://goo.gl/maps/LmXh3rgGkk5HKRhe6",
+  coords: [38.6556, -27.2178]
+},
+{
+  nome: "The Barber - Terceira",
+  morada: "R. Direita 123, Angra do Heroísmo, Ilha Terceira",
+  telefone: "+351 965 478 625",
+  facebook: "https://www.facebook.com/profile.php?id=100063545409660",
+  coords: [38.6550, -27.2215]
+},
+{
+  nome: "Barbearia Machado",
+  morada: "Rua Serpa Pinto, Horta, Ilha do Faial",
+  telefone: "+351 292 292 401",
+  google: "https://goo.gl/maps/njXCdUYhJmeMQknc6",
+  coords: [38.5358, -28.6272]
+},
+{
+  nome: "Barbearia São Roque",
+  morada: "Rua Maestro Simão Machado, São Roque do Pico, Ilha do Pico",
+  telefone: "+351 292 642 321",
+  google: "https://goo.gl/maps/CnDkgbtb4EG7pW3Z9",
+  coords: [38.5170, -28.3040]
+},
+{
+  nome: "Barbearia Paulo",
+  morada: "Vila do Porto, Santa Maria",
+  telefone: "+351 296 882 150",
+  facebook: "https://www.facebook.com/profile.php?id=100063781357982",
+  coords: [36.9658, -25.0962]
+},
+
 ];
