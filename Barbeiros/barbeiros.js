@@ -353,4 +353,43 @@ const barbearias = [
   coords: [37.9561, -8.8697]
 }
 
+
+
+// === AÇORES ===
+
+{
+  nome: "Barbearia Corte & Estilo",
+  morada: "Rua Pedro Homem 49, 9500-099 Ponta Delgada",
+  telefone: "+351 296 281 941",
+  facebook: "https://www.facebook.com/barbeariacorteestilo/",
+  coords: [37.7390, -25.6673]
+},
+{
+  nome: "Barbearia Mad Cutter",
+  morada: "Rua Dr. João Francisco Cabral 41, 9500-208 Ponta Delgada",
+  telefone: "+351 968 983 314",
+  instagram: "https://www.instagram.com/madcutterbarbershop/",
+  coords: [37.7421, -25.6715]
+},
+{
+  nome: "Fidelis Cabeleireiros",
+  morada: "Avenida Infante Dom Henrique 103, 9500-150 Ponta Delgada",
+  telefone: "+351 296 286 870",
+  website: "https://www.fideliscabeleireiros.pt/",
+  coords: [37.7406, -25.6704]
+},
+{
+  nome: "Barbearia The Men’s Club",
+  morada: "Rua dos Mercadores 61, 9500-092 Ponta Delgada",
+  telefone: "+351 961 011 264",
+  instagram: "https://www.instagram.com/themensclubbarbershop/",
+  coords: [37.7417, -25.6712]
+},
+{
+  nome: "Barbearia Central PDL",
+  morada: "Rua do Melo 2B, 9500-091 Ponta Delgada",
+  telefone: "+351 296 629 000",
+  coords: [37.7411, -25.6689]
+},
+
 ];
