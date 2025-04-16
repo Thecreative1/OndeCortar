@@ -351,9 +351,7 @@ const barbearias = [
   telefone: "+351 269 987 654",
   website: "https://www.barbeariasinesmoderna.pt/",
   coords: [37.9561, -8.8697]
-}
-
-
+},
 
 // === AÇORES ===
 
