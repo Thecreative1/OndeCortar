@@ -2,8 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ondecortar.pt/sitemap.xml
-
-# Evitar que o Googlebot mostre estes ficheiros nos resultados de pesquisa
-User-agent: Googlebot
-Disallow: /robots.txt
-Disallow: /sitemap.xml
