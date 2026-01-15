@@ -427,5 +427,12 @@ const barbearias = [
   facebook: "https://www.facebook.com/profile.php?id=100063781357982",
   coords: [36.9658, -25.0962]
 },
+  {
+  nome: "Rise barbearia",
+  morada: "Rua Fernando Teixeira, Lote 31 – Abraveses, Viseu",
+  telefone: "+351 964821873",
+  facebook: "https://www.instagram.com/risebarbearia",
+  coords: [40.679708, --7.921886]
+},
 
 ];
