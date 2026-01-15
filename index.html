@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>OndeCortar.pt | Barbearias em Portugal + Loja com Produtos para Barba</title>
-  <meta name="description" content="Encontre barbearias em Portugal com mapa e contactos. E explore a nossa loja com máquinas de cortar cabelo, kits de barba e acessórios com envio para Portugal.">
-  <meta name="keywords" content="barbearia Portugal, onde cortar cabelo, barbeiro perto de mim, onde cortar.pt" />
+  <meta name="description" content="Encontre barbearias em Portugal com mapa e contactos. Explore a nossa loja com máquinas de cortar cabelo, kits de barba e acessórios com envio para Portugal.">
+  <meta name="keywords" content="barbearia Portugal, onde cortar cabelo, barbeiro perto de mim, ondecortar" />
+
   <meta property="og:title" content="OndeCortar.pt - Encontre Barbeiros em Portugal Rápido e Grátis" />
   <meta property="og:description" content="Barbeiros locais com contactos, localização e mapa. Sem custos, sem confusões. Simples." />
   <meta property="og:url" content="https://ondecortar.pt/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://ondecortar.pt/imagem_preview.png" />
+  <meta name="theme-color" content="#111111" />
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Fonte de dados -->
   <script src="Barbeiros/barbeiros.js"></script>
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -29,31 +36,45 @@
       text-align: center;
     }
     .search-box {
-      max-width: 600px;
-      margin: 1rem auto;
+      max-width: 680px;
+      margin: 1rem auto 0.25rem auto;
       display: flex;
+      gap: .5rem;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
     }
     .search-box input {
       flex-grow: 1;
-      padding: 0.5rem;
+      min-width: 220px;
+      padding: 0.65rem 0.75rem;
+      border-radius: .5rem;
+      border: 1px solid rgba(255,255,255,.2);
     }
     .search-box button {
-      padding: 0.5rem 1rem;
+      padding: 0.65rem 1rem;
+      border-radius: .5rem;
+      white-space: nowrap;
     }
+    .search-meta {
+      max-width: 680px;
+      margin: .5rem auto 0 auto;
+      color: rgba(255,255,255,.85);
+      font-size: .95rem;
+    }
+
     .map-container {
-      height: 400px;
+      height: 70vh;
+      min-height: 420px;
     }
+
     .cta {
       background-color: #eafbee;
       text-align: center;
       padding: 2rem;
     }
-    .cta h2 {
-      color: #000000;
-    }
-    .cta a.btn {
-      margin-top: 1rem;
-    }
+    .cta h2 { color: #000; }
+
     footer {
       background-color: #111;
       color: white;
@@ -61,125 +82,141 @@
       padding: 2rem;
       font-size: 0.9rem;
     }
+    footer a { color: #fff; opacity: .9; }
+    footer a:hover { opacity: 1; }
+
     .popup-card {
-      max-width: 250px;
-      font-size: 0.9rem;
+      max-width: 260px;
+      font-size: 0.92rem;
       word-wrap: break-word;
       overflow-wrap: break-word;
     }
-    .popup-card strong {
-      font-size: 1rem;
-    }
+    .popup-card strong { font-size: 1rem; }
     .popup-card a {
       color: #0d6efd;
       text-decoration: none;
       word-break: break-word;
     }
+
     #sobreModal {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       background-color: rgba(0, 0, 0, 0.5);
       z-index: 9999;
       justify-content: center;
       align-items: center;
+      padding: 1rem;
     }
     #sobreModalContent {
       background: #fff;
       color: #000;
       padding: 2rem;
-      border-radius: 8px;
-      max-width: 600px;
-      margin: 2rem;
+      border-radius: 12px;
+      max-width: 680px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,.2);
     }
     #sobreModalContent .btn {
       background-color: #fff;
       border: 1px solid #ccc;
       color: #000;
     }
-  </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://ondecortar.pt/#website",
-      "url": "https://ondecortar.pt/",
-      "name": "OndeCortar.pt",
-      "description": "Encontre barbearias em Portugal com mapa, contactos e links diretos. Descubra tamb\u00e9m a nossa loja de produtos para barbearia com envio da Amazon Espanha.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "OndeCortar.pt"
-      }
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://ondecortar.pt/#barbearia",
-      "name": "Barbearias em Portugal",
-      "description": "Plataforma para descobrir barbeiros em Portugal e produtos de barbearia com entrega.",
-      "url": "https://ondecortar.pt/",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "PT"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Portugal"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://ondecortar.pt/#map?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+
+    .sr-only {
+      position:absolute;
+      width:1px;height:1px;
+      padding:0;margin:-1px;
+      overflow:hidden;clip:rect(0,0,0,0);
+      border:0;
     }
-  ]
-}
-</script>
+
+    @media (max-width: 520px) {
+      .search-box { flex-wrap: wrap; }
+      .search-box input { width: 100%; }
+      .search-box button { width: 49%; }
+    }
+  </style>
+
+  <!-- SEO Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://ondecortar.pt/#website",
+        "url": "https://ondecortar.pt/",
+        "name": "OndeCortar.pt",
+        "description": "Encontre barbearias em Portugal com mapa, contactos e links diretos. Descubra também a nossa loja de produtos para barbearia com envio da Amazon Espanha.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "OndeCortar.pt"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://ondecortar.pt/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
 
 <header>
-  <h1><strong>OndeCortar.pt</strong></h1>
-  <p>Descubra barbeiros perto de si – fácil, rápido e gratuito</p>
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Ex: Barbeiro em Lisboa, Porto, Faro..." />
-    <button class="btn btn-danger" onclick="buscarBarbearia()">🔍</button>
+  <h1 class="mb-2"><strong>OndeCortar.pt</strong></h1>
+  <p class="mb-3">Descobre barbeiros perto de ti – fácil, rápido e gratuito</p>
+
+  <div class="search-box" role="search" aria-label="Pesquisar barbearias">
+    <label for="searchInput" class="sr-only">Pesquisar barbearias</label>
+    <input type="text" id="searchInput" placeholder="Ex: Guimarães, Porto, Braga, 'Barbearia do Zé'..." autocomplete="off" />
+    <button class="btn btn-danger" id="searchBtn" type="button" aria-label="Pesquisar">Pesquisar</button>
+    <button class="btn btn-outline-light" id="clearBtn" type="button" aria-label="Limpar pesquisa">Limpar</button>
   </div>
+
+  <div class="search-meta">
+    <span id="resultsInfo">A carregar barbearias…</span>
+  </div>
+
   <div class="mt-4">
-    <a href="loja.html" class="btn btn-warning fw-bold" style="font-size: 1.1rem;">
+    <a href="loja.html" class="btn btn-warning fw-bold" style="font-size: 1.05rem;">
       🛒 Visita a nossa Loja de Barbearia
     </a>
   </div>
-
 </header>
+
+<noscript>
+  <div class="alert alert-warning m-3">
+    Para usar o mapa, ativa o JavaScript no teu navegador.
+  </div>
+</noscript>
 
 <div id="map" class="map-container"></div>
 
 <section class="cta">
-  <h2>É barbeiro?</h2>
-  <p>Adicione o seu espaço gratuitamente e comece a receber novos clientes hoje mesmo.</p>
+  <h2>És barbeiro?</h2>
+  <p>Adiciona o teu espaço gratuitamente e começa a receber novos clientes hoje mesmo.</p>
   <a href="registar.html" class="btn btn-danger">Quero aparecer no OndeCortar.pt</a>
 </section>
 
 <!-- Modal Sobre o Site -->
-<div id="sobreModal">
+<div id="sobreModal" role="dialog" aria-modal="true" aria-labelledby="sobreTitle">
   <div id="sobreModalContent">
-    <h5>Sobre o OndeCortar.pt</h5>
+    <h5 id="sobreTitle">Sobre o OndeCortar.pt</h5>
     <p>OndeCortar.pt é uma plataforma independente que ajuda pessoas a encontrarem barbearias em Portugal de forma rápida e visual.</p>
-    <p>Todas as informações foram recolhidas de fontes públicas disponíveis online.</p>
-    <p>Se desejar <strong>adicionar, atualizar ou remover</strong> a sua barbearia, por favor envie um email para: <a href="mailto:contacto@ondecortar.pt">contacto@ondecortar.pt</a>.</p>
-    <p>Obrigado por fazer parte da rede de barbearias em Portugal!</p>
-    <div class="text-end">
-      <button class="btn" onclick="fecharSobre()">Fechar</button>
+    <p>Parte das informações pode ter sido recolhida de fontes públicas disponíveis online.</p>
+    <p>Se desejares <strong>adicionar, atualizar ou remover</strong> a tua barbearia, envia email para:
+      <a href="mailto:contacto@ondecortar.pt">contacto@ondecortar.pt</a>.
+    </p>
+    <p class="mb-0">Obrigado por fazeres parte da rede de barbearias em Portugal!</p>
+    <div class="text-end mt-3">
+      <button class="btn" id="closeAboutBtn" type="button">Fechar</button>
     </div>
   </div>
 </div>
-
-
 
 <section class="text-center my-5 px-3">
   <h2 style="font-size: 1.5rem; font-weight: bold;">Barbearias por todo o país</h2>
@@ -190,69 +227,209 @@
 </section>
 
 <footer>
-  <p>© 2025 OndeCortar.pt | Feito com ❤️ em Portugal</p>
-  <p><a href="faq.html">Perguntas Frequentes</a> | <a href="#" onclick="abrirSobre()">Sobre o site</a></p>
+  <p>© 2026 OndeCortar.pt | Feito com ❤️ em Portugal</p>
+  <p><a href="faq.html">Perguntas Frequentes</a> | <a href="#" id="aboutLink">Sobre o site</a></p>
 </footer>
 
-
 <script>
-  const map = L.map('map').setView([39.5, -8.0], 6);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
+  // ---------- Utilitários de segurança ----------
+  function escapeHtml(str) {
+    return String(str ?? '')
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#039;');
+  }
 
-  let markers = [];
+  function safeUrl(url) {
+    const u = String(url ?? '').trim();
+    if (!u) return '';
+    // permite apenas http/https
+    if (u.startsWith('http://') || u.startsWith('https://')) return u;
+    return '';
+  }
 
   function normalizar(texto) {
-    return texto.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+    return String(texto ?? '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim();
   }
 
-  function adicionarMarcadores(lista) {
-    markers.forEach(m => map.removeLayer(m));
-    markers = [];
+  function validCoords(coords) {
+    return Array.isArray(coords)
+      && coords.length === 2
+      && typeof coords[0] === 'number'
+      && typeof coords[1] === 'number'
+      && isFinite(coords[0]) && isFinite(coords[1])
+      && Math.abs(coords[0]) <= 90
+      && Math.abs(coords[1]) <= 180;
+  }
 
-    lista.forEach(b => {
-      const popupContent = `
-        <div class="popup-card">
-          <strong>${b.name || b.nome || 'Barbearia'}</strong><br>
-          ${b.morada ? `📍 ${b.morada}<br>` : ''}
-          ${b.telefone ? `📞 ${b.telefone}<br>` : ''}
-          ${b.website ? `🌐 <a href="${b.website}" target="_blank">${b.website}</a><br>` : ''}
-          ${b.email ? `✉️ <a href="mailto:${b.email}">${b.email}</a>` : ''}
-        </div>
-      `;
-      const marker = L.marker(b.coords).addTo(map).bindPopup(popupContent);
-      markers.push(marker);
+  function setResultsInfo(text) {
+    document.getElementById('resultsInfo').textContent = text;
+  }
+
+  // espera até 1.5s pelo array barbearias (evita mostrar mensagens técnicas ao utilizador)
+  function waitForBarbearias(maxMs = 1500, stepMs = 50) {
+    return new Promise((resolve) => {
+      const started = Date.now();
+      const timer = setInterval(() => {
+        if (Array.isArray(window.barbearias)) {
+          clearInterval(timer);
+          resolve(true);
+        } else if (Date.now() - started > maxMs) {
+          clearInterval(timer);
+          resolve(false);
+        }
+      }, stepMs);
     });
   }
 
-  function buscarBarbearia() {
-    const termo = normalizar(document.getElementById("searchInput").value);
-    if (!termo || termo.length < 2) {
-      adicionarMarcadores(barbearias);
+  // Debounce para pesquisa ao escrever
+  function debounce(fn, delay) {
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => fn(...args), delay);
+    };
+  }
+
+  // ---------- Inicialização no DOM ready ----------
+  document.addEventListener('DOMContentLoaded', async () => {
+    // ---------- Mapa ----------
+    const map = L.map('map').setView([39.5, -8.0], 6);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    let markers = [];
+
+    function adicionarMarcadores(lista) {
+      markers.forEach(m => map.removeLayer(m));
+      markers = [];
+
+      const bounds = [];
+
+      lista.forEach(b => {
+        const nome = escapeHtml(b.name || b.nome || 'Barbearia');
+        const morada = escapeHtml(b.morada || '');
+        const telefone = escapeHtml(b.telefone || '');
+        const website = safeUrl(b.website || '');
+        const email = String(b.email || '').trim();
+
+        const coords = b.coords;
+        if (!validCoords(coords)) return;
+
+        const popupContent = `
+          <div class="popup-card">
+            <strong>${nome}</strong><br>
+            ${morada ? `📍 ${morada}<br>` : ''}
+            ${telefone ? `📞 ${telefone}<br>` : ''}
+            ${website ? `🌐 <a href="${website}" target="_blank" rel="noopener noreferrer">${escapeHtml(website)}</a><br>` : ''}
+            ${email ? `✉️ <a href="mailto:${encodeURIComponent(email)}">${escapeHtml(email)}</a>` : ''}
+          </div>
+        `;
+
+        const marker = L.marker(coords).addTo(map).bindPopup(popupContent);
+        markers.push(marker);
+        bounds.push(coords);
+      });
+
+      if (bounds.length > 0) {
+        map.fitBounds(L.latLngBounds(bounds), { padding: [30, 30] });
+      }
+    }
+
+    function filtrarBarbearias(termo) {
+      const t = normalizar(termo);
+      if (!t || t.length < 2) return barbearias;
+
+      return barbearias.filter(b => {
+        const nome = normalizar(b.name || b.nome || '');
+        const morada = normalizar(b.morada || '');
+        return nome.includes(t) || morada.includes(t);
+      });
+    }
+
+    function buscarBarbearia() {
+      if (!Array.isArray(window.barbearias)) {
+        setResultsInfo('Não foi possível carregar as barbearias. Tenta novamente mais tarde.');
+        console.error('Falha a carregar dados: verifica se Barbeiros/barbeiros.js está acessível e sem erros.');
+        return;
+      }
+
+      const termo = document.getElementById("searchInput").value;
+      const filtradas = filtrarBarbearias(termo);
+
+      adicionarMarcadores(filtradas);
+
+      if (normalizar(termo).length < 2) {
+        setResultsInfo(`A mostrar ${filtradas.length} barbearias (todas).`);
+      } else if (filtradas.length === 0) {
+        setResultsInfo('Sem resultados. Tenta uma cidade (ex.: Braga) ou parte do nome.');
+        map.setView([39.5, -8.0], 6);
+      } else {
+        setResultsInfo(`A mostrar ${filtradas.length} resultado(s) para “${termo.trim()}”.`);
+      }
+    }
+
+    const buscarDebounced = debounce(buscarBarbearia, 250);
+
+    // ---------- Modal Sobre ----------
+    function abrirSobre() {
+      document.getElementById("sobreModal").style.display = "flex";
+    }
+    function fecharSobre() {
+      document.getElementById("sobreModal").style.display = "none";
+    }
+
+    // ---------- Eventos ----------
+    document.getElementById('searchBtn').addEventListener('click', buscarBarbearia);
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      document.getElementById('searchInput').value = '';
+      buscarBarbearia();
+      document.getElementById('searchInput').focus();
+    });
+
+    document.getElementById('searchInput').addEventListener('input', buscarDebounced);
+    document.getElementById('searchInput').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        buscarBarbearia();
+      }
+    });
+
+    document.getElementById('aboutLink').addEventListener('click', (e) => {
+      e.preventDefault();
+      abrirSobre();
+    });
+    document.getElementById('closeAboutBtn').addEventListener('click', fecharSobre);
+    document.getElementById('sobreModal').addEventListener('click', (e) => {
+      if (e.target.id === 'sobreModal') fecharSobre();
+    });
+
+    // ---------- Boot ----------
+    setResultsInfo('A carregar barbearias…');
+
+    const ok = await waitForBarbearias();
+    if (!ok) {
+      setResultsInfo('Não foi possível carregar as barbearias. Tenta novamente mais tarde.');
+      console.error('Timeout a carregar barbearias. Verifica caminho/capitalização: Barbeiros/barbeiros.js');
       return;
     }
-    const filtradas = barbearias.filter(b => {
-      const nome = b.name || b.nome || "";
-      const morada = b.morada || "";
-      return normalizar(nome).includes(termo) || normalizar(morada).includes(termo);
-    });
-    adicionarMarcadores(filtradas);
-  }
 
-  function abrirSobre() {
-    document.getElementById("sobreModal").style.display = "flex";
-  }
+    // Ler query ?q=... para partilhas/SEO
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q');
+    if (q) document.getElementById('searchInput').value = q;
 
-  function fecharSobre() {
-    document.getElementById("sobreModal").style.display = "none";
-  }
-
-  if (typeof barbearias !== 'undefined') {
-    adicionarMarcadores(barbearias);
-  } else {
-    console.error("Lista de barbearias não encontrada. Verifique se barbeiros.js está carregado corretamente.");
-  }
+    // Mostrar mapa
+    setResultsInfo(`A mostrar ${barbearias.length} barbearias (todas).`);
+    buscarBarbearia();
+  });
 </script>
 
 </body>
