@@ -17,17 +17,16 @@
   <script src="Barbeiros/barbeiros.js"></script>
   <style>
     :root {
-      --bg: #0d0d0d;
-      --bg-soft: #171717;
-      --panel: rgba(255, 255, 255, 0.04);
+      --panel: rgba(255, 255, 255, 0.045);
+      --panel-strong: rgba(255, 255, 255, 0.07);
       --line: rgba(255, 255, 255, 0.12);
-      --text: #f5f5f5;
-      --muted: #b9b9b9;
-      --gold: #ffc400;
-      --gold-soft: #ffd85c;
-      --red: #e63946;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
-      --radius: 22px;
+      --text: #f6f3ef;
+      --muted: #c8c2bb;
+      --gold: #ffbf1f;
+      --gold-soft: #ffd970;
+      --red: #eb4654;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+      --radius: 24px;
     }
 
     * {
@@ -43,9 +42,9 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top right, rgba(230, 57, 70, 0.16), transparent 28%),
-        radial-gradient(circle at top left, rgba(255, 196, 0, 0.12), transparent 24%),
-        linear-gradient(180deg, #090909 0%, #131313 55%, #0b0b0b 100%);
+        radial-gradient(circle at top left, rgba(255, 191, 31, 0.11), transparent 26%),
+        radial-gradient(circle at top right, rgba(235, 70, 84, 0.12), transparent 28%),
+        linear-gradient(180deg, #0a0908 0%, #141312 60%, #0a0908 100%);
     }
 
     a {
@@ -59,7 +58,7 @@
     }
 
     .site-header {
-      padding: 22px 0 18px;
+      padding: 22px 0 16px;
     }
 
     .nav {
@@ -67,10 +66,10 @@
       justify-content: space-between;
       align-items: center;
       gap: 18px;
-      padding: 14px 20px;
+      padding: 14px 18px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      background: rgba(10, 10, 10, 0.72);
+      background: rgba(8, 8, 8, 0.74);
       backdrop-filter: blur(10px);
       box-shadow: var(--shadow);
     }
@@ -80,25 +79,27 @@
       align-items: center;
       gap: 12px;
       font-weight: 800;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
+      min-width: 0;
     }
 
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    .brand-logo {
+      width: 44px;
+      height: 44px;
       border-radius: 14px;
-      background: linear-gradient(135deg, var(--gold), #ff8f00);
-      color: #111;
-      font-weight: 900;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+    }
+
+    .brand span {
+      font-size: 1.05rem;
     }
 
     .nav-links {
       display: flex;
-      gap: 18px;
       flex-wrap: wrap;
+      gap: 18px;
       align-items: center;
       color: var(--muted);
       font-size: 0.95rem;
@@ -109,83 +110,98 @@
     }
 
     .hero {
-      padding: 34px 0 26px;
+      padding: 18px 0 12px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.4fr 0.95fr;
-      gap: 28px;
+      grid-template-columns: 0.86fr 1.14fr;
+      gap: 22px;
       align-items: stretch;
     }
 
-    .hero-copy,
-    .hero-side,
+    .intro-card,
     .search-shell,
+    .stat-card,
     .section-card,
     .pricing-card,
-    .business-card {
-      background: var(--panel);
+    .cta-band {
       border: 1px solid var(--line);
       border-radius: var(--radius);
+      background: var(--panel);
       box-shadow: var(--shadow);
     }
 
-    .hero-copy {
-      padding: 34px;
+    .intro-card,
+    .search-shell,
+    .stat-card,
+    .section-card,
+    .pricing-card,
+    .cta-band {
+      padding: 26px;
     }
 
-    .eyebrow {
+    .eyebrow,
+    .tag,
+    .pill {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
+      padding: 7px 12px;
       border-radius: 999px;
       font-size: 0.84rem;
       font-weight: 700;
+    }
+
+    .eyebrow {
       color: #111;
       background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+    }
+
+    .tag,
+    .pill {
+      color: var(--gold);
+      background: rgba(255, 191, 31, 0.1);
+      border: 1px solid rgba(255, 191, 31, 0.18);
     }
 
     h1,
     h2,
     h3 {
       margin: 0;
-      line-height: 1.08;
+      line-height: 1.06;
     }
 
     h1 {
-      margin-top: 18px;
+      margin-top: 16px;
       font-size: clamp(2.4rem, 5vw, 4.7rem);
-      max-width: 12ch;
+      max-width: 11ch;
     }
 
-    .hero-copy p,
+    .intro-card p,
     .section-card p,
-    .business-card p,
     .pricing-card p,
     footer p {
       color: var(--muted);
-      line-height: 1.65;
+      line-height: 1.68;
     }
 
-    .hero-copy p {
-      font-size: 1.05rem;
-      max-width: 62ch;
-      margin: 18px 0 0;
+    .intro-card p {
+      margin: 16px 0 0;
+      font-size: 1.03rem;
+      max-width: 58ch;
     }
 
     .hero-actions,
+    .footer-links,
     .mini-actions,
-    .cta-actions,
-    .footer-links {
+    .cta-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
     }
 
     .hero-actions {
-      margin-top: 26px;
+      margin-top: 22px;
     }
 
     .btn {
@@ -196,8 +212,8 @@
       padding: 13px 18px;
       border-radius: 14px;
       border: 1px solid transparent;
-      font-weight: 700;
-      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      font-weight: 800;
+      transition: transform 0.2s ease;
     }
 
     .btn:hover {
@@ -205,8 +221,13 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--red), #ff5d6a);
+      background: linear-gradient(135deg, var(--red), #ff6270);
       color: #fff;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), #ffab2e);
+      color: #111;
     }
 
     .btn-secondary {
@@ -215,72 +236,31 @@
       color: var(--text);
     }
 
-    .btn-gold {
-      background: linear-gradient(135deg, var(--gold), #ffac30);
-      color: #111;
+    .search-shell h2 {
+      font-size: clamp(1.55rem, 3vw, 2.2rem);
     }
 
-    .hero-side {
-      padding: 28px;
-      display: grid;
-      gap: 16px;
-      align-content: start;
-    }
-
-    .stat-card {
-      padding: 18px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .stat-card strong {
-      display: block;
-      font-size: 1.85rem;
-      color: var(--gold);
-    }
-
-    .stat-card span {
-      display: block;
-      margin-top: 6px;
-      color: var(--muted);
-      line-height: 1.45;
-    }
-
-    .hero-side ul {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .search-section {
-      padding: 10px 0 0;
-    }
-
-    .search-shell {
-      padding: 28px;
-    }
-
-    .section-heading {
+    .search-header {
       display: flex;
       justify-content: space-between;
       align-items: end;
       gap: 16px;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    .section-heading p {
+    .search-header p {
       margin: 10px 0 0;
-      max-width: 62ch;
+      color: var(--muted);
+      max-width: 58ch;
+      line-height: 1.62;
     }
 
     .search-controls {
       display: grid;
       grid-template-columns: 1fr auto auto;
       gap: 12px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .search-controls input {
@@ -298,62 +278,70 @@
       flex-wrap: wrap;
       gap: 10px;
       align-items: center;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.94rem;
     }
 
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(255, 196, 0, 0.1);
-      color: var(--gold);
-      border: 1px solid rgba(255, 196, 0, 0.18);
-      font-weight: 700;
-    }
-
-    #map {
-      height: 500px;
+    .map-frame {
       border-radius: 18px;
       overflow: hidden;
       border: 1px solid var(--line);
+      background: rgba(0, 0, 0, 0.18);
     }
 
-    .content-grid,
+    #map {
+      height: 590px;
+    }
+
+    .signals,
     .pricing-grid,
-    .business-grid {
+    .content-grid {
       display: grid;
       gap: 18px;
-      margin-top: 22px;
     }
 
-    .content-grid,
-    .business-grid,
-    .pricing-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+    .signals {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      padding: 20px 0 6px;
     }
 
-    .section-card,
-    .pricing-card,
-    .business-card {
-      padding: 24px;
+    .stat-card strong {
+      display: block;
+      font-size: 1.85rem;
+      color: var(--gold);
     }
 
-    .section-card h3,
-    .pricing-card h3,
-    .business-card h3 {
-      font-size: 1.25rem;
-    }
-
-    .section-card ul,
-    .pricing-card ul,
-    .business-card ul {
-      margin: 16px 0 0;
-      padding-left: 18px;
+    .stat-card span {
+      display: block;
+      margin-top: 8px;
       color: var(--muted);
-      line-height: 1.7;
+      line-height: 1.55;
+    }
+
+    .page-section {
+      padding: 18px 0 6px;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .section-heading p {
+      margin: 10px 0 0;
+      max-width: 62ch;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .pricing-grid,
+    .content-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .pricing-card .price {
@@ -365,54 +353,45 @@
     }
 
     .pricing-card .meta {
-      margin-top: 6px;
       display: block;
+      margin-top: 6px;
       color: var(--muted);
       font-size: 0.92rem;
     }
 
     .pricing-card.recommended {
-      background: linear-gradient(180deg, rgba(255, 196, 0, 0.12), rgba(255, 255, 255, 0.04));
-      border-color: rgba(255, 196, 0, 0.34);
-      transform: translateY(-6px);
+      background: linear-gradient(180deg, rgba(255, 191, 31, 0.14), rgba(255, 255, 255, 0.04));
+      border-color: rgba(255, 191, 31, 0.34);
+      transform: translateY(-4px);
     }
 
-    .pricing-card .tag {
-      display: inline-flex;
-      padding: 6px 10px;
-      margin-bottom: 14px;
-      border-radius: 999px;
-      background: rgba(255, 196, 0, 0.12);
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 0.84rem;
-    }
-
-    .page-section {
-      padding: 26px 0 6px;
+    .section-card ul,
+    .pricing-card ul {
+      margin: 16px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.72;
     }
 
     .cta-band {
-      padding: 26px 28px;
-      border-radius: var(--radius);
-      border: 1px solid rgba(255, 196, 0, 0.22);
-      background: linear-gradient(135deg, rgba(255, 196, 0, 0.12), rgba(230, 57, 70, 0.08));
-      box-shadow: var(--shadow);
+      background: linear-gradient(135deg, rgba(255, 191, 31, 0.12), rgba(235, 70, 84, 0.08));
+      border-color: rgba(255, 191, 31, 0.24);
     }
 
     .cta-band p {
       margin: 12px 0 0;
       max-width: 62ch;
       color: var(--muted);
+      line-height: 1.66;
     }
 
     footer {
-      padding: 42px 0 60px;
+      padding: 36px 0 56px;
     }
 
-    footer .footer-shell {
+    .footer-shell {
       border-top: 1px solid var(--line);
-      padding-top: 22px;
+      padding-top: 20px;
       display: flex;
       justify-content: space-between;
       align-items: start;
@@ -420,17 +399,29 @@
       flex-wrap: wrap;
     }
 
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+    }
+
     .popup-card {
       min-width: 220px;
-      max-width: 280px;
-      color: #222;
+      max-width: 300px;
+      color: #1f1f1f;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .popup-card strong {
-      font-size: 1rem;
       display: block;
       margin-bottom: 8px;
+      font-size: 1rem;
     }
 
     .popup-card p {
@@ -453,21 +444,21 @@
       border-radius: 999px;
       background: #111;
       color: #fff;
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       font-weight: 700;
     }
 
     .popup-note {
       color: #666;
       font-size: 0.88rem;
-      margin-top: 10px;
+      margin-top: 8px;
     }
 
-    @media (max-width: 960px) {
+    @media (max-width: 1080px) {
       .hero-grid,
-      .content-grid,
+      .signals,
       .pricing-grid,
-      .business-grid {
+      .content-grid {
         grid-template-columns: 1fr;
       }
 
@@ -486,18 +477,17 @@
         grid-template-columns: 1fr;
       }
 
-      .hero-copy,
-      .hero-side,
+      .intro-card,
       .search-shell,
+      .stat-card,
       .section-card,
       .pricing-card,
-      .business-card,
       .cta-band {
         padding: 22px;
       }
 
       #map {
-        height: 420px;
+        height: 440px;
       }
     }
   </style>
@@ -523,17 +513,6 @@
         "name": "OndeCortar.pt",
         "url": "https://ondecortar.pt/",
         "email": "contacto@ondecortar.pt"
-      },
-      {
-        "@type": "Service",
-        "serviceType": "Divulgação de barbearias em Portugal",
-        "provider": {
-          "@id": "https://ondecortar.pt/#organization"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "Portugal"
-        }
       }
     ]
   }
@@ -544,7 +523,7 @@
     <div class="container">
       <nav class="nav">
         <a class="brand" href="index.html">
-          <span class="brand-mark">OC</span>
+          <img class="brand-logo" src="favicon.ico" alt="Logo OndeCortar.pt" />
           <span>OndeCortar.pt</span>
         </a>
         <div class="nav-links">
@@ -559,64 +538,42 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" id="pesquisa">
       <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Diretório nacional + produto comercial para barbeiros</span>
-          <h1>Encontra uma barbearia perto de ti. Ou põe a tua no mapa.</h1>
-          <p>O OndeCortar.pt junta duas oportunidades no mesmo projeto: ajudar clientes a encontrarem barbearias em Portugal e ajudar barbeiros a conseguirem mais visibilidade, contactos e marcações com uma presença online simples.</p>
+        <div class="intro-card">
+          <span class="eyebrow">Mapa em destaque + produto para barbearias</span>
+          <h1>Encontra barbearias em Portugal no mapa.</h1>
+          <p>O mapa voltou ao centro da homepage. É aqui que o projeto ganha utilidade para o utilizador e cria valor para as barbearias que querem aparecer melhor, destacar-se e receber mais contactos.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#pesquisa">Procurar barbearias</a>
+            <a class="btn btn-primary" href="#map">Explorar mapa</a>
             <a class="btn btn-gold" href="anunciar.html">Ver planos para barbearias</a>
-            <a class="btn btn-secondary" href="pagina-premium-exemplo.html">Ver exemplo de landing page</a>
+            <a class="btn btn-secondary" href="pagina-premium-exemplo.html">Ver exemplo premium</a>
           </div>
         </div>
 
-        <aside class="hero-side">
-          <div class="stat-card">
-            <strong id="barbeariasCount">61+</strong>
-            <span>barbearias já organizadas na base do diretório para validar procura local.</span>
-          </div>
-          <div class="stat-card">
-            <strong>3 vias de receita</strong>
-            <span>destaque local, páginas premium para barbearias e links de afiliado para produtos relevantes.</span>
-          </div>
-          <div class="stat-card">
-            <strong>Primeiro objetivo</strong>
-            <span>transformar pedidos de adesão em clientes pagos com uma oferta simples e fácil de explicar.</span>
-          </div>
-          <ul>
-            <li>Entrada gratuita para reduzir fricção.</li>
-            <li>Página premium para vender presença online.</li>
-            <li>Loja com afiliados como receita complementar.</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section class="search-section" id="pesquisa">
-      <div class="container">
         <div class="search-shell">
-          <div class="section-heading">
+          <div class="search-header">
             <div>
               <h2>Mapa de barbearias em Portugal</h2>
-              <p>Pesquisa por cidade, zona, nome da barbearia ou morada. As fichas com mais informação tornam-se também o teu futuro produto premium.</p>
+              <p>Pesquisa por cidade, zona, nome da barbearia ou morada. O objetivo é encontrares uma barbearia rapidamente e dar motivo às barbearias para aderirem ao diretório.</p>
             </div>
-            <span class="pill" id="searchCount">A mostrar 61 barbearias</span>
+            <span class="pill" id="searchCount">A mostrar 63 barbearias</span>
           </div>
 
           <div class="search-controls">
-            <input type="text" id="searchInput" placeholder="Ex.: Lisboa, Porto, Faro, Guimarães, Vintage..." />
+            <input type="text" id="searchInput" placeholder="Ex.: Lousada, Lisboa, Porto, Korte JB..." />
             <button class="btn btn-primary" type="button" onclick="buscarBarbearia()">Pesquisar</button>
             <button class="btn btn-secondary" type="button" onclick="limparPesquisa()">Limpar</button>
           </div>
 
           <div class="results-line">
             <span id="resultsMessage">Pesquisa livre por nome ou localidade.</span>
-            <span class="pill">Atualizações e destaques disponíveis para barbearias aderentes</span>
+            <span class="pill">Diretório vivo para clientes e para barbearias</span>
           </div>
 
-          <div id="map"></div>
+          <div class="map-frame">
+            <div id="map"></div>
+          </div>
           <noscript>
             <p style="margin-top: 16px; color: #f5f5f5;">Para usar o mapa, ativa o JavaScript no teu navegador.</p>
           </noscript>
@@ -624,46 +581,31 @@
       </div>
     </section>
 
-    <section class="page-section">
-      <div class="container">
-        <div class="business-grid">
-          <article class="business-card">
-            <h3>Como isto pode fazer dinheiro</h3>
-            <p>O diretório é a porta de entrada. O verdadeiro produto de margem está no lado B2B: destaque local, página premium e gestão simples da presença online da barbearia.</p>
-            <ul>
-              <li>Barbearias pagam para serem mais fáceis de encontrar.</li>
-              <li>Páginas premium funcionam como mini-sites de venda.</li>
-              <li>Os afiliados complementam a receita sem depender deles.</li>
-            </ul>
-          </article>
-          <article class="business-card">
-            <h3>O que já tens validado</h3>
-            <p>Receber pedidos espontâneos por email é um sinal forte. Isso significa que o mercado percebe valor antes mesmo de veres um funil comercial bem estruturado.</p>
-            <ul>
-              <li>Há interesse em aparecer na plataforma.</li>
-              <li>Já existe prova mínima de procura do lado das barbearias.</li>
-              <li>Falta transformar curiosidade em oferta clara.</li>
-            </ul>
-          </article>
-          <article class="business-card">
-            <h3>O próximo salto</h3>
-            <p>Começar por vender poucas páginas premium, aprender o que cada barbearia quer destacar e depois escalar para páginas por cidade e blog com intenção local.</p>
-            <ul>
-              <li>Primeiras vendas com preço de lançamento.</li>
-              <li>Depois escalar para SEO local por cidade.</li>
-              <li>Só mais tarde investir a sério em conteúdo editorial.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
+    <section class="container signals">
+      <article class="stat-card">
+        <strong id="barbeariasCount">63+</strong>
+        <span>barbearias já organizadas na base para validar procura local.</span>
+      </article>
+      <article class="stat-card">
+        <strong>Mapa primeiro</strong>
+        <span>porque é a principal utilidade pública do projeto.</span>
+      </article>
+      <article class="stat-card">
+        <strong>Páginas premium</strong>
+        <span>para transformar interesse de barbearias em receita real.</span>
+      </article>
+      <article class="stat-card">
+        <strong>Afiliados</strong>
+        <span>como complemento, não como motor principal do negócio.</span>
+      </article>
     </section>
 
     <section class="page-section">
       <div class="container">
         <div class="section-heading">
           <div>
-            <h2>Oferta inicial para barbearias</h2>
-            <p>Em vez de oferecer tudo grátis, a página deve abrir a conversa com uma escada simples de valor: entrada gratuita, upgrade premium e manutenção mensal.</p>
+            <h2>Oferta simples para começar a vender</h2>
+            <p>O diretório continua gratuito à entrada, mas agora está ligado a uma proposta clara para barbearias: ficha base, página premium e destaque mensal.</p>
           </div>
         </div>
 
@@ -671,39 +613,39 @@
           <article class="pricing-card">
             <span class="tag">Baixa fricção</span>
             <h3>Entrada Gratuita</h3>
-            <p>Para barbearias que querem apenas aparecer no diretório e validar se começam a receber contactos.</p>
+            <p>Para aparecer no mapa e validar se a tua barbearia começa a receber contactos.</p>
             <span class="price">0€</span>
             <span class="meta">ficha base</span>
             <ul>
               <li>Nome, morada, telefone e link principal.</li>
               <li>Presença no mapa do diretório.</li>
-              <li>Pedido simples pelo formulário.</li>
+              <li>Entrada simples pelo formulário.</li>
             </ul>
           </article>
 
           <article class="pricing-card recommended">
-            <span class="tag">Mais fácil de vender</span>
+            <span class="tag">Produto principal</span>
             <h3>Página Premium</h3>
-            <p>Uma landing page própria para a barbearia com serviços, contactos, horário, prova social e chamada à marcação.</p>
+            <p>Uma página própria para a barbearia com serviços, contactos, horários e chamadas à ação.</p>
             <span class="price">149€</span>
             <span class="meta">setup de lançamento</span>
             <ul>
               <li>Página individual dentro do OndeCortar.pt.</li>
-              <li>Secções de serviços, preços, horários e contactos.</li>
-              <li>Botões para telefone, WhatsApp, Instagram e marcações.</li>
+              <li>CTA para telefone, WhatsApp, Instagram e marcações.</li>
+              <li>Mais confiança do que uma ficha simples.</li>
             </ul>
           </article>
 
           <article class="pricing-card">
             <span class="tag">Receita recorrente</span>
             <h3>Destaque Mensal</h3>
-            <p>Ideal para manter a página atualizada, destacar a barbearia e acompanhar o desempenho ao longo do tempo.</p>
+            <p>Para manter a barbearia atualizada e mais visível à medida que o projeto cresce.</p>
             <span class="price">29€</span>
             <span class="meta">por mês</span>
             <ul>
-              <li>Atualização mensal de conteúdos e contactos.</li>
-              <li>Destaque nas áreas comerciais do site.</li>
-              <li>Prioridade em futuras páginas de cidade.</li>
+              <li>Atualizações de conteúdo e prioridade.</li>
+              <li>Destaque em áreas comerciais do site.</li>
+              <li>Base para futuras páginas por cidade.</li>
             </ul>
           </article>
         </div>
@@ -715,26 +657,27 @@
         <div class="content-grid">
           <article class="section-card">
             <h3>Para clientes</h3>
-            <p>O lado consumidor do site continua a ser importante, porque é ele que gera a atenção que depois podes vender às barbearias.</p>
+            <p>O mapa é o produto principal do lado público. Quanto melhor funcionar, mais valor cria para quem procura uma barbearia e para quem quer pagar para se destacar.</p>
             <div class="mini-actions" style="margin-top: 18px;">
-              <a class="btn btn-secondary" href="loja.html">Ver loja</a>
-              <a class="btn btn-secondary" href="faq.html">Ler perguntas frequentes</a>
+              <a class="btn btn-secondary" href="#pesquisa">Voltar ao mapa</a>
             </div>
           </article>
+
           <article class="section-card">
             <h3>Para barbeiros</h3>
-            <p>Já tens uma base para apresentar uma proposta séria: presença no mapa, landing page própria e futura visibilidade em páginas locais.</p>
+            <p>Já tens uma oferta apresentável e um exemplo de página premium para começares a fechar os primeiros clientes pagos.</p>
             <div class="mini-actions" style="margin-top: 18px;">
               <a class="btn btn-gold" href="anunciar.html">Ver oferta comercial</a>
               <a class="btn btn-secondary" href="registar.html">Pedir adesão</a>
             </div>
           </article>
+
           <article class="section-card">
-            <h3>Transparência</h3>
-            <p>O OndeCortar.pt pode ganhar dinheiro com serviços a barbearias e com alguns links de afiliado na loja. Isso não aumenta o preço para o utilizador final.</p>
+            <h3>Loja complementar</h3>
+            <p>A loja continua útil como monetização secundária, mas agora já não rouba o protagonismo ao mapa na homepage.</p>
             <div class="mini-actions" style="margin-top: 18px;">
+              <a class="btn btn-secondary" href="loja.html">Ver loja</a>
               <a class="btn btn-secondary" href="privacidade.html">Privacidade</a>
-              <a class="btn btn-secondary" href="faq.html">Como funciona</a>
             </div>
           </article>
         </div>
@@ -744,11 +687,11 @@
     <section class="page-section">
       <div class="container">
         <div class="cta-band">
-          <h2>Se tens uma barbearia, esta é a altura certa para entrar</h2>
-          <p>Já existe interesse real no projeto. A forma mais rápida de testar receita agora é fechar as primeiras páginas premium, publicar casos reais e usar esses exemplos para vender as seguintes.</p>
+          <h2>Agora o foco visual está onde devia estar: no mapa.</h2>
+          <p>O mapa voltou para a primeira dobra da homepage, e o branding passa a usar o logo atual do projeto. Se me deres depois o ficheiro final do logo em PNG ou SVG, eu troco o `favicon` por esse asset sem problema.</p>
           <div class="cta-actions" style="margin-top: 18px;">
-            <a class="btn btn-primary" href="registar.html">Quero aderir</a>
-            <a class="btn btn-gold" href="pagina-premium-exemplo.html">Quero ver um exemplo</a>
+            <a class="btn btn-primary" href="registar.html">Adicionar barbearia</a>
+            <a class="btn btn-gold" href="anunciar.html">Monetizar com páginas premium</a>
           </div>
         </div>
       </div>
@@ -758,8 +701,11 @@
   <footer>
     <div class="container footer-shell">
       <div>
-        <strong>OndeCortar.pt</strong>
-        <p>Diretório de barbearias em Portugal com oportunidades de crescimento para barbeiros e receitas complementares por afiliados.</p>
+        <div class="footer-brand">
+          <img src="favicon.ico" alt="Logo OndeCortar.pt" />
+          <strong>OndeCortar.pt</strong>
+        </div>
+        <p>Diretório de barbearias em Portugal com o mapa em destaque e uma oferta comercial simples para barbeiros.</p>
       </div>
       <div class="footer-links">
         <a href="anunciar.html">Para barbearias</a>
@@ -860,6 +806,8 @@
             "<strong>" + nome + "</strong>" +
             (barbearia.morada ? "<p>Morada: " + barbearia.morada + "</p>" : "") +
             (barbearia.telefone ? "<p>Telefone: " + barbearia.telefone + "</p>" : "") +
+            (barbearia.horario ? "<p>Horário: " + barbearia.horario + "</p>" : "") +
+            (barbearia.observacoes ? "<p>Info: " + barbearia.observacoes + "</p>" : "") +
             criarAcoes(barbearia) +
           "</div>";
 
@@ -869,12 +817,7 @@
 
       atualizarResumo(lista, termo);
 
-      if (!lista.length) {
-        map.setView([39.5, -8.0], 6);
-        return;
-      }
-
-      if (lista.length === barbearias.length) {
+      if (!lista.length || lista.length === barbearias.length) {
         map.setView([39.5, -8.0], 6);
         return;
       }
