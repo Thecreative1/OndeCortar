@@ -7,6 +7,7 @@
   <meta name="description" content="Ferramenta para encontrar barbearias em Portugal com mapa, contactos, moradas e links diretos. A loja continua disponível numa página própria para quem procura produtos de barbearia." />
   <link rel="canonical" href="https://ondecortar.pt/" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <meta property="og:title" content="OndeCortar.pt | Mapa de Barbearias em Portugal" />
   <meta property="og:description" content="Mapa interativo para descobrir barbearias em Portugal, com contactos, moradas e links diretos. A loja continua disponível em página própria." />
   <meta property="og:url" content="https://ondecortar.pt/" />
@@ -88,11 +89,12 @@
     }
 
     .brand-logo {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
       display: block;
-      object-fit: cover;
+      object-fit: contain;
+      background: rgba(255, 255, 255, 0.02);
       box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
     }
 
@@ -408,9 +410,11 @@
     }
 
     .footer-brand img {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: rgba(255, 255, 255, 0.02);
     }
 
     .popup-card {
@@ -527,7 +531,7 @@
     <div class="container">
       <nav class="nav">
         <a class="brand" href="index.html">
-          <img class="brand-logo" src="favicon.ico" alt="Logo OndeCortar.pt" />
+          <img class="brand-logo" src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
           <span>OndeCortar.pt</span>
         </a>
         <div class="nav-links">
@@ -714,7 +718,7 @@
     <div class="container footer-shell">
       <div>
         <div class="footer-brand">
-          <img src="favicon.ico" alt="Logo OndeCortar.pt" />
+          <img src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
           <strong>OndeCortar.pt</strong>
         </div>
         <p>Ferramenta para descobrir barbearias em Portugal e diretório aberto a novas entradas.</p>
