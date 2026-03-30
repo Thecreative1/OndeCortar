@@ -48,7 +48,6 @@
       padding: 28px 0 60px;
     }
 
-    .topbar,
     .intro,
     .form-card,
     .side-card {
@@ -58,21 +57,69 @@
       box-shadow: var(--shadow);
     }
 
-    .topbar {
+    .site-header {
+      padding-bottom: 24px;
+    }
+
+    .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
+      gap: 18px;
       padding: 14px 18px;
-      margin-bottom: 24px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(8, 8, 8, 0.74);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
     }
 
-    .topbar-links {
+    .brand {
       display: flex;
-      gap: 16px;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+    }
+
+    .brand span {
+      font-size: 1.05rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
       flex-wrap: wrap;
+      align-items: center;
       color: var(--muted);
       font-size: 0.95rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.nav-link-active {
+      color: var(--text);
+    }
+
+    .nav-store {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--gold), #ffab2e);
+      color: #111;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(255, 196, 0, 0.18);
     }
 
     .intro {
@@ -226,6 +273,10 @@
     }
 
     @media (max-width: 900px) {
+      .nav {
+        border-radius: 28px;
+      }
+
       .grid,
       .field-grid {
         grid-template-columns: 1fr;
@@ -258,13 +309,20 @@
 </head>
 <body>
   <div class="container">
-    <div class="topbar">
-      <a href="index.html"><strong>← Voltar ao OndeCortar.pt</strong></a>
-      <div class="topbar-links">
-        <a href="faq.html">FAQ</a>
-        <a href="privacidade.html">Privacidade</a>
-      </div>
-    </div>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="favicon.ico" alt="Logo OndeCortar.pt" />
+          <span>OndeCortar.pt</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html#pesquisa">Mapa</a>
+          <a class="nav-link-active" href="registar.html" aria-current="page">Adicionar barbearia</a>
+          <a href="faq.html">FAQ</a>
+          <a class="nav-store" href="loja.html">Ver loja</a>
+        </div>
+      </nav>
+    </header>
 
     <section class="intro">
       <span>Entrada gratuita no mapa</span>
