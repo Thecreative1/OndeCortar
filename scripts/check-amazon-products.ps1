@@ -12,11 +12,12 @@ $pages = @(
 
 $headers = @{
   "User-Agent" = "Mozilla/5.0"
+  "Accept-Language" = "pt-PT,pt;q=0.9"
 }
 
 $cardPattern = '<article class="card">(?<card>.*?)</article>'
 $titlePattern = '<h2>(?<title>.*?)</h2>'
-$urlPattern = 'href="(?<url>https://www\.amazon\.es/dp/[^"]+)"'
+$urlPattern = 'href="(?<url>https://www\.amazon\.es/[^"]+)"'
 
 $results = New-Object System.Collections.Generic.List[object]
 

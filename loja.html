@@ -38,7 +38,7 @@
     .container {
       width: min(1160px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 28px 0 60px;
+      padding: 20px 0 52px;
     }
 
     .topbar,
@@ -56,15 +56,17 @@
       justify-content: space-between;
       align-items: center;
       gap: 12px;
-      padding: 16px 18px;
-      margin-bottom: 24px;
+      padding: 12px 16px;
+      margin-bottom: 18px;
+      border-radius: 20px;
     }
 
     .links {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 14px;
       color: var(--muted);
+      font-size: 0.96rem;
     }
 
     .hero {
@@ -73,13 +75,20 @@
 
     .hero img {
       width: 100%;
-      max-height: 280px;
+      max-height: 220px;
       object-fit: cover;
       display: block;
     }
 
     .hero-copy {
-      padding: 26px;
+      padding: 22px;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+      gap: 18px;
+      align-items: start;
     }
 
     .eyebrow {
@@ -98,7 +107,7 @@
     h1, h2 { margin: 0; line-height: 1.08; }
 
     h1 {
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-size: clamp(1.95rem, 4.6vw, 3.2rem);
     }
 
     p {
@@ -107,32 +116,82 @@
     }
 
     .hero-copy p {
-      max-width: 62ch;
-      margin: 16px 0 0;
+      max-width: 58ch;
+      margin: 12px 0 0;
     }
 
     .hero-points {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
+      gap: 8px;
+      margin-top: 14px;
     }
 
     .hero-points span {
       display: inline-flex;
       align-items: center;
-      padding: 9px 12px;
+      padding: 8px 11px;
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid var(--line);
       color: var(--text);
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       font-weight: 600;
     }
 
+    .hero-featured {
+      display: grid;
+      gap: 12px;
+    }
+
+    .hero-featured h2 {
+      font-size: 1rem;
+      color: var(--gold);
+      letter-spacing: 0.02em;
+    }
+
+    .featured-card {
+      display: grid;
+      grid-template-columns: 84px 1fr;
+      gap: 12px;
+      padding: 14px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .featured-card img {
+      width: 84px;
+      height: 84px;
+      object-fit: cover;
+      border-radius: 14px;
+      background: #fff;
+      display: block;
+    }
+
+    .featured-card strong {
+      display: block;
+      font-size: 1rem;
+      line-height: 1.22;
+    }
+
+    .featured-card p {
+      margin: 6px 0 0;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .featured-link {
+      display: inline-flex;
+      margin-top: 10px;
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
     .notice {
-      margin-top: 20px;
-      padding: 18px 20px;
+      margin-top: 16px;
+      padding: 14px 18px;
       color: var(--muted);
     }
 
@@ -148,22 +207,22 @@
     }
 
     .section-intro {
-      margin-top: 28px;
+      margin-top: 20px;
       display: flex;
       justify-content: space-between;
       gap: 16px;
-      align-items: end;
+      align-items: center;
       flex-wrap: wrap;
     }
 
     .section-intro p {
-      margin: 8px 0 0;
-      max-width: 64ch;
+      margin: 6px 0 0;
+      max-width: 58ch;
     }
 
     .card img {
       width: 100%;
-      height: 180px;
+      height: 170px;
       object-fit: cover;
       border-radius: 18px;
       display: block;
@@ -206,6 +265,7 @@
     }
 
     @media (max-width: 900px) {
+      .hero-layout,
       .grid {
         grid-template-columns: 1fr;
       }
@@ -226,14 +286,45 @@
     <section class="hero">
       <img src="imagens/banner.jpg" alt="Banner da loja OndeCortar.pt" loading="lazy" />
       <div class="hero-copy">
-        <span class="eyebrow">Loja de barbearia</span>
-        <h1>Máquinas, navalhas e acessórios num só sítio.</h1>
-        <p>Reunimos as categorias mais úteis para barbeiros e para quem trata da barba em casa. Escolhe uma categoria e vai direto a máquinas, kits, cremes, navalhas e acessórios.</p>
-        <div class="hero-points">
-          <span>Máquinas de cortar</span>
-          <span>Kits de barba</span>
-          <span>Navalhas e lâminas</span>
-          <span>Acessórios de barbeiro</span>
+        <div class="hero-layout">
+          <div>
+            <span class="eyebrow">Loja de barbearia</span>
+            <h1>Máquinas, navalhas e acessórios num só sítio.</h1>
+            <p>Escolhe uma categoria e entra logo nos produtos mais úteis para barbeiros e para quem trata da barba em casa.</p>
+            <div class="hero-points">
+              <span>Máquinas de cortar</span>
+              <span>Kits de barba</span>
+              <span>Navalhas e lâminas</span>
+              <span>Cremes e espumas</span>
+            </div>
+          </div>
+          <div class="hero-featured">
+            <h2>Destaques da loja</h2>
+            <article class="featured-card">
+              <img src="imagens/produtos/WahlSuperTaper.jpg" alt="Máquina Wahl Super Taper" loading="lazy" />
+              <div>
+                <strong>Wahl Super Taper</strong>
+                <p>Máquina clássica para corte profissional com muita procura.</p>
+                <a class="featured-link" href="maquinas.html">Ver máquinas</a>
+              </div>
+            </article>
+            <article class="featured-card">
+              <img src="imagens/produtos/VikingRevolution.jpg" alt="Kit Viking Revolution para barba" loading="lazy" />
+              <div>
+                <strong>Kit Viking Revolution</strong>
+                <p>Kit completo para barba com bom valor para rotina diária.</p>
+                <a class="featured-link" href="kits.html">Ver kits</a>
+              </div>
+            </article>
+            <article class="featured-card">
+              <img src="imagens/produtos/kitnavalha.jpg" alt="Kit de Navalha Clássica" loading="lazy" />
+              <div>
+                <strong>Kit de Navalha Clássica</strong>
+                <p>Opção forte para quem gosta do barbear mais tradicional.</p>
+                <a class="featured-link" href="navalhas.html">Ver navalhas</a>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -245,7 +336,7 @@
     <section class="section-intro">
       <div>
         <h2>Explora por categoria</h2>
-        <p>Escolhe a área que te interessa e entra em páginas dedicadas com produtos para uso profissional, manutenção da barba e cuidados do dia a dia.</p>
+        <p>As categorias estão logo aqui em baixo para entrares diretamente nos produtos.</p>
       </div>
     </section>
 
