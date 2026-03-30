@@ -60,6 +60,17 @@ const barbearias = [
     coords: [41.4540, -8.1685]
   },
 
+  // === LOUSADA ===
+  {
+    nome: "Korte JB Barbershop",
+    morada: "R. Constituição da República 29, 4620-657 Lousada",
+    telefone: "+351 910 537 197",
+    instagram: "https://www.instagram.com/kortejbbarbershop/",
+    horario: "Seg a Sab, 09:00 às 20:00",
+    observacoes: "Atendimento por ordem de chegada.",
+    coords: [41.2778327, -8.2834480]
+  },
+
   // === NORTE OESTE ===
 
   {

@@ -1,156 +1,220 @@
 <!DOCTYPE html>
-
-<html lang="pt">
+<html lang="pt-PT">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Loja OndeCortar.pt</title>
-<style>
-    body {
-      background-color: #111;
-      font-family: Arial, sans-serif;
-      color: #fff;
-      margin: 0;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja | OndeCortar.pt</title>
+  <meta name="description" content="Explora máquinas de barbear, kits de barba, navalhas e acessórios recomendados pelo OndeCortar.pt com envio para Portugal." />
+  <link rel="canonical" href="https://ondecortar.pt/loja.html" />
+  <meta property="og:title" content="Loja | OndeCortar.pt" />
+  <meta property="og:description" content="Produtos recomendados para barbeiros e para quem quer cuidar melhor da barba." />
+  <meta property="og:url" content="https://ondecortar.pt/loja.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ondecortar.pt/imagens/banner.jpg" />
+  <style>
+    :root {
+      --panel: rgba(255, 255, 255, 0.05);
+      --line: rgba(255, 255, 255, 0.1);
+      --text: #f5f5f5;
+      --muted: #c4c4c4;
+      --gold: #ffc400;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+      --radius: 24px;
     }
 
-    header img {
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 196, 0, 0.12), transparent 24%),
+        linear-gradient(180deg, #0b0b0c 0%, #151516 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 60px;
+    }
+
+    .topbar,
+    .hero,
+    .notice,
+    .card {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      margin-bottom: 24px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: var(--muted);
+    }
+
+    .hero {
+      overflow: hidden;
+    }
+
+    .hero img {
       width: 100%;
-      max-height: 300px;
+      max-height: 280px;
       object-fit: cover;
       display: block;
     }
 
-    h1 {
-      color: #ffc400;
-      text-align: center;
-      margin: 20px 0;
+    .hero-copy {
+      padding: 26px;
     }
 
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
+    h1, h2 { margin: 0; line-height: 1.08; }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .notice {
+      margin-top: 20px;
+      padding: 18px 20px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
     }
 
     .card {
-      background-color: #1a1a1a;
-      border: 2px solid #ffc400;
-      border-radius: 10px;
-      width: 220px;
-      padding: 15px;
-      box-sizing: border-box;
-      text-align: center;
+      padding: 18px;
     }
 
     .card img {
       width: 100%;
-      border-radius: 6px;
-      height: 140px;
+      height: 180px;
       object-fit: cover;
-      margin-bottom: 10px;
+      border-radius: 18px;
+      display: block;
+      margin-bottom: 14px;
     }
 
-    .card h2 {
-      color: #ffc400;
-      font-size: 16px;
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      font-size: 13px;
-      margin-bottom: 15px;
-    }
-
-    .card a button {
-      background-color: #ffc400;
-      border: none;
-      padding: 8px 16px;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .card a button:hover {
-      background-color: #e6b800;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 16px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--gold), #ffab2e);
+      color: #111;
+      font-weight: 800;
     }
 
     footer {
-      text-align: center;
-      margin: 30px 0;
-      font-size: 13px;
-      color: #aaa;
+      margin-top: 30px;
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--muted);
     }
 
-    footer span {
-      color: red;
-    }
-
-    @media (max-width: 768px) {
-      .card {
-        width: 90%;
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
-<style>
-.card:hover {
-  transform: scale(1.03);
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-}
-</style></head>
+</head>
 <body>
-<div style="background-color:#000; text-align:center; padding:10px;">
-  <a href="index.html" style="color:#ffc400; text-decoration:none; font-weight:bold;">
-    ← Procurar uma barbearia
-  </a>
-</div>
-<header>
-<img alt="Banner da Loja" src="imagens/banner.jpg"/>
-</header>
-<h1>A nossa seleção dos melhores produtos de barbearia</h1><p style="color:#bbb; font-size: 1rem; margin-bottom: 30px; text-align: center;">Selecionados com base em qualidade, avaliação e envio rápido para Portugal.</p>
-<div class="container">
-<div class="card">
-<img alt="Máquina de Cortar" src="imagens/secoes/maquinas.png"/>
-<h2>Máquinas de Cortar</h2>
-<p>Aparelhos profissionais para um corte perfeito.</p>
-<a href="maquinas.html"><button>Ver Produtos →</button></a>
-</div>
-<div class="card">
-<img alt="Kit de Barba" src="imagens/secoes/kits.png"/>
-<h2>Kits de Barba</h2>
-<p>Óleo, balm, escovas, pentes e mais.</p>
-<a href="kits.html"><button>Ver Produtos →</button></a>
-</div>
-<div class="card">
-<img alt="Cremes e Espumas" src="imagens/secoes/cremes.png"/>
-<h2>Cremes e Espumas</h2>
-<p>Para um barbear suave, fresco e profissional.</p>
-<a href="cremes.html"><button>Ver Produtos →</button></a>
-</div>
-<div class="card">
-<img alt="Navalhas e Lâminas" src="imagens/secoes/navalhas.png"/>
-<h2>Navalhas &amp; Lâminas</h2>
-<p>Estilo tradicional para cortes de precisão.</p>
-<a href="navalhas.html"><button>Ver Produtos →</button></a>
-</div>
-<div class="card">
-<img alt="Escovas e Pentes" src="imagens/secoes/escovas e pentes.png"/>
-<h2>Escovas &amp; Pentes</h2>
-<p>Manutenção elegante da tua barba.</p>
-<a href="escovas.html"><button>Ver Produtos →</button></a>
-</div>
-<div class="card">
-<img alt="Acessórios de Barbeiro" src="imagens/secoes/acessorios.png"/>
-<h2>Acessórios de Barbeiro</h2>
-<p>Toalhas, capas e extras essenciais.</p>
-<a href="acessorios.html"><button>Ver Produtos →</button></a>
-</div>
-</div>
-<footer>© 2025 OndeCortar.pt | Feito com ❤️ em Portugal</footer>
+  <div class="container">
+    <div class="topbar">
+      <a href="index.html"><strong>← Voltar ao diretório</strong></a>
+      <div class="links">
+        <a href="anunciar.html">Para barbearias</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacidade.html">Privacidade</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <img src="imagens/banner.jpg" alt="Banner da loja OndeCortar.pt" loading="lazy" />
+      <div class="hero-copy">
+        <h1>Loja OndeCortar.pt</h1>
+        <p>Selecionámos categorias relevantes para barbeiros, barbudos e clientes que querem comprar melhor. A loja ajuda a complementar a receita do projeto com produtos relacionados com o nicho.</p>
+      </div>
+    </section>
+
+    <section class="notice">
+      <strong>Transparência:</strong> o OndeCortar.pt participa em programas de afiliados e alguns links desta loja podem gerar comissão sem custo extra para quem compra.
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <img src="imagens/secoes/maquinas.png" alt="Máquinas de cortar cabelo" loading="lazy" />
+        <h2>Máquinas de Cortar</h2>
+        <p>Aparelhos para corte de cabelo e barba, com foco em uso profissional e doméstico.</p>
+        <a class="btn" href="maquinas.html">Ver produtos</a>
+      </article>
+      <article class="card">
+        <img src="imagens/secoes/kits.png" alt="Kits de barba" loading="lazy" />
+        <h2>Kits de Barba</h2>
+        <p>Conjuntos com óleo, balm, shampoo, pente, escova e outros essenciais.</p>
+        <a class="btn" href="kits.html">Ver produtos</a>
+      </article>
+      <article class="card">
+        <img src="imagens/secoes/cremes.png" alt="Cremes e espumas de barbear" loading="lazy" />
+        <h2>Cremes e Espumas</h2>
+        <p>Produtos para um barbear suave, confortável e com melhor acabamento.</p>
+        <a class="btn" href="cremes.html">Ver produtos</a>
+      </article>
+      <article class="card">
+        <img src="imagens/secoes/navalhas.png" alt="Navalhas e lâminas" loading="lazy" />
+        <h2>Navalhas e Lâminas</h2>
+        <p>Ferramentas clássicas para precisão, tradição e acabamento de barbearia.</p>
+        <a class="btn" href="navalhas.html">Ver produtos</a>
+      </article>
+      <article class="card">
+        <img src="imagens/secoes/escovas e pentes.png" alt="Escovas e pentes" loading="lazy" />
+        <h2>Escovas e Pentes</h2>
+        <p>Acessórios úteis para a manutenção diária da barba e do cabelo.</p>
+        <a class="btn" href="escovas.html">Ver produtos</a>
+      </article>
+      <article class="card">
+        <img src="imagens/secoes/acessorios.png" alt="Acessórios de barbeiro" loading="lazy" />
+        <h2>Acessórios de Barbeiro</h2>
+        <p>Capas, luzes, consumíveis e extras úteis para o dia a dia da barbearia.</p>
+        <a class="btn" href="acessorios.html">Ver produtos</a>
+      </article>
+    </section>
+
+    <footer>
+      <span>Loja temática do OndeCortar.pt para complementar a receita do projeto.</span>
+      <span><a href="anunciar.html">Para barbearias</a> · <a href="faq.html">FAQ</a></span>
+    </footer>
+  </div>
 </body>
 </html>

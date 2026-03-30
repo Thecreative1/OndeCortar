@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exemplo de Landing Page Premium | OndeCortar.pt</title>
+  <meta name="description" content="Exemplo de página premium que o OndeCortar.pt pode vender a barbearias: serviços, horários, prova social e chamadas à ação." />
+  <link rel="canonical" href="https://ondecortar.pt/pagina-premium-exemplo.html" />
+  <meta property="og:title" content="Exemplo de Landing Page Premium | OndeCortar.pt" />
+  <meta property="og:description" content="Vê o tipo de página premium que o OndeCortar.pt pode criar para barbearias." />
+  <meta property="og:url" content="https://ondecortar.pt/pagina-premium-exemplo.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ondecortar.pt/imagens/banner.jpg" />
+  <style>
+    :root {
+      --sand: #f0dfc6;
+      --gold: #dca654;
+      --ink: #f7f2eb;
+      --muted: rgba(247, 242, 235, 0.78);
+      --line: rgba(247, 242, 235, 0.12);
+      --radius: 26px;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top right, rgba(220, 166, 84, 0.18), transparent 28%),
+        linear-gradient(180deg, #0f0c09 0%, #17120f 48%, #0b0908 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 60px;
+    }
+
+    .top-note,
+    .hero,
+    .card,
+    .quote,
+    .cta-band {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .top-note {
+      padding: 14px 18px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      background: rgba(240, 223, 198, 0.08);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .top-note-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 34px;
+      background:
+        linear-gradient(135deg, rgba(220, 166, 84, 0.2), rgba(28, 24, 20, 0.74)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.04));
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(240, 223, 198, 0.1);
+      color: var(--sand);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.05;
+    }
+
+    h1 {
+      margin-top: 16px;
+      font-size: clamp(2.6rem, 5vw, 5rem);
+      max-width: 10ch;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .hero-grid,
+    .services,
+    .info-grid,
+    .reviews {
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero-grid {
+      grid-template-columns: 1.25fr 0.9fr;
+      align-items: end;
+    }
+
+    .hero-copy p {
+      font-size: 1.08rem;
+      max-width: 60ch;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      border-radius: 14px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), #f3bf74);
+      color: #16110d;
+    }
+
+    .btn-secondary {
+      border-color: var(--line);
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .hero-stats {
+      display: grid;
+      gap: 14px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .stat {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.7rem;
+      color: var(--sand);
+    }
+
+    .section {
+      margin-top: 24px;
+    }
+
+    .services {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .info-grid {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .reviews {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card,
+    .quote,
+    .cta-band {
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .service-price {
+      display: block;
+      margin-top: 12px;
+      font-size: 1.8rem;
+      color: var(--sand);
+      font-weight: 700;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    ul {
+      margin: 16px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .hours {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .hours div {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .quote strong {
+      color: var(--sand);
+      display: block;
+      margin-bottom: 12px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .cta-band {
+      background: linear-gradient(135deg, rgba(220, 166, 84, 0.18), rgba(255, 255, 255, 0.03));
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .services,
+      .info-grid,
+      .reviews {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-note">
+      <strong>Exemplo de página premium vendável a barbearias</strong>
+      <div class="top-note-links">
+        <a href="anunciar.html">Ver oferta comercial</a>
+        <a href="registar.html">Pedir uma página destas</a>
+        <a href="index.html">Voltar ao diretório</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Exemplo fictício de landing page premium</span>
+          <h1>Barbearia Avenida.</h1>
+          <p>Um exemplo do tipo de página que o OndeCortar.pt pode vender a barbearias reais. A ideia é dar ao cliente tudo o que precisa numa só página: confiança, serviços, preços, horários e um caminho direto para marcar.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="tel:+351912345678">Ligar agora</a>
+            <a class="btn btn-secondary" href="https://wa.me/351912345678" target="_blank" rel="noopener nofollow">Falar no WhatsApp</a>
+            <a class="btn btn-secondary" href="https://instagram.com" target="_blank" rel="noopener nofollow">Ver Instagram</a>
+          </div>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>4.9/5</strong>
+            <span>reputação destacada logo no topo.</span>
+          </div>
+          <div class="stat">
+            <strong>Centro de Lisboa</strong>
+            <span>localização e contexto local visíveis.</span>
+          </div>
+          <div class="stat">
+            <strong>Marcações fáceis</strong>
+            <span>telefone, WhatsApp e redes sociais no mesmo sítio.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services">
+      <article class="card">
+        <h3>Corte clássico</h3>
+        <p>Serviço rápido e limpo para cliente recorrente.</p>
+        <span class="service-price">15€</span>
+      </article>
+      <article class="card">
+        <h3>Corte + barba</h3>
+        <p>Pacote principal para aumentar ticket médio.</p>
+        <span class="service-price">25€</span>
+      </article>
+      <article class="card">
+        <h3>Barba premium</h3>
+        <p>Acabamento detalhado com toalha e cuidado extra.</p>
+        <span class="service-price">14€</span>
+      </article>
+      <article class="card">
+        <h3>Pack mensal</h3>
+        <p>Oferta para clientes frequentes e recorrência.</p>
+        <span class="service-price">59€</span>
+      </article>
+    </section>
+
+    <section class="section info-grid">
+      <article class="card">
+        <h2>Porque esta página vende melhor do que uma ficha simples</h2>
+        <p>Uma landing page premium transforma uma presença mínima num ativo mais comercial. Em vez de mostrar só contacto e morada, dá contexto, reduz dúvidas e empurra o cliente para a marcação.</p>
+        <ul>
+          <li>Apresenta os serviços com clareza.</li>
+          <li>Ajuda a justificar preço e posicionamento.</li>
+          <li>Mostra estilo, ambiente e confiança.</li>
+          <li>Cria um link único para partilhar em redes sociais, Google ou WhatsApp.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Horário</h2>
+        <div class="hours">
+          <div><span>Segunda a sexta</span><strong>10:00 - 20:00</strong></div>
+          <div><span>Sábado</span><strong>09:00 - 18:00</strong></div>
+          <div><span>Domingo</span><strong>Encerrado</strong></div>
+        </div>
+        <p style="margin-top: 18px;">Rua Exemplo 45, Lisboa<br />+351 912 345 678<br />Instagram, WhatsApp e marcações online disponíveis.</p>
+      </article>
+    </section>
+
+    <section class="section reviews">
+      <article class="quote">
+        <strong>Comentário de cliente</strong>
+        <p>"Espaço impecável, barbeiros atentos e marcação fácil. Foi simples perceber os serviços e contactar."</p>
+      </article>
+      <article class="quote">
+        <strong>Comentário de cliente</strong>
+        <p>"Gosto de ver preços, localização e horário sem ter de andar à procura no Instagram."</p>
+      </article>
+      <article class="quote">
+        <strong>Comentário de cliente</strong>
+        <p>"Uma página destas passa muito mais confiança do que só um perfil social."</p>
+      </article>
+    </section>
+
+    <section class="section cta-band">
+      <h2>Se um cliente te encontrasse assim, estarias mais fácil de escolher.</h2>
+      <p>Este exemplo foi criado para ser vendido. O objetivo não é só ficar bonito, é ajudar a barbearia a parecer mais profissional e dar um motivo claro para o cliente agir.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="registar.html">Quero uma página semelhante</a>
+        <a class="btn btn-secondary" href="anunciar.html">Ver planos</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

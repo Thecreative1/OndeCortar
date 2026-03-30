@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Barbearias | OndeCortar.pt</title>
+  <meta name="description" content="Vende mais com uma presença online simples no OndeCortar.pt: ficha no diretório, página premium e destaque mensal para a tua barbearia." />
+  <link rel="canonical" href="https://ondecortar.pt/anunciar.html" />
+  <meta property="og:title" content="Para Barbearias | OndeCortar.pt" />
+  <meta property="og:description" content="Transforma o OndeCortar.pt numa fonte de contactos para a tua barbearia." />
+  <meta property="og:url" content="https://ondecortar.pt/anunciar.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ondecortar.pt/imagens/banner.jpg" />
+  <style>
+    :root {
+      --panel: rgba(255, 255, 255, 0.05);
+      --line: rgba(255, 255, 255, 0.1);
+      --text: #f6f6f6;
+      --muted: #c1c1c1;
+      --gold: #ffc400;
+      --red: #e63946;
+      --radius: 26px;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 196, 0, 0.12), transparent 26%),
+        radial-gradient(circle at top right, rgba(230, 57, 70, 0.14), transparent 28%),
+        linear-gradient(180deg, #09090a 0%, #151516 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 60px;
+    }
+
+    .topbar,
+    .hero,
+    .card,
+    .cta-band {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 18px;
+      margin-bottom: 24px;
+    }
+
+    .links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.85fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 196, 0, 0.12);
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 0.84rem;
+    }
+
+    h1, h2, h3 { margin: 0; line-height: 1.08; }
+
+    h1 {
+      margin-top: 16px;
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      max-width: 11ch;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.68;
+    }
+
+    .hero p {
+      font-size: 1.04rem;
+      max-width: 62ch;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      border-radius: 14px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--red), #ff5d6a);
+      color: white;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), #ffab2e);
+      color: #111;
+    }
+
+    .btn-secondary {
+      border-color: var(--line);
+      background: transparent;
+      color: var(--text);
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 14px;
+    }
+
+    .metric {
+      padding: 20px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--gold);
+      font-size: 1.85rem;
+    }
+
+    .section {
+      margin-top: 24px;
+    }
+
+    .grid,
+    .process-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .process-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card,
+    .cta-band {
+      padding: 24px;
+    }
+
+    .price {
+      display: block;
+      margin-top: 14px;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gold);
+    }
+
+    .label {
+      display: inline-flex;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 196, 0, 0.12);
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 0.84rem;
+    }
+
+    ul {
+      margin: 16px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .card.featured {
+      border-color: rgba(255, 196, 0, 0.34);
+      background: linear-gradient(180deg, rgba(255, 196, 0, 0.12), rgba(255, 255, 255, 0.04));
+      transform: translateY(-6px);
+    }
+
+    .cta-band {
+      margin-top: 24px;
+      background: linear-gradient(135deg, rgba(255, 196, 0, 0.12), rgba(230, 57, 70, 0.1));
+      border-color: rgba(255, 196, 0, 0.26);
+    }
+
+    @media (max-width: 960px) {
+      .hero,
+      .grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card.featured {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <a href="index.html"><strong>← Voltar ao OndeCortar.pt</strong></a>
+      <div class="links">
+        <a href="registar.html">Pedir adesão</a>
+        <a href="pagina-premium-exemplo.html">Exemplo de página</a>
+        <a href="loja.html">Loja</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div>
+        <span class="eyebrow">Oferta comercial para barbearias</span>
+        <h1>Recebe mais contactos sem depender só do Instagram.</h1>
+        <p>O OndeCortar.pt está a evoluir de um simples mapa para um produto comercial local. A ideia é simples: ajudar a tua barbearia a aparecer melhor online, ter uma página clara e converter visitas em chamadas, mensagens e marcações.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="registar.html">Quero aderir</a>
+          <a class="btn btn-gold" href="pagina-premium-exemplo.html">Quero ver uma landing page</a>
+          <a class="btn btn-secondary" href="mailto:contacto@ondecortar.pt">Falar por email</a>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="metric">
+          <strong>149€</strong>
+          <span>setup de lançamento para uma landing page premium.</span>
+        </div>
+        <div class="metric">
+          <strong>29€/mês</strong>
+          <span>para destaque, atualizações e trabalho recorrente.</span>
+        </div>
+        <div class="metric">
+          <strong>0€</strong>
+          <span>para entrar no diretório com ficha base e validar interesse.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <article class="card">
+          <span class="label">Porta de entrada</span>
+          <h3>Entrada Gratuita</h3>
+          <p>Para começar com pouca fricção e validar se a tua barbearia quer aparecer no mapa.</p>
+          <span class="price">0€</span>
+          <ul>
+            <li>Nome, morada, telefone e link principal.</li>
+            <li>Entrada no diretório base.</li>
+            <li>Possibilidade de upgrade mais tarde.</li>
+          </ul>
+        </article>
+
+        <article class="card featured">
+          <span class="label">Produto principal</span>
+          <h3>Página Premium</h3>
+          <p>Uma página própria para vender melhor a tua barbearia dentro do OndeCortar.pt.</p>
+          <span class="price">149€</span>
+          <ul>
+            <li>Hero com identidade da barbearia.</li>
+            <li>Serviços, preços, horário e localização.</li>
+            <li>Botões para chamada, WhatsApp, Instagram e marcações.</li>
+            <li>Estrutura que transmite mais confiança do que uma ficha simples.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="label">Receita recorrente</span>
+          <h3>Destaque Mensal</h3>
+          <p>Para quem quer manter presença ativa e reforçar resultados ao longo do tempo.</p>
+          <span class="price">29€/mês</span>
+          <ul>
+            <li>Atualizações de conteúdo.</li>
+            <li>Destaque nas áreas comerciais do projeto.</li>
+            <li>Prioridade nas futuras páginas por cidade.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <article class="card">
+          <h3>Para quem isto faz sentido</h3>
+          <ul>
+            <li>Barbearias sem site próprio.</li>
+            <li>Espaços que vivem só de Instagram e WhatsApp.</li>
+            <li>Negócios que querem parecer mais profissionais online.</li>
+            <li>Barbeiros que querem uma página simples sem complicações.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>O que a página premium resolve</h3>
+          <ul>
+            <li>Ajuda o cliente a perceber rapidamente o serviço.</li>
+            <li>Dá um local único para centralizar contactos.</li>
+            <li>Cria um ativo digital que podes mostrar e melhorar.</li>
+            <li>Facilita futuras campanhas locais e SEO por cidade.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Porque não oferecer tudo grátis</h3>
+          <ul>
+            <li>O diretório gratuito gera volume.</li>
+            <li>A página premium gera margem.</li>
+            <li>O plano mensal cria previsibilidade.</li>
+            <li>Essa combinação é o que transforma o projeto em negócio.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="process-grid">
+        <article class="card">
+          <h3>1. Pedido</h3>
+          <p>A barbearia envia os dados pelo formulário.</p>
+        </article>
+        <article class="card">
+          <h3>2. Proposta</h3>
+          <p>Recebe uma proposta simples: ficha base ou página premium.</p>
+        </article>
+        <article class="card">
+          <h3>3. Publicação</h3>
+          <p>Publicamos a ficha ou a landing page com foco em conversão.</p>
+        </article>
+        <article class="card">
+          <h3>4. Escala</h3>
+          <p>Usamos os primeiros casos para vender os seguintes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <h2>O melhor próximo passo é fechar as primeiras páginas premium.</h2>
+      <p>Já há procura. O que faltava era transformar essa procura numa oferta concreta. Esta página faz exatamente isso e ajuda-te a responder aos próximos pedidos com um produto claro, preço claro e valor claro.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="registar.html">Quero aderir já</a>
+        <a class="btn btn-secondary" href="pagina-premium-exemplo.html">Ver o exemplo</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
