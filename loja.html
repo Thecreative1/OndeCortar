@@ -365,7 +365,60 @@
       }
 
       .nav {
+        flex-direction: column;
+        align-items: stretch;
         border-radius: 28px;
+        padding: 16px;
+      }
+
+      .brand {
+        justify-content: center;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+
+      .nav-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.04);
+        text-align: center;
+      }
+
+      .nav-store,
+      .nav-links a.nav-store {
+        width: 100%;
+      }
+
+      .hero img {
+        height: 220px;
+      }
+
+      .hero-copy {
+        padding: 18px;
+      }
+
+      .featured-card {
+        grid-template-columns: 72px 1fr;
+        gap: 10px;
+      }
+
+      .featured-card img {
+        width: 72px;
+        height: 72px;
+      }
+
+      .btn {
+        width: 100%;
       }
     }
   </style>
