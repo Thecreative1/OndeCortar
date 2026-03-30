@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OndeCortar.pt | Barbearias em Portugal e Presença Online para Barbeiros</title>
-  <meta name="description" content="Encontra barbearias em Portugal com mapa, contactos e links diretos. Se tens uma barbearia, junta-te ao OndeCortar.pt e vende mais com destaque local e landing pages premium." />
+  <title>OndeCortar.pt | Encontra Barbearias em Portugal</title>
+  <meta name="description" content="Ferramenta para encontrar barbearias em Portugal com mapa, contactos, moradas e links diretos. Se tens uma barbearia, adiciona-a gratuitamente." />
   <link rel="canonical" href="https://ondecortar.pt/" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <meta property="og:title" content="OndeCortar.pt | Encontra uma barbearia ou põe a tua no mapa" />
-  <meta property="og:description" content="Diretório nacional de barbearias em Portugal com oportunidades de destaque, páginas premium e produtos recomendados." />
+  <meta property="og:title" content="OndeCortar.pt | Encontra Barbearias em Portugal" />
+  <meta property="og:description" content="Mapa interativo para descobrir barbearias em Portugal e diretório em crescimento com adesão gratuita para barbeiros." />
   <meta property="og:url" content="https://ondecortar.pt/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://ondecortar.pt/imagens/banner.jpg" />
@@ -18,7 +18,6 @@
   <style>
     :root {
       --panel: rgba(255, 255, 255, 0.045);
-      --panel-strong: rgba(255, 255, 255, 0.07);
       --line: rgba(255, 255, 255, 0.12);
       --text: #f6f3ef;
       --muted: #c8c2bb;
@@ -50,6 +49,11 @@
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
     }
 
     .container {
@@ -115,7 +119,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 0.86fr 1.14fr;
+      grid-template-columns: 0.84fr 1.16fr;
       gap: 22px;
       align-items: stretch;
     }
@@ -124,26 +128,17 @@
     .search-shell,
     .stat-card,
     .section-card,
-    .pricing-card,
     .cta-band {
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--panel);
       box-shadow: var(--shadow);
-    }
-
-    .intro-card,
-    .search-shell,
-    .stat-card,
-    .section-card,
-    .pricing-card,
-    .cta-band {
       padding: 26px;
     }
 
     .eyebrow,
-    .tag,
-    .pill {
+    .pill,
+    .city-chip {
       display: inline-flex;
       align-items: center;
       padding: 7px 12px;
@@ -157,11 +152,23 @@
       background: linear-gradient(135deg, var(--gold), var(--gold-soft));
     }
 
-    .tag,
     .pill {
       color: var(--gold);
       background: rgba(255, 191, 31, 0.1);
       border: 1px solid rgba(255, 191, 31, 0.18);
+    }
+
+    .city-chip {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line);
+      cursor: pointer;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .city-chip:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 191, 31, 0.28);
     }
 
     h1,
@@ -173,16 +180,15 @@
 
     h1 {
       margin-top: 16px;
-      font-size: clamp(2.4rem, 5vw, 4.7rem);
+      font-size: clamp(2.5rem, 5vw, 4.8rem);
       max-width: 11ch;
     }
 
-    .intro-card p,
-    .section-card p,
-    .pricing-card p,
+    p,
+    li,
     footer p {
       color: var(--muted);
-      line-height: 1.68;
+      line-height: 1.7;
     }
 
     .intro-card p {
@@ -192,6 +198,7 @@
     }
 
     .hero-actions,
+    .city-chips,
     .footer-links,
     .mini-actions,
     .cta-actions {
@@ -204,6 +211,10 @@
       margin-top: 22px;
     }
 
+    .city-chips {
+      margin-top: 18px;
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -214,6 +225,7 @@
       border: 1px solid transparent;
       font-weight: 800;
       transition: transform 0.2s ease;
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -251,9 +263,7 @@
 
     .search-header p {
       margin: 10px 0 0;
-      color: var(--muted);
       max-width: 58ch;
-      line-height: 1.62;
     }
 
     .search-controls {
@@ -279,7 +289,6 @@
       gap: 10px;
       align-items: center;
       margin-bottom: 16px;
-      color: var(--muted);
       font-size: 0.94rem;
     }
 
@@ -295,7 +304,6 @@
     }
 
     .signals,
-    .pricing-grid,
     .content-grid {
       display: grid;
       gap: 18px;
@@ -315,8 +323,6 @@
     .stat-card span {
       display: block;
       margin-top: 8px;
-      color: var(--muted);
-      line-height: 1.55;
     }
 
     .page-section {
@@ -335,42 +341,15 @@
     .section-heading p {
       margin: 10px 0 0;
       max-width: 62ch;
-      color: var(--muted);
-      line-height: 1.65;
     }
 
-    .pricing-grid,
     .content-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .pricing-card .price {
-      display: block;
-      margin-top: 16px;
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--gold);
-    }
-
-    .pricing-card .meta {
-      display: block;
-      margin-top: 6px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .pricing-card.recommended {
-      background: linear-gradient(180deg, rgba(255, 191, 31, 0.14), rgba(255, 255, 255, 0.04));
-      border-color: rgba(255, 191, 31, 0.34);
-      transform: translateY(-4px);
-    }
-
-    .section-card ul,
-    .pricing-card ul {
+    .section-card ul {
       margin: 16px 0 0;
       padding-left: 18px;
-      color: var(--muted);
-      line-height: 1.72;
     }
 
     .cta-band {
@@ -381,8 +360,6 @@
     .cta-band p {
       margin: 12px 0 0;
       max-width: 62ch;
-      color: var(--muted);
-      line-height: 1.66;
     }
 
     footer {
@@ -457,13 +434,8 @@
     @media (max-width: 1080px) {
       .hero-grid,
       .signals,
-      .pricing-grid,
       .content-grid {
         grid-template-columns: 1fr;
-      }
-
-      .pricing-card.recommended {
-        transform: none;
       }
     }
 
@@ -481,7 +453,6 @@
       .search-shell,
       .stat-card,
       .section-card,
-      .pricing-card,
       .cta-band {
         padding: 22px;
       }
@@ -500,7 +471,7 @@
         "@id": "https://ondecortar.pt/#website",
         "url": "https://ondecortar.pt/",
         "name": "OndeCortar.pt",
-        "description": "Diretório nacional de barbearias em Portugal com ofertas de destaque e páginas premium para barbearias.",
+        "description": "Ferramenta para encontrar barbearias em Portugal com mapa, contactos e links diretos.",
         "potentialAction": {
           "@type": "SearchAction",
           "target": "https://ondecortar.pt/#pesquisa",
@@ -527,10 +498,9 @@
           <span>OndeCortar.pt</span>
         </a>
         <div class="nav-links">
-          <a href="#pesquisa">Encontrar barbearia</a>
+          <a href="#pesquisa">Mapa</a>
+          <a href="registar.html">Adicionar barbearia</a>
           <a href="loja.html">Loja</a>
-          <a href="anunciar.html">Para barbearias</a>
-          <a href="registar.html">Adicionar negócio</a>
           <a href="faq.html">FAQ</a>
         </div>
       </nav>
@@ -538,37 +508,44 @@
   </header>
 
   <main>
-    <section class="hero" id="pesquisa">
+    <section class="hero">
       <div class="container hero-grid">
         <div class="intro-card">
-          <span class="eyebrow">Mapa em destaque + produto para barbearias</span>
-          <h1>Encontra barbearias em Portugal no mapa.</h1>
-          <p>O mapa voltou ao centro da homepage. É aqui que o projeto ganha utilidade para o utilizador e cria valor para as barbearias que querem aparecer melhor, destacar-se e receber mais contactos.</p>
+          <span class="eyebrow">Ferramenta para descobrir barbearias em Portugal</span>
+          <h1>Encontra barbearias em Portugal.</h1>
+          <p>Pesquisa por cidade, nome ou morada, abre contactos diretos e descobre espaços em crescimento por todo o país. O objetivo do OndeCortar.pt é ser útil primeiro e crescer com a ajuda das próprias barbearias.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#map">Explorar mapa</a>
-            <a class="btn btn-gold" href="anunciar.html">Ver planos para barbearias</a>
-            <a class="btn btn-secondary" href="pagina-premium-exemplo.html">Ver exemplo premium</a>
+            <a class="btn btn-secondary" href="registar.html">Adicionar barbearia grátis</a>
+          </div>
+          <div class="city-chips" aria-label="Pesquisas rápidas por cidade">
+            <button class="city-chip" type="button" data-search="Lisboa">Lisboa</button>
+            <button class="city-chip" type="button" data-search="Porto">Porto</button>
+            <button class="city-chip" type="button" data-search="Braga">Braga</button>
+            <button class="city-chip" type="button" data-search="Guimarães">Guimarães</button>
+            <button class="city-chip" type="button" data-search="Faro">Faro</button>
+            <button class="city-chip" type="button" data-search="Lousada">Lousada</button>
           </div>
         </div>
 
-        <div class="search-shell">
+        <div class="search-shell" id="pesquisa">
           <div class="search-header">
             <div>
               <h2>Mapa de barbearias em Portugal</h2>
-              <p>Pesquisa por cidade, zona, nome da barbearia ou morada. O objetivo é encontrares uma barbearia rapidamente e dar motivo às barbearias para aderirem ao diretório.</p>
+              <p>Usa a pesquisa para encontrar contactos, moradas e links diretos. Se não encontrares uma barbearia, também podes ajudar a aumentar o diretório.</p>
             </div>
             <span class="pill" id="searchCount">A mostrar 63 barbearias</span>
           </div>
 
           <div class="search-controls">
-            <input type="text" id="searchInput" placeholder="Ex.: Lousada, Lisboa, Porto, Korte JB..." />
+            <input type="text" id="searchInput" placeholder="Ex.: Lisboa, Porto, Korte JB, Lousada..." />
             <button class="btn btn-primary" type="button" onclick="buscarBarbearia()">Pesquisar</button>
             <button class="btn btn-secondary" type="button" onclick="limparPesquisa()">Limpar</button>
           </div>
 
           <div class="results-line">
             <span id="resultsMessage">Pesquisa livre por nome ou localidade.</span>
-            <span class="pill">Diretório vivo para clientes e para barbearias</span>
+            <span class="pill">Diretório aberto e em crescimento</span>
           </div>
 
           <div class="map-frame">
@@ -584,19 +561,19 @@
     <section class="container signals">
       <article class="stat-card">
         <strong id="barbeariasCount">63+</strong>
-        <span>barbearias já organizadas na base para validar procura local.</span>
+        <span>barbearias já organizadas no mapa.</span>
       </article>
       <article class="stat-card">
-        <strong>Mapa primeiro</strong>
-        <span>porque é a principal utilidade pública do projeto.</span>
+        <strong>Pesquisa rápida</strong>
+        <span>por cidade, nome da barbearia ou morada.</span>
       </article>
       <article class="stat-card">
-        <strong>Páginas premium</strong>
-        <span>para transformar interesse de barbearias em receita real.</span>
+        <strong>Contactos diretos</strong>
+        <span>telefone, Instagram, site e email quando disponíveis.</span>
       </article>
       <article class="stat-card">
-        <strong>Afiliados</strong>
-        <span>como complemento, não como motor principal do negócio.</span>
+        <strong>Entrada gratuita</strong>
+        <span>para barbearias que queiram juntar-se ao diretório.</span>
       </article>
     </section>
 
@@ -604,49 +581,38 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <h2>Oferta simples para começar a vender</h2>
-            <p>O diretório continua gratuito à entrada, mas agora está ligado a uma proposta clara para barbearias: ficha base, página premium e destaque mensal.</p>
+            <h2>Como funciona</h2>
+            <p>O projeto cresce a partir da utilidade. Quanto mais fácil for descobrir uma boa barbearia, mais valor existe para utilizadores e para as próprias barbearias.</p>
           </div>
         </div>
 
-        <div class="pricing-grid">
-          <article class="pricing-card">
-            <span class="tag">Baixa fricção</span>
-            <h3>Entrada Gratuita</h3>
-            <p>Para aparecer no mapa e validar se a tua barbearia começa a receber contactos.</p>
-            <span class="price">0€</span>
-            <span class="meta">ficha base</span>
+        <div class="content-grid">
+          <article class="section-card">
+            <h3>Procura no mapa</h3>
+            <p>Pesquisa por cidade, abre marcadores e vê a informação principal sem complicações.</p>
             <ul>
-              <li>Nome, morada, telefone e link principal.</li>
-              <li>Presença no mapa do diretório.</li>
-              <li>Entrada simples pelo formulário.</li>
+              <li>Nome da barbearia.</li>
+              <li>Morada.</li>
+              <li>Telefone e links diretos quando existirem.</li>
             </ul>
           </article>
 
-          <article class="pricing-card recommended">
-            <span class="tag">Produto principal</span>
-            <h3>Página Premium</h3>
-            <p>Uma página própria para a barbearia com serviços, contactos, horários e chamadas à ação.</p>
-            <span class="price">149€</span>
-            <span class="meta">setup de lançamento</span>
+          <article class="section-card">
+            <h3>Descobre mais rápido</h3>
+            <p>O objetivo é reduzir fricção. Menos cliques, menos confusão, mais probabilidade de encontrares um espaço útil perto de ti.</p>
             <ul>
-              <li>Página individual dentro do OndeCortar.pt.</li>
-              <li>CTA para telefone, WhatsApp, Instagram e marcações.</li>
-              <li>Mais confiança do que uma ficha simples.</li>
+              <li>Pesquisa direta por nome ou localidade.</li>
+              <li>Links para Instagram, site ou mapa.</li>
+              <li>Horários e notas quando existirem.</li>
             </ul>
           </article>
 
-          <article class="pricing-card">
-            <span class="tag">Receita recorrente</span>
-            <h3>Destaque Mensal</h3>
-            <p>Para manter a barbearia atualizada e mais visível à medida que o projeto cresce.</p>
-            <span class="price">29€</span>
-            <span class="meta">por mês</span>
-            <ul>
-              <li>Atualizações de conteúdo e prioridade.</li>
-              <li>Destaque em áreas comerciais do site.</li>
-              <li>Base para futuras páginas por cidade.</li>
-            </ul>
+          <article class="section-card">
+            <h3>Ajuda a aumentar o diretório</h3>
+            <p>Se tens uma barbearia, podes adicioná-la gratuitamente. Se és utilizador, também podes sugerir correções e melhorias.</p>
+            <div class="mini-actions" style="margin-top: 18px;">
+              <a class="btn btn-secondary" href="registar.html">Adicionar barbearia</a>
+            </div>
           </article>
         </div>
       </div>
@@ -654,30 +620,39 @@
 
     <section class="page-section">
       <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2>És barbeiro?</h2>
+            <p>Nesta fase estamos focados em angariar o maior número de barbearias possível e melhorar a ferramenta. Entrar no diretório é gratuito.</p>
+          </div>
+        </div>
+
         <div class="content-grid">
           <article class="section-card">
-            <h3>Para clientes</h3>
-            <p>O mapa é o produto principal do lado público. Quanto melhor funcionar, mais valor cria para quem procura uma barbearia e para quem quer pagar para se destacar.</p>
-            <div class="mini-actions" style="margin-top: 18px;">
-              <a class="btn btn-secondary" href="#pesquisa">Voltar ao mapa</a>
-            </div>
+            <h3>Entrada gratuita</h3>
+            <p>Queremos aumentar a cobertura do mapa e ter mais espaços úteis para quem pesquisa.</p>
+            <ul>
+              <li>Nome, morada e telefone.</li>
+              <li>Instagram, site ou link de marcação.</li>
+              <li>Atualizações futuras da tua ficha.</li>
+            </ul>
           </article>
 
           <article class="section-card">
-            <h3>Para barbeiros</h3>
-            <p>Já tens uma oferta apresentável e um exemplo de página premium para começares a fechar os primeiros clientes pagos.</p>
-            <div class="mini-actions" style="margin-top: 18px;">
-              <a class="btn btn-gold" href="anunciar.html">Ver oferta comercial</a>
-              <a class="btn btn-secondary" href="registar.html">Pedir adesão</a>
-            </div>
+            <h3>Atualiza a tua informação</h3>
+            <p>Se já apareces no diretório, também podes pedir correções, novos links, horários e outras melhorias da ficha.</p>
+            <ul>
+              <li>Horários.</li>
+              <li>Redes sociais.</li>
+              <li>Morada e contactos.</li>
+            </ul>
           </article>
 
           <article class="section-card">
-            <h3>Loja complementar</h3>
-            <p>A loja continua útil como monetização secundária, mas agora já não rouba o protagonismo ao mapa na homepage.</p>
+            <h3>Mais tarde vamos evoluir</h3>
+            <p>Quando a ferramenta estiver maior e mais útil, faz sentido atacar a parte comercial com mais força. Primeiro, o importante é crescer bem.</p>
             <div class="mini-actions" style="margin-top: 18px;">
-              <a class="btn btn-secondary" href="loja.html">Ver loja</a>
-              <a class="btn btn-secondary" href="privacidade.html">Privacidade</a>
+              <a class="btn btn-gold" href="registar.html">Quero entrar no mapa</a>
             </div>
           </article>
         </div>
@@ -687,11 +662,11 @@
     <section class="page-section">
       <div class="container">
         <div class="cta-band">
-          <h2>Agora o foco visual está onde devia estar: no mapa.</h2>
-          <p>O mapa voltou para a primeira dobra da homepage, e o branding passa a usar o logo atual do projeto. Se me deres depois o ficheiro final do logo em PNG ou SVG, eu troco o `favicon` por esse asset sem problema.</p>
+          <h2>O foco volta a ser a ferramenta.</h2>
+          <p>O OndeCortar.pt cresce melhor se parecer e funcionar como aquilo que é: uma ferramenta útil para encontrar barbearias. A parte económica existe, mas vem por trás dessa utilidade.</p>
           <div class="cta-actions" style="margin-top: 18px;">
-            <a class="btn btn-primary" href="registar.html">Adicionar barbearia</a>
-            <a class="btn btn-gold" href="anunciar.html">Monetizar com páginas premium</a>
+            <a class="btn btn-primary" href="#pesquisa">Explorar mapa</a>
+            <a class="btn btn-secondary" href="registar.html">Adicionar barbearia grátis</a>
           </div>
         </div>
       </div>
@@ -705,11 +680,10 @@
           <img src="favicon.ico" alt="Logo OndeCortar.pt" />
           <strong>OndeCortar.pt</strong>
         </div>
-        <p>Diretório de barbearias em Portugal com o mapa em destaque e uma oferta comercial simples para barbeiros.</p>
+        <p>Ferramenta para descobrir barbearias em Portugal e diretório aberto a novas entradas.</p>
       </div>
       <div class="footer-links">
-        <a href="anunciar.html">Para barbearias</a>
-        <a href="registar.html">Adicionar negócio</a>
+        <a href="registar.html">Adicionar barbearia</a>
         <a href="loja.html">Loja</a>
         <a href="faq.html">FAQ</a>
         <a href="privacidade.html">Privacidade</a>
@@ -728,6 +702,7 @@
     const searchCount = document.getElementById("searchCount");
     const resultsMessage = document.getElementById("resultsMessage");
     const barbeariasCount = document.getElementById("barbeariasCount");
+    const quickSearchButtons = document.querySelectorAll("[data-search]");
 
     let markers = [];
 
@@ -850,6 +825,13 @@
       searchInput.value = "";
       adicionarMarcadores(barbearias, "");
     }
+
+    quickSearchButtons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        searchInput.value = button.dataset.search;
+        buscarBarbearia();
+      });
+    });
 
     searchInput.addEventListener("keydown", function(event) {
       if (event.key === "Enter") {

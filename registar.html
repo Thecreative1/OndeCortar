@@ -4,16 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adicionar a Minha Barbearia | OndeCortar.pt</title>
-  <meta name="description" content="Pede a entrada da tua barbearia no OndeCortar.pt. Escolhe entre ficha gratuita no diretório ou página premium com foco em contactos e marcações." />
+  <meta name="description" content="Adiciona a tua barbearia gratuitamente ao OndeCortar.pt e ajuda-nos a fazer crescer o mapa de barbearias em Portugal." />
   <link rel="canonical" href="https://ondecortar.pt/registar.html" />
   <meta property="og:title" content="Adicionar a Minha Barbearia | OndeCortar.pt" />
-  <meta property="og:description" content="Entra no diretório e pede uma página premium para a tua barbearia." />
+  <meta property="og:description" content="Entrada gratuita para barbearias no mapa do OndeCortar.pt." />
   <meta property="og:url" content="https://ondecortar.pt/registar.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://ondecortar.pt/imagens/banner.jpg" />
   <style>
     :root {
-      --bg: #0f0f10;
       --panel: rgba(255, 255, 255, 0.05);
       --line: rgba(255, 255, 255, 0.1);
       --text: #f5f5f5;
@@ -153,7 +152,7 @@
     }
 
     textarea {
-      min-height: 150px;
+      min-height: 140px;
       resize: vertical;
     }
 
@@ -209,7 +208,7 @@
       margin-top: 18px;
     }
 
-    .price-badge {
+    .badge {
       display: inline-flex;
       margin-top: 12px;
       padding: 7px 12px;
@@ -262,25 +261,24 @@
     <div class="topbar">
       <a href="index.html"><strong>← Voltar ao OndeCortar.pt</strong></a>
       <div class="topbar-links">
-        <a href="anunciar.html">Ver planos</a>
-        <a href="pagina-premium-exemplo.html">Exemplo de landing page</a>
+        <a href="faq.html">FAQ</a>
         <a href="privacidade.html">Privacidade</a>
       </div>
     </div>
 
     <section class="intro">
-      <span>Pedido de adesão para barbearias</span>
-      <h1>Vamos pôr a tua barbearia no mapa e transformar isso em contactos.</h1>
-      <p>Podes começar com uma ficha gratuita no diretório ou pedir já uma página premium com foco em chamadas, WhatsApp, redes sociais e marcações. Responderemos ao pedido com a proposta mais adequada ao teu caso.</p>
+      <span>Entrada gratuita no mapa</span>
+      <h1>Adiciona a tua barbearia ao OndeCortar.pt.</h1>
+      <p>Nesta fase queremos aumentar o diretório e melhorar a ferramenta. A entrada base no mapa é gratuita. Preenche os dados principais e tratamos do resto.</p>
     </section>
 
     <div class="grid">
       <section class="form-card">
         <h2>Dados da tua barbearia</h2>
-        <p>Preenche o formulário com a melhor informação possível. Quanto mais contexto enviares, mais fácil é publicar uma ficha forte ou preparar uma landing page vendável.</p>
+        <p>Quanto mais informação correta enviares, mais fácil é publicar a tua ficha com contactos, horários e links úteis para quem te procura.</p>
 
         <form action="https://formspree.io/f/mkgjknvn" method="POST" onsubmit="redirecionarDepoisDeSubmeter(event)">
-          <input type="hidden" name="_subject" value="Novo pedido de adesão no OndeCortar.pt" />
+          <input type="hidden" name="_subject" value="Novo pedido de entrada no mapa do OndeCortar.pt" />
           <input type="hidden" name="origem" value="registar.html" />
 
           <div class="field-grid">
@@ -290,7 +288,7 @@
             </div>
             <div>
               <label for="responsavel">Nome do responsável</label>
-              <input type="text" id="responsavel" name="responsavel" required />
+              <input type="text" id="responsavel" name="responsavel" />
             </div>
           </div>
 
@@ -318,83 +316,65 @@
 
           <div class="field-grid">
             <div>
-              <label for="presenca_online">Site, Instagram ou página de marcações</label>
-              <input type="text" id="presenca_online" name="presenca_online" placeholder="Link do Instagram, site ou Fresha/Treatwell" />
+              <label for="presenca_online">Instagram, site ou link de marcação</label>
+              <input type="text" id="presenca_online" name="presenca_online" placeholder="Link do Instagram, site ou página de marcações" />
             </div>
             <div>
-              <label for="plano">O que procuras agora?</label>
-              <select id="plano" name="plano" required>
-                <option value="">Seleciona uma opção</option>
-                <option value="entrada-gratuita">Entrada gratuita no diretório</option>
-                <option value="pagina-premium">Página premium da barbearia</option>
-                <option value="destaque-mensal">Destaque mensal e atualizações</option>
-                <option value="nao-sei-ainda">Ainda não sei, preciso de aconselhamento</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field-grid">
-            <div>
-              <label for="orcamento">Faixa de investimento mensal</label>
-              <select id="orcamento" name="orcamento">
-                <option value="">Prefiro não indicar</option>
-                <option value="0">Quero começar sem custo</option>
-                <option value="ate-50">Até 50€</option>
-                <option value="50-150">50€ a 150€</option>
-                <option value="150-300">150€ a 300€</option>
-                <option value="300-mais">Mais de 300€</option>
-              </select>
-            </div>
-            <div>
-              <label for="marcacoes">Como recebes marcações hoje?</label>
-              <input type="text" id="marcacoes" name="marcacoes" placeholder="Telefone, WhatsApp, Instagram, Fresha..." />
+              <label for="horario">Horário de funcionamento</label>
+              <input type="text" id="horario" name="horario" placeholder="Ex.: Seg a Sáb, 09h às 20h" />
             </div>
           </div>
 
           <div>
-            <label for="mensagem">O que queres melhorar na tua presença online?</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Ex.: quero aparecer melhor no Google, ter uma página mais profissional, receber mais chamadas, mostrar serviços e preços, ter link para marcações..."></textarea>
+            <label for="tipo_pedido">Tipo de pedido</label>
+            <select id="tipo_pedido" name="tipo_pedido">
+              <option value="adicionar-gratuitamente">Adicionar gratuitamente ao mapa</option>
+              <option value="atualizar-ficha">Atualizar uma ficha já existente</option>
+              <option value="corrigir-dados">Corrigir dados da barbearia</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="mensagem">Informação adicional</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Podes incluir serviços, observações, forma de atendimento, preços, horário detalhado ou qualquer dado que ajude a ficha a ficar melhor."></textarea>
           </div>
 
           <label class="checkbox">
             <input type="checkbox" name="consentimento" required />
-            <span>Autorizo o OndeCortar.pt a tratar estes dados para responder ao meu pedido e apresentar a proposta comercial ou ficha de diretório adequada. Li a <a href="privacidade.html" style="color:#ffc400; text-decoration: underline;">política de privacidade</a>.</span>
+            <span>Autorizo o OndeCortar.pt a tratar estes dados para publicar ou atualizar a ficha da barbearia no diretório. Li a <a href="privacidade.html" style="color:#ffc400; text-decoration: underline;">política de privacidade</a>.</span>
           </label>
 
           <div class="cta-row">
             <button class="btn btn-primary" type="submit">Enviar pedido</button>
-            <a class="btn btn-secondary" href="anunciar.html">Ver planos primeiro</a>
+            <a class="btn btn-secondary" href="index.html">Voltar ao mapa</a>
           </div>
         </form>
       </section>
 
       <aside>
         <div class="side-card">
-          <h3>Oferta de lançamento</h3>
-          <p>Estamos a estruturar a primeira fase comercial do projeto. As primeiras barbearias podem entrar com ficha gratuita ou avançar logo para a página premium.</p>
-          <span class="price-badge">Página premium desde 149€</span>
+          <h3>Entrada gratuita</h3>
+          <p>Neste momento queremos aumentar a cobertura do diretório. Por isso a entrada base no mapa é gratuita.</p>
+          <span class="badge">Sem custo para a ficha base</span>
           <ul>
-            <li>Página individual com foco em confiança e contactos.</li>
-            <li>Secções de serviços, horários e prova social.</li>
-            <li>CTA para chamada, WhatsApp e marcações.</li>
+            <li>Nome da barbearia.</li>
+            <li>Morada e telefone.</li>
+            <li>Instagram, site ou link útil quando existirem.</li>
           </ul>
         </div>
 
         <div class="side-card">
           <h3>O que acontece depois</h3>
           <ul>
-            <li>Analisamos os dados enviados e validamos a ficha.</li>
-            <li>Respondemos com proposta simples e próximos passos.</li>
-            <li>Se fizer sentido, publicamos uma versão premium ou base.</li>
+            <li>Recebemos os dados enviados.</li>
+            <li>Validamos a informação principal.</li>
+            <li>Adicionamos ou atualizamos a ficha no mapa.</li>
           </ul>
         </div>
 
         <div class="side-card">
-          <h3>Queres ver o produto antes?</h3>
-          <p>Há um exemplo de landing page premium já montado para usarmos como base comercial nas próximas vendas.</p>
-          <div class="cta-row">
-            <a class="btn btn-secondary" href="pagina-premium-exemplo.html">Ver exemplo</a>
-          </div>
+          <h3>Mais tarde podemos ir além disso</h3>
+          <p>Primeiro queremos uma ferramenta maior e mais útil. Mais à frente, faz sentido trabalhar páginas mais completas para algumas barbearias.</p>
         </div>
       </aside>
     </div>
