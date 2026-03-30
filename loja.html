@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Loja | OndeCortar.pt</title>
-  <meta name="description" content="Explora máquinas de barbear, kits de barba, navalhas e acessórios recomendados pelo OndeCortar.pt com envio para Portugal." />
+  <title>Loja de Barbearia | OndeCortar.pt</title>
+  <meta name="description" content="Explora máquinas de cortar, kits de barba, cremes, navalhas e acessórios recomendados para barbeiros e para uso pessoal em Portugal." />
   <link rel="canonical" href="https://ondecortar.pt/loja.html" />
-  <meta property="og:title" content="Loja | OndeCortar.pt" />
-  <meta property="og:description" content="Produtos recomendados para barbeiros e para quem quer cuidar melhor da barba." />
+  <meta property="og:title" content="Loja de Barbearia | OndeCortar.pt" />
+  <meta property="og:description" content="Máquinas de cortar, kits de barba, navalhas, cremes e acessórios numa área própria da loja OndeCortar.pt." />
   <meta property="og:url" content="https://ondecortar.pt/loja.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://ondecortar.pt/imagens/banner.jpg" />
@@ -82,6 +82,19 @@
       padding: 26px;
     }
 
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--gold), #ffab2e);
+      color: #111;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
     h1, h2 { margin: 0; line-height: 1.08; }
 
     h1 {
@@ -91,6 +104,30 @@
     p {
       color: var(--muted);
       line-height: 1.7;
+    }
+
+    .hero-copy p {
+      max-width: 62ch;
+      margin: 16px 0 0;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .hero-points span {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-size: 0.92rem;
+      font-weight: 600;
     }
 
     .notice {
@@ -108,6 +145,20 @@
 
     .card {
       padding: 18px;
+    }
+
+    .section-intro {
+      margin-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: end;
+      flex-wrap: wrap;
+    }
+
+    .section-intro p {
+      margin: 8px 0 0;
+      max-width: 64ch;
     }
 
     .card img {
@@ -129,6 +180,18 @@
       background: linear-gradient(135deg, var(--gold), #ffab2e);
       color: #111;
       font-weight: 800;
+    }
+
+    .btn:hover {
+      filter: brightness(1.03);
+    }
+
+    .card h2 {
+      margin-top: 4px;
+    }
+
+    .card p {
+      margin: 12px 0 0;
     }
 
     footer {
@@ -163,56 +226,70 @@
     <section class="hero">
       <img src="imagens/banner.jpg" alt="Banner da loja OndeCortar.pt" loading="lazy" />
       <div class="hero-copy">
-        <h1>Loja OndeCortar.pt</h1>
-        <p>Selecionámos categorias relevantes para barbeiros, barbudos e clientes que querem comprar melhor. A loja ajuda a complementar a receita do projeto com produtos relacionados com o nicho.</p>
+        <span class="eyebrow">Loja de barbearia</span>
+        <h1>Máquinas, navalhas e acessórios num só sítio.</h1>
+        <p>Reunimos as categorias mais úteis para barbeiros e para quem trata da barba em casa. Escolhe uma categoria e vai direto a máquinas, kits, cremes, navalhas e acessórios.</p>
+        <div class="hero-points">
+          <span>Máquinas de cortar</span>
+          <span>Kits de barba</span>
+          <span>Navalhas e lâminas</span>
+          <span>Acessórios de barbeiro</span>
+        </div>
       </div>
     </section>
 
     <section class="notice">
-      <strong>Transparência:</strong> o OndeCortar.pt participa em programas de afiliados e alguns links desta loja podem gerar comissão sem custo extra para quem compra.
+      <strong>Transparência:</strong> alguns links desta loja são de afiliado. Se fizeres uma compra através deles, o OndeCortar.pt pode receber uma comissão sem custo adicional para ti.
+    </section>
+
+    <section class="section-intro">
+      <div>
+        <h2>Explora por categoria</h2>
+        <p>Escolhe a área que te interessa e entra em páginas dedicadas com produtos para uso profissional, manutenção da barba e cuidados do dia a dia.</p>
+      </div>
     </section>
 
     <section class="grid">
       <article class="card">
         <img src="imagens/secoes/maquinas.png" alt="Máquinas de cortar cabelo" loading="lazy" />
         <h2>Máquinas de Cortar</h2>
-        <p>Aparelhos para corte de cabelo e barba, com foco em uso profissional e doméstico.</p>
+        <p>Máquinas e trimmers para cabelo, barba e acabamentos, com opções para uso profissional e para casa.</p>
         <a class="btn" href="maquinas.html">Ver produtos</a>
       </article>
       <article class="card">
         <img src="imagens/secoes/kits.png" alt="Kits de barba" loading="lazy" />
         <h2>Kits de Barba</h2>
-        <p>Conjuntos com óleo, balm, shampoo, pente, escova e outros essenciais.</p>
+        <p>Conjuntos práticos para oferecer ou montar uma rotina completa com óleo, balm, shampoo e acessórios.</p>
         <a class="btn" href="kits.html">Ver produtos</a>
       </article>
       <article class="card">
         <img src="imagens/secoes/cremes.png" alt="Cremes e espumas de barbear" loading="lazy" />
         <h2>Cremes e Espumas</h2>
-        <p>Produtos para um barbear suave, confortável e com melhor acabamento.</p>
+        <p>Espumas, sabonetes e cremes para um barbear mais confortável, com melhor deslizamento e menos irritação.</p>
         <a class="btn" href="cremes.html">Ver produtos</a>
       </article>
       <article class="card">
         <img src="imagens/secoes/navalhas.png" alt="Navalhas e lâminas" loading="lazy" />
         <h2>Navalhas e Lâminas</h2>
-        <p>Ferramentas clássicas para precisão, tradição e acabamento de barbearia.</p>
+        <p>Navalhas clássicas, shavettes e lâminas para quem valoriza precisão e um acabamento limpo.</p>
         <a class="btn" href="navalhas.html">Ver produtos</a>
       </article>
       <article class="card">
         <img src="imagens/secoes/escovas e pentes.png" alt="Escovas e pentes" loading="lazy" />
         <h2>Escovas e Pentes</h2>
-        <p>Acessórios úteis para a manutenção diária da barba e do cabelo.</p>
+        <p>Pentes, escovas e ferramentas de manutenção diária para barba bem tratada e cabelo alinhado.</p>
         <a class="btn" href="escovas.html">Ver produtos</a>
       </article>
       <article class="card">
         <img src="imagens/secoes/acessorios.png" alt="Acessórios de barbeiro" loading="lazy" />
         <h2>Acessórios de Barbeiro</h2>
-        <p>Capas, luzes, consumíveis e extras úteis para o dia a dia da barbearia.</p>
+        <p>Capas, pulverizadores, consumíveis e extras úteis para o balcão ou para o posto de trabalho.</p>
         <a class="btn" href="acessorios.html">Ver produtos</a>
       </article>
     </section>
 
     <footer>
-      <span>Loja temática do OndeCortar.pt para complementar a receita do projeto.</span>
+      <span>Máquinas, navalhas, kits e acessórios organizados por categoria para ires direto ao que procuras.</span>
       <span><a href="anunciar.html">Para barbearias</a> · <a href="faq.html">FAQ</a></span>
     </footer>
   </div>
