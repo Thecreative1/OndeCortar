@@ -151,23 +151,33 @@
     },
     {
         "page":  "acessorios.html",
-        "title":  "Estação de Trabalho para Barbeiro",
+        "title":  "Organizador de Bancada Colcolo",
         "status":  "ok",
         "add_to_cart":  true,
         "buy_now":  true,
         "no_featured_offer":  false,
         "options_only":  false,
-        "url":  "https://www.amazon.es/-/pt/dp/B0CSYMZ9N7?tag=ondecortarp0c-21\u0026amp;language=pt_PT"
+        "url":  "https://www.amazon.es/-/pt/dp/B0C9QKL57C?tag=ondecortarp0c-21\u0026amp;language=pt_PT"
     },
     {
         "page":  "acessorios.html",
-        "title":  "Capas de Corte Profissionais",
+        "title":  "Capa Profissional URAQT",
         "status":  "ok",
         "add_to_cart":  true,
         "buy_now":  true,
         "no_featured_offer":  false,
         "options_only":  false,
-        "url":  "https://www.amazon.es/-/pt/dp/B0CD7ND5QP?tag=ondecortarp0c-21\u0026amp;language=pt_PT"
+        "url":  "https://www.amazon.es/-/pt/dp/B0FP992GL1?tag=ondecortarp0c-21\u0026amp;language=pt_PT"
+    },
+    {
+        "page":  "acessorios.html",
+        "title":  "Spray Beardburys 5 em 1",
+        "status":  "ok",
+        "add_to_cart":  true,
+        "buy_now":  false,
+        "no_featured_offer":  false,
+        "options_only":  false,
+        "url":  "https://www.amazon.es/-/pt/dp/B08NXJ6X7H?tag=ondecortarp0c-21\u0026amp;language=pt_PT"
     },
     {
         "page":  "acessorios.html",
@@ -181,12 +191,12 @@
     },
     {
         "page":  "acessorios.html",
-        "title":  "Rolos Descartáveis de Pescoço",
+        "title":  "Rolos de Pescoço Eurostil",
         "status":  "ok",
         "add_to_cart":  true,
         "buy_now":  true,
         "no_featured_offer":  false,
         "options_only":  false,
-        "url":  "https://www.amazon.es/-/pt/dp/B09X1698KW?tag=ondecortarp0c-21\u0026amp;language=pt_PT"
+        "url":  "https://www.amazon.es/-/pt/dp/B07KPF6RX5?tag=ondecortarp0c-21\u0026amp;language=pt_PT"
     }
 ]
