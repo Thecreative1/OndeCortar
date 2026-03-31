@@ -90,18 +90,16 @@
         return value;
       }
 
-      if (/^\/dp\//i.test(url.pathname)) {
-        url.pathname = "/-/pt" + url.pathname;
-      } else if (/^\/gp\/product\//i.test(url.pathname)) {
-        url.pathname = "/-/pt" + url.pathname;
-      } else if (!/^\/-\/pt\//i.test(url.pathname)) {
-        url.pathname = "/-/pt" + (url.pathname.startsWith("/") ? url.pathname : "/" + url.pathname);
+      if (/^\/-\/pt\/dp\//i.test(url.pathname)) {
+        url.pathname = url.pathname.replace(/^\/-\/pt/i, "");
+      } else if (/^\/-\/pt\/gp\/product\//i.test(url.pathname)) {
+        url.pathname = url.pathname.replace(/^\/-\/pt/i, "");
       }
 
       if (!url.searchParams.get("tag")) {
         url.searchParams.set("tag", "ondecortarp0c-21");
       }
-      url.searchParams.set("language", "pt_PT");
+      url.searchParams.delete("language");
       return url.toString();
     } catch (error) {
       return value;
@@ -148,6 +146,8 @@
         "</a>" +
         '<div class="nav-links">' +
           '<a href="' + href("index.html#explorar") + '">Explorar</a>' +
+          '<a href="' + href("index.html#cidades") + '">Cidades</a>' +
+          '<a href="' + href("registar.html") + '">Adicionar barbearia</a>' +
           '<a class="' + (section === "loja" ? "is-current" : "") + '" href="' + href("loja.html") + '">Loja</a>' +
           '<a class="' + (section === "revista" ? "is-current" : "") + '" href="' + href("revista/") + '">Revista</a>' +
           '<a href="' + href("faq.html") + '">FAQ</a>' +
@@ -227,22 +227,31 @@
   function renderWhyBuy() {
     return (
       '<section class="section"><div class="container callout-card">' +
-        '<span class="eyebrow">Comprar com confiança</span>' +
-        "<h2>Porque comprar pela Loja OndeCortar</h2>" +
-        "<p>Poupas tempo na escolha, comparas opções com contexto real e compras na Amazon.es com links identificados.</p>" +
+        '<span class="eyebrow">Compra com confiança</span>' +
+        "<h2>Escolhe melhor antes de comprar</h2>" +
+        "<p>Recomendações curtas, comparação rápida e acesso direto para Amazon.es com links identificados.</p>" +
       "</div></section>"
     );
   }
 
   function renderArticleProductSpotlight(article) {
-    const picks = getProducts(article.relatedProducts).slice(0, 2);
+    const picks = getProducts(article.relatedProducts).slice(0, 3);
     if (!picks.length) return "";
+    const lead = picks[0];
+    const extra = picks.slice(1);
+    const strengths = (lead.strengths || []).slice(0, 2);
     return (
       '<div class="callout-card article-commerce">' +
-        '<span class="eyebrow">Escolhas do artigo</span>' +
-        '<h3>Produtos para aplicar este conteúdo</h3>' +
-        '<p>Se este tema faz sentido para ti, começa por estas opções com acesso direto.</p>' +
-        '<div class="shop-mini-grid">' + picks.map(renderMiniProduct).join("") + '</div>' +
+        '<span class="eyebrow">Escolha principal do artigo</span>' +
+        '<h3>' + e(lead.name) + '</h3>' +
+        '<div class="article-spotlight">' +
+          '<img src="' + href(lead.image) + '" alt="' + e(lead.alt) + '" loading="lazy" />' +
+          '<p>' + e(lead.summary) + '</p>' +
+          '<p>' + e(lead.useCase) + '</p>' +
+          '<ul class="rich-list">' + strengths.map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul>' +
+          '<div class="card-actions"><a class="btn btn-secondary btn-small" href="' + productHref(lead.slug) + '">Ver detalhes</a><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(lead.amazon)) + '" target="_blank" rel="sponsored nofollow noopener">Ver na Amazon.es</a></div>' +
+        '</div>' +
+        (extra.length ? '<div class="article-mini-list"><strong>Mais opções para comparar</strong><div class="shop-mini-grid">' + extra.map(renderMiniProduct).join("") + '</div></div>' : "") +
       '</div>'
     );
   }
@@ -478,7 +487,7 @@
           (article.sections || []).map(function(item) { return '<article class="article-section"><h3>' + e(item[0]) + '</h3>' + item[1].map(function(text) { return "<p>" + e(text) + "</p>"; }).join("") + "</article>"; }).join("") +
           '<article class="article-section"><h3>Lista prática</h3><ul class="rich-list">' + (article.checklist || []).map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></article>' +
         '</div><aside class="stack">' + renderArticleProductSpotlight(article) + renderDisclosure() + '</aside></div></section>' +
-        '<section class="section" id="produtos-artigo"><div class="container"><div class="section-header"><div><span class="eyebrow">Escolhas recomendadas</span><h2>Opções para este tema</h2><p>Sugestões alinhadas com o conteúdo do artigo para te ajudar a decidir melhor.</p></div></div><div class="product-grid">' + getProducts(article.relatedProducts).map(function(item) { return renderProductCard(item, true); }).join("") + '</div></div></section>' +
+        '<section class="section" id="produtos-artigo"><div class="container"><div class="section-header"><div><span class="eyebrow">Escolhas recomendadas</span><h2>Produtos para este objetivo</h2><p>Selecionámos opções com boa relação entre facilidade de uso, utilidade real e decisão rápida.</p></div></div><div class="product-grid">' + getProducts(article.relatedProducts).map(function(item) { return renderProductCard(item, true); }).join("") + '</div></div></section>' +
         '<section class="section" id="faq-artigo"><div class="container">' + renderFaq(article.faqs) + '</div></section>' +
         renderRelatedArticles("Artigos relacionados", article.relatedArticles) +
         '<section class="section"><div class="container">' + renderDisclosure() + '</div></section>' +

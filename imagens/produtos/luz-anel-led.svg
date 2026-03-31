@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Luz de Anel LED com Tripé</title>
+  <desc id="desc">Ilustração simples de uma luz de anel LED com suporte para smartphone e tripé.</desc>
+  <rect width="800" height="800" rx="48" fill="#f5efe4"/>
+  <circle cx="400" cy="290" r="170" fill="none" stroke="#d4b16e" stroke-width="42"/>
+  <circle cx="400" cy="290" r="95" fill="#fffdf9"/>
+  <rect x="370" y="215" width="60" height="130" rx="16" fill="#4f5f53"/>
+  <rect x="382" y="228" width="36" height="82" rx="10" fill="#1f221f"/>
+  <rect x="392" y="360" width="16" height="120" rx="8" fill="#6a725f"/>
+  <path d="M400 480 L320 650" stroke="#6a725f" stroke-width="14" stroke-linecap="round"/>
+  <path d="M400 480 L480 650" stroke="#6a725f" stroke-width="14" stroke-linecap="round"/>
+  <path d="M400 480 L400 675" stroke="#6a725f" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="400" cy="290" r="188" fill="none" stroke="#efe2c2" stroke-width="8" stroke-dasharray="16 18"/>
+</svg>

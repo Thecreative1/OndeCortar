@@ -243,28 +243,61 @@
     };
   }
 
+  function capitalize(value) {
+    const text = String(value || "").trim();
+    if (!text) return "";
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  }
+
   function buildDescription(barber) {
-    let suffix = "";
+    const observacoes = String(barber.observacoes || "").trim();
+    if (observacoes) {
+      return observacoes;
+    }
+
+    const details = [];
 
     if (barber.telefone) {
-      suffix = " com telefone";
-    } else if (barber.booking) {
-      suffix = " com marcação online";
-    } else if (barber.website) {
-      suffix = " com website";
-    } else if (barber.instagram) {
-      suffix = " com Instagram";
-    } else if (barber.facebook) {
-      suffix = " com Facebook";
-    } else if (barber.email) {
-      suffix = " com email";
+      details.push("contacto direto");
+    }
+
+    if (barber.booking) {
+      details.push("marcação online");
+    }
+
+    if (barber.website) {
+      details.push("website");
+    }
+
+    if (barber.instagram) {
+      details.push("Instagram");
+    }
+
+    if (barber.facebook) {
+      details.push("Facebook");
+    }
+
+    if (barber.email) {
+      details.push("email");
     }
 
     if (barber.horario) {
-      suffix += " e horário";
+      details.push("horário");
     }
 
-    return "Barbearia em " + barber.city + suffix + ".";
+    if (!details.length) {
+      return "Vê morada e informação útil desta barbearia.";
+    }
+
+    if (details.length === 1) {
+      return capitalize(details[0]) + " disponível.";
+    }
+
+    if (details.length === 2) {
+      return capitalize(details[0]) + " e " + details[1] + " disponíveis.";
+    }
+
+    return capitalize(details.slice(0, -1).join(", ")) + " e " + details[details.length - 1] + " disponíveis.";
   }
 
   function buildUsefulTags(barber) {
