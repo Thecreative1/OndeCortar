@@ -90,17 +90,19 @@
         return value;
       }
 
-      if (!url.searchParams.get("tag")) {
-        url.searchParams.set("tag", "ondecortarp0c-21");
+      let targetUrl = url;
+      if (/^\/customer-preferences\/edit\/?$/i.test(url.pathname)) {
+        const returnUrl = url.searchParams.get("preferencesReturnUrl");
+        if (returnUrl) {
+          targetUrl = new URL(returnUrl, "https://www.amazon.es");
+        }
       }
 
-      const returnPath = url.pathname + (url.search || "");
-      const prefUrl = new URL("https://www.amazon.es/customer-preferences/edit");
-      prefUrl.searchParams.set("ie", "UTF8");
-      prefUrl.searchParams.set("preferencesReturnUrl", returnPath);
-      prefUrl.searchParams.set("ref_", "topnav_lang");
-      prefUrl.searchParams.set("language", "pt_PT");
-      return prefUrl.toString();
+      if (!targetUrl.searchParams.get("tag")) {
+        targetUrl.searchParams.set("tag", "ondecortarp0c-21");
+      }
+
+      return targetUrl.toString();
     } catch (error) {
       return value;
     }
