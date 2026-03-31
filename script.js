@@ -141,7 +141,7 @@
     }
 
     if (barber.website || barber.instagram || barber.facebook) {
-      pieces.push("e links úteis");
+      pieces.push("e contactos online");
     }
 
     if (barber.horario) {
@@ -149,7 +149,7 @@
     }
 
     if (barber.observacoes) {
-      pieces.push("e mais informação na ficha");
+      pieces.push("e mais detalhes");
     }
 
     const texto = pieces.join(" ");
@@ -158,42 +158,29 @@
 
   function buildEditorialTags(barber) {
     const tags = [];
-    const tone = inferirTom(barber.name);
-    const contacts = barber.telefone || barber.website || barber.instagram || barber.facebook || barber.email;
 
-    tags.push(tone);
-
-    if (contacts) {
-      tags.push("Contacto direto");
+    if (barber.telefone) {
+      tags.push("Telefone");
     }
 
     if (barber.website) {
-      tags.push("Com website");
+      tags.push("Website");
     }
 
     if (barber.instagram) {
-      tags.push("Com Instagram");
+      tags.push("Instagram");
     }
 
     if (barber.facebook) {
-      tags.push("Com Facebook");
+      tags.push("Facebook");
     }
 
     if (barber.horario) {
-      tags.push("Horários visíveis");
+      tags.push("Horário");
     }
 
-    if (barber.observacoes) {
-      tags.push("Ficha completa");
-    }
-
-    const nomeNormalizado = normalizar(barber.name);
-    if (/(classic|vintage|1920|old school)/.test(nomeNormalizado)) {
-      tags.push("Clássico");
-    }
-
-    if (/(studio|premium|elite|vision)/.test(nomeNormalizado)) {
-      tags.push("Premium");
+    if (barber.email) {
+      tags.push("Email");
     }
 
     return Array.from(new Set(tags)).slice(0, 4);
@@ -437,7 +424,7 @@
       return barber.email;
     }
 
-    return "Sem contacto direto";
+    return "Sem contacto disponível";
   }
 
   window.OndeCortarData = {
