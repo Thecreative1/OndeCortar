@@ -119,26 +119,19 @@
     pieces.push("Barbearia em " + barber.city);
 
     if (barber.telefone) {
-      pieces.push("com telefone disponível");
-    }
-
-    if (barber.website || barber.instagram || barber.facebook) {
-      pieces.push("e contactos online");
+      pieces.push("com telefone");
+    } else if (barber.website || barber.instagram || barber.facebook) {
+      pieces.push("com contacto online");
     }
 
     if (barber.horario) {
-      pieces.push("com horário disponível");
+      pieces.push("e horário");
     }
 
-    if (barber.observacoes) {
-      pieces.push("e mais detalhes");
-    }
-
-    const texto = pieces.join(" ");
-    return texto.charAt(0).toUpperCase() + texto.slice(1) + ".";
+    return pieces.join(" ") + ".";
   }
 
-  function buildEditorialTags(barber) {
+  function buildUsefulTags(barber) {
     const tags = [];
 
     if (barber.telefone) {
@@ -264,13 +257,13 @@
       initials: initialsFromName(name)
     };
 
-    barber.tags = buildEditorialTags(barber);
+    barber.tags = buildUsefulTags(barber);
     barber.links = buildLinks(barber);
     barber.primaryLink = barber.links[0] || null;
     barber.secondaryLink = barber.links[1] || barber.links[0] || null;
     barber.description = buildDescription(barber);
     barber.score = scoreBarber(barber);
-    barber.url = "barbearia.html?slug=" + barber.slug;
+    barber.url = "barbearia.html?slug=" + barber.slug + "&v=20260331-6";
 
     return barber;
   }

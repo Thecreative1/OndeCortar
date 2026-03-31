@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>Ficha de Barbearia | OndeCortar.pt</title>
   <meta name="description" content="Página de barbearia no OndeCortar.pt com morada, contactos e mapa." />
   <link rel="canonical" href="https://ondecortar.pt/barbearia.html" />
@@ -18,8 +21,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="Barbeiros/barbeiros.js"></script>
-  <script src="script.js"></script>
+  <script src="Barbeiros/barbeiros.js?v=20260331-6"></script>
+  <script src="script.js?v=20260331-6"></script>
   <style>
     :root {
       --bg: #f7f7f4;
@@ -333,12 +336,12 @@
       const similar = directory.getSimilarBarbers(barber, 3);
       const contactSummary = barber.telefone ? barber.telefone : directory.buildContactLabel(barber);
       const horarioSummary = barber.horario || "Horário não disponível";
-      const notesSummary = barber.observacoes || "Sem mais informações.";
+      const notesSummary = barber.observacoes || "Sem notas adicionais.";
 
       document.title = barber.name + " | OndeCortar.pt";
       document.querySelector('meta[name=\"description\"]').setAttribute("content", barber.name + " em " + barber.city + ". Morada, contactos e mapa no OndeCortar.pt.");
       document.querySelector('meta[property=\"og:title\"]').setAttribute("content", barber.name + " | OndeCortar.pt");
-      document.querySelector('meta[property=\"og:description\"]').setAttribute("content", "Descobre a ficha de " + barber.name + " em " + barber.city + " com mapa e contactos diretos.");
+      document.querySelector('meta[property=\"og:description\"]').setAttribute("content", "Vê a ficha de " + barber.name + " em " + barber.city + " com morada, contactos e mapa.");
 
       root.innerHTML =
         '<section class="hero-card">' +
@@ -346,18 +349,20 @@
             '<div class="breadcrumb"><a href="index.html">OndeCortar.pt</a><span>/</span><a href="index.html#explorar">Barbearias</a><span>/</span><span>' + directory.escapeHtml(barber.name) + "</span></div>" +
             '<span class="eyebrow">' + directory.escapeHtml(barber.city) + "</span>" +
             "<h1>" + directory.escapeHtml(barber.name) + "</h1>" +
-            "<p>" + directory.escapeHtml(barber.description) + " Consulta aqui a morada, os contactos e o horário disponível.</p>" +
+            "<p>Vê aqui a morada, os contactos e o horário desta barbearia.</p>" +
             '<div class="tags-row">' +
               '<span class="tag">' + directory.escapeHtml(barber.city) + "</span>" +
-              (barber.telefone ? '<span class="tag">Telefone disponível</span>' : "") +
+              (barber.telefone ? '<span class="tag">Telefone</span>' : "") +
+              (!barber.telefone && barber.website ? '<span class="tag">Website</span>' : "") +
             "</div>" +
             '<div class="hero-actions">' +
               renderPrimaryAction(barber) +
+              renderSecondaryAction(barber) +
               '<a class="btn btn-secondary" href="index.html#explorar">Voltar ao mapa</a>' +
             "</div>" +
           "</div>" +
           '<div class="hero-visual" style="--card-bg:' + barber.accent.background + ';--card-fg:' + barber.accent.foreground + ';">' +
-            "<strong>Informação principal</strong>" +
+            "<strong>Resumo</strong>" +
             "<p>" + directory.escapeHtml(barber.name) + ' em ' + directory.escapeHtml(barber.city) + ".</p>" +
             '<div class="hero-summary">' +
               '<div class="hero-summary-row"><span>Cidade</span>' + directory.escapeHtml(barber.city) + "</div>" +
@@ -380,7 +385,7 @@
             '<div class="detail-grid">' +
               '<article class="detail-card"><h3>Morada</h3><ul><li>' + directory.escapeHtml(barber.morada || "Morada não disponível") + "</li></ul></article>" +
               '<article class="detail-card"><h3>Horário</h3><ul><li>' + directory.escapeHtml(horarioSummary) + "</li></ul></article>" +
-              '<article class="detail-card"><h3>Mais informação</h3><ul><li>' + directory.escapeHtml(notesSummary) + "</li></ul></article>" +
+              '<article class="detail-card"><h3>Notas</h3><ul><li>' + directory.escapeHtml(notesSummary) + "</li></ul></article>" +
             "</div>" +
             '<article class="gallery-card">' +
               "<h2>Barbearias semelhantes na mesma zona</h2>" +
@@ -390,11 +395,15 @@
           "</div>" +
           '<aside class="stack">' +
             '<article class="side-card">' +
-              "<h3>Informação principal</h3>" +
+              "<h3>Informação</h3>" +
               '<div class="contact-list">' +
                 renderContactRow("Morada", barber.morada || "Morada não disponível") +
                 renderContactRow("Horário", barber.horario || "Horário não disponível") +
                 renderContactRow("Contacto", directory.buildContactLabel(barber)) +
+                (barber.website ? renderContactLinkRow("Website", barber.website, barber.website) : "") +
+                (barber.instagram ? renderContactLinkRow("Instagram", barber.instagram, barber.instagram) : "") +
+                (barber.facebook ? renderContactLinkRow("Facebook", barber.facebook, barber.facebook) : "") +
+                (barber.email ? renderContactLinkRow("Email", "mailto:" + barber.email, barber.email) : "") +
               "</div>" +
             "</article>" +
             '<article class="side-card">' +
@@ -422,6 +431,16 @@
         return '<a class="btn btn-primary" href="' + item.primaryLink.href + '"' + target + rel + '>Contactar</a>';
       }
 
+      function renderSecondaryAction(item) {
+        if (!item.secondaryLink || item.secondaryLink.kind === item.primaryLink.kind) {
+          return "";
+        }
+
+        const rel = item.secondaryLink.external ? ' rel="noopener nofollow"' : "";
+        const target = item.secondaryLink.external ? ' target="_blank"' : "";
+        return '<a class="btn btn-secondary" href="' + item.secondaryLink.href + '"' + target + rel + '>Ver website</a>';
+      }
+
       function renderGalleryTile(item, label, eyebrow, copy) {
         return '<div class="gallery-tile" style="--tile-bg:' + item.accent.background + ';--tile-fg:' + item.accent.foreground + ';">' +
           '<span class="eyebrow">' + directory.escapeHtml(eyebrow) + "</span>" +
@@ -432,6 +451,10 @@
 
       function renderContactRow(label, value) {
         return '<div class="contact-row"><strong>' + directory.escapeHtml(label) + "</strong><span>" + directory.escapeHtml(value) + "</span></div>";
+      }
+
+      function renderContactLinkRow(label, href, value) {
+        return '<div class="contact-row"><strong>' + directory.escapeHtml(label) + '</strong><a href="' + directory.escapeHtml(href) + '" target="_blank" rel="noopener nofollow">' + directory.escapeHtml(value) + "</a></div>";
       }
 
       function renderSimilarCard(item) {

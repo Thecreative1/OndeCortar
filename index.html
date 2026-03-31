@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OndeCortar.pt | Descobre Barbearias em Portugal</title>
-  <meta name="description" content="Explora barbearias em Portugal com mapa interativo, fichas mais cuidadas e contactos diretos para encontrares o teu próximo corte com mais estilo." />
+  <title>OndeCortar.pt | Barbearias em Portugal</title>
+  <meta name="description" content="Encontra barbearias em Portugal por cidade, zona ou nome, com mapa, morada e contactos." />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <link rel="canonical" href="https://ondecortar.pt/" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <meta property="og:title" content="OndeCortar.pt | Descobre Barbearias em Portugal" />
+  <meta property="og:title" content="OndeCortar.pt | Barbearias em Portugal" />
   <meta property="og:description" content="Encontra barbearias em Portugal por cidade, zona ou nome, com mapa e contactos." />
   <meta property="og:url" content="https://ondecortar.pt/" />
   <meta property="og:type" content="website" />
@@ -18,8 +21,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="Barbeiros/barbeiros.js"></script>
-  <script src="script.js"></script>
+  <script src="Barbeiros/barbeiros.js?v=20260331-6"></script>
+  <script src="script.js?v=20260331-6"></script>
   <style>
     :root {
       --bg: #f7f7f4;
@@ -1073,7 +1076,7 @@
         <div class="hero-copy">
           <span class="eyebrow">Barbearias em Portugal</span>
           <h1>Encontra a barbearia certa em Portugal</h1>
-          <p>Explora espaços, compara informação útil e encontra o teu próximo corte com mais estilo e menos perda de tempo.</p>
+          <p>Vê morada, contactos e informação útil antes de escolheres a tua próxima barbearia.</p>
 
           <form class="hero-search" id="heroSearchForm" role="search" aria-label="Pesquisar barbearias a partir do hero">
             <input id="heroSearchInput" type="text" placeholder="Procura por cidade, zona ou nome da barbearia" />
@@ -1128,7 +1131,7 @@
       <div class="container directory-shell">
         <div class="section-header">
           <div>
-            <span class="eyebrow">Descobre no mapa</span>
+              <span class="eyebrow">Ver no mapa</span>
             <h2>Explora por cidade, zona ou nome</h2>
           </div>
           <span class="pill" id="searchCount" aria-live="polite">A mostrar 63 espaços</span>
@@ -1172,7 +1175,7 @@
             <div class="empty-state" id="emptyState" hidden>
               <div>
                 <h3>Ainda não encontrámos resultados para essa pesquisa.</h3>
-                <p>Experimenta outra cidade ou explora o mapa para descobrir novas opções.</p>
+                <p>Experimenta outra cidade ou procura por outro nome.</p>
               </div>
             </div>
 
@@ -1461,7 +1464,7 @@
         }
 
         if (!list.length) {
-          resultsMessage.textContent = "Ainda não encontrámos resultados para essa pesquisa. Experimenta outra cidade ou explora o mapa.";
+          resultsMessage.textContent = "Ainda não encontrámos resultados para essa pesquisa. Experimenta outra cidade ou procura por outro nome.";
           return;
         }
 
