@@ -449,6 +449,78 @@
       align-items: center;
     }
 
+    .hero-results {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: 12px;
+    }
+
+    .hero-results-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hero-results-head strong {
+      font-size: 1rem;
+    }
+
+    .hero-results-list {
+      display: grid;
+      gap: 10px;
+      max-height: 320px;
+      overflow: auto;
+      padding-right: 2px;
+    }
+
+    .hero-result-item {
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(247, 247, 244, 0.9);
+      display: grid;
+      gap: 10px;
+    }
+
+    .hero-result-copy {
+      display: grid;
+      gap: 8px;
+    }
+
+    .hero-result-copy strong {
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .hero-result-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .hero-result-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hero-results-empty {
+      padding: 12px;
+      border-radius: 12px;
+      background: rgba(241, 241, 235, 0.9);
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.55;
+    }
+
     .hero-map-frame {
       overflow: hidden;
       border-radius: 22px;
@@ -1106,6 +1178,15 @@
           </div>
 
           <div class="quick-cities" id="heroCities" aria-label="Pesquisas rápidas por cidade"></div>
+
+          <div class="hero-results" id="heroResults" hidden>
+            <div class="hero-results-head">
+              <strong>Resultados imediatos</strong>
+              <span class="pill" id="heroResultsCount">0 resultados</span>
+            </div>
+            <div class="hero-results-list" id="heroResultsList"></div>
+            <a class="btn btn-secondary btn-small" href="#explorar">Ver todos os resultados</a>
+          </div>
         </div>
 
         <div class="hero-visual">
@@ -1333,6 +1414,9 @@
       const resultsVisiblePill = document.getElementById("resultsVisiblePill");
       const resultsList = document.getElementById("resultsList");
       const emptyState = document.getElementById("emptyState");
+      const heroResults = document.getElementById("heroResults");
+      const heroResultsCount = document.getElementById("heroResultsCount");
+      const heroResultsList = document.getElementById("heroResultsList");
       const featuredGrid = document.getElementById("featuredGrid");
       const citiesGrid = document.getElementById("citiesGrid");
       const heroCities = document.getElementById("heroCities");
@@ -1370,7 +1454,6 @@
         event.preventDefault();
         const value = heroSearchInput.value.trim();
         syncSearchInputs(value);
-        focusDirectory();
         updateDirectory(value);
       });
 
@@ -1391,7 +1474,6 @@
         if (cityButton) {
           const city = cityButton.getAttribute("data-city-search") || "";
           syncSearchInputs(city);
-          focusDirectory();
           updateDirectory(city);
         }
 
@@ -1410,13 +1492,6 @@
       function syncSearchInputs(value) {
         heroSearchInput.value = value;
         searchInput.value = value;
-      }
-
-      function focusDirectory() {
-        const section = document.getElementById("explorar");
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
       }
 
       function renderCityChips(container, list) {
@@ -1475,9 +1550,45 @@
         state.currentTerm = term;
         state.results = sortBarbers(directory.searchBarbers(term));
         syncSearchInputs(term);
+        renderHeroResults(state.results, term);
         renderResults(state.results);
         updateSummary(state.results, term);
         renderMarkers(state.results);
+      }
+
+      function renderHeroResults(list, term) {
+        const cleanTerm = String(term || "").trim();
+
+        if (!cleanTerm) {
+          heroResults.hidden = true;
+          heroResultsCount.textContent = "0 resultados";
+          heroResultsList.innerHTML = "";
+          return;
+        }
+
+        heroResults.hidden = false;
+        heroResultsCount.textContent = list.length + " resultado" + (list.length === 1 ? "" : "s");
+
+        if (!list.length) {
+          heroResultsList.innerHTML = '<div class="hero-results-empty">Ainda não encontrámos barbearias para essa pesquisa. Experimenta outra cidade, zona ou nome.</div>';
+          return;
+        }
+
+        heroResultsList.innerHTML = list.map(function(barber) {
+          return (
+            '<article class="hero-result-item">' +
+              '<div class="hero-result-copy">' +
+                '<span class="tag tag-small">' + directory.escapeHtml(barber.city) + "</span>" +
+                "<strong>" + directory.escapeHtml(barber.name) + "</strong>" +
+                "<p>" + directory.escapeHtml(barber.description) + "</p>" +
+              "</div>" +
+              '<div class="hero-result-actions">' +
+                '<a class="btn btn-secondary btn-small" href="' + barber.url + '">Ver perfil</a>' +
+                renderContactAction(barber, "btn btn-primary btn-small") +
+              "</div>" +
+            "</article>"
+          );
+        }).join("");
       }
 
       function updateSummary(list, term) {

@@ -6,7 +6,7 @@
       "@id": "https://ondecortar.pt/#website",
       "url": "https://ondecortar.pt/",
       "name": "OndeCortar.pt",
-      "description": "Plataforma para descobrir barbearias em Portugal com mapa interativo, fichas mais cuidadas e contactos diretos.",
+      "description": "Plataforma para descobrir barbearias em Portugal com mapa interativo, perfis mais cuidados e contactos diretos.",
       "publisher": {
         "@type": "Organization",
         "name": "OndeCortar.pt"
@@ -16,7 +16,7 @@
       "@type": "LocalBusiness",
       "@id": "https://ondecortar.pt/#barbearia",
       "name": "Barbearias em Portugal",
-      "description": "Base editorial para descobrir barbearias em Portugal com mapa, contexto visual e fichas individuais preparadas para crescer.",
+      "description": "Base editorial para descobrir barbearias em Portugal com mapa, contexto visual e perfis individuais preparados para crescer.",
       "url": "https://ondecortar.pt/",
       "address": {
         "@type": "PostalAddress",

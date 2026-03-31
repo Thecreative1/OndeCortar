@@ -6,12 +6,12 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <title>Ficha de Barbearia | OndeCortar.pt</title>
+  <title>Perfil de Barbearia | OndeCortar.pt</title>
   <meta name="description" content="Página de barbearia no OndeCortar.pt com morada, contactos e mapa." />
   <link rel="canonical" href="https://ondecortar.pt/barbearia.html" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <meta property="og:title" content="Ficha de Barbearia | OndeCortar.pt" />
+  <meta property="og:title" content="Perfil de Barbearia | OndeCortar.pt" />
   <meta property="og:description" content="Vê a morada, os contactos e o mapa de cada barbearia no OndeCortar.pt." />
   <meta property="og:url" content="https://ondecortar.pt/barbearia.html" />
   <meta property="og:type" content="website" />
@@ -320,7 +320,7 @@
       const root = document.getElementById("pageContent");
 
       if (!directory) {
-        root.innerHTML = '<section class="not-found"><h1>Não foi possível carregar a ficha.</h1><p>Verifica se os dados das barbearias estão disponíveis e tenta novamente.</p><a class="btn btn-primary" href="index.html">Voltar à homepage</a></section>';
+        root.innerHTML = '<section class="not-found"><h1>Não foi possível carregar o perfil.</h1><p>Verifica se os dados das barbearias estão disponíveis e tenta novamente.</p><a class="btn btn-primary" href="index.html">Voltar à homepage</a></section>';
         return;
       }
 
@@ -329,7 +329,7 @@
       const barber = slug ? directory.getBarberBySlug(slug) : null;
 
       if (!barber) {
-        root.innerHTML = '<section class="not-found"><span class="eyebrow">Ficha não encontrada</span><h1>Esta barbearia ainda não está disponível nesta vista.</h1><p>Podes voltar ao mapa principal para explorar outras fichas ou pesquisar novamente.</p><a class="btn btn-primary" href="index.html#mapa">Voltar ao mapa</a></section>';
+        root.innerHTML = '<section class="not-found"><span class="eyebrow">Perfil não encontrado</span><h1>Esta barbearia ainda não está disponível nesta vista.</h1><p>Podes voltar ao mapa principal para explorar outras barbearias ou pesquisar novamente.</p><a class="btn btn-primary" href="index.html#mapa">Voltar ao mapa</a></section>';
         return;
       }
 
@@ -341,7 +341,7 @@
       document.title = barber.name + " | OndeCortar.pt";
       document.querySelector('meta[name=\"description\"]').setAttribute("content", barber.name + " em " + barber.city + ". Morada, contactos e mapa no OndeCortar.pt.");
       document.querySelector('meta[property=\"og:title\"]').setAttribute("content", barber.name + " | OndeCortar.pt");
-      document.querySelector('meta[property=\"og:description\"]').setAttribute("content", "Vê a ficha de " + barber.name + " em " + barber.city + " com morada, contactos e mapa.");
+      document.querySelector('meta[property=\"og:description\"]').setAttribute("content", "Vê o perfil de " + barber.name + " em " + barber.city + " com morada, contactos e mapa.");
 
       root.innerHTML =
         '<section class="hero-card">' +
@@ -464,7 +464,7 @@
           '<span class="pill">' + directory.escapeHtml(item.city) + "</span>" +
           "<h3>" + directory.escapeHtml(item.name) + "</h3>" +
           "<p>" + directory.escapeHtml(item.description) + "</p>" +
-          '<div class="similar-actions"><a class="btn btn-secondary" href="' + item.url + '">Ver ficha</a></div>' +
+          '<div class="similar-actions"><a class="btn btn-secondary" href="' + item.url + '">Ver perfil</a></div>' +
         "</article>";
       }
     })();
