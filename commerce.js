@@ -383,6 +383,10 @@
     const product = productMap.get(value);
     if (!product) return renderNotFound("Produto não encontrado");
     setMeta(product.name + " | Recomendação OndeCortar", product.summary, "https://ondecortar.pt/produto.html?slug=" + encodeURIComponent(value));
+    const leadStrength = (product.strengths && product.strengths[0]) ? product.strengths[0] : "";
+    const secondStrength = (product.strengths && product.strengths[1]) ? product.strengths[1] : leadStrength;
+    const leadGuideSlug = (product.articles && product.articles[0]) ? product.articles[0] : "";
+    const leadGuide = leadGuideSlug ? articleMap.get(leadGuideSlug) : null;
     const related = products.filter(function(item) {
       return item.slug !== product.slug && item.categories.some(function(category) { return product.categories.indexOf(category) !== -1; });
     }).slice(0, 3);
@@ -390,7 +394,7 @@
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container hero-card"><div class="hero-grid">' +
-          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja.html") + '">Loja</a><span>/</span><span>' + e(product.name) + '</span></div><span class="section-flag">Produto recomendado</span><span class="eyebrow">' + e(product.bestFor) + '</span><h1>' + e(product.name) + '</h1><p>' + e(product.summary) + " " + e(product.useCase) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener">Ver na Amazon.es</a><a class="btn btn-secondary" href="' + categoryHref(product.categories[0]) + '">Ver categoria</a></div></div>' +
+          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja.html") + '">Loja</a><span>/</span><span>' + e(product.name) + '</span></div><span class="section-flag">Produto recomendado</span><span class="eyebrow">' + e(product.bestFor) + '</span><h1>' + e(product.name) + '</h1><p>' + e(product.summary) + " " + e(product.useCase) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener">Ver na Amazon.es</a><a class="btn btn-secondary" href="' + categoryHref(product.categories[0]) + '">Ver categoria</a></div><div class="product-hero-panel"><strong>Antes de comprar</strong><ul class="rich-list"><li>Melhor para: ' + e(product.bestFor) + '</li><li>Ponto forte: ' + e(leadStrength || product.summary) + '</li><li>Vantagem adicional: ' + e(secondStrength || product.useCase) + '</li></ul><div class="card-actions">' + (leadGuide ? '<a class="btn btn-soft btn-small" href="' + articleHref(leadGuide.slug) + '">Ler guia relacionado</a>' : "") + '<a class="btn btn-secondary btn-small" href="#relacionados">Comparar semelhantes</a></div></div></div>' +
       '<div class="hero-side"><div class="product-stage"><img src="' + href(product.image) + '" alt="' + e(product.alt) + '" loading="lazy" /></div><div class="store-note"><strong>Compra com mais confiança</strong><p>Destacamos este produto pelo equilíbrio entre uso real, procura e feedback de compradores para te ajudar a decidir mais depressa.</p></div></div>' +
         '</div></div></section>' +
         '<section class="section"><div class="container split-grid">' +
@@ -405,7 +409,7 @@
             renderDisclosure() +
           '</div>' +
         '</div></section>' +
-        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Relacionados</span><h2>Produtos relacionados</h2></div></div><div class="related-grid">' + related.map(function(item) { return renderProductCard(item, true); }).join("") + '</div></div></section>' +
+        '<section class="section" id="relacionados"><div class="container"><div class="section-header"><div><span class="eyebrow">Relacionados</span><h2>Produtos relacionados</h2></div></div><div class="related-grid">' + related.map(function(item) { return renderProductCard(item, true); }).join("") + '</div></div></section>' +
         renderRelatedArticles("Artigos ligados a esta recomendação", product.articles) +
       '</main>' +
       renderFooter()
@@ -422,7 +426,7 @@
           '<div class="hero-side"><div class="panel-note"><strong>Objetivo editorial</strong><p>Captar tráfego, responder a dúvidas reais e ligar naturalmente à loja afiliada.</p></div><div class="panel-note"><strong>Ponte com a loja</strong><p>Cada artigo empurra para produtos relevantes e cada categoria puxa artigos relacionados.</p></div></div>' +
         '</div></div></section>' +
         '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Secções</span><h2>Explorar a Revista</h2><p>Hubs editoriais pensados para dúvidas reais e intenção comercial.</p></div></div><div class="hub-grid">' + hubs.map(function(item) { return '<article class="hub-card"><h3>' + e(item.title) + '</h3><p>' + e(item.intro) + '</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="' + hubHref(item.slug) + '">Ver secção</a></div></article>'; }).join("") + '</div></div></section>' +
-        '<section class="section" id="artigos"><div class="container"><div class="section-header"><div><span class="eyebrow">Primeiros artigos</span><h2>Leituras prioritárias</h2><p>Os primeiros seis artigos para abrir a revista com utilidade comercial real.</p></div></div><div class="article-grid">' + articles.slice(0, 6).map(renderArticleCard).join("") + '</div></div></section>' +
+        '<section class="section" id="artigos"><div class="container"><div class="section-header"><div><span class="eyebrow">Primeiros artigos</span><h2>Artigos prioritários</h2><p>Os primeiros seis artigos para abrir a revista com utilidade comercial real.</p></div></div><div class="article-grid">' + articles.slice(0, 6).map(renderArticleCard).join("") + '</div></div></section>' +
         renderWhyBuy() +
         '<section class="section"><div class="container">' + renderDisclosure() + '</div></section>' +
       '</main>' +
@@ -440,7 +444,7 @@
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container hero-card"><div class="hero-grid"><div class="hero-copy"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span><span>' + e(hub.title) + '</span></div><span class="section-flag">Secção editorial</span><h1>' + e(hub.title) + '</h1><p>' + e(hub.intro) + '</p></div><div class="hero-side"><div class="panel-note"><strong>Ligação à loja</strong><p>Artigos desta secção puxam categorias e produtos relevantes.</p></div></div></div></div></section>' +
-        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Artigos</span><h2>Leituras nesta secção</h2></div></div><div class="article-grid">' + hubArticles.map(renderArticleCard).join("") + '</div></div></section>' +
+        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Artigos</span><h2>Artigos desta secção</h2></div></div><div class="article-grid">' + hubArticles.map(renderArticleCard).join("") + '</div></div></section>' +
         '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Ligação à loja</span><h2>Categorias relacionadas</h2></div></div><div class="category-grid">' + hubCategories.map(function(item) { return '<article class="category-card"><h3>' + e(item.title) + '</h3><p>' + e(item.intro) + '</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="' + categoryHref(item.slug) + '">Ver categoria</a></div></article>'; }).join("") + '</div></div></section>' +
         '<section class="section"><div class="container">' + renderDisclosure() + '</div></section>' +
       '</main>' +
