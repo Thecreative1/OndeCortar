@@ -286,7 +286,7 @@
           <a href="index.html#cidades">Cidades</a>
           <a href="registar.html">Adicionar barbearia</a>
           <a href="faq.html">FAQ</a>
-          <a class="nav-cta" href="index.html#explorar">Voltar ao mapa</a>
+          <a class="nav-cta" href="index.html#mapa">Voltar ao mapa</a>
         </div>
       </nav>
     </div>
@@ -329,7 +329,7 @@
       const barber = slug ? directory.getBarberBySlug(slug) : null;
 
       if (!barber) {
-        root.innerHTML = '<section class="not-found"><span class="eyebrow">Ficha não encontrada</span><h1>Esta barbearia ainda não está disponível nesta vista.</h1><p>Podes voltar ao mapa principal para explorar outras fichas ou pesquisar novamente.</p><a class="btn btn-primary" href="index.html#explorar">Voltar ao mapa</a></section>';
+        root.innerHTML = '<section class="not-found"><span class="eyebrow">Ficha não encontrada</span><h1>Esta barbearia ainda não está disponível nesta vista.</h1><p>Podes voltar ao mapa principal para explorar outras fichas ou pesquisar novamente.</p><a class="btn btn-primary" href="index.html#mapa">Voltar ao mapa</a></section>';
         return;
       }
 
@@ -359,7 +359,7 @@
             '<div class="hero-actions">' +
               renderPrimaryAction(barber) +
               renderSecondaryAction(barber) +
-              '<a class="btn btn-secondary" href="index.html#explorar">Voltar ao mapa</a>' +
+              '<a class="btn btn-secondary" href="index.html#mapa">Voltar ao mapa</a>' +
             "</div>" +
           "</div>" +
           '<div class="hero-visual" style="--card-bg:' + barber.accent.background + ';--card-fg:' + barber.accent.foreground + ';">' +
