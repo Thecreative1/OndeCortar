@@ -1,4 +1,28 @@
 (function() {
+  const html = document.documentElement;
+  if (html) {
+    html.setAttribute("lang", "pt-PT");
+    html.setAttribute("xml:lang", "pt-PT");
+    html.setAttribute("translate", "no");
+  }
+  if (document.head) {
+    let langMeta = document.querySelector('meta[http-equiv="content-language"]');
+    if (!langMeta) {
+      langMeta = document.createElement("meta");
+      langMeta.setAttribute("http-equiv", "content-language");
+      document.head.appendChild(langMeta);
+    }
+    langMeta.setAttribute("content", "pt-PT");
+
+    let noTranslateMeta = document.querySelector('meta[name="google"]');
+    if (!noTranslateMeta) {
+      noTranslateMeta = document.createElement("meta");
+      noTranslateMeta.setAttribute("name", "google");
+      document.head.appendChild(noTranslateMeta);
+    }
+    noTranslateMeta.setAttribute("content", "notranslate");
+  }
+
   const app = document.getElementById("app");
   if (!app) return;
 
@@ -179,8 +203,8 @@
     return (
       '<section class="section"><div class="container callout-card">' +
         '<span class="eyebrow">Comprar com confiança</span>' +
-        "<h2>Porque comprar por aqui</h2>" +
-        "<p>Seleção feita com critério, compra final numa plataforma conhecida, links afiliados identificados e artigos que ajudam a decidir.</p>" +
+        "<h2>Porque comprar pela Loja OndeCortar</h2>" +
+        "<p>Poupas tempo na escolha, comparas opções com contexto real e compras na Amazon.es com links identificados.</p>" +
       "</div></section>"
     );
   }
@@ -270,33 +294,33 @@
         '<section class="section"><div class="container hero-card"><div class="hero-grid">' +
           '<div class="hero-copy">' +
             '<span class="section-flag">Loja afiliada</span>' +
-            '<h1>Produtos de barbearia escolhidos com critério</h1>' +
-            '<p>Máquinas, kits, navalhas e acessórios para barbeiros e para quem cuida da barba em casa.</p>' +
-            '<div class="hero-actions"><a class="btn btn-primary" href="#produtos">Explorar produtos</a><a class="btn btn-secondary" href="' + href("revista/") + '">Ler a Revista</a></div>' +
-            '<div class="hero-trust"><span class="pill">Compra final na Amazon.es através de links identificados</span></div>' +
+            '<h1>Escolhe melhor. Compra com confiança.</h1>' +
+            '<p>Seleção direta de máquinas, kits, navalhas e acessórios para comprares sem perder tempo em dezenas de páginas.</p>' +
+            '<div class="hero-actions"><a class="btn btn-primary" href="#produtos">Ver recomendações</a><a class="btn btn-secondary" href="' + href("revista/") + '">Ler guias de compra</a></div>' +
+            '<div class="hero-trust"><span class="pill">Compra final na Amazon.es com links afiliados identificados</span></div>' +
             '<div class="store-metrics">' +
-              '<article class="store-metric"><strong>' + products.length + '</strong><span>produtos selecionados</span></article>' +
-              '<article class="store-metric"><strong>' + categories.length + '</strong><span>entradas por categoria</span></article>' +
-              '<article class="store-metric"><strong>' + articles.length + '</strong><span>artigos ligados à compra</span></article>' +
+              '<article class="store-metric"><strong>' + products.length + '</strong><span>opções prontas a comprar</span></article>' +
+              '<article class="store-metric"><strong>' + categories.length + '</strong><span>categorias de decisão</span></article>' +
+              '<article class="store-metric"><strong>' + articles.length + '</strong><span>guias para acelerar a escolha</span></article>' +
             '</div>' +
           "</div>" +
           '<div class="hero-side shop-strip">' +
-            '<div class="store-note"><strong>Nesta página estás na loja</strong><p>O foco aqui é compra orientada: produtos, categorias, comparações rápidas e saída para Amazon.es.</p></div>' +
+            '<div class="store-note"><strong>Nesta página estás na loja</strong><p>O foco aqui é conversão: recomendação curta, comparação rápida e saída direta para compra.</p></div>' +
             '<div class="shop-mini-grid">' + shelfProducts.map(renderMiniProduct).join("") + '</div>' +
           "</div>" +
         "</div></div></section>" +
         '<section class="section"><div class="container trust-grid">' +
-          '<article class="editorial-card"><h3>Seleção curada</h3><p>Menos ruído e mais escolhas com lógica de uso.</p></article>' +
-          '<article class="editorial-card"><h3>Compra simples</h3><p>Ligação direta para a Amazon.es sem inventar preços manuais.</p></article>' +
-          '<article class="editorial-card"><h3>Guias e comparações</h3><p>Conteúdo para escolher melhor antes de comprar.</p></article>' +
-          '<article class="editorial-card"><h3>Links transparentes</h3><p>Disclosure afiliado visível nas páginas comerciais.</p></article>' +
+          '<article class="editorial-card"><h3>Só o que vale a pena</h3><p>Seleção curta para chegares rápido a uma boa compra.</p></article>' +
+          '<article class="editorial-card"><h3>Compra sem fricção</h3><p>Botões diretos para Amazon.es, sem preços manuais desatualizados.</p></article>' +
+          '<article class="editorial-card"><h3>Decisão mais rápida</h3><p>Guias e comparações para escolher com mais certeza.</p></article>' +
+          '<article class="editorial-card"><h3>Afiliado transparente</h3><p>Links identificados e política clara em todas as páginas comerciais.</p></article>' +
         '</div></section>' +
-        '<section class="section" id="produtos"><div class="container"><div class="section-header"><div><span class="eyebrow">Mais procurados</span><h2>Escolhas mais procuradas</h2><p>Quatro pontos de entrada para começar a loja com contexto.</p></div></div><div class="featured-grid">' + featured + '</div></div></section>' +
+        '<section class="section" id="produtos"><div class="container"><div class="section-header"><div><span class="eyebrow">Mais procurados</span><h2>Top recomendações para comprar hoje</h2><p>Quatro recomendações para começares a compra sem perder tempo.</p></div></div><div class="featured-grid">' + featured + '</div></div></section>' +
         '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Por necessidade</span><h2>Explorar por necessidade</h2><p>Uma primeira camada para encontrar mais depressa o que faz sentido.</p></div></div><div class="need-grid">' + needCards + '</div></div></section>' +
-        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Categorias</span><h2>Explorar por categoria</h2><p>As categorias clássicas continuam, mas com leitura mais editorial.</p></div></div><div class="category-grid">' + categoryCards + '</div></div></section>' +
-        '<section class="section"><div class="container comparison-card"><div class="section-header"><div><span class="eyebrow">Comparações rápidas</span><h2>Decidir sem andar perdido</h2><p>Quatro atalhos para chegar a uma primeira recomendação.</p></div></div><div class="comparison-table">' + comparisonRows + '</div></div></section>' +
+        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Categorias</span><h2>Comprar por categoria</h2><p>Vai direto ao tipo de produto que queres, sem desvios.</p></div></div><div class="category-grid">' + categoryCards + '</div></div></section>' +
+        '<section class="section"><div class="container comparison-card"><div class="section-header"><div><span class="eyebrow">Comparações rápidas</span><h2>Compara e decide em minutos</h2><p>Quatro atalhos para chegares ao produto certo mais depressa.</p></div></div><div class="comparison-table">' + comparisonRows + '</div></div></section>' +
         renderWhyBuy() +
-        renderRelatedArticles("Começar pela Revista", articles.slice(0, 6).map(function(item) { return item.slug; })) +
+        renderRelatedArticles("Guias para comprar melhor", articles.slice(0, 6).map(function(item) { return item.slug; })) +
         '<section class="section"><div class="container">' + renderDisclosure() + "</div></section>" +
       "</main>" +
       renderFooter()
@@ -316,8 +340,8 @@
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container hero-card"><div class="hero-grid">' +
-          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja.html") + '">Loja</a><span>/</span><span>' + e(category.title) + '</span></div><span class="section-flag">Categoria da loja</span><h1>' + e(category.title) + '</h1><p>' + e(category.intro) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#top3">Ver top 3</a><a class="btn btn-secondary" href="' + href("revista/") + '">Ler a Revista</a></div></div>' +
-          '<div class="hero-side"><div class="shop-mini-grid">' + topProducts.slice(0, 2).map(renderMiniProduct).join("") + '</div><div class="store-note"><strong>Compra orientada</strong><p>Esta página serve para escolher entre poucas opções com contexto, não para te atirar para um catálogo sem fim.</p></div></div>' +
+          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja.html") + '">Loja</a><span>/</span><span>' + e(category.title) + '</span></div><span class="section-flag">Categoria da loja</span><h1>' + e(category.title) + '</h1><p>' + e(category.intro) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#top3">Ver top 3 da categoria</a><a class="btn btn-secondary" href="' + href("revista/") + '">Ler guia relacionado</a></div></div>' +
+          '<div class="hero-side"><div class="shop-mini-grid">' + topProducts.slice(0, 2).map(renderMiniProduct).join("") + '</div><div class="store-note"><strong>Escolha mais rápida</strong><p>Selecionámos poucas opções para decidires sem te perderes em excesso de oferta.</p></div></div>' +
         '</div></div></section>' +
         '<section class="section" id="top3"><div class="container"><div class="section-header"><div><span class="eyebrow">Top 3</span><h2>Produtos recomendados</h2><p>Uma primeira seleção curta para não cair numa grelha sem fim.</p></div></div><div class="product-grid">' + topProducts.map(function(item) { return renderProductCard(item); }).join("") + '</div></div></section>' +
         '<section class="section"><div class="container comparison-card"><div class="section-header"><div><span class="eyebrow">Melhor para</span><h2>Comparação rápida</h2><p>Quatro atalhos editoriais para chegar a uma opção com mais contexto.</p></div></div><div class="comparison-table">' + comparisonRows + '</div></div></section>' +
@@ -342,7 +366,7 @@
       '<main>' +
         '<section class="section"><div class="container hero-card"><div class="hero-grid">' +
           '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja.html") + '">Loja</a><span>/</span><span>' + e(product.name) + '</span></div><span class="section-flag">Produto recomendado</span><span class="eyebrow">' + e(product.bestFor) + '</span><h1>' + e(product.name) + '</h1><p>' + e(product.summary) + " " + e(product.useCase) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + e(product.amazon) + '" target="_blank" rel="sponsored nofollow noopener">Ver na Amazon.es</a><a class="btn btn-secondary" href="' + categoryHref(product.categories[0]) + '">Ver categoria</a></div></div>' +
-          '<div class="hero-side"><div class="product-stage"><img src="' + href(product.image) + '" alt="' + e(product.alt) + '" loading="lazy" /></div><div class="store-note"><strong>Recomendação editorial</strong><p>Esta página resume para quem faz sentido, onde encaixa melhor e quais os limites antes de saíres para a Amazon.</p></div></div>' +
+      '<div class="hero-side"><div class="product-stage"><img src="' + href(product.image) + '" alt="' + e(product.alt) + '" loading="lazy" /></div><div class="store-note"><strong>Compra com mais confiança</strong><p>Destacamos este produto pelo equilíbrio entre uso real, procura e feedback de compradores para te ajudar a decidir mais depressa.</p></div></div>' +
         '</div></div></section>' +
         '<section class="section"><div class="container split-grid">' +
           '<div class="stack">' +
@@ -352,7 +376,7 @@
             '<div class="product-highlight"><h3>Limitações</h3><ul class="rich-list">' + product.limits.map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></div>' +
           '</div>' +
           '<div class="stack">' +
-            '<div class="buy-box"><span class="price-hint">Loja afiliada</span><h3>Comprar com contexto</h3><p>Sem preço fixo manual e sem promessas vagas. Vês a recomendação aqui e a disponibilidade final na Amazon.es.</p><div class="card-actions"><a class="btn btn-primary" href="' + e(product.amazon) + '" target="_blank" rel="sponsored nofollow noopener">Ver na Amazon.es</a><a class="btn btn-secondary" href="' + categoryHref(product.categories[0]) + '">Voltar à categoria</a></div></div>' +
+      '<div class="buy-box"><span class="price-hint">Loja afiliada</span><h3>Comprar agora na Amazon.es</h3><p>Confirma disponibilidade e avança para a compra com entrega rápida e pagamento seguro na plataforma.</p><div class="card-actions"><a class="btn btn-primary" href="' + e(product.amazon) + '" target="_blank" rel="sponsored nofollow noopener">Ver na Amazon.es</a><a class="btn btn-secondary" href="' + categoryHref(product.categories[0]) + '">Voltar à categoria</a></div></div>' +
             renderDisclosure() +
           '</div>' +
         '</div></section>' +

@@ -1,4 +1,28 @@
 (function() {
+  const html = document.documentElement;
+  if (html) {
+    html.setAttribute("lang", "pt-PT");
+    html.setAttribute("xml:lang", "pt-PT");
+    html.setAttribute("translate", "no");
+  }
+  if (document.head) {
+    let langMeta = document.querySelector('meta[http-equiv="content-language"]');
+    if (!langMeta) {
+      langMeta = document.createElement("meta");
+      langMeta.setAttribute("http-equiv", "content-language");
+      document.head.appendChild(langMeta);
+    }
+    langMeta.setAttribute("content", "pt-PT");
+
+    let noTranslateMeta = document.querySelector('meta[name="google"]');
+    if (!noTranslateMeta) {
+      noTranslateMeta = document.createElement("meta");
+      noTranslateMeta.setAttribute("name", "google");
+      document.head.appendChild(noTranslateMeta);
+    }
+    noTranslateMeta.setAttribute("content", "notranslate");
+  }
+
   const rawBarbers =
     Array.isArray(window.barbearias) ? window.barbearias :
     (typeof barbearias !== "undefined" && Array.isArray(barbearias) ? barbearias : []);
