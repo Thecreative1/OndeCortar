@@ -353,6 +353,7 @@
             '<div class="tags-row">' +
               '<span class="tag">' + directory.escapeHtml(barber.city) + "</span>" +
               (barber.telefone ? '<span class="tag">Telefone</span>' : "") +
+              (!barber.telefone && barber.booking ? '<span class="tag">Marcação</span>' : "") +
               (!barber.telefone && barber.website ? '<span class="tag">Website</span>' : "") +
             "</div>" +
             '<div class="hero-actions">' +
@@ -400,6 +401,7 @@
                 renderContactRow("Morada", barber.morada || "Morada não disponível") +
                 renderContactRow("Horário", barber.horario || "Horário não disponível") +
                 renderContactRow("Contacto", directory.buildContactLabel(barber)) +
+                (barber.booking ? renderContactLinkRow("Marcação", barber.booking, barber.booking) : "") +
                 (barber.website ? renderContactLinkRow("Website", barber.website, barber.website) : "") +
                 (barber.instagram ? renderContactLinkRow("Instagram", barber.instagram, barber.instagram) : "") +
                 (barber.facebook ? renderContactLinkRow("Facebook", barber.facebook, barber.facebook) : "") +
@@ -428,7 +430,7 @@
         }
         const rel = item.primaryLink.external ? ' rel="noopener nofollow"' : "";
         const target = item.primaryLink.external ? ' target="_blank"' : "";
-        return '<a class="btn btn-primary" href="' + item.primaryLink.href + '"' + target + rel + '>Contactar</a>';
+        return '<a class="btn btn-primary" href="' + item.primaryLink.href + '"' + target + rel + '>' + directory.escapeHtml(item.primaryLink.actionLabel || item.primaryLink.label) + '</a>';
       }
 
       function renderSecondaryAction(item) {
@@ -438,7 +440,7 @@
 
         const rel = item.secondaryLink.external ? ' rel="noopener nofollow"' : "";
         const target = item.secondaryLink.external ? ' target="_blank"' : "";
-        return '<a class="btn btn-secondary" href="' + item.secondaryLink.href + '"' + target + rel + '>Ver website</a>';
+        return '<a class="btn btn-secondary" href="' + item.secondaryLink.href + '"' + target + rel + '>' + directory.escapeHtml(item.secondaryLink.actionLabel || item.secondaryLink.label) + '</a>';
       }
 
       function renderGalleryTile(item, label, eyebrow, copy) {

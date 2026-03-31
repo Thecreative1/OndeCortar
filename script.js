@@ -15,6 +15,20 @@
     ["#e5ebdf", "#607252"],
     ["#e9e4d6", "#7e684a"]
   ];
+  const placeholderPhones = new Set([
+    "+351253000000",
+    "+351259123456",
+    "+351259654321",
+    "+351278765432",
+    "+351276123456",
+    "+351273987654",
+    "+351254321987",
+    "+351912345678",
+    "+351282123456",
+    "+351265123456",
+    "+351269123456",
+    "+351269987654"
+  ]);
 
   function normalizar(texto) {
     return String(texto || "")
@@ -89,6 +103,97 @@
     return String(telefone || "").replace(/[^\d+]/g, "");
   }
 
+  function formatarTelefoneVisual(telefone) {
+    const limpo = formatarTelefone(telefone);
+    const digitos = limpo.replace(/[^\d]/g, "");
+
+    if (digitos.length === 12 && digitos.indexOf("351") === 0) {
+      return "+351 " + digitos.slice(3, 6) + " " + digitos.slice(6, 9) + " " + digitos.slice(9, 12);
+    }
+
+    if (digitos.length === 9) {
+      return digitos.slice(0, 3) + " " + digitos.slice(3, 6) + " " + digitos.slice(6, 9);
+    }
+
+    return String(telefone || "").trim();
+  }
+
+  function isPlaceholderPhone(telefone) {
+    return placeholderPhones.has(formatarTelefone(telefone));
+  }
+
+  function classifyLink(url) {
+    const value = String(url || "").trim();
+
+    if (!value) {
+      return { kind: "", href: "" };
+    }
+
+    const lower = normalizar(value);
+
+    if (lower.indexOf("instagram.com") !== -1) {
+      return { kind: "instagram", href: value };
+    }
+
+    if (lower.indexOf("facebook.com") !== -1) {
+      return { kind: "facebook", href: value };
+    }
+
+    if (
+      lower.indexOf("fresha.com") !== -1 ||
+      lower.indexOf("treatwell.") !== -1 ||
+      lower.indexOf("ongenda.com") !== -1
+    ) {
+      return { kind: "booking", href: value };
+    }
+
+    return { kind: "website", href: value };
+  }
+
+  function normalizeLinks(raw) {
+    const result = {
+      website: "",
+      instagram: "",
+      facebook: "",
+      booking: ""
+    };
+
+    ["website", "instagram", "facebook"].forEach(function(field) {
+      const value = String(raw[field] || "").trim();
+
+      if (!value) {
+        return;
+      }
+
+      const classified = classifyLink(value);
+
+      if (!classified.kind) {
+        return;
+      }
+
+      if (!result[classified.kind]) {
+        result[classified.kind] = classified.href;
+      }
+    });
+
+    return result;
+  }
+
+  function summarizeUrl(url) {
+    const value = String(url || "").trim();
+
+    if (!value) {
+      return "";
+    }
+
+    try {
+      const parsed = new URL(value);
+      return parsed.hostname.replace(/^www\./, "");
+    } catch (error) {
+      return value.replace(/^https?:\/\//, "").replace(/^www\./, "");
+    }
+  }
+
   function initialsFromName(nome) {
     const palavras = String(nome || "")
       .split(/\s+/)
@@ -115,20 +220,27 @@
   }
 
   function buildDescription(barber) {
-    const pieces = [];
-    pieces.push("Barbearia em " + barber.city);
+    let suffix = "";
 
     if (barber.telefone) {
-      pieces.push("com telefone");
-    } else if (barber.website || barber.instagram || barber.facebook) {
-      pieces.push("com contacto online");
+      suffix = " com telefone";
+    } else if (barber.booking) {
+      suffix = " com marcação online";
+    } else if (barber.website) {
+      suffix = " com website";
+    } else if (barber.instagram) {
+      suffix = " com Instagram";
+    } else if (barber.facebook) {
+      suffix = " com Facebook";
+    } else if (barber.email) {
+      suffix = " com email";
     }
 
     if (barber.horario) {
-      pieces.push("e horário");
+      suffix += " e horário";
     }
 
-    return pieces.join(" ") + ".";
+    return "Barbearia em " + barber.city + suffix + ".";
   }
 
   function buildUsefulTags(barber) {
@@ -136,6 +248,10 @@
 
     if (barber.telefone) {
       tags.push("Telefone");
+    }
+
+    if (barber.booking) {
+      tags.push("Marcação");
     }
 
     if (barber.website) {
@@ -167,22 +283,26 @@
     if (barber.telefone) {
       links.push({
         label: "Ligar",
+        actionLabel: "Ligar",
         href: "tel:" + formatarTelefone(barber.telefone),
         kind: "phone"
       });
     }
 
-    if (barber.email) {
+    if (barber.booking) {
       links.push({
-        label: "Email",
-        href: "mailto:" + barber.email,
-        kind: "email"
+        label: "Marcação",
+        actionLabel: "Marcação",
+        href: barber.booking,
+        kind: "booking",
+        external: true
       });
     }
 
     if (barber.website) {
       links.push({
         label: "Website",
+        actionLabel: "Ver website",
         href: barber.website,
         kind: "website",
         external: true
@@ -192,6 +312,7 @@
     if (barber.instagram) {
       links.push({
         label: "Instagram",
+        actionLabel: "Instagram",
         href: barber.instagram,
         kind: "instagram",
         external: true
@@ -201,15 +322,26 @@
     if (barber.facebook) {
       links.push({
         label: "Facebook",
+        actionLabel: "Facebook",
         href: barber.facebook,
         kind: "facebook",
         external: true
       });
     }
 
+    if (barber.email) {
+      links.push({
+        label: "Email",
+        actionLabel: "Email",
+        href: "mailto:" + barber.email,
+        kind: "email"
+      });
+    }
+
     if (barber.google) {
       links.push({
         label: "Mapa",
+        actionLabel: "Ver mapa",
         href: barber.google,
         kind: "map",
         external: true
@@ -223,6 +355,7 @@
     let score = 0;
 
     if (barber.telefone) score += 2;
+    if (barber.booking) score += 2;
     if (barber.website) score += 2;
     if (barber.instagram) score += 2;
     if (barber.facebook) score += 1;
@@ -238,17 +371,22 @@
     const name = raw.name || raw.nome || "Barbearia";
     const city = inferirCidade(raw.morada);
     const accent = getAccent(index);
+    const links = normalizeLinks(raw);
+    const rawPhone = String(raw.telefone || "").trim();
+    const telefone = rawPhone && !isPlaceholderPhone(rawPhone) ? formatarTelefoneVisual(rawPhone) : "";
     const barber = {
       id: index + 1,
       slug: slugify(name + "-" + city + "-" + (index + 1)),
       name: name,
       city: city,
       morada: raw.morada || "",
-      telefone: raw.telefone || "",
-      website: raw.website || "",
+      telefone: telefone,
+      telefoneOriginal: rawPhone,
+      website: links.website,
+      booking: links.booking,
       email: raw.email || "",
-      instagram: raw.instagram || "",
-      facebook: raw.facebook || "",
+      instagram: links.instagram,
+      facebook: links.facebook,
       google: raw.google || "",
       horario: raw.horario || "",
       observacoes: raw.observacoes || "",
@@ -386,12 +524,20 @@
       return barber.telefone;
     }
 
+    if (barber.booking) {
+      return "Marcação online";
+    }
+
     if (barber.website) {
-      return "Website disponível";
+      return summarizeUrl(barber.website);
     }
 
     if (barber.instagram) {
-      return "Instagram disponível";
+      return "Instagram";
+    }
+
+    if (barber.facebook) {
+      return "Facebook";
     }
 
     if (barber.email) {

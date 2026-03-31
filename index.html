@@ -1122,7 +1122,7 @@
         <article class="metric-card">
           <strong><span data-contactos-total>0</span>+</strong>
           <h3>Contactos diretos disponíveis</h3>
-          <p>Telefone, website, Instagram, email ou Facebook quando disponíveis.</p>
+              <p>Telefone, website, Instagram, Facebook, email ou link de marcação quando disponíveis.</p>
         </article>
       </div>
     </section>
@@ -1456,7 +1456,7 @@
       function updateSummary(list, term) {
         const cleanTerm = String(term || "").trim();
         searchCount.textContent = "A mostrar " + list.length + " espaço" + (list.length === 1 ? "" : "s");
-        resultsVisiblePill.textContent = list.length ? "Ver ficha + contactar" : "Sem resultados";
+          resultsVisiblePill.textContent = list.length ? "Ver ficha e contactos" : "Sem resultados";
 
         if (!cleanTerm) {
           resultsMessage.textContent = "Procura por cidade, zona ou nome da barbearia.";
@@ -1520,7 +1520,7 @@
 
         const rel = barber.primaryLink.external ? ' rel="noopener nofollow"' : "";
         const target = barber.primaryLink.external ? ' target="_blank"' : "";
-        return '<a class="' + className + '" href="' + barber.primaryLink.href + '"' + target + rel + '>Contactar</a>';
+        return '<a class="' + className + '" href="' + barber.primaryLink.href + '"' + target + rel + '>' + directory.escapeHtml(barber.primaryLink.actionLabel || barber.primaryLink.label) + '</a>';
       }
 
       function renderMarkers(list) {
@@ -1579,7 +1579,7 @@
         if (barber.primaryLink) {
           const rel = barber.primaryLink.external ? ' rel="noopener nofollow"' : "";
           const target = barber.primaryLink.external ? ' target="_blank"' : "";
-          actions.push('<a href="' + barber.primaryLink.href + '"' + target + rel + ">Contactar</a>");
+          actions.push('<a href="' + barber.primaryLink.href + '"' + target + rel + ">" + directory.escapeHtml(barber.primaryLink.actionLabel || barber.primaryLink.label) + "</a>");
         }
 
         return (
