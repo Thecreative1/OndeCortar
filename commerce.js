@@ -127,10 +127,10 @@
   function sectionLabel() {
     const section = currentSection();
     if (section === "loja") {
-      return "Loja afiliada editorial";
+      return "Produtos de barbearia";
     }
     if (section === "revista") {
-      return "Revista editorial";
+      return "Guias e artigos";
     }
     return "Barbearias em Portugal";
   }
@@ -162,7 +162,7 @@
       '<footer><div class="container footer-shell">' +
         '<div class="footer-intro">' +
           '<div class="footer-brand"><img src="' + href("imagens/logo-ondecortar-round.png") + '" alt="Logo OndeCortar.pt" /><strong>OndeCortar.pt</strong></div>' +
-          "<p>Loja afiliada editorial e Revista OndeCortar para ajudar a decidir melhor antes da compra.</p>" +
+          "<p>Produtos recomendados e artigos úteis para escolher melhor antes de comprar.</p>" +
         "</div>" +
         '<div class="footer-links">' +
           '<a href="' + href("loja.html") + '">Loja</a>' +
@@ -311,7 +311,7 @@
   }
 
   function renderStoreHome() {
-    setMeta("Loja OndeCortar | Produtos de barbearia escolhidos com critério", "Loja afiliada editorial do OndeCortar com máquinas, kits, navalhas e acessórios recomendados.", "https://ondecortar.pt/loja.html");
+    setMeta("Loja OndeCortar | Produtos de barbearia escolhidos com critério", "Loja OndeCortar com máquinas, kits, navalhas e acessórios recomendados.", "https://ondecortar.pt/loja.html");
     const featured = featuredPicks.map(function(item) {
       const product = productMap.get(item.product);
       return (
@@ -340,7 +340,7 @@
       '<main>' +
         '<section class="section"><div class="container hero-card"><div class="hero-grid">' +
           '<div class="hero-copy">' +
-            '<span class="section-flag">Loja afiliada</span>' +
+            '<span class="section-flag">Loja OndeCortar</span>' +
             '<h1>Escolhe melhor. Compra com confiança.</h1>' +
             '<p>Seleção direta de máquinas, kits, navalhas e acessórios para comprares sem perder tempo em dezenas de páginas.</p>' +
             '<div class="hero-actions"><a class="btn btn-primary" href="#produtos">Ver recomendações</a><a class="btn btn-secondary" href="' + href("revista/") + '">Ler guias de compra</a></div>' +
@@ -445,10 +445,10 @@
       '<main>' +
         '<section class="section"><div class="container hero-card"><div class="hero-grid">' +
           '<div class="hero-copy"><span class="section-flag">Revista OndeCortar</span><h1>Artigos úteis para escolher melhor</h1><p>Guias, comparações e artigos problema/solução ligados à loja para orientar a decisão com mais contexto.</p><div class="hero-actions"><a class="btn btn-primary" href="#artigos">Ler artigos</a><a class="btn btn-secondary" href="' + href("loja.html") + '">Explorar produtos</a></div></div>' +
-          '<div class="hero-side"><div class="panel-note"><strong>Objetivo editorial</strong><p>Captar tráfego, responder a dúvidas reais e ligar naturalmente à loja afiliada.</p></div><div class="panel-note"><strong>Ponte com a loja</strong><p>Cada artigo empurra para produtos relevantes e cada categoria puxa artigos relacionados.</p></div></div>' +
+            '<div class="hero-side"><div class="panel-note"><strong>Lê primeiro, decide melhor</strong><p>Encontras respostas curtas e práticas para escolher sem perder tempo em páginas confusas.</p></div><div class="panel-note"><strong>Guias ligados ao que precisas</strong><p>Cada tema junta explicação simples, comparação útil e produtos relacionados quando fizer sentido.</p></div></div>' +
         '</div></div></section>' +
-        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Secções</span><h2>Explorar a Revista</h2><p>Hubs editoriais pensados para dúvidas reais e intenção comercial.</p></div></div><div class="hub-grid">' + hubs.map(function(item) { return '<article class="hub-card"><h3>' + e(item.title) + '</h3><p>' + e(item.intro) + '</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="' + hubHref(item.slug) + '">Ver secção</a></div></article>'; }).join("") + '</div></div></section>' +
-        '<section class="section" id="artigos"><div class="container"><div class="section-header"><div><span class="eyebrow">Primeiros artigos</span><h2>Artigos prioritários</h2><p>Os primeiros seis artigos para abrir a revista com utilidade comercial real.</p></div></div><div class="article-grid">' + articles.slice(0, 6).map(renderArticleCard).join("") + '</div></div></section>' +
+        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Secções</span><h2>Explorar a Revista</h2><p>Temas organizados para encontrares mais depressa o assunto certo.</p></div></div><div class="hub-grid">' + hubs.map(function(item) { return '<article class="hub-card"><h3>' + e(item.title) + '</h3><p>' + e(item.intro) + '</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="' + hubHref(item.slug) + '">Ver secção</a></div></article>'; }).join("") + '</div></div></section>' +
+        '<section class="section" id="artigos"><div class="container"><div class="section-header"><div><span class="eyebrow">Artigos</span><h2>Leituras para começar</h2><p>Uma seleção de guias simples para esclarecer dúvidas comuns e ajudar na escolha.</p></div></div><div class="article-grid">' + articles.slice(0, 6).map(renderArticleCard).join("") + '</div></div></section>' +
         renderWhyBuy() +
         '<section class="section"><div class="container">' + renderDisclosure() + '</div></section>' +
       '</main>' +
@@ -465,9 +465,9 @@
     return (
       renderHeader() +
       '<main>' +
-        '<section class="section"><div class="container hero-card"><div class="hero-grid"><div class="hero-copy"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span><span>' + e(hub.title) + '</span></div><span class="section-flag">Secção editorial</span><h1>' + e(hub.title) + '</h1><p>' + e(hub.intro) + '</p></div><div class="hero-side"><div class="panel-note"><strong>Ligação à loja</strong><p>Artigos desta secção puxam categorias e produtos relevantes.</p></div></div></div></div></section>' +
+        '<section class="section"><div class="container hero-card"><div class="hero-grid"><div class="hero-copy"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span><span>' + e(hub.title) + '</span></div><span class="section-flag">Secção da revista</span><h1>' + e(hub.title) + '</h1><p>' + e(hub.intro) + '</p></div><div class="hero-side"><div class="panel-note"><strong>O que vais encontrar aqui</strong><p>Artigos curtos, comparações úteis e sugestões ligadas a este tema.</p></div></div></div></div></section>' +
         '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Artigos</span><h2>Artigos desta secção</h2></div></div><div class="article-grid">' + hubArticles.map(renderArticleCard).join("") + '</div></div></section>' +
-        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Ligação à loja</span><h2>Categorias relacionadas</h2></div></div><div class="category-grid">' + hubCategories.map(function(item) { return '<article class="category-card"><h3>' + e(item.title) + '</h3><p>' + e(item.intro) + '</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="' + categoryHref(item.slug) + '">Ver categoria</a></div></article>'; }).join("") + '</div></div></section>' +
+        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Também pode interessar</span><h2>Categorias relacionadas</h2></div></div><div class="category-grid">' + hubCategories.map(function(item) { return '<article class="category-card"><h3>' + e(item.title) + '</h3><p>' + e(item.intro) + '</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="' + categoryHref(item.slug) + '">Ver categoria</a></div></article>'; }).join("") + '</div></div></section>' +
         '<section class="section"><div class="container">' + renderDisclosure() + '</div></section>' +
       '</main>' +
       renderFooter()
