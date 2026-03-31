@@ -161,19 +161,38 @@
 
     .hero-copy { display: grid; gap: 16px; }
     .breadcrumb { display: flex; flex-wrap: wrap; gap: 10px; color: var(--muted); font-size: 0.92rem; }
-    .tags-row, .hero-actions, .mini-list, .similar-actions, .footer-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tags-row, .hero-actions, .similar-actions, .footer-links { display: flex; flex-wrap: wrap; gap: 10px; }
 
     .hero-visual {
       min-height: 320px;
       padding: 24px;
       border-radius: 20px;
       display: grid;
-      align-content: space-between;
+      align-content: start;
+      gap: 14px;
       background: var(--card-bg, #e8ebe4);
       color: var(--card-fg, var(--accent));
     }
-    .hero-visual strong { font-family: "Playfair Display", Georgia, serif; font-size: 3.4rem; }
-    .hero-visual p { color: var(--card-fg, var(--accent)); max-width: 26ch; }
+    .hero-visual strong { font-family: "Playfair Display", Georgia, serif; font-size: 2rem; }
+    .hero-visual p { color: var(--card-fg, var(--accent)); max-width: 34ch; }
+    .hero-summary {
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .hero-summary-row {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.42);
+    }
+    .hero-summary-row span {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      opacity: 0.84;
+    }
 
     .section { padding-top: 24px; }
     .content-grid {
@@ -244,7 +263,7 @@
       .nav-links { flex-direction: column; }
       .nav-links a, .btn { width: 100%; }
       .hero-card, .gallery-card, .side-card, .detail-card, .similar-card, .footer-shell { padding: 22px; }
-      .hero-actions, .mini-list, .similar-actions, .footer-links { flex-direction: column; align-items: stretch; }
+      .hero-actions, .similar-actions, .footer-links { flex-direction: column; align-items: stretch; }
     }
   </style>
 </head>
@@ -338,10 +357,12 @@
             "</div>" +
           "</div>" +
           '<div class="hero-visual" style="--card-bg:' + barber.accent.background + ';--card-fg:' + barber.accent.foreground + ';">' +
-            "<strong>" + directory.escapeHtml(barber.city) + "</strong>" +
+            "<strong>Informação principal</strong>" +
             "<p>" + directory.escapeHtml(barber.name) + ' em ' + directory.escapeHtml(barber.city) + ".</p>" +
-            '<div class="mini-list">' +
-              '<span class="pill">' + directory.escapeHtml(contactSummary) + "</span>" +
+            '<div class="hero-summary">' +
+              '<div class="hero-summary-row"><span>Cidade</span>' + directory.escapeHtml(barber.city) + "</div>" +
+              '<div class="hero-summary-row"><span>Contacto</span>' + directory.escapeHtml(contactSummary) + "</div>" +
+              '<div class="hero-summary-row"><span>Horário</span>' + directory.escapeHtml(horarioSummary) + "</div>" +
             "</div>" +
           "</div>" +
         "</section>" +

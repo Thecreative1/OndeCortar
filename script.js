@@ -114,24 +114,6 @@
     };
   }
 
-  function inferirTom(nome) {
-    const nomeNormalizado = normalizar(nome);
-
-    if (/(vintage|classic|old school|mustache|1920)/.test(nomeNormalizado)) {
-      return "Clássico";
-    }
-
-    if (/(premium|elite|studio|vision|house|nobre)/.test(nomeNormalizado)) {
-      return "Premium";
-    }
-
-    if (/(real|central|house|urban)/.test(nomeNormalizado)) {
-      return "Urbano";
-    }
-
-    return "Curado";
-  }
-
   function buildDescription(barber) {
     const pieces = [];
     pieces.push("Barbearia em " + barber.city);
@@ -282,7 +264,6 @@
       initials: initialsFromName(name)
     };
 
-    barber.tone = inferirTom(name);
     barber.tags = buildEditorialTags(barber);
     barber.links = buildLinks(barber);
     barber.primaryLink = barber.links[0] || null;

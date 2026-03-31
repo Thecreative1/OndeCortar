@@ -295,7 +295,6 @@
     .hero-copy,
     .hero-visual,
     .metric-card,
-    .map-panel,
     .results-panel,
     .feature-card,
     .city-card,
@@ -354,7 +353,6 @@
     .result-actions,
     .footer-links,
     .owner-actions,
-    .visual-points,
     .feature-actions {
       display: flex;
       flex-wrap: wrap;
@@ -408,121 +406,39 @@
     }
 
     .hero-visual {
-      position: relative;
-      overflow: hidden;
-      min-height: 100%;
+      display: grid;
+      gap: 16px;
       padding: 22px;
       background:
         linear-gradient(160deg, rgba(255, 255, 255, 0.78), rgba(250, 248, 242, 0.92)),
         linear-gradient(135deg, rgba(198, 167, 106, 0.12), transparent);
     }
 
-    .hero-art {
-      position: relative;
-      min-height: 420px;
-      overflow: hidden;
-      border-radius: calc(var(--radius-lg) - 6px);
-      background:
-        radial-gradient(circle at 18% 24%, rgba(198, 167, 106, 0.3), transparent 18%),
-        radial-gradient(circle at 72% 18%, rgba(255, 255, 255, 0.32), transparent 14%),
-        radial-gradient(circle at 78% 72%, rgba(81, 98, 85, 0.18), transparent 20%),
-        linear-gradient(145deg, #667a6a 0%, #516255 48%, #39463c 100%);
+    .hero-map-topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .hero-art::after {
-      content: "";
-      position: absolute;
-      inset: 20px;
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      background:
-        linear-gradient(90deg, rgba(255, 255, 255, 0.18) 0 1px, transparent 1px 100%),
-        linear-gradient(rgba(255, 255, 255, 0.12) 0 1px, transparent 1px 100%);
-      background-size: 66px 66px;
-      opacity: 0.38;
-    }
-
-    .hero-art::before {
-      content: "";
-      position: absolute;
-      left: 54%;
-      top: 16%;
-      width: 112px;
-      height: 112px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.14);
-      box-shadow:
-        -160px 54px 0 -28px rgba(255, 255, 255, 0.1),
-        -38px 196px 0 -38px rgba(198, 167, 106, 0.2),
-        98px 176px 0 -46px rgba(255, 255, 255, 0.12);
-    }
-
-    .hero-art-copy {
-      position: absolute;
-      left: 22px;
-      right: 22px;
-      bottom: 22px;
-      z-index: 2;
-      color: #fff;
-    }
-
-    .hero-art-copy strong {
-      display: block;
-      font-size: 1.45rem;
-      margin-bottom: 10px;
-      max-width: 14ch;
-    }
-
-    .hero-art-copy p {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.8);
-      line-height: 1.7;
-    }
-
-    .floating-note,
-    .floating-stats {
-      position: absolute;
-      z-index: 3;
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid rgba(255, 255, 255, 0.88);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .floating-note {
-      right: 18px;
-      top: 18px;
-      max-width: 220px;
-    }
-
-    .floating-note strong,
-    .floating-stats strong {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 0.96rem;
-    }
-
-    .floating-note p,
-    .floating-stats p {
-      margin: 0;
+    .hero-map-topline p {
+      margin: 8px 0 0;
       color: var(--muted);
-      line-height: 1.6;
-      font-size: 0.92rem;
+      line-height: 1.7;
+      max-width: 38ch;
     }
 
-    .floating-stats {
-      left: 18px;
-      bottom: 18px;
-      max-width: 220px;
+    .hero-map-frame {
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.88);
+      background: #e8ebe4;
     }
 
-    .visual-points {
-      margin-top: 18px;
-    }
-
-    .visual-points .pill {
-      background: rgba(255, 255, 255, 0.84);
+    .hero-visual #map {
+      height: 520px;
     }
 
     .metrics-grid {
@@ -590,12 +506,11 @@
 
     .directory-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr);
+      grid-template-columns: 1fr;
       gap: 22px;
       align-items: start;
     }
 
-    .map-panel,
     .results-panel {
       padding: 22px;
     }
@@ -623,13 +538,8 @@
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.88);
     }
 
-    #map {
-      height: 720px;
-      background: #e8ebe4;
-    }
-
     .results-panel {
-      min-height: 720px;
+      min-height: auto;
       display: grid;
       grid-template-rows: auto auto 1fr;
       gap: 12px;
@@ -1010,7 +920,6 @@
 
     @media (max-width: 1120px) {
       .hero-layout,
-      .directory-layout,
       .owner-shell,
       .featured-grid,
       .cities-grid,
@@ -1055,7 +964,6 @@
       }
 
       .hero-copy,
-      .map-panel,
       .results-panel,
       .feature-copy,
       .owner-shell,
@@ -1088,18 +996,7 @@
         width: 100%;
       }
 
-      .hero-art {
-        min-height: 360px;
-      }
-
-      .floating-note,
-      .floating-stats {
-        position: static;
-        margin-top: 16px;
-        max-width: none;
-      }
-
-      #map {
+      .hero-visual #map {
         height: 420px;
       }
 
@@ -1192,27 +1089,16 @@
         </div>
 
         <div class="hero-visual">
-          <div class="hero-art" role="img" aria-label="Barbearias em Portugal">
-            <div class="hero-art-copy">
-              <strong>Encontra uma barbearia perto de ti.</strong>
-              <p>Vê morada, telefone e links disponíveis antes de escolheres.</p>
+          <div class="hero-map-topline">
+            <div>
+              <strong>Explora no mapa</strong>
+              <p>Vê as barbearias disponíveis e começa pela zona que te interessa.</p>
             </div>
+            <span class="pill"><span data-barbearias-total>63</span>+ no mapa</span>
           </div>
 
-          <div class="floating-note">
-            <strong>Procura por cidade</strong>
-            <p>Começa por Lisboa, Porto, Braga, Fafe ou outra zona no mapa.</p>
-          </div>
-
-          <div class="floating-stats">
-            <strong><span data-barbearias-total>63</span>+ barbearias no mapa</strong>
-            <p>Contactos e localização disponíveis sempre que a ficha tiver essa informação.</p>
-          </div>
-
-          <div class="visual-points">
-            <span class="pill">Por cidade</span>
-            <span class="pill">Com contactos</span>
-            <span class="pill">Mais perto de ti</span>
+          <div class="hero-map-frame">
+            <div id="map"></div>
           </div>
         </div>
       </div>
@@ -1262,27 +1148,13 @@
           </form>
         </div>
 
+        <noscript>
+          <div class="noscript-note">
+            O mapa precisa de JavaScript para funcionar. Ainda assim, podes adicionar a tua barbearia em <a href="registar.html">Adicionar barbearia</a>.
+          </div>
+        </noscript>
+
         <div class="directory-layout">
-          <section class="map-panel" aria-labelledby="mapTitle">
-            <div class="panel-topline">
-              <div>
-                <h3 id="mapTitle">Mapa OndeCortar</h3>
-                <p>Explora o mapa, aproxima a tua zona e vê as barbearias disponíveis.</p>
-              </div>
-              <span class="pill">Explora Portugal</span>
-            </div>
-
-            <div class="map-frame">
-              <div id="map"></div>
-            </div>
-
-            <noscript>
-              <div class="noscript-note">
-                O mapa precisa de JavaScript para funcionar. Ainda assim, podes adicionar a tua barbearia em <a href="registar.html">Adicionar barbearia</a>.
-              </div>
-            </noscript>
-          </section>
-
           <aside class="results-panel" aria-labelledby="resultsTitle">
             <div class="panel-topline">
               <div>
@@ -1373,7 +1245,7 @@
           <div>
             <span class="eyebrow">Loja</span>
             <h3>Produtos de barbearia</h3>
-            <p>Se quiseres ver máquinas, navalhas e acessórios, tens uma área própria da loja.</p>
+            <p>Se quiseres ver máquinas, navalhas e acessórios, podes visitar a loja.</p>
           </div>
           <a class="btn btn-secondary" href="loja.html">Ir para a loja</a>
         </div>
