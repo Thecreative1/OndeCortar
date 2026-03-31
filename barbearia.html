@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ficha de Barbearia | OndeCortar.pt</title>
-  <meta name="description" content="Ficha individual de barbearia no OndeCortar.pt com morada, contactos, mapa e contexto editorial." />
+  <meta name="description" content="Ficha individual de barbearia no OndeCortar.pt com morada, contactos e mapa." />
   <link rel="canonical" href="https://ondecortar.pt/barbearia.html" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -281,7 +281,7 @@
           <img src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
           <strong>OndeCortar.pt</strong>
         </div>
-        <p>Base pronta para suportar fichas individuais mais fortes, com mapa, contexto editorial e ligações internas para crescimento futuro.</p>
+        <p>Fichas com morada, contactos e mapa para ajudar a escolher uma barbearia com mais facilidade.</p>
       </div>
       <div class="footer-links">
         <a href="index.html#explorar">Explorar</a>
@@ -321,7 +321,7 @@
       if (!idealFor.length) idealFor.push("Explorar novas opções");
 
       document.title = barber.name + " | OndeCortar.pt";
-      document.querySelector('meta[name=\"description\"]').setAttribute("content", barber.name + " em " + barber.city + ". Morada, contactos, mapa e contexto editorial na ficha individual do OndeCortar.pt.");
+      document.querySelector('meta[name=\"description\"]').setAttribute("content", barber.name + " em " + barber.city + ". Morada, contactos e mapa na ficha individual do OndeCortar.pt.");
       document.querySelector('meta[property=\"og:title\"]').setAttribute("content", barber.name + " | OndeCortar.pt");
       document.querySelector('meta[property=\"og:description\"]').setAttribute("content", "Descobre a ficha de " + barber.name + " em " + barber.city + " com mapa e contactos diretos.");
 
@@ -331,7 +331,7 @@
             '<div class="breadcrumb"><a href="index.html">OndeCortar.pt</a><span>/</span><a href="index.html#explorar">Barbearias</a><span>/</span><span>' + directory.escapeHtml(barber.name) + "</span></div>" +
             '<span class="eyebrow">Ficha individual</span>' +
             "<h1>" + directory.escapeHtml(barber.name) + "</h1>" +
-            "<p>" + directory.escapeHtml(barber.description) + " A página já está preparada para receber galeria, especialidades, serviços populares e sinais mais fortes de confiança à medida que a ficha for enriquecida.</p>" +
+            "<p>" + directory.escapeHtml(barber.description) + " Consulta aqui a morada, os contactos e a informação disponível antes de escolheres.</p>" +
             '<div class="tags-row">' +
               '<span class="tag">' + directory.escapeHtml(barber.city) + "</span>" +
               barber.tags.map(function(tag) { return '<span class="tag">' + directory.escapeHtml(tag) + "</span>"; }).join("") +
@@ -353,22 +353,22 @@
         '<section class="section content-grid">' +
           '<div class="stack">' +
             '<article class="gallery-card">' +
-              "<h2>Galeria e ambiente</h2>" +
-              '<p style="margin-top:12px;">A base visual da ficha já suporta uma galeria mais rica. Enquanto não existirem imagens próprias, a página mantém um tratamento visual consistente e elegante.</p>' +
+              "<h2>Resumo da barbearia</h2>" +
+              '<p style="margin-top:12px;">Uma vista rápida com a informação principal desta barbearia.</p>' +
               '<div class="gallery-grid" style="margin-top:18px;">' +
-                renderGalleryTile(barber, barber.initials, "Identidade", "Base visual da ficha") +
-                renderGalleryTile(barber, barber.city, "Zona", "Contexto local da barbearia") +
-                renderGalleryTile(barber, barber.tone, "Ambiente", "Leitura editorial atual") +
+                renderGalleryTile(barber, barber.initials, "Barbearia", barber.name) +
+                renderGalleryTile(barber, barber.city, "Cidade", "Localização desta barbearia") +
+                renderGalleryTile(barber, barber.tone, "Ambiente", "Estilo geral da barbearia") +
               "</div>" +
             "</article>" +
             '<div class="detail-grid">' +
-              '<article class="detail-card"><h3>Ambiente</h3><ul><li>' + ambiance + "</li><li>Leitura editorial da ficha atual</li></ul></article>" +
-              '<article class="detail-card"><h3>Especialidades</h3><ul>' + specialties.map(function(item) { return "<li>" + directory.escapeHtml(item) + "</li>"; }).join("") + '<li>Campo preparado para enriquecer a ficha com fades, barba tradicional ou outros serviços</li></ul></article>' +
+              '<article class="detail-card"><h3>Ambiente</h3><ul><li>' + ambiance + "</li><li>Informação atual desta ficha</li></ul></article>" +
+              '<article class="detail-card"><h3>Especialidades</h3><ul>' + specialties.map(function(item) { return "<li>" + directory.escapeHtml(item) + "</li>"; }).join("") + '<li>Mais detalhes em atualização</li></ul></article>' +
               '<article class="detail-card"><h3>Ideal para</h3><ul>' + idealFor.map(function(item) { return "<li>" + directory.escapeHtml(item) + "</li>"; }).join("") + "</ul></article>" +
             "</div>" +
             '<article class="gallery-card">' +
               "<h2>Barbearias semelhantes na mesma zona</h2>" +
-              '<p style="margin-top:12px;">Uma base pronta para interligação interna entre fichas e futuras páginas locais.</p>' +
+              '<p style="margin-top:12px;">Outras opções para explorar perto desta zona.</p>' +
               '<div class="similar-grid" style="margin-top:18px;">' + similar.map(renderSimilarCard).join("") + "</div>" +
             "</article>" +
           "</div>" +

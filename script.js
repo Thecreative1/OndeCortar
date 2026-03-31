@@ -134,22 +134,22 @@
 
   function buildDescription(barber) {
     const pieces = [];
-    pieces.push("Espaço em " + barber.city);
+    pieces.push("Barbearia em " + barber.city);
 
     if (barber.telefone) {
-      pieces.push("com contacto direto");
+      pieces.push("com telefone disponível");
     }
 
     if (barber.website || barber.instagram || barber.facebook) {
-      pieces.push("e presença online");
+      pieces.push("e links úteis");
     }
 
     if (barber.horario) {
-      pieces.push("com horário partilhado");
+      pieces.push("com horário disponível");
     }
 
     if (barber.observacoes) {
-      pieces.push("e nota adicional na ficha");
+      pieces.push("e mais informação na ficha");
     }
 
     const texto = pieces.join(" ");
