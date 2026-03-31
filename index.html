@@ -325,6 +325,12 @@
       font-size: 1.04rem;
     }
 
+    .hero-copy h1 {
+      font-size: clamp(2.4rem, 5.4vw, 4.4rem);
+      max-width: 12ch;
+      margin: 14px 0 14px;
+    }
+
     .hero-search {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
@@ -1106,15 +1112,15 @@
           <div class="hero-map-topline">
             <div>
               <strong>Explora no mapa</strong>
-              <p>Vê as barbearias disponíveis e entra direto nas fichas com contacto útil.</p>
+              <p>Vê as barbearias disponíveis e entra direto nas opções com contacto útil.</p>
             </div>
             <span class="pill"><span data-barbearias-total>63</span>+ no mapa</span>
           </div>
 
           <div class="hero-map-highlights">
-            <span class="pill"><span data-cidades-total>0</span> cidades com fichas</span>
-            <span class="pill"><span data-contactos-total>0</span> fichas com contacto direto</span>
-            <a class="btn btn-soft btn-small" href="#explorar">Ver fichas com contacto</a>
+            <span class="pill"><span data-cidades-total>0</span> cidades com barbearias</span>
+            <span class="pill"><span data-contactos-total>0</span> barbearias com contacto direto</span>
+            <a class="btn btn-soft btn-small" href="#explorar">Ver barbearias com contacto</a>
             <a class="btn btn-secondary btn-small" href="loja.html">Ver loja de produtos</a>
           </div>
 
@@ -1180,9 +1186,9 @@
             <div class="panel-topline">
               <div>
                 <h3 id="resultsTitle">Resultados da pesquisa</h3>
-                <p>Vê as opções disponíveis e abre a ficha para consultar morada e contactos.</p>
+                <p>Vê as opções disponíveis e abre o perfil para consultar morada e contactos.</p>
               </div>
-              <span class="pill" id="resultsVisiblePill">Ver ficha + contactar</span>
+              <span class="pill" id="resultsVisiblePill">Ver perfil + contactar</span>
             </div>
 
             <div class="results-meta">
@@ -1238,7 +1244,7 @@
           <h2>Tens uma barbearia?</h2>
           <p>Adiciona a tua barbearia ao mapa e partilha os dados principais com novos clientes.</p>
           <div class="owner-actions">
-            <a class="btn btn-primary" href="registar.html">Adicionar ou atualizar ficha</a>
+            <a class="btn btn-primary" href="registar.html">Adicionar ou atualizar barbearia</a>
             <a class="btn btn-secondary" href="faq.html">Ver FAQ</a>
           </div>
         </div>
@@ -1443,7 +1449,7 @@
                 "<p>" + directory.escapeHtml(barber.description) + "</p>" +
                 '<div class="tags-row">' + tags + "</div>" +
                 '<div class="feature-actions">' +
-                  '<a class="btn btn-secondary btn-small" href="' + barber.url + '">Ver ficha</a>' +
+                  '<a class="btn btn-secondary btn-small" href="' + barber.url + '">Ver perfil</a>' +
                   renderContactAction(barber, "btn btn-primary btn-small") +
                 "</div>" +
               "</div>" +
@@ -1458,7 +1464,7 @@
             '<article class="city-card">' +
               "<strong>" + item.count + "</strong>" +
               "<h3>" + directory.escapeHtml(item.city) + "</h3>" +
-              "<p>Uma entrada rápida para descobrir fichas já presentes nesta zona.</p>" +
+              "<p>Uma entrada rápida para descobrir barbearias já presentes nesta zona.</p>" +
               '<button class="btn btn-secondary btn-small" type="button" data-city-search="' + directory.escapeHtml(item.city) + '">Explorar ' + directory.escapeHtml(item.city) + "</button>" +
             "</article>"
           );
@@ -1477,7 +1483,7 @@
       function updateSummary(list, term) {
         const cleanTerm = String(term || "").trim();
         searchCount.textContent = "A mostrar " + list.length + " espaço" + (list.length === 1 ? "" : "s");
-          resultsVisiblePill.textContent = list.length ? "Ver ficha e contactos" : "Sem resultados";
+          resultsVisiblePill.textContent = list.length ? "Ver perfil e contactos" : "Sem resultados";
 
         if (!cleanTerm) {
           resultsMessage.textContent = "Procura por cidade, zona ou nome da barbearia.";
@@ -1524,7 +1530,7 @@
                   "<span>" + directory.escapeHtml(directory.buildContactLabel(barber)) + "</span>" +
                 "</div>" +
                 '<div class="result-actions">' +
-                  '<a class="btn btn-secondary btn-small" href="' + barber.url + '">Ver ficha</a>' +
+                  '<a class="btn btn-secondary btn-small" href="' + barber.url + '">Ver perfil</a>' +
                   renderContactAction(barber, "btn btn-primary btn-small") +
                   '<button class="btn btn-soft btn-small" type="button" data-focus-marker="' + barber.slug + '">Ver no mapa</button>' +
                 "</div>" +
@@ -1594,7 +1600,7 @@
 
       function buildPopup(barber) {
         const actions = [
-          '<a class="popup-primary" href="' + barber.url + '">Ver ficha</a>'
+          '<a class="popup-primary" href="' + barber.url + '">Ver perfil</a>'
         ];
 
         if (barber.primaryLink) {
