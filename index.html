@@ -1192,27 +1192,27 @@
         </div>
 
         <div class="hero-visual">
-          <div class="hero-art" role="img" aria-label="Ambiente editorial da plataforma OndeCortar.pt">
+          <div class="hero-art" role="img" aria-label="Descoberta de barbearias em Portugal">
             <div class="hero-art-copy">
-              <strong>O mapa continua a ser o centro da experiência.</strong>
-              <p>Este bloco é apenas um apoio visual. O mapa real com as barbearias aparece já abaixo, integrado com a lista de resultados.</p>
+              <strong>Encontra a opção certa com mais confiança.</strong>
+              <p>Descobre morada, contactos e links úteis antes de escolheres a tua próxima barbearia.</p>
             </div>
           </div>
 
           <div class="floating-note">
-            <strong>Curadoria mais clara</strong>
-            <p>Fichas com melhor hierarquia visual, contactos rápidos e acesso imediato à informação essencial.</p>
+            <strong>Escolhe mais depressa</strong>
+            <p>Vê logo cidade, contactos e informação útil sem perder tempo a abrir dezenas de páginas.</p>
           </div>
 
           <div class="floating-stats">
             <strong><span data-barbearias-total>63</span>+ espaços no radar</strong>
-            <p>Portugal no mapa com foco em descoberta, contacto direto e crescimento editorial.</p>
+            <p>Barbearias em várias cidades de Portugal com contacto direto sempre que estiver disponível.</p>
           </div>
 
           <div class="visual-points">
-            <span class="pill">Mapa interativo</span>
-            <span class="pill">Fichas mais completas</span>
-            <span class="pill">Pesquisa imediata</span>
+            <span class="pill">Por cidade</span>
+            <span class="pill">Com contactos</span>
+            <span class="pill">Mais perto de ti</span>
           </div>
         </div>
       </div>
@@ -1242,7 +1242,7 @@
       <div class="container directory-shell">
         <div class="section-header">
           <div>
-            <span class="eyebrow">Descoberta com mapa e lista</span>
+            <span class="eyebrow">Descobre no mapa</span>
             <h2>Explora por cidade, zona ou nome</h2>
           </div>
           <span class="pill" id="searchCount" aria-live="polite">A mostrar 63 espaços</span>
@@ -1250,7 +1250,7 @@
 
         <div class="directory-toolbar">
           <div class="toolbar-topline">
-            <p id="resultsMessage" role="status" aria-live="polite">Explora o mapa, usa a pesquisa e abre fichas mais completas sempre que quiseres aprofundar.</p>
+            <p id="resultsMessage" role="status" aria-live="polite">Procura por cidade, zona ou nome da barbearia.</p>
             <div class="directory-actions" id="directoryCities" aria-label="Filtro rápido por cidades"></div>
           </div>
 
@@ -1267,9 +1267,9 @@
             <div class="panel-topline">
               <div>
                 <h3 id="mapTitle">Mapa OndeCortar</h3>
-                <p>O mapa é a assinatura visual do projeto e continua no centro da experiência, agora integrado com uma lista mais elegante e útil.</p>
+                <p>Explora o mapa, aproxima a tua zona e descobre barbearias com informação útil para decidir mais depressa.</p>
               </div>
-              <span class="pill">Portugal inteiro num só ponto de partida</span>
+              <span class="pill">Explora Portugal</span>
             </div>
 
             <div class="map-frame">
@@ -1286,15 +1286,15 @@
           <aside class="results-panel" aria-labelledby="resultsTitle">
             <div class="panel-topline">
               <div>
-                <h3 id="resultsTitle">Barbearias encontradas</h3>
-                <p>Cartões com mais contexto, melhor leitura e acesso rápido à ficha individual ou ao contacto disponível.</p>
+                <h3 id="resultsTitle">Resultados da pesquisa</h3>
+                <p>Vê as opções disponíveis, abre a ficha e usa o contacto mais rápido quando estiver disponível.</p>
               </div>
-              <span class="pill" id="resultsVisiblePill">Lista editorial</span>
+              <span class="pill" id="resultsVisiblePill">Ver ficha + contactar</span>
             </div>
 
             <div class="results-meta">
-              <p>As fichas mais completas aparecem primeiro para reforçar a sensação de curadoria e utilidade imediata.</p>
-              <span class="pill">Ver ficha + contactar</span>
+              <p>As opções com mais informação útil aparecem primeiro para te ajudar a comparar melhor.</p>
+              <span class="pill">Telefone, links e morada</span>
             </div>
 
             <div class="empty-state" id="emptyState" hidden>
@@ -1314,9 +1314,9 @@
       <div class="container">
         <div class="section-header">
           <div>
-            <span class="eyebrow">Curadoria editorial</span>
+            <span class="eyebrow">Em destaque</span>
             <h2>Barbearias em destaque</h2>
-            <p>Uma seleção automática que valoriza fichas mais completas, com presença online e melhor leitura para quem está a comparar opções.</p>
+            <p>Algumas das opções com mais informação disponível para começares a explorar mais depressa.</p>
           </div>
         </div>
 
@@ -1582,10 +1582,10 @@
       function updateSummary(list, term) {
         const cleanTerm = String(term || "").trim();
         searchCount.textContent = "A mostrar " + list.length + " espaço" + (list.length === 1 ? "" : "s");
-        resultsVisiblePill.textContent = list.length ? "Fichas ordenadas por qualidade visual" : "Sem resultados";
+        resultsVisiblePill.textContent = list.length ? "Ver ficha + contactar" : "Sem resultados";
 
         if (!cleanTerm) {
-          resultsMessage.textContent = "Explora o mapa, usa a pesquisa e abre fichas mais completas sempre que quiseres aprofundar.";
+          resultsMessage.textContent = "Procura por cidade, zona ou nome da barbearia.";
           return;
         }
 
