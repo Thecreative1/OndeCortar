@@ -3,216 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adicionar a Minha Barbearia | OndeCortar.pt</title>
-  <meta name="description" content="Adiciona a tua barbearia gratuitamente ao OndeCortar.pt e ajuda-nos a fazer crescer o mapa de barbearias em Portugal." />
+  <title>Adicionar ou Atualizar Barbearia | OndeCortar.pt</title>
+  <meta name="description" content="Adiciona ou atualiza a ficha da tua barbearia no OndeCortar.pt e melhora a tua presença no mapa com uma apresentação mais cuidada." />
   <link rel="canonical" href="https://ondecortar.pt/registar.html" />
-  <meta property="og:title" content="Adicionar a Minha Barbearia | OndeCortar.pt" />
-  <meta property="og:description" content="Entrada gratuita para barbearias no mapa do OndeCortar.pt." />
+  <meta property="og:title" content="Adicionar ou Atualizar Barbearia | OndeCortar.pt" />
+  <meta property="og:description" content="Ganha visibilidade no mapa OndeCortar.pt com uma ficha mais clara, elegante e útil para novos clientes." />
   <meta property="og:url" content="https://ondecortar.pt/registar.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://ondecortar.pt/imagens/banner.jpg" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --panel: rgba(255, 255, 255, 0.05);
-      --line: rgba(255, 255, 255, 0.1);
-      --text: #f5f5f5;
-      --muted: #bcbcbc;
-      --gold: #ffc400;
-      --red: #e63946;
-      --shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-      --radius: 24px;
+      --bg: #f7f7f4;
+      --surface: #ffffff;
+      --surface-soft: #f1f1eb;
+      --text: #1e1f1c;
+      --muted: #6b6e67;
+      --border: #e3e5de;
+      --accent: #516255;
+      --accent-strong: #39463c;
+      --shadow: 0 24px 60px rgba(44, 55, 44, 0.08);
+      --shadow-soft: 0 16px 36px rgba(44, 55, 44, 0.06);
+      --container: min(1160px, calc(100% - 32px));
+      --radius-lg: 24px;
+      --radius-md: 18px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(255, 196, 0, 0.1), transparent 25%),
-        radial-gradient(circle at top right, rgba(230, 57, 70, 0.14), transparent 28%),
-        linear-gradient(180deg, #0b0b0c 0%, #151516 100%);
+        radial-gradient(circle at top left, rgba(198, 167, 106, 0.14), transparent 30%),
+        radial-gradient(circle at top right, rgba(81, 98, 85, 0.12), transparent 26%),
+        linear-gradient(180deg, #fafaf7 0%, var(--bg) 32%, #f3f3ee 100%);
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid rgba(81, 98, 85, 0.32);
+      outline-offset: 3px;
     }
 
-    .container {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 28px 0 60px;
-    }
-
-    .intro,
-    .form-card,
-    .side-card {
-      border: 1px solid var(--line);
-      background: var(--panel);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .site-header {
-      padding-bottom: 24px;
-    }
-
+    .container { width: var(--container); margin: 0 auto; }
+    .site-header { padding: 18px 0 0; }
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 18px;
       padding: 14px 18px;
-      border: 1px solid var(--line);
+      border: 1px solid rgba(255, 255, 255, 0.65);
       border-radius: 999px;
-      background: rgba(8, 8, 8, 0.74);
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow);
+      background: rgba(250, 250, 247, 0.82);
+      box-shadow: 0 18px 40px rgba(44, 55, 44, 0.08);
     }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      min-width: 0;
+    .brand { display: inline-flex; align-items: center; gap: 14px; }
+    .brand img {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: var(--shadow-soft);
     }
-
-    .brand-logo {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      display: block;
-      object-fit: cover;
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
-    }
-
-    .brand span {
-      font-size: 1.05rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: center;
+    .brand-text { display: grid; gap: 3px; }
+    .brand-text strong { font-size: 1rem; }
+    .brand-text span { font-size: 0.82rem; color: var(--muted); }
+    .nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; justify-content: end; }
+    .nav-links a {
+      min-height: 42px;
+      padding: 10px 14px;
+      border-radius: 999px;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-weight: 600;
     }
-
-    .nav-links a:hover,
-    .nav-links a.nav-link-active {
+    .nav-links a:hover, .nav-links a.nav-link-active {
+      background: rgba(81, 98, 85, 0.08);
       color: var(--text);
     }
+    .nav-cta {
+      color: #fff !important;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      box-shadow: 0 14px 32px rgba(81, 98, 85, 0.22);
+    }
 
-    .nav-store {
+    main { padding: 30px 0 48px; }
+    .eyebrow, .badge {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 16px;
+      min-height: 36px;
+      padding: 8px 14px;
       border-radius: 999px;
-      background: linear-gradient(135deg, var(--gold), #ffab2e);
-      color: #111;
-      font-weight: 800;
-      box-shadow: 0 10px 24px rgba(255, 196, 0, 0.18);
-    }
-
-    .intro {
-      padding: 30px;
-      margin-bottom: 24px;
-    }
-
-    .intro span {
-      display: inline-flex;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255, 196, 0, 0.12);
-      color: var(--gold);
-      font-weight: 700;
+      border: 1px solid rgba(81, 98, 85, 0.14);
+      background: rgba(81, 98, 85, 0.1);
+      color: var(--accent-strong);
       font-size: 0.85rem;
+      font-weight: 700;
+    }
+    h1, h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; letter-spacing: -0.02em; margin: 0; }
+    h1 { font-size: clamp(2.8rem, 6vw, 4.4rem); margin-top: 16px; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); }
+    h3 { margin: 0; font-size: 1.18rem; }
+    p { color: var(--muted); line-height: 1.75; }
+
+    .hero, .form-card, .side-card, .footer-shell {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: var(--shadow);
     }
 
-    h1,
-    h2,
-    h3 {
-      margin: 0;
-      line-height: 1.1;
+    .hero {
+      padding: 30px;
+      background:
+        radial-gradient(circle at top left, rgba(198, 167, 106, 0.14), transparent 30%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(246, 247, 242, 0.94));
     }
 
-    h1 {
-      margin-top: 16px;
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      max-width: 14ch;
-    }
-
-    p {
-      color: var(--muted);
-      line-height: 1.65;
-    }
+    .hero p { margin: 14px 0 0; max-width: 62ch; }
 
     .grid {
       display: grid;
-      grid-template-columns: 1.3fr 0.85fr;
-      gap: 24px;
+      grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
+      gap: 22px;
+      margin-top: 22px;
       align-items: start;
     }
 
-    .form-card,
-    .side-card {
-      padding: 24px;
-    }
+    .form-card, .side-card { padding: 26px; }
+    .side-card + .side-card { margin-top: 18px; }
 
-    form {
-      display: grid;
-      gap: 16px;
-    }
-
-    .field-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    label {
-      display: block;
-      font-weight: 700;
-      margin-bottom: 8px;
-      font-size: 0.95rem;
-    }
-
-    input,
-    select,
-    textarea {
+    form { display: grid; gap: 18px; margin-top: 18px; }
+    .field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    label { display: block; margin-bottom: 8px; font-size: 0.94rem; font-weight: 700; }
+    input, select, textarea {
       width: 100%;
-      padding: 14px 15px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.04);
+      min-height: 54px;
+      padding: 0 16px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: rgba(241, 241, 235, 0.7);
       color: var(--text);
-      font-size: 1rem;
-      font-family: inherit;
     }
-
     textarea {
-      min-height: 140px;
+      min-height: 150px;
+      padding: 14px 16px;
       resize: vertical;
     }
-
     .checkbox {
       display: flex;
       gap: 10px;
       align-items: start;
       color: var(--muted);
-      font-size: 0.95rem;
+      line-height: 1.7;
     }
-
     .checkbox input {
       width: auto;
+      min-height: auto;
       margin-top: 4px;
     }
 
@@ -220,106 +175,61 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 14px 18px;
-      border-radius: 14px;
-      font-weight: 800;
+      min-height: 50px;
+      padding: 0 18px;
+      border-radius: 16px;
       border: 1px solid transparent;
+      font-weight: 700;
       cursor: pointer;
       transition: transform 0.2s ease;
     }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
+    .btn:hover { transform: translateY(-2px); }
     .btn-primary {
-      background: linear-gradient(135deg, var(--red), #ff5967);
       color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      box-shadow: 0 16px 36px rgba(81, 98, 85, 0.18);
     }
-
     .btn-secondary {
-      background: transparent;
       color: var(--text);
-      border-color: var(--line);
+      border-color: var(--border);
+      background: rgba(255, 255, 255, 0.82);
     }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
-    .cta-row {
+    .side-card ul { margin: 16px 0 0; padding-left: 18px; color: var(--muted); line-height: 1.75; }
+    .side-card p { margin: 12px 0 0; }
+
+    footer { padding: 0 0 48px; }
+    .footer-shell {
       display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 18px;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 6px;
+      padding: 24px 28px;
+    }
+    .footer-intro { display: grid; gap: 14px; max-width: 48ch; }
+    .footer-brand { display: inline-flex; align-items: center; gap: 14px; }
+    .footer-brand img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: rgba(255, 255, 255, 0.82);
+    }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .footer-links a { color: var(--muted); font-weight: 600; }
+
+    @media (max-width: 920px) {
+      .grid, .field-grid { grid-template-columns: 1fr; }
     }
 
-    .side-card + .side-card {
-      margin-top: 18px;
-    }
-
-    .badge {
-      display: inline-flex;
-      margin-top: 12px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(255, 196, 0, 0.12);
-      color: var(--gold);
-      font-weight: 700;
-    }
-
-    .side-card ul {
-      margin: 16px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    @media (max-width: 900px) {
-      .nav {
-        flex-direction: column;
-        align-items: stretch;
-        border-radius: 28px;
-        padding: 16px;
-      }
-
-      .brand {
-        justify-content: center;
-      }
-
-      .nav-links {
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-      }
-
-      .nav-links a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 48px;
-        padding: 12px 14px;
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        background: rgba(255, 255, 255, 0.04);
-        text-align: center;
-      }
-
-      .nav-store,
-      .nav-links a.nav-store {
-        width: 100%;
-      }
-
-      .grid,
-      .field-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-row {
-        flex-direction: column;
-      }
-
-      .cta-row .btn {
-        width: 100%;
-      }
+    @media (max-width: 760px) {
+      .nav { flex-direction: column; align-items: stretch; border-radius: 28px; }
+      .brand { justify-content: center; }
+      .nav-links, .cta-row, .footer-links { flex-direction: column; align-items: stretch; }
+      .nav-links a, .btn { width: 100%; }
+      .hero, .form-card, .side-card, .footer-shell { padding: 22px; }
     }
   </style>
   <script>
@@ -347,134 +257,151 @@
   </script>
 </head>
 <body>
-  <div class="container">
-    <header class="site-header">
-      <nav class="nav">
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Navegação principal">
         <a class="brand" href="index.html">
-          <img class="brand-logo" src="favicon.ico" alt="Logo OndeCortar.pt" />
-          <span>OndeCortar.pt</span>
+          <img src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
+          <span class="brand-text">
+            <strong>OndeCortar.pt</strong>
+            <span>Descoberta de barbearias em Portugal</span>
+          </span>
         </a>
         <div class="nav-links">
-          <a href="index.html#pesquisa">Mapa</a>
+          <a href="index.html#explorar">Explorar</a>
           <a class="nav-link-active" href="registar.html" aria-current="page">Adicionar barbearia</a>
           <a href="faq.html">FAQ</a>
-          <a class="nav-store" href="loja.html">Ver loja</a>
+          <a href="loja.html">Loja</a>
+          <a class="nav-cta" href="index.html#explorar">Voltar ao mapa</a>
         </div>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <section class="intro">
-      <span>Entrada gratuita no mapa</span>
-      <h1>Adiciona a tua barbearia ao OndeCortar.pt.</h1>
-      <p>Nesta fase queremos aumentar o diretório e melhorar a ferramenta. A entrada base no mapa é gratuita. Preenche os dados principais e tratamos do resto.</p>
-    </section>
-
-    <div class="grid">
-      <section class="form-card">
-        <h2>Dados da tua barbearia</h2>
-        <p>Quanto mais informação correta enviares, mais fácil é publicar a tua ficha com contactos, horários e links úteis para quem te procura.</p>
-
-        <form action="https://formspree.io/f/mkgjknvn" method="POST" onsubmit="redirecionarDepoisDeSubmeter(event)">
-          <input type="hidden" name="_subject" value="Novo pedido de entrada no mapa do OndeCortar.pt" />
-          <input type="hidden" name="origem" value="registar.html" />
-
-          <div class="field-grid">
-            <div>
-              <label for="nome">Nome da barbearia</label>
-              <input type="text" id="nome" name="nome" required />
-            </div>
-            <div>
-              <label for="responsavel">Nome do responsável</label>
-              <input type="text" id="responsavel" name="responsavel" />
-            </div>
-          </div>
-
-          <div class="field-grid">
-            <div>
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div>
-              <label for="telefone">Telefone</label>
-              <input type="text" id="telefone" name="telefone" required />
-            </div>
-          </div>
-
-          <div class="field-grid">
-            <div>
-              <label for="cidade">Cidade</label>
-              <input type="text" id="cidade" name="cidade" placeholder="Ex.: Lisboa, Porto, Braga..." required />
-            </div>
-            <div>
-              <label for="morada">Morada completa</label>
-              <input type="text" id="morada" name="morada" required />
-            </div>
-          </div>
-
-          <div class="field-grid">
-            <div>
-              <label for="presenca_online">Instagram, site ou link de marcação</label>
-              <input type="text" id="presenca_online" name="presenca_online" placeholder="Link do Instagram, site ou página de marcações" />
-            </div>
-            <div>
-              <label for="horario">Horário de funcionamento</label>
-              <input type="text" id="horario" name="horario" placeholder="Ex.: Seg a Sáb, 09h às 20h" />
-            </div>
-          </div>
-
-          <div>
-            <label for="tipo_pedido">Tipo de pedido</label>
-            <select id="tipo_pedido" name="tipo_pedido">
-              <option value="adicionar-gratuitamente">Adicionar gratuitamente ao mapa</option>
-              <option value="atualizar-ficha">Atualizar uma ficha já existente</option>
-              <option value="corrigir-dados">Corrigir dados da barbearia</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="mensagem">Informação adicional</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Podes incluir serviços, observações, forma de atendimento, preços, horário detalhado ou qualquer dado que ajude a ficha a ficar melhor."></textarea>
-          </div>
-
-          <label class="checkbox">
-            <input type="checkbox" name="consentimento" required />
-            <span>Autorizo o OndeCortar.pt a tratar estes dados para publicar ou atualizar a ficha da barbearia no diretório. Li a <a href="privacidade.html" style="color:#ffc400; text-decoration: underline;">política de privacidade</a>.</span>
-          </label>
-
-          <div class="cta-row">
-            <button class="btn btn-primary" type="submit">Enviar pedido</button>
-            <a class="btn btn-secondary" href="index.html">Voltar ao mapa</a>
-          </div>
-        </form>
+  <main>
+    <div class="container">
+      <section class="hero">
+        <span class="eyebrow">Presença no mapa OndeCortar</span>
+        <h1>Adiciona ou atualiza a tua barbearia.</h1>
+        <p>Ganha visibilidade no mapa, melhora a apresentação do teu espaço e facilita o contacto com novos clientes. Envia a informação principal e tratamos do resto.</p>
       </section>
 
-      <aside>
-        <div class="side-card">
-          <h3>Entrada gratuita</h3>
-          <p>Neste momento queremos aumentar a cobertura do diretório. Por isso a entrada base no mapa é gratuita.</p>
-          <span class="badge">Sem custo para a ficha base</span>
-          <ul>
-            <li>Nome da barbearia.</li>
-            <li>Morada e telefone.</li>
-            <li>Instagram, site ou link útil quando existirem.</li>
-          </ul>
-        </div>
+      <div class="grid">
+        <section class="form-card">
+          <h2>Dados da tua barbearia</h2>
+          <p>Quanto mais completa for a informação, melhor fica a ficha para quem está a comparar espaços e a decidir onde marcar ou ligar.</p>
 
-        <div class="side-card">
-          <h3>O que acontece depois</h3>
-          <ul>
-            <li>Recebemos os dados enviados.</li>
-            <li>Validamos a informação principal.</li>
-            <li>Adicionamos ou atualizamos a ficha no mapa.</li>
-          </ul>
-        </div>
+          <form action="https://formspree.io/f/mkgjknvn" method="POST" onsubmit="redirecionarDepoisDeSubmeter(event)">
+            <input type="hidden" name="_subject" value="Novo pedido de entrada no mapa do OndeCortar.pt" />
+            <input type="hidden" name="origem" value="registar.html" />
 
-        <div class="side-card">
-          <h3>Mais tarde podemos ir além disso</h3>
-          <p>Primeiro queremos uma ferramenta maior e mais útil. Mais à frente, faz sentido trabalhar páginas mais completas para algumas barbearias.</p>
-        </div>
-      </aside>
+            <div class="field-grid">
+              <div>
+                <label for="nome">Nome da barbearia</label>
+                <input type="text" id="nome" name="nome" required />
+              </div>
+              <div>
+                <label for="responsavel">Nome do responsável</label>
+                <input type="text" id="responsavel" name="responsavel" />
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div>
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" name="telefone" required />
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <div>
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade" placeholder="Ex.: Lisboa, Porto, Braga..." required />
+              </div>
+              <div>
+                <label for="morada">Morada completa</label>
+                <input type="text" id="morada" name="morada" required />
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <div>
+                <label for="presenca_online">Instagram, site ou link de marcação</label>
+                <input type="text" id="presenca_online" name="presenca_online" placeholder="Link do Instagram, site ou página de marcações" />
+              </div>
+              <div>
+                <label for="horario">Horário de funcionamento</label>
+                <input type="text" id="horario" name="horario" placeholder="Ex.: Seg a Sáb, 09h às 20h" />
+              </div>
+            </div>
+
+            <div>
+              <label for="tipo_pedido">Tipo de pedido</label>
+              <select id="tipo_pedido" name="tipo_pedido">
+                <option value="adicionar-gratuitamente">Adicionar gratuitamente ao mapa</option>
+                <option value="atualizar-ficha">Atualizar uma ficha já existente</option>
+                <option value="corrigir-dados">Corrigir dados da barbearia</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="mensagem">Informação adicional</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Podes incluir serviços, observações, forma de atendimento, preços, horário detalhado ou qualquer dado que ajude a ficha a ficar melhor."></textarea>
+            </div>
+
+            <label class="checkbox">
+              <input type="checkbox" name="consentimento" required />
+              <span>Autorizo o OndeCortar.pt a tratar estes dados para publicar ou atualizar a ficha da barbearia no diretório. Li a <a href="privacidade.html" style="text-decoration: underline;">política de privacidade</a>.</span>
+            </label>
+
+            <div class="cta-row">
+              <button class="btn btn-primary" type="submit">Enviar pedido</button>
+              <a class="btn btn-secondary" href="index.html#explorar">Voltar ao mapa</a>
+            </div>
+          </form>
+        </section>
+
+        <aside>
+          <div class="side-card">
+            <h3>O que ajuda mais a tua ficha</h3>
+            <p>Quanto mais contexto enviares, mais forte fica a perceção de qualidade e confiança do espaço.</p>
+            <ul>
+              <li>Nome da barbearia, cidade e morada completa.</li>
+              <li>Telefone, Instagram, website ou link de marcação.</li>
+              <li>Horários, observações e detalhes que melhorem a apresentação.</li>
+            </ul>
+          </div>
+
+          <div class="side-card">
+            <span class="badge">Base gratuita</span>
+            <h3 style="margin-top:14px;">Entrada e atualização simples</h3>
+            <p>A ficha base continua sem custo nesta fase, com foco em aumentar a cobertura do mapa e subir a qualidade do projeto.</p>
+          </div>
+        </aside>
+      </div>
     </div>
-  </div>
+  </main>
+
+  <footer>
+    <div class="container footer-shell">
+      <div class="footer-intro">
+        <div class="footer-brand">
+          <img src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
+          <strong>OndeCortar.pt</strong>
+        </div>
+        <p>Uma base mais cuidada para dar melhor visibilidade às barbearias em Portugal sem perder simplicidade no envio de informação.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#explorar">Explorar</a>
+        <a href="faq.html">FAQ</a>
+        <a href="loja.html">Loja</a>
+        <a href="privacidade.html">Privacidade</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

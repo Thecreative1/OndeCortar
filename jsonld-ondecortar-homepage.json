@@ -6,7 +6,7 @@
       "@id": "https://ondecortar.pt/#website",
       "url": "https://ondecortar.pt/",
       "name": "OndeCortar.pt",
-      "description": "Encontre barbearias em Portugal com mapa, contactos e links diretos. Descubra tamb\u00e9m a nossa loja de produtos para barbearia com envio da Amazon Espanha.",
+      "description": "Plataforma para descobrir barbearias em Portugal com mapa interativo, fichas mais cuidadas e contactos diretos.",
       "publisher": {
         "@type": "Organization",
         "name": "OndeCortar.pt"
@@ -16,7 +16,7 @@
       "@type": "LocalBusiness",
       "@id": "https://ondecortar.pt/#barbearia",
       "name": "Barbearias em Portugal",
-      "description": "Plataforma para descobrir barbeiros em Portugal e produtos de barbearia com entrega.",
+      "description": "Base editorial para descobrir barbearias em Portugal com mapa, contexto visual e fichas individuais preparadas para crescer.",
       "url": "https://ondecortar.pt/",
       "address": {
         "@type": "PostalAddress",
@@ -28,7 +28,7 @@
       },
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://ondecortar.pt/#map?q={search_term_string}",
+        "target": "https://ondecortar.pt/#explorar?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }

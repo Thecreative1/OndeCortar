@@ -3,30 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OndeCortar.pt | Encontra Barbearias em Portugal</title>
-  <meta name="description" content="Descobre barbearias em Portugal por cidade, nome ou morada. Pesquisa rápida, contactos diretos e diretório em crescimento." />
+  <title>OndeCortar.pt | Descobre Barbearias em Portugal</title>
+  <meta name="description" content="Explora barbearias em Portugal com mapa interativo, fichas mais cuidadas e contactos diretos para encontrares o teu próximo corte com mais estilo." />
   <link rel="canonical" href="https://ondecortar.pt/" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <meta property="og:title" content="OndeCortar.pt | Encontra Barbearias em Portugal" />
-  <meta property="og:description" content="Descobre barbearias em Portugal por cidade, nome ou morada. Pesquisa rápida, contactos diretos e diretório em crescimento." />
+  <meta property="og:title" content="OndeCortar.pt | Descobre Barbearias em Portugal" />
+  <meta property="og:description" content="Mapa interativo, fichas elegantes e descoberta mais simples de barbearias em Portugal." />
   <meta property="og:url" content="https://ondecortar.pt/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://ondecortar.pt/imagens/banner.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="Barbeiros/barbeiros.js"></script>
+  <script src="script.js"></script>
   <style>
     :root {
-      --panel: rgba(255, 255, 255, 0.045);
-      --line: rgba(255, 255, 255, 0.12);
-      --text: #f6f3ef;
-      --muted: #c8c2bb;
-      --gold: #ffbf1f;
-      --gold-soft: #ffd970;
-      --red: #eb4654;
-      --shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
-      --radius: 24px;
+      --bg: #f7f7f4;
+      --surface: #ffffff;
+      --surface-soft: #f1f1eb;
+      --surface-strong: #e8ebe4;
+      --text: #1e1f1c;
+      --muted: #6b6e67;
+      --muted-soft: #8a8d85;
+      --border: #e3e5de;
+      --accent: #516255;
+      --accent-strong: #39463c;
+      --gold: #c6a76a;
+      --gold-soft: #f2e6cf;
+      --shadow: 0 24px 60px rgba(44, 55, 44, 0.08);
+      --shadow-soft: 0 16px 36px rgba(44, 55, 44, 0.06);
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 14px;
+      --container: min(1240px, calc(100% - 32px));
     }
 
     * {
@@ -39,12 +52,12 @@
 
     body {
       margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(255, 191, 31, 0.11), transparent 26%),
-        radial-gradient(circle at top right, rgba(235, 70, 84, 0.12), transparent 28%),
-        linear-gradient(180deg, #0a0908 0%, #141312 60%, #0a0908 100%);
+        radial-gradient(circle at top left, rgba(198, 167, 106, 0.14), transparent 30%),
+        radial-gradient(circle at top right, rgba(81, 98, 85, 0.12), transparent 26%),
+        linear-gradient(180deg, #fafaf7 0%, var(--bg) 32%, #f3f3ee 100%);
     }
 
     a {
@@ -52,11 +65,9 @@
       text-decoration: none;
     }
 
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible {
-      outline: 3px solid var(--gold-soft);
-      outline-offset: 3px;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     button,
@@ -64,32 +75,27 @@
       font: inherit;
     }
 
-    .skip-link,
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
+    button {
+      cursor: pointer;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+      outline: 3px solid rgba(81, 98, 85, 0.32);
+      outline-offset: 3px;
     }
 
     .skip-link {
-      left: 16px;
-      top: 14px;
-      width: auto;
-      height: auto;
-      margin: 0;
-      clip: auto;
+      position: absolute;
+      left: 18px;
+      top: 16px;
+      z-index: 40;
+      transform: translateY(-150%);
       padding: 10px 14px;
       border-radius: 12px;
-      background: #111;
+      background: var(--text);
       color: #fff;
-      z-index: 20;
-      transform: translateY(-120%);
       transition: transform 0.2s ease;
     }
 
@@ -98,12 +104,109 @@
     }
 
     .container {
-      width: min(1180px, calc(100% - 32px));
+      width: var(--container);
       margin: 0 auto;
     }
 
+    .section {
+      padding: 26px 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .section-header p,
+    .hero-copy p,
+    .owner-copy p,
+    .footer-intro p {
+      margin: 0;
+      max-width: 62ch;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .eyebrow,
+    .pill,
+    .tag,
+    .city-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 38px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .eyebrow {
+      color: var(--accent-strong);
+      background: rgba(81, 98, 85, 0.1);
+      border: 1px solid rgba(81, 98, 85, 0.14);
+    }
+
+    .pill,
+    .tag {
+      color: var(--accent-strong);
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+    }
+
+    .city-chip {
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.74);
+      color: var(--text);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .city-chip:hover {
+      transform: translateY(-2px);
+      border-color: rgba(81, 98, 85, 0.24);
+      box-shadow: var(--shadow-soft);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      line-height: 1.08;
+    }
+
+    h1,
+    h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 5.6rem);
+      max-width: 11ch;
+      margin: 18px 0 18px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4.2vw, 3.2rem);
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
     .site-header {
-      padding: 22px 0 16px;
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      padding: 18px 0 0;
+      backdrop-filter: blur(14px);
     }
 
     .nav {
@@ -112,169 +215,154 @@
       align-items: center;
       gap: 18px;
       padding: 14px 18px;
-      border: 1px solid var(--line);
+      border: 1px solid rgba(255, 255, 255, 0.65);
       border-radius: 999px;
-      background: rgba(8, 8, 8, 0.74);
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow);
+      background: rgba(250, 250, 247, 0.82);
+      box-shadow: 0 18px 40px rgba(44, 55, 44, 0.08);
     }
 
     .brand {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: 0.02em;
+      gap: 14px;
       min-width: 0;
     }
 
     .brand-logo {
-      width: 50px;
-      height: 50px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
-      display: block;
       object-fit: contain;
-      background: rgba(255, 255, 255, 0.02);
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: var(--shadow-soft);
     }
 
-    .brand span {
-      font-size: 1.05rem;
+    .brand-text {
+      display: grid;
+      gap: 3px;
+    }
+
+    .brand-text strong {
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+    }
+
+    .brand-text span {
+      font-size: 0.82rem;
+      color: var(--muted);
     }
 
     .nav-links {
       display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
       align-items: center;
-      color: var(--muted);
-      font-size: 0.95rem;
+      flex-wrap: wrap;
+      justify-content: end;
+      gap: 10px;
     }
 
-    .nav-links a:hover {
+    .nav-links a {
+      min-height: 42px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-weight: 600;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.nav-link-active {
+      background: rgba(81, 98, 85, 0.08);
       color: var(--text);
     }
 
-    .nav-store {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--gold), #ffab2e);
-      color: #111;
-      font-weight: 800;
-      box-shadow: 0 10px 24px rgba(255, 191, 31, 0.18);
+    .nav-cta {
+      color: var(--surface) !important;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      box-shadow: 0 14px 32px rgba(81, 98, 85, 0.22);
     }
 
     .hero {
-      padding: 20px 0 10px;
+      padding: 36px 0 12px;
     }
 
-    .hero-grid {
+    .hero-layout {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 24px;
       align-items: stretch;
     }
 
-    .intro-card,
-    .search-shell,
-    .stat-card,
-    .section-card {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--panel);
+    .hero-copy,
+    .hero-visual,
+    .metric-card,
+    .map-panel,
+    .results-panel,
+    .feature-card,
+    .city-card,
+    .owner-shell,
+    .store-strip,
+    .footer-shell {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.78);
       box-shadow: var(--shadow);
-      padding: 26px;
     }
 
-    .eyebrow,
-    .pill,
-    .city-chip {
-      display: inline-flex;
-      align-items: center;
-      padding: 7px 12px;
-      border-radius: 999px;
-      font-size: 0.84rem;
-      font-weight: 700;
+    .hero-copy {
+      padding: 38px;
+      background:
+        radial-gradient(circle at top left, rgba(198, 167, 106, 0.14), transparent 32%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.88));
     }
 
-    .eyebrow {
-      color: #111;
-      background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+    .hero-copy p {
+      font-size: 1.04rem;
     }
 
-    .pill {
-      color: var(--gold);
-      background: rgba(255, 191, 31, 0.1);
-      border: 1px solid rgba(255, 191, 31, 0.18);
+    .hero-search {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      margin: 26px 0 18px;
+      padding: 12px;
+      border: 1px solid rgba(81, 98, 85, 0.12);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
     }
 
-    .city-chip {
+    .hero-search input,
+    .directory-form input {
+      width: 100%;
+      min-height: 54px;
+      padding: 0 16px;
+      border: 1px solid transparent;
+      border-radius: 14px;
+      background: rgba(241, 241, 235, 0.66);
       color: var(--text);
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--line);
-      cursor: pointer;
-      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
-    .city-chip:hover {
-      transform: translateY(-2px);
-      border-color: rgba(255, 191, 31, 0.28);
-    }
-
-    h1,
-    h2,
-    h3 {
-      margin: 0;
-      line-height: 1.06;
-    }
-
-    h1 {
-      margin-top: 16px;
-      font-size: clamp(2.5rem, 5vw, 4.8rem);
-      max-width: 12ch;
-    }
-
-    p,
-    li,
-    footer p {
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .intro-card p {
-      margin: 14px 0 0;
-      font-size: 1.06rem;
-      max-width: 42ch;
+    .hero-search input::placeholder,
+    .directory-form input::placeholder {
+      color: var(--muted-soft);
     }
 
     .hero-actions,
-    .hero-proof,
-    .city-chips,
+    .quick-cities,
+    .directory-actions,
+    .tags-row,
+    .result-actions,
     .footer-links,
-    .mini-actions,
-    .cta-actions {
+    .owner-actions,
+    .visual-points,
+    .feature-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
     }
 
     .hero-actions {
-      margin-top: 22px;
-    }
-
-    .hero-proof {
-      margin-top: 18px;
-    }
-
-    .hero-proof .pill strong {
-      color: var(--text);
-    }
-
-    .city-chips {
-      margin-top: 18px;
+      margin-bottom: 18px;
     }
 
     .btn {
@@ -282,12 +370,12 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 13px 18px;
-      border-radius: 14px;
+      min-height: 52px;
+      padding: 0 18px;
       border: 1px solid transparent;
-      font-weight: 800;
-      transition: transform 0.2s ease;
-      cursor: pointer;
+      border-radius: 16px;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
 
     .btn:hover {
@@ -295,228 +383,571 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--red), #ff6270);
       color: #fff;
-    }
-
-    .btn-gold {
-      background: linear-gradient(135deg, var(--gold), #ffab2e);
-      color: #111;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      box-shadow: 0 16px 36px rgba(81, 98, 85, 0.18);
     }
 
     .btn-secondary {
-      background: transparent;
-      border-color: var(--line);
       color: var(--text);
+      border-color: var(--border);
+      background: rgba(255, 255, 255, 0.82);
     }
 
-    .search-shell h2 {
-      font-size: clamp(1.55rem, 3vw, 2.2rem);
+    .btn-soft {
+      color: var(--accent-strong);
+      border-color: rgba(81, 98, 85, 0.16);
+      background: rgba(81, 98, 85, 0.08);
     }
 
-    .section-heading,
-    .search-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
+    .btn-small {
+      min-height: 44px;
+      padding: 0 14px;
+      font-size: 0.92rem;
+      border-radius: 13px;
     }
 
-    .section-heading {
-      align-items: start;
-      margin-bottom: 20px;
+    .hero-visual {
+      position: relative;
+      overflow: hidden;
+      min-height: 100%;
+      padding: 22px;
+      background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.78), rgba(250, 248, 242, 0.92)),
+        linear-gradient(135deg, rgba(198, 167, 106, 0.12), transparent);
     }
 
-    .search-header p {
-      margin: 10px 0 0;
-      max-width: 58ch;
+    .hero-art {
+      position: relative;
+      min-height: 420px;
+      overflow: hidden;
+      border-radius: calc(var(--radius-lg) - 6px);
+      background:
+        linear-gradient(180deg, rgba(24, 28, 24, 0.08), rgba(24, 28, 24, 0.38)),
+        url("imagens/banner.jpg") center center / cover no-repeat;
     }
 
-    .search-controls {
+    .hero-art::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 56%;
+      background: linear-gradient(180deg, transparent, rgba(19, 24, 20, 0.72));
+    }
+
+    .hero-art-copy {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      z-index: 2;
+      color: #fff;
+    }
+
+    .hero-art-copy strong {
+      display: block;
+      font-size: 1.45rem;
+      margin-bottom: 10px;
+      max-width: 14ch;
+    }
+
+    .hero-art-copy p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+    }
+
+    .floating-note,
+    .floating-stats {
+      position: absolute;
+      z-index: 3;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.88);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .floating-note {
+      right: 18px;
+      top: 18px;
+      max-width: 220px;
+    }
+
+    .floating-note strong,
+    .floating-stats strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.96rem;
+    }
+
+    .floating-note p,
+    .floating-stats p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.92rem;
+    }
+
+    .floating-stats {
+      left: 18px;
+      bottom: 18px;
+      max-width: 220px;
+    }
+
+    .visual-points {
+      margin-top: 18px;
+    }
+
+    .visual-points .pill {
+      background: rgba(255, 255, 255, 0.84);
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .metric-card {
+      padding: 26px;
+    }
+
+    .metric-card strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: clamp(2rem, 3.4vw, 2.8rem);
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--accent-strong);
+    }
+
+    .metric-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .metric-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .directory-shell {
+      display: grid;
+      gap: 22px;
+    }
+
+    .directory-toolbar {
+      display: grid;
+      gap: 18px;
+    }
+
+    .directory-form {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto auto;
-      align-items: end;
       gap: 12px;
-      margin-bottom: 16px;
+      align-items: center;
     }
 
-    .search-field {
-      display: grid;
-      gap: 8px;
+    .directory-form label {
+      display: none;
     }
 
-    .search-label {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    .search-controls input {
-      width: 100%;
-      padding: 15px 16px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--text);
-      font-size: 1rem;
-    }
-
-    .search-controls input::placeholder {
-      color: #bcb4ab;
-    }
-
-    .results-line {
+    .toolbar-topline {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      justify-content: space-between;
       align-items: center;
+      gap: 12px;
+    }
+
+    .toolbar-topline p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .directory-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .map-panel,
+    .results-panel {
+      padding: 22px;
+    }
+
+    .panel-topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 16px;
+      flex-wrap: wrap;
       margin-bottom: 16px;
-      font-size: 0.94rem;
+    }
+
+    .panel-topline p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 56ch;
     }
 
     .map-frame {
-      border-radius: 18px;
       overflow: hidden;
-      border: 1px solid var(--line);
-      background: rgba(0, 0, 0, 0.18);
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.88);
     }
 
     #map {
-      height: 620px;
+      height: 720px;
+      background: #e8ebe4;
     }
 
-    .noscript-note {
-      margin-top: 16px;
-      padding: 16px 18px;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.04);
+    .results-panel {
+      min-height: 720px;
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      gap: 12px;
     }
 
-    .noscript-note p {
+    .results-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .results-meta p {
       margin: 0;
-      color: var(--text);
+      color: var(--muted);
+      line-height: 1.7;
     }
 
-    .signals,
-    .content-grid {
+    .results-list {
+      display: grid;
+      gap: 14px;
+      max-height: 560px;
+      padding-right: 4px;
+      overflow: auto;
+    }
+
+    .results-list::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .results-list::-webkit-scrollbar-thumb {
+      border-radius: 999px;
+      background: rgba(81, 98, 85, 0.18);
+    }
+
+    .result-card {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      gap: 16px;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(249, 249, 245, 0.94));
+      box-shadow: var(--shadow-soft);
+    }
+
+    .result-visual {
+      display: grid;
+      align-content: space-between;
+      min-height: 122px;
+      padding: 16px 12px;
+      border-radius: 18px;
+      background: var(--card-bg, #e8ebe4);
+      color: var(--card-fg, var(--accent));
+    }
+
+    .result-visual strong {
+      font-size: 1.8rem;
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    .result-visual span {
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .result-copy {
+      display: grid;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .result-copy h3 {
+      font-size: 1.12rem;
+    }
+
+    .result-copy p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .result-topline,
+    .result-meta,
+    .tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .result-meta span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .tag-small {
+      min-height: 32px;
+      padding: 6px 10px;
+      font-size: 0.78rem;
+      border-radius: 999px;
+    }
+
+    .empty-state {
+      display: grid;
+      place-items: center;
+      min-height: 220px;
+      text-align: center;
+      padding: 28px;
+      border-radius: 22px;
+      border: 1px dashed rgba(81, 98, 85, 0.18);
+      background: rgba(241, 241, 235, 0.56);
+    }
+
+    .empty-state h3 {
+      margin-bottom: 10px;
+    }
+
+    .empty-state p {
+      margin: 0;
+      max-width: 34ch;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .featured-grid,
+    .cities-grid {
       display: grid;
       gap: 18px;
     }
 
-    .signals {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      padding: 12px 0 10px;
-    }
-
-    .stat-card strong {
-      display: block;
-      font-size: 1.05rem;
-      color: var(--text);
-      line-height: 1.35;
-    }
-
-    .stat-card p,
-    .section-card p {
-      margin: 12px 0 0;
-    }
-
-    .stat-card p {
-      font-size: 0.96rem;
-      line-height: 1.65;
-    }
-
-    .page-section {
-      padding: 22px 0 8px;
-    }
-
-    .section-heading p {
-      margin: 8px 0 0;
-      max-width: 58ch;
-    }
-
-    .content-grid {
+    .featured-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .barber-grid {
-      grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+    .feature-card {
+      overflow: hidden;
     }
 
-    .store-inline {
+    .feature-visual {
+      min-height: 180px;
+      padding: 22px;
       display: flex;
-      align-items: start;
-      justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
+      align-items: end;
+      background: var(--feature-bg, #e8ebe4);
+      color: var(--feature-fg, var(--accent));
     }
 
-    .store-inline p {
+    .feature-visual strong {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 2.2rem;
+    }
+
+    .feature-copy {
+      display: grid;
+      gap: 12px;
+      padding: 24px;
+    }
+
+    .feature-copy p {
       margin: 0;
-      max-width: 64ch;
+      color: var(--muted);
+      line-height: 1.7;
     }
 
-    .section-card h3 {
-      font-size: 1.28rem;
+    .cities-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
-    .store-card {
-      background: rgba(255, 255, 255, 0.03);
-    }
-
-    footer {
-      padding: 36px 0 56px;
-    }
-
-    .footer-shell {
-      border-top: 1px solid var(--line);
-      padding-top: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: start;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .footer-brand {
-      display: flex;
-      align-items: center;
+    .city-card {
+      padding: 22px;
+      display: grid;
       gap: 12px;
     }
 
+    .city-card strong {
+      font-size: 2rem;
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--accent-strong);
+    }
+
+    .city-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .owner-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.86fr);
+      gap: 22px;
+      padding: 30px;
+      background:
+        radial-gradient(circle at top right, rgba(198, 167, 106, 0.12), transparent 28%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(246, 247, 242, 0.95));
+    }
+
+    .owner-copy {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .owner-points {
+      display: grid;
+      gap: 12px;
+    }
+
+    .owner-point {
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .owner-point strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .owner-point p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .store-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding: 24px 28px;
+      background:
+        linear-gradient(135deg, rgba(198, 167, 106, 0.13), rgba(255, 255, 255, 0.9)),
+        rgba(255, 255, 255, 0.84);
+    }
+
+    .store-strip p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 58ch;
+    }
+
+    footer {
+      padding: 30px 0 48px;
+    }
+
+    .footer-shell {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 24px 28px;
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .footer-intro {
+      display: grid;
+      gap: 14px;
+      max-width: 48ch;
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+    }
+
     .footer-brand img {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       object-fit: contain;
-      background: rgba(255, 255, 255, 0.02);
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .footer-links {
+      align-items: center;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    .leaflet-container {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+    }
+
+    .leaflet-control-attribution {
+      background: rgba(255, 255, 255, 0.88) !important;
+      color: var(--muted) !important;
+    }
+
+    .custom-marker-shell {
+      background: transparent;
+      border: 0;
+    }
+
+    .custom-marker {
+      width: 18px;
+      height: 18px;
+      display: block;
+      border-radius: 999px;
+      background: var(--marker-color, var(--accent));
+      border: 4px solid rgba(255, 255, 255, 0.94);
+      box-shadow: 0 12px 18px rgba(44, 55, 44, 0.18);
     }
 
     .popup-card {
-      min-width: 220px;
+      min-width: 240px;
       max-width: 300px;
-      color: #1a1a1a;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
     }
 
     .popup-card strong {
       display: block;
-      margin-bottom: 10px;
-      font-size: 1.05rem;
-      color: #111;
+      margin-bottom: 8px;
+      font-size: 1rem;
     }
 
     .popup-card p {
-      margin: 7px 0;
-      line-height: 1.55;
-      color: #3b3b3b;
+      margin: 0 0 8px;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 0.92rem;
     }
 
     .popup-card b {
-      color: #161616;
-      font-weight: 800;
+      color: var(--accent-strong);
     }
 
     .popup-actions {
@@ -526,39 +957,64 @@
       margin-top: 12px;
     }
 
-    .popup-link {
+    .popup-actions a {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 8px 11px;
+      min-height: 38px;
+      padding: 0 12px;
       border-radius: 999px;
-      background: #111;
-      color: #fff;
-      font-size: 0.84rem;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.84);
+      font-size: 0.82rem;
       font-weight: 700;
-      border: 1px solid #111;
     }
 
-    .popup-note {
-      color: #4f4f4f;
-      font-size: 0.88rem;
-      margin-top: 8px;
+    .popup-actions a.popup-primary {
+      color: #fff;
+      border-color: var(--accent);
+      background: var(--accent);
     }
 
-    @media (max-width: 1080px) {
-      .signals,
-      .content-grid,
-      .barber-grid {
+    .noscript-note {
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(241, 241, 235, 0.78);
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1120px) {
+      .hero-layout,
+      .directory-layout,
+      .owner-shell,
+      .featured-grid,
+      .cities-grid,
+      .metrics-grid {
         grid-template-columns: 1fr;
+      }
+
+      .results-panel {
+        min-height: auto;
+      }
+
+      .results-list {
+        max-height: none;
       }
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 760px) {
+      .site-header {
+        position: static;
+        padding-top: 12px;
+      }
+
       .nav {
+        border-radius: 28px;
         flex-direction: column;
         align-items: stretch;
-        border-radius: 24px;
-        padding: 16px;
       }
 
       .brand {
@@ -567,108 +1023,126 @@
 
       .nav-links {
         width: 100%;
+        justify-content: stretch;
         flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
       }
 
       .nav-links a {
-        display: flex;
-        align-items: center;
+        width: 100%;
         justify-content: center;
-        min-height: 48px;
-        padding: 12px 14px;
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        background: rgba(255, 255, 255, 0.04);
-        text-align: center;
       }
 
-      .nav-store,
-      .nav-links a.nav-store {
-        width: 100%;
-      }
-
-      .search-controls {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-actions,
-      .hero-proof,
-      .mini-actions,
-      .cta-actions {
-        flex-direction: column;
-      }
-
-      .hero-actions .btn,
-      .mini-actions .btn,
-      .cta-actions .btn {
-        width: 100%;
-      }
-
-      .city-chips {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .city-chip {
-        justify-content: center;
-        width: 100%;
-      }
-
-      .intro-card,
-      .search-shell,
-      .stat-card,
-      .section-card {
+      .hero-copy,
+      .map-panel,
+      .results-panel,
+      .feature-copy,
+      .owner-shell,
+      .store-strip,
+      .footer-shell {
         padding: 22px;
       }
 
+      .hero-search,
+      .directory-form {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions .btn,
+      .directory-actions .btn,
+      .result-actions .btn,
+      .feature-actions .btn,
+      .owner-actions .btn {
+        width: 100%;
+      }
+
+      .quick-cities,
+      .directory-actions,
+      .footer-links {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .city-chip {
+        width: 100%;
+      }
+
+      .hero-art {
+        min-height: 360px;
+      }
+
+      .floating-note,
+      .floating-stats {
+        position: static;
+        margin-top: 16px;
+        max-width: none;
+      }
+
       #map {
-        height: 360px;
+        height: 420px;
+      }
+
+      .result-card {
+        grid-template-columns: 1fr;
+      }
+
+      .result-visual {
+        min-height: 92px;
+      }
+
+      .result-actions {
+        flex-direction: column;
       }
     }
   </style>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://ondecortar.pt/#website",
-        "url": "https://ondecortar.pt/",
-        "name": "OndeCortar.pt",
-        "description": "Descobre barbearias em Portugal por cidade, nome ou morada.",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://ondecortar.pt/#pesquisa",
-          "query-input": "required name=search_term_string"
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://ondecortar.pt/#website",
+          "url": "https://ondecortar.pt/",
+          "name": "OndeCortar.pt",
+          "description": "Plataforma para descobrir barbearias em Portugal com mapa interativo, fichas cuidadas e contactos diretos.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ondecortar.pt/#explorar",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://ondecortar.pt/#organization",
+          "name": "OndeCortar.pt",
+          "url": "https://ondecortar.pt/",
+          "logo": "https://ondecortar.pt/imagens/logo-ondecortar-round.png",
+          "email": "contacto@ondecortar.pt"
         }
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://ondecortar.pt/#organization",
-        "name": "OndeCortar.pt",
-        "url": "https://ondecortar.pt/",
-        "email": "contacto@ondecortar.pt"
-      }
-    ]
-  }
+      ]
+    }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Saltar para o conteúdo principal</a>
+
   <header class="site-header">
     <div class="container">
       <nav class="nav" aria-label="Navegação principal">
         <a class="brand" href="index.html">
           <img class="brand-logo" src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
-          <span>OndeCortar.pt</span>
+          <span class="brand-text">
+            <strong>OndeCortar.pt</strong>
+            <span>Descoberta de barbearias em Portugal</span>
+          </span>
         </a>
+
         <div class="nav-links">
-          <a href="#pesquisa">Mapa</a>
+          <a class="nav-link-active" href="#explorar">Explorar</a>
+          <a href="#cidades">Cidades</a>
           <a href="registar.html">Adicionar barbearia</a>
+          <a href="loja.html">Loja</a>
           <a href="faq.html">FAQ</a>
-          <a class="nav-store" href="loja.html">Ver loja</a>
+          <a class="nav-cta" href="#explorar">Ver mapa</a>
         </div>
       </nav>
     </div>
@@ -676,154 +1150,210 @@
 
   <main id="main-content">
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="intro-card">
-          <span class="eyebrow">Diretório de barbearias em Portugal</span>
-          <h1>Encontra a tua próxima barbearia em Portugal</h1>
-          <p>Pesquisa por cidade, nome ou morada e abre contactos diretos em segundos.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#pesquisa">Explorar mapa</a>
-            <a class="btn btn-secondary" href="registar.html">Adicionar barbearia</a>
-          </div>
-          <div class="hero-proof" aria-label="Sinais de confiança">
-            <span class="pill"><strong data-barbearias-total>63</strong> barbearias já listadas</span>
-            <span class="pill">Contactos diretos quando disponíveis</span>
-          </div>
-          <div class="city-chips" aria-label="Pesquisas rápidas por cidade">
-            <button class="city-chip" type="button" data-search="Lisboa">Lisboa</button>
-            <button class="city-chip" type="button" data-search="Porto">Porto</button>
-            <button class="city-chip" type="button" data-search="Braga">Braga</button>
-            <button class="city-chip" type="button" data-search="Guimarães">Guimarães</button>
-            <button class="city-chip" type="button" data-search="Faro">Faro</button>
-            <button class="city-chip" type="button" data-search="Lousada">Lousada</button>
-          </div>
-        </div>
-      </div>
-    </section>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <span class="eyebrow">Mapa curado de barbearias em Portugal</span>
+          <h1>Encontra a barbearia certa em Portugal</h1>
+          <p>Explora espaços, compara informação útil e encontra o teu próximo corte com mais estilo e menos perda de tempo.</p>
 
-    <section class="container signals">
-      <article class="stat-card">
-        <strong><span data-barbearias-total>63</span> barbearias já listadas</strong>
-        <p>O diretório já reúne espaços em várias cidades e continua a crescer.</p>
-      </article>
-      <article class="stat-card">
-        <strong>Pesquisa rápida</strong>
-        <p>Procura por cidade, nome da barbearia ou morada e encontra resultados em segundos.</p>
-      </article>
-      <article class="stat-card">
-        <strong>Entrada gratuita</strong>
-        <p>As barbearias podem entrar no mapa gratuitamente e manter a ficha atualizada.</p>
-      </article>
-    </section>
-
-    <section class="page-section" id="pesquisa">
-      <div class="container">
-        <div class="search-shell">
-          <div class="section-heading">
-            <div>
-              <h2 id="mapTitle">Mapa de barbearias em Portugal</h2>
-              <p>Explora o mapa, pesquisa rapidamente e abre contactos diretos quando estiverem disponíveis.</p>
-            </div>
-            <span class="pill" id="searchCount" aria-live="polite">A mostrar 63 barbearias</span>
-          </div>
-
-          <form class="search-controls" role="search" aria-labelledby="mapTitle" onsubmit="buscarBarbearia(event)">
-            <div class="search-field">
-              <label class="search-label" for="searchInput">Pesquisar por cidade, nome ou morada</label>
-              <input type="text" id="searchInput" placeholder="Ex.: Lisboa, Porto, Braga, Lousada..." />
-            </div>
-            <button class="btn btn-primary" type="submit" aria-label="Pesquisar barbearia">Pesquisar</button>
-            <button class="btn btn-secondary" type="button" onclick="limparPesquisa()" aria-label="Limpar pesquisa">Limpar</button>
+          <form class="hero-search" id="heroSearchForm" role="search" aria-label="Pesquisar barbearias a partir do hero">
+            <input id="heroSearchInput" type="text" placeholder="Procura por cidade, zona ou nome da barbearia" />
+            <button class="btn btn-primary" type="submit">Explorar barbearias</button>
           </form>
 
-          <div class="results-line">
-            <span id="resultsMessage" role="status" aria-live="polite">Pesquisa livre por nome ou localidade.</span>
-            <span class="pill">Contactos diretos quando disponíveis</span>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#explorar">Explorar barbearias</a>
+            <a class="btn btn-secondary" href="registar.html">Adicionar barbearia</a>
           </div>
 
-          <div class="map-frame">
-            <div id="map"></div>
-          </div>
-          <noscript>
-            <div class="noscript-note">
-              <p>O mapa precisa de JavaScript para funcionar corretamente. Ainda assim, o OndeCortar.pt reúne barbearias em várias cidades de Portugal e podes adicionar a tua em <a href="registar.html">Adicionar barbearia</a>.</p>
+          <div class="quick-cities" id="heroCities" aria-label="Pesquisas rápidas por cidade"></div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-art" role="img" aria-label="Ambiente editorial da plataforma OndeCortar.pt">
+            <div class="hero-art-copy">
+              <strong>O mapa continua a ser o centro da experiência.</strong>
+              <p>Agora com uma leitura mais limpa, mais editorial e mais próxima de uma plataforma premium de descoberta.</p>
             </div>
-          </noscript>
+          </div>
+
+          <div class="floating-note">
+            <strong>Curadoria mais clara</strong>
+            <p>Fichas com melhor hierarquia visual, contactos rápidos e acesso imediato à informação essencial.</p>
+          </div>
+
+          <div class="floating-stats">
+            <strong><span data-barbearias-total>63</span>+ espaços no radar</strong>
+            <p>Portugal no mapa com foco em descoberta, contacto direto e crescimento editorial.</p>
+          </div>
+
+          <div class="visual-points">
+            <span class="pill">Mapa interativo</span>
+            <span class="pill">Fichas mais completas</span>
+            <span class="pill">Pesquisa imediata</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="page-section">
-      <div class="container">
-        <div class="section-heading">
+    <section class="section">
+      <div class="container metrics-grid">
+        <article class="metric-card">
+          <strong><span data-barbearias-total>63</span>+</strong>
+          <h3>Barbearias listadas</h3>
+          <p>Uma base já sólida para descobrir espaços em várias zonas do país sem cair num diretório genérico.</p>
+        </article>
+        <article class="metric-card">
+          <strong><span data-cidades-total>0</span>+</strong>
+          <h3>Cidades representadas</h3>
+          <p>Da descoberta urbana às pesquisas mais locais, o mapa já cobre uma geografia relevante de Portugal.</p>
+        </article>
+        <article class="metric-card">
+          <strong><span data-contactos-total>0</span>+</strong>
+          <h3>Contactos diretos disponíveis</h3>
+          <p>Telefone, website, Instagram, email ou Facebook quando a ficha partilha essa informação.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="explorar">
+      <div class="container directory-shell">
+        <div class="section-header">
           <div>
-            <h2>Como funciona</h2>
-            <p>O foco é tornar a procura simples, rápida e útil para quem quer encontrar uma barbearia em Portugal.</p>
+            <span class="eyebrow">Descoberta com mapa e lista</span>
+            <h2>Explora por cidade, zona ou nome</h2>
           </div>
+          <span class="pill" id="searchCount" aria-live="polite">A mostrar 63 espaços</span>
         </div>
 
-        <div class="content-grid">
-          <article class="section-card">
-            <h3>Pesquisa rápida</h3>
-            <p>Encontra barbearias por cidade, nome ou morada sem perder tempo em resultados pouco úteis.</p>
-          </article>
+        <div class="directory-toolbar">
+          <div class="toolbar-topline">
+            <p id="resultsMessage" role="status" aria-live="polite">Explora o mapa, usa a pesquisa e abre fichas mais completas sempre que quiseres aprofundar.</p>
+            <div class="directory-actions" id="directoryCities" aria-label="Filtro rápido por cidades"></div>
+          </div>
 
-          <article class="section-card">
-            <h3>Contactos diretos</h3>
-            <p>Telefone, Instagram, site, email, horários e notas aparecem logo quando a ficha tem essa informação.</p>
-          </article>
+          <form class="directory-form" id="directorySearchForm" role="search" aria-label="Pesquisar no diretório">
+            <label for="searchInput">Procura por cidade, zona ou nome da barbearia</label>
+            <input id="searchInput" type="text" placeholder="Procura por cidade, zona ou nome da barbearia" />
+            <button class="btn btn-primary" type="submit">Pesquisar</button>
+            <button class="btn btn-secondary" id="clearSearchButton" type="button">Limpar</button>
+          </form>
+        </div>
 
-          <article class="section-card">
-            <h3>Diretório em crescimento</h3>
-            <p>Estamos a expandir o diretório para tornar a pesquisa mais útil em todo o país.</p>
-          </article>
+        <div class="directory-layout">
+          <section class="map-panel" aria-labelledby="mapTitle">
+            <div class="panel-topline">
+              <div>
+                <h3 id="mapTitle">Mapa OndeCortar</h3>
+                <p>O mapa é a assinatura visual do projeto e continua no centro da experiência, agora integrado com uma lista mais elegante e útil.</p>
+              </div>
+              <span class="pill">Portugal inteiro num só ponto de partida</span>
+            </div>
+
+            <div class="map-frame">
+              <div id="map"></div>
+            </div>
+
+            <noscript>
+              <div class="noscript-note">
+                O mapa precisa de JavaScript para funcionar. Ainda assim, podes adicionar a tua barbearia em <a href="registar.html">Adicionar barbearia</a>.
+              </div>
+            </noscript>
+          </section>
+
+          <aside class="results-panel" aria-labelledby="resultsTitle">
+            <div class="panel-topline">
+              <div>
+                <h3 id="resultsTitle">Barbearias encontradas</h3>
+                <p>Cartões com mais contexto, melhor leitura e acesso rápido à ficha individual ou ao contacto disponível.</p>
+              </div>
+              <span class="pill" id="resultsVisiblePill">Lista editorial</span>
+            </div>
+
+            <div class="results-meta">
+              <p>As fichas mais completas aparecem primeiro para reforçar a sensação de curadoria e utilidade imediata.</p>
+              <span class="pill">Ver ficha + contactar</span>
+            </div>
+
+            <div class="empty-state" id="emptyState" hidden>
+              <div>
+                <h3>Ainda não encontrámos resultados para essa pesquisa.</h3>
+                <p>Experimenta outra cidade ou explora o mapa para descobrir novas opções.</p>
+              </div>
+            </div>
+
+            <div class="results-list" id="resultsList" aria-live="polite"></div>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section class="page-section">
+    <section class="section" id="destaques">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-header">
           <div>
-            <h2>Tens uma barbearia?</h2>
-            <p>Podes entrar gratuitamente no diretório ou pedir correções se a tua ficha já existir.</p>
+            <span class="eyebrow">Curadoria editorial</span>
+            <h2>Barbearias em destaque</h2>
+            <p>Uma seleção automática que valoriza fichas mais completas, com presença online e melhor leitura para quem está a comparar opções.</p>
           </div>
         </div>
 
-        <div class="content-grid barber-grid">
-          <article class="section-card">
-            <h3>Adicionar ou corrigir ficha</h3>
-            <p>Envia nome, morada, telefone, horário e links úteis para apareceres com informação mais completa e mais fácil de encontrar.</p>
-            <div class="mini-actions" style="margin-top: 18px;">
-              <a class="btn btn-gold" href="registar.html">Adicionar barbearia</a>
-              <a class="btn btn-secondary" href="faq.html">Ver FAQ</a>
-            </div>
-          </article>
+        <div class="featured-grid" id="featuredGrid"></div>
+      </div>
+    </section>
 
-          <article class="section-card">
-            <h3>Entrada gratuita</h3>
-            <p>Queremos aumentar a cobertura do mapa e manter o diretório atualizado com mais espaços úteis para quem pesquisa.</p>
-            <div class="mini-actions" style="margin-top: 18px;">
-              <a class="btn btn-secondary" href="registar.html">Atualizar informação</a>
-            </div>
+    <section class="section" id="cidades">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Explorar por cidade</span>
+            <h2>Começa por uma zona</h2>
+            <p>As cidades mais representadas ajudam a entrar depressa no mapa e abrem espaço para futuras páginas locais mais fortes para SEO.</p>
+          </div>
+        </div>
+
+        <div class="cities-grid" id="citiesGrid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container owner-shell">
+        <div class="owner-copy">
+          <span class="eyebrow">Para donos de barbearias</span>
+          <h2>Tens uma barbearia?</h2>
+          <p>Ganha visibilidade no mapa, melhora a apresentação do teu espaço e facilita o contacto com novos clientes.</p>
+          <div class="owner-actions">
+            <a class="btn btn-primary" href="registar.html">Adicionar ou atualizar ficha</a>
+            <a class="btn btn-secondary" href="faq.html">Ver FAQ</a>
+          </div>
+        </div>
+
+        <div class="owner-points">
+          <article class="owner-point">
+            <strong>Mais presença visual</strong>
+            <p>Uma ficha cuidada transmite mais confiança do que um simples bloco de texto perdido num diretório.</p>
+          </article>
+          <article class="owner-point">
+            <strong>Contacto mais simples</strong>
+            <p>Telefone, links e morada aparecem de forma mais clara para reduzir fricção entre descoberta e contacto.</p>
+          </article>
+          <article class="owner-point">
+            <strong>Base preparada para crescer</strong>
+            <p>O projeto passa a suportar fichas individuais e uma arquitetura mais forte para expansão por cidades e zonas.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="page-section">
+    <section class="section">
       <div class="container">
-        <div class="section-card store-card">
-          <div class="store-inline">
-            <div>
-              <span class="pill">Loja</span>
-              <h2>Loja de produtos de barbearia</h2>
-              <p>Se procuras máquinas, navalhas e acessórios, tens uma área própria com categorias organizadas.</p>
-            </div>
-            <div class="cta-actions">
-              <a class="btn btn-secondary" href="loja.html">Ir para a loja</a>
-            </div>
+        <div class="store-strip">
+          <div>
+            <span class="eyebrow">Loja</span>
+            <h3>Uma área própria para produtos de barbearia</h3>
+            <p>A loja continua presente, mas sem competir com a função principal da homepage: descobrir boas barbearias em Portugal.</p>
           </div>
+          <a class="btn btn-secondary" href="loja.html">Ir para a loja</a>
         </div>
       </div>
     </section>
@@ -831,14 +1361,17 @@
 
   <footer>
     <div class="container footer-shell">
-      <div>
+      <div class="footer-intro">
         <div class="footer-brand">
           <img src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
           <strong>OndeCortar.pt</strong>
         </div>
-        <p>Diretório para encontrar barbearias em Portugal com pesquisa rápida e contactos diretos.</p>
+        <p>Plataforma de descoberta de barbearias em Portugal, com mapa interativo, fichas mais completas e uma linguagem visual mais leve, clara e credível.</p>
       </div>
+
       <div class="footer-links">
+        <a href="#explorar">Explorar</a>
+        <a href="#cidades">Cidades</a>
         <a href="registar.html">Adicionar barbearia</a>
         <a href="loja.html">Loja</a>
         <a href="faq.html">FAQ</a>
@@ -848,166 +1381,335 @@
   </footer>
 
   <script>
-    const map = L.map("map").setView([39.5, -8.0], 6);
+    (function() {
+      const directory = window.OndeCortarData;
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "&copy; OpenStreetMap contributors"
-    }).addTo(map);
-
-    const searchInput = document.getElementById("searchInput");
-    const searchCount = document.getElementById("searchCount");
-    const resultsMessage = document.getElementById("resultsMessage");
-    const barbeariasCountTargets = document.querySelectorAll("[data-barbearias-total]");
-    const quickSearchButtons = document.querySelectorAll("[data-search]");
-
-    let markers = [];
-
-    function normalizar(texto) {
-      return String(texto || "")
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase();
-    }
-
-    function formatarTelefone(telefone) {
-      return String(telefone || "").replace(/[^\d+]/g, "");
-    }
-
-    function criarLink(url, label) {
-      return '<a class="popup-link" href="' + url + '" target="_blank" rel="noopener nofollow">' + label + "</a>";
-    }
-
-    function criarAcoes(barbearia) {
-      const links = [];
-
-      if (barbearia.telefone) {
-        links.push('<a class="popup-link" href="tel:' + formatarTelefone(barbearia.telefone) + '">Ligar</a>');
-      }
-      if (barbearia.email) {
-        links.push('<a class="popup-link" href="mailto:' + barbearia.email + '">Email</a>');
-      }
-      if (barbearia.website) {
-        links.push(criarLink(barbearia.website, "Site"));
-      }
-      if (barbearia.instagram) {
-        links.push(criarLink(barbearia.instagram, "Instagram"));
-      }
-      if (barbearia.facebook) {
-        links.push(criarLink(barbearia.facebook, "Facebook"));
-      }
-      if (barbearia.google) {
-        links.push(criarLink(barbearia.google, "Mapa"));
-      }
-
-      if (!links.length) {
-        return '<p class="popup-note">Sem link direto disponível nesta ficha.</p>';
-      }
-
-      return '<div class="popup-actions">' + links.join("") + "</div>";
-    }
-
-    function atualizarResumo(lista, termo) {
-      const total = Array.isArray(barbearias) ? barbearias.length : 0;
-      barbeariasCountTargets.forEach(function(target) {
-        target.textContent = total;
-      });
-      searchCount.textContent = "A mostrar " + lista.length + " barbearias";
-
-      if (!termo) {
-        resultsMessage.textContent = "Pesquisa livre por nome ou localidade.";
+      if (!directory) {
+        console.error("OndeCortarData não está disponível.");
         return;
       }
 
-      if (!lista.length) {
-        resultsMessage.textContent = 'Sem resultados para "' + termo + '".';
-        return;
+      const stats = directory.getStats();
+      const popularCities = directory.getPopularCities(8);
+      const allBarbers = sortBarbers(directory.getBarbers());
+      const state = {
+        currentTerm: "",
+        results: allBarbers,
+        markers: [],
+        markersBySlug: new Map()
+      };
+
+      const heroSearchForm = document.getElementById("heroSearchForm");
+      const heroSearchInput = document.getElementById("heroSearchInput");
+      const directorySearchForm = document.getElementById("directorySearchForm");
+      const searchInput = document.getElementById("searchInput");
+      const clearSearchButton = document.getElementById("clearSearchButton");
+      const resultsMessage = document.getElementById("resultsMessage");
+      const searchCount = document.getElementById("searchCount");
+      const resultsVisiblePill = document.getElementById("resultsVisiblePill");
+      const resultsList = document.getElementById("resultsList");
+      const emptyState = document.getElementById("emptyState");
+      const featuredGrid = document.getElementById("featuredGrid");
+      const citiesGrid = document.getElementById("citiesGrid");
+      const heroCities = document.getElementById("heroCities");
+      const directoryCities = document.getElementById("directoryCities");
+      const totalTargets = document.querySelectorAll("[data-barbearias-total]");
+      const cityTargets = document.querySelectorAll("[data-cidades-total]");
+      const contactTargets = document.querySelectorAll("[data-contactos-total]");
+
+      totalTargets.forEach(function(target) {
+        target.textContent = stats.total;
+      });
+      cityTargets.forEach(function(target) {
+        target.textContent = stats.cities;
+      });
+      contactTargets.forEach(function(target) {
+        target.textContent = stats.contacts;
+      });
+
+      renderCityChips(heroCities, popularCities.slice(0, 6));
+      renderCityChips(directoryCities, popularCities);
+      renderFeatured();
+      renderCities();
+
+      const map = L.map("map", {
+        scrollWheelZoom: false
+      }).setView([39.55, -8.05], 6);
+
+      L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+        attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
+      }).addTo(map);
+
+      updateDirectory("");
+
+      heroSearchForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const value = heroSearchInput.value.trim();
+        syncSearchInputs(value);
+        focusDirectory();
+        updateDirectory(value);
+      });
+
+      directorySearchForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        updateDirectory(searchInput.value.trim());
+      });
+
+      clearSearchButton.addEventListener("click", function() {
+        syncSearchInputs("");
+        updateDirectory("");
+      });
+
+      document.addEventListener("click", function(event) {
+        const cityButton = event.target.closest("[data-city-search]");
+        const mapButton = event.target.closest("[data-focus-marker]");
+
+        if (cityButton) {
+          const city = cityButton.getAttribute("data-city-search") || "";
+          syncSearchInputs(city);
+          focusDirectory();
+          updateDirectory(city);
+        }
+
+        if (mapButton) {
+          const slug = mapButton.getAttribute("data-focus-marker");
+          focusMarker(slug);
+        }
+      });
+
+      function sortBarbers(list) {
+        return list.slice().sort(function(a, b) {
+          return b.score - a.score || a.city.localeCompare(b.city, "pt") || a.name.localeCompare(b.name, "pt");
+        });
       }
 
-      resultsMessage.textContent = lista.length + ' resultado(s) para "' + termo + '".';
-    }
+      function syncSearchInputs(value) {
+        heroSearchInput.value = value;
+        searchInput.value = value;
+      }
 
-    function adicionarMarcadores(lista, termo) {
-      markers.forEach(function(marker) {
-        map.removeLayer(marker);
-      });
-      markers = [];
+      function focusDirectory() {
+        const section = document.getElementById("explorar");
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
 
-      lista.forEach(function(barbearia) {
-        const nome = barbearia.name || barbearia.nome || "Barbearia";
-        const popupContent =
+      function renderCityChips(container, list) {
+        container.innerHTML = list.map(function(item) {
+          return '<button class="city-chip" type="button" data-city-search="' + directory.escapeHtml(item.city) + '">' +
+            directory.escapeHtml(item.city) +
+            ' <span aria-hidden="true">(' + item.count + ')</span>' +
+          "</button>";
+        }).join("");
+      }
+
+      function renderFeatured() {
+        const featuredBarbers = directory.getFeaturedBarbers(3);
+
+        featuredGrid.innerHTML = featuredBarbers.map(function(barber) {
+          const tags = barber.tags.map(function(tag) {
+            return '<span class="tag tag-small">' + directory.escapeHtml(tag) + "</span>";
+          }).join("");
+
+          return (
+            '<article class="feature-card">' +
+              '<div class="feature-visual" style="--feature-bg:' + barber.accent.background + ';--feature-fg:' + barber.accent.foreground + ';">' +
+                "<strong>" + directory.escapeHtml(barber.initials) + "</strong>" +
+              "</div>" +
+              '<div class="feature-copy">' +
+                '<div class="result-topline">' +
+                  '<span class="tag tag-small">' + directory.escapeHtml(barber.city) + "</span>" +
+                  '<span class="tag tag-small">' + directory.escapeHtml(barber.tone) + "</span>" +
+                "</div>" +
+                "<h3>" + directory.escapeHtml(barber.name) + "</h3>" +
+                "<p>" + directory.escapeHtml(barber.description) + "</p>" +
+                '<div class="tags-row">' + tags + "</div>" +
+                '<div class="feature-actions">' +
+                  '<a class="btn btn-secondary btn-small" href="' + barber.url + '">Ver ficha</a>' +
+                  renderContactAction(barber, "btn btn-primary btn-small") +
+                "</div>" +
+              "</div>" +
+            "</article>"
+          );
+        }).join("");
+      }
+
+      function renderCities() {
+        citiesGrid.innerHTML = popularCities.map(function(item) {
+          return (
+            '<article class="city-card">' +
+              "<strong>" + item.count + "</strong>" +
+              "<h3>" + directory.escapeHtml(item.city) + "</h3>" +
+              "<p>Uma entrada rápida para descobrir fichas já presentes nesta zona.</p>" +
+              '<button class="btn btn-secondary btn-small" type="button" data-city-search="' + directory.escapeHtml(item.city) + '">Explorar ' + directory.escapeHtml(item.city) + "</button>" +
+            "</article>"
+          );
+        }).join("");
+      }
+
+      function updateDirectory(term) {
+        state.currentTerm = term;
+        state.results = sortBarbers(directory.searchBarbers(term));
+        syncSearchInputs(term);
+        renderResults(state.results);
+        updateSummary(state.results, term);
+        renderMarkers(state.results);
+      }
+
+      function updateSummary(list, term) {
+        const cleanTerm = String(term || "").trim();
+        searchCount.textContent = "A mostrar " + list.length + " espaço" + (list.length === 1 ? "" : "s");
+        resultsVisiblePill.textContent = list.length ? "Fichas ordenadas por qualidade visual" : "Sem resultados";
+
+        if (!cleanTerm) {
+          resultsMessage.textContent = "Explora o mapa, usa a pesquisa e abre fichas mais completas sempre que quiseres aprofundar.";
+          return;
+        }
+
+        if (!list.length) {
+          resultsMessage.textContent = "Ainda não encontrámos resultados para essa pesquisa. Experimenta outra cidade ou explora o mapa.";
+          return;
+        }
+
+        resultsMessage.textContent = list.length + " resultado(s) para \"" + cleanTerm + "\".";
+      }
+
+      function renderResults(list) {
+        if (!list.length) {
+          resultsList.innerHTML = "";
+          emptyState.hidden = false;
+          return;
+        }
+
+        emptyState.hidden = true;
+
+        resultsList.innerHTML = list.map(function(barber) {
+          const tags = barber.tags.map(function(tag) {
+            return '<span class="tag tag-small">' + directory.escapeHtml(tag) + "</span>";
+          }).join("");
+
+          return (
+            '<article class="result-card">' +
+              '<div class="result-visual" style="--card-bg:' + barber.accent.background + ';--card-fg:' + barber.accent.foreground + ';">' +
+                "<strong>" + directory.escapeHtml(barber.initials) + "</strong>" +
+                "<span>" + directory.escapeHtml(barber.city) + "</span>" +
+              "</div>" +
+              '<div class="result-copy">' +
+                '<div class="result-topline">' +
+                  '<span class="tag tag-small">' + directory.escapeHtml(barber.city) + "</span>" +
+                  '<span class="tag tag-small">' + directory.escapeHtml(barber.tone) + "</span>" +
+                "</div>" +
+                "<h3>" + directory.escapeHtml(barber.name) + "</h3>" +
+                "<p>" + directory.escapeHtml(barber.description) + "</p>" +
+                '<div class="tags-row">' + tags + "</div>" +
+                '<div class="result-meta">' +
+                  "<span>" + directory.escapeHtml(barber.morada || "Morada em atualização") + "</span>" +
+                  "<span>" + directory.escapeHtml(directory.buildContactLabel(barber)) + "</span>" +
+                "</div>" +
+                '<div class="result-actions">' +
+                  '<a class="btn btn-secondary btn-small" href="' + barber.url + '">Ver ficha</a>' +
+                  renderContactAction(barber, "btn btn-primary btn-small") +
+                  '<button class="btn btn-soft btn-small" type="button" data-focus-marker="' + barber.slug + '">Ver no mapa</button>' +
+                "</div>" +
+              "</div>" +
+            "</article>"
+          );
+        }).join("");
+      }
+
+      function renderContactAction(barber, className) {
+        if (!barber.primaryLink) {
+          return '<span class="' + className + '" aria-disabled="true">Contacto em atualização</span>';
+        }
+
+        const rel = barber.primaryLink.external ? ' rel="noopener nofollow"' : "";
+        const target = barber.primaryLink.external ? ' target="_blank"' : "";
+        return '<a class="' + className + '" href="' + barber.primaryLink.href + '"' + target + rel + '>Contactar</a>';
+      }
+
+      function renderMarkers(list) {
+        state.markers.forEach(function(marker) {
+          map.removeLayer(marker);
+        });
+
+        state.markers = [];
+        state.markersBySlug = new Map();
+
+        list.forEach(function(barber) {
+          if (!Array.isArray(barber.coords)) {
+            return;
+          }
+
+          const marker = L.marker(barber.coords, {
+            icon: L.divIcon({
+              className: "custom-marker-shell",
+              html: '<span class="custom-marker" style="--marker-color:' + barber.accent.foreground + ';"></span>',
+              iconSize: [18, 18],
+              iconAnchor: [9, 9],
+              popupAnchor: [0, -10]
+            })
+          })
+            .addTo(map)
+            .bindPopup(buildPopup(barber));
+
+          state.markers.push(marker);
+          state.markersBySlug.set(barber.slug, marker);
+        });
+
+        if (!state.markers.length || list.length === allBarbers.length) {
+          map.setView([39.55, -8.05], 6);
+          return;
+        }
+
+        if (state.markers.length === 1) {
+          map.setView(state.markers[0].getLatLng(), 13);
+          return;
+        }
+
+        const bounds = L.latLngBounds(
+          state.markers.map(function(marker) {
+            return marker.getLatLng();
+          })
+        );
+
+        map.fitBounds(bounds, { padding: [36, 36] });
+      }
+
+      function buildPopup(barber) {
+        const actions = [
+          '<a class="popup-primary" href="' + barber.url + '">Ver ficha</a>'
+        ];
+
+        if (barber.primaryLink) {
+          const rel = barber.primaryLink.external ? ' rel="noopener nofollow"' : "";
+          const target = barber.primaryLink.external ? ' target="_blank"' : "";
+          actions.push('<a href="' + barber.primaryLink.href + '"' + target + rel + ">Contactar</a>");
+        }
+
+        return (
           '<div class="popup-card">' +
-            "<strong>" + nome + "</strong>" +
-            (barbearia.morada ? "<p><b>Morada:</b> " + barbearia.morada + "</p>" : "") +
-            (barbearia.telefone ? "<p><b>Telefone:</b> " + barbearia.telefone + "</p>" : "") +
-            (barbearia.horario ? "<p><b>Horário:</b> " + barbearia.horario + "</p>" : "") +
-            (barbearia.observacoes ? "<p><b>Info:</b> " + barbearia.observacoes + "</p>" : "") +
-            criarAcoes(barbearia) +
-          "</div>";
-
-        const marker = L.marker(barbearia.coords).addTo(map).bindPopup(popupContent);
-        markers.push(marker);
-      });
-
-      atualizarResumo(lista, termo);
-
-      if (!lista.length || lista.length === barbearias.length) {
-        map.setView([39.5, -8.0], 6);
-        return;
+            "<strong>" + directory.escapeHtml(barber.name) + "</strong>" +
+            "<p><b>Cidade:</b> " + directory.escapeHtml(barber.city) + "</p>" +
+            (barber.morada ? "<p><b>Morada:</b> " + directory.escapeHtml(barber.morada) + "</p>" : "") +
+            (barber.telefone ? "<p><b>Telefone:</b> " + directory.escapeHtml(barber.telefone) + "</p>" : "") +
+            (barber.horario ? "<p><b>Horário:</b> " + directory.escapeHtml(barber.horario) + "</p>" : "") +
+            '<div class="popup-actions">' + actions.join("") + "</div>" +
+          "</div>"
+        );
       }
 
-      const bounds = L.latLngBounds(lista.map(function(item) {
-        return item.coords;
-      }));
-      map.fitBounds(bounds, { padding: [32, 32] });
-    }
+      function focusMarker(slug) {
+        const marker = state.markersBySlug.get(slug);
 
-    function buscarBarbearia(event) {
-      if (event) {
-        event.preventDefault();
+        if (!marker) {
+          return;
+        }
+
+        map.setView(marker.getLatLng(), 13, { animate: true });
+        marker.openPopup();
       }
-
-      const termoOriginal = searchInput.value.trim();
-      const termo = normalizar(termoOriginal);
-
-      if (!termo || termo.length < 2) {
-        adicionarMarcadores(barbearias, "");
-        return;
-      }
-
-      const filtradas = barbearias.filter(function(barbearia) {
-        const nome = normalizar(barbearia.name || barbearia.nome);
-        const morada = normalizar(barbearia.morada);
-        return nome.includes(termo) || morada.includes(termo);
-      });
-
-      adicionarMarcadores(filtradas, termoOriginal);
-    }
-
-    function limparPesquisa() {
-      searchInput.value = "";
-      adicionarMarcadores(barbearias, "");
-    }
-
-    quickSearchButtons.forEach(function(button) {
-      button.addEventListener("click", function() {
-        searchInput.value = button.dataset.search;
-        buscarBarbearia();
-      });
-    });
-
-    searchInput.addEventListener("keydown", function(event) {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        buscarBarbearia();
-      }
-    });
-
-    if (typeof barbearias !== "undefined" && Array.isArray(barbearias)) {
-      adicionarMarcadores(barbearias, "");
-    } else {
-      console.error("Lista de barbearias não encontrada. Verifica se barbeiros.js foi carregado corretamente.");
-      resultsMessage.textContent = "Não foi possível carregar a base de barbearias.";
-    }
+    })();
   </script>
 </body>
 </html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficha de Barbearia | OndeCortar.pt</title>
+  <meta name="description" content="Ficha individual de barbearia no OndeCortar.pt com morada, contactos, mapa e contexto editorial." />
+  <link rel="canonical" href="https://ondecortar.pt/barbearia.html" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta property="og:title" content="Ficha de Barbearia | OndeCortar.pt" />
+  <meta property="og:description" content="Descobre a ficha individual de cada barbearia no OndeCortar.pt." />
+  <meta property="og:url" content="https://ondecortar.pt/barbearia.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ondecortar.pt/imagens/banner.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="Barbeiros/barbeiros.js"></script>
+  <script src="script.js"></script>
+  <style>
+    :root {
+      --bg: #f7f7f4;
+      --surface: #ffffff;
+      --surface-soft: #f1f1eb;
+      --text: #1e1f1c;
+      --muted: #6b6e67;
+      --border: #e3e5de;
+      --accent: #516255;
+      --accent-strong: #39463c;
+      --shadow: 0 24px 60px rgba(44, 55, 44, 0.08);
+      --shadow-soft: 0 16px 36px rgba(44, 55, 44, 0.06);
+      --container: min(1180px, calc(100% - 32px));
+      --radius-lg: 24px;
+      --radius-md: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(198, 167, 106, 0.14), transparent 30%),
+        radial-gradient(circle at top right, rgba(81, 98, 85, 0.12), transparent 26%),
+        linear-gradient(180deg, #fafaf7 0%, var(--bg) 32%, #f3f3ee 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img { display: block; max-width: 100%; }
+    a:focus-visible, button:focus-visible { outline: 3px solid rgba(81, 98, 85, 0.32); outline-offset: 3px; }
+
+    .container { width: var(--container); margin: 0 auto; }
+    .site-header { padding: 18px 0 0; }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 14px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      border-radius: 999px;
+      background: rgba(250, 250, 247, 0.82);
+      box-shadow: 0 18px 40px rgba(44, 55, 44, 0.08);
+    }
+    .brand, .footer-brand { display: inline-flex; align-items: center; gap: 14px; }
+    .brand-logo, .footer-brand img {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: var(--shadow-soft);
+    }
+    .brand-text { display: grid; gap: 3px; }
+    .brand-text strong { font-size: 1rem; }
+    .brand-text span { font-size: 0.82rem; color: var(--muted); }
+    .nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; justify-content: end; }
+    .nav-links a {
+      min-height: 42px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .nav-links a:hover { background: rgba(81, 98, 85, 0.08); color: var(--text); }
+    .nav-cta {
+      color: #fff !important;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      box-shadow: 0 14px 32px rgba(81, 98, 85, 0.22);
+    }
+
+    main { padding: 30px 0 48px; }
+    h1, h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; letter-spacing: -0.02em; margin: 0; }
+    h1 { font-size: clamp(2.6rem, 6vw, 4.8rem); }
+    h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
+    h3 { margin: 0; font-size: 1.18rem; }
+    p { margin: 0; color: var(--muted); line-height: 1.75; }
+
+    .eyebrow, .pill, .tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      color: var(--accent-strong);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .eyebrow {
+      background: rgba(81, 98, 85, 0.1);
+      border-color: rgba(81, 98, 85, 0.14);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 16px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: transform 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      box-shadow: 0 16px 36px rgba(81, 98, 85, 0.18);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.82);
+      border-color: var(--border);
+      color: var(--text);
+    }
+
+    .page-shell, .not-found, .hero-card, .gallery-card, .side-card, .detail-card, .similar-card, .footer-shell {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 22px;
+      background:
+        radial-gradient(circle at top left, rgba(198, 167, 106, 0.14), transparent 28%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 248, 243, 0.94));
+    }
+
+    .hero-copy { display: grid; gap: 16px; }
+    .breadcrumb { display: flex; flex-wrap: wrap; gap: 10px; color: var(--muted); font-size: 0.92rem; }
+    .tags-row, .hero-actions, .mini-list, .similar-actions, .footer-links { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .hero-visual {
+      min-height: 320px;
+      padding: 24px;
+      border-radius: 20px;
+      display: grid;
+      align-content: space-between;
+      background: var(--card-bg, #e8ebe4);
+      color: var(--card-fg, var(--accent));
+    }
+    .hero-visual strong { font-family: "Playfair Display", Georgia, serif; font-size: 3.4rem; }
+    .hero-visual p { color: var(--card-fg, var(--accent)); max-width: 26ch; }
+
+    .section { padding-top: 24px; }
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 22px;
+      align-items: start;
+    }
+    .stack { display: grid; gap: 18px; }
+    .gallery-card, .side-card, .detail-card { padding: 24px; }
+    .gallery-grid, .detail-grid, .similar-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .gallery-tile {
+      min-height: 156px;
+      padding: 18px;
+      border-radius: 18px;
+      background: var(--tile-bg, #e8ebe4);
+      color: var(--tile-fg, var(--accent));
+      display: grid;
+      align-content: space-between;
+    }
+    .gallery-tile strong { font-size: 1.7rem; font-family: "Playfair Display", Georgia, serif; }
+    .detail-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .detail-card ul { margin: 14px 0 0; padding-left: 18px; color: var(--muted); line-height: 1.75; }
+    .contact-list { display: grid; gap: 12px; margin-top: 16px; }
+    .contact-row {
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.82);
+    }
+    .contact-row strong { display: block; margin-bottom: 6px; }
+    #detailMap { height: 260px; border-radius: 20px; overflow: hidden; margin-top: 18px; }
+
+    .similar-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .similar-card { padding: 20px; display: grid; gap: 12px; }
+    .similar-card p { margin: 0; }
+
+    .not-found {
+      padding: 32px;
+      text-align: center;
+      display: grid;
+      gap: 16px;
+    }
+
+    footer { padding: 0 0 48px; }
+    .footer-shell {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding: 24px 28px;
+    }
+    .footer-intro { display: grid; gap: 14px; max-width: 48ch; }
+    .footer-links a { color: var(--muted); font-weight: 600; }
+
+    @media (max-width: 980px) {
+      .hero-card, .content-grid, .detail-grid, .similar-grid, .gallery-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .nav { flex-direction: column; align-items: stretch; border-radius: 28px; }
+      .brand { justify-content: center; }
+      .nav-links { flex-direction: column; }
+      .nav-links a, .btn { width: 100%; }
+      .hero-card, .gallery-card, .side-card, .detail-card, .similar-card, .footer-shell { padding: 22px; }
+      .hero-actions, .mini-list, .similar-actions, .footer-links { flex-direction: column; align-items: stretch; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
+          <span class="brand-text">
+            <strong>OndeCortar.pt</strong>
+            <span>Descoberta de barbearias em Portugal</span>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html#explorar">Explorar</a>
+          <a href="index.html#cidades">Cidades</a>
+          <a href="registar.html">Adicionar barbearia</a>
+          <a href="faq.html">FAQ</a>
+          <a class="nav-cta" href="index.html#explorar">Voltar ao mapa</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" id="pageContent"></div>
+  </main>
+
+  <footer>
+    <div class="container footer-shell">
+      <div class="footer-intro">
+        <div class="footer-brand">
+          <img src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
+          <strong>OndeCortar.pt</strong>
+        </div>
+        <p>Base pronta para suportar fichas individuais mais fortes, com mapa, contexto editorial e ligações internas para crescimento futuro.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#explorar">Explorar</a>
+        <a href="registar.html">Adicionar barbearia</a>
+        <a href="loja.html">Loja</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const directory = window.OndeCortarData;
+      const root = document.getElementById("pageContent");
+
+      if (!directory) {
+        root.innerHTML = '<section class="not-found"><h1>Não foi possível carregar a ficha.</h1><p>Verifica se os dados das barbearias estão disponíveis e tenta novamente.</p><a class="btn btn-primary" href="index.html">Voltar à homepage</a></section>';
+        return;
+      }
+
+      const params = new URLSearchParams(window.location.search);
+      const slug = params.get("slug");
+      const barber = slug ? directory.getBarberBySlug(slug) : null;
+
+      if (!barber) {
+        root.innerHTML = '<section class="not-found"><span class="eyebrow">Ficha não encontrada</span><h1>Esta barbearia ainda não está disponível nesta vista.</h1><p>Podes voltar ao mapa principal para explorar outras fichas ou pesquisar novamente.</p><a class="btn btn-primary" href="index.html#explorar">Voltar ao mapa</a></section>';
+        return;
+      }
+
+      const similar = directory.getSimilarBarbers(barber, 3);
+      const ambiance = barber.tone === "Clássico" ? "Clássico" : barber.tone === "Premium" ? "Moderno" : barber.tone === "Urbano" ? "Urbano" : "Acolhedor";
+      const specialties = barber.observacoes ? [barber.observacoes] : ["Em atualização"];
+      const idealFor = [];
+      if (barber.telefone) idealFor.push("Contacto rápido");
+      if (barber.city) idealFor.push("Descoberta em " + barber.city);
+      if (barber.website || barber.instagram || barber.facebook) idealFor.push("Comparar presença online");
+      if (!idealFor.length) idealFor.push("Explorar novas opções");
+
+      document.title = barber.name + " | OndeCortar.pt";
+      document.querySelector('meta[name=\"description\"]').setAttribute("content", barber.name + " em " + barber.city + ". Morada, contactos, mapa e contexto editorial na ficha individual do OndeCortar.pt.");
+      document.querySelector('meta[property=\"og:title\"]').setAttribute("content", barber.name + " | OndeCortar.pt");
+      document.querySelector('meta[property=\"og:description\"]').setAttribute("content", "Descobre a ficha de " + barber.name + " em " + barber.city + " com mapa e contactos diretos.");
+
+      root.innerHTML =
+        '<section class="hero-card">' +
+          '<div class="hero-copy">' +
+            '<div class="breadcrumb"><a href="index.html">OndeCortar.pt</a><span>/</span><a href="index.html#explorar">Barbearias</a><span>/</span><span>' + directory.escapeHtml(barber.name) + "</span></div>" +
+            '<span class="eyebrow">Ficha individual</span>' +
+            "<h1>" + directory.escapeHtml(barber.name) + "</h1>" +
+            "<p>" + directory.escapeHtml(barber.description) + " A página já está preparada para receber galeria, especialidades, serviços populares e sinais mais fortes de confiança à medida que a ficha for enriquecida.</p>" +
+            '<div class="tags-row">' +
+              '<span class="tag">' + directory.escapeHtml(barber.city) + "</span>" +
+              barber.tags.map(function(tag) { return '<span class="tag">' + directory.escapeHtml(tag) + "</span>"; }).join("") +
+            "</div>" +
+            '<div class="hero-actions">' +
+              renderPrimaryAction(barber) +
+              '<a class="btn btn-secondary" href="index.html#explorar">Voltar ao mapa</a>' +
+            "</div>" +
+          "</div>" +
+          '<div class="hero-visual" style="--card-bg:' + barber.accent.background + ';--card-fg:' + barber.accent.foreground + ';">' +
+            "<strong>" + directory.escapeHtml(barber.initials) + "</strong>" +
+            "<p>" + directory.escapeHtml(barber.city) + ' no mapa OndeCortar, com foco em informação útil, contacto rápido e apresentação mais cuidada.</p>' +
+            '<div class="mini-list">' +
+              '<span class="pill">' + directory.escapeHtml(barber.tone) + "</span>" +
+              '<span class="pill">' + directory.escapeHtml(directory.buildContactLabel(barber)) + "</span>" +
+            "</div>" +
+          "</div>" +
+        "</section>" +
+        '<section class="section content-grid">' +
+          '<div class="stack">' +
+            '<article class="gallery-card">' +
+              "<h2>Galeria e ambiente</h2>" +
+              '<p style="margin-top:12px;">A base visual da ficha já suporta uma galeria mais rica. Enquanto não existirem imagens próprias, a página mantém um tratamento visual consistente e elegante.</p>' +
+              '<div class="gallery-grid" style="margin-top:18px;">' +
+                renderGalleryTile(barber, barber.initials, "Identidade", "Base visual da ficha") +
+                renderGalleryTile(barber, barber.city, "Zona", "Contexto local da barbearia") +
+                renderGalleryTile(barber, barber.tone, "Ambiente", "Leitura editorial atual") +
+              "</div>" +
+            "</article>" +
+            '<div class="detail-grid">' +
+              '<article class="detail-card"><h3>Ambiente</h3><ul><li>' + ambiance + "</li><li>Leitura editorial da ficha atual</li></ul></article>" +
+              '<article class="detail-card"><h3>Especialidades</h3><ul>' + specialties.map(function(item) { return "<li>" + directory.escapeHtml(item) + "</li>"; }).join("") + '<li>Campo preparado para enriquecer a ficha com fades, barba tradicional ou outros serviços</li></ul></article>' +
+              '<article class="detail-card"><h3>Ideal para</h3><ul>' + idealFor.map(function(item) { return "<li>" + directory.escapeHtml(item) + "</li>"; }).join("") + "</ul></article>" +
+            "</div>" +
+            '<article class="gallery-card">' +
+              "<h2>Barbearias semelhantes na mesma zona</h2>" +
+              '<p style="margin-top:12px;">Uma base pronta para interligação interna entre fichas e futuras páginas locais.</p>' +
+              '<div class="similar-grid" style="margin-top:18px;">' + similar.map(renderSimilarCard).join("") + "</div>" +
+            "</article>" +
+          "</div>" +
+          '<aside class="stack">' +
+            '<article class="side-card">' +
+              "<h3>Informação principal</h3>" +
+              '<div class="contact-list">' +
+                renderContactRow("Morada", barber.morada || "Morada em atualização") +
+                renderContactRow("Horário", barber.horario || "Ainda sem horários partilhados") +
+                renderContactRow("Contacto", directory.buildContactLabel(barber)) +
+              "</div>" +
+            "</article>" +
+            '<article class="side-card">' +
+              "<h3>Mapa local</h3>" +
+              '<p style="margin-top:12px;">Peça central da experiência, agora também dentro da ficha individual.</p>' +
+              '<div id="detailMap"></div>' +
+            "</article>" +
+          "</aside>" +
+        "</section>";
+
+      if (Array.isArray(barber.coords)) {
+        const map = L.map("detailMap", { scrollWheelZoom: false }).setView(barber.coords, 14);
+        L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+          attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
+        }).addTo(map);
+        L.marker(barber.coords).addTo(map).bindPopup(directory.escapeHtml(barber.name)).openPopup();
+      }
+
+      function renderPrimaryAction(item) {
+        if (!item.primaryLink) {
+          return '<span class="btn btn-secondary">Contacto em atualização</span>';
+        }
+        const rel = item.primaryLink.external ? ' rel="noopener nofollow"' : "";
+        const target = item.primaryLink.external ? ' target="_blank"' : "";
+        return '<a class="btn btn-primary" href="' + item.primaryLink.href + '"' + target + rel + '>Contactar</a>';
+      }
+
+      function renderGalleryTile(item, label, eyebrow, copy) {
+        return '<div class="gallery-tile" style="--tile-bg:' + item.accent.background + ';--tile-fg:' + item.accent.foreground + ';">' +
+          '<span class="eyebrow">' + directory.escapeHtml(eyebrow) + "</span>" +
+          "<strong>" + directory.escapeHtml(label) + "</strong>" +
+          "<p>" + directory.escapeHtml(copy) + "</p>" +
+        "</div>";
+      }
+
+      function renderContactRow(label, value) {
+        return '<div class="contact-row"><strong>' + directory.escapeHtml(label) + "</strong><span>" + directory.escapeHtml(value) + "</span></div>";
+      }
+
+      function renderSimilarCard(item) {
+        return '<article class="similar-card">' +
+          '<span class="pill">' + directory.escapeHtml(item.city) + "</span>" +
+          "<h3>" + directory.escapeHtml(item.name) + "</h3>" +
+          "<p>" + directory.escapeHtml(item.description) + "</p>" +
+          '<div class="similar-actions"><a class="btn btn-secondary" href="' + item.url + '">Ver ficha</a></div>' +
+        "</article>";
+      }
+    })();
+  </script>
+</body>
+</html>
