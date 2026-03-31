@@ -436,6 +436,13 @@
       max-width: 38ch;
     }
 
+    .hero-map-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
     .hero-map-frame {
       overflow: hidden;
       border-radius: 22px;
@@ -1099,9 +1106,16 @@
           <div class="hero-map-topline">
             <div>
               <strong>Explora no mapa</strong>
-              <p>Vê as barbearias disponíveis e começa pela zona que te interessa.</p>
+              <p>Vê as barbearias disponíveis e entra direto nas fichas com contacto útil.</p>
             </div>
             <span class="pill"><span data-barbearias-total>63</span>+ no mapa</span>
+          </div>
+
+          <div class="hero-map-highlights">
+            <span class="pill"><span data-cidades-total>0</span> cidades com fichas</span>
+            <span class="pill"><span data-contactos-total>0</span> fichas com contacto direto</span>
+            <a class="btn btn-soft btn-small" href="#explorar">Ver fichas com contacto</a>
+            <a class="btn btn-secondary btn-small" href="loja.html">Ver loja de produtos</a>
           </div>
 
           <div class="hero-map-frame">
