@@ -242,16 +242,16 @@
     const strengths = (lead.strengths || []).slice(0, 2);
     return (
       '<div class="callout-card article-commerce">' +
-        '<span class="eyebrow">Escolha principal do artigo</span>' +
+        '<span class="eyebrow">Referência útil</span>' +
         '<h3>' + e(lead.name) + '</h3>' +
         '<div class="article-spotlight">' +
           '<img src="' + href(lead.image) + '" alt="' + e(lead.alt) + '" loading="lazy" />' +
           '<p>' + e(lead.summary) + '</p>' +
           '<p>' + e(lead.useCase) + '</p>' +
           '<ul class="rich-list">' + strengths.map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul>' +
-          '<div class="card-actions"><a class="btn btn-secondary btn-small" href="' + productHref(lead.slug) + '">Ver detalhes</a><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(lead.amazon)) + '" target="_blank" rel="sponsored nofollow noopener">Ver na Amazon.es</a></div>' +
+          '<div class="card-actions"><a class="btn btn-secondary btn-small" href="' + productHref(lead.slug) + '">Saber mais</a><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(lead.amazon)) + '" target="_blank" rel="sponsored nofollow noopener">Ver produto</a></div>' +
         '</div>' +
-        (extra.length ? '<div class="article-mini-list"><strong>Mais opções para comparar</strong><div class="shop-mini-grid">' + extra.map(renderMiniProduct).join("") + '</div></div>' : "") +
+        (extra.length ? '<div class="article-mini-list"><strong>Outras referências ligadas ao tema</strong><div class="shop-mini-grid">' + extra.map(renderMiniProduct).join("") + '</div></div>' : "") +
       '</div>'
     );
   }
@@ -303,8 +303,8 @@
     const list = getArticles(slugs);
     if (!list.length) return "";
     return (
-      '<section class="section"><div class="container">' +
-        '<div class="section-header"><div><span class="eyebrow">Revista OndeCortar</span><h2>' + e(title) + '</h2><p>Artigos ligados ao tema desta página para ajudar a decidir melhor.</p></div></div>' +
+        '<section class="section"><div class="container">' +
+        '<div class="section-header"><div><span class="eyebrow">Revista OndeCortar</span><h2>' + e(title) + '</h2><p>Artigos ligados ao mesmo tema para continuares a explorar.</p></div></div>' +
         '<div class="article-grid">' + list.map(renderArticleCard).join("") + "</div>" +
       "</div></section>"
     );
@@ -448,9 +448,7 @@
             '<div class="hero-side"><div class="panel-note"><strong>Leitura simples e útil</strong><p>Textos diretos, exemplos práticos e informação fácil de perceber sem complicação.</p></div><div class="panel-note"><strong>Temas que fazem parte do dia a dia</strong><p>Cuidados com a barba, máquinas, rotina em casa, estilo e curiosidades do universo da barbearia.</p></div></div>' +
         '</div></div></section>' +
         '<section class="section" id="seccoes"><div class="container"><div class="section-header"><div><span class="eyebrow">Secções</span><h2>Explorar a Revista</h2><p>Temas organizados para encontrares mais depressa o assunto certo.</p></div></div><div class="hub-grid">' + hubs.map(function(item) { return '<article class="hub-card"><h3>' + e(item.title) + '</h3><p>' + e(item.intro) + '</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="' + hubHref(item.slug) + '">Ver secção</a></div></article>'; }).join("") + '</div></div></section>' +
-        '<section class="section" id="artigos"><div class="container"><div class="section-header"><div><span class="eyebrow">Artigos</span><h2>Leituras para começar</h2><p>Uma seleção de guias simples para esclarecer dúvidas comuns e ajudar na escolha.</p></div></div><div class="article-grid">' + articles.slice(0, 6).map(renderArticleCard).join("") + '</div></div></section>' +
-        renderWhyBuy() +
-        '<section class="section"><div class="container">' + renderDisclosure() + '</div></section>' +
+        '<section class="section" id="artigos"><div class="container"><div class="section-header"><div><span class="eyebrow">Artigos</span><h2>Artigos em destaque</h2><p>Uma seleção de artigos úteis sobre barba, cabelo, máquinas e cuidados do dia a dia.</p></div></div><div class="article-grid">' + articles.slice(0, 6).map(renderArticleCard).join("") + '</div></div></section>' +
       '</main>' +
       renderFooter()
     );
@@ -465,10 +463,9 @@
     return (
       renderHeader() +
       '<main>' +
-        '<section class="section"><div class="container hero-card"><div class="hero-grid"><div class="hero-copy"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span><span>' + e(hub.title) + '</span></div><span class="section-flag">Secção da revista</span><h1>' + e(hub.title) + '</h1><p>' + e(hub.intro) + '</p></div><div class="hero-side"><div class="panel-note"><strong>O que vais encontrar aqui</strong><p>Artigos curtos, comparações úteis e sugestões ligadas a este tema.</p></div></div></div></div></section>' +
+        '<section class="section"><div class="container hero-card"><div class="hero-grid"><div class="hero-copy"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span><span>' + e(hub.title) + '</span></div><span class="section-flag">Secção da revista</span><h1>' + e(hub.title) + '</h1><p>' + e(hub.intro) + '</p></div><div class="hero-side"><div class="panel-note"><strong>O que vais encontrar aqui</strong><p>Artigos curtos, explicações simples e ideias ligadas a este tema.</p></div></div></div></div></section>' +
         '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Artigos</span><h2>Artigos desta secção</h2></div></div><div class="article-grid">' + hubArticles.map(renderArticleCard).join("") + '</div></div></section>' +
         '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Também pode interessar</span><h2>Categorias relacionadas</h2></div></div><div class="category-grid">' + hubCategories.map(function(item) { return '<article class="category-card"><h3>' + e(item.title) + '</h3><p>' + e(item.intro) + '</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="' + categoryHref(item.slug) + '">Ver categoria</a></div></article>'; }).join("") + '</div></div></section>' +
-        '<section class="section"><div class="container">' + renderDisclosure() + '</div></section>' +
       '</main>' +
       renderFooter()
     );
@@ -482,15 +479,14 @@
     return (
       renderHeader() +
       '<main>' +
-        '<section class="section"><div class="container hero-card article-header"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span><a href="' + hubHref(article.hub) + '">' + e(hub ? hub.title : "Secção") + '</a></div><span class="section-flag">Artigo da Revista</span><h1>' + e(article.title) + '</h1><p>' + e(article.intro) + '</p><p class="article-subcopy">' + e(article.subIntro || article.excerpt) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#produtos-artigo">Ver escolhas recomendadas</a><a class="btn btn-secondary" href="#faq-artigo">Ler perguntas frequentes</a></div></div></section>' +
+        '<section class="section"><div class="container hero-card article-header"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span><a href="' + hubHref(article.hub) + '">' + e(hub ? hub.title : "Secção") + '</a></div><span class="section-flag">Artigo da Revista</span><h1>' + e(article.title) + '</h1><p>' + e(article.intro) + '</p><p class="article-subcopy">' + e(article.subIntro || article.excerpt) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#produtos-artigo">Ver referências úteis</a><a class="btn btn-secondary" href="#faq-artigo">Ler perguntas frequentes</a></div></div></section>' +
         '<section class="section"><div class="container article-layout"><div class="article-body">' +
           (article.sections || []).map(function(item) { return '<article class="article-section"><h3>' + e(item[0]) + '</h3>' + item[1].map(function(text) { return "<p>" + e(text) + "</p>"; }).join("") + "</article>"; }).join("") +
           '<article class="article-section"><h3>Lista prática</h3><ul class="rich-list">' + (article.checklist || []).map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></article>' +
-        '</div><aside class="stack">' + renderArticleProductSpotlight(article) + renderDisclosure() + '</aside></div></section>' +
-        '<section class="section" id="produtos-artigo"><div class="container"><div class="section-header"><div><span class="eyebrow">Escolhas recomendadas</span><h2>Produtos para este objetivo</h2><p>Selecionámos opções com boa relação entre facilidade de uso, utilidade real e decisão rápida.</p></div></div><div class="product-grid">' + getProducts(article.relatedProducts).map(function(item) { return renderProductCard(item, true); }).join("") + '</div></div></section>' +
+        '</div><aside class="stack">' + renderArticleProductSpotlight(article) + '</aside></div></section>' +
+        '<section class="section" id="produtos-artigo"><div class="container"><div class="section-header"><div><span class="eyebrow">Também pode interessar</span><h2>Referências ligadas a este tema</h2><p>Se quiseres aprofundar o assunto, aqui ficam algumas referências ligadas ao que acabaste de ler.</p></div></div><div class="product-grid">' + getProducts(article.relatedProducts).map(function(item) { return renderProductCard(item, true); }).join("") + '</div><div class="section" style="padding:18px 0 0;">' + renderDisclosure() + '</div></div></section>' +
         '<section class="section" id="faq-artigo"><div class="container">' + renderFaq(article.faqs) + '</div></section>' +
         renderRelatedArticles("Artigos relacionados", article.relatedArticles) +
-        '<section class="section"><div class="container">' + renderDisclosure() + '</div></section>' +
       '</main>' +
       renderFooter()
     );

@@ -5,9 +5,9 @@
       slug: "melhores-maquinas-para-cortar-cabelo-em-casa",
       hub: "guias-de-compra",
       title: "Melhores máquinas para cortar cabelo em casa",
-      excerpt: "Guia prático para escolher máquina de cortar cabelo em casa, poupar dinheiro e evitar compras que ficam na gaveta.",
-      intro: "Cortar cabelo em casa pode mesmo ajudar a poupar, desde que escolhas uma máquina alinhada com o teu ritmo e com o tipo de corte que costumas usar.",
-      subIntro: "Este guia foi feito para decisão rápida: o que compensa comprar agora, o que pode esperar e como evitar gastar duas vezes no mesmo problema.",
+      excerpt: "Guia prático para perceber que tipo de máquina faz sentido em casa e evitar escolhas desajustadas.",
+      intro: "Cortar cabelo em casa pode ajudar a poupar tempo e dinheiro, desde que uses uma máquina alinhada com o teu ritmo e com o tipo de corte que costumas usar.",
+      subIntro: "Neste guia encontras diferenças práticas entre modelos, erros comuns e pontos a ter em conta antes de escolher.",
       sections: [
         [
           "Cortar cabelo em casa: onde está a poupança real",
@@ -33,7 +33,7 @@
         [
           "Erros que fazem perder dinheiro",
           [
-            "Comprar só pela quantidade de acessórios é um dos erros mais comuns: muitos pentes não substituem motor estável nem bom encaixe no uso diário.",
+            "Olhar só para a quantidade de acessórios é um dos erros mais comuns: muitos pentes não substituem motor estável nem bom encaixe no uso diário.",
             "Outro erro é ignorar manutenção básica. Limpeza simples e regular prolonga a vida útil e evita trocar de máquina cedo demais."
           ]
         ],
@@ -112,7 +112,7 @@
       slug: "como-limpar-uma-maquina-de-cortar-cabelo",
       hub: "maquinas-e-manutencao",
       title: "Como limpar uma máquina de cortar cabelo",
-      excerpt: "Uma rotina simples de manutenção faz mais pela máquina do que comprar novo cedo demais.",
+      excerpt: "Uma rotina simples de manutenção prolonga a vida útil da máquina e evita problemas desnecessários.",
       intro: "A manutenção regular não precisa de ser complicada, mas precisa de existir.",
       sections: [
         [
@@ -243,7 +243,7 @@
           ]
         ],
         [
-          "Comprar menos, mas comprar melhor",
+            "Escolher o essencial primeiro",
           [
             "O erro comum é acumular coisas sem lógica de posto.",
             "O melhor caminho costuma ser escolher menos peças, mas com utilidade concreta."
