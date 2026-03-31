@@ -439,15 +439,15 @@
   }
 
   function renderMagazineHome() {
-    setMeta("Revista OndeCortar | Guias e artigos de barbearia", "Revista OndeCortar com guias de compra, cuidados com a barba e artigos ligados à loja.", "https://ondecortar.pt/revista/");
+    setMeta("Revista OndeCortar | Guias e artigos de barbearia", "Revista OndeCortar com artigos sobre barba, cabelo, máquinas e o universo das barbearias.", "https://ondecortar.pt/revista/");
     return (
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container hero-card"><div class="hero-grid">' +
-          '<div class="hero-copy"><span class="section-flag">Revista OndeCortar</span><h1>Artigos úteis para escolher melhor</h1><p>Guias, comparações e artigos problema/solução ligados à loja para orientar a decisão com mais contexto.</p><div class="hero-actions"><a class="btn btn-primary" href="#artigos">Ler artigos</a><a class="btn btn-secondary" href="' + href("loja.html") + '">Explorar produtos</a></div></div>' +
-            '<div class="hero-side"><div class="panel-note"><strong>Lê primeiro, decide melhor</strong><p>Encontras respostas curtas e práticas para escolher sem perder tempo em páginas confusas.</p></div><div class="panel-note"><strong>Guias ligados ao que precisas</strong><p>Cada tema junta explicação simples, comparação útil e produtos relacionados quando fizer sentido.</p></div></div>' +
+          '<div class="hero-copy"><span class="section-flag">Revista OndeCortar</span><h1>Artigos úteis sobre barba, cabelo e barbearias</h1><p>Guias, histórias, comparações e respostas simples para dúvidas comuns de quem cuida do visual ou procura uma boa barbearia.</p><div class="hero-actions"><a class="btn btn-primary" href="#artigos">Ler artigos</a><a class="btn btn-secondary" href="#seccoes">Explorar temas</a></div></div>' +
+            '<div class="hero-side"><div class="panel-note"><strong>Leitura simples e útil</strong><p>Textos diretos, exemplos práticos e informação fácil de perceber sem complicação.</p></div><div class="panel-note"><strong>Temas que fazem parte do dia a dia</strong><p>Cuidados com a barba, máquinas, rotina em casa, estilo e curiosidades do universo da barbearia.</p></div></div>' +
         '</div></div></section>' +
-        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Secções</span><h2>Explorar a Revista</h2><p>Temas organizados para encontrares mais depressa o assunto certo.</p></div></div><div class="hub-grid">' + hubs.map(function(item) { return '<article class="hub-card"><h3>' + e(item.title) + '</h3><p>' + e(item.intro) + '</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="' + hubHref(item.slug) + '">Ver secção</a></div></article>'; }).join("") + '</div></div></section>' +
+        '<section class="section" id="seccoes"><div class="container"><div class="section-header"><div><span class="eyebrow">Secções</span><h2>Explorar a Revista</h2><p>Temas organizados para encontrares mais depressa o assunto certo.</p></div></div><div class="hub-grid">' + hubs.map(function(item) { return '<article class="hub-card"><h3>' + e(item.title) + '</h3><p>' + e(item.intro) + '</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="' + hubHref(item.slug) + '">Ver secção</a></div></article>'; }).join("") + '</div></div></section>' +
         '<section class="section" id="artigos"><div class="container"><div class="section-header"><div><span class="eyebrow">Artigos</span><h2>Leituras para começar</h2><p>Uma seleção de guias simples para esclarecer dúvidas comuns e ajudar na escolha.</p></div></div><div class="article-grid">' + articles.slice(0, 6).map(renderArticleCard).join("") + '</div></div></section>' +
         renderWhyBuy() +
         '<section class="section"><div class="container">' + renderDisclosure() + '</div></section>' +
