@@ -783,6 +783,20 @@ body[data-page="article"] .nav-links a.is-current {
   gap: 16px;
 }
 
+body[data-page="article"] .article-header h1 {
+  font-size: clamp(2.4rem, 4.9vw, 4.3rem);
+  max-width: 14.5ch;
+}
+
+body[data-page="article"] .article-header p {
+  max-width: 78ch;
+}
+
+.article-subcopy {
+  font-size: 1.03rem;
+  color: #4f534d;
+}
+
 .article-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);

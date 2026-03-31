@@ -431,13 +431,13 @@
     return (
       renderHeader() +
       '<main>' +
-        '<section class="section"><div class="container hero-card article-header"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span><a href="' + hubHref(article.hub) + '">' + e(hub ? hub.title : "Secção") + '</a></div><span class="section-flag">Artigo da Revista</span><h1>' + e(article.title) + '</h1><p>' + e(article.intro) + '</p></div></section>' +
+        '<section class="section"><div class="container hero-card article-header"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span><a href="' + hubHref(article.hub) + '">' + e(hub ? hub.title : "Secção") + '</a></div><span class="section-flag">Artigo da Revista</span><h1>' + e(article.title) + '</h1><p>' + e(article.intro) + '</p><p class="article-subcopy">' + e(article.subIntro || article.excerpt) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#produtos-artigo">Ver escolhas recomendadas</a><a class="btn btn-secondary" href="#faq-artigo">Ler perguntas frequentes</a></div></div></section>' +
         '<section class="section"><div class="container article-layout"><div class="article-body">' +
           (article.sections || []).map(function(item) { return '<article class="article-section"><h3>' + e(item[0]) + '</h3>' + item[1].map(function(text) { return "<p>" + e(text) + "</p>"; }).join("") + "</article>"; }).join("") +
           '<article class="article-section"><h3>Lista prática</h3><ul class="rich-list">' + (article.checklist || []).map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></article>' +
         '</div><aside class="stack">' + renderWhyBuy().replace('<section class="section"><div class="container callout-card">', '<div class="callout-card">').replace('</div></section>', '</div>') + renderDisclosure() + '</aside></div></section>' +
-        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Produtos recomendados</span><h2>Ligações úteis à loja</h2><p>Produtos ligados ao tema do artigo, sem depender de ratings ou preços fixos.</p></div></div><div class="product-grid">' + getProducts(article.relatedProducts).map(function(item) { return renderProductCard(item, true); }).join("") + '</div></div></section>' +
-        '<section class="section"><div class="container">' + renderFaq(article.faqs) + '</div></section>' +
+        '<section class="section" id="produtos-artigo"><div class="container"><div class="section-header"><div><span class="eyebrow">Escolhas recomendadas</span><h2>Opções para este tema</h2><p>Sugestões alinhadas com o conteúdo do artigo para te ajudar a decidir melhor.</p></div></div><div class="product-grid">' + getProducts(article.relatedProducts).map(function(item) { return renderProductCard(item, true); }).join("") + '</div></div></section>' +
+        '<section class="section" id="faq-artigo"><div class="container">' + renderFaq(article.faqs) + '</div></section>' +
         renderRelatedArticles("Artigos relacionados", article.relatedArticles) +
         '<section class="section"><div class="container">' + renderDisclosure() + '</div></section>' +
       '</main>' +
