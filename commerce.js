@@ -90,17 +90,17 @@
         return value;
       }
 
-      if (/^\/-\/pt\/dp\//i.test(url.pathname)) {
-        url.pathname = url.pathname.replace(/^\/-\/pt/i, "");
-      } else if (/^\/-\/pt\/gp\/product\//i.test(url.pathname)) {
-        url.pathname = url.pathname.replace(/^\/-\/pt/i, "");
-      }
-
       if (!url.searchParams.get("tag")) {
         url.searchParams.set("tag", "ondecortarp0c-21");
       }
-      url.searchParams.delete("language");
-      return url.toString();
+
+      const returnPath = url.pathname + (url.search || "");
+      const prefUrl = new URL("https://www.amazon.es/customer-preferences/edit");
+      prefUrl.searchParams.set("ie", "UTF8");
+      prefUrl.searchParams.set("preferencesReturnUrl", returnPath);
+      prefUrl.searchParams.set("ref_", "topnav_lang");
+      prefUrl.searchParams.set("language", "pt_PT");
+      return prefUrl.toString();
     } catch (error) {
       return value;
     }
