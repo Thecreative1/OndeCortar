@@ -262,36 +262,36 @@
       slug: "historia-do-poste-de-barbeiro",
       hub: "estilo-e-tendencias",
       title: "De onde vem o poste de barbeiro azul, vermelho e branco",
-      excerpt: "A história real do símbolo mais conhecido das barbearias e como ele virou ícone visual de rua.",
-      intro: "O poste de barbeiro não nasceu como decoração. Durante séculos foi um sinal de serviço, visível à distância, para quem precisava de encontrar um barbeiro rapidamente.",
-      subIntro: "Hoje é peça de identidade e chama atenção na fachada, mas a origem vem de práticas antigas e de um contexto médico muito diferente do atual.",
+      excerpt: "A origem histórica do símbolo mais conhecido das barbearias e porque as cores não significam apenas decoração.",
+      intro: "O poste de barbeiro não nasceu como peça decorativa. A explicação mais aceite liga este símbolo ao tempo dos barbeiros-cirurgiões, quando cortar cabelo e aparar a barba conviviam com sangrias, extrações dentárias e pequenos procedimentos.",
+      subIntro: "Hoje o poste funciona sobretudo como sinal visual de barbearia, mas a sua origem vem de um contexto antigo de cuidados pessoais e práticas médicas que já não fazem parte do serviço moderno.",
       sections: [
         [
           "Origem histórica do símbolo",
           [
-            "Em períodos antigos, barbeiros acumulavam funções de cuidado pessoal e pequenos procedimentos. O poste surgiu como sinal público desse tipo de serviço.",
-            "Com o tempo, o símbolo ficou associado de forma duradoura ao ofício de barbeiro, mesmo depois da profissão se focar no corte e no barbear."
+            "Durante vários séculos, os barbeiros também faziam trabalhos hoje associados a outras áreas, como sangrias, extrações dentárias e pequenos cuidados cirúrgicos. Por isso, o poste passou a funcionar como sinal público de um espaço onde se tratava da aparência, mas também de certos procedimentos.",
+            "A associação mais repetida na literatura histórica é a dos barbeiros-cirurgiões. Mesmo depois de essas funções se separarem, o símbolo ficou ligado ao ofício e sobreviveu como marca visual da barbearia."
           ]
         ],
         [
           "Porque aparecem as cores vermelho, branco e azul",
           [
-            "As combinações de cor variam conforme tradição local, mas o padrão vermelho e branco ganhou força histórica e tornou-se reconhecível em várias regiões.",
-            "A presença do azul tornou-se comum em muitos contextos modernos, sobretudo como variação visual forte para fachada e identificação rápida."
+            "A leitura histórica mais aceite diz que o vermelho e o branco remetem para o sangue e para as ligaduras usadas nas sangrias e noutros tratamentos da época. Em muitas explicações, o próprio poste também é associado ao bastão que o paciente segurava para fazer sobressair as veias do braço.",
+            "O azul apareceu mais tarde e o seu significado não é totalmente consensual. Há quem o relacione com as veias, enquanto outras interpretações apontam para a adoção das cores azul, vermelho e branco em versões americanas do símbolo."
           ]
         ],
         [
           "Porque o poste roda e chama atenção",
           [
-            "A rotação cria movimento contínuo, o que melhora visibilidade na rua e destaca a barbearia entre outras montras.",
-            "Para negócio local, este detalhe funciona como sinalização prática: ajuda clientes novos a localizar o espaço sem esforço."
+            "A versão moderna do poste ganhou rotação porque o movimento aumenta a visibilidade na rua e chama o olhar mesmo quando a montra é simples.",
+            "Na prática, continua a cumprir uma função direta: ajudar quem passa a perceber de imediato que aquele espaço é uma barbearia."
           ]
         ],
         [
           "Vale a pena ter um poste na entrada",
           [
-            "Para barbearias de rua, costuma ser um elemento simples com impacto direto na identificação da marca.",
-            "Quando combinado com fachada limpa e horário visível, reforça presença local e transmite imagem mais profissional."
+            "Para uma barbearia de rua, o poste continua a ser um dos sinais mais reconhecíveis do setor. Não substitui o nome da casa, o horário ou uma boa fachada, mas ajuda muito na identificação imediata.",
+            "Quando está bem colocado e bem iluminado, reforça a presença local do espaço e torna a entrada mais fácil de memorizar."
           ]
         ]
       ],
@@ -307,11 +307,11 @@
       faqs: [
         [
           "O que significa o poste de barbeiro?",
-          "É um símbolo histórico ligado ao ofício de barbeiro que acabou por se tornar referência visual universal de barbearia."
+          "É um símbolo histórico ligado aos barbeiros-cirurgiões e às antigas práticas de sangria e cuidado pessoal. Com o tempo, tornou-se a referência visual mais reconhecida das barbearias."
         ],
         [
           "Porque algumas barbearias usam azul e outras não?",
-          "As variações de cor dependem de tradição e escolha visual local. O mais importante é manter o símbolo legível e coerente com a fachada."
+          "Porque o azul não faz parte de uma explicação única e fechada. Em muitos casos aparece como referência às veias; noutros, como evolução visual do símbolo em mercados como o americano."
         ],
         [
           "Um poste de barbeiro ajuda a atrair clientes?",
