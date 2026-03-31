@@ -1,5 +1,11 @@
 (function() {
-  const rawBarbers = Array.isArray(window.barbearias) ? window.barbearias : [];
+  const rawBarbers =
+    Array.isArray(window.barbearias) ? window.barbearias :
+    (typeof barbearias !== "undefined" && Array.isArray(barbearias) ? barbearias : []);
+
+  if (!Array.isArray(window.barbearias) && rawBarbers.length) {
+    window.barbearias = rawBarbers;
+  }
   const streetRegex = /(rua|r\.|avenida|av\.|praceta|pra[cç]a|largo|estrada|travessa|tv\.|rotunda|alameda|ed\.|edif|bloco|loja|shopping|centro comercial|guimaraeshopping|c\. comercial|piso|andar|n\.?º|n\.?o|bairro)/i;
   const accentPairs = [
     ["#e5efe3", "#516255"],

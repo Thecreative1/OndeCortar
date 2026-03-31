@@ -423,16 +423,38 @@
       overflow: hidden;
       border-radius: calc(var(--radius-lg) - 6px);
       background:
-        linear-gradient(180deg, rgba(24, 28, 24, 0.08), rgba(24, 28, 24, 0.38)),
-        url("imagens/banner.jpg") center center / cover no-repeat;
+        radial-gradient(circle at 18% 24%, rgba(198, 167, 106, 0.3), transparent 18%),
+        radial-gradient(circle at 72% 18%, rgba(255, 255, 255, 0.32), transparent 14%),
+        radial-gradient(circle at 78% 72%, rgba(81, 98, 85, 0.18), transparent 20%),
+        linear-gradient(145deg, #667a6a 0%, #516255 48%, #39463c 100%);
     }
 
     .hero-art::after {
       content: "";
       position: absolute;
-      inset: auto 0 0;
-      height: 56%;
-      background: linear-gradient(180deg, transparent, rgba(19, 24, 20, 0.72));
+      inset: 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.18) 0 1px, transparent 1px 100%),
+        linear-gradient(rgba(255, 255, 255, 0.12) 0 1px, transparent 1px 100%);
+      background-size: 66px 66px;
+      opacity: 0.38;
+    }
+
+    .hero-art::before {
+      content: "";
+      position: absolute;
+      left: 54%;
+      top: 16%;
+      width: 112px;
+      height: 112px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      box-shadow:
+        -160px 54px 0 -28px rgba(255, 255, 255, 0.1),
+        -38px 196px 0 -38px rgba(198, 167, 106, 0.2),
+        98px 176px 0 -46px rgba(255, 255, 255, 0.12);
     }
 
     .hero-art-copy {
@@ -1173,7 +1195,7 @@
           <div class="hero-art" role="img" aria-label="Ambiente editorial da plataforma OndeCortar.pt">
             <div class="hero-art-copy">
               <strong>O mapa continua a ser o centro da experiência.</strong>
-              <p>Agora com uma leitura mais limpa, mais editorial e mais próxima de uma plataforma premium de descoberta.</p>
+              <p>Este bloco é apenas um apoio visual. O mapa real com as barbearias aparece já abaixo, integrado com a lista de resultados.</p>
             </div>
           </div>
 
