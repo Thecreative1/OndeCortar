@@ -234,6 +234,19 @@
     );
   }
 
+  function renderArticleProductSpotlight(article) {
+    const picks = getProducts(article.relatedProducts).slice(0, 2);
+    if (!picks.length) return "";
+    return (
+      '<div class="callout-card article-commerce">' +
+        '<span class="eyebrow">Escolhas do artigo</span>' +
+        '<h3>Produtos para aplicar este conteúdo</h3>' +
+        '<p>Se este tema faz sentido para ti, começa por estas opções com acesso direto.</p>' +
+        '<div class="shop-mini-grid">' + picks.map(renderMiniProduct).join("") + '</div>' +
+      '</div>'
+    );
+  }
+
   function renderProductCard(product, compact) {
     return (
       '<article class="product-card">' +
@@ -464,7 +477,7 @@
         '<section class="section"><div class="container article-layout"><div class="article-body">' +
           (article.sections || []).map(function(item) { return '<article class="article-section"><h3>' + e(item[0]) + '</h3>' + item[1].map(function(text) { return "<p>" + e(text) + "</p>"; }).join("") + "</article>"; }).join("") +
           '<article class="article-section"><h3>Lista prática</h3><ul class="rich-list">' + (article.checklist || []).map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></article>' +
-        '</div><aside class="stack">' + renderWhyBuy().replace('<section class="section"><div class="container callout-card">', '<div class="callout-card">').replace('</div></section>', '</div>') + renderDisclosure() + '</aside></div></section>' +
+        '</div><aside class="stack">' + renderArticleProductSpotlight(article) + renderDisclosure() + '</aside></div></section>' +
         '<section class="section" id="produtos-artigo"><div class="container"><div class="section-header"><div><span class="eyebrow">Escolhas recomendadas</span><h2>Opções para este tema</h2><p>Sugestões alinhadas com o conteúdo do artigo para te ajudar a decidir melhor.</p></div></div><div class="product-grid">' + getProducts(article.relatedProducts).map(function(item) { return renderProductCard(item, true); }).join("") + '</div></div></section>' +
         '<section class="section" id="faq-artigo"><div class="container">' + renderFaq(article.faqs) + '</div></section>' +
         renderRelatedArticles("Artigos relacionados", article.relatedArticles) +
