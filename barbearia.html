@@ -91,7 +91,11 @@
       color: var(--muted);
       font-weight: 600;
     }
-    .nav-links a:hover { background: rgba(81, 98, 85, 0.08); color: var(--text); }
+    .nav-links a:hover,
+    .nav-links a.nav-link-active {
+      background: rgba(198, 167, 106, 0.12);
+      color: var(--text);
+    }
     .nav-cta {
       color: #fff !important;
       background: linear-gradient(135deg, var(--accent), var(--accent-strong));
@@ -286,6 +290,8 @@
           <a href="index.html#explorar">Explorar</a>
           <a href="index.html#cidades">Cidades</a>
           <a href="registar.html">Adicionar barbearia</a>
+          <a href="loja.html">Loja</a>
+          <a href="revista/">Revista</a>
           <a href="faq.html">FAQ</a>
           <a class="nav-cta" href="index.html#mapa">Voltar ao mapa</a>
         </div>
@@ -308,8 +314,10 @@
       </div>
       <div class="footer-links">
         <a href="index.html#explorar">Explorar</a>
+        <a href="index.html#cidades">Cidades</a>
         <a href="registar.html">Adicionar barbearia</a>
         <a href="loja.html">Loja</a>
+        <a href="revista/">Revista</a>
         <a href="faq.html">FAQ</a>
       </div>
     </div>
