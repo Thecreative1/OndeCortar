@@ -445,8 +445,8 @@
       { label: "Acessorios", slug: "acessorios-de-barbeiro" }
     ].map(function(item) {
       return (
-        '<a class="store-hero-quick-link" href="' + categoryHref(item.slug) + '">' +
-          '<span class="store-hero-quick-label">' + e(item.label) + '</span>' +
+        '<a class="store-quick-pill" href="' + categoryHref(item.slug) + '">' +
+          '<span>' + e(item.label) + '</span>' +
         '</a>'
       );
     }).join("");
@@ -476,7 +476,7 @@
       renderHeader() +
       '<main>' +
         '<section class="section store-intro-section"><div class="container">' +
-          '<div class="store-hero-grid">' +
+          '<div class="store-hero-shell">' +
             '<div class="hero-card store-hero-main-card">' +
               '<span class="section-flag">LOJA ONDECORTAR</span>' +
               '<h1>Comprar por categoria</h1>' +
@@ -487,13 +487,7 @@
               '</div>' +
               '<p class="store-hero-note">Links afiliados identificados em todas as paginas comerciais</p>' +
             '</div>' +
-            '<aside class="hero-card store-hero-side-card">' +
-              '<div class="store-hero-side-copy">' +
-                '<h2>Explora por tipo</h2>' +
-                '<p>Escolhe uma categoria e entra direto no que procuras.</p>' +
-              '</div>' +
-              '<div class="store-hero-quick-grid">' + heroQuickLinks + '</div>' +
-            '</aside>' +
+            '<nav class="store-quick-bar" aria-label="Categorias rapidas">' + heroQuickLinks + '</nav>' +
           '</div>' +
         '</div></section>' +
         '<section class="section" id="categorias"><div class="container"><div class="store-category-topline"><span class="eyebrow">Categorias</span></div><div class="category-grid">' + categoryCards + '</div></div></section>' +

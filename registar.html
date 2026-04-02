@@ -19,16 +19,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #f7f7f4;
-      --surface: #ffffff;
-      --surface-soft: #f1f1eb;
-      --text: #1e1f1c;
-      --muted: #6b6e67;
-      --border: #e3e5de;
-      --accent: #516255;
-      --accent-strong: #39463c;
-      --shadow: 0 24px 60px rgba(44, 55, 44, 0.08);
-      --shadow-soft: 0 16px 36px rgba(44, 55, 44, 0.06);
+      --bg: #f2ebdd;
+      --surface: #fbf7ef;
+      --surface-soft: #efe6d6;
+      --surface-strong: #f4ecdf;
+      --text: #191714;
+      --muted: #5c554b;
+      --border: #d8cdb7;
+      --border-strong: #bca885;
+      --accent: #425a47;
+      --accent-strong: #314238;
+      --gold: #b08a4a;
+      --gold-soft: #c7a66a;
+      --gold-border: #d6c19b;
+      --shadow: 0 24px 60px rgba(34, 32, 28, 0.08);
+      --shadow-soft: 0 16px 36px rgba(34, 32, 28, 0.06);
       --container: min(1160px, calc(100% - 32px));
       --radius-lg: 24px;
       --radius-md: 18px;
@@ -40,9 +45,9 @@
       font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(198, 167, 106, 0.14), transparent 30%),
-        radial-gradient(circle at top right, rgba(81, 98, 85, 0.12), transparent 26%),
-        linear-gradient(180deg, #fafaf7 0%, var(--bg) 32%, #f3f3ee 100%);
+        radial-gradient(circle at top left, rgba(176, 138, 74, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(66, 90, 71, 0.1), transparent 24%),
+        linear-gradient(180deg, #f8f2e7 0%, var(--bg) 34%, #eee3d1 100%);
     }
 
     a { color: inherit; text-decoration: none; }
@@ -60,10 +65,10 @@
       align-items: center;
       gap: 18px;
       padding: 14px 18px;
-      border: 1px solid rgba(255, 255, 255, 0.65);
+      border: 1px solid rgba(216, 205, 183, 0.92);
       border-radius: 999px;
-      background: rgba(250, 250, 247, 0.82);
-      box-shadow: 0 18px 40px rgba(44, 55, 44, 0.08);
+      background: rgba(251, 247, 239, 0.9);
+      box-shadow: 0 18px 40px rgba(34, 32, 28, 0.08);
     }
     .brand { display: inline-flex; align-items: center; gap: 14px; }
     .brand img {
@@ -103,61 +108,136 @@
       min-height: 36px;
       padding: 8px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(81, 98, 85, 0.14);
-      background: rgba(81, 98, 85, 0.1);
-      color: var(--accent-strong);
+      border: 1px solid rgba(214, 193, 155, 0.96);
+      background: rgba(176, 138, 74, 0.1);
+      color: var(--gold);
       font-size: 0.85rem;
       font-weight: 700;
+      letter-spacing: 0.02em;
     }
     h1, h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; letter-spacing: -0.02em; margin: 0; }
     h1 { font-size: clamp(2.8rem, 6vw, 4.4rem); margin-top: 16px; }
     h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); }
-    h3 { margin: 0; font-size: 1.18rem; }
+    h3 { margin: 0; font-size: 1.18rem; color: var(--text); }
     p { color: var(--muted); line-height: 1.75; }
 
     .hero, .form-card, .side-card, .footer-shell {
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      background: rgba(255, 255, 255, 0.82);
+      background: rgba(251, 247, 239, 0.9);
       box-shadow: var(--shadow);
     }
 
     .hero {
-      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      padding: 32px;
+      border-color: rgba(188, 168, 133, 0.96);
       background:
-        radial-gradient(circle at top left, rgba(198, 167, 106, 0.14), transparent 30%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(246, 247, 242, 0.94));
+        radial-gradient(circle at top right, rgba(176, 138, 74, 0.18), transparent 34%),
+        radial-gradient(circle at bottom left, rgba(66, 90, 71, 0.08), transparent 28%),
+        linear-gradient(180deg, rgba(251, 247, 239, 0.99), rgba(239, 230, 214, 0.96));
     }
 
-    .hero p { margin: 14px 0 0; max-width: 62ch; }
+    .hero h1 {
+      max-width: 11ch;
+      color: var(--text);
+    }
+
+    .hero p {
+      margin: 14px 0 0;
+      max-width: 62ch;
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.72;
+    }
 
     .grid {
       display: grid;
       grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
       gap: 22px;
-      margin-top: 22px;
+      margin-top: 20px;
       align-items: start;
     }
 
-    .form-card, .side-card { padding: 26px; }
-    .side-card + .side-card { margin-top: 18px; }
+    .form-card, .side-card { padding: 28px; }
+    .form-card {
+      border-color: rgba(188, 168, 133, 0.92);
+      background:
+        linear-gradient(180deg, rgba(251, 247, 239, 0.99), rgba(244, 236, 223, 0.96));
+      box-shadow: 0 22px 46px rgba(34, 32, 28, 0.08);
+    }
+    .form-card > p:first-of-type {
+      margin: 10px 0 0;
+      max-width: 60ch;
+    }
+
+    aside {
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .side-card {
+      border-color: rgba(216, 205, 183, 0.98);
+      background:
+        linear-gradient(180deg, rgba(251, 247, 239, 0.97), rgba(242, 232, 214, 0.92));
+      box-shadow: 0 16px 34px rgba(34, 32, 28, 0.06);
+    }
+    .side-card + .side-card { margin-top: 0; }
+    .side-card-highlight {
+      border-color: rgba(188, 168, 133, 0.94);
+      background:
+        radial-gradient(circle at top right, rgba(176, 138, 74, 0.14), transparent 36%),
+        linear-gradient(180deg, rgba(250, 244, 233, 0.98), rgba(240, 230, 210, 0.95));
+    }
 
     form { display: grid; gap: 18px; margin-top: 18px; }
     .field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-    label { display: block; margin-bottom: 8px; font-size: 0.94rem; font-weight: 700; }
-    input, select, textarea {
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    input:not([type="checkbox"]), select, textarea {
       width: 100%;
       min-height: 54px;
       padding: 0 16px;
       border-radius: 16px;
-      border: 1px solid var(--border);
-      background: rgba(241, 241, 235, 0.7);
+      border: 1px solid rgba(188, 168, 133, 0.9);
+      background:
+        linear-gradient(180deg, rgba(251, 247, 239, 0.98), rgba(239, 230, 214, 0.92));
       color: var(--text);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, transform 0.2s ease;
     }
     textarea {
       min-height: 150px;
       padding: 14px 16px;
       resize: vertical;
+    }
+    input:not([type="checkbox"]):hover,
+    select:hover,
+    textarea:hover {
+      border-color: rgba(176, 138, 74, 0.88);
+      background:
+        linear-gradient(180deg, rgba(252, 249, 242, 1), rgba(242, 232, 214, 0.94));
+    }
+    input:not([type="checkbox"]):focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: rgba(66, 90, 71, 0.9);
+      background: rgba(251, 247, 239, 0.98);
+      box-shadow:
+        0 0 0 4px rgba(66, 90, 71, 0.12),
+        0 14px 28px rgba(34, 32, 28, 0.06);
+    }
+    input:not([type="checkbox"])::placeholder,
+    textarea::placeholder {
+      color: #857b6c;
     }
     .checkbox {
       display: flex;
@@ -170,6 +250,11 @@
       width: auto;
       min-height: auto;
       margin-top: 4px;
+      accent-color: var(--accent);
+    }
+    .checkbox a {
+      color: var(--accent-strong);
+      font-weight: 600;
     }
 
     .btn {
@@ -182,23 +267,40 @@
       border: 1px solid transparent;
       font-weight: 700;
       cursor: pointer;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
     .btn:hover { transform: translateY(-2px); }
     .btn-primary {
       color: #fff;
       background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      box-shadow: 0 16px 36px rgba(81, 98, 85, 0.18);
+      box-shadow: 0 16px 36px rgba(66, 90, 71, 0.2);
     }
+    .btn-primary:hover { box-shadow: 0 18px 40px rgba(66, 90, 71, 0.24); }
     .btn-secondary {
       color: var(--text);
-      border-color: var(--border);
-      background: rgba(255, 255, 255, 0.82);
+      border-color: rgba(188, 168, 133, 0.92);
+      background: rgba(251, 247, 239, 0.92);
+    }
+    .btn-secondary:hover {
+      border-color: rgba(176, 138, 74, 0.84);
+      background: rgba(255, 250, 243, 0.98);
     }
     .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
+    .side-card h3 {
+      font-size: 1.22rem;
+      margin-bottom: 2px;
+    }
     .side-card ul { margin: 16px 0 0; padding-left: 18px; color: var(--muted); line-height: 1.75; }
+    .side-card li::marker { color: var(--gold); }
     .side-card p { margin: 12px 0 0; }
+    .badge {
+      min-height: 32px;
+      padding: 6px 12px;
+      background: rgba(176, 138, 74, 0.12);
+      border-color: rgba(214, 193, 155, 0.98);
+      color: var(--gold);
+    }
 
     footer { padding: 0 0 48px; }
     .footer-shell {
@@ -208,6 +310,8 @@
       gap: 18px;
       flex-wrap: wrap;
       padding: 24px 28px;
+      border-color: rgba(216, 205, 183, 0.98);
+      background: rgba(251, 247, 239, 0.92);
     }
     .footer-intro { display: grid; gap: 14px; max-width: 48ch; }
     .footer-brand { display: inline-flex; align-items: center; gap: 14px; }
@@ -379,9 +483,9 @@
             </ul>
           </div>
 
-          <div class="side-card">
+          <div class="side-card side-card-highlight">
             <span class="badge">Gratuito</span>
-            <h3 style="margin-top:14px;">Envio e atualização simples</h3>
+            <h3>Envio e atualização simples</h3>
           <p>Podes enviar ou atualizar os dados da tua barbearia sem custo.</p>
           </div>
         </aside>
