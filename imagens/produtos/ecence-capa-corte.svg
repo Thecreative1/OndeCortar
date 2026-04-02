@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">ECENCE Capa de Corte</title>
+  <desc id="desc">Placeholder premium para capa de corte ECENCE.</desc>
+  <rect width="600" height="600" fill="#fbf7ef"/>
+  <rect x="42" y="42" width="516" height="516" rx="36" fill="#f2ebdd" stroke="#d8cdb7" stroke-width="4"/>
+  <rect x="84" y="92" width="154" height="42" rx="21" fill="#efe6d6" stroke="#d6c19b" stroke-width="3"/>
+  <text x="161" y="120" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#b08a4a">Capa</text>
+  <path d="M198 214 Q226 176 300 176 Q374 176 402 214 L452 422 Q456 442 438 442 H162 Q144 442 148 422 Z" fill="#22201c"/>
+  <circle cx="300" cy="214" r="36" fill="#fbf7ef"/>
+  <path d="M268 214 Q300 244 332 214" fill="none" stroke="#c7a66a" stroke-width="8" stroke-linecap="round"/>
+  <text x="300" y="465" text-anchor="middle" font-family="Georgia, serif" font-size="32" fill="#22201c">ECENCE</text>
+  <text x="300" y="503" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#5c554b">capa de corte</text>
+</svg>

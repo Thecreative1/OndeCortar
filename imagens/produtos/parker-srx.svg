@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Parker SRX</title>
+  <desc id="desc">Placeholder premium para navalha Parker SRX.</desc>
+  <rect width="600" height="600" fill="#fbf7ef"/>
+  <rect x="42" y="42" width="516" height="516" rx="36" fill="#f2ebdd" stroke="#d8cdb7" stroke-width="4"/>
+  <rect x="84" y="92" width="174" height="42" rx="21" fill="#efe6d6" stroke="#d6c19b" stroke-width="3"/>
+  <text x="171" y="120" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#b08a4a">Navalha</text>
+  <path d="M190 332 L356 206 Q374 194 390 212 L406 228 Q420 242 410 258 L330 346 Q320 356 304 356 H230 Q210 356 198 344 Z" fill="#22201c"/>
+  <path d="M306 248 L420 170 L442 192 L334 284 Z" fill="#c7a66a"/>
+  <circle cx="260" cy="332" r="14" fill="#fbf7ef"/>
+  <text x="300" y="465" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#22201c">Parker SRX</text>
+  <text x="300" y="503" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#5c554b">navalha de barbeiro</text>
+</svg>

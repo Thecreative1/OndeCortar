@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Barbicide Desinfetante</title>
+  <desc id="desc">Placeholder premium para recipiente desinfetante Barbicide.</desc>
+  <rect width="600" height="600" fill="#fbf7ef"/>
+  <rect x="42" y="42" width="516" height="516" rx="36" fill="#f2ebdd" stroke="#d8cdb7" stroke-width="4"/>
+  <rect x="84" y="92" width="200" height="42" rx="21" fill="#efe6d6" stroke="#d6c19b" stroke-width="3"/>
+  <text x="184" y="120" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#b08a4a">Higiene</text>
+  <rect x="218" y="170" width="164" height="38" rx="12" fill="#22201c"/>
+  <rect x="236" y="206" width="128" height="220" rx="18" fill="#fbf7ef" stroke="#22201c" stroke-width="8"/>
+  <rect x="248" y="244" width="104" height="118" rx="12" fill="#8ec5ff"/>
+  <text x="300" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#191714">BARBICIDE</text>
+  <text x="300" y="465" text-anchor="middle" font-family="Georgia, serif" font-size="32" fill="#22201c">Barbicide</text>
+  <text x="300" y="503" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#5c554b">desinfetante</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">HIENA PRO Shaver</title>
+  <desc id="desc">Placeholder premium para shaver eletrico HIENA PRO.</desc>
+  <rect width="600" height="600" fill="#fbf7ef"/>
+  <rect x="42" y="42" width="516" height="516" rx="36" fill="#f2ebdd" stroke="#d8cdb7" stroke-width="4"/>
+  <rect x="84" y="92" width="160" height="42" rx="21" fill="#efe6d6" stroke="#d6c19b" stroke-width="3"/>
+  <text x="164" y="120" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#b08a4a">Shaver</text>
+  <rect x="234" y="174" width="132" height="234" rx="30" fill="#22201c"/>
+  <rect x="238" y="128" width="56" height="66" rx="18" fill="#314238"/>
+  <rect x="306" y="128" width="56" height="66" rx="18" fill="#314238"/>
+  <rect x="252" y="146" width="28" height="26" rx="9" fill="#c7a66a"/>
+  <rect x="320" y="146" width="28" height="26" rx="9" fill="#c7a66a"/>
+  <rect x="260" y="234" width="80" height="18" rx="9" fill="#5c554b"/>
+  <text x="300" y="465" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#22201c">HIENA PRO</text>
+  <text x="300" y="503" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#5c554b">foil shaver</text>
+</svg>

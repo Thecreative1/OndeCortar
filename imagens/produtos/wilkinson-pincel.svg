@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Wilkinson Sword Pincel</title>
+  <desc id="desc">Placeholder premium para pincel classico de barbear Wilkinson.</desc>
+  <rect width="600" height="600" fill="#fbf7ef"/>
+  <rect x="42" y="42" width="516" height="516" rx="36" fill="#f2ebdd" stroke="#d8cdb7" stroke-width="4"/>
+  <rect x="84" y="92" width="170" height="42" rx="21" fill="#efe6d6" stroke="#d6c19b" stroke-width="3"/>
+  <text x="169" y="120" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#b08a4a">Pincel</text>
+  <path d="M236 236 Q248 172 300 172 Q352 172 364 236 Q372 280 344 304 H256 Q228 280 236 236 Z" fill="#c7a66a"/>
+  <path d="M258 246 Q266 196 300 196 Q334 196 342 246 Q346 274 328 290 H272 Q254 274 258 246 Z" fill="#fbf7ef"/>
+  <path d="M262 304 H338 L322 398 Q318 424 300 424 Q282 424 278 398 Z" fill="#425a47"/>
+  <text x="300" y="465" text-anchor="middle" font-family="Georgia, serif" font-size="32" fill="#22201c">Wilkinson Sword</text>
+  <text x="300" y="503" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#5c554b">pincel classico</text>
+</svg>

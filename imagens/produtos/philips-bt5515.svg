@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Philips BT5515 15</title>
+  <desc id="desc">Placeholder premium para aparador Philips de barba.</desc>
+  <rect width="600" height="600" fill="#fbf7ef"/>
+  <rect x="42" y="42" width="516" height="516" rx="36" fill="#f2ebdd" stroke="#d8cdb7" stroke-width="4"/>
+  <rect x="84" y="92" width="172" height="42" rx="21" fill="#efe6d6" stroke="#d6c19b" stroke-width="3"/>
+  <text x="170" y="120" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#b08a4a">Barba</text>
+  <rect x="252" y="134" width="96" height="58" rx="16" fill="#314238"/>
+  <rect x="238" y="178" width="124" height="240" rx="28" fill="#22201c"/>
+  <rect x="258" y="110" width="10" height="34" rx="4" fill="#191714"/>
+  <rect x="278" y="110" width="10" height="34" rx="4" fill="#191714"/>
+  <rect x="298" y="110" width="10" height="34" rx="4" fill="#191714"/>
+  <rect x="318" y="110" width="10" height="34" rx="4" fill="#191714"/>
+  <rect x="260" y="216" width="80" height="112" rx="14" fill="#c7a66a"/>
+  <text x="300" y="465" text-anchor="middle" font-family="Georgia, serif" font-size="32" fill="#22201c">Philips BT5515</text>
+  <text x="300" y="503" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#5c554b">aparador de barba</text>
+</svg>
