@@ -436,6 +436,22 @@
     setMeta("Loja OndeCortar | Produtos de barbearia escolhidos com critério", "Loja OndeCortar com máquinas, kits, navalhas e acessórios recomendados.", "https://ondecortar.pt/loja.html");
     setStructuredData([]);
     const featuredArticles = coreArticles().slice(0, 6);
+    const heroQuickLinks = [
+      { label: "Maquinas de cortar", slug: "maquinas-de-cortar" },
+      { label: "Kits de barba", slug: "kits-de-barba" },
+      { label: "Navalhas", slug: "navalhas-e-laminas" },
+      { label: "Shavers", slug: "trimmers-e-shavers" },
+      { label: "Oleos e cuidados", slug: "oleos-e-balms" },
+      { label: "Acessorios", slug: "acessorios-de-barbeiro" }
+    ].map(function(item) {
+      const category = categoryMap.get(item.slug);
+      return (
+        '<a class="store-hero-quick-link" href="' + categoryHref(item.slug) + '">' +
+          '<span class="store-hero-quick-label">' + e(item.label) + '</span>' +
+          '<span class="store-hero-quick-meta">' + e(category ? category.title : "Categoria da loja") + '</span>' +
+        '</a>'
+      );
+    }).join("");
     const featured = featuredPicks.map(function(item) {
       const product = productMap.get(item.product);
       return (
@@ -462,15 +478,25 @@
       renderHeader() +
       '<main>' +
         '<section class="section store-intro-section"><div class="container">' +
-          '<div class="hero-card store-hero-compact">' +
-            '<span class="section-flag">Loja OndeCortar</span>' +
-            '<h1>Escolhe por categoria e encontra recomendações diretas</h1>' +
-            '<p>Explora categorias selecionadas para barba, cabelo e acessórios com links afiliados identificados.</p>' +
-            '<div class="hero-actions">' +
-              '<a class="btn btn-primary" href="#categorias">Comprar por categoria</a>' +
-              '<a class="btn btn-secondary" href="' + href("revista/") + '">Ler guias e comparações</a>' +
+          '<div class="store-hero-grid">' +
+            '<div class="hero-card store-hero-main-card">' +
+              '<span class="section-flag">LOJA ONDECORTAR</span>' +
+              '<h1>Comprar produtos de barbearia por categoria</h1>' +
+              '<p>Entra direto em maquinas, barba, acessorios e guias com links afiliados identificados.</p>' +
+              '<div class="hero-actions">' +
+                '<a class="btn btn-primary" href="#categorias">Comprar por categoria</a>' +
+                '<a class="btn btn-secondary" href="' + href("revista/") + '">Ler guias e comparacoes</a>' +
+              '</div>' +
+              '<p class="store-hero-note">Links afiliados identificados em todas as paginas comerciais</p>' +
             '</div>' +
-            '<div class="hero-trust"><span class="pill">Links afiliados identificados em todas as páginas comerciais</span></div>' +
+            '<aside class="hero-card store-hero-side-card">' +
+              '<div class="store-hero-side-copy">' +
+                '<span class="eyebrow">Explora por tipo</span>' +
+                '<h2>Explora por tipo</h2>' +
+                '<p>Vai direto ao tipo de produto que procuras, sem perder tempo.</p>' +
+              '</div>' +
+              '<div class="store-hero-quick-grid">' + heroQuickLinks + '</div>' +
+            '</aside>' +
           '</div>' +
         '</div></section>' +
         '<section class="section" id="categorias"><div class="container"><div class="section-header"><div><span class="eyebrow">Categorias</span><h2>Comprar por categoria</h2><p>Vai direto ao tipo de produto que queres, sem desvios.</p></div></div><div class="category-grid">' + categoryCards + '</div></div></section>' +

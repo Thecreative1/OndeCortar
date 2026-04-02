@@ -620,15 +620,23 @@ p {
 }
 
 .store-intro-section {
-  padding-top: 16px;
-  padding-bottom: 6px;
+  padding-top: 8px;
+  padding-bottom: 2px;
 }
 
-.store-hero-compact {
+.store-hero-grid {
   display: grid;
-  gap: 12px;
-  max-width: 640px;
-  padding: 22px 26px;
+  grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.store-hero-main-card,
+.store-hero-side-card {
+  display: grid;
+  gap: 14px;
+  min-height: 100%;
+  padding: 24px 26px;
   border-color: rgba(188, 168, 133, 0.92);
   background:
     radial-gradient(circle at top right, rgba(176, 138, 74, 0.18), transparent 40%),
@@ -636,45 +644,104 @@ p {
   box-shadow: 0 24px 52px rgba(34, 32, 28, 0.1);
 }
 
-.store-hero-compact h1 {
-  font-size: clamp(2rem, 3.6vw, 2.9rem);
-  line-height: 1.08;
+.store-hero-main-card {
+  align-content: start;
+}
+
+.store-hero-main-card h1 {
+  font-size: clamp(1.95rem, 3vw, 2.7rem);
+  line-height: 1.02;
   max-width: 12ch;
   letter-spacing: -0.03em;
 }
 
-.store-hero-compact p {
+.store-hero-main-card p {
   max-width: 54ch;
 }
 
-.store-hero-compact .section-flag {
+.store-hero-main-card .section-flag {
   min-height: 30px;
   padding: 6px 12px;
 }
 
-.store-hero-compact .hero-actions {
+.store-hero-main-card .hero-actions {
   gap: 8px;
   margin-top: 2px;
 }
 
-.store-hero-compact .btn {
+.store-hero-main-card .btn {
   min-height: 44px;
   padding: 0 16px;
 }
 
-.store-hero-compact .btn-secondary {
+.store-hero-main-card .btn-secondary {
   background: var(--ink-strong);
   color: #f8f2e8;
   border-color: rgba(214, 193, 155, 0.34);
   box-shadow: 0 12px 24px rgba(34, 32, 28, 0.16);
 }
 
-.store-hero-compact .hero-trust {
-  margin-top: 0;
+.store-hero-note {
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
 }
 
-.store-hero-compact .pill {
-  padding: 6px 11px;
+.store-hero-side-card {
+  align-content: start;
+  background:
+    radial-gradient(circle at top left, rgba(176, 138, 74, 0.14), transparent 36%),
+    linear-gradient(180deg, rgba(251, 247, 239, 0.98), rgba(244, 236, 223, 0.96));
+}
+
+.store-hero-side-copy {
+  display: grid;
+  gap: 8px;
+}
+
+.store-hero-side-copy h2 {
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+}
+
+.store-hero-side-copy p {
+  max-width: 38ch;
+}
+
+.store-hero-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.store-hero-quick-link {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  min-height: 108px;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(188, 168, 133, 0.88);
+  background: rgba(251, 247, 239, 0.88);
+  box-shadow: 0 12px 24px rgba(34, 32, 28, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.store-hero-quick-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(176, 138, 74, 0.56);
+  box-shadow: 0 18px 34px rgba(34, 32, 28, 0.1);
+}
+
+.store-hero-quick-label {
+  font-weight: 800;
+  color: var(--ink-strong);
+  line-height: 1.25;
+}
+
+.store-hero-quick-meta {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
 }
 
 .store-shelf {
@@ -699,11 +766,11 @@ p {
 }
 
 body[data-page="store"] #categorias.section {
-  padding-top: 10px;
+  padding-top: 2px;
 }
 
 body[data-page="store"] #categorias .section-header {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 body[data-page="store"] #categorias .section-header p {
@@ -1125,6 +1192,15 @@ body[data-page="article"] .article-header p {
 }
 
 @media (max-width: 1040px) {
+  .store-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .store-hero-main-card,
+  .store-hero-side-card {
+    max-width: none;
+  }
+
   .trust-grid,
   .featured-grid,
   .category-grid,
@@ -1167,7 +1243,8 @@ body[data-page="article"] .article-header p {
   }
 
   .hero-card,
-  .store-hero-compact,
+  .store-hero-main-card,
+  .store-hero-side-card,
   .editorial-card,
   .category-card,
   .product-card,
@@ -1190,7 +1267,8 @@ body[data-page="article"] .article-header p {
   .hub-grid,
   .quick-answer-grid,
   .product-grid,
-  .related-grid {
+  .related-grid,
+  .store-hero-quick-grid {
     grid-template-columns: 1fr;
   }
 
