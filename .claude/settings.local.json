@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -i \"lang=\" E:/GIT_HUB/OndeCortar/*.html)",
+      "Bash(grep:*)",
+      "Bash(xargs -I {} basename {})"
+    ]
+  }
+}

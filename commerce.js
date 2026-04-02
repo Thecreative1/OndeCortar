@@ -251,7 +251,7 @@
           '<p>' + e(lead.summary) + '</p>' +
           '<p>' + e(lead.useCase) + '</p>' +
           '<ul class="rich-list">' + strengths.map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul>' +
-          '<div class="card-actions"><a class="btn btn-secondary btn-small" href="' + productHref(lead.slug) + '">Saber mais</a><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(lead.amazon)) + '" target="_blank" rel="sponsored nofollow noopener">Ver produto</a></div>' +
+          '<div class="card-actions"><a class="btn btn-secondary btn-small" href="' + productHref(lead.slug) + '">Saber mais</a><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(lead.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver produto</a></div>' +
         '</div>' +
         (extra.length ? '<div class="article-mini-list"><strong>Outras referências ligadas ao tema</strong><div class="shop-mini-grid">' + extra.map(renderMiniProduct).join("") + '</div></div>' : "") +
       '</div>'
@@ -269,7 +269,7 @@
           (!compact ? "<p>" + e(product.useCase) + "</p>" : "") +
           '<div class="card-actions">' +
             '<a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Ver recomendação</a>' +
-      '<a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener">Ver na Amazon.es</a>' +
+      '<a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver na Amazon.es</a>' +
           "</div>" +
         "</div>" +
       "</article>"
@@ -323,7 +323,7 @@
             '<div class="meta-row"><span class="tag">' + e(item.label) + '</span><span class="tag">' + e(product.bestFor) + '</span></div>' +
             "<h3>" + e(product.name) + "</h3>" +
             "<p>" + e(item.note) + "</p>" +
-              '<div class="card-actions"><a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Ver recomendação</a><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener">Ver na Amazon.es</a></div>' +
+              '<div class="card-actions"><a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Ver recomendação</a><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver na Amazon.es</a></div>' +
           "</div>" +
         "</article>"
       );
@@ -418,7 +418,7 @@
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container hero-card"><div class="hero-grid">' +
-          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja.html") + '">Loja</a><span>/</span><span>' + e(product.name) + '</span></div><span class="section-flag">Produto recomendado</span><span class="eyebrow">' + e(product.bestFor) + '</span><h1>' + e(product.name) + '</h1><p>' + e(product.summary) + " " + e(product.useCase) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener">Ver na Amazon.es</a><a class="btn btn-secondary" href="' + categoryHref(product.categories[0]) + '">Ver categoria</a></div><div class="product-hero-panel"><strong>Antes de comprar</strong><ul class="rich-list"><li>Melhor para: ' + e(product.bestFor) + '</li><li>Ponto forte: ' + e(leadStrength || product.summary) + '</li><li>Vantagem adicional: ' + e(secondStrength || product.useCase) + '</li></ul><div class="card-actions">' + (leadGuide ? '<a class="btn btn-soft btn-small" href="' + articleHref(leadGuide.slug) + '">Ler guia relacionado</a>' : "") + '<a class="btn btn-secondary btn-small" href="#relacionados">Comparar semelhantes</a></div></div></div>' +
+          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja.html") + '">Loja</a><span>/</span><span>' + e(product.name) + '</span></div><span class="section-flag">Produto recomendado</span><span class="eyebrow">' + e(product.bestFor) + '</span><h1>' + e(product.name) + '</h1><p>' + e(product.summary) + " " + e(product.useCase) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver na Amazon.es</a><a class="btn btn-secondary" href="' + categoryHref(product.categories[0]) + '">Ver categoria</a></div><div class="product-hero-panel"><strong>Antes de comprar</strong><ul class="rich-list"><li>Melhor para: ' + e(product.bestFor) + '</li><li>Ponto forte: ' + e(leadStrength || product.summary) + '</li><li>Vantagem adicional: ' + e(secondStrength || product.useCase) + '</li></ul><div class="card-actions">' + (leadGuide ? '<a class="btn btn-soft btn-small" href="' + articleHref(leadGuide.slug) + '">Ler guia relacionado</a>' : "") + '<a class="btn btn-secondary btn-small" href="#relacionados">Comparar semelhantes</a></div></div></div>' +
       '<div class="hero-side"><div class="product-stage"><img src="' + href(product.image) + '" alt="' + e(product.alt) + '" loading="lazy" /></div><div class="store-note"><strong>Compra com mais confiança</strong><p>Destacamos este produto pelo equilíbrio entre uso real, procura e feedback de compradores para te ajudar a decidir mais depressa.</p></div></div>' +
         '</div></div></section>' +
         '<section class="section"><div class="container split-grid">' +
@@ -429,7 +429,7 @@
             '<div class="product-highlight"><h3>Limitações</h3><ul class="rich-list">' + product.limits.map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></div>' +
           '</div>' +
           '<div class="stack">' +
-            '<div class="buy-box"><span class="price-hint">Loja afiliada</span><h3>Comprar agora na Amazon.es</h3><p>Confirma disponibilidade e avança para a compra com entrega rápida e pagamento seguro na plataforma.</p><div class="card-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener">Ver na Amazon.es</a><a class="btn btn-secondary" href="' + categoryHref(product.categories[0]) + '">Voltar à categoria</a></div></div>' +
+            '<div class="buy-box"><span class="price-hint">Loja afiliada</span><h3>Comprar agora na Amazon.es</h3><p>Confirma disponibilidade e avança para a compra com entrega rápida e pagamento seguro na plataforma.</p><div class="card-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver na Amazon.es</a><a class="btn btn-secondary" href="' + categoryHref(product.categories[0]) + '">Voltar à categoria</a></div></div>' +
             renderDisclosure() +
           '</div>' +
         '</div></section>' +
