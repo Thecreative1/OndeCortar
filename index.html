@@ -562,6 +562,41 @@
       line-height: 1.7;
     }
 
+    .how-step {
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .how-step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .how-step h3 {
+      font-size: 1.1rem;
+      line-height: 1.3;
+    }
+
+    .how-step p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
     .directory-shell {
       display: grid;
       gap: 22px;
@@ -881,6 +916,34 @@
       max-width: 58ch;
     }
 
+    .store-duo {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .store-card {
+      padding: 28px 30px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .store-card h3 {
+      font-size: 1.22rem;
+      line-height: 1.3;
+    }
+
+    .store-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
     footer {
       padding: 30px 0 48px;
     }
@@ -1022,7 +1085,8 @@
       .owner-shell,
       .featured-grid,
       .cities-grid,
-      .metrics-grid {
+      .metrics-grid,
+      .store-duo {
         grid-template-columns: 1fr;
       }
 
@@ -1067,6 +1131,7 @@
       .feature-copy,
       .owner-shell,
       .store-strip,
+      .store-card,
       .footer-shell {
         padding: 22px;
       }
@@ -1172,8 +1237,8 @@
       <div class="container hero-layout">
         <div class="hero-copy">
           <span class="eyebrow">Barbearias em Portugal</span>
-          <h1>Encontra a barbearia certa em Portugal</h1>
-          <p>Vê morada, contactos e informação útil antes de escolheres a tua próxima barbearia.</p>
+          <h1>Encontra barbearias em Portugal com informação útil antes de escolher</h1>
+          <p>Procura por cidade, zona ou nome e vê morada, contactos e detalhes importantes sem perder tempo.</p>
 
           <form class="hero-search" id="heroSearchForm" role="search" aria-label="Pesquisar barbearias a partir do hero">
             <input id="heroSearchInput" type="text" placeholder="Procura por cidade, zona ou nome da barbearia" />
@@ -1207,10 +1272,8 @@
           </div>
 
           <div class="hero-map-highlights">
-            <span class="pill"><span data-cidades-total>0</span> cidades com barbearias</span>
-            <span class="pill"><span data-contactos-total>0</span> barbearias com contacto direto</span>
-            <a class="btn btn-soft btn-small" href="#explorar">Ver barbearias com contacto</a>
-            <a class="btn btn-secondary btn-small" href="loja.html">Ver loja de produtos</a>
+            <a class="btn btn-soft btn-small" href="#explorar">Explorar barbearias</a>
+            <a class="btn btn-secondary btn-small" href="registar.html">Adicionar barbearia</a>
           </div>
 
           <div class="hero-map-frame">
@@ -1221,22 +1284,30 @@
     </section>
 
     <section class="section">
-      <div class="container metrics-grid">
-        <article class="metric-card">
-          <strong><span data-barbearias-total>63</span>+</strong>
-          <h3>Barbearias listadas</h3>
-          <p>Barbearias já listadas em várias cidades de Portugal.</p>
-        </article>
-        <article class="metric-card">
-          <strong><span data-cidades-total>0</span>+</strong>
-          <h3>Cidades representadas</h3>
-          <p>Pesquisa por cidade e encontra opções mais perto de ti.</p>
-        </article>
-        <article class="metric-card">
-          <strong><span data-contactos-total>0</span>+</strong>
-          <h3>Contactos diretos disponíveis</h3>
-              <p>Telefone, website, Instagram, Facebook, email ou link de marcação quando disponíveis.</p>
-        </article>
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Como funciona</span>
+            <h2>Simples e direto</h2>
+          </div>
+        </div>
+        <div class="metrics-grid">
+          <article class="how-step">
+            <span class="how-step-num">1</span>
+            <h3>Procura por cidade, zona ou nome</h3>
+            <p>Usa a pesquisa para encontrar barbearias perto de ti ou numa zona específica de Portugal.</p>
+          </article>
+          <article class="how-step">
+            <span class="how-step-num">2</span>
+            <h3>Vê a ficha e os detalhes</h3>
+            <p>Consulta morada, contactos, horário e links úteis antes de escolheres.</p>
+          </article>
+          <article class="how-step">
+            <span class="how-step-num">3</span>
+            <h3>Entra em contacto ou escolhe melhor</h3>
+            <p>Liga, visita o website ou segue no Instagram — toda a informação num só lugar.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -1330,8 +1401,8 @@
       <div class="container owner-shell">
         <div class="owner-copy">
           <span class="eyebrow">Para donos de barbearias</span>
-          <h2>Tens uma barbearia?</h2>
-          <p>Adiciona a tua barbearia ao mapa e partilha os dados principais com novos clientes.</p>
+          <h2>Tens uma barbearia? Faz-te encontrar com mais facilidade</h2>
+          <p>Adiciona ou atualiza a tua ficha para apareceres no mapa com morada, contactos e links úteis para novos clientes.</p>
           <div class="owner-actions">
             <a class="btn btn-primary" href="registar.html">Adicionar ou atualizar barbearia</a>
             <a class="btn btn-secondary" href="faq.html">Ver FAQ</a>
@@ -1351,21 +1422,39 @@
             <strong>Atualização fácil</strong>
             <p>Podes pedir correções sempre que precisares de mudar horários, morada ou contactos.</p>
           </article>
+          <article class="owner-point">
+            <strong>Presença mais profissional</strong>
+            <p>Uma ficha completa transmite mais confiança e destaca-te de entradas sem informação.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="store-strip">
+        <div class="section-header">
           <div>
-            <span class="eyebrow">Loja</span>
-            <h3>Loja e Revista OndeCortar</h3>
-            <p>Na loja encontras produtos relacionados com o universo da barbearia e na Revista podes ler artigos, guias e comparações úteis.</p>
+            <span class="eyebrow">Mais do que um diretório</span>
+            <h2>Compra melhor. Decide melhor.</h2>
+            <p>A loja e a revista complementam o diretório para que tires o máximo do OndeCortar.</p>
           </div>
-          <div class="hero-actions">
-            <a class="btn btn-secondary" href="loja.html">Ir para a loja</a>
-            <a class="btn btn-primary" href="revista/">Ler a Revista</a>
+        </div>
+        <div class="store-duo">
+          <div class="store-card">
+            <span class="eyebrow">Loja</span>
+            <h3>Produtos escolhidos com critério</h3>
+            <p>Máquinas, kits, navalhas e acessórios organizados por categoria. Com contexto de compra para que escolhas com mais confiança.</p>
+            <div>
+              <a class="btn btn-secondary" href="loja.html">Ver loja de produtos</a>
+            </div>
+          </div>
+          <div class="store-card">
+            <span class="eyebrow">Revista</span>
+            <h3>Artigos que ajudam a decidir</h3>
+            <p>Guias de compra, comparações e artigos úteis para quem quer perceber antes de comprar e cuidar melhor.</p>
+            <div>
+              <a class="btn btn-primary" href="revista/">Ler a Revista</a>
+            </div>
           </div>
         </div>
       </div>
@@ -1430,17 +1519,9 @@
       const heroCities = document.getElementById("heroCities");
       const directoryCities = document.getElementById("directoryCities");
       const totalTargets = document.querySelectorAll("[data-barbearias-total]");
-      const cityTargets = document.querySelectorAll("[data-cidades-total]");
-      const contactTargets = document.querySelectorAll("[data-contactos-total]");
 
       totalTargets.forEach(function(target) {
         target.textContent = stats.total;
-      });
-      cityTargets.forEach(function(target) {
-        target.textContent = stats.cities;
-      });
-      contactTargets.forEach(function(target) {
-        target.textContent = stats.contacts;
       });
 
       renderCityChips(heroCities, popularCities.slice(0, 6));
