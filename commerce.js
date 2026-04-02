@@ -45,12 +45,12 @@
   const articleMap = new Map(articles.map(function(item) { return [item.slug, item]; }));
   const hubMap = new Map(hubs.map(function(item) { return [item.slug, item]; }));
   const editorialCategoryPaths = {
-    "maquinas-de-cortar": "maquinas.html",
-    "kits-de-barba": "kits.html",
-    "cremes-e-espumas": "cremes.html",
-    "navalhas-e-laminas": "navalhas.html",
-    "escovas-e-pentes": "escovas.html",
-    "acessorios-de-barbeiro": "acessorios.html"
+    "maquinas-de-cortar": "loja/maquinas-de-cortar/",
+    "kits-de-barba": "loja/kits-de-barba/",
+    "cremes-e-espumas": "loja/cremes-e-espumas/",
+    "navalhas-e-laminas": "loja/navalhas-e-laminas/",
+    "escovas-e-pentes": "loja/escovas-e-pentes/",
+    "acessorios-de-barbeiro": "loja/acessorios-de-barbeiro/"
   };
 
   function e(text) {
