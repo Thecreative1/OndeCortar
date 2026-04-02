@@ -302,7 +302,7 @@
         "A entrada comunica logo que é uma barbearia?",
         "A iluminação exterior está a ajudar ou a esconder o espaço?"
       ],
-      relatedProducts: ["poste-barbeiro-led", "colcolo-organizador", "uraqt-capa"],
+      relatedProducts: ["wdzd-poste-barbeiro-dourado", "wdzd-poste-barbeiro-prateado", "poste-barbeiro-seta-luminosa"],
       relatedArticles: ["o-que-um-barbeiro-precisa-no-posto-de-trabalho", "como-limpar-uma-maquina-de-cortar-cabelo"],
       faqs: [
         [

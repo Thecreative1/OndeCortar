@@ -98,13 +98,13 @@
     {
       slug: "acessorios-de-barbeiro",
       title: "Acessórios de barbeiro",
-      intro: "Peças de apoio para bancada, higiene, manutenção e rotina de trabalho mais organizada.",
-      top: ["colcolo-organizador", "uraqt-capa", "luz-anel-led"],
-      picks: [["Melhor para bancada", "colcolo-organizador"], ["Melhor básico de serviço", "uraqt-capa"], ["Melhor para conteúdo", "luz-anel-led"]],
-      articles: ["o-essencial-para-manter-uma-bancada-de-barbeiro-organizada", "como-manter-a-maquina-de-cortar-cabelo-a-funcionar-bem-por-mais-tempo"],
+      intro: "Peças de apoio para bancada, fachada, higiene, manutenção e uma rotina de trabalho mais organizada.",
+      top: ["wdzd-poste-barbeiro-dourado", "wdzd-poste-barbeiro-prateado", "poste-barbeiro-seta-luminosa"],
+      picks: [["Melhor presença premium", "wdzd-poste-barbeiro-dourado"], ["Melhor visual classico", "wdzd-poste-barbeiro-prateado"], ["Melhor para fachada", "poste-barbeiro-seta-luminosa"]],
+      articles: ["historia-do-poste-de-barbeiro", "o-essencial-para-manter-uma-bancada-de-barbeiro-organizada", "como-manter-a-maquina-de-cortar-cabelo-a-funcionar-bem-por-mais-tempo"],
       faqs: [
-        ["Acessórios fazem mesmo diferença numa barbearia?", "Fazem quando resolvem problemas concretos de bancada, higiene, acesso e apresentação do serviço."],
-        ["O que costuma ter impacto mais imediato?", "Organização, limpeza rápida e peças que reduzem fricção no atendimento."]
+        ["Acessórios fazem mesmo diferença numa barbearia?", "Fazem quando resolvem problemas concretos de bancada, higiene, acesso, fachada e apresentação do serviço."],
+        ["O que costuma ter impacto mais imediato?", "Organização, limpeza rápida e sinalética exterior fácil de reconhecer costumam criar efeito visível mais depressa."]
       ]
     },
     {
