@@ -464,8 +464,8 @@
         '<section class="section store-intro-section"><div class="container">' +
           '<div class="hero-card store-hero-compact">' +
             '<span class="section-flag">Loja OndeCortar</span>' +
-            '<h1>Loja editorial para escolher melhor antes de comprar</h1>' +
-            '<p>Explora categorias com contexto, produtos recomendados e ligação direta à Revista para comprares com mais critério e menos ruído.</p>' +
+            '<h1>Escolhe por categoria e encontra recomendações diretas</h1>' +
+            '<p>Explora categorias selecionadas para barba, cabelo e acessórios com links afiliados identificados.</p>' +
             '<div class="hero-actions">' +
               '<a class="btn btn-primary" href="#categorias">Comprar por categoria</a>' +
               '<a class="btn btn-secondary" href="' + href("revista/") + '">Ler guias e comparações</a>' +
