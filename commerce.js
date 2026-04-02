@@ -210,10 +210,10 @@
       '<article class="category-card">' +
         (withImage && lead ? '<div class="category-thumb"><img src="' + href(lead.image) + '" alt="' + e(lead.alt) + '" loading="lazy" /></div>' : "") +
         '<div class="product-copy">' +
-          '<div class="meta-row"><span class="tag">' + count + " seleções</span></div>" +
+          '<div class="meta-row"><span class="tag">' + count + " produtos</span></div>" +
           "<h3>" + e(category.title) + "</h3>" +
           "<p>" + e(category.intro) + "</p>" +
-          '<div class="card-actions"><a class="btn btn-secondary btn-small" href="' + categoryHref(category.slug) + '">Ver categoria</a></div>' +
+          '<div class="card-actions"><a class="btn btn-primary btn-small" href="' + categoryHref(category.slug) + '">Explorar categoria</a></div>' +
         "</div>" +
       "</article>"
     );
@@ -338,37 +338,24 @@
       const product = productMap.get(item[1]);
       return '<div class="comparison-row"><strong>' + e(item[0]) + '</strong><div><h3>' + e(product.name) + '</h3><p>' + e(product.summary) + '</p></div><a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Ver recomendação</a></div>';
     }).join("");
-    const shelfProducts = getProducts(["wahl-super-taper", "viking-sandalwood", "beardburys-spray"]);
     return (
       renderHeader() +
       '<main>' +
-        '<section class="section"><div class="container hero-card"><div class="hero-grid">' +
-          '<div class="hero-copy">' +
+        '<section class="section store-intro-section"><div class="container">' +
+          '<div class="hero-card store-hero-compact">' +
             '<span class="section-flag">Loja OndeCortar</span>' +
-            '<h1>Escolhe melhor. Compra com confiança.</h1>' +
-            '<p>Seleção direta de máquinas, kits, navalhas e acessórios para comprares sem perder tempo em dezenas de páginas.</p>' +
-            '<div class="hero-actions"><a class="btn btn-primary" href="#produtos">Ver recomendações</a><a class="btn btn-secondary" href="' + href("revista/") + '">Ler guias de compra</a></div>' +
-            '<div class="hero-trust"><span class="pill">Compra final na Amazon.es com links afiliados identificados</span></div>' +
-            '<div class="store-metrics">' +
-              '<article class="store-metric"><strong>' + products.length + '</strong><span>opções prontas a comprar</span></article>' +
-              '<article class="store-metric"><strong>' + categories.length + '</strong><span>categorias de decisão</span></article>' +
-              '<article class="store-metric"><strong>' + articles.length + '</strong><span>guias para acelerar a escolha</span></article>' +
+            '<h1>Loja de produtos de barbearia</h1>' +
+            '<p>Explora categorias selecionadas para barba, cabelo, manutenção e acessórios. Compra direta na Amazon.es com links identificados.</p>' +
+            '<div class="hero-actions">' +
+              '<a class="btn btn-primary" href="#categorias">Comprar por categoria</a>' +
+              '<a class="btn btn-secondary" href="' + href("revista/") + '">Ler guias de compra</a>' +
             '</div>' +
-          "</div>" +
-          '<div class="hero-side shop-strip">' +
-            '<div class="store-note"><strong>Escolhas rápidas para começar</strong><p>Selecionámos três opções com perfis diferentes para encontrares mais depressa a que faz sentido para ti.</p></div>' +
-            '<div class="shop-mini-grid">' + shelfProducts.map(renderMiniProduct).join("") + '</div>' +
-          "</div>" +
-        "</div></div></section>" +
-        '<section class="section"><div class="container trust-grid">' +
-          '<article class="editorial-card"><h3>Só o que vale a pena</h3><p>Seleção curta para chegares rápido a uma boa compra.</p></article>' +
-          '<article class="editorial-card"><h3>Compra sem fricção</h3><p>Botões diretos para Amazon.es, sem preços manuais desatualizados.</p></article>' +
-          '<article class="editorial-card"><h3>Decisão mais rápida</h3><p>Guias e comparações para escolher com mais certeza.</p></article>' +
-          '<article class="editorial-card"><h3>Afiliado transparente</h3><p>Links identificados e política clara em todas as páginas comerciais.</p></article>' +
+            '<div class="hero-trust"><span class="pill">Links afiliados identificados em todas as páginas comerciais</span></div>' +
+          '</div>' +
         '</div></section>' +
+        '<section class="section" id="categorias"><div class="container"><div class="section-header"><div><span class="eyebrow">Categorias</span><h2>Comprar por categoria</h2><p>Vai direto ao tipo de produto que queres, sem desvios.</p></div></div><div class="category-grid">' + categoryCards + '</div></div></section>' +
         '<section class="section" id="produtos"><div class="container"><div class="section-header"><div><span class="eyebrow">Mais procurados</span><h2>Top recomendações para comprar hoje</h2><p>Quatro recomendações para começares a compra sem perder tempo.</p></div></div><div class="featured-grid">' + featured + '</div></div></section>' +
         '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Por necessidade</span><h2>Explorar por necessidade</h2><p>Uma primeira camada para encontrar mais depressa o que faz sentido.</p></div></div><div class="need-grid">' + needCards + '</div></div></section>' +
-        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Categorias</span><h2>Comprar por categoria</h2><p>Vai direto ao tipo de produto que queres, sem desvios.</p></div></div><div class="category-grid">' + categoryCards + '</div></div></section>' +
         '<section class="section"><div class="container comparison-card"><div class="section-header"><div><span class="eyebrow">Comparações rápidas</span><h2>Compara e decide em minutos</h2><p>Quatro atalhos para chegares ao produto certo mais depressa.</p></div></div><div class="comparison-table">' + comparisonRows + '</div></div></section>' +
         renderWhyBuy() +
         renderRelatedArticles("Guias para comprar melhor", articles.slice(0, 6).map(function(item) { return item.slug; })) +
