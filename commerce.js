@@ -102,6 +102,8 @@
         targetUrl.searchParams.set("tag", "ondecortarp0c-21");
       }
 
+      targetUrl.searchParams.set("language", "pt_PT");
+
       return targetUrl.toString();
     } catch (error) {
       return value;
