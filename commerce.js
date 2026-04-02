@@ -444,11 +444,9 @@
       { label: "Oleos e cuidados", slug: "oleos-e-balms" },
       { label: "Acessorios", slug: "acessorios-de-barbeiro" }
     ].map(function(item) {
-      const category = categoryMap.get(item.slug);
       return (
         '<a class="store-hero-quick-link" href="' + categoryHref(item.slug) + '">' +
           '<span class="store-hero-quick-label">' + e(item.label) + '</span>' +
-          '<span class="store-hero-quick-meta">' + e(category ? category.title : "Categoria da loja") + '</span>' +
         '</a>'
       );
     }).join("");
@@ -481,8 +479,8 @@
           '<div class="store-hero-grid">' +
             '<div class="hero-card store-hero-main-card">' +
               '<span class="section-flag">LOJA ONDECORTAR</span>' +
-              '<h1>Comprar produtos de barbearia por categoria</h1>' +
-              '<p>Entra direto em maquinas, barba, acessorios e guias com links afiliados identificados.</p>' +
+              '<h1>Comprar por categoria</h1>' +
+              '<p>Vai direto a maquinas, barba, acessorios e guias com links afiliados identificados.</p>' +
               '<div class="hero-actions">' +
                 '<a class="btn btn-primary" href="#categorias">Comprar por categoria</a>' +
                 '<a class="btn btn-secondary" href="' + href("revista/") + '">Ler guias e comparacoes</a>' +
@@ -491,15 +489,14 @@
             '</div>' +
             '<aside class="hero-card store-hero-side-card">' +
               '<div class="store-hero-side-copy">' +
-                '<span class="eyebrow">Explora por tipo</span>' +
                 '<h2>Explora por tipo</h2>' +
-                '<p>Vai direto ao tipo de produto que procuras, sem perder tempo.</p>' +
+                '<p>Escolhe uma categoria e entra direto no que procuras.</p>' +
               '</div>' +
               '<div class="store-hero-quick-grid">' + heroQuickLinks + '</div>' +
             '</aside>' +
           '</div>' +
         '</div></section>' +
-        '<section class="section" id="categorias"><div class="container"><div class="section-header"><div><span class="eyebrow">Categorias</span><h2>Comprar por categoria</h2><p>Vai direto ao tipo de produto que queres, sem desvios.</p></div></div><div class="category-grid">' + categoryCards + '</div></div></section>' +
+        '<section class="section" id="categorias"><div class="container"><div class="store-category-topline"><span class="eyebrow">Categorias</span></div><div class="category-grid">' + categoryCards + '</div></div></section>' +
         '<section class="section" id="produtos"><div class="container"><div class="section-header"><div><span class="eyebrow">Mais procurados</span><h2>Top recomendações para comprar hoje</h2><p>Quatro recomendações para começares a compra sem perder tempo.</p></div></div><div class="featured-grid">' + featured + '</div></div></section>' +
         '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Por necessidade</span><h2>Explorar por necessidade</h2><p>Uma primeira camada para encontrar mais depressa o que faz sentido.</p></div></div><div class="need-grid">' + needCards + '</div></div></section>' +
         '<section class="section"><div class="container comparison-card"><div class="section-header"><div><span class="eyebrow">Comparações rápidas</span><h2>Compara e decide em minutos</h2><p>Quatro atalhos para chegares ao produto certo mais depressa.</p></div></div><div class="comparison-table">' + comparisonRows + '</div></div></section>' +

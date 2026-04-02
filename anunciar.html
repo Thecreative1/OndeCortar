@@ -74,8 +74,6 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      font-weight: 800;
-      letter-spacing: 0.02em;
       min-width: 0;
     }
 
@@ -88,8 +86,18 @@
       box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
     }
 
-    .brand span {
-      font-size: 1.05rem;
+    .brand-text {
+      display: grid;
+      gap: 3px;
+    }
+
+    .brand-text strong {
+      font-size: 1rem;
+    }
+
+    .brand-text span {
+      font-size: 0.82rem;
+      color: #c1c1c1;
     }
 
     .nav-links {
@@ -100,11 +108,20 @@
       color: var(--muted);
     }
 
-    .nav-links a:hover {
+    .nav-links a {
+      min-height: 42px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.nav-link-active {
+      background: rgba(255, 196, 0, 0.1);
       color: var(--text);
     }
 
-    .nav-store {
+    .nav-cta {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -298,8 +315,8 @@
         text-align: center;
       }
 
-      .nav-store,
-      .nav-links a.nav-store {
+      .nav-cta,
+      .nav-links a.nav-cta {
         width: 100%;
       }
 
@@ -328,14 +345,20 @@
     <header class="site-header">
       <nav class="nav">
         <a class="brand" href="index.html">
-          <img class="brand-logo" src="favicon.ico" alt="Logo OndeCortar.pt" />
-          <span>OndeCortar.pt</span>
+          <img class="brand-logo" src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
+          <span class="brand-text">
+            <strong>OndeCortar.pt</strong>
+            <span>Barbearias em Portugal</span>
+          </span>
         </a>
         <div class="nav-links">
-          <a href="index.html#pesquisa">Mapa</a>
+          <a href="index.html#explorar">Explorar</a>
+          <a href="index.html#cidades">Cidades</a>
           <a href="registar.html">Adicionar barbearia</a>
+          <a href="loja.html">Loja</a>
+          <a href="revista/">Revista</a>
           <a href="faq.html">FAQ</a>
-          <a class="nav-store" href="loja.html">Ver loja</a>
+          <a class="nav-cta" href="index.html#mapa">Voltar ao mapa</a>
         </div>
       </nav>
     </header>
