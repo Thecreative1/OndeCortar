@@ -66,6 +66,10 @@
     return /^https?:/i.test(path) ? path : root + path;
   }
 
+  function absoluteUrl(path) {
+    return /^https?:/i.test(path) ? path : "https://ondecortar.pt/" + String(path || "").replace(/^\/+/, "");
+  }
+
   function categoryHref(value) {
     return href("loja/" + value + "/");
   }
@@ -93,7 +97,7 @@
   }
 
   function productHref(value) {
-    return href("produto.html?slug=" + encodeURIComponent(value));
+    return href("produto/" + encodeURIComponent(value) + "/");
   }
 
   function amazonPtUrl(value) {
@@ -433,9 +437,32 @@
   }
 
   function renderStoreHome() {
-    setMeta("Loja OndeCortar | Produtos de barbearia escolhidos com critério", "Loja OndeCortar com máquinas, kits, navalhas e acessórios recomendados.", "https://ondecortar.pt/loja/");
-    setStructuredData([]);
+    const canonical = "https://ondecortar.pt/loja/";
+    setMeta("Loja OndeCortar | Produtos de barbearia escolhidos com critério", "Loja OndeCortar com máquinas, kits, navalhas e acessórios recomendados.", canonical);
     const featuredArticles = coreArticles().slice(0, 6);
+    setStructuredData([
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Loja OndeCortar",
+        "description": "Loja OndeCortar com máquinas, kits, navalhas e acessórios recomendados.",
+        "url": canonical
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Produtos em destaque da Loja OndeCortar",
+        "itemListElement": featuredPicks.map(function(item, index) {
+          const product = productMap.get(item.product);
+          return {
+            "@type": "ListItem",
+            "position": index + 1,
+            "url": "https://ondecortar.pt/produto/" + item.product + "/",
+            "name": product ? product.name : item.product
+          };
+        })
+      }
+    ]);
     const heroQuickLinks = [
       { label: "Maquinas de cortar", slug: "maquinas-de-cortar" },
       { label: "Kits de barba", slug: "kits-de-barba" },
@@ -505,10 +532,40 @@
   function renderCategoryPage(value) {
     const category = categoryMap.get(value);
     if (!category) return renderNotFound("Categoria não encontrada");
-    setMeta(category.title + " | Loja OndeCortar", category.intro, "https://ondecortar.pt/loja/" + value + "/");
-    setStructuredData([]);
+    const canonical = "https://ondecortar.pt/loja/" + value + "/";
+    setMeta(category.title + " | Loja OndeCortar", category.intro, canonical);
     const topProducts = getProducts(category.top);
     const leadArticle = getArticles(category.articles || [])[0] || null;
+    setStructuredData([
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": category.title,
+        "description": category.intro,
+        "url": canonical
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Loja", "item": "https://ondecortar.pt/loja/" },
+          { "@type": "ListItem", "position": 2, "name": category.title, "item": canonical }
+        ]
+      }
+    ].concat(category.faqs && category.faqs.length ? [{
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": category.faqs.map(function(item) {
+        return {
+          "@type": "Question",
+          "name": item[0],
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item[1]
+          }
+        };
+      })
+    }] : []));
     const comparisonRows = (category.picks || []).map(function(item) {
       const product = productMap.get(item[1]);
       return '<div class="comparison-row"><strong>' + e(item[0]) + '</strong><div><h3>' + e(product.name) + '</h3><p>' + e(product.summary) + '</p></div><a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Ver recomendação</a></div>';
@@ -535,8 +592,31 @@
   function renderProductPage(value) {
     const product = productMap.get(value);
     if (!product) return renderNotFound("Produto não encontrado");
-    setMeta(product.name + " | Recomendação OndeCortar", product.summary, "https://ondecortar.pt/produto.html?slug=" + encodeURIComponent(value));
-    setStructuredData([]);
+    const canonical = "https://ondecortar.pt/produto/" + encodeURIComponent(value) + "/";
+    setMeta(product.name + " | Recomendação OndeCortar", product.summary, canonical);
+    setStructuredData([
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": product.name,
+        "description": product.summary,
+        "image": absoluteUrl(product.image),
+        "url": canonical,
+        "category": (product.categories || []).map(function(item) {
+          const category = categoryMap.get(item);
+          return category ? category.title : item;
+        }).join(", ")
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Loja", "item": "https://ondecortar.pt/loja/" },
+          { "@type": "ListItem", "position": 2, "name": product.categories && product.categories[0] && categoryMap.get(product.categories[0]) ? categoryMap.get(product.categories[0]).title : "Produtos", "item": product.categories && product.categories[0] ? ("https://ondecortar.pt/loja/" + product.categories[0] + "/") : "https://ondecortar.pt/loja/" },
+          { "@type": "ListItem", "position": 3, "name": product.name, "item": canonical }
+        ]
+      }
+    ]);
     const leadStrength = (product.strengths && product.strengths[0]) ? product.strengths[0] : "";
     const secondStrength = (product.strengths && product.strengths[1]) ? product.strengths[1] : leadStrength;
     const leadGuideSlug = (product.articles && product.articles[0]) ? product.articles[0] : "";
@@ -573,8 +653,30 @@
   function renderMagazineHome() {
     const mainHubs = hubs.filter(function(item) { return !item.legacy; });
     const featured = coreArticles();
-    setMeta("Revista OndeCortar | Guias de compra, comparações e artigos para escolher melhor", "Revista OndeCortar com guias de compra, comparações e artigos práticos ligados às categorias da loja.", "https://ondecortar.pt/revista/");
-    setStructuredData([]);
+    const canonical = "https://ondecortar.pt/revista/";
+    setMeta("Revista OndeCortar | Guias de compra, comparações e artigos para escolher melhor", "Revista OndeCortar com guias de compra, comparações e artigos práticos ligados às categorias da loja.", canonical);
+    setStructuredData([
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Revista OndeCortar",
+        "description": "Revista OndeCortar com guias de compra, comparações e artigos práticos ligados às categorias da loja.",
+        "url": canonical
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Artigos em destaque da Revista OndeCortar",
+        "itemListElement": featured.map(function(article, index) {
+          return {
+            "@type": "ListItem",
+            "position": index + 1,
+            "url": "https://ondecortar.pt/revista/" + article.slug + "/",
+            "name": article.title
+          };
+        })
+      }
+    ]);
     return (
       renderHeader() +
       '<main>' +
@@ -592,10 +694,27 @@
   function renderHubPage(value) {
     const hub = hubMap.get(value);
     if (!hub) return renderNotFound("Secção não encontrada");
-    setMeta(hub.title + " | Revista OndeCortar", hub.intro, "https://ondecortar.pt/revista/" + value + "/");
-    setStructuredData([]);
+    const canonical = "https://ondecortar.pt/revista/" + value + "/";
+    setMeta(hub.title + " | Revista OndeCortar", hub.intro, canonical);
     const hubArticles = getArticles(hub.articles);
     const hubCategories = (hub.categories || []).map(function(item) { return categoryMap.get(item); }).filter(Boolean);
+    setStructuredData([
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": hub.title,
+        "description": hub.intro,
+        "url": canonical
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Revista", "item": "https://ondecortar.pt/revista/" },
+          { "@type": "ListItem", "position": 2, "name": hub.title, "item": canonical }
+        ]
+      }
+    ]);
     return (
       renderHeader() +
       '<main>' +

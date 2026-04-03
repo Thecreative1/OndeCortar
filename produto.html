@@ -3,28 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#516255" />
-  <title>Produto | OndeCortar.pt</title>
-  <meta name="description" content="Página de produto recomendada na loja editorial do OndeCortar." />
-  <link rel="canonical" href="https://ondecortar.pt/produto.html" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <meta property="og:title" content="Produto | OndeCortar.pt" />
-  <meta property="og:description" content="Página de produto recomendada na loja editorial do OndeCortar." />
-  <meta property="og:url" content="https://ondecortar.pt/produto.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://ondecortar.pt/imagens/banner.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="commerce.css?v=20260403-shop-10" />
+  <title>Redirecionar produto | OndeCortar.pt</title>
+  <meta name="robots" content="noindex,follow" />
+  <link rel="canonical" href="https://ondecortar.pt/loja/" />
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var slug = params.get("slug");
+      if (slug) {
+        window.location.replace("https://ondecortar.pt/produto/" + encodeURIComponent(slug) + "/");
+      }
+    })();
+  </script>
 </head>
-<body data-page="product" data-root="">
-  <div id="app" class="page-shell"></div>
-  <script src="commerce-products-a.js?v=20260403-shop-10"></script>
-  <script src="commerce-products-b.js?v=20260403-shop-10"></script>
-  <script src="commerce-taxonomy.js?v=20260403-shop-10"></script>
-  <script src="commerce-articles.js?v=20260403-shop-10"></script>
-  <script src="commerce.js?v=20260403-shop-10"></script>
+<body>
+  <p>Este link de produto mudou. <a id="produto-fallback" href="https://ondecortar.pt/loja/">Ir para a loja</a>.</p>
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var slug = params.get("slug");
+      if (!slug) return;
+      var target = "https://ondecortar.pt/produto/" + encodeURIComponent(slug) + "/";
+      var link = document.getElementById("produto-fallback");
+      if (link) {
+        link.href = target;
+        link.textContent = target;
+      }
+    })();
+  </script>
 </body>
 </html>
