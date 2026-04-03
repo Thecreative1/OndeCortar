@@ -188,10 +188,10 @@
           '<a href="' + href("index.html#explorar") + '">Explorar</a>' +
           '<a href="' + href("index.html#cidades") + '">Cidades</a>' +
           '<a href="' + href("registar.html") + '">Adicionar barbearia</a>' +
-          '<a class="' + (section === "loja" ? "is-current" : "") + '" href="' + href("loja.html") + '">Loja</a>' +
+          '<a class="' + (section === "loja" ? "is-current" : "") + '" href="' + href("loja/") + '">Loja</a>' +
           '<a class="' + (section === "revista" ? "is-current" : "") + '" href="' + href("revista/") + '">Revista</a>' +
           '<a href="' + href("faq.html") + '">FAQ</a>' +
-          '<a class="nav-cta" href="' + (section === "revista" ? href("revista/") : href("loja.html")) + '">' + e(ctaLabel) + '</a>' +
+          '<a class="nav-cta" href="' + (section === "revista" ? href("revista/") : href("loja/")) + '">' + e(ctaLabel) + '</a>' +
         "</div>" +
       "</nav></div></header>"
     );
@@ -205,7 +205,7 @@
           "<p>Produtos recomendados e artigos úteis para escolher melhor antes de comprar.</p>" +
         "</div>" +
         '<div class="footer-links">' +
-          '<a href="' + href("loja.html") + '">Loja</a>' +
+          '<a href="' + href("loja/") + '">Loja</a>' +
           '<a href="' + href("revista/") + '">Revista</a>' +
           '<a href="' + href("index.html#explorar") + '">Mapa</a>' +
           '<a href="' + href("faq.html") + '">FAQ</a>' +
@@ -433,7 +433,7 @@
   }
 
   function renderStoreHome() {
-    setMeta("Loja OndeCortar | Produtos de barbearia escolhidos com critério", "Loja OndeCortar com máquinas, kits, navalhas e acessórios recomendados.", "https://ondecortar.pt/loja.html");
+    setMeta("Loja OndeCortar | Produtos de barbearia escolhidos com critério", "Loja OndeCortar com máquinas, kits, navalhas e acessórios recomendados.", "https://ondecortar.pt/loja/");
     setStructuredData([]);
     const featuredArticles = coreArticles().slice(0, 6);
     const heroQuickLinks = [
@@ -517,7 +517,7 @@
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container hero-card"><div class="hero-grid">' +
-          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja.html") + '">Loja</a><span>/</span><span>' + e(category.title) + '</span></div><span class="section-flag">Categoria da loja</span><h1>' + e(category.title) + '</h1><p>' + e(category.intro) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#top3">Ver top 3 da categoria</a>' + (leadArticle ? '<a class="btn btn-secondary" href="' + articleHref(leadArticle.slug) + '">Ler guia principal</a>' : "") + '</div></div>' +
+          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja/") + '">Loja</a><span>/</span><span>' + e(category.title) + '</span></div><span class="section-flag">Categoria da loja</span><h1>' + e(category.title) + '</h1><p>' + e(category.intro) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#top3">Ver top 3 da categoria</a>' + (leadArticle ? '<a class="btn btn-secondary" href="' + articleHref(leadArticle.slug) + '">Ler guia principal</a>' : "") + '</div></div>' +
           '<div class="hero-side"><div class="shop-mini-grid">' + topProducts.slice(0, 2).map(renderMiniProduct).join("") + '</div><div class="store-note"><strong>Escolha mais rápida</strong><p>Selecionámos poucas opções para decidires sem te perderes em excesso de oferta.</p></div></div>' +
         '</div></div></section>' +
         (leadArticle ? '<section class="section"><div class="container callout-card article-category-bridge"><span class="eyebrow">Guia editorial</span><h2>' + e(leadArticle.title) + '</h2><p>' + e(leadArticle.excerpt) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + articleHref(leadArticle.slug) + '">Ler guia relacionado</a><a class="btn btn-secondary" href="' + editorialCategoryHref(category.slug) + '">Ver seleção completa</a></div></div></section>' : "") +
@@ -548,7 +548,7 @@
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container hero-card"><div class="hero-grid">' +
-          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja.html") + '">Loja</a><span>/</span><span>' + e(product.name) + '</span></div><span class="section-flag">Produto recomendado</span><span class="eyebrow">' + e(product.bestFor) + '</span><h1>' + e(product.name) + '</h1><p>' + e(product.summary) + " " + e(product.useCase) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver na Amazon.es</a><a class="btn btn-secondary" href="' + categoryHref(product.categories[0]) + '">Ver categoria</a></div><div class="product-hero-panel"><strong>Antes de comprar</strong><ul class="rich-list"><li>Melhor para: ' + e(product.bestFor) + '</li><li>Ponto forte: ' + e(leadStrength || product.summary) + '</li><li>Vantagem adicional: ' + e(secondStrength || product.useCase) + '</li></ul><div class="card-actions">' + (leadGuide ? '<a class="btn btn-soft btn-small" href="' + articleHref(leadGuide.slug) + '">Ler guia relacionado</a>' : "") + '<a class="btn btn-secondary btn-small" href="#relacionados">Comparar semelhantes</a></div></div></div>' +
+          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja/") + '">Loja</a><span>/</span><span>' + e(product.name) + '</span></div><span class="section-flag">Produto recomendado</span><span class="eyebrow">' + e(product.bestFor) + '</span><h1>' + e(product.name) + '</h1><p>' + e(product.summary) + " " + e(product.useCase) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver na Amazon.es</a><a class="btn btn-secondary" href="' + categoryHref(product.categories[0]) + '">Ver categoria</a></div><div class="product-hero-panel"><strong>Antes de comprar</strong><ul class="rich-list"><li>Melhor para: ' + e(product.bestFor) + '</li><li>Ponto forte: ' + e(leadStrength || product.summary) + '</li><li>Vantagem adicional: ' + e(secondStrength || product.useCase) + '</li></ul><div class="card-actions">' + (leadGuide ? '<a class="btn btn-soft btn-small" href="' + articleHref(leadGuide.slug) + '">Ler guia relacionado</a>' : "") + '<a class="btn btn-secondary btn-small" href="#relacionados">Comparar semelhantes</a></div></div></div>' +
       '<div class="hero-side"><div class="product-stage"><img src="' + href(product.image) + '" alt="' + e(product.alt) + '" loading="lazy" /></div><div class="store-note"><strong>Compra com mais confiança</strong><p>Destacamos este produto pelo equilíbrio entre uso real, procura e feedback de compradores para te ajudar a decidir mais depressa.</p></div></div>' +
         '</div></div></section>' +
         '<section class="section"><div class="container split-grid">' +
@@ -672,7 +672,7 @@
   function renderNotFound(label) {
     setMeta("Página não encontrada | OndeCortar", "A página pedida não está disponível.", window.location.href);
     setStructuredData([]);
-    return renderHeader() + '<main><section class="section"><div class="container callout-card"><h1>' + e(label) + '</h1><p>Volta à loja ou à revista para continuares a navegar.</p><div class="hero-actions"><a class="btn btn-primary" href="' + href("loja.html") + '">Ir para a loja</a><a class="btn btn-secondary" href="' + href("revista/") + '">Ir para a revista</a></div></div></section></main>' + renderFooter();
+    return renderHeader() + '<main><section class="section"><div class="container callout-card"><h1>' + e(label) + '</h1><p>Volta à loja ou à revista para continuares a navegar.</p><div class="hero-actions"><a class="btn btn-primary" href="' + href("loja/") + '">Ir para a loja</a><a class="btn btn-secondary" href="' + href("revista/") + '">Ir para a revista</a></div></div></section></main>' + renderFooter();
   }
 
   if (page === "store") app.innerHTML = renderStoreHome();
