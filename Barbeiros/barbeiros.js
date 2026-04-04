@@ -210,6 +210,13 @@ const barbearias = [
     coords: [40.6434, -8.6538]
   },
   {
+    nome: "Barbearia RickGino1",
+    morada: "Av. Independência das Colónias 19, Lisboa",
+    telefone: "+351 934 892 154",
+    instagram: "https://www.instagram.com/barbearia_rickgino/",
+    observacoes: "Seg-Sáb"
+  },
+  {
     nome: "Barbearia Moura – Espinho",
     morada: "Rua 23, 4500-276 Espinho",
     telefone: "+351 227 310 426",
@@ -277,6 +284,34 @@ const barbearias = [
   coords: [37.0194, -7.9304]
 },
 {
+  nome: "CJ Barbearia",
+  morada: "Faro",
+  telefone: "+351 939 501 816",
+  instagram: "https://www.instagram.com/cj_barberia_faro/",
+  observacoes: "Segunda a sábado 09:00–21:00"
+},
+{
+  nome: "J.L Barber's Faro",
+  morada: "Faro",
+  telefone: "+351 289 804 114",
+  instagram: "https://www.instagram.com/jlbarbersfaro/",
+  observacoes: "Aberto todos os dias"
+},
+{
+  nome: "Barbearia Evandro Garcia",
+  morada: "Faro",
+  telefone: "+351 289 042 683",
+  instagram: "https://www.instagram.com/barbearia_evandro_garcia_1/",
+  observacoes: "Barbearia e tatuagem"
+},
+{
+  nome: "O Profeta Barbearia",
+  morada: "Rua Doutor José de Matos 33, Faro",
+  telefone: "",
+  instagram: "https://www.instagram.com/oprofetabarber/",
+  observacoes: "Barbearia moderna"
+},
+{
   nome: "The Barbers",
   morada: "Mar Shopping Algarve, Avenida do Algarve Loja 1.38, 8135-185 Almancil",
   telefone: "+351 289 992 084",
@@ -306,6 +341,27 @@ const barbearias = [
   telefone: "+351 265 123 456",
   website: "https://www.barbeariaclassicasetubal.pt/",
   coords: [38.5244, -8.8882]
+},
+{
+  nome: "Lucas Black Barbearia",
+  morada: "Rua Dr. António Rodrigues Manito 143, Setúbal",
+  telefone: "+351 913 887 639",
+  instagram: "https://www.instagram.com/lucasblack.pt/",
+  observacoes: "Freestyle e cortes modernos"
+},
+{
+  nome: "Barbearia Bueno",
+  morada: "R. António José Baptista n35, Setúbal",
+  telefone: "+351 938 389 799",
+  instagram: "https://www.instagram.com/barbearia.bueno.pt/",
+  observacoes: "Premium"
+},
+{
+  nome: "Barbearia Todi",
+  morada: "Setúbal",
+  telefone: "",
+  instagram: "https://www.instagram.com/barbeariatodi/",
+  observacoes: "Desde 2018"
 },
 {
   nome: "Barbearia Évora Style",
@@ -400,6 +456,12 @@ const barbearias = [
   telefone: "+351 296 629 000",
   coords: [37.7411, -25.6689]
 },
+{
+  nome: "Barbearia Açores Central",
+  morada: "Ponta Delgada",
+  telefone: "",
+  observacoes: "Adicionar manual depois"
+},
 
 // === AÇORES – OUTRAS ILHAS ===
 
@@ -437,6 +499,12 @@ const barbearias = [
   telefone: "+351 296 882 150",
   facebook: "https://www.facebook.com/profile.php?id=100063781357982",
   coords: [36.9658, -25.0962]
+},
+{
+  nome: "Barbearia Madeira Style",
+  morada: "Funchal",
+  telefone: "",
+  observacoes: "Adicionar manual depois"
 },
   {
   nome: "Rise barbearia",
