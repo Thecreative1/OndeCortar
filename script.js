@@ -23,13 +23,16 @@
     noTranslateMeta.setAttribute("content", "notranslate");
   }
 
-  const rawBarbers =
+  const rawBarbersSource =
     Array.isArray(window.barbearias) ? window.barbearias :
     (typeof barbearias !== "undefined" && Array.isArray(barbearias) ? barbearias : []);
 
-  if (!Array.isArray(window.barbearias) && rawBarbers.length) {
-    window.barbearias = rawBarbers;
+  if (!Array.isArray(window.barbearias) && rawBarbersSource.length) {
+    window.barbearias = rawBarbersSource;
   }
+  const rawBarbers = rawBarbersSource.filter(function(item) {
+    return item && item.mostrar_no_mapa !== false;
+  });
   const streetRegex = /(rua|r\.|avenida|av\.|praceta|pra[cç]a|largo|estrada|travessa|tv\.|rotunda|alameda|ed\.|edif|bloco|loja|shopping|centro comercial|guimaraeshopping|c\. comercial|piso|andar|n\.?º|n\.?o|bairro)/i;
   const accentPairs = [
     ["#e5efe3", "#516255"],
@@ -426,14 +429,14 @@
 
   function createBarber(raw, index) {
     const name = raw.name || raw.nome || "Barbearia";
-    const city = inferirCidade(raw.morada);
+    const city = raw.concelho || inferirCidade(raw.morada);
     const accent = getAccent(index);
     const links = normalizeLinks(raw);
     const rawPhone = String(raw.telefone || "").trim();
     const telefone = rawPhone && !isPlaceholderPhone(rawPhone) ? formatarTelefoneVisual(rawPhone) : "";
     const barber = {
       id: index + 1,
-      slug: slugify(name + "-" + city + "-" + (index + 1)),
+      slug: raw.slug || slugify(name + "-" + city + "-" + (index + 1)),
       name: name,
       city: city,
       morada: raw.morada || "",
@@ -444,7 +447,7 @@
       email: raw.email || "",
       instagram: links.instagram,
       facebook: links.facebook,
-      google: raw.google || "",
+      google: raw.google_maps || raw.google || "",
       horario: raw.horario || "",
       observacoes: raw.observacoes || "",
       coords: Array.isArray(raw.coords) ? raw.coords : null,
@@ -458,7 +461,7 @@
     barber.secondaryLink = barber.links[1] || barber.links[0] || null;
     barber.description = buildDescription(barber);
     barber.score = scoreBarber(barber);
-    barber.url = "barbearia.html?slug=" + barber.slug + "&v=20260331-6";
+    barber.url = "barbearia.html?slug=" + barber.slug + "&v=20260404-1";
 
     return barber;
   }
