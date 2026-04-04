@@ -216,19 +216,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      41.5445782,
+      -8.4222484
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/6306_bmbarbeariamonte_barbearia_82575_braga"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "M2 BARBEARIA",
@@ -246,19 +244,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      41.5440142,
+      -8.4154475
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/82575_braga"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Barbearia Fafense",
@@ -512,19 +508,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      41.4123852,
+      -8.5187543
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/s/madeixas"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Barbearia do António",
@@ -842,8 +836,8 @@ const barbearias = [
     "distrito": "Faro",
     "concelho": "Faro",
     "freguesia": "",
-    "morada": "Faro",
-    "codigo_postal": "",
+    "morada": "Largo de Camões n 3, 8000-140 Faro",
+    "codigo_postal": "8000-140",
     "telefone": "+351 289 042 683",
     "email": null,
     "website": null,
@@ -852,20 +846,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": "Barbearia e tatuagem",
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      37.0212356,
+      -7.9394749
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://www.instagram.com/barbearia_evandro_garcia_1/"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas",
-        "morada_generica"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "CJ Barbearia",
@@ -873,8 +864,8 @@ const barbearias = [
     "distrito": "Faro",
     "concelho": "Faro",
     "freguesia": "",
-    "morada": "Faro",
-    "codigo_postal": "",
+    "morada": "Largo Dr. Francisco Sá Carneiro 47, 8000-151 Faro",
+    "codigo_postal": "8000-151",
     "telefone": "+351 939 501 816",
     "email": null,
     "website": null,
@@ -883,20 +874,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": "Segunda a sábado 09:00–21:00",
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      37.0197372,
+      -7.9294337
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://www.instagram.com/cj_barberia_faro/"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas",
-        "morada_generica"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "J.L Barber's Faro",
@@ -904,7 +892,7 @@ const barbearias = [
     "distrito": "Faro",
     "concelho": "Faro",
     "freguesia": "",
-    "morada": "Faro",
+    "morada": "Estrada da Penha, Faro",
     "codigo_postal": "",
     "telefone": "+351 289 804 114",
     "email": null,
@@ -914,20 +902,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": "Aberto todos os dias",
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      37.0369368,
+      -7.924202
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://www.instagram.com/jlbarbersfaro/"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas",
-        "morada_generica"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "O Profeta Barbearia",
@@ -945,19 +930,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": "Barbearia moderna",
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      37.015459,
+      -7.9221247
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://www.instagram.com/oprofetabarber/"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Alfa Barbers - Barbearia",
@@ -975,19 +958,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      37.1058363,
+      -8.6807401
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://www.fresha.com/lp/en/bt/barbershops/in/pt-rural-faro-district/lagos"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "BarberShop Abreu",
@@ -1005,19 +986,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      37.101654,
+      -8.6796676
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://www.fresha.com/lp/en/tt/men%27s-haircuts/in/pt-rural-faro-district/lagos"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "The Barbers",
@@ -1175,19 +1154,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      39.7440009,
+      -8.8088631
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/3362_barba-negra-leiria_barbearia_141679_leiria"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Bruno César Barbeiro",
@@ -1205,19 +1182,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      39.7585654,
+      -8.802739
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/1973_bruno-cesar-barbeiro_barbearia_141679_leiria"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "EVOLUTION Men’s Salon",
@@ -1235,19 +1210,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      39.7501205,
+      -8.8140484
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/1173_evolution-mens-salon_barbearia_141679_leiria"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "The Barber House – Leiria",
@@ -1283,7 +1256,7 @@ const barbearias = [
     "distrito": "Leiria",
     "concelho": "Nazaré",
     "freguesia": "",
-    "morada": "Rua do Clube Estrela do Norte 34, Loja, 2450-027 Nazaré",
+    "morada": "R. Heróis do Ultramar 75, 2450-027 Nazaré",
     "codigo_postal": "2450-027",
     "telefone": null,
     "email": null,
@@ -1293,19 +1266,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      39.5348917,
+      -9.0842112
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/s/corte-de-cabelo/149306_porto-de-mos"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Mr. Barber Lisboa",
@@ -1323,19 +1294,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      38.7366476,
+      -9.2122405
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/172271_ramada"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Aneel barbershop",
@@ -1353,51 +1322,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      38.7365237,
+      -9.1522193
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/3412_aneel-barbershop_salao-de-cabeleireiro_157422_lisboa"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
-  },
-  {
-    "nome": "Barbearia RickGino",
-    "slug": "barbearia-rickgino",
-    "distrito": "Lisboa",
-    "concelho": "Lisboa",
-    "freguesia": "",
-    "morada": "Av. Independência das Colónias 19, Lisboa",
-    "codigo_postal": "",
-    "telefone": "+351 934 892 154",
-    "email": null,
-    "website": null,
-    "instagram": "https://www.instagram.com/barbearia_rickgino/",
-    "facebook": null,
-    "google_maps": null,
-    "horario": null,
-    "observacoes": "Seg-Sáb",
-    "coords": null,
-    "status": "incompleto",
-    "fontes": [
-      "https://www.instagram.com/barbearia_rickgino/"
-    ],
-    "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "nome": "Barbearia RickGino1",
-      "motivos": [
-        "sem_coords_validas",
-        "nome_normalizado"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Barbearia Vintage Lisboa",
@@ -1446,19 +1381,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      38.7454417,
+      -9.1997554
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/2059_casimiro-barbershop_barbearia_157422_lisboa"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Cut by André Silva",
@@ -1510,19 +1443,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      38.7415411,
+      -9.1390439
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/157422_lisboa"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Ranzulla Barbershop",
@@ -1540,19 +1471,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      38.7518765,
+      -9.189638
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/157422_lisboa"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "2685 FINEST - BARBEARIA",
@@ -1570,19 +1499,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      38.7911203,
+      -9.107702
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/167553_vale-de-figueira"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "GOLDEN HAND",
@@ -1600,19 +1527,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      38.8260696,
+      -9.1242388
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/167922_santo-antonio-dos-cavaleiros"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "JD Barbearia e Estética Feminina",
@@ -1630,19 +1555,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      38.8034669,
+      -9.121282
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/167922_santo-antonio-dos-cavaleiros"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Nobre Arte Barbearia – Torres Vedras",
@@ -1719,19 +1642,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      41.181217,
+      -8.6928984
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/2014_barbercrew-matosinhos_barbearia_203185_matosinhos"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Montes Barber /MLSG",
@@ -1749,19 +1670,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      41.181918,
+      -8.6907394
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/5068_montes-barber-mlsg_barbearia_203185_matosinhos"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Barbearia Paulo",
@@ -1812,19 +1731,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      41.1566901,
+      -8.5966365
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://www.fresha.com/nl/lvp/barbearia-porto-los-patrones-rua-aires-de-ornelas-porto-oo5lzQ"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Black Studio Bs",
@@ -1842,19 +1759,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      41.1642121,
+      -8.6241636
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/3976_black-studio-bs_barbearia_208915_porto"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "j.schwalbe.hair",
@@ -1872,19 +1787,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      41.1462621,
+      -8.6314269
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/6037_j-schwalbe-hair_barbearia_208915_porto"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Casablanca Barbershop",
@@ -1902,19 +1815,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      41.1133989,
+      -8.6149932
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/221774_vila-nova-de-gaia"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Studio Mão de Ouro",
@@ -1932,19 +1843,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      41.1072728,
+      -8.6055104
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/221774_vila-nova-de-gaia"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Barbearia Costa – Ourém",
@@ -2082,19 +1991,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      38.6033985,
+      -9.1799715
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/154702_junqueiro"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Barbearia Barreiro Elite",
@@ -2214,19 +2121,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      38.7103134,
+      -8.9857078
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://www.fresha.com/pt/lvp/cannon-barber-rua-cidade-de-ponta-delgada-montijo-vwyvnY"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Barbearia Santiago do Cacém",
@@ -2268,8 +2173,8 @@ const barbearias = [
     "distrito": "Setúbal",
     "concelho": "Setúbal",
     "freguesia": "",
-    "morada": "R. António José Baptista n35, Setúbal",
-    "codigo_postal": "",
+    "morada": "Rua António José Batista, Loja 35, 2910-400, Setúbal",
+    "codigo_postal": "2910-400",
     "telefone": "+351 938 389 799",
     "email": null,
     "website": null,
@@ -2278,19 +2183,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": "Premium",
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      38.531500005829365,
+      -8.879340000000013
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://www.instagram.com/barbearia.bueno.pt/"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Barbearia Clássica Setúbal",
@@ -2325,6 +2228,34 @@ const barbearias = [
         "telefone_placeholder"
       ]
     }
+  },
+  {
+    "nome": "Barbearia RickGino",
+    "slug": "barbearia-rickgino",
+    "distrito": "Setúbal",
+    "concelho": "Setúbal",
+    "freguesia": "",
+    "morada": "Av. da Independência das Colónias 19, loja A, 2900-407 Setúbal",
+    "codigo_postal": "2900-407",
+    "telefone": "+351 934 892 154",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbearia_rickgino/",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": "Seg-Sáb",
+    "coords": [
+      38.53344812759947,
+      -8.889120970329717
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/barbearia_rickgino/"
+    ],
+    "ultima_validacao": "2026-04-04",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Barbearia Todi",
@@ -2363,7 +2294,7 @@ const barbearias = [
     "distrito": "Setúbal",
     "concelho": "Setúbal",
     "freguesia": "",
-    "morada": "Rua Dr. António Rodrigues Manito 143, Setúbal",
+    "morada": "Avenida Doutor António Rodrigues Manito 143, Setúbal",
     "codigo_postal": "",
     "telefone": "+351 913 887 639",
     "email": null,
@@ -2373,19 +2304,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": "Freestyle e cortes modernos",
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      38.5376908,
+      -8.8944218
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://www.instagram.com/lucasblack.pt/"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Studio Fama By Fabiano The Barber",
@@ -2403,19 +2332,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      38.5342602,
+      -8.8961469
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/1187_studio-fama-by-fabiano-the-barber_barbearia_252809_setubal"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Barbearia Sines Moderna",
@@ -2615,25 +2542,23 @@ const barbearias = [
     "codigo_postal": "3500-695",
     "telefone": null,
     "email": null,
-    "website": "https://booksy.com/pt-pt/s/salao-de-cabeleireiro/279940_viseu",
+    "website": "https://booksy.com/pt-pt/5769_balder_barbearia_279940_viseu",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      40.64316391752402,
+      -7.924450526303929
+    ],
+    "status": "confirmado",
     "fontes": [
-      "https://booksy.com/pt-pt/s/salao-de-cabeleireiro/279940_viseu"
+      "https://booksy.com/pt-pt/5769_balder_barbearia_279940_viseu"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Barbearia Loureiro – Viseu",
@@ -2677,19 +2602,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      40.6602702,
+      -7.9201143
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/3467_ebenezer-barber-shop_barbearia_279940_viseu"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Rise barbearia",
@@ -2822,19 +2745,17 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
-    "coords": null,
-    "status": "incompleto",
+    "coords": [
+      32.6601652,
+      -16.9298135
+    ],
+    "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/6264_pro-style-barber-shop_barbearia_185116_funchal"
     ],
     "ultima_validacao": "2026-04-04",
-    "mostrar_no_mapa": false,
-    "qualidade_ficha": "baixa",
-    "valor_original": {
-      "motivos": [
-        "sem_coords_validas"
-      ]
-    }
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Barbearia Açores Central",

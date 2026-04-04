@@ -210,11 +210,12 @@ const barbearias = [
     coords: [40.6434, -8.6538]
   },
   {
-    nome: "Barbearia RickGino1",
-    morada: "Av. Independência das Colónias 19, Lisboa",
+    nome: "Barbearia RickGino",
+    morada: "Av. da Independência das Colónias 19, loja A, 2900-407 Setúbal",
     telefone: "+351 934 892 154",
     instagram: "https://www.instagram.com/barbearia_rickgino/",
-    observacoes: "Seg-Sáb"
+    observacoes: "Seg-Sáb",
+    coords: [38.53344812759947, -8.889120970329717]
   },
   {
     nome: "Barbearia Moura – Espinho",
@@ -285,31 +286,35 @@ const barbearias = [
 },
 {
   nome: "CJ Barbearia",
-  morada: "Faro",
+  morada: "Largo Dr. Francisco Sá Carneiro 47, 8000-151 Faro",
   telefone: "+351 939 501 816",
   instagram: "https://www.instagram.com/cj_barberia_faro/",
-  observacoes: "Segunda a sábado 09:00–21:00"
+  observacoes: "Segunda a sábado 09:00–21:00",
+  coords: [37.0197372, -7.9294337]
 },
 {
   nome: "J.L Barber's Faro",
-  morada: "Faro",
+  morada: "Estrada da Penha, Faro",
   telefone: "+351 289 804 114",
   instagram: "https://www.instagram.com/jlbarbersfaro/",
-  observacoes: "Aberto todos os dias"
+  observacoes: "Aberto todos os dias",
+  coords: [37.0369368, -7.9242020]
 },
 {
   nome: "Barbearia Evandro Garcia",
-  morada: "Faro",
+  morada: "Largo de Camões n 3, 8000-140 Faro",
   telefone: "+351 289 042 683",
   instagram: "https://www.instagram.com/barbearia_evandro_garcia_1/",
-  observacoes: "Barbearia e tatuagem"
+  observacoes: "Barbearia e tatuagem",
+  coords: [37.0212356, -7.9394749]
 },
 {
   nome: "O Profeta Barbearia",
   morada: "Rua Doutor José de Matos 33, Faro",
   telefone: "",
   instagram: "https://www.instagram.com/oprofetabarber/",
-  observacoes: "Barbearia moderna"
+  observacoes: "Barbearia moderna",
+  coords: [37.0154590, -7.9221247]
 },
 {
   nome: "The Barbers",
@@ -344,17 +349,19 @@ const barbearias = [
 },
 {
   nome: "Lucas Black Barbearia",
-  morada: "Rua Dr. António Rodrigues Manito 143, Setúbal",
+  morada: "Avenida Doutor António Rodrigues Manito 143, Setúbal",
   telefone: "+351 913 887 639",
   instagram: "https://www.instagram.com/lucasblack.pt/",
-  observacoes: "Freestyle e cortes modernos"
+  observacoes: "Freestyle e cortes modernos",
+  coords: [38.5376908, -8.8944218]
 },
 {
   nome: "Barbearia Bueno",
-  morada: "R. António José Baptista n35, Setúbal",
+  morada: "Rua António José Batista, Loja 35, 2910-400, Setúbal",
   telefone: "+351 938 389 799",
   instagram: "https://www.instagram.com/barbearia.bueno.pt/",
-  observacoes: "Premium"
+  observacoes: "Premium",
+  coords: [38.531500005829365, -8.879340000000013]
 },
 {
   nome: "Barbearia Todi",
@@ -511,183 +518,183 @@ const barbearias = [
   nome: "Black Studio Bs",
   morada: "Rua de 9 de Julho 344, Loja, 4250-356 Porto",
   website: "https://booksy.com/pt-pt/3976_black-studio-bs_barbearia_208915_porto",
-  coords: null
+  coords: [41.1642121, -8.6241636]
 },
 {
   nome: "j.schwalbe.hair",
   morada: "Rua da Restauração 321, 4050-465 Porto",
   website: "https://booksy.com/pt-pt/6037_j-schwalbe-hair_barbearia_208915_porto",
-  coords: null
+  coords: [41.1462621, -8.6314269]
 },
 {
   nome: "Barbearia Porto Los Patrones",
   morada: "R. Aires de Ornelas, 4350-150 Porto",
   website: "https://www.fresha.com/nl/lvp/barbearia-porto-los-patrones-rua-aires-de-ornelas-porto-oo5lzQ",
-  coords: null
+  coords: [41.1566901, -8.5966365]
 },
 {
   nome: "Montes Barber /MLSG",
   morada: "Rua Roberto Ivens 1389, 4450-257 Matosinhos",
   website: "https://booksy.com/pt-pt/5068_montes-barber-mlsg_barbearia_203185_matosinhos",
-  coords: null
+  coords: [41.1819180, -8.6907394]
 },
 {
   nome: "BarberCrew Matosinhos",
   morada: "Rua do Godinho 106, 4450-145 Matosinhos",
   website: "https://booksy.com/pt-pt/2014_barbercrew-matosinhos_barbearia_203185_matosinhos",
-  coords: null
+  coords: [41.1812170, -8.6928984]
 },
 {
   nome: "Casablanca Barbershop",
   morada: "Rua Jardim 239, 4405-827 Vila Nova de Gaia",
   website: "https://booksy.com/pt-pt/s/barbearia/221774_vila-nova-de-gaia",
-  coords: null
+  coords: [41.1133989, -8.6149932]
 },
 {
   nome: "Studio Mão de Ouro",
   morada: "Rua da Escola de Laborim 188, 4430-093 Vila Nova de Gaia",
   website: "https://booksy.com/pt-pt/s/barbearia/221774_vila-nova-de-gaia",
-  coords: null
+  coords: [41.1072728, -8.6055104]
 },
 {
   nome: "BMbarbeariamonte",
   morada: "Rua do Fujacal 43, R/c, 4705-097 Braga",
   website: "https://booksy.com/pt-pt/6306_bmbarbeariamonte_barbearia_82575_braga",
-  coords: null
+  coords: [41.5445782, -8.4222484]
 },
 {
   nome: "M2 BARBEARIA",
   morada: "Rua dos Barbosas, Loja 255, 4715-267 Braga",
   website: "https://booksy.com/pt-pt/s/barbearia/82575_braga",
-  coords: null
+  coords: [41.5440142, -8.4154475]
 },
 {
   nome: "Danniel Sampaio Barbearia",
   morada: "Rua Ana Plácido, Edifício Ana Plácido 236, 4760-120 Vila Nova de Famalicão",
   website: "https://booksy.com/pt-pt/s/madeixas",
-  coords: null
+  coords: [41.4123852, -8.5187543]
 },
 {
   nome: "Ebenezer Barber Shop",
   morada: "Rua Tenente Manuel Joaquim, n 33 bloco C, 3510-086 Viseu",
   website: "https://booksy.com/pt-pt/3467_ebenezer-barber-shop_barbearia_279940_viseu",
-  coords: null
+  coords: [40.6602702, -7.9201143]
 },
 {
   nome: "Balder",
   morada: "Lg São Pedro 52, Loja AM, 3500-695 Viseu",
-  website: "https://booksy.com/pt-pt/s/salao-de-cabeleireiro/279940_viseu",
-  coords: null
+  website: "https://booksy.com/pt-pt/5769_balder_barbearia_279940_viseu",
+  coords: [40.64316391752402, -7.924450526303929]
 },
 {
   nome: "Barba Negra Leiria",
   morada: "Largo Marechal Gomes da Costa 38, 2400-148 Leiria",
   website: "https://booksy.com/pt-pt/3362_barba-negra-leiria_barbearia_141679_leiria",
-  coords: null
+  coords: [39.7440009, -8.8088631]
 },
 {
   nome: "EVOLUTION Men’s Salon",
   morada: "Rua Fonte Cabeço D’el Rei, 1, 2400-719 Leiria",
   website: "https://booksy.com/pt-pt/1173_evolution-mens-salon_barbearia_141679_leiria",
-  coords: null
+  coords: [39.7501205, -8.8140484]
 },
 {
   nome: "Bruno César Barbeiro",
   morada: "Rua de Atenas, 4, 2415-586 Leiria",
   website: "https://booksy.com/pt-pt/1973_bruno-cesar-barbeiro_barbearia_141679_leiria",
-  coords: null
+  coords: [39.7585654, -8.8027390]
 },
 {
   nome: "Barbearia Brasileira",
-  morada: "Rua do Clube Estrela do Norte 34, Loja, 2450-027 Nazaré",
+  morada: "R. Heróis do Ultramar 75, 2450-027 Nazaré",
   website: "https://booksy.com/pt-pt/s/corte-de-cabelo/149306_porto-de-mos",
-  coords: null
+  coords: [39.5348917, -9.0842112]
 },
 {
   nome: "Aneel barbershop",
   morada: "Rua Marquês de Sá da Bandeira 66, 1050-150 Lisboa",
   website: "https://booksy.com/pt-pt/3412_aneel-barbershop_salao-de-cabeleireiro_157422_lisboa",
-  coords: null
+  coords: [38.7365237, -9.1522193]
 },
 {
   nome: "Exodo Barbearia",
   morada: "Avenida Marconi 12C, 1000-205 Lisboa",
   website: "https://booksy.com/pt-pt/s/barbearia/157422_lisboa",
-  coords: null
+  coords: [38.7415411, -9.1390439]
 },
 {
   nome: "Ranzulla Barbershop",
   morada: "Avenida Colégio Militar n29E, próximo ao Centro Comercial Colombo, 1500-179 Lisboa",
   website: "https://booksy.com/pt-pt/s/barbearia/157422_lisboa",
-  coords: null
+  coords: [38.7518765, -9.1896380]
 },
 {
   nome: "Casimiro Barbershop",
   morada: "Rua Actor Robles Monteiro, Benfica, N1, 1500-017 Lisboa",
   website: "https://booksy.com/pt-pt/2059_casimiro-barbershop_barbearia_157422_lisboa",
-  coords: null
+  coords: [38.7454417, -9.1997554]
 },
 {
   nome: "Mr. Barber Lisboa",
   morada: "Rua Manuel Lemos Peixoto, Nr 2F, 2610-110 Amadora",
   website: "https://booksy.com/pt-pt/s/barbearia/172271_ramada",
-  coords: null
+  coords: [38.7366476, -9.2122405]
 },
 {
   nome: "GOLDEN HAND",
   morada: "Largo Maj. Rosa Bastos, 13, 2620-118 Loures",
   website: "https://booksy.com/pt-pt/s/barbearia/167922_santo-antonio-dos-cavaleiros",
-  coords: null
+  coords: [38.8260696, -9.1242388]
 },
 {
   nome: "JD Barbearia e Estética Feminina",
   morada: "Rua da Liberdade 67, Bairro de Santiago, Camarate, 2680-071 Loures",
   website: "https://booksy.com/pt-pt/s/barbearia/167922_santo-antonio-dos-cavaleiros",
-  coords: null
+  coords: [38.8034669, -9.1212820]
 },
 {
   nome: "2685 FINEST - BARBEARIA",
   morada: "Rua Herbert Gilbert, 10 e 10A, 2685-085 Loures",
   website: "https://booksy.com/pt-pt/s/barbearia/167553_vale-de-figueira",
-  coords: null
+  coords: [38.7911203, -9.1077020]
 },
 {
   nome: "Garcias Barber",
   morada: "Rua das Quintinhas n1, 2820-352 Almada",
   website: "https://booksy.com/pt-pt/s/barbearia/154702_junqueiro",
-  coords: null
+  coords: [38.6033985, -9.1799715]
 },
 {
   nome: "Cannon Barber",
   morada: "R. Cidade de Ponta Delgada 82, 2870-261 Montijo",
   website: "https://www.fresha.com/pt/lvp/cannon-barber-rua-cidade-de-ponta-delgada-montijo-vwyvnY",
-  coords: null
+  coords: [38.7103134, -8.9857078]
 },
 {
   nome: "Studio Fama By Fabiano The Barber",
   morada: "Praceta Fernando Pessoa, 15, Cave Direita, 2900-692 Setúbal",
   website: "https://booksy.com/pt-pt/1187_studio-fama-by-fabiano-the-barber_barbearia_252809_setubal",
-  coords: null
+  coords: [38.5342602, -8.8961469]
 },
 {
   nome: "Alfa Barbers - Barbearia",
   morada: "Av. do Cabo Bojador 6 Loja-E, 8600-315 Lagos",
   telefone: "+351 924 714 409",
   website: "https://www.fresha.com/lp/en/bt/barbershops/in/pt-rural-faro-district/lagos",
-  coords: null
+  coords: [37.1058363, -8.6807401]
 },
 {
   nome: "BarberShop Abreu",
   morada: "R. Prof. Joaquim Alberto Taquelim 2, 8600-760 Lagos",
   telefone: "+351 966 715 356",
   website: "https://www.fresha.com/lp/en/tt/men%27s-haircuts/in/pt-rural-faro-district/lagos",
-  coords: null
+  coords: [37.1016540, -8.6796676]
 },
 {
   nome: "Pro Style Barber Shop",
   morada: "Avenida da Madalena 101, Fração B, 9020-330 Funchal",
   website: "https://booksy.com/pt-pt/6264_pro-style-barber-shop_barbearia_185116_funchal",
-  coords: null
+  coords: [32.6601652, -16.9298135]
 },
   {
   nome: "Rise barbearia",
