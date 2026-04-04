@@ -506,6 +506,189 @@ const barbearias = [
   telefone: "",
   observacoes: "Adicionar manual depois"
 },
+// === NOVAS ENTRADAS POR VALIDAR ===
+{
+  nome: "Black Studio Bs",
+  morada: "Rua de 9 de Julho 344, Loja, 4250-356 Porto",
+  website: "https://booksy.com/pt-pt/3976_black-studio-bs_barbearia_208915_porto",
+  coords: null
+},
+{
+  nome: "j.schwalbe.hair",
+  morada: "Rua da Restauração 321, 4050-465 Porto",
+  website: "https://booksy.com/pt-pt/6037_j-schwalbe-hair_barbearia_208915_porto",
+  coords: null
+},
+{
+  nome: "Barbearia Porto Los Patrones",
+  morada: "R. Aires de Ornelas, 4350-150 Porto",
+  website: "https://www.fresha.com/nl/lvp/barbearia-porto-los-patrones-rua-aires-de-ornelas-porto-oo5lzQ",
+  coords: null
+},
+{
+  nome: "Montes Barber /MLSG",
+  morada: "Rua Roberto Ivens 1389, 4450-257 Matosinhos",
+  website: "https://booksy.com/pt-pt/5068_montes-barber-mlsg_barbearia_203185_matosinhos",
+  coords: null
+},
+{
+  nome: "BarberCrew Matosinhos",
+  morada: "Rua do Godinho 106, 4450-145 Matosinhos",
+  website: "https://booksy.com/pt-pt/2014_barbercrew-matosinhos_barbearia_203185_matosinhos",
+  coords: null
+},
+{
+  nome: "Casablanca Barbershop",
+  morada: "Rua Jardim 239, 4405-827 Vila Nova de Gaia",
+  website: "https://booksy.com/pt-pt/s/barbearia/221774_vila-nova-de-gaia",
+  coords: null
+},
+{
+  nome: "Studio Mão de Ouro",
+  morada: "Rua da Escola de Laborim 188, 4430-093 Vila Nova de Gaia",
+  website: "https://booksy.com/pt-pt/s/barbearia/221774_vila-nova-de-gaia",
+  coords: null
+},
+{
+  nome: "BMbarbeariamonte",
+  morada: "Rua do Fujacal 43, R/c, 4705-097 Braga",
+  website: "https://booksy.com/pt-pt/6306_bmbarbeariamonte_barbearia_82575_braga",
+  coords: null
+},
+{
+  nome: "M2 BARBEARIA",
+  morada: "Rua dos Barbosas, Loja 255, 4715-267 Braga",
+  website: "https://booksy.com/pt-pt/s/barbearia/82575_braga",
+  coords: null
+},
+{
+  nome: "Danniel Sampaio Barbearia",
+  morada: "Rua Ana Plácido, Edifício Ana Plácido 236, 4760-120 Vila Nova de Famalicão",
+  website: "https://booksy.com/pt-pt/s/madeixas",
+  coords: null
+},
+{
+  nome: "Ebenezer Barber Shop",
+  morada: "Rua Tenente Manuel Joaquim, n 33 bloco C, 3510-086 Viseu",
+  website: "https://booksy.com/pt-pt/3467_ebenezer-barber-shop_barbearia_279940_viseu",
+  coords: null
+},
+{
+  nome: "Balder",
+  morada: "Lg São Pedro 52, Loja AM, 3500-695 Viseu",
+  website: "https://booksy.com/pt-pt/s/salao-de-cabeleireiro/279940_viseu",
+  coords: null
+},
+{
+  nome: "Barba Negra Leiria",
+  morada: "Largo Marechal Gomes da Costa 38, 2400-148 Leiria",
+  website: "https://booksy.com/pt-pt/3362_barba-negra-leiria_barbearia_141679_leiria",
+  coords: null
+},
+{
+  nome: "EVOLUTION Men’s Salon",
+  morada: "Rua Fonte Cabeço D’el Rei, 1, 2400-719 Leiria",
+  website: "https://booksy.com/pt-pt/1173_evolution-mens-salon_barbearia_141679_leiria",
+  coords: null
+},
+{
+  nome: "Bruno César Barbeiro",
+  morada: "Rua de Atenas, 4, 2415-586 Leiria",
+  website: "https://booksy.com/pt-pt/1973_bruno-cesar-barbeiro_barbearia_141679_leiria",
+  coords: null
+},
+{
+  nome: "Barbearia Brasileira",
+  morada: "Rua do Clube Estrela do Norte 34, Loja, 2450-027 Nazaré",
+  website: "https://booksy.com/pt-pt/s/corte-de-cabelo/149306_porto-de-mos",
+  coords: null
+},
+{
+  nome: "Aneel barbershop",
+  morada: "Rua Marquês de Sá da Bandeira 66, 1050-150 Lisboa",
+  website: "https://booksy.com/pt-pt/3412_aneel-barbershop_salao-de-cabeleireiro_157422_lisboa",
+  coords: null
+},
+{
+  nome: "Exodo Barbearia",
+  morada: "Avenida Marconi 12C, 1000-205 Lisboa",
+  website: "https://booksy.com/pt-pt/s/barbearia/157422_lisboa",
+  coords: null
+},
+{
+  nome: "Ranzulla Barbershop",
+  morada: "Avenida Colégio Militar n29E, próximo ao Centro Comercial Colombo, 1500-179 Lisboa",
+  website: "https://booksy.com/pt-pt/s/barbearia/157422_lisboa",
+  coords: null
+},
+{
+  nome: "Casimiro Barbershop",
+  morada: "Rua Actor Robles Monteiro, Benfica, N1, 1500-017 Lisboa",
+  website: "https://booksy.com/pt-pt/2059_casimiro-barbershop_barbearia_157422_lisboa",
+  coords: null
+},
+{
+  nome: "Mr. Barber Lisboa",
+  morada: "Rua Manuel Lemos Peixoto, Nr 2F, 2610-110 Amadora",
+  website: "https://booksy.com/pt-pt/s/barbearia/172271_ramada",
+  coords: null
+},
+{
+  nome: "GOLDEN HAND",
+  morada: "Largo Maj. Rosa Bastos, 13, 2620-118 Loures",
+  website: "https://booksy.com/pt-pt/s/barbearia/167922_santo-antonio-dos-cavaleiros",
+  coords: null
+},
+{
+  nome: "JD Barbearia e Estética Feminina",
+  morada: "Rua da Liberdade 67, Bairro de Santiago, Camarate, 2680-071 Loures",
+  website: "https://booksy.com/pt-pt/s/barbearia/167922_santo-antonio-dos-cavaleiros",
+  coords: null
+},
+{
+  nome: "2685 FINEST - BARBEARIA",
+  morada: "Rua Herbert Gilbert, 10 e 10A, 2685-085 Loures",
+  website: "https://booksy.com/pt-pt/s/barbearia/167553_vale-de-figueira",
+  coords: null
+},
+{
+  nome: "Garcias Barber",
+  morada: "Rua das Quintinhas n1, 2820-352 Almada",
+  website: "https://booksy.com/pt-pt/s/barbearia/154702_junqueiro",
+  coords: null
+},
+{
+  nome: "Cannon Barber",
+  morada: "R. Cidade de Ponta Delgada 82, 2870-261 Montijo",
+  website: "https://www.fresha.com/pt/lvp/cannon-barber-rua-cidade-de-ponta-delgada-montijo-vwyvnY",
+  coords: null
+},
+{
+  nome: "Studio Fama By Fabiano The Barber",
+  morada: "Praceta Fernando Pessoa, 15, Cave Direita, 2900-692 Setúbal",
+  website: "https://booksy.com/pt-pt/1187_studio-fama-by-fabiano-the-barber_barbearia_252809_setubal",
+  coords: null
+},
+{
+  nome: "Alfa Barbers - Barbearia",
+  morada: "Av. do Cabo Bojador 6 Loja-E, 8600-315 Lagos",
+  telefone: "+351 924 714 409",
+  website: "https://www.fresha.com/lp/en/bt/barbershops/in/pt-rural-faro-district/lagos",
+  coords: null
+},
+{
+  nome: "BarberShop Abreu",
+  morada: "R. Prof. Joaquim Alberto Taquelim 2, 8600-760 Lagos",
+  telefone: "+351 966 715 356",
+  website: "https://www.fresha.com/lp/en/tt/men%27s-haircuts/in/pt-rural-faro-district/lagos",
+  coords: null
+},
+{
+  nome: "Pro Style Barber Shop",
+  morada: "Avenida da Madalena 101, Fração B, 9020-330 Funchal",
+  website: "https://booksy.com/pt-pt/6264_pro-style-barber-shop_barbearia_185116_funchal",
+  coords: null
+},
   {
   nome: "Rise barbearia",
   morada: "Rua Fernando Teixeira, Lote 31 – Abraveses, Viseu",

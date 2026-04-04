@@ -4,14 +4,14 @@ Data da auditoria: `2026-04-04`
 
 ## Resumo
 
-- Total de entradas: **73**
+- Total de entradas: **103**
 - Confirmadas: **43**
 - Por validar: **20**
-- Incompletas: **10**
-- Sem coordenadas validas: **10**
+- Incompletas: **40**
+- Sem coordenadas validas: **40**
 - Com telefone invalido ou placeholder: **19**
 - Com morada generica: **7**
-- Escondidas do mapa (`mostrar_no_mapa: false`): **11**
+- Escondidas do mapa (`mostrar_no_mapa: false`): **41**
 
 ## Notas da auditoria
 
@@ -28,11 +28,11 @@ Data da auditoria: `2026-04-04`
 - **Barbearia Todi**: status `incompleto`, qualidade `baixa`, problemas `status_incompleto, sem_coords, morada_generica`
 - **CJ Barbearia**: status `incompleto`, qualidade `baixa`, problemas `status_incompleto, sem_coords, morada_generica`
 - **J.L Barber's Faro**: status `incompleto`, qualidade `baixa`, problemas `status_incompleto, sem_coords, morada_generica`
+- **2685 FINEST - BARBEARIA**: status `incompleto`, qualidade `baixa`, problemas `status_incompleto, sem_coords`
+- **Alfa Barbers - Barbearia**: status `incompleto`, qualidade `baixa`, problemas `status_incompleto, sem_coords`
+- **Aneel barbershop**: status `incompleto`, qualidade `baixa`, problemas `status_incompleto, sem_coords`
+- **Balder**: status `incompleto`, qualidade `baixa`, problemas `status_incompleto, sem_coords`
+- **Barba Negra Leiria**: status `incompleto`, qualidade `baixa`, problemas `status_incompleto, sem_coords`
 - **Barbearia Alcácer do Sal**: status `por_validar`, qualidade `media`, problemas `status_por_validar, telefone_invalido`
 - **Barbearia Barreiro Elite**: status `por_validar`, qualidade `media`, problemas `status_por_validar, telefone_invalido`
 - **Barbearia Beja Moderna**: status `por_validar`, qualidade `media`, problemas `status_por_validar, telefone_invalido`
-- **Barbearia Bragança Classic**: status `por_validar`, qualidade `media`, problemas `status_por_validar, telefone_invalido`
-- **Barbearia Bueno**: status `incompleto`, qualidade `baixa`, problemas `status_incompleto, sem_coords`
-- **Barbearia Chaves**: status `por_validar`, qualidade `media`, problemas `status_por_validar, telefone_invalido`
-- **Barbearia Clássica Setúbal**: status `por_validar`, qualidade `media`, problemas `status_por_validar, telefone_invalido`
-- **Barbearia do António**: status `por_validar`, qualidade `media`, problemas `status_por_validar, telefone_invalido`
