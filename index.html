@@ -381,7 +381,7 @@
 
     .hero-search .btn-primary {
       white-space: nowrap;
-      padding: 0 22px;
+      padding: 0 18px;
       border-radius: 16px;
     }
 
@@ -452,8 +452,10 @@
 
     .hero-visual {
       display: grid;
+      align-content: start;
+      grid-auto-rows: max-content;
       gap: 14px;
-      padding: 20px;
+      padding: 18px;
       background:
         linear-gradient(160deg, rgba(251, 247, 239, 0.86), rgba(247, 240, 228, 0.94)),
         linear-gradient(135deg, rgba(176, 138, 74, 0.12), transparent);
@@ -575,9 +577,9 @@
 
     .hero-promo-card {
       display: grid;
-      gap: 16px;
+      gap: 14px;
       margin-top: 4px;
-      padding: 20px;
+      padding: 18px;
       border: 1px solid rgba(176, 138, 74, 0.2);
       border-radius: 24px;
       background:
@@ -611,12 +613,12 @@
 
     .hero-promo-points {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
     }
 
     .hero-promo-point {
-      padding: 14px 16px;
+      padding: 12px 14px;
       border: 1px solid rgba(34, 32, 28, 0.08);
       border-radius: 18px;
       background: rgba(255, 251, 244, 0.72);
@@ -632,8 +634,8 @@
     .hero-promo-point span {
       display: block;
       color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.55;
+      font-size: 0.88rem;
+      line-height: 1.45;
     }
 
     .hero-promo-actions {
@@ -1389,8 +1391,8 @@
           <p class="hero-subtitle">Pesquisa por cidade, zona ou nome e vê morada, contacto e localização num só lugar.</p>
 
           <form class="hero-search" id="heroSearchForm" role="search" aria-label="Pesquisar barbearias a partir do hero">
-            <input id="heroSearchInput" type="text" placeholder="Procura por cidade, zona ou nome da barbearia" />
-            <button class="btn btn-primary" type="submit">Explorar barbearias</button>
+            <input id="heroSearchInput" type="text" placeholder="Procura por cidade, zona ou nome" />
+            <button class="btn btn-primary" type="submit">Explorar</button>
           </form>
 
           <div class="hero-actions-secondary">
@@ -1400,31 +1402,22 @@
           <div class="hero-promo-card" aria-label="Adicionar barbearia ao diretório">
             <div class="hero-promo-head">
               <span class="eyebrow">Para donos de barbearias</span>
-              <h3>Queres aparecer no mapa e receber mais contactos?</h3>
-              <p>Adiciona a tua barbearia para seres encontrado por clientes que pesquisam por cidade, zona ou nome.</p>
-            </div>
-
-            <div class="hero-promo-metrics">
-              <span class="pill"><span data-barbearias-total>63</span>&nbsp;fichas no diretório</span>
-              <span class="pill"><span data-barbearias-contactos>63</span>&nbsp;com contacto disponível</span>
+              <h3>Queres trazer mais clientes para a tua barbearia?</h3>
+              <p>Cria a tua ficha no OndeCortar e ganha presença no mapa, na pesquisa e na página da tua cidade.</p>
             </div>
 
             <div class="hero-promo-points">
               <div class="hero-promo-point">
                 <strong>Mais visibilidade</strong>
-                <span>Aparece no mapa e nas pesquisas feitas no site.</span>
+                <span>Aparece no mapa e nas pesquisas do site.</span>
               </div>
               <div class="hero-promo-point">
                 <strong>Mais confiança</strong>
-                <span>Mostra morada, telefone e links úteis num só perfil.</span>
+                <span>Mostra morada, telefone e links úteis.</span>
               </div>
               <div class="hero-promo-point">
                 <strong>Mais contactos</strong>
-                <span>Facilita o clique para ligar, abrir Instagram ou ver a localização.</span>
-              </div>
-              <div class="hero-promo-point">
-                <strong>Entrada simples</strong>
-                <span>Pede a adição da tua barbearia em poucos minutos.</span>
+                <span>Facilita chamadas, cliques e visitas ao perfil.</span>
               </div>
             </div>
 
@@ -1433,7 +1426,7 @@
               <a class="btn btn-secondary" href="faq.html">Tirar dúvidas</a>
             </div>
 
-            <p class="hero-promo-note">As cidades continuam disponíveis mais abaixo para exploração rápida do diretório.</p>
+            <p class="hero-promo-note">As cidades continuam disponíveis mais abaixo para quem quiser explorar o diretório.</p>
           </div>
 
           <div class="hero-results" id="heroResults" hidden>
@@ -1697,14 +1690,8 @@
       const citiesGrid = document.getElementById("citiesGrid");
       const directoryCities = document.getElementById("directoryCities");
       const totalTargets = document.querySelectorAll("[data-barbearias-total]");
-      const contactTargets = document.querySelectorAll("[data-barbearias-contactos]");
-
       totalTargets.forEach(function(target) {
         target.textContent = stats.total;
-      });
-
-      contactTargets.forEach(function(target) {
-        target.textContent = stats.contacts;
       });
 
       renderCityChips(directoryCities, popularCities);
