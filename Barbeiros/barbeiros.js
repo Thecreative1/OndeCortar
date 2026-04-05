@@ -704,4 +704,765 @@ const barbearias = [
   coords: [40.679708, -7.921886]
 },
 
+
+  // === IMPORTACAO OSM VALIDADA 2026-04-05 (100 entradas com contacto) ===
+  {
+    nome: "4740 Barber Shop",
+    morada: "Largo Frei Manuel de Barros 4740-201, Esposende",
+    telefone: "+351253037642",
+    website: "https://www.facebook.com/BarbeariaBarbaNegraEsposende/",
+    facebook: "https://www.facebook.com/BarbeariaBarbaNegraEsposende",
+    coords: [41.5319827, -8.7819854]
+  },
+
+  {
+    nome: "Arlem Barber",
+    morada: "Avenida Movimento das Forças Armadas 74, 2840-444",
+    telefone: "+351 211 602 827",
+    coords: [38.6168647, -9.1027328]
+  },
+
+  {
+    nome: "Barbearia",
+    morada: "Rua de Lisboa, Azeitão",
+    telefone: "+351 918 468 356",
+    coords: [38.5380898, -9.0251075]
+  },
+
+  {
+    nome: "Barbearia 1025",
+    morada: "Rua da Glória 17, 1250-115 Lisboa",
+    telefone: "+351 929 131 384",
+    website: "https://www.instagram.com/barbearia1025ro",
+    coords: [38.7169886, -9.1445514]
+  },
+
+  {
+    nome: "Barbearia 98 Men’s Space",
+    morada: "Rua General Vasco Gonçalves, 2135-130 Samora Correia",
+    telefone: "+351932415382",
+    coords: [38.9203755, -8.8863514]
+  },
+
+  {
+    nome: "Barbearia Abel",
+    morada: "Rua de São Tomé 7, 2685-326 Prior Velho",
+    telefone: "+351 926 711 360",
+    website: "https://www.facebook.com/pg/BarbeariaAbel",
+    coords: [38.7906086, -9.1230127]
+  },
+
+  {
+    nome: "Barbearia Alegria - Barbershop",
+    morada: "Rua dos Tanoeiros 64, 9000-057 Funchal",
+    telefone: "+351 291 642 542",
+    email: "barbeariaalegria@gmail.com",
+    coords: [32.6485371, -16.9065383]
+  },
+
+  {
+    nome: "Barbearia Alves",
+    morada: "Avenida de São Sebastião, Évora",
+    telefone: "+351 925 013 044",
+    coords: [38.5691164, -7.9174934]
+  },
+
+  {
+    nome: "Barbearia Bagaça",
+    morada: "Rua Brigadeiro Correia Cardoso 213, 3030-084 Coimbra",
+    telefone: "+351 933 282 992",
+    instagram: "https://www.instagram.com/barbeariabagaca/",
+    facebook: "https://www.facebook.com/barbeariabagaca",
+    coords: [40.2173348, -8.3987386]
+  },
+
+  {
+    nome: "Barbearia Boavida",
+    morada: "Rua Doutor Manuel da Cruz Júnior 34, 2870-121 Montijo",
+    telefone: "+351 933 584 841",
+    coords: [38.7069771, -8.9812721]
+  },
+
+  {
+    nome: "Barbearia Campos",
+    morada: "Rua de Moçambique 14, 7540-145 Santiago do Cacém",
+    telefone: "+351911 033 581",
+    instagram: "https://www.instagram.com/barbeariacamposss/",
+    coords: [38.0189342, -8.6940752]
+  },
+
+  {
+    nome: "Barbearia Candeias",
+    morada: "Rua Mouzinho de Albuquerque 56, 3030-063 Coimbra",
+    telefone: "+351 911 810 877",
+    instagram: "https://www.instagram.com/barbeariacandeias/",
+    facebook: "https://www.facebook.com/barbeariacandeias",
+    coords: [40.1986338, -8.4104402]
+  },
+
+  {
+    nome: "Barbearia Carlos Silva",
+    morada: "Rua de Lisboa EN120, 7540-163",
+    telefone: "+351965387041",
+    coords: [38.0188615, -8.6913704]
+  },
+
+  {
+    nome: "Barbearia Carlos Vaz",
+    morada: "Rua Guilherme Gomes Fernandes 81 B, 2675 Odivelas",
+    telefone: "+351 918 242 400",
+    website: "https://www.facebook.com/cabeleireirocarlosvaz/timeline",
+    coords: [38.7907065, -9.1810906]
+  },
+
+  {
+    nome: "Barbearia Central",
+    morada: "Rua dos Combatentes da Grande Guerra 47, 5000-635 Vila Real",
+    telefone: "+351 259 347 155",
+    coords: [41.2971315, -7.7448596]
+  },
+
+  {
+    nome: "Barbearia Coliseu",
+    morada: "Rua do Brasil 386, 3030-775 Coimbra",
+    telefone: "+351 910 265 623",
+    instagram: "https://www.instagram.com/barbeariacoliseu.pt/",
+    coords: [40.2010348, -8.4083232]
+  },
+
+  {
+    nome: "Barbearia Couto",
+    morada: "Avenida Dom João Garcia Bacelar 2020, 3060-704 Tocha",
+    telefone: "+351 966 337422",
+    website: "https://buk.pt/barbearia-couto",
+    coords: [40.3166346, -8.7528117]
+  },
+
+  {
+    nome: "Barbearia do Cardoso",
+    morada: "Avenida 25 de Abril de 1974 11A",
+    telefone: "+351 21 419 1538",
+    coords: [38.7167210, -9.2378861]
+  },
+
+  {
+    nome: "Barbearia do Gui",
+    morada: "Rua Dom Afonso Henriques 7, 2670-637 Bucelas",
+    telefone: "+351 918 607 564",
+    instagram: "https://www.instagram.com/barbeariadogui2022/",
+    coords: [38.9025121, -9.1211717]
+  },
+
+  {
+    nome: "Barbearia do Prakass",
+    morada: "Rua Cavaleiro de Oliveira 47-C, Lisboa",
+    telefone: "+351 920 023 631",
+    website: "https://wwe.hairmehanic.pt",
+    facebook: "https://facebook.com/hairmechanic47/",
+    coords: [38.7318836, -9.1328119]
+  },
+
+  {
+    nome: "Barbearia do Senhor",
+    morada: "Rua José Castanheira Nunes 13, 3300-062 Arganil Arganil",
+    telefone: "+351 910 430 591",
+    coords: [40.2182473, -8.0545602]
+  },
+
+  {
+    nome: "Barbearia do Zela",
+    morada: "Rua de Fontelas, Pindelo",
+    website: "https://noona.pt/barbeariadozela",
+    coords: [40.8717021, -8.4434312]
+  },
+
+  {
+    nome: "Barbearia Dom Oliveira",
+    morada: "Rua João XXI 14B, 2790-327",
+    facebook: "https://www.facebook.com/p/Barbearia-Dom-Oliveira-100076079050145/",
+    coords: [38.7178710, -9.2630838]
+  },
+
+  {
+    nome: "Barbearia e Tattoo Asgard Porto",
+    morada: "Rua de Oliveira Monteiro, 4050-072 Porto",
+    telefone: "+351 928093329",
+    coords: [41.1581758, -8.6220726]
+  },
+
+  {
+    nome: "Barbearia Estação",
+    morada: "Rua António José de Almeida 273, 3000-045 Coimbra",
+    telefone: "+351 239 136 569",
+    website: "https://barbeariaestacao.pt/",
+    coords: [40.2130288, -8.4158109]
+  },
+
+  {
+    nome: "Barbearia Faialense",
+    morada: "Estrada Regional de Santa Bárbara 5A, 9900-045 Horta (Angústias)",
+    website: "https://booksy.com/pt-pt/2186_barbearia-faialense_barberaria_53709_horta?do=invite&_branch_match_id=1333857990378834596&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FV9y2tMHb1c3HJc08CAN0VSV0iAAAA",
+    coords: [38.5326252, -28.6454495]
+  },
+
+  {
+    nome: "Barbearia Inclusive",
+    morada: "Rua do Alviela 9, 2625-046 Póvoa de Santa Iria",
+    telefone: "+351 934 146 052",
+    coords: [38.8658082, -9.0648192]
+  },
+
+  {
+    nome: "Barbearia Irmãos",
+    morada: "Rua Direita 86",
+    telefone: "+351 239 829 809",
+    coords: [40.2113421, -8.4302505]
+  },
+
+  {
+    nome: "Barbearia Lisboa",
+    morada: "Rua Cidade de Manchester 35, 1170-098 Lisboa",
+    telefone: "+351913510039",
+    coords: [38.7276553, -9.1323695]
+  },
+
+  {
+    nome: "Barbearia Lorde",
+    morada: "Avenida Fernando Namora 254, 3030-185 Coimbra",
+    facebook: "https://facebook.com/people/Barbearia-Lorde/100090125014058",
+    coords: [40.1990446, -8.3982370]
+  },
+
+  {
+    nome: "Barbearia Maria Cruz",
+    morada: "Avenida do Doutor Antunes Guimarães 47, 4100-079 Porto",
+    telefone: "+351 918 515 092",
+    coords: [41.1641300, -8.6627928]
+  },
+
+  {
+    nome: "Barbearia Moderna",
+    morada: "5000-446 Vila Real",
+    telefone: "+351 961 062 527",
+    coords: [41.3060621, -7.7440634]
+  },
+
+  {
+    nome: "Barbearia Nacional",
+    morada: "Praça General Humberto Delgado, Almada",
+    telefone: "911165251",
+    coords: [38.6783750, -9.1643972]
+  },
+
+  {
+    nome: "Barbearia Nova Lisboa",
+    morada: "Avenida da Igreja 1D, 1700-230 Lisboa",
+    telefone: "218494584",
+    coords: [38.7544710, -9.1392671]
+  },
+
+  {
+    nome: "Barbearia Number 1",
+    morada: "Rua General Humberto Delgado 283, 3030-327 Coimbra",
+    telefone: "+351 915 237 389",
+    website: "https://barbearia-number-one.negocio.site/",
+    facebook: "https://www.facebook.com/Barbearia.Number.One",
+    coords: [40.2047465, -8.4097174]
+  },
+
+  {
+    nome: "Barbearia O Barbólogo",
+    morada: "R. Cervantes 2, 1000-095 Lisboa",
+    telefone: "211355750",
+    coords: [38.7425749, -9.1353791]
+  },
+
+  {
+    nome: "Barbearia O Seu Espaço",
+    morada: "Rua dos Lusíadas 126, 1300-285 Alcântara",
+    telefone: "910956568",
+    coords: [38.7037877, -9.1830425]
+  },
+
+  {
+    nome: "Barbearia Oásis o Carlos",
+    morada: "Rua Joaquim António de Aguiar 124",
+    telefone: "+351 964 227 761",
+    coords: [40.2087470, -8.4276566]
+  },
+
+  {
+    nome: "Barbearia of Brothers",
+    morada: "Avenida Nossa Senhora de Fátima 62, 2414-140 Leiria",
+    telefone: "+351 244 856 299",
+    email: "ofbrothers13@gmail.com",
+    website: "https://ofbrothers13.wixsite.com/barbeariaofbrothers",
+    coords: [39.7402837, -8.8030325]
+  },
+
+  {
+    nome: "Barbearia Paulo Freitas",
+    morada: "Largo Doutor Augusto de Oliveira Coimbra 8, 3300-020 Arganil",
+    telefone: "+351 925 144 745",
+    coords: [40.2185157, -8.0537588]
+  },
+
+  {
+    nome: "Barbearia Ponto H",
+    morada: "Rua Gustavo Ferreira Pinto Bastos 06, 3810-128 Aveiro",
+    telefone: "+351 934 829393",
+    instagram: "https://www.instagram.com/pontohoficial/?next=%2F",
+    coords: [40.6399701, -8.6538143]
+  },
+
+  {
+    nome: "Barbearia Portugal por João Alves",
+    morada: "Rua dos Lusíadas 127B, 1300-369 Alcântara",
+    telefone: "911517351",
+    coords: [38.7032304, -9.1835864]
+  },
+
+  {
+    nome: "Barbearia Resende",
+    morada: "Av. Aquilino Ribeiro L 5 R/C FRENTE, 3515-114 Viseu",
+    telefone: "+351964010448",
+    coords: [40.6805922, -7.9202195]
+  },
+
+  {
+    nome: "Barbearia S. Barba",
+    morada: "R. de Loule 2, 8005-491 Santa Bárbara de Nexe, Faro",
+    website: "https://www.facebook.com/s.barbaearia/",
+    coords: [37.1038645, -7.9646270]
+  },
+
+  {
+    nome: "Barbearia Sa",
+    morada: "Estrada Simão Gonçalves da Câmara, 9370-139 Calheta",
+    telefone: "+351 963 043 949",
+    email: "neliasilva78@hotmail.com",
+    instagram: "https://www.instagram.com/barbeariasa/",
+    facebook: "https://www.facebook.com/Barbeariacalheta",
+    coords: [32.7296779, -17.1783722]
+  },
+
+  {
+    nome: "Barbearia Suprema",
+    morada: "Estrada de Benfica 399, Lisboa",
+    telefone: "932411888",
+    coords: [38.7454083, -9.1815870]
+  },
+
+  {
+    nome: "Barbearia Tradição",
+    morada: "Rua Jacinta Marto 6, 1150-192",
+    telefone: "+351 21 604 2025",
+    facebook: "https://facebook.com/BARBEARIATRADICAOLISBOA/",
+    coords: [38.7273501, -9.1372399]
+  },
+
+  {
+    nome: "Barbearia Vítor",
+    morada: "Rua do Brasil 408, 3030-775 Coimbra",
+    telefone: "+351 917 449 762",
+    website: "https://iva-cabeleireiro.negocio.site/",
+    coords: [40.2007659, -8.4070843]
+  },
+
+  {
+    nome: "Barbearia Zé Nunes",
+    morada: "Rua da Indústria 50B, 1300 Lisboa",
+    website: "https://www.facebook.com/BarbeariaZeNunesalcantara/",
+    coords: [38.7055686, -9.1817905]
+  },
+
+  {
+    nome: "Barber Shop",
+    morada: "Rua Serpa Pinto 3, São Brás de Alportel",
+    telefone: "+351 915 471 192",
+    coords: [37.1535642, -7.8898633]
+  },
+
+  {
+    nome: "Barbershop TalentoVanguarda",
+    morada: "Rua de Camões 585, 4000-376",
+    telefone: "+351937422525",
+    coords: [41.1570918, -8.6100906]
+  },
+
+  {
+    nome: "Beard Man Barber Shop",
+    morada: "Rua de Campo de Ourique 36A, 1250-041 Lisboa",
+    telefone: "212 479 509",
+    coords: [38.7205364, -9.1621168]
+  },
+
+  {
+    nome: "Bento Barbearias",
+    morada: "Rua Pascoal de Melo 110, Lisboa",
+    telefone: "+351 213147930",
+    facebook: "https://facebook.com/bentobarbearias/",
+    coords: [38.7316702, -9.1389927]
+  },
+
+  {
+    nome: "Bento's Barber Shop & Vespa Bar",
+    morada: "Rua do Cemitério 209, 3060-655 Tocha",
+    telefone: "+351 965 489907",
+    facebook: "https://www.facebook.com/betovespabarbershop/",
+    coords: [40.3073628, -8.7553082]
+  },
+
+  {
+    nome: "Blessed Cutz Barbershop",
+    morada: "Estrada de Benfica 182, 1500-073 Lisboa",
+    telefone: "217785880",
+    coords: [38.7431789, -9.1740684]
+  },
+
+  {
+    nome: "Brave Barber Shop",
+    morada: "Rua da Penha de França 213A, 1170 182 Lisboa",
+    telefone: "926 683 129",
+    coords: [38.7276497, -9.1307573]
+  },
+
+  {
+    nome: "Bronk's Barber Shop",
+    morada: "Rua Centro de Artes Lote 7, 6200-505 Covilhã",
+    telefone: "+351964656085",
+    coords: [40.2712116, -7.4996493]
+  },
+
+  {
+    nome: "Buda Barber",
+    morada: "Rua Caldas Xavier 5",
+    telefone: "+351 917737405",
+    website: "https://budabarber.com/",
+    facebook: "https://www.facebook.com/budabarber.oeiras/",
+    coords: [38.6948743, -9.3038409]
+  },
+
+  {
+    nome: "Butterfly Cabeleireiro & Barbearia",
+    morada: "R. de Loule 20, Santa Bárbara de Nexe, Portugal",
+    telefone: "+351913889678",
+    coords: [37.1036125, -7.9634904]
+  },
+
+  {
+    nome: "Champions Barber Shop",
+    morada: "Rua Manuel Barbuda e Vasconcelos 1",
+    telefone: "+351 234 423 468",
+    website: "https://championsbarbershop.pt/",
+    coords: [40.6273083, -8.6462138]
+  },
+
+  {
+    nome: "Cortes & Discos",
+    morada: "Rua Poeta Sebastião da Gama 30/32, 2925-589 Azeitão",
+    telefone: "+351 916 674 524",
+    instagram: "https://www.instagram.com/cortesediscos.barbershop/",
+    coords: [38.5198003, -9.0180922]
+  },
+
+  {
+    nome: "Costa Barbershop",
+    morada: "Rua João de Carapeços, Carapeços",
+    telefone: "+351935173210",
+    website: "https://www.facebook.com/Costa-Barbershop-119974739398479",
+    coords: [41.5857924, -8.6330982]
+  },
+
+  {
+    nome: "Cristiano Barber Shop",
+    morada: "Rua Ernesto da Silva 10, 1500-267 Lisboa",
+    telefone: "+351 211391566",
+    coords: [38.7514723, -9.2011403]
+  },
+
+  {
+    nome: "Domus Hair Studio",
+    morada: "Rua David Afonso Moutinho 54, 4435-659 Baguim do Monte (Rio Tinto)",
+    telefone: "915226218",
+    coords: [41.1812109, -8.5313897]
+  },
+
+  {
+    nome: "El Shaddai Barber Styler",
+    morada: "Rua Soares de Paços 11A, 2790-440",
+    telefone: "+351 21 589 2360",
+    facebook: "https://www.facebook.com/barberstylerfd",
+    coords: [38.7193053, -9.2629005]
+  },
+
+  {
+    nome: "El Patron Barbershop",
+    morada: "Praça General Vicente de Freitas, 1500-076 Lisboa",
+    telefone: "+351968882321",
+    coords: [38.7442378, -9.1800305]
+  },
+
+  {
+    nome: "FADO - Barbearia",
+    morada: "Largo Terra Grande 7, 2790-157 Carnaxide",
+    telefone: "+351215949036",
+    coords: [38.7266369, -9.2393040]
+  },
+
+  {
+    nome: "FG Male Image & Grooming",
+    morada: "R. Q.ta de Cabanas, 4700-003 Braga",
+    telefone: "+351 912859229",
+    email: "fgmaleimage@outlook.pt",
+    website: "https://fgmaleimage.pt/",
+    instagram: "https://www.instagram.com/fgoncalvesbarber/",
+    coords: [41.5626481, -8.4221938]
+  },
+
+  {
+    nome: "Figaro's Barbershop",
+    morada: "Rua da Madalena 63, 1100-321",
+    website: "https://figaroslisboa.com/",
+    coords: [38.7097960, -9.1351370]
+  },
+
+  {
+    nome: "Francisco Maia - Barbeiro",
+    morada: "Rua Augusto Correia 48, 4760-125 Vila Nova de Famalicao",
+    telefone: "+351 919 423 135",
+    coords: [41.4088434, -8.5201140]
+  },
+
+  {
+    nome: "Gentleman1415",
+    morada: "Rua da Casa Branca 53, 9000-113 Funchal",
+    telefone: "+351 291 614 248",
+    coords: [32.6398959, -16.9290111]
+  },
+
+  {
+    nome: "Gonçalo Santos Barber Shop",
+    morada: "Rua Carlos Seixas 187, 3030-177 Coimbra",
+    telefone: "+351 915 873 855",
+    coords: [40.1945473, -8.4173011]
+  },
+
+  {
+    nome: "Homens da Praça",
+    morada: "Rua Capitão Manuel Carvalho 3, 4760-020 Vila Nova de Famalicao",
+    telefone: "+351 966 359 038",
+    email: "homensdapraca@gmail.com",
+    coords: [41.4053563, -8.5171305]
+  },
+
+  {
+    nome: "JL Barbearia",
+    morada: "Rua Dom Nuno Álvares Pereira, 4780-439 Santo Tirso",
+    telefone: "+351 912739588",
+    coords: [41.3402317, -8.4771570]
+  },
+
+  {
+    nome: "JR - Cabeleireiro de Homens - Barbearia",
+    morada: "Avenida da Liberdade, Ponte de Sor",
+    telefone: "+351 936 154 613",
+    coords: [39.2477041, -8.0083676]
+  },
+
+  {
+    nome: "Kadette Barbershop",
+    morada: "Avenida O Século",
+    telefone: "+351263658276",
+    coords: [38.9368344, -8.8704534]
+  },
+
+  {
+    nome: "Kings Barbearia",
+    morada: "Rua da Penha de França 59, 1170 302 Lisboa",
+    telefone: "929 165 388",
+    coords: [38.7228310, -9.1293255]
+  },
+
+  {
+    nome: "Lord Jack & Friends",
+    morada: "Avenida Narciso Ferreira 30, 4760-105 Vila Nova de Famalicao",
+    telefone: "+351 916 390 445",
+    facebook: "https://www.facebook.com/lordjackandfriends/?locale=pt_PT",
+    coords: [41.4088078, -8.5186957]
+  },
+
+  {
+    nome: "Los Moustachios",
+    morada: "Rua Cidade de Riom 466",
+    telefone: "+351964208103",
+    email: "barberlosmoustachios@gmail.com",
+    coords: [41.6970467, -8.8426142]
+  },
+
+  {
+    nome: "Madeira Island Tattoo & Barber Shop",
+    morada: "Rua Nova do Vale da Ajuda 2, 9000-250 São Martinho",
+    telefone: "+351 960 072 733",
+    email: "madeira.island.tattoo@gmail.com",
+    website: "https://www.instagram.com/madeira_island_tattoo",
+    coords: [32.6360476, -16.9421542]
+  },
+
+  {
+    nome: "MenConcept",
+    morada: "Avenida das Tílias 136, 2775-335 Parede - Jardins da Parede",
+    telefone: "+351 211 946 084",
+    coords: [38.6974257, -9.3674695]
+  },
+
+  {
+    nome: "Mr Barbearia",
+    morada: "Rua Ferreira Borges 70, 3000-414 Coimbra",
+    instagram: "https://www.instagram.com/mrbarbearia_coimbra/",
+    coords: [40.2099826, -8.4291558]
+  },
+
+  {
+    nome: "New Look Barbearia",
+    morada: "Rua João de Deus Ramos, 3030-328 Coimbra",
+    telefone: "+351 938 258 422",
+    instagram: "https://www.instagram.com/bb.newlook/",
+    facebook: "https://www.facebook.com/barbnewlook",
+    coords: [40.2038294, -8.4052156]
+  },
+
+  {
+    nome: "Nineteen Cuts",
+    morada: "Largo de Domingos Moreira 32, 4780-371 Santo Tirso",
+    telefone: "+351 252100642",
+    website: "https://you.zappysoftware.com/nineteencuts",
+    coords: [41.3418590, -8.4796710]
+  },
+
+  {
+    nome: "Nova Barbearia",
+    morada: "Rua Delfim de Lima 3574 loja j, 4410-229",
+    telefone: "+351 963 544 508",
+    website: "https://buk.pt/novabarbearia2017",
+    coords: [41.0938254, -8.5981499]
+  },
+
+  {
+    nome: "Old Skull Barbershop",
+    morada: "Rua dos Aranhas 80, Funchal",
+    telefone: "+351 913 770 545",
+    email: "geral@oldskull.pt",
+    instagram: "https://www.instagram.com/oldskullbarbershopp/",
+    coords: [32.6480989, -16.9131196]
+  },
+
+  {
+    nome: "Pachioni's Barbearia",
+    morada: "Praça Comandante José Brás 8",
+    telefone: "+351 21 138 6202",
+    coords: [38.6718998, -9.1601290]
+  },
+
+  {
+    nome: "Pifaros Barber Shop",
+    morada: "Rua 31 de Janeiro 11, 5000-603 Vila Real",
+    telefone: "+351 912 322 262",
+    coords: [41.2975373, -7.7446778]
+  },
+
+  {
+    nome: "Pluma Barber Shop",
+    morada: "Rua Alves Roçadas 190, 4760-118 Vila Nova de Famalicao",
+    telefone: "+351 912 380 956",
+    website: "https://noona.app/plumabarbershop",
+    instagram: "https://www.instagram.com/pluma_barbershop",
+    facebook: "https://www.facebook.com/TattooeBarberShop/",
+    coords: [41.4086238, -8.5178334]
+  },
+
+  {
+    nome: "Ricardus's Barber Shop",
+    morada: "Travessa da Boa Hora à Ajuda 33 A, 1300-102 Lisboa",
+    telefone: "21 013 9076",
+    coords: [38.7033602, -9.1966457]
+  },
+
+  {
+    nome: "ricky barber shop",
+    morada: "Avenida do Brasil, 2700-133 Falagueira-Venda Nova Amadora",
+    telefone: "215 871 573",
+    coords: [38.7556198, -9.2276532]
+  },
+
+  {
+    nome: "SOUSA Barbershop",
+    morada: "Rua Bernando Santareno 23, 2650-424",
+    telefone: "911 966 408",
+    coords: [38.7685760, -9.2233573]
+  },
+
+  {
+    nome: "Studio Gênese",
+    morada: "Avenida Infante Dom Henrique 476, 4400-257 Vila Nova de Gaia",
+    telefone: "+351 932 294 882",
+    email: "studiogenese.reis@gmail.com",
+    instagram: "https://www.instagram.com/studiogenese.pt",
+    coords: [41.1186404, -8.6155877]
+  },
+
+  {
+    nome: "The Barbershop",
+    morada: "Rua Manuel da Ponte 31",
+    telefone: "+351964644867",
+    coords: [37.7401167, -25.6694056]
+  },
+
+  {
+    nome: "The Underground Barbershop",
+    morada: "Rua da Conceição 97A, 9050-026 Funchal",
+    telefone: "+351 916 738 050",
+    email: "1underground.barbershop@gmail.com",
+    instagram: "https://www.instagram.com/the.undergroundbarbershop/",
+    coords: [32.6515492, -16.9076873]
+  },
+
+  {
+    nome: "Torrez Barbearia",
+    morada: "Avenida Padre Luís Gonzaga Martins Pinheiro 617, 4780-213 Santo Tirso",
+    telefone: "+351 917 623 050",
+    website: "https://you.zappysoftware.com/torrezbarbearia2022",
+    coords: [41.3237485, -8.4748927]
+  },
+
+  {
+    nome: "Valgrind - The Viking Barber Tattoo Studio",
+    morada: "Rua dos 3 Lagares Lote 1, 5000-577 Quinta da Redonda",
+    telefone: "935690655",
+    coords: [41.2998222, -7.7235669]
+  },
+
+  {
+    nome: "Vix Barbershop",
+    morada: "Estrada da Luz 148d loja f, 1600-160 Lisboa",
+    telefone: "911879837",
+    coords: [38.7554684, -9.1760777]
+  },
+
+  {
+    nome: "Wildcat Barber - TNT Barbershop",
+    morada: "Rua Nova do Vale da Ajuda 1, 9000-116 Funchal",
+    telefone: "(+351) 927 034 718",
+    coords: [32.6359004, -16.9428468]
+  },
+
+  {
+    nome: "Wings Barbershop",
+    morada: "Rua Câmara Pestana Lote 3, 3030-163 Coimbra",
+    telefone: "+351 933 433 626",
+    facebook: "https://www.facebook.com/WingsBarbershop",
+    coords: [40.1928816, -8.4061393]
+  },
+  // === FIM IMPORTACAO OSM VALIDADA 2026-04-05 ===
+
 ];

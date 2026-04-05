@@ -1,5 +1,1152 @@
 const barbearias = [
   {
+    "nome": "4740 Barber Shop",
+    "slug": "4740-barber-shop",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Largo Frei Manuel de Barros 4740-201, Esposende",
+    "codigo_postal": "4740-201",
+    "telefone": "+351 253 037 642",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/BarbeariaBarbaNegraEsposende/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.5319827,
+      -8.7819854
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.facebook.com/BarbeariaBarbaNegraEsposende/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta",
+    "valor_original": {
+      "website": "https://www.facebook.com/BarbeariaBarbaNegraEsposende/"
+    }
+  },
+  {
+    "nome": "Arlem Barber",
+    "slug": "arlem-barber",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Avenida Movimento das Forças Armadas 74, 2840-444",
+    "codigo_postal": "2840-444",
+    "telefone": "+351 211 602 827",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.6168647,
+      -9.1027328
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia 98 Men’s Space",
+    "slug": "barbearia-98-men-s-space",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua General Vasco Gonçalves, 2135-130 Samora Correia",
+    "codigo_postal": "2135-130",
+    "telefone": "+351 932 415 382",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.9203755,
+      -8.8863514
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Abel",
+    "slug": "barbearia-abel",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua de São Tomé 7, 2685-326 Prior Velho",
+    "codigo_postal": "2685-326",
+    "telefone": "+351 926 711 360",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/pg/BarbeariaAbel",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7906086,
+      -9.1230127
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.facebook.com/pg/BarbeariaAbel"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta",
+    "valor_original": {
+      "website": "https://www.facebook.com/pg/BarbeariaAbel"
+    }
+  },
+  {
+    "nome": "Barbearia Carlos Vaz",
+    "slug": "barbearia-carlos-vaz",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Guilherme Gomes Fernandes 81 B, 2675 Odivelas",
+    "codigo_postal": "",
+    "telefone": "+351 918 242 400",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/cabeleireirocarlosvaz/timeline",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7907065,
+      -9.1810906
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.facebook.com/cabeleireirocarlosvaz/timeline"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta",
+    "valor_original": {
+      "website": "https://www.facebook.com/cabeleireirocarlosvaz/timeline"
+    }
+  },
+  {
+    "nome": "Barbearia Couto",
+    "slug": "barbearia-couto",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Avenida Dom João Garcia Bacelar 2020, 3060-704 Tocha",
+    "codigo_postal": "3060-704",
+    "telefone": "+351 966 337 422",
+    "email": null,
+    "website": "https://buk.pt/barbearia-couto",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.3166346,
+      -8.7528117
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://buk.pt/barbearia-couto"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia do Cardoso",
+    "slug": "barbearia-do-cardoso",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Avenida 25 de Abril de 1974 11A",
+    "codigo_postal": "",
+    "telefone": "+351 214 191 538",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.716721,
+      -9.2378861
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia do Gui",
+    "slug": "barbearia-do-gui",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Dom Afonso Henriques 7, 2670-637 Bucelas",
+    "codigo_postal": "2670-637",
+    "telefone": "+351 918 607 564",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbeariadogui2022/",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.9025121,
+      -9.1211717
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/barbeariadogui2022/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia do Senhor",
+    "slug": "barbearia-do-senhor",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua José Castanheira Nunes 13, 3300-062 Arganil Arganil",
+    "codigo_postal": "3300-062",
+    "telefone": "+351 910 430 591",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.2182473,
+      -8.0545602
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia do Zela",
+    "slug": "barbearia-do-zela",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua de Fontelas, Pindelo",
+    "codigo_postal": "",
+    "telefone": null,
+    "email": null,
+    "website": "https://noona.pt/barbeariadozela",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.8717021,
+      -8.4434312
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://noona.pt/barbeariadozela"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Dom Oliveira",
+    "slug": "barbearia-dom-oliveira",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua João XXI 14B, 2790-327",
+    "codigo_postal": "2790-327",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/p/Barbearia-Dom-Oliveira-100076079050145/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.717871,
+      -9.2630838
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.facebook.com/p/Barbearia-Dom-Oliveira-100076079050145/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Inclusive",
+    "slug": "barbearia-inclusive",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua do Alviela 9, 2625-046 Póvoa de Santa Iria",
+    "codigo_postal": "2625-046",
+    "telefone": "+351 934 146 052",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.8658082,
+      -9.0648192
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Irmãos",
+    "slug": "barbearia-irmaos",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Direita 86",
+    "codigo_postal": "",
+    "telefone": "+351 239 829 809",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.2113421,
+      -8.4302505
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia O Seu Espaço",
+    "slug": "barbearia-o-seu-espaco",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua dos Lusíadas 126, 1300-285 Alcântara",
+    "codigo_postal": "1300-285",
+    "telefone": "910 956 568",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7037877,
+      -9.1830425
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Oásis o Carlos",
+    "slug": "barbearia-oasis-o-carlos",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Joaquim António de Aguiar 124",
+    "codigo_postal": "",
+    "telefone": "+351 964 227 761",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.208747,
+      -8.4276566
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Portugal por João Alves",
+    "slug": "barbearia-portugal-por-joao-alves",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua dos Lusíadas 127B, 1300-369 Alcântara",
+    "codigo_postal": "1300-369",
+    "telefone": "911 517 351",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7032304,
+      -9.1835864
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Sa",
+    "slug": "barbearia-sa",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Estrada Simão Gonçalves da Câmara, 9370-139 Calheta",
+    "codigo_postal": "9370-139",
+    "telefone": "+351 963 043 949",
+    "email": "neliasilva78@hotmail.com",
+    "website": null,
+    "instagram": "https://www.instagram.com/barbeariasa/",
+    "facebook": "https://www.facebook.com/Barbeariacalheta",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      32.7296779,
+      -17.1783722
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/barbeariasa/",
+      "https://www.facebook.com/Barbeariacalheta"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Tradição",
+    "slug": "barbearia-tradicao",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Jacinta Marto 6, 1150-192",
+    "codigo_postal": "1150-192",
+    "telefone": "+351 216 042 025",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://facebook.com/BARBEARIATRADICAOLISBOA/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7273501,
+      -9.1372399
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://facebook.com/BARBEARIATRADICAOLISBOA/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barber Shop",
+    "slug": "barber-shop",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Serpa Pinto 3, São Brás de Alportel",
+    "codigo_postal": "",
+    "telefone": "+351 915 471 192",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.1535642,
+      -7.8898633
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbershop TalentoVanguarda",
+    "slug": "barbershop-talentovanguarda",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua de Camões 585, 4000-376",
+    "codigo_postal": "4000-376",
+    "telefone": "+351 937 422 525",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.1570918,
+      -8.6100906
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Bento's Barber Shop & Vespa Bar",
+    "slug": "bento-s-barber-shop-vespa-bar",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua do Cemitério 209, 3060-655 Tocha",
+    "codigo_postal": "3060-655",
+    "telefone": "+351 965 489 907",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/betovespabarbershop/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.3073628,
+      -8.7553082
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.facebook.com/betovespabarbershop/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Buda Barber",
+    "slug": "buda-barber",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Caldas Xavier 5",
+    "codigo_postal": "",
+    "telefone": "+351 917 737 405",
+    "email": null,
+    "website": "https://budabarber.com/",
+    "instagram": null,
+    "facebook": "https://www.facebook.com/budabarber.oeiras/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.6948743,
+      -9.3038409
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://budabarber.com/",
+      "https://www.facebook.com/budabarber.oeiras/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Butterfly Cabeleireiro & Barbearia",
+    "slug": "butterfly-cabeleireiro-barbearia",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "R. de Loule 20, Santa Bárbara de Nexe, Portugal",
+    "codigo_postal": "",
+    "telefone": "+351 913 889 678",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.1036125,
+      -7.9634904
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Champions Barber Shop",
+    "slug": "champions-barber-shop",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Manuel Barbuda e Vasconcelos 1",
+    "codigo_postal": "",
+    "telefone": "+351 234 423 468",
+    "email": null,
+    "website": "https://championsbarbershop.pt/",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.6273083,
+      -8.6462138
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://championsbarbershop.pt/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Cortes & Discos",
+    "slug": "cortes-discos",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Poeta Sebastião da Gama 30/32, 2925-589 Azeitão",
+    "codigo_postal": "2925-589",
+    "telefone": "+351 916 674 524",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/cortesediscos.barbershop/",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.5198003,
+      -9.0180922
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/cortesediscos.barbershop/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Costa Barbershop",
+    "slug": "costa-barbershop",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua João de Carapeços, Carapeços",
+    "codigo_postal": "",
+    "telefone": "+351 935 173 210",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/Costa-Barbershop-119974739398479",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.5857924,
+      -8.6330982
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.facebook.com/Costa-Barbershop-119974739398479"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta",
+    "valor_original": {
+      "website": "https://www.facebook.com/Costa-Barbershop-119974739398479"
+    }
+  },
+  {
+    "nome": "Domus Hair Studio",
+    "slug": "domus-hair-studio",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua David Afonso Moutinho 54, 4435-659 Baguim do Monte (Rio Tinto)",
+    "codigo_postal": "4435-659",
+    "telefone": "915 226 218",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.1812109,
+      -8.5313897
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "El Shaddai Barber Styler",
+    "slug": "el-shaddai-barber-styler",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Soares de Paços 11A, 2790-440",
+    "codigo_postal": "2790-440",
+    "telefone": "+351 215 892 360",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/barberstylerfd",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7193053,
+      -9.2629005
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.facebook.com/barberstylerfd"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "FADO - Barbearia",
+    "slug": "fado-barbearia",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Largo Terra Grande 7, 2790-157 Carnaxide",
+    "codigo_postal": "2790-157",
+    "telefone": "+351 215 949 036",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7266369,
+      -9.239304
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "JL Barbearia",
+    "slug": "jl-barbearia",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Dom Nuno Álvares Pereira, 4780-439 Santo Tirso",
+    "codigo_postal": "4780-439",
+    "telefone": "+351 912 739 588",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.3402317,
+      -8.477157
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "JR - Cabeleireiro de Homens - Barbearia",
+    "slug": "jr-cabeleireiro-de-homens-barbearia",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Avenida da Liberdade, Ponte de Sor",
+    "codigo_postal": "",
+    "telefone": "+351 936 154 613",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.2477041,
+      -8.0083676
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Kadette Barbershop",
+    "slug": "kadette-barbershop",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Avenida O Século",
+    "codigo_postal": "",
+    "telefone": "+351 263 658 276",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.9368344,
+      -8.8704534
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Los Moustachios",
+    "slug": "los-moustachios",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Cidade de Riom 466",
+    "codigo_postal": "",
+    "telefone": "+351 964 208 103",
+    "email": "barberlosmoustachios@gmail.com",
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.6970467,
+      -8.8426142
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Madeira Island Tattoo & Barber Shop",
+    "slug": "madeira-island-tattoo-barber-shop",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Nova do Vale da Ajuda 2, 9000-250 São Martinho",
+    "codigo_postal": "9000-250",
+    "telefone": "+351 960 072 733",
+    "email": "madeira.island.tattoo@gmail.com",
+    "website": null,
+    "instagram": "https://www.instagram.com/madeira_island_tattoo",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      32.6360476,
+      -16.9421542
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/madeira_island_tattoo"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta",
+    "valor_original": {
+      "website": "https://www.instagram.com/madeira_island_tattoo"
+    }
+  },
+  {
+    "nome": "MenConcept",
+    "slug": "menconcept",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Avenida das Tílias 136, 2775-335 Parede - Jardins da Parede",
+    "codigo_postal": "2775-335",
+    "telefone": "+351 211 946 084",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.6974257,
+      -9.3674695
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Nineteen Cuts",
+    "slug": "nineteen-cuts",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Largo de Domingos Moreira 32, 4780-371 Santo Tirso",
+    "codigo_postal": "4780-371",
+    "telefone": "+351 252 100 642",
+    "email": null,
+    "website": "https://you.zappysoftware.com/nineteencuts",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.341859,
+      -8.479671
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://you.zappysoftware.com/nineteencuts"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Nova Barbearia",
+    "slug": "nova-barbearia",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Delfim de Lima 3574 loja j, 4410-229",
+    "codigo_postal": "4410-229",
+    "telefone": "+351 963 544 508",
+    "email": null,
+    "website": "https://buk.pt/novabarbearia2017",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.0938254,
+      -8.5981499
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://buk.pt/novabarbearia2017"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Pachioni's Barbearia",
+    "slug": "pachioni-s-barbearia",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Praça Comandante José Brás 8",
+    "codigo_postal": "",
+    "telefone": "+351 211 386 202",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.6718998,
+      -9.160129
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "SOUSA Barbershop",
+    "slug": "sousa-barbershop",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Bernando Santareno 23, 2650-424",
+    "codigo_postal": "2650-424",
+    "telefone": "911 966 408",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.768576,
+      -9.2233573
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "The Barbershop",
+    "slug": "the-barbershop",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua Manuel da Ponte 31",
+    "codigo_postal": "",
+    "telefone": "+351 964 644 867",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.7401167,
+      -25.6694056
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Torrez Barbearia",
+    "slug": "torrez-barbearia",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Avenida Padre Luís Gonzaga Martins Pinheiro 617, 4780-213 Santo Tirso",
+    "codigo_postal": "4780-213",
+    "telefone": "+351 917 623 050",
+    "email": null,
+    "website": "https://you.zappysoftware.com/torrezbarbearia2022",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.3237485,
+      -8.4748927
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://you.zappysoftware.com/torrezbarbearia2022"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Valgrind - The Viking Barber Tattoo Studio",
+    "slug": "valgrind-the-viking-barber-tattoo-studio",
+    "distrito": "",
+    "concelho": "",
+    "freguesia": "",
+    "morada": "Rua dos 3 Lagares Lote 1, 5000-577 Quinta da Redonda",
+    "codigo_postal": "5000-577",
+    "telefone": "935 690 655",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.2998222,
+      -7.7235669
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
     "nome": "Barbearia Pereira – Águeda",
     "slug": "barbearia-pereira-agueda",
     "distrito": "Aveiro",
@@ -21,7 +1168,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -49,12 +1196,40 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/barbearia.elite/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
       "website": "https://www.instagram.com/barbearia.elite/"
     }
+  },
+  {
+    "nome": "Barbearia Ponto H",
+    "slug": "barbearia-ponto-h",
+    "distrito": "Aveiro",
+    "concelho": "Aveiro",
+    "freguesia": "",
+    "morada": "Rua Gustavo Ferreira Pinto Bastos 06, 3810-128 Aveiro",
+    "codigo_postal": "3810-128",
+    "telefone": "+351 934 829 393",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/pontohoficial/?next=%2F",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.6399701,
+      -8.6538143
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/pontohoficial/?next=%2F"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Barbearia Moura – Espinho",
@@ -78,7 +1253,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -104,7 +1279,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -130,7 +1305,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -158,7 +1333,7 @@ const barbearias = [
     "fontes": [
       "https://www.barbeariabejamoderna.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -190,7 +1365,7 @@ const barbearias = [
     ],
     "status": "por_validar",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -224,7 +1399,36 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/6306_bmbarbeariamonte_barbearia_82575_braga"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "FG Male Image & Grooming",
+    "slug": "fg-male-image-grooming",
+    "distrito": "Braga",
+    "concelho": "Braga",
+    "freguesia": "",
+    "morada": "R. Q.ta de Cabanas, 4700-003 Braga",
+    "codigo_postal": "4700-003",
+    "telefone": "+351 912 859 229",
+    "email": "fgmaleimage@outlook.pt",
+    "website": "https://fgmaleimage.pt/",
+    "instagram": "https://www.instagram.com/fgoncalvesbarber/",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.5626481,
+      -8.4221938
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://fgmaleimage.pt/",
+      "https://www.instagram.com/fgoncalvesbarber/"
+    ],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -252,7 +1456,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/82575_braga"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -280,7 +1484,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/barbearia_fafense/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -311,7 +1515,7 @@ const barbearias = [
     "fontes": [
       "https://barbershopduart.ongenda.com/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -339,7 +1543,7 @@ const barbearias = [
     "fontes": [
       "https://www.guimaraeshopping.pt/lojas/1920-barber-shop/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -367,12 +1571,38 @@ const barbearias = [
     "fontes": [
       "https://www.facebook.com/Barbeariaforadhoras"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
       "website": "https://www.facebook.com/Barbeariaforadhoras"
     }
+  },
+  {
+    "nome": "Barbearia Maria Cruz",
+    "slug": "barbearia-maria-cruz",
+    "distrito": "Braga",
+    "concelho": "Guimarães",
+    "freguesia": "",
+    "morada": "Avenida do Doutor Antunes Guimarães 47, 4100-079 Porto",
+    "codigo_postal": "4100-079",
+    "telefone": "+351 918 515 092",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.16413,
+      -8.6627928
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Black Rock Barbearia",
@@ -398,7 +1628,7 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/pt/a/black-rock-barbearia-guimaraes-largo-da-republica-do-brasil-t7wbrdac"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -432,7 +1662,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/newvision_barbershop/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -460,7 +1690,7 @@ const barbearias = [
     "fontes": [
       "https://www.facebook.com/BarbeariaTheBarbersStudio/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -488,7 +1718,7 @@ const barbearias = [
     "fontes": [
       "https://trezebarbershop.pt"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -516,7 +1746,117 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/madeixas"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Francisco Maia - Barbeiro",
+    "slug": "francisco-maia-barbeiro",
+    "distrito": "Braga",
+    "concelho": "Vila Nova de Famalicão",
+    "freguesia": "",
+    "morada": "Rua Augusto Correia 48, 4760-125 Vila Nova de Famalicao",
+    "codigo_postal": "4760-125",
+    "telefone": "+351 919 423 135",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.4088434,
+      -8.520114
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Homens da Praça",
+    "slug": "homens-da-praca",
+    "distrito": "Braga",
+    "concelho": "Vila Nova de Famalicão",
+    "freguesia": "",
+    "morada": "Rua Capitão Manuel Carvalho 3, 4760-020 Vila Nova de Famalicao",
+    "codigo_postal": "4760-020",
+    "telefone": "+351 966 359 038",
+    "email": "homensdapraca@gmail.com",
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.4053563,
+      -8.5171305
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Lord Jack & Friends",
+    "slug": "lord-jack-friends",
+    "distrito": "Braga",
+    "concelho": "Vila Nova de Famalicão",
+    "freguesia": "",
+    "morada": "Avenida Narciso Ferreira 30, 4760-105 Vila Nova de Famalicao",
+    "codigo_postal": "4760-105",
+    "telefone": "+351 916 390 445",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/lordjackandfriends/?locale=pt_PT",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.4088078,
+      -8.5186957
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.facebook.com/lordjackandfriends/?locale=pt_PT"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Pluma Barber Shop",
+    "slug": "pluma-barber-shop",
+    "distrito": "Braga",
+    "concelho": "Vila Nova de Famalicão",
+    "freguesia": "",
+    "morada": "Rua Alves Roçadas 190, 4760-118 Vila Nova de Famalicao",
+    "codigo_postal": "4760-118",
+    "telefone": "+351 912 380 956",
+    "email": null,
+    "website": "https://noona.app/plumabarbershop",
+    "instagram": "https://www.instagram.com/pluma_barbershop",
+    "facebook": "https://www.facebook.com/TattooeBarberShop/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.4086238,
+      -8.5178334
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://noona.app/plumabarbershop",
+      "https://www.instagram.com/pluma_barbershop",
+      "https://www.facebook.com/TattooeBarberShop/"
+    ],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -542,7 +1882,7 @@ const barbearias = [
     ],
     "status": "por_validar",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -576,7 +1916,7 @@ const barbearias = [
     "fontes": [
       "https://barbeariavaladar.com/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -602,7 +1942,33 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Bronk's Barber Shop",
+    "slug": "bronk-s-barber-shop",
+    "distrito": "Castelo Branco",
+    "concelho": "Covilhã",
+    "freguesia": "",
+    "morada": "Rua Centro de Artes Lote 7, 6200-505 Covilhã",
+    "codigo_postal": "6200-505",
+    "telefone": "+351 964 656 085",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.2712116,
+      -7.4996493
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -628,7 +1994,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -654,7 +2020,343 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Bagaça",
+    "slug": "barbearia-bagaca",
+    "distrito": "Coimbra",
+    "concelho": "Coimbra",
+    "freguesia": "",
+    "morada": "Rua Brigadeiro Correia Cardoso 213, 3030-084 Coimbra",
+    "codigo_postal": "3030-084",
+    "telefone": "+351 933 282 992",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbeariabagaca/",
+    "facebook": "https://www.facebook.com/barbeariabagaca",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.2173348,
+      -8.3987386
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/barbeariabagaca/",
+      "https://www.facebook.com/barbeariabagaca"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Candeias",
+    "slug": "barbearia-candeias",
+    "distrito": "Coimbra",
+    "concelho": "Coimbra",
+    "freguesia": "",
+    "morada": "Rua Mouzinho de Albuquerque 56, 3030-063 Coimbra",
+    "codigo_postal": "3030-063",
+    "telefone": "+351 911 810 877",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbeariacandeias/",
+    "facebook": "https://www.facebook.com/barbeariacandeias",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.1986338,
+      -8.4104402
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/barbeariacandeias/",
+      "https://www.facebook.com/barbeariacandeias"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Coliseu",
+    "slug": "barbearia-coliseu",
+    "distrito": "Coimbra",
+    "concelho": "Coimbra",
+    "freguesia": "",
+    "morada": "Rua do Brasil 386, 3030-775 Coimbra",
+    "codigo_postal": "3030-775",
+    "telefone": "+351 910 265 623",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbeariacoliseu.pt/",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.2010348,
+      -8.4083232
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/barbeariacoliseu.pt/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Estação",
+    "slug": "barbearia-estacao",
+    "distrito": "Coimbra",
+    "concelho": "Coimbra",
+    "freguesia": "",
+    "morada": "Rua António José de Almeida 273, 3000-045 Coimbra",
+    "codigo_postal": "3000-045",
+    "telefone": "+351 239 136 569",
+    "email": null,
+    "website": "https://barbeariaestacao.pt/",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.2130288,
+      -8.4158109
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://barbeariaestacao.pt/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Lorde",
+    "slug": "barbearia-lorde",
+    "distrito": "Coimbra",
+    "concelho": "Coimbra",
+    "freguesia": "",
+    "morada": "Avenida Fernando Namora 254, 3030-185 Coimbra",
+    "codigo_postal": "3030-185",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://facebook.com/people/Barbearia-Lorde/100090125014058",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.1990446,
+      -8.398237
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://facebook.com/people/Barbearia-Lorde/100090125014058"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Number 1",
+    "slug": "barbearia-number-1",
+    "distrito": "Coimbra",
+    "concelho": "Coimbra",
+    "freguesia": "",
+    "morada": "Rua General Humberto Delgado 283, 3030-327 Coimbra",
+    "codigo_postal": "3030-327",
+    "telefone": "+351 915 237 389",
+    "email": null,
+    "website": "https://barbearia-number-one.negocio.site/",
+    "instagram": null,
+    "facebook": "https://www.facebook.com/Barbearia.Number.One",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.2047465,
+      -8.4097174
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://barbearia-number-one.negocio.site/",
+      "https://www.facebook.com/Barbearia.Number.One"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Paulo Freitas",
+    "slug": "barbearia-paulo-freitas",
+    "distrito": "Coimbra",
+    "concelho": "Coimbra",
+    "freguesia": "",
+    "morada": "Largo Doutor Augusto de Oliveira Coimbra 8, 3300-020 Arganil",
+    "codigo_postal": "3300-020",
+    "telefone": "+351 925 144 745",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.2185157,
+      -8.0537588
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Vítor",
+    "slug": "barbearia-vitor",
+    "distrito": "Coimbra",
+    "concelho": "Coimbra",
+    "freguesia": "",
+    "morada": "Rua do Brasil 408, 3030-775 Coimbra",
+    "codigo_postal": "3030-775",
+    "telefone": "+351 917 449 762",
+    "email": null,
+    "website": "https://iva-cabeleireiro.negocio.site/",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.2007659,
+      -8.4070843
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://iva-cabeleireiro.negocio.site/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Gonçalo Santos Barber Shop",
+    "slug": "goncalo-santos-barber-shop",
+    "distrito": "Coimbra",
+    "concelho": "Coimbra",
+    "freguesia": "",
+    "morada": "Rua Carlos Seixas 187, 3030-177 Coimbra",
+    "codigo_postal": "3030-177",
+    "telefone": "+351 915 873 855",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.1945473,
+      -8.4173011
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Mr Barbearia",
+    "slug": "mr-barbearia",
+    "distrito": "Coimbra",
+    "concelho": "Coimbra",
+    "freguesia": "",
+    "morada": "Rua Ferreira Borges 70, 3000-414 Coimbra",
+    "codigo_postal": "3000-414",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/mrbarbearia_coimbra/",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.2099826,
+      -8.4291558
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/mrbarbearia_coimbra/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "New Look Barbearia",
+    "slug": "new-look-barbearia",
+    "distrito": "Coimbra",
+    "concelho": "Coimbra",
+    "freguesia": "",
+    "morada": "Rua João de Deus Ramos, 3030-328 Coimbra",
+    "codigo_postal": "3030-328",
+    "telefone": "+351 938 258 422",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/bb.newlook/",
+    "facebook": "https://www.facebook.com/barbnewlook",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.2038294,
+      -8.4052156
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/bb.newlook/",
+      "https://www.facebook.com/barbnewlook"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Wings Barbershop",
+    "slug": "wings-barbershop",
+    "distrito": "Coimbra",
+    "concelho": "Coimbra",
+    "freguesia": "",
+    "morada": "Rua Câmara Pestana Lote 3, 3030-163 Coimbra",
+    "codigo_postal": "3030-163",
+    "telefone": "+351 933 433 626",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/WingsBarbershop",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.1928816,
+      -8.4061393
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.facebook.com/WingsBarbershop"
+    ],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -680,7 +2382,33 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Alves",
+    "slug": "barbearia-alves",
+    "distrito": "Évora",
+    "concelho": "Évora",
+    "freguesia": "",
+    "morada": "Avenida de São Sebastião, Évora",
+    "codigo_postal": "",
+    "telefone": "+351 925 013 044",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.5691164,
+      -7.9174934
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -708,7 +2436,7 @@ const barbearias = [
     "fontes": [
       "https://www.barbeariaevorastyle.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -736,7 +2464,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/chacals_barbearia/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -764,7 +2492,7 @@ const barbearias = [
     "fontes": [
       "https://www.treatwell.pt/estabelecimentos/na-barbearia-1/em-albufeira-portugal-2/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -798,7 +2526,7 @@ const barbearias = [
     "fontes": [
       "https://xn--ruaa-barbershop-gmb.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -826,7 +2554,7 @@ const barbearias = [
     "fontes": [
       "https://1920barbershop.pt/a-1920-barbershop/faro-forum-algarve/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -854,9 +2582,40 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/barbearia_evandro_garcia_1/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia S. Barba",
+    "slug": "barbearia-s-barba",
+    "distrito": "Faro",
+    "concelho": "Faro",
+    "freguesia": "",
+    "morada": "R. de Loule 2, 8005-491 Santa Bárbara de Nexe, Faro",
+    "codigo_postal": "8005-491",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/s.barbaearia/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.1038645,
+      -7.964627
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.facebook.com/s.barbaearia/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta",
+    "valor_original": {
+      "website": "https://www.facebook.com/s.barbaearia/"
+    }
   },
   {
     "nome": "CJ Barbearia",
@@ -882,7 +2641,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/cj_barberia_faro/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -910,7 +2669,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/jlbarbersfaro/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -938,7 +2697,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/oprofetabarber/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -966,7 +2725,7 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/lp/en/bt/barbershops/in/pt-rural-faro-district/lagos"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -994,7 +2753,7 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/lp/en/tt/men%27s-haircuts/in/pt-rural-faro-district/lagos"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1022,7 +2781,7 @@ const barbearias = [
     "fontes": [
       "https://thebarbers.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1050,7 +2809,7 @@ const barbearias = [
     "fontes": [
       "https://www.treatwell.pt/estabelecimentos/na-barbearia-1/em-portimao-algarve-portugal/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -1082,7 +2841,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1108,7 +2867,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1134,7 +2893,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1162,7 +2921,35 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/3362_barba-negra-leiria_barbearia_141679_leiria"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia of Brothers",
+    "slug": "barbearia-of-brothers",
+    "distrito": "Leiria",
+    "concelho": "Leiria",
+    "freguesia": "",
+    "morada": "Avenida Nossa Senhora de Fátima 62, 2414-140 Leiria",
+    "codigo_postal": "2414-140",
+    "telefone": "+351 244 856 299",
+    "email": "ofbrothers13@gmail.com",
+    "website": "https://ofbrothers13.wixsite.com/barbeariaofbrothers",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.7402837,
+      -8.8030325
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://ofbrothers13.wixsite.com/barbeariaofbrothers"
+    ],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1190,7 +2977,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/1973_bruno-cesar-barbeiro_barbearia_141679_leiria"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1218,7 +3005,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/1173_evolution-mens-salon_barbearia_141679_leiria"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1246,7 +3033,7 @@ const barbearias = [
     "fontes": [
       "https://thebarberhouse.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1274,7 +3061,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/corte-de-cabelo/149306_porto-de-mos"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1302,7 +3089,33 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/172271_ramada"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "ricky barber shop",
+    "slug": "ricky-barber-shop",
+    "distrito": "Lisboa",
+    "concelho": "Amadora",
+    "freguesia": "",
+    "morada": "Avenida do Brasil, 2700-133 Falagueira-Venda Nova Amadora",
+    "codigo_postal": "2700-133",
+    "telefone": "215 871 573",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7556198,
+      -9.2276532
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1330,7 +3143,223 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/3412_aneel-barbershop_salao-de-cabeleireiro_157422_lisboa"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia",
+    "slug": "barbearia",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Rua de Lisboa, Azeitão",
+    "codigo_postal": "",
+    "telefone": "+351 918 468 356",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.5380898,
+      -9.0251075
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia 1025",
+    "slug": "barbearia-1025",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Rua da Glória 17, 1250-115 Lisboa",
+    "codigo_postal": "1250-115",
+    "telefone": "+351 929 131 384",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbearia1025ro",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7169886,
+      -9.1445514
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/barbearia1025ro"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta",
+    "valor_original": {
+      "website": "https://www.instagram.com/barbearia1025ro"
+    }
+  },
+  {
+    "nome": "Barbearia Carlos Silva",
+    "slug": "barbearia-carlos-silva",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Rua de Lisboa EN120, 7540-163",
+    "codigo_postal": "7540-163",
+    "telefone": "+351 965 387 041",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.0188615,
+      -8.6913704
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia do Prakass",
+    "slug": "barbearia-do-prakass",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Rua Cavaleiro de Oliveira 47-C, Lisboa",
+    "codigo_postal": "",
+    "telefone": "+351 920 023 631",
+    "email": null,
+    "website": "https://wwe.hairmehanic.pt",
+    "instagram": null,
+    "facebook": "https://facebook.com/hairmechanic47/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7318836,
+      -9.1328119
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://wwe.hairmehanic.pt",
+      "https://facebook.com/hairmechanic47/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Lisboa",
+    "slug": "barbearia-lisboa",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Rua Cidade de Manchester 35, 1170-098 Lisboa",
+    "codigo_postal": "1170-098",
+    "telefone": "+351 913 510 039",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7276553,
+      -9.1323695
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Nova Lisboa",
+    "slug": "barbearia-nova-lisboa",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Avenida da Igreja 1D, 1700-230 Lisboa",
+    "codigo_postal": "1700-230",
+    "telefone": "218 494 584",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.754471,
+      -9.1392671
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia O Barbólogo",
+    "slug": "barbearia-o-barbologo",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "R. Cervantes 2, 1000-095 Lisboa",
+    "codigo_postal": "1000-095",
+    "telefone": "211 355 750",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7425749,
+      -9.1353791
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Suprema",
+    "slug": "barbearia-suprema",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Estrada de Benfica 399, Lisboa",
+    "codigo_postal": "",
+    "telefone": "932 411 888",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7454083,
+      -9.181587
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1358,12 +3387,149 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/barbeariavintage_lisboa/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
       "website": "https://www.instagram.com/barbeariavintage_lisboa/"
     }
+  },
+  {
+    "nome": "Barbearia Zé Nunes",
+    "slug": "barbearia-ze-nunes",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Rua da Indústria 50B, 1300 Lisboa",
+    "codigo_postal": "",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/BarbeariaZeNunesalcantara/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7055686,
+      -9.1817905
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.facebook.com/BarbeariaZeNunesalcantara/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta",
+    "valor_original": {
+      "website": "https://www.facebook.com/BarbeariaZeNunesalcantara/"
+    }
+  },
+  {
+    "nome": "Beard Man Barber Shop",
+    "slug": "beard-man-barber-shop",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Rua de Campo de Ourique 36A, 1250-041 Lisboa",
+    "codigo_postal": "1250-041",
+    "telefone": "212 479 509",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7205364,
+      -9.1621168
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Bento Barbearias",
+    "slug": "bento-barbearias",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Rua Pascoal de Melo 110, Lisboa",
+    "codigo_postal": "",
+    "telefone": "+351 213 147 930",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://facebook.com/bentobarbearias/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7316702,
+      -9.1389927
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://facebook.com/bentobarbearias/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Blessed Cutz Barbershop",
+    "slug": "blessed-cutz-barbershop",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Estrada de Benfica 182, 1500-073 Lisboa",
+    "codigo_postal": "1500-073",
+    "telefone": "217 785 880",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7431789,
+      -9.1740684
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Brave Barber Shop",
+    "slug": "brave-barber-shop",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Rua da Penha de França 213A, 1170 182 Lisboa",
+    "codigo_postal": "",
+    "telefone": "926 683 129",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7276497,
+      -9.1307573
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Casimiro Barbershop",
@@ -1389,7 +3555,33 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/2059_casimiro-barbershop_barbearia_157422_lisboa"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Cristiano Barber Shop",
+    "slug": "cristiano-barber-shop",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Rua Ernesto da Silva 10, 1500-267 Lisboa",
+    "codigo_postal": "1500-267",
+    "telefone": "+351 211 391 566",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7514723,
+      -9.2011403
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1417,7 +3609,7 @@ const barbearias = [
     "fontes": [
       "https://cutbyandresilva.pt"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -1426,6 +3618,32 @@ const barbearias = [
         "telefone_placeholder"
       ]
     }
+  },
+  {
+    "nome": "El Patron Barbershop",
+    "slug": "el-patron-barbershop",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Praça General Vicente de Freitas, 1500-076 Lisboa",
+    "codigo_postal": "1500-076",
+    "telefone": "+351 968 882 321",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7442378,
+      -9.1800305
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Exodo Barbearia",
@@ -1451,7 +3669,33 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/157422_lisboa"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Kings Barbearia",
+    "slug": "kings-barbearia",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Rua da Penha de França 59, 1170 302 Lisboa",
+    "codigo_postal": "",
+    "telefone": "929 165 388",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.722831,
+      -9.1293255
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1479,7 +3723,59 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/157422_lisboa"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Ricardus's Barber Shop",
+    "slug": "ricardus-s-barber-shop",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Travessa da Boa Hora à Ajuda 33 A, 1300-102 Lisboa",
+    "codigo_postal": "1300-102",
+    "telefone": "210 139 076",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7033602,
+      -9.1966457
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Vix Barbershop",
+    "slug": "vix-barbershop",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": "",
+    "morada": "Estrada da Luz 148d loja f, 1600-160 Lisboa",
+    "codigo_postal": "1600-160",
+    "telefone": "911 879 837",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7554684,
+      -9.1760777
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1507,7 +3803,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/167553_vale-de-figueira"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1535,7 +3831,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/167922_santo-antonio-dos-cavaleiros"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1563,7 +3859,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/167922_santo-antonio-dos-cavaleiros"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1591,7 +3887,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/nobreartebarbearia/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -1622,7 +3918,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/kortejbbarbershop/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1650,7 +3946,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/2014_barbercrew-matosinhos_barbearia_203185_matosinhos"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1678,7 +3974,33 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/5068_montes-barber-mlsg_barbearia_203185_matosinhos"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia e Tattoo Asgard Porto",
+    "slug": "barbearia-e-tattoo-asgard-porto",
+    "distrito": "Porto",
+    "concelho": "Porto",
+    "freguesia": "",
+    "morada": "Rua de Oliveira Monteiro, 4050-072 Porto",
+    "codigo_postal": "4050-072",
+    "telefone": "+351 928 093 329",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.1581758,
+      -8.6220726
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1706,7 +4028,7 @@ const barbearias = [
     "fontes": [
       "https://www.facebook.com/profile.php?id=100063781357982"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": false,
     "qualidade_ficha": "baixa",
     "valor_original": {
@@ -1739,7 +4061,7 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/nl/lvp/barbearia-porto-los-patrones-rua-aires-de-ornelas-porto-oo5lzQ"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1767,7 +4089,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/3976_black-studio-bs_barbearia_208915_porto"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1795,7 +4117,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/6037_j-schwalbe-hair_barbearia_208915_porto"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1823,7 +4145,35 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/221774_vila-nova-de-gaia"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Studio Gênese",
+    "slug": "studio-genese",
+    "distrito": "Porto",
+    "concelho": "Vila Nova de Gaia",
+    "freguesia": "",
+    "morada": "Avenida Infante Dom Henrique 476, 4400-257 Vila Nova de Gaia",
+    "codigo_postal": "4400-257",
+    "telefone": "+351 932 294 882",
+    "email": "studiogenese.reis@gmail.com",
+    "website": null,
+    "instagram": "https://www.instagram.com/studiogenese.pt",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.1186404,
+      -8.6155877
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/studiogenese.pt"
+    ],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1851,7 +4201,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/221774_vila-nova-de-gaia"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1877,7 +4227,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1903,7 +4253,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1931,7 +4281,7 @@ const barbearias = [
     "fontes": [
       "https://www.barbeariaalcacerdosal.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -1965,7 +4315,7 @@ const barbearias = [
     "fontes": [
       "https://barbeariamontecristo.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -1974,6 +4324,32 @@ const barbearias = [
         "telefone_placeholder"
       ]
     }
+  },
+  {
+    "nome": "Barbearia Nacional",
+    "slug": "barbearia-nacional",
+    "distrito": "Setúbal",
+    "concelho": "Almada",
+    "freguesia": "",
+    "morada": "Praça General Humberto Delgado, Almada",
+    "codigo_postal": "",
+    "telefone": "911 165 251",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.678375,
+      -9.1643972
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Garcias Barber",
@@ -1999,7 +4375,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/154702_junqueiro"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2027,7 +4403,7 @@ const barbearias = [
     "fontes": [
       "https://www.barreirolitebarbearia.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -2061,7 +4437,7 @@ const barbearias = [
     "fontes": [
       "https://www.barbergrandola.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -2070,6 +4446,32 @@ const barbearias = [
         "telefone_placeholder"
       ]
     }
+  },
+  {
+    "nome": "Barbearia Boavida",
+    "slug": "barbearia-boavida",
+    "distrito": "Setúbal",
+    "concelho": "Montijo",
+    "freguesia": "",
+    "morada": "Rua Doutor Manuel da Cruz Júnior 34, 2870-121 Montijo",
+    "codigo_postal": "2870-121",
+    "telefone": "+351 933 584 841",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7069771,
+      -8.9812721
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Barbearia Montijo Urbana",
@@ -2095,7 +4497,7 @@ const barbearias = [
     "fontes": [
       "https://www.montijourbanabarbearia.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -2129,7 +4531,35 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/pt/lvp/cannon-barber-rua-cidade-de-ponta-delgada-montijo-vwyvnY"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Campos",
+    "slug": "barbearia-campos",
+    "distrito": "Setúbal",
+    "concelho": "Santiago do Cacém",
+    "freguesia": "",
+    "morada": "Rua de Moçambique 14, 7540-145 Santiago do Cacém",
+    "codigo_postal": "7540-145",
+    "telefone": "+351 911 033 581",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbeariacamposss/",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.0189342,
+      -8.6940752
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/barbeariacamposss/"
+    ],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2157,7 +4587,7 @@ const barbearias = [
     "fontes": [
       "https://www.barbeariasantiagocacem.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -2191,7 +4621,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/barbearia.bueno.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2219,7 +4649,7 @@ const barbearias = [
     "fontes": [
       "https://www.barbeariaclassicasetubal.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -2253,7 +4683,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/barbearia_rickgino/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2278,7 +4708,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/barbeariatodi/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": false,
     "qualidade_ficha": "baixa",
     "valor_original": {
@@ -2312,7 +4742,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/lucasblack.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2340,7 +4770,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/1187_studio-fama-by-fabiano-the-barber_barbearia_252809_setubal"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2368,7 +4798,7 @@ const barbearias = [
     "fontes": [
       "https://www.barbeariasinesmoderna.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -2400,7 +4830,7 @@ const barbearias = [
     ],
     "status": "por_validar",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -2432,7 +4862,7 @@ const barbearias = [
     ],
     "status": "por_validar",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -2441,6 +4871,58 @@ const barbearias = [
         "telefone_placeholder"
       ]
     }
+  },
+  {
+    "nome": "Barbearia Central",
+    "slug": "barbearia-central",
+    "distrito": "Vila Real",
+    "concelho": "Vila Real",
+    "freguesia": "",
+    "morada": "Rua dos Combatentes da Grande Guerra 47, 5000-635 Vila Real",
+    "codigo_postal": "5000-635",
+    "telefone": "+351 259 347 155",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.2971315,
+      -7.7448596
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Moderna",
+    "slug": "barbearia-moderna",
+    "distrito": "Vila Real",
+    "concelho": "Vila Real",
+    "freguesia": "",
+    "morada": "5000-446 Vila Real",
+    "codigo_postal": "5000-446",
+    "telefone": "+351 961 062 527",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.3060621,
+      -7.7440634
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "Barbearia Real",
@@ -2464,7 +4946,7 @@ const barbearias = [
     ],
     "status": "por_validar",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -2473,6 +4955,32 @@ const barbearias = [
         "telefone_placeholder"
       ]
     }
+  },
+  {
+    "nome": "Pifaros Barber Shop",
+    "slug": "pifaros-barber-shop",
+    "distrito": "Vila Real",
+    "concelho": "Vila Real",
+    "freguesia": "",
+    "morada": "Rua 31 de Janeiro 11, 5000-603 Vila Real",
+    "codigo_postal": "5000-603",
+    "telefone": "+351 912 322 262",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.2975373,
+      -7.7446778
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   },
   {
     "nome": "The Six - Barber Shop",
@@ -2496,7 +5004,7 @@ const barbearias = [
     ],
     "status": "por_validar",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -2528,7 +5036,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2556,7 +5064,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/5769_balder_barbearia_279940_viseu"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2582,7 +5090,33 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Resende",
+    "slug": "barbearia-resende",
+    "distrito": "Viseu",
+    "concelho": "Viseu",
+    "freguesia": "",
+    "morada": "Av. Aquilino Ribeiro L 5 R/C FRENTE, 3515-114 Viseu",
+    "codigo_postal": "3515-114",
+    "telefone": "+351 964 010 448",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.6805922,
+      -7.9202195
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2610,7 +5144,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/3467_ebenezer-barber-shop_barbearia_279940_viseu"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2638,7 +5172,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/risebarbearia"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -2669,7 +5203,7 @@ const barbearias = [
     "fontes": [
       "https://goo.gl/maps/LmXh3rgGkk5HKRhe6"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2697,7 +5231,35 @@ const barbearias = [
     "fontes": [
       "https://www.facebook.com/profile.php?id=100063545409660"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Faialense",
+    "slug": "barbearia-faialense",
+    "distrito": "Açores",
+    "concelho": "Horta",
+    "freguesia": "",
+    "morada": "Estrada Regional de Santa Bárbara 5A, 9900-045 Horta (Angústias)",
+    "codigo_postal": "9900-045",
+    "telefone": null,
+    "email": null,
+    "website": "https://booksy.com/pt-pt/2186_barbearia-faialense_barberaria_53709_horta?do=invite&_branch_match_id=1333857990378834596&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FV9y2tMHb1c3HJc08CAN0VSV0iAAAA",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.5326252,
+      -28.6454495
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://booksy.com/pt-pt/2186_barbearia-faialense_barberaria_53709_horta?do=invite&_branch_match_id=1333857990378834596&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FV9y2tMHb1c3HJc08CAN0VSV0iAAAA"
+    ],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2725,7 +5287,35 @@ const barbearias = [
     "fontes": [
       "https://goo.gl/maps/njXCdUYhJmeMQknc6"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Figaro's Barbershop",
+    "slug": "figaro-s-barbershop",
+    "distrito": "Açores",
+    "concelho": "Madalena",
+    "freguesia": "",
+    "morada": "Rua da Madalena 63, 1100-321",
+    "codigo_postal": "1100-321",
+    "telefone": null,
+    "email": null,
+    "website": "https://figaroslisboa.com/",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.709796,
+      -9.135137
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://figaroslisboa.com/"
+    ],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2753,7 +5343,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/6264_pro-style-barber-shop_barbearia_185116_funchal"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2776,7 +5366,7 @@ const barbearias = [
     "coords": null,
     "status": "incompleto",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": false,
     "qualidade_ficha": "baixa",
     "valor_original": {
@@ -2808,7 +5398,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2836,7 +5426,7 @@ const barbearias = [
     "fontes": [
       "https://www.facebook.com/barbeariacorteestilo/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2864,7 +5454,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/madcutterbarbershop/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2892,7 +5482,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/themensclubbarbershop/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2920,7 +5510,7 @@ const barbearias = [
     "fontes": [
       "https://www.fideliscabeleireiros.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2948,7 +5538,33 @@ const barbearias = [
     "fontes": [
       "https://goo.gl/maps/CnDkgbtb4EG7pW3Z9"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Alegria - Barbershop",
+    "slug": "barbearia-alegria-barbershop",
+    "distrito": "Madeira",
+    "concelho": "Funchal",
+    "freguesia": "",
+    "morada": "Rua dos Tanoeiros 64, 9000-057 Funchal",
+    "codigo_postal": "9000-057",
+    "telefone": "+351 291 642 542",
+    "email": "barbeariaalegria@gmail.com",
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      32.6485371,
+      -16.9065383
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2971,7 +5587,7 @@ const barbearias = [
     "coords": null,
     "status": "incompleto",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": false,
     "qualidade_ficha": "baixa",
     "valor_original": {
@@ -2980,6 +5596,114 @@ const barbearias = [
         "morada_generica"
       ]
     }
+  },
+  {
+    "nome": "Gentleman1415",
+    "slug": "gentleman1415",
+    "distrito": "Madeira",
+    "concelho": "Funchal",
+    "freguesia": "",
+    "morada": "Rua da Casa Branca 53, 9000-113 Funchal",
+    "codigo_postal": "9000-113",
+    "telefone": "+351 291 614 248",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      32.6398959,
+      -16.9290111
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Old Skull Barbershop",
+    "slug": "old-skull-barbershop",
+    "distrito": "Madeira",
+    "concelho": "Funchal",
+    "freguesia": "",
+    "morada": "Rua dos Aranhas 80, Funchal",
+    "codigo_postal": "",
+    "telefone": "+351 913 770 545",
+    "email": "geral@oldskull.pt",
+    "website": null,
+    "instagram": "https://www.instagram.com/oldskullbarbershopp/",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      32.6480989,
+      -16.9131196
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/oldskullbarbershopp/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "The Underground Barbershop",
+    "slug": "the-underground-barbershop",
+    "distrito": "Madeira",
+    "concelho": "Funchal",
+    "freguesia": "",
+    "morada": "Rua da Conceição 97A, 9050-026 Funchal",
+    "codigo_postal": "9050-026",
+    "telefone": "+351 916 738 050",
+    "email": "1underground.barbershop@gmail.com",
+    "website": null,
+    "instagram": "https://www.instagram.com/the.undergroundbarbershop/",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      32.6515492,
+      -16.9076873
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.instagram.com/the.undergroundbarbershop/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Wildcat Barber - TNT Barbershop",
+    "slug": "wildcat-barber-tnt-barbershop",
+    "distrito": "Madeira",
+    "concelho": "Funchal",
+    "freguesia": "",
+    "morada": "Rua Nova do Vale da Ajuda 1, 9000-116 Funchal",
+    "codigo_postal": "9000-116",
+    "telefone": "+351 927 034 718",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      32.6359004,
+      -16.9428468
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
   }
 ];
 

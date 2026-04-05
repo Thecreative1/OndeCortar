@@ -573,15 +573,74 @@
       height: 540px;
     }
 
-    .quick-cities {
-      gap: 10px;
+    .hero-promo-card {
+      display: grid;
+      gap: 16px;
       margin-top: 4px;
+      padding: 20px;
+      border: 1px solid rgba(176, 138, 74, 0.2);
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at top right, rgba(176, 138, 74, 0.16), transparent 32%),
+        linear-gradient(180deg, rgba(250, 244, 233, 0.98), rgba(245, 236, 220, 0.94));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.88);
     }
 
-    .quick-cities .city-chip {
-      min-height: 40px;
-      padding: 8px 14px;
-      font-size: 0.95rem;
+    .hero-promo-head {
+      display: grid;
+      gap: 8px;
+    }
+
+    .hero-promo-head h3 {
+      font-size: clamp(1.28rem, 2vw, 1.55rem);
+      line-height: 1.12;
+    }
+
+    .hero-promo-head p,
+    .hero-promo-note {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .hero-promo-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-promo-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .hero-promo-point {
+      padding: 14px 16px;
+      border: 1px solid rgba(34, 32, 28, 0.08);
+      border-radius: 18px;
+      background: rgba(255, 251, 244, 0.72);
+    }
+
+    .hero-promo-point strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.98rem;
+      color: var(--ink-strong);
+    }
+
+    .hero-promo-point span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .hero-promo-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
     }
 
     .metrics-grid {
@@ -1216,6 +1275,14 @@
         align-items: stretch;
       }
 
+      .hero-promo-points {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-promo-actions .btn {
+        width: 100%;
+      }
+
       .city-chip {
         width: 100%;
       }
@@ -1330,7 +1397,44 @@
             <a class="btn btn-secondary" href="registar.html">Adicionar barbearia</a>
           </div>
 
-          <div class="quick-cities" id="heroCities" aria-label="Pesquisas rápidas por cidade"></div>
+          <div class="hero-promo-card" aria-label="Adicionar barbearia ao diretório">
+            <div class="hero-promo-head">
+              <span class="eyebrow">Para donos de barbearias</span>
+              <h3>Queres aparecer no mapa e receber mais contactos?</h3>
+              <p>Adiciona a tua barbearia para seres encontrado por clientes que pesquisam por cidade, zona ou nome.</p>
+            </div>
+
+            <div class="hero-promo-metrics">
+              <span class="pill"><span data-barbearias-total>63</span>&nbsp;fichas no diretório</span>
+              <span class="pill"><span data-barbearias-contactos>63</span>&nbsp;com contacto disponível</span>
+            </div>
+
+            <div class="hero-promo-points">
+              <div class="hero-promo-point">
+                <strong>Mais visibilidade</strong>
+                <span>Aparece no mapa e nas pesquisas feitas no site.</span>
+              </div>
+              <div class="hero-promo-point">
+                <strong>Mais confiança</strong>
+                <span>Mostra morada, telefone e links úteis num só perfil.</span>
+              </div>
+              <div class="hero-promo-point">
+                <strong>Mais contactos</strong>
+                <span>Facilita o clique para ligar, abrir Instagram ou ver a localização.</span>
+              </div>
+              <div class="hero-promo-point">
+                <strong>Entrada simples</strong>
+                <span>Pede a adição da tua barbearia em poucos minutos.</span>
+              </div>
+            </div>
+
+            <div class="hero-promo-actions">
+              <a class="btn btn-primary" href="registar.html">Adicionar barbearia</a>
+              <a class="btn btn-secondary" href="faq.html">Tirar dúvidas</a>
+            </div>
+
+            <p class="hero-promo-note">As cidades continuam disponíveis mais abaixo para exploração rápida do diretório.</p>
+          </div>
 
           <div class="hero-results" id="heroResults" hidden>
             <div class="hero-results-head">
@@ -1591,15 +1695,18 @@
       const heroResultsList = document.getElementById("heroResultsList");
       const featuredGrid = document.getElementById("featuredGrid");
       const citiesGrid = document.getElementById("citiesGrid");
-      const heroCities = document.getElementById("heroCities");
       const directoryCities = document.getElementById("directoryCities");
       const totalTargets = document.querySelectorAll("[data-barbearias-total]");
+      const contactTargets = document.querySelectorAll("[data-barbearias-contactos]");
 
       totalTargets.forEach(function(target) {
         target.textContent = stats.total;
       });
 
-      renderCityChips(heroCities, popularCities.slice(0, 6));
+      contactTargets.forEach(function(target) {
+        target.textContent = stats.contacts;
+      });
+
       renderCityChips(directoryCities, popularCities);
       renderFeatured();
       renderCities();
@@ -1659,6 +1766,10 @@
       }
 
       function renderCityChips(container, list) {
+        if (!container) {
+          return;
+        }
+
         container.innerHTML = list.map(function(item) {
           return '<button class="city-chip" type="button" data-city-search="' + directory.escapeHtml(item.city) + '">' +
             directory.escapeHtml(item.city) +

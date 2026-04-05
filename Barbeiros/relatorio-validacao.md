@@ -1,11 +1,11 @@
 # Relatorio de validacao das barbearias
 
-Data da auditoria: `2026-04-04`
+Data da auditoria: `2026-04-05`
 
 ## Resumo
 
-- Total de entradas: **103**
-- Confirmadas: **80**
+- Total de entradas: **203**
+- Confirmadas: **180**
 - Por validar: **20**
 - Incompletas: **3**
 - Sem coordenadas validas: **3**

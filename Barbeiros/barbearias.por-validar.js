@@ -23,7 +23,7 @@ const barbeariasPorValidar = [
     "fontes": [
       "https://www.barbeariabejamoderna.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -55,7 +55,7 @@ const barbeariasPorValidar = [
     ],
     "status": "por_validar",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -89,7 +89,7 @@ const barbeariasPorValidar = [
     "fontes": [
       "https://www.fresha.com/pt/a/black-rock-barbearia-guimaraes-largo-da-republica-do-brasil-t7wbrdac"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -121,7 +121,7 @@ const barbeariasPorValidar = [
     ],
     "status": "por_validar",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -155,7 +155,7 @@ const barbeariasPorValidar = [
     "fontes": [
       "https://www.treatwell.pt/estabelecimentos/na-barbearia-1/em-albufeira-portugal-2/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -189,7 +189,7 @@ const barbeariasPorValidar = [
     "fontes": [
       "https://www.treatwell.pt/estabelecimentos/na-barbearia-1/em-portimao-algarve-portugal/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -223,7 +223,7 @@ const barbeariasPorValidar = [
     "fontes": [
       "https://cutbyandresilva.pt"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -257,7 +257,7 @@ const barbeariasPorValidar = [
     "fontes": [
       "https://www.facebook.com/profile.php?id=100063781357982"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": false,
     "qualidade_ficha": "baixa",
     "valor_original": {
@@ -290,7 +290,7 @@ const barbeariasPorValidar = [
     "fontes": [
       "https://www.barbeariaalcacerdosal.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -324,7 +324,7 @@ const barbeariasPorValidar = [
     "fontes": [
       "https://barbeariamontecristo.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -358,7 +358,7 @@ const barbeariasPorValidar = [
     "fontes": [
       "https://www.barreirolitebarbearia.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -392,7 +392,7 @@ const barbeariasPorValidar = [
     "fontes": [
       "https://www.barbergrandola.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -426,7 +426,7 @@ const barbeariasPorValidar = [
     "fontes": [
       "https://www.montijourbanabarbearia.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -460,7 +460,7 @@ const barbeariasPorValidar = [
     "fontes": [
       "https://www.barbeariasantiagocacem.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -494,7 +494,7 @@ const barbeariasPorValidar = [
     "fontes": [
       "https://www.barbeariaclassicasetubal.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -525,7 +525,7 @@ const barbeariasPorValidar = [
     "fontes": [
       "https://www.instagram.com/barbeariatodi/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": false,
     "qualidade_ficha": "baixa",
     "valor_original": {
@@ -559,7 +559,7 @@ const barbeariasPorValidar = [
     "fontes": [
       "https://www.barbeariasinesmoderna.pt/"
     ],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -591,7 +591,7 @@ const barbeariasPorValidar = [
     ],
     "status": "por_validar",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -623,7 +623,7 @@ const barbeariasPorValidar = [
     ],
     "status": "por_validar",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -655,7 +655,7 @@ const barbeariasPorValidar = [
     ],
     "status": "por_validar",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -687,7 +687,7 @@ const barbeariasPorValidar = [
     ],
     "status": "por_validar",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -716,7 +716,7 @@ const barbeariasPorValidar = [
     "coords": null,
     "status": "incompleto",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": false,
     "qualidade_ficha": "baixa",
     "valor_original": {
@@ -745,7 +745,7 @@ const barbeariasPorValidar = [
     "coords": null,
     "status": "incompleto",
     "fontes": [],
-    "ultima_validacao": "2026-04-04",
+    "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": false,
     "qualidade_ficha": "baixa",
     "valor_original": {

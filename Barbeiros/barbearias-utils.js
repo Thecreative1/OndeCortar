@@ -9,7 +9,7 @@
     root.BarbeariasUtils = api;
   }
 })(typeof globalThis !== "undefined" ? globalThis : this, function() {
-  const DATA_VALIDACAO = "2026-04-04";
+  const DATA_VALIDACAO = "2026-04-05";
   const STREET_REGEX = /(rua|r\.|avenida|av\.|praceta|pra[cç]a|largo|estrada|travessa|tv\.|rotunda|alameda|ed\.|edif|bloco|loja|shopping|centro comercial|guimaraeshopping|forum|fórum|c\. comercial|bairro|parque|mercado)/i;
   const VENUE_REGEX = /(shopping|centro comercial|forum|fórum|loja|mercado|studio|barbershop|barber shop|barbearia)/i;
   const PLACEHOLDER_PHONE_DIGITS = new Set([
