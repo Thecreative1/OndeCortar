@@ -564,6 +564,34 @@
     );
   }
 
+  function renderStoreSpotlightCard(item) {
+    const product = productMap.get(item.product);
+    if (!product) return "";
+    return (
+      '<article class="editorial-card store-hero-spotlight-card">' +
+        '<div class="featured-thumb"><img src="' + href(product.image) + '" alt="' + e(product.alt) + '" loading="lazy" /></div>' +
+        '<div class="store-hero-spotlight-copy">' +
+          '<div class="meta-row"><span class="tag">' + e(item.label) + '</span><span class="tag">' + e(product.bestFor) + '</span></div>' +
+          '<h2>' + e(product.name) + '</h2>' +
+          '<p>' + e(item.note) + '</p>' +
+          '<p class="store-hero-note">Escolha rápida para quem quer ir direto a uma opção segura.</p>' +
+          '<div class="card-actions"><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Comprar na Amazon.es</a><a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Ver recomendação</a></div>' +
+        '</div>' +
+      '</article>'
+    );
+  }
+
+  function renderStoreChoiceCard(item) {
+    const product = productMap.get(item.product);
+    if (!product) return "";
+    return (
+      '<article class="shop-mini-card store-choice-card">' +
+        '<img src="' + href(product.image) + '" alt="' + e(product.alt) + '" loading="lazy" />' +
+        '<div><span class="tag">' + e(item.label) + '</span><strong>' + e(product.name) + '</strong><p>' + e(item.note) + '</p><div class="card-actions"><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Comprar</a><a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Detalhes</a></div></div>' +
+      '</article>'
+    );
+  }
+
   function renderStoreHome() {
     const canonical = "https://ondecortar.pt/loja/";
     setMeta("Loja OndeCortar | Produtos de barbearia escolhidos com critério", "Loja OndeCortar com máquinas, kits, navalhas e acessórios recomendados.", canonical);
@@ -631,23 +659,23 @@
       '<main>' +
         '<section class="section store-intro-section"><div class="container">' +
           '<div class="store-hero-shell">' +
-            '<div class="hero-card store-hero-main-card">' +
+            '<div class="hero-card store-hero-main-card store-hero-compact-card">' +
               '<span class="section-flag">LOJA ONDECORTAR</span>' +
-              '<h1>Produtos recomendados para comprar melhor</h1>' +
-              '<p>Entra logo nas melhores recomendações, compara poucas opções e chega mais depressa ao produto certo.</p>' +
+              '<h1>Comprar por categoria ou entrar logo nas melhores escolhas</h1>' +
+              '<p>Começa pelos cards visuais e desce para os produtos recomendados quando quiseres comparar melhor.</p>' +
               '<div class="hero-actions">' +
-                '<a class="btn btn-primary" href="#produtos">Ver produtos recomendados</a>' +
-                '<a class="btn btn-secondary" href="#categorias">Explorar categorias</a>' +
+                '<a class="btn btn-primary" href="#categorias">Ver categorias</a>' +
+                '<a class="btn btn-secondary" href="#produtos">Ver produtos</a>' +
               '</div>' +
-              '<p class="store-hero-note">Links afiliados identificados em todas as paginas comerciais</p>' +
+              '<p class="store-hero-note">Links afiliados identificados em todas as páginas comerciais</p>' +
             '</div>' +
             '<nav class="store-quick-bar" aria-label="Categorias rapidas">' + heroQuickLinks + '</nav>' +
           '</div>' +
         '</div></section>' +
-        '<section class="section" id="produtos"><div class="container"><div class="section-header"><div><span class="eyebrow">Mais procurados</span><h2>Top recomendações para comprar hoje</h2><p>Começa por aqui com uma seleção curta e mais fácil de comparar.</p></div></div><div class="featured-grid">' + featured + '</div></div></section>' +
-        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Por necessidade</span><h2>Explorar por necessidade</h2><p>Uma primeira camada para encontrar mais depressa o que faz sentido.</p></div></div><div class="need-grid">' + needCards + '</div></div></section>' +
-        '<section class="section"><div class="container comparison-card"><div class="section-header"><div><span class="eyebrow">Comparações rápidas</span><h2>Compara e decide em minutos</h2><p>Quatro atalhos para chegares ao produto certo mais depressa.</p></div></div><div class="comparison-table">' + comparisonRows + '</div></div></section>' +
         '<section class="section" id="categorias"><div class="container"><div class="section-header"><div><span class="eyebrow">Categorias</span><h2>Comprar por categoria</h2><p>Se já sabes o tipo de produto que queres, entra diretamente na categoria certa.</p></div></div><div class="category-grid">' + categoryCards + '</div></div></section>' +
+        '<section class="section" id="produtos"><div class="container"><div class="section-header"><div><span class="eyebrow">Mais procurados</span><h2>Produtos que fazem sentido comprar primeiro</h2><p>Uma seleção curta para começares pelos vencedores em vez de te perderes em dezenas de opções.</p></div></div><div class="featured-grid">' + featured + '</div></div></section>' +
+        '<section class="section" id="comparar"><div class="container comparison-card"><div class="section-header"><div><span class="eyebrow">Comparações rápidas</span><h2>Compara e decide em minutos</h2><p>Quatro atalhos diretos para chegares ao produto certo sem navegar à toa.</p></div></div><div class="comparison-table">' + comparisonRows + '</div></div></section>' +
+        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Por necessidade</span><h2>Escolhe pela tua situação</h2><p>Se ainda não sabes o produto, começa pelo teu cenário de uso e afunila daí.</p></div></div><div class="need-grid">' + needCards + '</div></div></section>' +
         renderWhyBuy() +
         '<section class="section"><div class="container">' + renderDisclosure() + "</div></section>" +
       "</main>" +
