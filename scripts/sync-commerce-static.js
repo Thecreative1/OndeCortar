@@ -3,10 +3,53 @@ const path = require("path");
 const vm = require("vm");
 
 const ROOT = path.resolve(__dirname, "..");
-const VERSION = "20260403-shop-11";
-const TODAY = "2026-04-03";
+const VERSION = "20260405-responsive-1";
+const TODAY = "2026-04-05";
 const SITE_URL = "https://ondecortar.pt/";
 const DEFAULT_OG_IMAGE = SITE_URL + "imagens/banner.jpg";
+const NAV_SCRIPT = `
+  <script>
+    (function() {
+      var nav = document.querySelector(".nav");
+      var toggle = document.querySelector("[data-nav-toggle]");
+      var navLinks = document.getElementById("siteNavLinks");
+      if (!nav || !toggle || !navLinks) return;
+
+      function setOpen(nextOpen) {
+        nav.classList.toggle("is-open", nextOpen);
+        document.body.classList.toggle("nav-open", nextOpen);
+        toggle.setAttribute("aria-expanded", String(nextOpen));
+      }
+
+      toggle.addEventListener("click", function() {
+        setOpen(!nav.classList.contains("is-open"));
+      });
+
+      navLinks.addEventListener("click", function(event) {
+        if (event.target.closest("a")) {
+          setOpen(false);
+        }
+      });
+
+      document.addEventListener("click", function(event) {
+        if (!nav.contains(event.target)) {
+          setOpen(false);
+        }
+      });
+
+      document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+          setOpen(false);
+        }
+      });
+
+      window.addEventListener("resize", function() {
+        if (window.innerWidth > 760) {
+          setOpen(false);
+        }
+      });
+    })();
+  </script>`;
 
 function escapeHtml(value) {
   return String(value || "")
@@ -215,6 +258,7 @@ function renderStaticPage(spec, data) {
 </head>
 <body${Object.entries(spec.bodyAttrs || {}).map(([key, value]) => ` ${key}="${escapeHtml(value)}"`).join("")}>
   <div id="app" class="page-shell">${rendered.appHtml}</div>
+${NAV_SCRIPT}
 </body>
 </html>
 `;

@@ -184,11 +184,20 @@
     const ctaLabel = section === "revista" ? "Ler artigos" : "Ver loja";
     return (
       '<header class="site-header"><div class="container"><nav class="nav" aria-label="Navegação principal">' +
-        '<a class="brand" href="' + href("index.html") + '">' +
-          '<img class="brand-logo" src="' + href("imagens/logo-ondecortar-round.png") + '" alt="Logo OndeCortar.pt" />' +
-          '<span class="brand-text"><strong>OndeCortar.pt</strong><span>' + e(sectionLabel()) + '</span></span>' +
-        "</a>" +
-        '<div class="nav-links">' +
+        '<div class="nav-main-row">' +
+          '<a class="brand" href="' + href("index.html") + '">' +
+            '<img class="brand-logo" src="' + href("imagens/logo-ondecortar-round.png") + '" alt="Logo OndeCortar.pt" />' +
+            '<span class="brand-text"><strong>OndeCortar.pt</strong><span>' + e(sectionLabel()) + '</span></span>' +
+          "</a>" +
+          '<div class="nav-mobile-actions">' +
+            '<a class="nav-mobile-add" href="' + href("registar.html") + '">Adicionar</a>' +
+            '<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNavLinks" data-nav-toggle>' +
+              "<span>Menu</span>" +
+              '<span class="nav-toggle-box" aria-hidden="true"><span class="nav-toggle-line"></span><span class="nav-toggle-line"></span><span class="nav-toggle-line"></span></span>' +
+            "</button>" +
+          "</div>" +
+        "</div>" +
+        '<div class="nav-links" id="siteNavLinks">' +
           '<a href="' + href("index.html#explorar") + '">Explorar</a>' +
           '<a href="' + href("index.html#cidades") + '">Cidades</a>' +
           '<a href="' + href("registar.html") + '">Adicionar barbearia</a>' +
@@ -216,6 +225,50 @@
         "</div>" +
       "</div></footer>"
     );
+  }
+
+  function setupNavigation() {
+    const nav = document.querySelector(".nav");
+    const toggle = document.querySelector("[data-nav-toggle]");
+    const navLinks = document.getElementById("siteNavLinks");
+
+    if (!nav || !toggle || !navLinks) {
+      return;
+    }
+
+    function setOpen(nextOpen) {
+      nav.classList.toggle("is-open", nextOpen);
+      document.body.classList.toggle("nav-open", nextOpen);
+      toggle.setAttribute("aria-expanded", String(nextOpen));
+    }
+
+    toggle.addEventListener("click", function() {
+      setOpen(!nav.classList.contains("is-open"));
+    });
+
+    navLinks.addEventListener("click", function(event) {
+      if (event.target.closest("a")) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("click", function(event) {
+      if (!nav.contains(event.target)) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    });
+
+    window.addEventListener("resize", function() {
+      if (window.innerWidth > 760) {
+        setOpen(false);
+      }
+    });
   }
 
   function getProducts(slugs) {
@@ -801,4 +854,6 @@
   else if (page === "hub") app.innerHTML = renderHubPage(slug);
   else if (page === "article") app.innerHTML = renderArticlePage(slug);
   else app.innerHTML = renderNotFound("Página não encontrada");
+
+  setupNavigation();
 })();

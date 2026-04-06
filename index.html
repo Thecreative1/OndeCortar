@@ -70,6 +70,7 @@
       margin: 0;
       font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
       color: var(--text);
+      overflow-x: clip;
       background:
         radial-gradient(circle at top left, rgba(176, 138, 74, 0.14), transparent 30%),
         radial-gradient(circle at top right, rgba(66, 90, 71, 0.08), transparent 24%),
@@ -235,11 +236,21 @@
       justify-content: space-between;
       align-items: center;
       gap: 18px;
+      position: relative;
       padding: 14px 18px;
       border: 1px solid rgba(216, 205, 183, 0.92);
       border-radius: 999px;
       background: rgba(251, 247, 239, 0.92);
       box-shadow: 0 16px 34px rgba(34, 32, 28, 0.08);
+    }
+
+    .nav-main-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-width: 0;
+      flex: 1 1 auto;
     }
 
     .brand {
@@ -271,6 +282,66 @@
     .brand-text span {
       font-size: 0.82rem;
       color: var(--muted);
+    }
+
+    .nav-mobile-actions {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .nav-mobile-add,
+    .nav-toggle {
+      min-height: 42px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .nav-mobile-add {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 14px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      box-shadow: 0 12px 24px rgba(66, 90, 71, 0.18);
+    }
+
+    .nav-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 14px;
+      border: 1px solid rgba(188, 168, 133, 0.84);
+      background: rgba(251, 247, 239, 0.96);
+      color: var(--ink-strong);
+    }
+
+    .nav-toggle-box {
+      display: grid;
+      gap: 4px;
+    }
+
+    .nav-toggle-line {
+      width: 14px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .nav.is-open .nav-toggle-line:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .nav.is-open .nav-toggle-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav.is-open .nav-toggle-line:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
     }
 
     .nav-links {
@@ -1220,29 +1291,71 @@
     }
 
     @media (max-width: 760px) {
+      body.nav-open {
+        overflow: hidden;
+      }
+
       .site-header {
-        position: static;
+        top: 0;
         padding-top: 12px;
       }
 
       .nav {
-        border-radius: 28px;
-        flex-direction: column;
-        align-items: stretch;
+        display: block;
+        padding: 12px 14px;
+        border-radius: 24px;
+      }
+
+      .nav-main-row {
+        align-items: center;
       }
 
       .brand {
-        justify-content: center;
+        min-width: 0;
+        gap: 12px;
+      }
+
+      .brand-text span {
+        font-size: 0.76rem;
+      }
+
+      .nav-mobile-actions {
+        display: inline-flex;
       }
 
       .nav-links {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        z-index: 35;
         width: 100%;
+        padding: 14px;
+        border: 1px solid rgba(216, 205, 183, 0.96);
+        border-radius: 24px;
+        background: rgba(251, 247, 239, 0.98);
+        box-shadow: 0 20px 44px rgba(34, 32, 28, 0.14);
         justify-content: stretch;
         flex-direction: column;
+        gap: 8px;
+        opacity: 0;
+        transform: translateY(-8px);
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+
+      .nav.is-open .nav-links {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
       }
 
       .nav-links a {
         width: 100%;
+        justify-content: flex-start;
+      }
+
+      .nav-links .nav-cta {
         justify-content: center;
       }
 
@@ -1262,7 +1375,6 @@
       }
 
       .hero-search .btn-primary,
-      .hero-actions-secondary .btn-secondary,
       .directory-actions .btn,
       .result-actions .btn,
       .feature-actions .btn,
@@ -1285,24 +1397,29 @@
         width: 100%;
       }
 
+      .hero-promo-card,
+      .hero-actions-secondary {
+        display: none;
+      }
+
       .city-chip {
         width: 100%;
       }
 
       .hero {
-        padding-top: 16px;
+        padding-top: 14px;
         padding-bottom: 24px;
       }
 
       .hero-copy,
       .hero-visual {
-        padding: 20px;
+        padding: 18px;
       }
 
       .hero-title {
-        font-size: clamp(2rem, 9vw, 2.8rem);
-        line-height: 1;
-        max-width: 11ch;
+        font-size: clamp(2rem, 8.5vw, 2.7rem);
+        line-height: 0.98;
+        max-width: none;
       }
 
       .hero-subtitle {
@@ -1311,7 +1428,7 @@
       }
 
       .hero-map-frame #map {
-        height: 340px;
+        height: min(54vh, 360px);
       }
 
       .result-card {
@@ -1324,6 +1441,10 @@
 
       .result-actions {
         flex-direction: column;
+      }
+
+      .popup-card {
+        min-width: 0;
       }
     }
   </style>
@@ -1361,15 +1482,29 @@
   <header class="site-header">
     <div class="container">
       <nav class="nav" aria-label="Navegação principal">
-        <a class="brand" href="index.html">
-          <img class="brand-logo" src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
-          <span class="brand-text">
-            <strong>OndeCortar.pt</strong>
-            <span>Barbearias em Portugal</span>
-          </span>
-        </a>
+        <div class="nav-main-row">
+          <a class="brand" href="index.html">
+            <img class="brand-logo" src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
+            <span class="brand-text">
+              <strong>OndeCortar.pt</strong>
+              <span>Barbearias em Portugal</span>
+            </span>
+          </a>
 
-        <div class="nav-links">
+          <div class="nav-mobile-actions">
+            <a class="nav-mobile-add" href="registar.html">Adicionar</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNavLinks" data-nav-toggle>
+              <span>Menu</span>
+              <span class="nav-toggle-box" aria-hidden="true">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="nav-links" id="siteNavLinks">
           <a class="nav-link-active" href="#explorar">Explorar</a>
           <a href="#cidades">Cidades</a>
           <a href="registar.html">Adicionar barbearia</a>
@@ -1657,6 +1792,7 @@
   <script>
     (function() {
       const directory = window.OndeCortarData;
+      setupNavigation();
 
       if (!directory) {
         console.error("OndeCortarData não está disponível.");
@@ -1740,6 +1876,50 @@
           focusMarker(slug);
         }
       });
+
+      function setupNavigation() {
+        const nav = document.querySelector(".nav");
+        const toggle = document.querySelector("[data-nav-toggle]");
+        const navLinks = document.getElementById("siteNavLinks");
+
+        if (!nav || !toggle || !navLinks) {
+          return;
+        }
+
+        function setOpen(nextOpen) {
+          nav.classList.toggle("is-open", nextOpen);
+          document.body.classList.toggle("nav-open", nextOpen);
+          toggle.setAttribute("aria-expanded", String(nextOpen));
+        }
+
+        toggle.addEventListener("click", function() {
+          setOpen(!nav.classList.contains("is-open"));
+        });
+
+        navLinks.addEventListener("click", function(event) {
+          if (event.target.closest("a")) {
+            setOpen(false);
+          }
+        });
+
+        document.addEventListener("click", function(event) {
+          if (!nav.contains(event.target)) {
+            setOpen(false);
+          }
+        });
+
+        document.addEventListener("keydown", function(event) {
+          if (event.key === "Escape") {
+            setOpen(false);
+          }
+        });
+
+        window.addEventListener("resize", function() {
+          if (window.innerWidth > 760) {
+            setOpen(false);
+          }
+        });
+      }
 
       function sortBarbers(list) {
         return list.slice().sort(function(a, b) {

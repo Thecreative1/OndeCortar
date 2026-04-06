@@ -47,6 +47,7 @@
       margin: 0;
       font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
       color: var(--text);
+      overflow-x: clip;
       background:
         radial-gradient(circle at top left, rgba(198, 167, 106, 0.14), transparent 30%),
         radial-gradient(circle at top right, rgba(81, 98, 85, 0.12), transparent 26%),
@@ -65,11 +66,20 @@
       justify-content: space-between;
       align-items: center;
       gap: 18px;
+      position: relative;
       padding: 14px 18px;
       border: 1px solid rgba(255, 255, 255, 0.65);
       border-radius: 999px;
       background: rgba(250, 250, 247, 0.82);
       box-shadow: 0 18px 40px rgba(44, 55, 44, 0.08);
+    }
+    .nav-main-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-width: 0;
+      flex: 1 1 auto;
     }
     .brand, .footer-brand { display: inline-flex; align-items: center; gap: 14px; }
     .brand-logo, .footer-brand img {
@@ -83,6 +93,48 @@
     .brand-text { display: grid; gap: 3px; }
     .brand-text strong { font-size: 1rem; }
     .brand-text span { font-size: 0.82rem; color: var(--muted); }
+    .nav-mobile-actions {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .nav-mobile-add,
+    .nav-toggle {
+      min-height: 42px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .nav-mobile-add {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 14px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      box-shadow: 0 12px 24px rgba(81, 98, 85, 0.18);
+    }
+    .nav-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 14px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.94);
+      color: var(--text);
+    }
+    .nav-toggle-box { display: grid; gap: 4px; }
+    .nav-toggle-line {
+      width: 14px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .nav.is-open .nav-toggle-line:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav.is-open .nav-toggle-line:nth-child(2) { opacity: 0; }
+    .nav.is-open .nav-toggle-line:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
     .nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; justify-content: end; }
     .nav-links a {
       min-height: 42px;
@@ -266,10 +318,39 @@
     }
 
     @media (max-width: 760px) {
-      .nav { flex-direction: column; align-items: stretch; border-radius: 28px; }
-      .brand { justify-content: center; }
-      .nav-links { flex-direction: column; }
+      body.nav-open { overflow: hidden; }
+      .nav { display: block; padding: 12px 14px; border-radius: 24px; }
+      .nav-main-row { align-items: center; }
+      .brand { min-width: 0; gap: 12px; }
+      .brand-text span { font-size: 0.76rem; }
+      .nav-mobile-actions { display: inline-flex; }
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        z-index: 30;
+        padding: 14px;
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: rgba(250, 250, 247, 0.98);
+        box-shadow: 0 20px 44px rgba(44, 55, 44, 0.14);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        opacity: 0;
+        transform: translateY(-8px);
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+      .nav.is-open .nav-links {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
       .nav-links a, .btn { width: 100%; }
+      .nav-links a { justify-content: flex-start; }
+      .nav-links .nav-cta { justify-content: center; }
       .hero-card, .gallery-card, .side-card, .detail-card, .similar-card, .footer-shell { padding: 22px; }
       .hero-actions, .similar-actions, .footer-links { flex-direction: column; align-items: stretch; }
     }
@@ -279,14 +360,27 @@
   <header class="site-header">
     <div class="container">
       <nav class="nav" aria-label="Navegação principal">
-        <a class="brand" href="index.html">
-          <img class="brand-logo" src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
-          <span class="brand-text">
-            <strong>OndeCortar.pt</strong>
-            <span>Barbearias em Portugal</span>
-          </span>
-        </a>
-        <div class="nav-links">
+        <div class="nav-main-row">
+          <a class="brand" href="index.html">
+            <img class="brand-logo" src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
+            <span class="brand-text">
+              <strong>OndeCortar.pt</strong>
+              <span>Barbearias em Portugal</span>
+            </span>
+          </a>
+          <div class="nav-mobile-actions">
+            <a class="nav-mobile-add" href="registar.html">Adicionar</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="detailNavLinks" data-nav-toggle>
+              <span>Menu</span>
+              <span class="nav-toggle-box" aria-hidden="true">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="nav-links" id="detailNavLinks">
           <a href="index.html#explorar">Explorar</a>
           <a href="index.html#cidades">Cidades</a>
           <a href="registar.html">Adicionar barbearia</a>
@@ -325,8 +419,53 @@
 
   <script>
     (function() {
+      setupNavigation();
       const directory = window.OndeCortarData;
       const root = document.getElementById("pageContent");
+
+      function setupNavigation() {
+        const nav = document.querySelector(".nav");
+        const toggle = document.querySelector("[data-nav-toggle]");
+        const navLinks = document.getElementById("detailNavLinks");
+
+        if (!nav || !toggle || !navLinks) {
+          return;
+        }
+
+        function setOpen(nextOpen) {
+          nav.classList.toggle("is-open", nextOpen);
+          document.body.classList.toggle("nav-open", nextOpen);
+          toggle.setAttribute("aria-expanded", String(nextOpen));
+        }
+
+        toggle.addEventListener("click", function() {
+          setOpen(!nav.classList.contains("is-open"));
+        });
+
+        navLinks.addEventListener("click", function(event) {
+          if (event.target.closest("a")) {
+            setOpen(false);
+          }
+        });
+
+        document.addEventListener("click", function(event) {
+          if (!nav.contains(event.target)) {
+            setOpen(false);
+          }
+        });
+
+        document.addEventListener("keydown", function(event) {
+          if (event.key === "Escape") {
+            setOpen(false);
+          }
+        });
+
+        window.addEventListener("resize", function() {
+          if (window.innerWidth > 760) {
+            setOpen(false);
+          }
+        });
+      }
 
       if (!directory) {
         root.innerHTML = '<section class="not-found"><h1>Não foi possível carregar o perfil.</h1><p>Verifica se os dados das barbearias estão disponíveis e tenta novamente.</p><a class="btn btn-primary" href="index.html">Voltar à homepage</a></section>';
