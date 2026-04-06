@@ -349,6 +349,48 @@
       .slice(0, 4);
   }
 
+  function collectMagazineProducts(articleList, categoryList, limit) {
+    const seen = new Set();
+    const result = [];
+
+    function pushProduct(product) {
+      if (!product || !product.slug || seen.has(product.slug)) return;
+      seen.add(product.slug);
+      result.push(product);
+    }
+
+    function pushSlug(slug) {
+      if (!slug) return;
+      pushProduct(productMap.get(slug));
+    }
+
+    (categoryList || []).forEach(function(category) {
+      (category.top || []).forEach(pushSlug);
+      pushProduct(categoryLeadProduct(category));
+    });
+
+    (articleList || []).forEach(function(article) {
+      articleRecommendedEntries(article).forEach(function(entry) {
+        pushProduct(entry.product);
+      });
+      (article.relatedProducts || []).forEach(pushSlug);
+    });
+
+    return result.slice(0, limit || 4);
+  }
+
+  function renderMagazineProductShelf(title, copy, list, ctaHref, ctaLabel) {
+    if (!list || !list.length) return "";
+    return (
+      '<section class="section"><div class="container">' +
+        '<div class="section-header"><div><span class="eyebrow">Produtos em destaque</span><h2>' + e(title) + '</h2><p>' + e(copy) + '</p></div>' +
+          (ctaHref ? '<div class="hero-actions"><a class="btn btn-secondary" href="' + ctaHref + '">' + e(ctaLabel || "Ver categoria") + '</a></div>' : "") +
+        '</div>' +
+        '<div class="product-grid magazine-product-grid">' + list.map(function(product) { return renderProductCard(product, true); }).join("") + '</div>' +
+      '</div></section>'
+    );
+  }
+
   function renderArticleQuickAnswers(article) {
     const items = article.quickAnswers || [];
     if (!items.length) return "";
@@ -738,6 +780,7 @@
     const highlightArticles = featured.slice(1, 4);
     const remainingArticles = featured.slice(4).length ? featured.slice(4) : featured.slice(1);
     const leadCover = leadArticle ? articleCoverData(leadArticle) : null;
+    const highlightedProducts = collectMagazineProducts(featured.slice(0, 6), [], 4);
     const canonical = "https://ondecortar.pt/revista/";
     setMeta("Revista OndeCortar | Guias de compra, comparações e artigos para escolher melhor", "Revista OndeCortar com guias de compra, comparações e artigos práticos ligados às categorias da loja.", canonical);
     setStructuredData([
@@ -776,6 +819,7 @@
             '<div class="magazine-highlight-list">' + highlightArticles.map(function(item) { return renderArticleCard(item, { compact: true }); }).join("") + '</div>' +
           '</div>' +
         '</div></section>' +
+        renderMagazineProductShelf("Produtos recomendados que já valem o clique", "Antes de mergulhares nas secções, aqui tens uma seleção curta dos produtos mais fortes ligados aos artigos em destaque.", highlightedProducts, href("loja/"), "Ver loja") +
         '<section class="section" id="artigos"><div class="container"><div class="section-header"><div><span class="eyebrow">Em destaque</span><h2>Guias e comparações para ler sem esforço</h2><p>Entra pelo artigo que te interessa e continua para a categoria ou produto certo.</p></div></div><div class="article-grid">' + remainingArticles.map(function(item) { return renderArticleCard(item); }).join("") + '</div></div></section>' +
         '<section class="section" id="seccoes"><div class="container"><div class="section-header"><div><span class="eyebrow">Secções da revista</span><h2>Explorar por tema</h2><p>Se preferires navegar por assunto, aqui tens os principais temas editoriais.</p></div></div><div class="hub-grid">' + mainHubs.map(function(item) { return '<article class="hub-card"><h3>' + e(item.title) + '</h3><p>' + e(item.intro) + '</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="' + hubHref(item.slug) + '">Ver secção</a></div></article>'; }).join("") + '</div></div></section>' +
       '</main>' +
@@ -790,6 +834,7 @@
     setMeta(hub.title + " | Revista OndeCortar", hub.intro, canonical);
     const hubArticles = getArticles(hub.articles);
     const hubCategories = (hub.categories || []).map(function(item) { return categoryMap.get(item); }).filter(Boolean);
+    const hubProducts = collectMagazineProducts(hubArticles, hubCategories, 4);
     setStructuredData([
       {
         "@context": "https://schema.org",
@@ -811,6 +856,7 @@
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container hero-card"><div class="hero-grid"><div class="hero-copy"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span><span>' + e(hub.title) + '</span></div><span class="section-flag">Cluster editorial</span><h1>' + e(hub.title) + '</h1><p>' + e(hub.intro) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#artigos-cluster">Ver artigos</a>' + (hubCategories[0] ? '<a class="btn btn-secondary" href="' + editorialCategoryHref(hubCategories[0].slug) + '">Ver categoria ligada</a>' : "") + '</div></div><div class="hero-side"><div class="panel-note"><strong>Função do cluster</strong><p>Capta uma intenção específica e encaminha o leitor para categorias e produtos com mais contexto.</p></div></div></div></div></section>' +
+        renderMagazineProductShelf("Produtos em destaque neste tema", "Os produtos aparecem primeiro para ganhares contexto comercial antes de entrares nos artigos ou nas categorias.", hubProducts, hubCategories[0] ? editorialCategoryHref(hubCategories[0].slug) : href("loja/"), hubCategories[0] ? "Ver categoria ligada" : "Ver loja") +
         '<section class="section" id="artigos-cluster"><div class="container"><div class="section-header"><div><span class="eyebrow">Artigos</span><h2>Artigos deste cluster</h2><p>Conteúdo com direção clara para ajudar a escolher e clicar melhor.</p></div></div><div class="article-grid">' + hubArticles.map(renderArticleCard).join("") + '</div></div></section>' +
         '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Categorias ligadas</span><h2>Onde este cluster toca na loja</h2></div></div><div class="category-grid">' + hubCategories.map(function(item) { return renderCategoryCard(item, false); }).join("") + '</div></div></section>' +
       '</main>' +
