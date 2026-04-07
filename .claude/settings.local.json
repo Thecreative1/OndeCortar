@@ -18,7 +18,9 @@
       "Bash(/c/Users/Phoenix/AppData/Local/Programs/Python/Python310/python.exe \"E:/GIT_HUB/OndeCortar/fix_seo.py\")",
       "Read(//e/GIT_HUB/OndeCortar/=== og:type product page \\(loja/**)",
       "Read(//e/GIT_HUB/OndeCortar/**)",
-      "Bash(python patch_highlights.py)"
+      "Bash(python patch_highlights.py)",
+      "Bash(python3:*)",
+      "Bash(python:*)"
     ]
   }
 }

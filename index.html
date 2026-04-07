@@ -398,7 +398,7 @@
 
     .hero-copy {
       max-width: 540px;
-      padding: 24px;
+      padding: 20px 24px;
       background:
         radial-gradient(circle at top left, rgba(176, 138, 74, 0.14), transparent 32%),
         linear-gradient(180deg, rgba(251, 247, 239, 0.98), rgba(247, 240, 228, 0.92));
@@ -409,11 +409,11 @@
     }
 
     .hero-title {
-      font-size: clamp(2.5rem, 4vw, 4.2rem);
-      line-height: 0.98;
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      line-height: 1.08;
       letter-spacing: -0.02em;
-      max-width: 10ch;
-      margin: 0 0 14px;
+      max-width: 14ch;
+      margin: 0 0 10px;
     }
 
     .hero-subtitle {
@@ -426,9 +426,26 @@
 
     .hero-intro-copy {
       max-width: 46ch;
-      margin: 0 0 18px;
+      margin: 12px 0 0;
       color: var(--muted);
       line-height: 1.68;
+      font-size: 0.92rem;
+    }
+
+    .hero-owner-cta {
+      margin: 10px 0 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero-owner-cta a {
+      color: var(--accent, #425a47);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .hero-owner-cta a:hover {
+      text-decoration: underline;
     }
 
     .hero-search {
@@ -1309,8 +1326,8 @@
       }
 
       .hero-title {
-        font-size: clamp(2.4rem, 6vw, 3.6rem);
-        max-width: 12ch;
+        font-size: clamp(1.8rem, 4vw, 2.4rem);
+        max-width: 16ch;
       }
 
       .hero-map-frame #map {
@@ -1450,8 +1467,8 @@
       }
 
       .hero-title {
-        font-size: clamp(2rem, 8.5vw, 2.7rem);
-        line-height: 0.98;
+        font-size: clamp(1.65rem, 7vw, 2.2rem);
+        line-height: 1.08;
         max-width: none;
       }
 
@@ -1556,7 +1573,6 @@
           <span class="eyebrow">Barbearias em Portugal</span>
           <h1 class="hero-title">Encontra barbearias em Portugal</h1>
           <p class="hero-subtitle">Pesquisa por cidade, zona ou nome, ou usa o mapa para encontrar a barbearia certa.</p>
-          <p class="hero-intro-copy">Começa pela pesquisa e abre logo morada, contacto e localização. Se preferires, explora o mapa interativo para perceber rapidamente o que tens perto de ti.</p>
 
           <form class="hero-search" id="heroSearchForm" role="search" aria-label="Pesquisar barbearias a partir do hero">
             <input id="heroSearchInput" type="text" placeholder="Procura por cidade, zona ou nome" />
@@ -1571,6 +1587,12 @@
             <div class="hero-results-list" id="heroResultsList"></div>
             <a class="btn btn-secondary btn-small" href="#explorar">Ver todos os resultados</a>
           </div>
+
+          <div class="hero-owner-cta">
+            <p>Tens uma barbearia? <a href="registar.html">Junta-te ao mapa.</a></p>
+          </div>
+
+          <p class="hero-intro-copy">Começa pela pesquisa e abre logo morada, contacto e localização. Se preferires, explora o mapa interativo para perceber rapidamente o que tens perto de ti.</p>
         </div>
 
         <div class="hero-visual">
