@@ -13,6 +13,7 @@
   const CODIGO_POSTAL_REGEX = /\b(\d{4})(?:[-\s]?(\d{3}))\b/;
   const STREET_REGEX = /(rua|r\.|avenida|av\.|praceta|pra[cç]a|largo|estrada|travessa|tv\.|rotunda|alameda|ed\.|edif|bloco|loja|shopping|centro comercial|guimaraeshopping|forum|fórum|c\. comercial|bairro|parque|mercado)/i;
   const VENUE_REGEX = /(shopping|centro comercial|forum|fórum|loja|mercado|studio|barbershop|barber shop|barbearia)/i;
+  const COUNTRY_SEGMENTS = new Set(["portugal", "portugal continental", "pt"]);
   const PLACEHOLDER_PHONE_DIGITS = new Set([
     "351253000000",
     "351259123456",
@@ -350,6 +351,21 @@
       .replace(/^[-,\s]+|[-,\s]+$/g, "");
   }
 
+  function ehPaisConhecido(value) {
+    const normalized = normalizarTexto(trimToNull(value) || "");
+    return Boolean(normalized) && COUNTRY_SEGMENTS.has(normalized);
+  }
+
+  function sanitizarCidadePublica(value) {
+    const text = trimToNull(value);
+
+    if (!text || ehPaisConhecido(text)) {
+      return "";
+    }
+
+    return text;
+  }
+
   function ehSegmentoPorta(value) {
     const text = trimToNull(value);
 
@@ -388,6 +404,10 @@
     const text = limparTextoLocalizacao(value);
 
     if (!text || text.length < 3) {
+      return false;
+    }
+
+    if (ehPaisConhecido(text)) {
       return false;
     }
 
@@ -626,43 +646,44 @@
   function normalizarLocalizacaoBarbearia(item) {
     const raw = item || {};
     const addressRaw = trimToNull(raw.address_raw || raw.addressRaw || raw.morada) || "";
-    const manualCity = trimToNull(raw.city || raw.concelho);
+    const manualCity = sanitizarCidadePublica(raw.city || raw.concelho);
     const manualZone = trimToNull(raw.zone || raw.freguesia);
     const manualDistrict = trimToNull(raw.district || raw.distrito);
     const manualPostalCode = trimToNull(raw.postal_code || raw.codigo_postal);
     const parsed = parseAddressComponents(addressRaw);
+    const parsedLocality = sanitizarCidadePublica(parsed.locality);
     const issues = [];
     let city = "";
     let citySource = "";
     let zone = "";
     let zoneSource = "";
 
-    if (parsed.locality) {
-      city = parsed.locality;
+    if (parsedLocality) {
+      city = parsedLocality;
       citySource = parsed.postalCode ? "postal_locality" : "address_locality";
     } else if (manualCity) {
       city = manualCity;
       citySource = "manual";
     }
 
-    const admin = inferirLocalizacaoAdministrativa(city || parsed.locality || manualCity || "");
+    const admin = inferirLocalizacaoAdministrativa(city || parsedLocality || manualCity || "");
     const district = manualDistrict || admin.distrito || "";
     const postalCode = parsed.postalCode || manualPostalCode || "";
     const streetNormalized = normalizarTexto(parsed.street);
     const manualCityNormalized = normalizarTexto(manualCity);
-    const localityNormalized = normalizarTexto(parsed.locality);
+    const localityNormalized = normalizarTexto(parsedLocality);
 
-    if (manualCity && parsed.locality && manualCityNormalized !== localityNormalized) {
+    if (manualCity && parsedLocality && manualCityNormalized !== localityNormalized) {
       issues.push(postalCode ? "city_differs_from_postal_locality" : "city_differs_from_address_locality");
     }
 
-    if (manualCity && parsed.street && streetNormalized.indexOf(manualCityNormalized) !== -1 && parsed.locality && manualCityNormalized !== localityNormalized) {
+    if (manualCity && parsed.street && streetNormalized.indexOf(manualCityNormalized) !== -1 && parsedLocality && manualCityNormalized !== localityNormalized) {
       issues.push("city_matches_street_name_not_locality");
     }
 
-    if (!city && parsed.locality) {
+    if (!city && parsedLocality) {
       issues.push("city_missing_with_valid_locality");
-      city = parsed.locality;
+      city = parsedLocality;
       citySource = parsed.postalCode ? "postal_locality" : "address_locality";
     }
 
@@ -726,7 +747,7 @@
       streetNumber: parsed.streetNumber,
       complement: parsed.complement,
       postalCode: postalCode,
-      locality: parsed.locality,
+      locality: parsedLocality,
       city: city
     }) || addressRaw;
     const dataConfidence = citySource === "postal_locality"
@@ -744,7 +765,7 @@
       streetNumber: parsed.streetNumber || "",
       complement: parsed.complement || "",
       postalCode: postalCode,
-      locality: parsed.locality || city || "",
+      locality: parsedLocality || city || "",
       city: city || "",
       zone: zone || "",
       district: district,
@@ -838,6 +859,8 @@
     slugify: slugify,
     trimToNull: trimToNull,
     normalizarTexto: normalizarTexto,
+    ehPaisConhecido: ehPaisConhecido,
+    sanitizarCidadePublica: sanitizarCidadePublica,
     normalizarNome: normalizarNome,
     normalizarTelefone: normalizarTelefone,
     telefonePlaceholderReason: telefonePlaceholderReason,

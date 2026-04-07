@@ -65,6 +65,16 @@
       .toLowerCase();
   }
 
+  function isCountryValue(value) {
+    const normalized = normalizar(String(value || "").trim());
+    return normalized === "portugal" || normalized === "portugal continental" || normalized === "pt";
+  }
+
+  function sanitizePublicCity(value) {
+    const text = String(value || "").trim();
+    return text && !isCountryValue(text) ? text : "";
+  }
+
   function slugify(texto) {
     return normalizar(texto)
       .replace(/[^a-z0-9]+/g, "-")
@@ -124,7 +134,7 @@
       }
     }
 
-    return "Portugal";
+    return "";
   }
 
   function formatarTelefone(telefone) {
@@ -433,7 +443,7 @@
     const location = locationUtils && typeof locationUtils.normalizarLocalizacaoBarbearia === "function"
       ? locationUtils.normalizarLocalizacaoBarbearia(raw)
       : null;
-    const city = (location && location.city) || raw.city || raw.concelho || inferirCidade(raw.morada);
+    const city = sanitizePublicCity((location && location.city) || raw.city || raw.concelho || inferirCidade(raw.morada));
     const accent = getAccent(index);
     const links = normalizeLinks(raw);
     const rawPhone = String(raw.telefone || "").trim();
@@ -444,6 +454,7 @@
       name: name,
       city: city,
       citySlug: slugify(city),
+      locality: (location && location.locality) || raw.localidade || "",
       morada: (location && location.displayAddress) || raw.morada || "",
       addressRaw: (location && location.addressRaw) || raw.address_raw || raw.morada || "",
       telefone: telefone,
@@ -491,7 +502,9 @@
     let contacts = 0;
 
     barbers.forEach(function(barber) {
-      cities.add(barber.city);
+      if (barber.city) {
+        cities.add(barber.city);
+      }
 
       if (barber.telefone || barber.website || barber.instagram || barber.facebook || barber.email) {
         contacts += 1;
@@ -509,6 +522,9 @@
     const cityMap = new Map();
 
     barbers.forEach(function(barber) {
+      if (!barber.city) {
+        return;
+      }
       cityMap.set(barber.city, (cityMap.get(barber.city) || 0) + 1);
     });
 
@@ -536,6 +552,7 @@
       const haystack = [
         barber.name,
         barber.city,
+        barber.locality,
         barber.morada,
         barber.observacoes
       ]
@@ -563,6 +580,17 @@
 
     if (!referenceBarber) {
       return [];
+    }
+
+    if (!referenceBarber.city) {
+      return barbers
+        .filter(function(barber) {
+          return barber.slug !== referenceBarber.slug;
+        })
+        .sort(function(a, b) {
+          return b.score - a.score;
+        })
+        .slice(0, maxItems);
     }
 
     const sameCity = barbers
@@ -622,6 +650,9 @@
     slugify: slugify,
     formatarTelefone: formatarTelefone,
     inferirCidade: inferirCidade,
+    getDisplayPlace: function(barber) {
+      return barber && (barber.city || barber.locality || barber.district) ? (barber.city || barber.locality || barber.district) : "Localização a confirmar";
+    },
     getBarbers: getBarbers,
     getStats: getStats,
     getPopularCities: getPopularCities,
