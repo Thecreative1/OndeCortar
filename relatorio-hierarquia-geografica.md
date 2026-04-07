@@ -1,6 +1,6 @@
 # Relatório de hierarquia geográfica
 
-Gerado em 2026-04-07T09:40:53.324Z.
+Gerado em 2026-04-07T13:55:51.555Z.
 
 ## Resumo
 

@@ -1,5 +1,5 @@
 id,nome,slug,address_raw,current_city,current_zone,current_postal_code,inferred_locality,normalized_city,normalized_zone,normalized_postal_code,street,street_number,data_confidence,auto_fixable,needs_review,reasons
-1,Barbearia Fora D’Horas,,"Rua de Santa Eulália, Guimarães, Braga 4800-098",,,,Braga,Braga,Guimarães,4800-098,Rua de Santa Eulália,,high,true,false,city_missing_with_valid_locality
+1,Barbearia Fora D’Horas,,"Rua de Santa Eulália, Guimarães, Braga 4800-098",,,,Braga,Braga,,4800-098,Rua de Santa Eulália,,high,true,false,city_missing_with_valid_locality
 2,Treze Barbershop,,"Praceta Padre Luís Gonzaga Fonseca, Loja 23, Guimarães",,,,Guimarães,Guimarães,,,Praceta Padre Luís Gonzaga Fonseca,Loja 23,medium,true,false,city_missing_with_valid_locality
 3,Black Rock Barbearia,,"Largo da República do Brasil, C. Comercial São Francisco, Loja 32, Guimarães",,,,Guimarães,Guimarães,,,Largo da República do Brasil,Loja 32,medium,true,false,city_missing_with_valid_locality
 4,NewVision Barbershop,,"Rua Teixeira de Pascoais, 452, Guimarães",,,,Guimarães,Guimarães,,,Rua Teixeira de Pascoais,452,medium,true,false,city_missing_with_valid_locality
@@ -65,10 +65,10 @@ id,nome,slug,address_raw,current_city,current_zone,current_postal_code,inferred_
 64,Barbearia The Men’s Club,,"Rua dos Mercadores 61, 9500-092 Ponta Delgada",,,,Ponta Delgada,Ponta Delgada,,9500-092,Rua dos Mercadores,61,high,true,false,city_missing_with_valid_locality
 65,Barbearia Central PDL,,"Rua do Melo 2B, 9500-091 Ponta Delgada",,,,Ponta Delgada,Ponta Delgada,,9500-091,Rua do Melo,2B,high,true,false,city_missing_with_valid_locality
 66,Barbearia Açores Central,,Ponta Delgada,,,,Ponta Delgada,Ponta Delgada,,,,,medium,true,false,city_missing_with_valid_locality
-67,Barbearia António e Caetano,,"Rua de São João, Angra do Heroísmo, Ilha Terceira",,,,Ilha Terceira,Ilha Terceira,Angra do Heroísmo,,Rua de São João,,medium,true,false,city_missing_with_valid_locality
-68,The Barber - Terceira,,"R. Direita 123, Angra do Heroísmo, Ilha Terceira",,,,Ilha Terceira,Ilha Terceira,Angra do Heroísmo,,R. Direita,123,medium,true,false,city_missing_with_valid_locality
-69,Barbearia Machado,,"Rua Serpa Pinto, Horta, Ilha do Faial",,,,Ilha do Faial,Ilha do Faial,Horta,,Rua Serpa Pinto,,medium,true,false,city_missing_with_valid_locality
-70,Barbearia São Roque,,"Rua Maestro Simão Machado, São Roque do Pico, Ilha do Pico",,,,Ilha do Pico,Ilha do Pico,São Roque do Pico,,Rua Maestro Simão Machado,,medium,true,false,city_missing_with_valid_locality
+67,Barbearia António e Caetano,,"Rua de São João, Angra do Heroísmo, Ilha Terceira",,,,Ilha Terceira,Ilha Terceira,,,Rua de São João,,medium,true,false,city_missing_with_valid_locality
+68,The Barber - Terceira,,"R. Direita 123, Angra do Heroísmo, Ilha Terceira",,,,Ilha Terceira,Ilha Terceira,,,R. Direita,123,medium,true,false,city_missing_with_valid_locality
+69,Barbearia Machado,,"Rua Serpa Pinto, Horta, Ilha do Faial",,,,Ilha do Faial,Ilha do Faial,,,Rua Serpa Pinto,,medium,true,false,city_missing_with_valid_locality
+70,Barbearia São Roque,,"Rua Maestro Simão Machado, São Roque do Pico, Ilha do Pico",,,,Ilha do Pico,Ilha do Pico,,,Rua Maestro Simão Machado,,medium,true,false,city_missing_with_valid_locality
 71,Barbearia Paulo,,"Vila do Porto, Santa Maria",,,,Santa Maria,Santa Maria,,,Vila do Porto,,medium,true,false,city_missing_with_valid_locality
 72,Barbearia Madeira Style,,Funchal,,,,Funchal,Funchal,,,,,medium,true,false,city_missing_with_valid_locality
 73,Black Studio Bs,,"Rua de 9 de Julho 344, Loja, 4250-356 Porto",,,,Porto,Porto,,4250-356,Rua de 9 de Julho,344,high,true,false,city_missing_with_valid_locality

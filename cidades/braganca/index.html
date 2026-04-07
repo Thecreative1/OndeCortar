@@ -23,16 +23,17 @@
   <style>
     :root {
       --bg: #f7f7f4;
-      --surface: rgba(255, 255, 255, 0.86);
-      --surface-soft: #f1f1eb;
+      --surface: rgba(255, 255, 255, 0.94);
+      --surface-soft: #f2ecdf;
       --text: #1e1f1c;
-      --muted: #61655e;
-      --border: #e3e5de;
+      --muted: #4f544c;
+      --border: #d1c4aa;
+      --border-strong: #ab9567;
       --accent: #516255;
       --accent-strong: #39463c;
       --gold: #b08a4a;
-      --shadow: 0 24px 60px rgba(44, 55, 44, 0.08);
-      --shadow-soft: 0 16px 36px rgba(44, 55, 44, 0.06);
+      --shadow: 0 24px 60px rgba(44, 55, 44, 0.1);
+      --shadow-soft: 0 16px 36px rgba(44, 55, 44, 0.08);
       --container: min(1160px, calc(100% - 32px));
       --radius-lg: 24px;
       --radius-md: 18px;
@@ -65,10 +66,10 @@
       align-items: center;
       gap: 18px;
       padding: 14px 18px;
-      border: 1px solid rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(171, 149, 103, 0.32);
       border-radius: 999px;
-      background: rgba(250, 250, 247, 0.84);
-      box-shadow: 0 18px 40px rgba(44, 55, 44, 0.08);
+      background: rgba(251, 247, 239, 0.94);
+      box-shadow: 0 18px 40px rgba(44, 55, 44, 0.1);
     }
     .brand, .footer-brand {
       display: inline-flex;
@@ -98,17 +99,26 @@
       min-height: 42px;
       padding: 10px 14px;
       border-radius: 999px;
-      color: var(--muted);
+      border: 1px solid rgba(81, 98, 85, 0.14);
+      background: rgba(255, 255, 255, 0.68);
+      color: var(--text);
       font-weight: 600;
     }
     .nav-links a:hover, .nav-links a.is-current {
-      background: rgba(198, 167, 106, 0.12);
+      background: rgba(198, 167, 106, 0.22);
+      border-color: rgba(171, 149, 103, 0.6);
       color: var(--text);
     }
-    .nav-cta {
+    .nav-links a.nav-cta {
       color: #fff !important;
       background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      border-color: rgba(81, 98, 85, 0.28) !important;
       box-shadow: 0 14px 32px rgba(81, 98, 85, 0.22);
+    }
+    .nav-links a.nav-cta:hover {
+      color: #fff !important;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      border-color: rgba(81, 98, 85, 0.28) !important;
     }
 
     main { padding: 30px 0 48px; }
@@ -130,26 +140,26 @@
       min-height: 36px;
       padding: 8px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(81, 98, 85, 0.14);
-      background: rgba(81, 98, 85, 0.1);
+      border: 1px solid rgba(171, 149, 103, 0.48);
+      background: rgba(198, 167, 106, 0.16);
       color: var(--accent-strong);
       font-size: 0.84rem;
       font-weight: 700;
     }
     .tag, .pill {
       background: var(--surface-soft);
-      border-color: var(--border);
+      border-color: rgba(171, 149, 103, 0.5);
       color: var(--text);
     }
     .pill-link:hover {
-      border-color: rgba(176, 138, 74, 0.44);
+      border-color: rgba(176, 138, 74, 0.74);
       transform: translateY(-1px);
     }
     .breadcrumbs {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      color: var(--muted);
+      color: #5b6058;
       font-size: 0.94rem;
     }
 
@@ -183,7 +193,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px 14px;
-      color: var(--muted);
+      color: #475047;
       font-size: 0.92rem;
       line-height: 1.6;
     }
@@ -197,31 +207,31 @@
     .location-compact a {
       color: var(--accent-strong);
       text-decoration: none;
-      border-bottom: 1px solid rgba(176, 138, 74, 0.35);
+      border-bottom: 1px solid rgba(176, 138, 74, 0.56);
     }
     .location-compact a:hover {
-      border-color: rgba(176, 138, 74, 0.65);
+      border-color: rgba(176, 138, 74, 0.82);
     }
     .summary-panel {
       padding: 18px;
       border-radius: 20px;
-      background: rgba(81, 98, 85, 0.08);
-      border: 1px solid rgba(81, 98, 85, 0.12);
+      background: rgba(81, 98, 85, 0.12);
+      border: 1px solid rgba(81, 98, 85, 0.2);
       display: grid;
       gap: 14px;
     }
     .summary-row {
       padding: 14px 16px;
       border-radius: 16px;
-      background: rgba(255, 255, 255, 0.52);
-      border: 1px solid rgba(255, 255, 255, 0.68);
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(171, 149, 103, 0.34);
     }
     .summary-row span {
       display: block;
       margin-bottom: 6px;
       font-size: 0.82rem;
       font-weight: 700;
-      color: var(--muted);
+      color: var(--accent-strong);
     }
     .btn {
       display: inline-flex;
@@ -242,13 +252,14 @@
     }
     .btn-secondary {
       color: var(--text);
-      background: rgba(255, 255, 255, 0.9);
-      border-color: var(--border);
+      background: #f7f1e6;
+      border-color: var(--border-strong);
+      box-shadow: 0 12px 24px rgba(44, 55, 44, 0.06);
     }
     .btn-soft {
       color: var(--accent-strong);
-      background: rgba(81, 98, 85, 0.08);
-      border-color: rgba(81, 98, 85, 0.12);
+      background: rgba(81, 98, 85, 0.1);
+      border-color: rgba(81, 98, 85, 0.18);
     }
     .section { padding-top: 24px; }
     .section-header {
@@ -277,10 +288,12 @@
       display: grid;
       gap: 4px;
       padding-bottom: 12px;
-      border-bottom: 1px solid rgba(227, 229, 222, 0.9);
+      border-bottom: 1px solid rgba(171, 149, 103, 0.28);
     }
     .meta-row:last-child { padding-bottom: 0; border-bottom: 0; }
     .meta-row strong { font-size: 0.9rem; color: var(--text); }
+    .meta-row span { color: var(--muted); }
+    .meta-row a { color: var(--accent-strong); text-decoration: underline; text-decoration-color: rgba(176, 138, 74, 0.52); }
     footer { padding: 0 0 48px; }
     .footer-shell {
       display: flex;
@@ -291,7 +304,7 @@
       padding: 24px 28px;
     }
     .footer-intro { display: grid; gap: 12px; max-width: 54ch; }
-    .footer-links a { color: var(--muted); font-weight: 600; }
+    .footer-links a { color: var(--text); font-weight: 600; }
 
     @media (max-width: 980px) {
       .hero-grid, .grid-2, .barber-grid, .city-grid { grid-template-columns: 1fr; }
@@ -350,15 +363,15 @@
           </div>
           <span class="eyebrow">Página de cidade</span>
           <h1>Barbearias em Bragança</h1>
-          <p>Esta página reúne 1 barbearia já listada em Bragança, no concelho de Braga. Podes comparar moradas, telefones, mapa e links úteis antes de escolher. Neste momento, nenhuma ficha mostra telefone e nenhuma ficha mostra presença online. Mesmo quando a marcação online ainda não aparece, esta lista ajuda a perceber que espaços já têm informação suficiente para comparar e contactar.</p>
-          <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/braganca/">Bragança</a></span><span><strong>Concelho:</strong> Braga</span></div>
+          <p>Esta página reúne 1 barbearia já listada em Bragança. Podes comparar moradas, telefones, mapa e links úteis antes de escolher. Neste momento, nenhuma ficha mostra telefone e nenhuma ficha mostra presença online. Mesmo quando a marcação online ainda não aparece, esta lista ajuda a perceber que espaços já têm informação suficiente para comparar e contactar.</p>
+          <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/braganca/">Bragança</a></span></div>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#lista-barbearias">Ver barbearias</a>
             <a class="btn btn-secondary" href="../../registar.html">Adicionar barbearia nesta cidade</a>
           </div>
         </div>
         <aside class="summary-panel">
-          <div class="summary-row"><span>Cidade</span>Bragança</div><div class="summary-row"><span>Concelho</span>Braga</div>
+          <div class="summary-row"><span>Cidade</span>Bragança</div>
           <div class="summary-row"><span>Total listado</span>1 ficha</div>
           <div class="summary-row"><span>Última atualização</span>7 de abril de 2026</div>
           <div class="summary-row"><span>Exploração rápida</span><a href="#lista-barbearias">Perfis individuais</a></div>
@@ -379,7 +392,7 @@
       <div class="barber-grid">
         
   <article class="card">
-    <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/braganca/">Bragança</a></span><span><strong>Concelho:</strong> Braga</span></div>
+    <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/braganca/">Bragança</a></span></div>
     
     <h3><a href="../../barbearias/barbearia-braganca-classic/">Barbearia Bragança Classic</a></h3>
     <p>Consulta a morada e a localização confirmada desta barbearia.</p>
@@ -399,7 +412,7 @@
         <span class="eyebrow">Escolher melhor</span>
         <h2>Como escolher uma barbearia em Bragança</h2>
         <ul class="list-clean">
-          <li>Em Bragança, no concelho de Braga, começa por confirmar morada e contactos antes de escolher.</li><li>Quando há telefone, website ou Instagram, verifica primeiro disponibilidade e tipo de serviço.</li><li>Se estiveres entre várias opções, dá prioridade às fichas com morada completa, contactos claros e informação atualizada.</li>
+          <li>Em Bragança, começa por confirmar morada e contactos antes de escolher.</li><li>Quando há telefone, website ou Instagram, verifica primeiro disponibilidade e tipo de serviço.</li><li>Se estiveres entre várias opções, dá prioridade às fichas com morada completa, contactos claros e informação atualizada.</li>
         </ul>
       </article>
       <aside class="stack">

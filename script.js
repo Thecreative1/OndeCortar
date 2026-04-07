@@ -115,7 +115,14 @@
     const locality = sanitizePublicCity(barber.locality);
     const municipality = sanitizePublicCity(barber.municipality);
     const district = sanitizePublicCity(barber.district);
-    const zone = trimText(barber.zone);
+    const zoneEvaluation = locationUtils && typeof locationUtils.avaliarZona === "function"
+      ? locationUtils.avaliarZona(barber.zone, {
+        city: city,
+        municipality: municipality,
+        district: district
+      })
+      : { valid: Boolean(trimText(barber.zone)), value: trimText(barber.zone) };
+    const zone = zoneEvaluation && zoneEvaluation.valid ? trimText(zoneEvaluation.value || barber.zone) : "";
     const items = [];
 
     if (city) {
@@ -536,8 +543,8 @@
       name: name,
       city: city,
       citySlug: slugify(city),
-      locality: (location && location.locality) || raw.localidade || "",
-      municipality: (location && location.municipality) || raw.municipality || raw.municipio || raw.concelho || city,
+      locality: location ? (location.locality || "") : (raw.localidade || ""),
+      municipality: location ? ((location.municipality || "") || city) : (raw.municipality || raw.municipio || raw.concelho || city),
       morada: (location && location.displayAddress) || raw.morada || "",
       addressRaw: (location && location.addressRaw) || raw.address_raw || raw.morada || "",
       telefone: telefone,
@@ -553,8 +560,8 @@
       coords: Array.isArray(raw.coords) ? raw.coords : null,
       accent: accent,
       initials: initialsFromName(name),
-      district: (location && location.district) || raw.distrito || "",
-      zone: (location && location.zone) || raw.zone || raw.freguesia || ""
+      district: location ? (location.district || "") : (raw.distrito || ""),
+      zone: location ? (location.zone || "") : (raw.zone || raw.freguesia || "")
     };
 
     barber.tags = buildUsefulTags(barber);

@@ -37,6 +37,11 @@ function buildHierarchyEntries(item) {
   const district = trimText(item.distrito || item.district);
   const zone = trimText(item.zone || item.freguesia);
   const locality = trimText(item.localidade);
+  const zoneEvaluation = zone ? utils.avaliarZona(zone, {
+    city: city,
+    municipality: municipality,
+    district: district
+  }) : null;
   const entries = [];
 
   if (city) {
@@ -53,10 +58,10 @@ function buildHierarchyEntries(item) {
     entries.push({ label: "Distrito", value: district });
   }
 
-  if (zone && ![city, municipality, district, locality].some(function(value) {
+  if (zoneEvaluation && zoneEvaluation.valid && ![city, municipality, district, locality].some(function(value) {
     return sameText(zone, value);
   })) {
-    entries.push({ label: "Zona", value: zone });
+    entries.push({ label: "Zona", value: zoneEvaluation.value || zone });
   }
 
   return entries;
@@ -77,6 +82,11 @@ function buildBarberEntry(item, index) {
   const district = trimText(item.distrito || item.district);
   const zone = trimText(item.zone || item.freguesia);
   const locality = trimText(item.localidade);
+  const zoneEvaluation = zone ? utils.avaliarZona(zone, {
+    city: city,
+    municipality: municipality,
+    district: district
+  }) : null;
   const reasons = [];
 
   if (city && municipality && !sameText(city, municipality)) {
@@ -91,6 +101,10 @@ function buildBarberEntry(item, index) {
     return sameText(zone, value);
   })) {
     reasons.push("zone_duplicates_higher_level");
+  }
+
+  if (zone && zoneEvaluation && !zoneEvaluation.valid && zoneEvaluation.reason) {
+    reasons.push(zoneEvaluation.reason);
   }
 
   if (!city && locality) {

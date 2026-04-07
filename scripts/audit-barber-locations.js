@@ -30,6 +30,14 @@ function buildAuditEntry(item, index) {
   const currentZone = utils.trimToNull(item.zone || item.freguesia) || "";
   const currentPostal = utils.trimToNull(item.postal_code || item.codigo_postal) || "";
   const flags = Array.from(location.issues || []);
+  const zoneEvaluation = currentZone ? utils.avaliarZona(currentZone, {
+    city: location.city,
+    municipality: location.municipality,
+    district: location.district,
+    street: location.street,
+    streetNumber: location.streetNumber,
+    postalCode: location.postalCode
+  }) : null;
 
   if (currentZone && /^\d+[A-Za-z]?$/.test(currentZone) && flags.indexOf("zone_number_or_door") === -1) {
     flags.push("zone_number_or_door");
@@ -47,13 +55,11 @@ function buildAuditEntry(item, index) {
     flags.push("city_missing_with_valid_locality");
   }
 
-  if (currentZone && !utils.ehZonaValida(currentZone, {
-    city: location.city,
-    street: location.street,
-    streetNumber: location.streetNumber,
-    postalCode: location.postalCode
-  }) && flags.indexOf("zone_invalid") === -1) {
-    flags.push("zone_invalid");
+  if (currentZone && zoneEvaluation && !zoneEvaluation.valid) {
+    const zoneReason = zoneEvaluation.reason || "zone_invalid";
+    if (flags.indexOf(zoneReason) === -1) {
+      flags.push(zoneReason);
+    }
   }
 
   const uniqueFlags = Array.from(new Set(flags));

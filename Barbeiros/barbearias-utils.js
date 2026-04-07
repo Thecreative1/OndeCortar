@@ -488,40 +488,101 @@
     return true;
   }
 
-  function ehZonaValida(value, context) {
+  function avaliarZona(value, context) {
     const text = limparTextoLocalizacao(value);
 
     if (!ehSegmentoLocalidadeValido(text)) {
-      return false;
+      return {
+        valid: false,
+        value: text,
+        reason: ""
+      };
     }
 
     const normalized = normalizarTexto(text);
     const city = context && context.city ? normalizarTexto(context.city) : "";
+    const municipality = context && context.municipality ? normalizarTexto(context.municipality) : "";
+    const district = context && context.district ? normalizarTexto(context.district) : "";
     const street = context && context.street ? normalizarTexto(context.street) : "";
     const streetNumber = context && context.streetNumber ? normalizarTexto(context.streetNumber) : "";
     const postalCode = context && context.postalCode ? normalizarTexto(context.postalCode) : "";
+    const inferredAdmin = inferirLocalizacaoAdministrativa(text);
+    const inferredMunicipality = normalizarTexto(inferredAdmin.concelho);
+    const inferredDistrict = normalizarTexto(inferredAdmin.distrito);
 
     if (!normalized || normalized.length < 3) {
-      return false;
+      return {
+        valid: false,
+        value: text,
+        reason: ""
+      };
     }
 
     if (city && normalized === city) {
-      return false;
+      return {
+        valid: false,
+        value: text,
+        reason: ""
+      };
     }
 
     if (street && street.indexOf(normalized) !== -1) {
-      return false;
+      return {
+        valid: false,
+        value: text,
+        reason: ""
+      };
     }
 
     if (streetNumber && normalized === streetNumber) {
-      return false;
+      return {
+        valid: false,
+        value: text,
+        reason: ""
+      };
     }
 
     if (postalCode && normalized === postalCode) {
-      return false;
+      return {
+        valid: false,
+        value: text,
+        reason: ""
+      };
     }
 
-    return true;
+    if (inferredMunicipality && municipality && inferredMunicipality !== municipality) {
+      return {
+        valid: false,
+        value: text,
+        reason: "zone_matches_other_municipality"
+      };
+    }
+
+    if (inferredMunicipality && !municipality && city && inferredMunicipality !== city) {
+      return {
+        valid: false,
+        value: text,
+        reason: "zone_matches_other_municipality"
+      };
+    }
+
+    if (inferredDistrict && district && inferredDistrict !== district) {
+      return {
+        valid: false,
+        value: text,
+        reason: "zone_matches_other_district"
+      };
+    }
+
+    return {
+      valid: true,
+      value: text,
+      reason: ""
+    };
+  }
+
+  function ehZonaValida(value, context) {
+    return avaliarZona(value, context).valid;
   }
 
   function encontrarRegraMunicipio(value) {
@@ -795,38 +856,43 @@
       issues.push("zone_equals_postal_code");
     }
 
-    if (manualZone && !ehZonaValida(manualZone, {
+    const manualZoneEvaluation = manualZone ? avaliarZona(manualZone, {
       city: city,
+      municipality: municipality,
+      district: district,
       street: parsed.street,
       streetNumber: parsed.streetNumber,
       postalCode: postalCode
-    })) {
-      issues.push("zone_invalid");
+    }) : null;
+    const adminZoneEvaluation = admin.freguesia ? avaliarZona(admin.freguesia, {
+      city: city,
+      municipality: municipality,
+      district: district,
+      street: parsed.street,
+      streetNumber: parsed.streetNumber,
+      postalCode: postalCode
+    }) : null;
+    const parsedZoneEvaluation = parsed.zoneCandidate ? avaliarZona(parsed.zoneCandidate, {
+      city: city,
+      municipality: municipality,
+      district: district,
+      street: parsed.street,
+      streetNumber: parsed.streetNumber,
+      postalCode: postalCode
+    }) : null;
+
+    if (manualZone && !manualZoneEvaluation.valid) {
+      issues.push(manualZoneEvaluation.reason || "zone_invalid");
     }
 
-    if (manualZone && ehZonaValida(manualZone, {
-      city: city,
-      street: parsed.street,
-      streetNumber: parsed.streetNumber,
-      postalCode: postalCode
-    })) {
-      zone = limparTextoLocalizacao(manualZone);
+    if (manualZoneEvaluation && manualZoneEvaluation.valid) {
+      zone = manualZoneEvaluation.value;
       zoneSource = "manual";
-    } else if (admin.freguesia && ehZonaValida(admin.freguesia, {
-      city: city,
-      street: parsed.street,
-      streetNumber: parsed.streetNumber,
-      postalCode: postalCode
-    }) && normalizarTexto(admin.freguesia) === localityNormalized) {
-      zone = admin.freguesia;
+    } else if (adminZoneEvaluation && adminZoneEvaluation.valid && normalizarTexto(admin.freguesia) === localityNormalized) {
+      zone = adminZoneEvaluation.value;
       zoneSource = "admin_freguesia";
-    } else if (parsed.zoneCandidate && ehZonaValida(parsed.zoneCandidate, {
-      city: city,
-      street: parsed.street,
-      streetNumber: parsed.streetNumber,
-      postalCode: postalCode
-    })) {
-      zone = parsed.zoneCandidate;
+    } else if (parsedZoneEvaluation && parsedZoneEvaluation.valid) {
+      zone = parsedZoneEvaluation.value;
       zoneSource = "address_segment";
     }
 
@@ -991,6 +1057,7 @@
     normalizarCoords: normalizarCoords,
     parseAddressComponents: parseAddressComponents,
     normalizarLocalizacaoBarbearia: normalizarLocalizacaoBarbearia,
+    avaliarZona: avaliarZona,
     ehZonaValida: ehZonaValida,
     inferirLocalizacaoAdministrativa: inferirLocalizacaoAdministrativa,
     validarEmail: validarEmail,

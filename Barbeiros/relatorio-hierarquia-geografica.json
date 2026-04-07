@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generated_at": "2026-04-07T09:40:53.314Z",
+    "generated_at": "2026-04-07T13:55:51.550Z",
     "barbers_total": 199,
     "barbers_needing_context": 71,
     "city_pages_total": 79,
@@ -476,9 +476,11 @@
       "district": "",
       "zone": "Horta",
       "locality": "Ilha do Faial",
-      "reasons": [],
+      "reasons": [
+        "zone_matches_other_municipality"
+      ],
       "needs_context": false,
-      "suggested_display": "Cidade: Ilha do Faial | Zona: Horta"
+      "suggested_display": "Cidade: Ilha do Faial"
     },
     {
       "scope": "barbearia",
@@ -491,9 +493,11 @@
       "district": "",
       "zone": "São Roque do Pico",
       "locality": "Ilha do Pico",
-      "reasons": [],
+      "reasons": [
+        "zone_matches_other_municipality"
+      ],
       "needs_context": false,
-      "suggested_display": "Cidade: Ilha do Pico | Zona: São Roque do Pico"
+      "suggested_display": "Cidade: Ilha do Pico"
     },
     {
       "scope": "barbearia",
@@ -506,9 +510,11 @@
       "district": "",
       "zone": "Angra do Heroísmo",
       "locality": "Ilha Terceira",
-      "reasons": [],
+      "reasons": [
+        "zone_matches_other_municipality"
+      ],
       "needs_context": false,
-      "suggested_display": "Cidade: Ilha Terceira | Zona: Angra do Heroísmo"
+      "suggested_display": "Cidade: Ilha Terceira"
     },
     {
       "scope": "barbearia",
@@ -521,9 +527,11 @@
       "district": "",
       "zone": "Angra do Heroísmo",
       "locality": "Ilha Terceira",
-      "reasons": [],
+      "reasons": [
+        "zone_matches_other_municipality"
+      ],
       "needs_context": false,
-      "suggested_display": "Cidade: Ilha Terceira | Zona: Angra do Heroísmo"
+      "suggested_display": "Cidade: Ilha Terceira"
     },
     {
       "scope": "barbearia",
@@ -875,9 +883,11 @@
       "district": "Braga",
       "zone": "Guimarães",
       "locality": "Braga",
-      "reasons": [],
+      "reasons": [
+        "zone_matches_other_municipality"
+      ],
       "needs_context": false,
-      "suggested_display": "Cidade: Braga | Zona: Guimarães"
+      "suggested_display": "Cidade: Braga"
     },
     {
       "scope": "barbearia",
