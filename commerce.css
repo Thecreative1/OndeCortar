@@ -1252,6 +1252,15 @@ body[data-page="article"] .article-header p {
   color: var(--text-secondary);
 }
 
+.article-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
 .article-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);

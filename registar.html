@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#516255" />
   <title>Adicionar ou Atualizar Barbearia | OndeCortar.pt</title>
-  <meta name="description" content="Adiciona ou atualiza o perfil da tua barbearia no OndeCortar.pt para aparecer no mapa com morada, contactos e horários." />
+  <meta name="description" content="Adiciona ou atualiza o perfil da tua barbearia no OndeCortar.pt para ganhar mais visibilidade com morada, contactos, mapa, links úteis e presença na página da cidade." />
   <link rel="canonical" href="https://ondecortar.pt/registar.html" />
   <meta property="og:title" content="Adicionar ou Atualizar Barbearia | OndeCortar.pt" />
-  <meta property="og:description" content="Ganha visibilidade no mapa OndeCortar.pt com um perfil mais claro, elegante e útil para novos clientes." />
+  <meta property="og:description" content="Ganha mais visibilidade com um perfil completo no OndeCortar.pt: morada, contactos, mapa, links úteis e presença local." />
   <meta property="og:url" content="https://ondecortar.pt/registar.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://ondecortar.pt/imagens/banner.jpg" />
@@ -376,7 +376,7 @@
           <a href="index.html#explorar">Explorar</a>
           <a href="index.html#cidades">Cidades</a>
           <a class="nav-link-active" href="registar.html" aria-current="page">Adicionar barbearia</a>
-          <a href="loja.html">Loja</a>
+          <a href="loja/">Loja</a>
           <a href="revista/">Revista</a>
           <a href="faq.html">FAQ</a>
           <a class="nav-cta" href="index.html#mapa">Voltar ao mapa</a>
@@ -390,13 +390,13 @@
       <section class="hero">
         <span class="eyebrow">Adicionar ao mapa</span>
         <h1>Adiciona ou atualiza a tua barbearia.</h1>
-        <p>Envia os dados da tua barbearia para aparecer no mapa com morada, contactos e horários.</p>
+        <p>Envia os dados da tua barbearia para ganhar mais visibilidade no mapa, na página da tua cidade e num perfil completo com morada, contactos, links úteis e informação atualizada.</p>
       </section>
 
       <div class="grid">
         <section class="form-card">
           <h2>Dados da tua barbearia</h2>
-            <p>Quanto mais informação enviares, mais fácil fica encontrar a tua barbearia.</p>
+            <p>Quanto mais informação enviares, mais completo fica o perfil. Uma ficha forte ajuda a gerar mais confiança, mais contactos e melhor presença local.</p>
 
           <form action="https://formspree.io/f/mkgjknvn" method="POST" onsubmit="redirecionarDepoisDeSubmeter(event)">
             <input type="hidden" name="_subject" value="Novo pedido de entrada no mapa do OndeCortar.pt" />
@@ -405,22 +405,22 @@
             <div class="field-grid">
               <div>
                 <label for="nome">Nome da barbearia</label>
-                <input type="text" id="nome" name="nome" required />
+                <input type="text" id="nome" name="nome" placeholder="Como queres que a barbearia apareça no perfil" required />
               </div>
               <div>
                 <label for="responsavel">Nome do responsável</label>
-                <input type="text" id="responsavel" name="responsavel" />
+                <input type="text" id="responsavel" name="responsavel" placeholder="Opcional, mas útil para validação" />
               </div>
             </div>
 
             <div class="field-grid">
               <div>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
+                <label for="email">Email de contacto</label>
+                <input type="email" id="email" name="email" placeholder="Email para validação e contacto" required />
               </div>
               <div>
-                <label for="telefone">Telefone</label>
-                <input type="text" id="telefone" name="telefone" required />
+                <label for="telefone">Telefone principal</label>
+                <input type="text" id="telefone" name="telefone" placeholder="Número que deve ficar clicável no perfil" required />
               </div>
             </div>
 
@@ -431,14 +431,14 @@
               </div>
               <div>
                 <label for="morada">Morada completa</label>
-                <input type="text" id="morada" name="morada" required />
+                <input type="text" id="morada" name="morada" placeholder="Rua, número, código postal e localidade" required />
               </div>
             </div>
 
             <div class="field-grid">
               <div>
                 <label for="presenca_online">Instagram, site ou link de marcação</label>
-                <input type="text" id="presenca_online" name="presenca_online" placeholder="Link do Instagram, site ou página de marcações" />
+                <input type="text" id="presenca_online" name="presenca_online" placeholder="Ajuda a criar um perfil mais completo e com mais cliques" />
               </div>
               <div>
                 <label for="horario">Horário de funcionamento</label>
@@ -457,7 +457,7 @@
 
             <div>
               <label for="mensagem">Informação adicional</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Podes incluir serviços, observações, forma de atendimento, preços, horário detalhado ou qualquer dado que ajude o perfil a ficar melhor."></textarea>
+            <textarea id="mensagem" name="mensagem" placeholder="Podes incluir serviços, especialidades, observações, forma de atendimento, preços, horário detalhado ou qualquer dado que ajude a criar um perfil útil e factual."></textarea>
             </div>
 
             <label class="checkbox">
@@ -466,7 +466,7 @@
             </label>
 
             <div class="cta-row">
-              <button class="btn btn-primary" type="submit">Enviar pedido</button>
+              <button class="btn btn-primary" type="submit">Enviar dados para publicar perfil</button>
               <a class="btn btn-secondary" href="index.html#explorar">Voltar ao mapa</a>
             </div>
           </form>
@@ -475,18 +475,22 @@
         <aside>
           <div class="side-card">
             <h3>O que convém enviar</h3>
-          <p>Estes dados ajudam a publicar o perfil com a informação principal.</p>
+          <p>Estes dados ajudam a publicar um perfil completo com mais utilidade para clientes e melhor leitura para Google.</p>
             <ul>
               <li>Nome da barbearia, cidade e morada completa.</li>
               <li>Telefone, Instagram, website ou link de marcação.</li>
               <li>Horários, observações e detalhes que melhorem a apresentação.</li>
+              <li>Dados suficientes para aparecer no mapa e na página da cidade.</li>
             </ul>
           </div>
 
           <div class="side-card side-card-highlight">
             <span class="badge">Gratuito</span>
             <h3>Envio e atualização simples</h3>
-          <p>Podes enviar ou atualizar os dados da tua barbearia sem custo.</p>
+          <p>Podes enviar ou atualizar os dados da tua barbearia sem custo. Um perfil completo pode incluir morada, telefone, mapa, horário, website, Instagram e presença local.</p>
+          <div class="cta-row" style="margin-top: 14px;">
+            <a class="btn btn-secondary" href="barbearias/barbearia-couto/">Ver exemplo de perfil</a>
+          </div>
           </div>
         </aside>
       </div>
@@ -506,7 +510,7 @@
         <a href="index.html#explorar">Explorar</a>
         <a href="index.html#cidades">Cidades</a>
         <a href="faq.html">FAQ</a>
-        <a href="loja.html">Loja</a>
+        <a href="loja/">Loja</a>
         <a href="revista/">Revista</a>
         <a href="privacidade.html">Privacidade</a>
       </div>

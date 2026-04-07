@@ -439,6 +439,7 @@
       slug: raw.slug || slugify(name + "-" + city + "-" + (index + 1)),
       name: name,
       city: city,
+      citySlug: slugify(city),
       morada: raw.morada || "",
       telefone: telefone,
       telefoneOriginal: rawPhone,
@@ -461,7 +462,8 @@
     barber.secondaryLink = barber.links[1] || barber.links[0] || null;
     barber.description = buildDescription(barber);
     barber.score = scoreBarber(barber);
-    barber.url = "barbearia.html?slug=" + barber.slug + "&v=20260404-1";
+    barber.cityUrl = barber.citySlug ? "cidades/" + barber.citySlug + "/" : "";
+    barber.url = "barbearias/" + barber.slug + "/";
 
     return barber;
   }

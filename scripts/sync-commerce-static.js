@@ -3,8 +3,8 @@ const path = require("path");
 const vm = require("vm");
 
 const ROOT = path.resolve(__dirname, "..");
-const VERSION = "20260405-responsive-1";
-const TODAY = "2026-04-05";
+const VERSION = "20260407-seo-1";
+const TODAY = "2026-04-07";
 const SITE_URL = "https://ondecortar.pt/";
 const DEFAULT_OG_IMAGE = SITE_URL + "imagens/banner.jpg";
 const NAV_SCRIPT = `
@@ -254,7 +254,7 @@ function renderStaticPage(spec, data) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="${escapeHtml(spec.assetPrefix)}commerce.css?v=${VERSION}" />${structuredData}
+  <link rel="stylesheet" href="${escapeHtml(spec.assetPrefix)}commerce.css" />${structuredData}
 </head>
 <body${Object.entries(spec.bodyAttrs || {}).map(([key, value]) => ` ${key}="${escapeHtml(value)}"`).join("")}>
   <div id="app" class="page-shell">${rendered.appHtml}</div>
@@ -330,7 +330,6 @@ function buildSitemap(entries) {
     lines.push("  <url>");
     lines.push(`    <loc>${escapeHtml(entry.loc)}</loc>`);
     lines.push(`    <lastmod>${entry.lastmod || TODAY}</lastmod>`);
-    lines.push(`    <priority>${entry.priority}</priority>`);
     lines.push("  </url>");
   });
   lines.push("</urlset>");
@@ -368,9 +367,9 @@ function main() {
   writeFile(
     path.join("loja", "index.html"),
     renderStaticPage(
-      {
-        title: "Loja OndeCortar | Produtos de barbearia escolhidos com critério",
-        description: "Loja OndeCortar com máquinas, kits, navalhas e acessórios recomendados.",
+        {
+          title: "Loja OndeCortar | Produtos de barbearia escolhidos com critério",
+          description: "Loja OndeCortar com máquinas, kits, navalhas e acessórios recomendados.",
         canonical: SITE_URL + "loja/",
         ogType: "website",
         ogImage: DEFAULT_OG_IMAGE,
@@ -448,8 +447,8 @@ function main() {
       path.join("loja", category.slug, "index.html"),
       renderStaticPage(
         {
-          title: `${category.title} | Loja OndeCortar`,
-          description: category.intro,
+          title: `Recomendações de ${category.title} | OndeCortar.pt`,
+          description: `Compara ${category.title.toLowerCase()} com mais critério. Vê produtos recomendados, contexto de compra e ligações úteis.`,
           canonical: SITE_URL + "loja/" + category.slug + "/",
           ogType: "website",
           ogImage: DEFAULT_OG_IMAGE,
@@ -639,32 +638,31 @@ function main() {
   });
 
   const sitemapEntries = [
-    { loc: SITE_URL, priority: "1.0" },
-    { loc: SITE_URL + "anunciar.html", priority: "0.4" },
-    { loc: SITE_URL + "registar.html", priority: "0.5" },
-    { loc: SITE_URL + "loja/", priority: "0.9" },
-    { loc: SITE_URL + "revista/", priority: "0.9" },
+    { loc: SITE_URL + "loja/", lastmod: TODAY },
     ...categories.map((category) => ({
       loc: SITE_URL + "loja/" + category.slug + "/",
-      priority: "0.8"
-    })),
-    ...hubs.map((hub) => ({
-      loc: SITE_URL + "revista/" + hub.slug + "/",
-      priority: hub.legacy ? "0.6" : "0.7"
-    })),
-    ...articles.map((article) => ({
-      loc: SITE_URL + "revista/" + article.slug + "/",
-      priority: "0.8"
+      lastmod: TODAY
     })),
     ...products.map((product) => ({
       loc: SITE_URL + "produto/" + product.slug + "/",
-      priority: "0.7"
-    })),
-    { loc: SITE_URL + "faq.html", priority: "0.6" },
-    { loc: SITE_URL + "privacidade.html", priority: "0.2" }
+      lastmod: TODAY
+    }))
   ];
 
-  writeFile("sitemap.xml", buildSitemap(sitemapEntries));
+  const magazineEntries = [
+    { loc: SITE_URL + "revista/", lastmod: TODAY },
+    ...hubs.map((hub) => ({
+      loc: SITE_URL + "revista/" + hub.slug + "/",
+      lastmod: TODAY
+    })),
+    ...articles.map((article) => ({
+      loc: SITE_URL + "revista/" + article.slug + "/",
+      lastmod: TODAY
+    }))
+  ];
+
+  writeFile("sitemap-loja.xml", buildSitemap(sitemapEntries));
+  writeFile("sitemap-revista.xml", buildSitemap(magazineEntries));
 
   console.log(
     JSON.stringify(
@@ -674,7 +672,8 @@ function main() {
         hubs: hubs.length,
         articles: articles.length,
         products: products.length,
-        sitemapEntries: sitemapEntries.length
+        sitemapLojaEntries: sitemapEntries.length,
+        sitemapRevistaEntries: magazineEntries.length
       },
       null,
       2

@@ -141,6 +141,16 @@
     if (canonicalTag) canonicalTag.setAttribute("href", canonical);
   }
 
+  function setRobots(content) {
+    let robotsTag = document.querySelector('meta[name="robots"]');
+    if (!robotsTag) {
+      robotsTag = document.createElement("meta");
+      robotsTag.setAttribute("name", "robots");
+      document.head.appendChild(robotsTag);
+    }
+    robotsTag.setAttribute("content", content);
+  }
+
   function setStructuredData(items) {
     document.querySelectorAll('script[data-ondecortar-ld]').forEach(function(node) {
       node.remove();
@@ -153,6 +163,51 @@
       script.textContent = JSON.stringify(item);
       document.head.appendChild(script);
     });
+  }
+
+  function titleCaseCategory(category) {
+    return category && category.title ? category.title : "";
+  }
+
+  function categoryMetaTitle(category) {
+    return "Recomendações de " + titleCaseCategory(category) + " | OndeCortar.pt";
+  }
+
+  function categoryMetaDescription(category) {
+    return "Compara " + String(category.title || "").toLowerCase() + " com mais critério. Vê produtos recomendados, contexto de compra e ligações úteis.";
+  }
+
+  function categoryLongIntro(category) {
+    const topCount = (category.top || []).length;
+    const articleCount = (category.articles || []).length;
+    return [
+      category.intro,
+      "Nesta categoria reunimos " + topCount + " produtos recomendados, atalhos rápidos para diferentes cenários e um bloco editorial pensado para reduzir ruído na decisão.",
+      "A ideia não é mostrar um catálogo infinito, mas dar contexto sobre quem beneficia mais deste tipo de produto, que erros evitar antes de comprar e por onde continuar a navegar dentro do ecossistema OndeCortar.",
+      articleCount ? "Também ligamos esta página a " + articleCount + " artigo" + (articleCount === 1 ? "" : "s") + " da revista para que possas aprofundar a escolha antes de sair para uma recomendação concreta." : "Quando faz sentido, a página liga ainda a artigos da revista para aprofundares a escolha antes de sair para um produto."
+    ].join(" ");
+  }
+
+  function articlePublishedDate(article) {
+    return article.datePublished || "2026-04-05";
+  }
+
+  function articleUpdatedDate(article) {
+    return article.dateModified || "2026-04-07";
+  }
+
+  function formatDatePt(value) {
+    try {
+      const date = new Date(String(value) + "T12:00:00Z");
+      return new Intl.DateTimeFormat("pt-PT", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        timeZone: "UTC"
+      }).format(date);
+    } catch (error) {
+      return value;
+    }
   }
 
   function coreArticles() {
@@ -687,14 +742,16 @@
     const category = categoryMap.get(value);
     if (!category) return renderNotFound("Categoria não encontrada");
     const canonical = "https://ondecortar.pt/loja/" + value + "/";
-    setMeta(category.title + " | Loja OndeCortar", category.intro, canonical);
+    const introLong = categoryLongIntro(category);
+    const relatedArticles = getArticles(category.articles || []);
+    setMeta(categoryMetaTitle(category), categoryMetaDescription(category), canonical);
     const topProducts = getProducts(category.top);
     setStructuredData([
       {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": category.title,
-        "description": category.intro,
+        "description": categoryMetaDescription(category),
         "url": canonical
       },
       {
@@ -727,11 +784,12 @@
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container hero-card"><div class="hero-grid">' +
-          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja/") + '">Loja</a><span>/</span><span>' + e(category.title) + '</span></div><span class="section-flag">Categoria da loja</span><h1>' + e(category.title) + '</h1><p>' + e(category.intro) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#top3">Ver produtos recomendados</a><a class="btn btn-secondary" href="' + href("loja/") + '">Voltar à loja</a></div></div>' +
+          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja/") + '">Loja</a><span>/</span><span>' + e(category.title) + '</span></div><span class="section-flag">Categoria da loja</span><h1>' + e(category.title) + '</h1><p>' + e(introLong) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#top3">Ver produtos recomendados</a><a class="btn btn-secondary" href="' + href("loja/") + '">Voltar à loja</a></div></div>' +
           '<div class="hero-side"><div class="shop-mini-grid">' + topProducts.slice(0, 2).map(renderMiniProduct).join("") + '</div><div class="store-note"><strong>Escolha mais rápida</strong><p>Selecionámos poucas opções para decidires sem te perderes em excesso de oferta.</p></div></div>' +
         '</div></div></section>' +
         '<section class="section" id="top3"><div class="container"><div class="section-header"><div><span class="eyebrow">Top 3</span><h2>Produtos recomendados</h2><p>Uma primeira seleção curta para não cair numa grelha sem fim.</p></div></div><div class="product-grid">' + topProducts.map(function(item) { return renderProductCard(item); }).join("") + '</div></div></section>' +
         '<section class="section"><div class="container comparison-card"><div class="section-header"><div><span class="eyebrow">Melhor para</span><h2>Comparação rápida</h2><p>Quatro atalhos editoriais para chegar a uma opção com mais contexto.</p></div></div><div class="comparison-table">' + comparisonRows + '</div></div></section>' +
+        (relatedArticles.length ? '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Revista</span><h2>Artigos relacionados</h2><p>Usa estes artigos para aprofundar o contexto antes de clicar num produto específico.</p></div></div><div class="article-grid">' + relatedArticles.slice(0, 3).map(renderArticleCard).join("") + '</div></div></section>' : '') +
         '<section class="section"><div class="container">' + renderFaq(category.faqs) + '</div></section>' +
         renderWhyBuy() +
         '<section class="section"><div class="container">' + renderDisclosure() + '</div></section>' +
@@ -899,6 +957,8 @@
     const canonical = "https://ondecortar.pt/revista/" + value + "/";
     const metaTitle = article.metaTitle || (article.title + " | Revista OndeCortar");
     const metaDescription = article.metaDescription || article.excerpt;
+    const publishedDate = articlePublishedDate(article);
+    const updatedDate = articleUpdatedDate(article);
     setMeta(metaTitle, metaDescription, canonical);
     setStructuredData([
       {
@@ -907,6 +967,8 @@
         "headline": article.title,
         "description": metaDescription,
         "mainEntityOfPage": canonical,
+        "datePublished": publishedDate,
+        "dateModified": updatedDate,
         "publisher": {
           "@type": "Organization",
           "name": "OndeCortar.pt",
@@ -939,13 +1001,13 @@
     return (
       renderHeader() +
       '<main>' +
-        '<section class="section"><div class="container hero-card article-header"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span>' + (hub ? '<a href="' + hubHref(article.hub) + '">' + e(hub.title) + '</a>' : '<span>Revista</span>') + '</div><span class="section-flag">Artigo da Revista</span><h1>' + e(article.title) + '</h1><p>' + e(article.intro) + '</p><p class="article-subcopy">' + e(article.subIntro || article.excerpt) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#produtos-artigo">Ver produtos recomendados</a>' + (article.relatedCategory ? '<a class="btn btn-secondary" href="' + editorialCategoryHref(article.relatedCategory) + '">Ver categoria ligada</a>' : "") + '</div></div></section>' +
+        '<section class="section"><div class="container hero-card article-header"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span>' + (hub ? '<a href="' + hubHref(article.hub) + '">' + e(hub.title) + '</a>' : '<span>Revista</span>') + '</div><span class="section-flag">Artigo da Revista</span><h1>' + e(article.title) + '</h1><div class="article-dates"><span>Publicado em ' + e(formatDatePt(publishedDate)) + '</span><span>Atualizado em ' + e(formatDatePt(updatedDate)) + '</span></div><p>' + e(article.intro) + '</p><p class="article-subcopy">' + e(article.subIntro || article.excerpt) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#produtos-artigo">Ver produtos recomendados</a>' + (article.relatedCategory ? '<a class="btn btn-secondary" href="' + editorialCategoryHref(article.relatedCategory) + '">Ver categoria ligada</a>' : "") + '</div></div></section>' +
         renderArticleQuickAnswers(article) +
+        renderArticleCategoryBridge(article) +
         '<section class="section"><div class="container article-layout"><div class="article-body">' +
           (article.sections || []).map(function(item) { return '<article class="article-section"><h2>' + e(item[0]) + '</h2>' + item[1].map(function(text) { return "<p>" + e(text) + "</p>"; }).join("") + "</article>"; }).join("") +
         '</div><aside class="stack">' + renderArticleSidebar(article) + '</aside></div></section>' +
         renderArticleRecommendedProducts(article) +
-        renderArticleCategoryBridge(article) +
         renderArticleFinalCta(article) +
         (article.faqs && article.faqs.length ? '<section class="section" id="faq-artigo"><div class="container">' + renderFaq(article.faqs) + '</div></section>' : "") +
         renderRelatedArticles("Artigos relacionados", article.relatedArticles) +
@@ -957,7 +1019,12 @@
   function renderNotFound(label) {
     setMeta("Página não encontrada | OndeCortar", "A página pedida não está disponível.", window.location.href);
     setStructuredData([]);
+    setRobots("noindex,follow");
     return renderHeader() + '<main><section class="section"><div class="container callout-card"><h1>' + e(label) + '</h1><p>Volta à loja ou à revista para continuares a navegar.</p><div class="hero-actions"><a class="btn btn-primary" href="' + href("loja/") + '">Ir para a loja</a><a class="btn btn-secondary" href="' + href("revista/") + '">Ir para a revista</a></div></div></section></main>' + renderFooter();
+  }
+
+  if (params.toString()) {
+    setRobots("noindex,follow");
   }
 
   if (page === "store") app.innerHTML = renderStoreHome();

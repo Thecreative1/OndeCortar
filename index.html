@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#516255" />
-  <title>OndeCortar.pt | Barbearias em Portugal</title>
-  <meta name="description" content="Encontra barbearias em Portugal por cidade, zona ou nome, com mapa, morada e contactos." />
+  <title>OndeCortar.pt | Barbearias em Portugal com mapa, contactos e pesquisa</title>
+  <meta name="description" content="Encontra barbearias em Portugal por cidade, zona ou nome. Consulta morada, contactos, mapa e perfis no OndeCortar.pt." />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <link rel="canonical" href="https://ondecortar.pt/" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <meta property="og:title" content="OndeCortar.pt | Barbearias em Portugal" />
-  <meta property="og:description" content="Encontra barbearias em Portugal por cidade, zona ou nome, com mapa e contactos." />
+  <meta property="og:title" content="OndeCortar.pt | Barbearias em Portugal com mapa, contactos e pesquisa" />
+  <meta property="og:description" content="Encontra barbearias em Portugal por cidade, zona ou nome. Consulta morada, contactos, mapa e perfis no OndeCortar.pt." />
   <meta property="og:url" content="https://ondecortar.pt/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://ondecortar.pt/imagens/banner.jpg" />
@@ -22,8 +22,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" crossorigin="anonymous" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==" crossorigin="anonymous"></script>
-  <script src="Barbeiros/barbearias.limpo.js?v=20260404-2"></script>
-  <script src="script.js?v=20260404-2"></script>
+  <script src="Barbeiros/barbearias.limpo.js"></script>
+  <script src="script.js"></script>
   <style>
     :root {
       --bg-main: #f2ebdd;
@@ -414,6 +414,24 @@
       max-width: 56ch;
       margin-bottom: 16px;
       color: var(--muted);
+    }
+
+    .hero-intro-copy {
+      max-width: 62ch;
+      margin: 0 0 16px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .hero-link-block {
+      display: grid;
+      gap: 12px;
+      margin: 0 0 18px;
+    }
+
+    .hero-link-block strong {
+      color: var(--ink-strong);
+      font-size: 0.95rem;
     }
 
     .hero-search {
@@ -973,6 +991,13 @@
       gap: 18px;
     }
 
+    .surface-card {
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(251, 247, 239, 0.94), rgba(245, 237, 224, 0.94));
+      box-shadow: var(--shadow-soft);
+    }
+
     .featured-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -1521,6 +1546,18 @@
           <span class="eyebrow">Barbearias em Portugal</span>
           <h1 class="hero-title">Encontra barbearias em Portugal</h1>
           <p class="hero-subtitle">Pesquisa por cidade, zona ou nome e vê morada, contacto e localização num só lugar.</p>
+          <p class="hero-intro-copy">O OndeCortar liga diretório, loja e revista numa só base: encontras barbearias em Portugal com páginas por cidade, perfis individuais, contexto útil para decidir melhor e ligações reais entre descoberta local, compra e conteúdo editorial.</p>
+
+          <div class="hero-link-block">
+            <strong>Cidades principais com página própria</strong>
+            <div class="quick-cities">
+              <a class="city-chip" href="cidades/guimaraes/">Barbearias em Guimarães</a>
+              <a class="city-chip" href="cidades/braga/">Barbearias em Braga</a>
+              <a class="city-chip" href="cidades/porto/">Barbearias no Porto</a>
+              <a class="city-chip" href="cidades/lisboa/">Barbearias em Lisboa</a>
+              <a class="city-chip" href="cidades/faro/">Barbearias em Faro</a>
+            </div>
+          </div>
 
           <form class="hero-search" id="heroSearchForm" role="search" aria-label="Pesquisar barbearias a partir do hero">
             <input id="heroSearchInput" type="text" placeholder="Procura por cidade, zona ou nome" />
@@ -1541,15 +1578,15 @@
             <div class="hero-promo-points">
               <div class="hero-promo-point">
                 <strong>Mais visibilidade</strong>
-                <span>Aparece no mapa e nas pesquisas do site.</span>
+                <span>Aparece no mapa, na pesquisa e nas páginas da tua cidade.</span>
               </div>
               <div class="hero-promo-point">
-                <strong>Mais confiança</strong>
-                <span>Mostra morada, telefone e links úteis.</span>
+                <strong>Perfil mais completo</strong>
+                <span>Mostra morada, telefone, mapa e links úteis num só perfil.</span>
               </div>
               <div class="hero-promo-point">
                 <strong>Mais contactos</strong>
-                <span>Facilita chamadas, cliques e visitas ao perfil.</span>
+                <span>Facilita chamadas, cliques, visitas ao perfil e descoberta local.</span>
               </div>
             </div>
 
@@ -1577,7 +1614,7 @@
               <h2>Explora no mapa</h2>
               <p>Vê as barbearias disponíveis e entra direto nos contactos e detalhes.</p>
             </div>
-            <span class="hero-map-badge"><span data-barbearias-total>63</span>&nbsp;barbearias no mapa</span>
+            <span class="hero-map-badge"><span data-barbearias-total>199</span>&nbsp;barbearias no mapa</span>
           </div>
 
           <div class="hero-map-frame">
@@ -1622,7 +1659,7 @@
               <span class="eyebrow">Ver no mapa</span>
             <h2>Explora por cidade, zona ou nome</h2>
           </div>
-          <span class="pill" id="searchCount" aria-live="polite">A mostrar 63 espaços</span>
+          <span class="pill" id="searchCount" aria-live="polite">A mostrar 199 espaços</span>
         </div>
 
         <div class="directory-toolbar">
@@ -1683,7 +1720,53 @@
           </div>
         </div>
 
-        <div class="featured-grid" id="featuredGrid"></div>
+        <div class="featured-grid" id="featuredGrid">
+          <article class="feature-card surface-card">
+            <div class="feature-visual" style="--feature-bg:#efe4dc;--feature-fg:#8a6b52;">
+              <strong>BC</strong>
+            </div>
+            <div class="feature-copy">
+              <div class="result-topline">
+                <a class="tag tag-small" href="barbearias/barbearia-couto/">Tocha</a>
+              </div>
+              <h3><a href="barbearias/barbearia-couto/">Barbearia Couto</a></h3>
+              <p>Ficha com morada, telefone e ligação de marcação para uma leitura rápida do perfil.</p>
+              <div class="feature-actions">
+                <a class="btn btn-secondary btn-small" href="barbearias/barbearia-couto/">Ver perfil</a>
+              </div>
+            </div>
+          </article>
+          <article class="feature-card surface-card">
+            <div class="feature-visual" style="--feature-bg:#e5efe3;--feature-fg:#516255;">
+              <strong>BA</strong>
+            </div>
+            <div class="feature-copy">
+              <div class="result-topline">
+                <a class="tag tag-small" href="barbearias/barbearia-abel/">Prior Velho</a>
+              </div>
+              <h3><a href="barbearias/barbearia-abel/">Barbearia Abel</a></h3>
+              <p>Perfil individual com morada completa, contacto direto e ligação útil para descoberta local.</p>
+              <div class="feature-actions">
+                <a class="btn btn-secondary btn-small" href="barbearias/barbearia-abel/">Ver perfil</a>
+              </div>
+            </div>
+          </article>
+          <article class="feature-card surface-card">
+            <div class="feature-visual" style="--feature-bg:#e7ece8;--feature-fg:#425647;">
+              <strong>47</strong>
+            </div>
+            <div class="feature-copy">
+              <div class="result-topline">
+                <a class="tag tag-small" href="barbearias/4740-barber-shop/">Esposende</a>
+              </div>
+              <h3><a href="barbearias/4740-barber-shop/">4740 Barber Shop</a></h3>
+              <p>Página estática rastreável com morada, telefone e ligação ao perfil público da barbearia.</p>
+              <div class="feature-actions">
+                <a class="btn btn-secondary btn-small" href="barbearias/4740-barber-shop/">Ver perfil</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -1697,7 +1780,44 @@
           </div>
         </div>
 
-        <div class="cities-grid" id="citiesGrid"></div>
+        <div class="cities-grid" id="citiesGrid">
+          <article class="city-card surface-card">
+            <strong>Guimarães</strong>
+            <h3><a href="cidades/guimaraes/">Barbearias em Guimarães</a></h3>
+            <p>Página local com perfis, introdução editorial e ligações internas úteis.</p>
+            <a class="btn btn-secondary btn-small" href="cidades/guimaraes/">Explorar Guimarães</a>
+          </article>
+          <article class="city-card surface-card">
+            <strong>Braga</strong>
+            <h3><a href="cidades/braga/">Barbearias em Braga</a></h3>
+            <p>Entrada rápida para comparar opções da cidade com páginas individuais ligadas entre si.</p>
+            <a class="btn btn-secondary btn-small" href="cidades/braga/">Explorar Braga</a>
+          </article>
+          <article class="city-card surface-card">
+            <strong>Porto</strong>
+            <h3><a href="cidades/porto/">Barbearias no Porto</a></h3>
+            <p>Lista local em HTML com perfis individuais, contactos e ligação a conteúdo útil.</p>
+            <a class="btn btn-secondary btn-small" href="cidades/porto/">Explorar Porto</a>
+          </article>
+          <article class="city-card surface-card">
+            <strong>Lisboa</strong>
+            <h3><a href="cidades/lisboa/">Barbearias em Lisboa</a></h3>
+            <p>Página pensada para SEO local com perfis próprios e mais contexto para decidir.</p>
+            <a class="btn btn-secondary btn-small" href="cidades/lisboa/">Explorar Lisboa</a>
+          </article>
+          <article class="city-card surface-card">
+            <strong>Faro</strong>
+            <h3><a href="cidades/faro/">Barbearias em Faro</a></h3>
+            <p>Explora perfis, localização e ligações úteis numa página local limpa e indexável.</p>
+            <a class="btn btn-secondary btn-small" href="cidades/faro/">Explorar Faro</a>
+          </article>
+          <article class="city-card surface-card">
+            <strong>Todas</strong>
+            <h3><a href="cidades/">Ver todas as cidades</a></h3>
+            <p>Hub com as páginas locais já geradas para reforçar navegação e rastreabilidade.</p>
+            <a class="btn btn-secondary btn-small" href="cidades/">Abrir cidades</a>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -1706,7 +1826,7 @@
         <div class="owner-copy">
           <span class="eyebrow">Para donos de barbearias</span>
           <h2>Tens uma barbearia? Faz-te encontrar com mais facilidade</h2>
-          <p>Adiciona ou atualiza a tua ficha para apareceres no mapa com morada, contactos e links úteis para novos clientes.</p>
+          <p>Adiciona ou atualiza a tua ficha para ganhares mais visibilidade no mapa, na pesquisa e na página da tua cidade, com um perfil mais completo para novos clientes.</p>
           <div class="owner-actions">
             <a class="btn btn-primary" href="registar.html">Adicionar ou atualizar barbearia</a>
             <a class="btn btn-secondary" href="faq.html">Ver FAQ</a>
@@ -1716,11 +1836,11 @@
         <div class="owner-points">
           <article class="owner-point">
             <strong>Mais fácil de encontrar</strong>
-            <p>A tua barbearia passa a aparecer no mapa com morada e contactos.</p>
+            <p>A tua barbearia passa a aparecer no mapa, na pesquisa e nas páginas locais.</p>
           </article>
           <article class="owner-point">
             <strong>Contacto mais simples</strong>
-            <p>Telefone, links e morada ficam acessíveis para quem estiver a procurar.</p>
+            <p>Telefone, links, morada e perfil completo ficam acessíveis para quem estiver a procurar.</p>
           </article>
           <article class="owner-point">
             <strong>Atualização fácil</strong>
@@ -1788,6 +1908,16 @@
 
   <script>
     (function() {
+      if (window.location.search) {
+        var robotsTag = document.querySelector('meta[name="robots"]');
+        if (!robotsTag) {
+          robotsTag = document.createElement("meta");
+          robotsTag.setAttribute("name", "robots");
+          document.head.appendChild(robotsTag);
+        }
+        robotsTag.setAttribute("content", "noindex,follow");
+      }
+
       const directory = window.OndeCortarData;
       setupNavigation();
 
