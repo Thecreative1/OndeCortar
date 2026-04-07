@@ -4,7 +4,10 @@
       "Bash(grep -i \"lang=\" E:/GIT_HUB/OndeCortar/*.html)",
       "Bash(grep:*)",
       "Bash(xargs -I {} basename {})",
-      "WebFetch(domain:ondecortar.pt)"
+      "WebFetch(domain:ondecortar.pt)",
+      "Bash(xargs sed:*)",
+      "Bash(sed -i 's/Máquinas, aparadores e conjuntos pensados para escolher com mais critério e menos ruído de catálogo\\\\./Máquinas e aparadores para cortar cabelo em casa ou num posto de barbeiro./g' loja/maquinas-de-cortar/index.html)",
+      "Bash(sed -i 's/Uma área pensada para presentes úteis, com menos ruído e mais contexto para acertar melhor\\\\./Kits e conjuntos mais fáceis de escolher para oferecer, com menos risco de errar./g' loja/para-oferecer/index.html)"
     ]
   }
 }

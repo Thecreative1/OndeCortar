@@ -808,7 +808,7 @@
             '<div class="hero-card store-hero-main-card store-hero-compact-card">' +
               '<span class="section-flag">LOJA ONDECORTAR</span>' +
               '<h1>Produtos de barbearia recomendados para escolher melhor</h1>' +
-              '<p>Começa pelas escolhas principais, entra na categoria certa e usa a revista só quando precisares de mais contexto.</p>' +
+              '<p>Começa pelos produtos mais recomendados e explora por categoria.</p>' +
               '<div class="hero-actions">' +
                 '<a class="btn btn-primary" href="#top-escolhas">Ver Top Escolhas</a>' +
                 '<a class="btn btn-secondary" href="#categorias">Ver categorias</a>' +
@@ -1002,7 +1002,7 @@
         '</div></section>' +
         renderMagazineProductShelf("Produtos recomendados para começar já", "Produtos ligados aos guias em destaque, para começares pela parte prática.", highlightedProducts, href("loja/"), "Ver loja") +
         '<section class="section" id="seccoes"><div class="container"><div class="section-header"><div><span class="eyebrow">Secções da revista</span><h2>Explorar por tema</h2><p>Se preferires navegar por assunto, aqui tens os principais temas editoriais.</p></div></div><div class="hub-grid">' + mainHubs.map(function(item) { return '<article class="hub-card"><h3>' + e(item.title) + '</h3><p>' + e(item.intro) + '</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="' + hubHref(item.slug) + '">Ver secção</a></div></article>'; }).join("") + '</div></div></section>' +
-        '<section class="section" id="artigos"><div class="container"><div class="section-header"><div><span class="eyebrow">Em destaque</span><h2>Guias e comparações com ponte direta para a loja</h2><p>Entra pelo artigo que te interessa e segue logo para a categoria ou para o produto certo.</p></div></div><div class="article-grid">' + remainingArticles.map(function(item) { return renderArticleCard(item); }).join("") + '</div></div></section>' +
+        '<section class="section" id="artigos"><div class="container"><div class="section-header"><div><span class="eyebrow">Em destaque</span><h2>Artigos em destaque</h2><p>Entra pelo artigo que te interessa e passa logo para a categoria ou o produto certo.</p></div></div><div class="article-grid">' + remainingArticles.map(function(item) { return renderArticleCard(item); }).join("") + '</div></div></section>' +
       '</main>' +
       renderFooter()
     );

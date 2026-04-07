@@ -11,7 +11,7 @@
   ];
   window.OndeCortarCommerce.featuredPicks = [
     { label: "Melhor máquina para casa", product: "braun-series-5-aio5545", note: "Versátil e direta para quem quer resolver cabelo e barba no mesmo aparelho." },
-    { label: "Melhor kit para começar", product: "viking-sandalwood", note: "Boa ponte entre rotina simples, oferta e primeira compra sem excesso." },
+    { label: "Melhor kit para começar", product: "viking-sandalwood", note: "Boa opção para começar uma rotina de barba simples ou para oferecer." },
     { label: "Melhor opção clássica", product: "king-c-dupla", note: "Faz sentido para quem quer mais controlo e um barbear tradicional." },
     { label: "Melhor para manutenção", product: "beardburys-spray", note: "Ajuda a manter a máquina pronta sem inventar uma rotina complexa." }
   ];
@@ -25,7 +25,7 @@
     {
       slug: "maquinas-de-cortar",
       title: "Máquinas de cortar",
-      intro: "Máquinas, aparadores e conjuntos pensados para escolher com mais critério e menos ruído de catálogo.",
+      intro: "Máquinas e aparadores para cortar cabelo em casa ou num posto de barbeiro.",
       top: ["wahl-super-taper", "braun-series-5-aio5545", "hatteker-completa"],
       picks: [["Melhor para casa", "braun-series-5-aio5545"], ["Melhor para uso frequente", "wahl-super-taper"], ["Melhor preço/versatilidade", "hatteker-completa"]],
       articles: ["como-escolher-uma-maquina-de-cortar-cabelo-para-usar-em-casa", "aparador-multifuncoes-ou-maquina-profissional-qual-compensa-mais", "7-erros-ao-comprar-uma-maquina-de-cortar-cabelo-barata", "como-manter-a-maquina-de-cortar-cabelo-a-funcionar-bem-por-mais-tempo"],
@@ -158,7 +158,7 @@
     {
       slug: "para-oferecer",
       title: "Para oferecer",
-      intro: "Uma área pensada para presentes úteis, com menos ruído e mais contexto para acertar melhor.",
+      intro: "Kits e conjuntos mais fáceis de escolher para oferecer, com menos risco de errar.",
       top: ["kit-xikezan", "king-c-rotina", "viking-sandalwood"],
       picks: [["Melhor kit completo", "kit-xikezan"], ["Melhor opção clássica", "king-c-rotina"], ["Melhor para rotina simples", "viking-sandalwood"]],
       articles: ["melhor-kit-de-barba-para-comecar-sem-comprar-as-cegas", "o-que-vale-a-pena-num-kit-de-barba-e-o-que-e-so-ruido-de-catalogo"],
