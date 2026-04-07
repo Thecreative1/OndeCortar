@@ -179,6 +179,29 @@
       flex-wrap: wrap;
       gap: 10px;
     }
+    .location-compact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .location-compact strong {
+      color: var(--text);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-right: 4px;
+    }
+    .location-compact a {
+      color: var(--accent-strong);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(176, 138, 74, 0.35);
+    }
+    .location-compact a:hover {
+      border-color: rgba(176, 138, 74, 0.65);
+    }
     .summary-panel {
       padding: 18px;
       border-radius: 20px;
@@ -327,13 +350,15 @@
           </div>
           <span class="eyebrow">Página de cidade</span>
           <h1>Barbearias em Ourém</h1>
-          <p>Esta página reúne 1 barbearia já listada em Ourém. Podes comparar moradas, telefones, mapa e links úteis antes de escolher. Neste momento, 1 ficha mostra telefone e nenhuma ficha mostra presença online. Mesmo quando a marcação online ainda não aparece, esta lista ajuda a perceber que espaços já têm informação suficiente para comparar e contactar.</p>
+          <p>Esta página reúne 1 barbearia já listada em Ourém, no distrito de Santarém. Podes comparar moradas, telefones, mapa e links úteis antes de escolher. Neste momento, 1 ficha mostra telefone e nenhuma ficha mostra presença online. Mesmo quando a marcação online ainda não aparece, esta lista ajuda a perceber que espaços já têm informação suficiente para comparar e contactar.</p>
+          <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/ourem/">Ourém</a></span><span><strong>Distrito:</strong> Santarém</span></div>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#lista-barbearias">Ver barbearias</a>
             <a class="btn btn-secondary" href="../../registar.html">Adicionar barbearia nesta cidade</a>
           </div>
         </div>
         <aside class="summary-panel">
+          <div class="summary-row"><span>Cidade</span>Ourém</div><div class="summary-row"><span>Distrito</span>Santarém</div>
           <div class="summary-row"><span>Total listado</span>1 ficha</div>
           <div class="summary-row"><span>Última atualização</span>7 de abril de 2026</div>
           <div class="summary-row"><span>Exploração rápida</span><a href="#lista-barbearias">Perfis individuais</a></div>
@@ -354,12 +379,10 @@
       <div class="barber-grid">
         
   <article class="card">
-    <div class="tag-row">
-      <a class="pill pill-link" href="../../cidades/ourem/">Ourém</a>
-      
-    </div>
+    <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/ourem/">Ourém</a></span><span><strong>Distrito:</strong> Santarém</span></div>
+    
     <h3><a href="../../barbearias/barbearia-costa-ourem/">Barbearia Costa – Ourém</a></h3>
-    <p>Ficha com telefone.</p>
+    <p>Ficha com telefone e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> Rua Dr. Francisco Sá Carneiro 18, 2490-541 Ourém</p>
     <div class="card-actions">
       <a class="btn btn-secondary" href="../../barbearias/barbearia-costa-ourem/">Ver perfil</a>
@@ -376,7 +399,7 @@
         <span class="eyebrow">Escolher melhor</span>
         <h2>Como escolher uma barbearia em Ourém</h2>
         <ul class="list-clean">
-          <li>Em Ourém, vale a pena começar pela morada e pela zona para perceber se a barbearia encaixa no teu percurso habitual.</li><li>Quando há telefone, website ou Instagram, confirma primeiro disponibilidade, tipo de serviço e se aceitam marcação online.</li><li>Se estiveres entre várias opções, dá prioridade às fichas com morada completa, contactos claros e informação atualizada.</li>
+          <li>Em Ourém, no distrito de Santarém, começa por confirmar morada, zona e contexto geográfico antes de comparar as fichas.</li><li>Quando há telefone, website ou Instagram, confirma primeiro disponibilidade, tipo de serviço e se aceitam marcação online.</li><li>Se estiveres entre várias opções, dá prioridade às fichas com morada completa, contactos claros e informação atualizada.</li>
         </ul>
       </article>
       <aside class="stack">

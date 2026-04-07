@@ -2073,10 +2073,31 @@
         }).join("");
       }
 
+      function getPrimaryLocationLabel(barber) {
+        return directory.getDisplayPlace ? directory.getDisplayPlace(barber) : "Localização a confirmar";
+      }
+
+      function getHierarchyLocationLabel(barber) {
+        return directory.getDisplayHierarchy ? directory.getDisplayHierarchy(barber) : getPrimaryLocationLabel(barber);
+      }
+
+      function buildPopupLocationRows(barber) {
+        const entries = directory.getGeoHierarchy ? directory.getGeoHierarchy(barber) : [];
+
+        if (!entries.length) {
+          return '<p><b>Localização:</b> Localização a confirmar</p>';
+        }
+
+        return entries.map(function(entry) {
+          return "<p><b>" + directory.escapeHtml(entry.label) + ":</b> " + directory.escapeHtml(entry.value) + "</p>";
+        }).join("");
+      }
+
       function renderFeatured() {
         const featuredBarbers = directory.getFeaturedBarbers(3);
 
         featuredGrid.innerHTML = featuredBarbers.map(function(barber) {
+          const placeLabel = getPrimaryLocationLabel(barber);
           const tags = barber.tags.map(function(tag) {
             return '<span class="tag tag-small">' + directory.escapeHtml(tag) + "</span>";
           }).join("");
@@ -2088,7 +2109,7 @@
               "</div>" +
               '<div class="feature-copy">' +
                 '<div class="result-topline">' +
-                  '<span class="tag tag-small">' + directory.escapeHtml(barber.city) + "</span>" +
+                  '<span class="tag tag-small">' + directory.escapeHtml(placeLabel) + "</span>" +
                 "</div>" +
                 "<h3>" + directory.escapeHtml(barber.name) + "</h3>" +
                 "<p>" + directory.escapeHtml(barber.description) + "</p>" +
@@ -2146,7 +2167,7 @@
         }
 
         heroResultsList.innerHTML = list.map(function(barber) {
-          const placeLabel = directory.getDisplayPlace(barber);
+          const placeLabel = getPrimaryLocationLabel(barber);
           return (
             '<article class="hero-result-item">' +
               '<div class="hero-result-copy">' +
@@ -2191,7 +2212,8 @@
         emptyState.hidden = true;
 
         resultsList.innerHTML = list.map(function(barber) {
-          const placeLabel = directory.getDisplayPlace(barber);
+          const placeLabel = getPrimaryLocationLabel(barber);
+          const hierarchyLabel = getHierarchyLocationLabel(barber);
           const tags = barber.tags.map(function(tag) {
             return '<span class="tag tag-small">' + directory.escapeHtml(tag) + "</span>";
           }).join("");
@@ -2210,6 +2232,7 @@
                 "<p>" + directory.escapeHtml(barber.description) + "</p>" +
                 '<div class="tags-row">' + tags + "</div>" +
                 '<div class="result-meta">' +
+                  "<span>" + directory.escapeHtml(hierarchyLabel) + "</span>" +
                   "<span>" + directory.escapeHtml(barber.morada || "Morada não disponível") + "</span>" +
                   "<span>" + directory.escapeHtml(directory.buildContactLabel(barber)) + "</span>" +
                 "</div>" +
@@ -2296,7 +2319,7 @@
         return (
           '<div class="popup-card">' +
             "<strong>" + directory.escapeHtml(barber.name) + "</strong>" +
-            "<p><b>Cidade:</b> " + directory.escapeHtml(barber.city) + "</p>" +
+            buildPopupLocationRows(barber) +
             (barber.morada ? "<p><b>Morada:</b> " + directory.escapeHtml(barber.morada) + "</p>" : "") +
             (barber.telefone ? "<p><b>Telefone:</b> " + directory.escapeHtml(barber.telefone) + "</p>" : "") +
             (barber.horario ? "<p><b>Horário:</b> " + directory.escapeHtml(barber.horario) + "</p>" : "") +

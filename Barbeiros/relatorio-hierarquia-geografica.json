@@ -1,0 +1,4654 @@
+{
+  "summary": {
+    "generated_at": "2026-04-07T09:40:53.314Z",
+    "barbers_total": 199,
+    "barbers_needing_context": 71,
+    "city_pages_total": 79,
+    "city_pages_needing_context": 38
+  },
+  "template_review": {
+    "city_pages": "contexto administrativo visível no topo e no resumo quando concelho ou distrito diferem da cidade",
+    "barber_cards": "hierarquia geográfica mostrada com rótulos em vez de chips indistintos",
+    "filters": "filtros rápidos continuam focados em cidade e deixam distrito/concelho fora dos chips rápidos",
+    "chips": "os chips principais deixam de misturar níveis administrativos sem rótulo",
+    "auto_texts": "as descrições automáticas passam a respeitar cidade, concelho, distrito e zona",
+    "breadcrumbs": "mantêm a hierarquia do site e deixam a hierarquia administrativa para os blocos estruturados"
+  },
+  "barbers": [
+    {
+      "scope": "barbearia",
+      "id": 1,
+      "nome": "Arlem Barber",
+      "slug": "arlem-barber",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 2,
+      "nome": "Barbearia Carlos Silva",
+      "slug": "barbearia-carlos-silva",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 3,
+      "nome": "Barbearia do Cardoso",
+      "slug": "barbearia-do-cardoso",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 4,
+      "nome": "Barbearia Dom Oliveira",
+      "slug": "barbearia-dom-oliveira",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 5,
+      "nome": "Barbearia Irmãos",
+      "slug": "barbearia-irmaos",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 6,
+      "nome": "Barbearia Oásis o Carlos",
+      "slug": "barbearia-oasis-o-carlos",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 7,
+      "nome": "Barbearia Tradição",
+      "slug": "barbearia-tradicao",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 8,
+      "nome": "Barbershop TalentoVanguarda",
+      "slug": "barbershop-talentovanguarda",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 9,
+      "nome": "Buda Barber",
+      "slug": "buda-barber",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 10,
+      "nome": "Champions Barber Shop",
+      "slug": "champions-barber-shop",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 11,
+      "nome": "El Shaddai Barber Styler",
+      "slug": "el-shaddai-barber-styler",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 12,
+      "nome": "Figaro's Barbershop",
+      "slug": "figaro-s-barbershop",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 13,
+      "nome": "Kadette Barbershop",
+      "slug": "kadette-barbershop",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 14,
+      "nome": "Los Moustachios",
+      "slug": "los-moustachios",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 15,
+      "nome": "Nova Barbearia",
+      "slug": "nova-barbearia",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 16,
+      "nome": "Pachioni's Barbearia",
+      "slug": "pachioni-s-barbearia",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 17,
+      "nome": "SOUSA Barbershop",
+      "slug": "sousa-barbershop",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 18,
+      "nome": "The Barbershop",
+      "slug": "the-barbershop",
+      "count": 1,
+      "city": "",
+      "municipality": "",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Localização a confirmar"
+    },
+    {
+      "scope": "barbearia",
+      "id": 19,
+      "nome": "Barbearia O Seu Espaço",
+      "slug": "barbearia-o-seu-espaco",
+      "count": 1,
+      "city": "Alcântara",
+      "municipality": "Alcântara",
+      "district": "",
+      "zone": "",
+      "locality": "Alcântara",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Alcântara"
+    },
+    {
+      "scope": "barbearia",
+      "id": 20,
+      "nome": "Barbearia Portugal por João Alves",
+      "slug": "barbearia-portugal-por-joao-alves",
+      "count": 1,
+      "city": "Alcântara",
+      "municipality": "Alcântara",
+      "district": "",
+      "zone": "",
+      "locality": "Alcântara",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Alcântara"
+    },
+    {
+      "scope": "barbearia",
+      "id": 21,
+      "nome": "Barbearia do Senhor",
+      "slug": "barbearia-do-senhor",
+      "count": 1,
+      "city": "Arganil Arganil",
+      "municipality": "Arganil Arganil",
+      "district": "",
+      "zone": "",
+      "locality": "Arganil Arganil",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Arganil Arganil"
+    },
+    {
+      "scope": "barbearia",
+      "id": 22,
+      "nome": "Barbearia Paulo Freitas",
+      "slug": "barbearia-paulo-freitas",
+      "count": 1,
+      "city": "Arganil",
+      "municipality": "Arganil",
+      "district": "",
+      "zone": "",
+      "locality": "Arganil",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Arganil"
+    },
+    {
+      "scope": "barbearia",
+      "id": 23,
+      "nome": "Barbearia",
+      "slug": "barbearia",
+      "count": 1,
+      "city": "Azeitão",
+      "municipality": "Azeitão",
+      "district": "",
+      "zone": "",
+      "locality": "Azeitão",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Azeitão"
+    },
+    {
+      "scope": "barbearia",
+      "id": 24,
+      "nome": "Cortes & Discos",
+      "slug": "cortes-discos",
+      "count": 1,
+      "city": "Azeitão",
+      "municipality": "Azeitão",
+      "district": "",
+      "zone": "",
+      "locality": "Azeitão",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Azeitão"
+    },
+    {
+      "scope": "barbearia",
+      "id": 25,
+      "nome": "Domus Hair Studio",
+      "slug": "domus-hair-studio",
+      "count": 1,
+      "city": "Baguim do Monte (Rio Tinto)",
+      "municipality": "Baguim do Monte (Rio Tinto)",
+      "district": "",
+      "zone": "",
+      "locality": "Baguim do Monte (Rio Tinto)",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Baguim do Monte (Rio Tinto)"
+    },
+    {
+      "scope": "barbearia",
+      "id": 26,
+      "nome": "Barbearia do Gui",
+      "slug": "barbearia-do-gui",
+      "count": 1,
+      "city": "Bucelas",
+      "municipality": "Bucelas",
+      "district": "",
+      "zone": "",
+      "locality": "Bucelas",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Bucelas"
+    },
+    {
+      "scope": "barbearia",
+      "id": 27,
+      "nome": "Barbearia Sa",
+      "slug": "barbearia-sa",
+      "count": 1,
+      "city": "Calheta",
+      "municipality": "Calheta",
+      "district": "",
+      "zone": "",
+      "locality": "Calheta",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Calheta"
+    },
+    {
+      "scope": "barbearia",
+      "id": 28,
+      "nome": "Costa Barbershop",
+      "slug": "costa-barbershop",
+      "count": 1,
+      "city": "Carapeços",
+      "municipality": "Carapeços",
+      "district": "",
+      "zone": "",
+      "locality": "Carapeços",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Carapeços"
+    },
+    {
+      "scope": "barbearia",
+      "id": 29,
+      "nome": "FADO - Barbearia",
+      "slug": "fado-barbearia",
+      "count": 1,
+      "city": "Carnaxide",
+      "municipality": "Carnaxide",
+      "district": "",
+      "zone": "",
+      "locality": "Carnaxide",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Carnaxide"
+    },
+    {
+      "scope": "barbearia",
+      "id": 30,
+      "nome": "4740 Barber Shop",
+      "slug": "4740-barber-shop",
+      "count": 1,
+      "city": "Esposende",
+      "municipality": "Esposende",
+      "district": "",
+      "zone": "",
+      "locality": "Esposende",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Esposende"
+    },
+    {
+      "scope": "barbearia",
+      "id": 31,
+      "nome": "Barbearia Machado",
+      "slug": "barbearia-machado",
+      "count": 1,
+      "city": "Ilha do Faial",
+      "municipality": "Ilha do Faial",
+      "district": "",
+      "zone": "Horta",
+      "locality": "Ilha do Faial",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Ilha do Faial | Zona: Horta"
+    },
+    {
+      "scope": "barbearia",
+      "id": 32,
+      "nome": "Barbearia São Roque",
+      "slug": "barbearia-sao-roque",
+      "count": 1,
+      "city": "Ilha do Pico",
+      "municipality": "Ilha do Pico",
+      "district": "",
+      "zone": "São Roque do Pico",
+      "locality": "Ilha do Pico",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Ilha do Pico | Zona: São Roque do Pico"
+    },
+    {
+      "scope": "barbearia",
+      "id": 33,
+      "nome": "Barbearia António e Caetano",
+      "slug": "barbearia-antonio-e-caetano",
+      "count": 1,
+      "city": "Ilha Terceira",
+      "municipality": "Ilha Terceira",
+      "district": "",
+      "zone": "Angra do Heroísmo",
+      "locality": "Ilha Terceira",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Ilha Terceira | Zona: Angra do Heroísmo"
+    },
+    {
+      "scope": "barbearia",
+      "id": 34,
+      "nome": "The Barber - Terceira",
+      "slug": "the-barber-terceira",
+      "count": 1,
+      "city": "Ilha Terceira",
+      "municipality": "Ilha Terceira",
+      "district": "",
+      "zone": "Angra do Heroísmo",
+      "locality": "Ilha Terceira",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Ilha Terceira | Zona: Angra do Heroísmo"
+    },
+    {
+      "scope": "barbearia",
+      "id": 35,
+      "nome": "Barbearia Carlos Vaz",
+      "slug": "barbearia-carlos-vaz",
+      "count": 1,
+      "city": "Odivelas",
+      "municipality": "Odivelas",
+      "district": "",
+      "zone": "",
+      "locality": "Odivelas",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Odivelas"
+    },
+    {
+      "scope": "barbearia",
+      "id": 36,
+      "nome": "MenConcept",
+      "slug": "menconcept",
+      "count": 1,
+      "city": "Parede - Jardins da Parede",
+      "municipality": "Parede - Jardins da Parede",
+      "district": "",
+      "zone": "",
+      "locality": "Parede - Jardins da Parede",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Parede - Jardins da Parede"
+    },
+    {
+      "scope": "barbearia",
+      "id": 37,
+      "nome": "Barbearia do Zela",
+      "slug": "barbearia-do-zela",
+      "count": 1,
+      "city": "Pindelo",
+      "municipality": "Pindelo",
+      "district": "",
+      "zone": "",
+      "locality": "Pindelo",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Pindelo"
+    },
+    {
+      "scope": "barbearia",
+      "id": 38,
+      "nome": "JR - Cabeleireiro de Homens - Barbearia",
+      "slug": "jr-cabeleireiro-de-homens-barbearia",
+      "count": 1,
+      "city": "Ponte de Sor",
+      "municipality": "Ponte de Sor",
+      "district": "",
+      "zone": "",
+      "locality": "Ponte de Sor",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Ponte de Sor"
+    },
+    {
+      "scope": "barbearia",
+      "id": 39,
+      "nome": "Barbearia Inclusive",
+      "slug": "barbearia-inclusive",
+      "count": 1,
+      "city": "Póvoa de Santa Iria",
+      "municipality": "Póvoa de Santa Iria",
+      "district": "",
+      "zone": "",
+      "locality": "Póvoa de Santa Iria",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Póvoa de Santa Iria"
+    },
+    {
+      "scope": "barbearia",
+      "id": 40,
+      "nome": "Barbearia Abel",
+      "slug": "barbearia-abel",
+      "count": 1,
+      "city": "Prior Velho",
+      "municipality": "Prior Velho",
+      "district": "",
+      "zone": "",
+      "locality": "Prior Velho",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Prior Velho"
+    },
+    {
+      "scope": "barbearia",
+      "id": 41,
+      "nome": "Valgrind - The Viking Barber Tattoo Studio",
+      "slug": "valgrind-the-viking-barber-tattoo-studio",
+      "count": 1,
+      "city": "Quinta da Redonda",
+      "municipality": "Quinta da Redonda",
+      "district": "",
+      "zone": "",
+      "locality": "Quinta da Redonda",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Quinta da Redonda"
+    },
+    {
+      "scope": "barbearia",
+      "id": 42,
+      "nome": "Barbearia 98 Men’s Space",
+      "slug": "barbearia-98-men-s-space",
+      "count": 1,
+      "city": "Samora Correia",
+      "municipality": "Samora Correia",
+      "district": "",
+      "zone": "",
+      "locality": "Samora Correia",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Samora Correia"
+    },
+    {
+      "scope": "barbearia",
+      "id": 43,
+      "nome": "JL Barbearia",
+      "slug": "jl-barbearia",
+      "count": 1,
+      "city": "Santo Tirso",
+      "municipality": "Santo Tirso",
+      "district": "",
+      "zone": "",
+      "locality": "Santo Tirso",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Santo Tirso"
+    },
+    {
+      "scope": "barbearia",
+      "id": 44,
+      "nome": "Nineteen Cuts",
+      "slug": "nineteen-cuts",
+      "count": 1,
+      "city": "Santo Tirso",
+      "municipality": "Santo Tirso",
+      "district": "",
+      "zone": "",
+      "locality": "Santo Tirso",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Santo Tirso"
+    },
+    {
+      "scope": "barbearia",
+      "id": 45,
+      "nome": "Torrez Barbearia",
+      "slug": "torrez-barbearia",
+      "count": 1,
+      "city": "Santo Tirso",
+      "municipality": "Santo Tirso",
+      "district": "",
+      "zone": "",
+      "locality": "Santo Tirso",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Santo Tirso"
+    },
+    {
+      "scope": "barbearia",
+      "id": 46,
+      "nome": "Barber Shop",
+      "slug": "barber-shop",
+      "count": 1,
+      "city": "São Brás de Alportel",
+      "municipality": "São Brás de Alportel",
+      "district": "",
+      "zone": "",
+      "locality": "São Brás de Alportel",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: São Brás de Alportel"
+    },
+    {
+      "scope": "barbearia",
+      "id": 47,
+      "nome": "Madeira Island Tattoo & Barber Shop",
+      "slug": "madeira-island-tattoo-barber-shop",
+      "count": 1,
+      "city": "São Martinho",
+      "municipality": "São Martinho",
+      "district": "",
+      "zone": "",
+      "locality": "São Martinho",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: São Martinho"
+    },
+    {
+      "scope": "barbearia",
+      "id": 48,
+      "nome": "Barbearia Couto",
+      "slug": "barbearia-couto",
+      "count": 1,
+      "city": "Tocha",
+      "municipality": "Tocha",
+      "district": "",
+      "zone": "",
+      "locality": "Tocha",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Tocha"
+    },
+    {
+      "scope": "barbearia",
+      "id": 49,
+      "nome": "Bento's Barber Shop & Vespa Bar",
+      "slug": "bento-s-barber-shop-vespa-bar",
+      "count": 1,
+      "city": "Tocha",
+      "municipality": "Tocha",
+      "district": "",
+      "zone": "",
+      "locality": "Tocha",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Tocha"
+    },
+    {
+      "scope": "barbearia",
+      "id": 50,
+      "nome": "Barbearia Pereira – Águeda",
+      "slug": "barbearia-pereira-agueda",
+      "count": 1,
+      "city": "Águeda",
+      "municipality": "Águeda",
+      "district": "Aveiro",
+      "zone": "",
+      "locality": "Águeda",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Águeda | Distrito: Aveiro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 51,
+      "nome": "Barbearia Elite – Aveiro",
+      "slug": "barbearia-elite-aveiro",
+      "count": 1,
+      "city": "Aveiro",
+      "municipality": "Aveiro",
+      "district": "Aveiro",
+      "zone": "",
+      "locality": "Aveiro",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Aveiro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 52,
+      "nome": "Barbearia Ponto H",
+      "slug": "barbearia-ponto-h",
+      "count": 1,
+      "city": "Aveiro",
+      "municipality": "Aveiro",
+      "district": "Aveiro",
+      "zone": "",
+      "locality": "Aveiro",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Aveiro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 53,
+      "nome": "Barbearia Moura – Espinho",
+      "slug": "barbearia-moura-espinho",
+      "count": 1,
+      "city": "Espinho",
+      "municipality": "Espinho",
+      "district": "Aveiro",
+      "zone": "",
+      "locality": "Espinho",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Espinho | Distrito: Aveiro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 54,
+      "nome": "Barbearia Silvério – Ovar",
+      "slug": "barbearia-silverio-ovar",
+      "count": 1,
+      "city": "Ovar",
+      "municipality": "Ovar",
+      "district": "Aveiro",
+      "zone": "",
+      "locality": "Ovar",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Ovar | Distrito: Aveiro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 55,
+      "nome": "Barbearia Lima – São João da Madeira",
+      "slug": "barbearia-lima-sao-joao-da-madeira",
+      "count": 1,
+      "city": "S. João da Madeira",
+      "municipality": "São João da Madeira",
+      "district": "Aveiro",
+      "zone": "",
+      "locality": "S. João da Madeira",
+      "reasons": [
+        "city_needs_municipality_context",
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: S. João da Madeira | Concelho: São João da Madeira | Distrito: Aveiro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 56,
+      "nome": "Barbearia Beja Moderna",
+      "slug": "barbearia-beja-moderna",
+      "count": 1,
+      "city": "Beja",
+      "municipality": "Beja",
+      "district": "Beja",
+      "zone": "",
+      "locality": "Beja",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Beja"
+    },
+    {
+      "scope": "barbearia",
+      "id": 57,
+      "nome": "Barbearia Fora D’Horas",
+      "slug": "barbearia-fora-d-horas",
+      "count": 1,
+      "city": "Braga",
+      "municipality": "Braga",
+      "district": "Braga",
+      "zone": "Guimarães",
+      "locality": "Braga",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Braga | Zona: Guimarães"
+    },
+    {
+      "scope": "barbearia",
+      "id": 58,
+      "nome": "BMbarbeariamonte",
+      "slug": "bmbarbeariamonte",
+      "count": 1,
+      "city": "Braga",
+      "municipality": "Braga",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Braga",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 59,
+      "nome": "FG Male Image & Grooming",
+      "slug": "fg-male-image-grooming",
+      "count": 1,
+      "city": "Braga",
+      "municipality": "Braga",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Braga",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 60,
+      "nome": "M2 BARBEARIA",
+      "slug": "m2-barbearia",
+      "count": 1,
+      "city": "Braga",
+      "municipality": "Braga",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Braga",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 61,
+      "nome": "Barbearia Fafense",
+      "slug": "barbearia-fafense",
+      "count": 1,
+      "city": "Fafe",
+      "municipality": "Fafe",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Fafe",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Fafe | Distrito: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 62,
+      "nome": "Barbershop DuArt",
+      "slug": "barbershop-duart",
+      "count": 1,
+      "city": "Fafe",
+      "municipality": "Fafe",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Fafe",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Fafe | Distrito: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 63,
+      "nome": "1920 Barber Shop",
+      "slug": "1920-barber-shop",
+      "count": 1,
+      "city": "Guimarães",
+      "municipality": "Guimarães",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Guimarães",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Guimarães | Distrito: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 64,
+      "nome": "Black Rock Barbearia",
+      "slug": "black-rock-barbearia",
+      "count": 1,
+      "city": "Guimarães",
+      "municipality": "Guimarães",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Guimarães",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Guimarães | Distrito: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 65,
+      "nome": "NewVision Barbershop",
+      "slug": "newvision-barbershop",
+      "count": 1,
+      "city": "Guimarães",
+      "municipality": "Guimarães",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Guimarães",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Guimarães | Distrito: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 66,
+      "nome": "The Barbers Studio",
+      "slug": "the-barbers-studio",
+      "count": 1,
+      "city": "Guimarães",
+      "municipality": "Guimarães",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Guimarães",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Guimarães | Distrito: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 67,
+      "nome": "Treze Barbershop",
+      "slug": "treze-barbershop",
+      "count": 1,
+      "city": "Guimarães",
+      "municipality": "Guimarães",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Guimarães",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Guimarães | Distrito: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 68,
+      "nome": "Danniel Sampaio Barbearia",
+      "slug": "danniel-sampaio-barbearia",
+      "count": 1,
+      "city": "Vila Nova de Famalicão",
+      "municipality": "Vila Nova de Famalicão",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Vila Nova de Famalicão",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Vila Nova de Famalicão | Distrito: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 69,
+      "nome": "Francisco Maia - Barbeiro",
+      "slug": "francisco-maia-barbeiro",
+      "count": 1,
+      "city": "Vila Nova de Famalicao",
+      "municipality": "Vila Nova de Famalicão",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Vila Nova de Famalicao",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Vila Nova de Famalicao | Distrito: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 70,
+      "nome": "Homens da Praça",
+      "slug": "homens-da-praca",
+      "count": 1,
+      "city": "Vila Nova de Famalicao",
+      "municipality": "Vila Nova de Famalicão",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Vila Nova de Famalicao",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Vila Nova de Famalicao | Distrito: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 71,
+      "nome": "Lord Jack & Friends",
+      "slug": "lord-jack-friends",
+      "count": 1,
+      "city": "Vila Nova de Famalicao",
+      "municipality": "Vila Nova de Famalicão",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Vila Nova de Famalicao",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Vila Nova de Famalicao | Distrito: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 72,
+      "nome": "Pluma Barber Shop",
+      "slug": "pluma-barber-shop",
+      "count": 1,
+      "city": "Vila Nova de Famalicao",
+      "municipality": "Vila Nova de Famalicão",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Vila Nova de Famalicao",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Vila Nova de Famalicao | Distrito: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 73,
+      "nome": "Barbearia Bragança Classic",
+      "slug": "barbearia-braganca-classic",
+      "count": 1,
+      "city": "Bragança",
+      "municipality": "Bragança",
+      "district": "Bragança",
+      "zone": "",
+      "locality": "Bragança",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Bragança"
+    },
+    {
+      "scope": "barbearia",
+      "id": 74,
+      "nome": "Barbearia do António",
+      "slug": "barbearia-do-antonio",
+      "count": 1,
+      "city": "Macedo de Cavaleiros",
+      "municipality": "Macedo de Cavaleiros",
+      "district": "Bragança",
+      "zone": "",
+      "locality": "Macedo de Cavaleiros",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Macedo de Cavaleiros | Distrito: Bragança"
+    },
+    {
+      "scope": "barbearia",
+      "id": 75,
+      "nome": "Barbearia Valadar",
+      "slug": "barbearia-valadar",
+      "count": 1,
+      "city": "Macedo de Cavaleiros",
+      "municipality": "Macedo de Cavaleiros",
+      "district": "Bragança",
+      "zone": "",
+      "locality": "Macedo de Cavaleiros",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Macedo de Cavaleiros | Distrito: Bragança"
+    },
+    {
+      "scope": "barbearia",
+      "id": 76,
+      "nome": "Barbearia Monteiro – Castelo Branco",
+      "slug": "barbearia-monteiro-castelo-branco",
+      "count": 1,
+      "city": "Castelo Branco",
+      "municipality": "Castelo Branco",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "Castelo Branco",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Castelo Branco"
+    },
+    {
+      "scope": "barbearia",
+      "id": 77,
+      "nome": "Bronk's Barber Shop",
+      "slug": "bronk-s-barber-shop",
+      "count": 1,
+      "city": "Covilhã",
+      "municipality": "Covilhã",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "Covilhã",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Covilhã | Distrito: Castelo Branco"
+    },
+    {
+      "scope": "barbearia",
+      "id": 78,
+      "nome": "Old School Barber Shop – Covilhã",
+      "slug": "old-school-barber-shop-covilha",
+      "count": 1,
+      "city": "Covilhã",
+      "municipality": "Covilhã",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "Covilhã",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Covilhã | Distrito: Castelo Branco"
+    },
+    {
+      "scope": "barbearia",
+      "id": 79,
+      "nome": "Barbearia Antunes – Coimbra",
+      "slug": "barbearia-antunes-coimbra",
+      "count": 1,
+      "city": "Coimbra",
+      "municipality": "Coimbra",
+      "district": "Coimbra",
+      "zone": "",
+      "locality": "Coimbra",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Coimbra"
+    },
+    {
+      "scope": "barbearia",
+      "id": 80,
+      "nome": "Barbearia Bagaça",
+      "slug": "barbearia-bagaca",
+      "count": 1,
+      "city": "Coimbra",
+      "municipality": "Coimbra",
+      "district": "Coimbra",
+      "zone": "",
+      "locality": "Coimbra",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Coimbra"
+    },
+    {
+      "scope": "barbearia",
+      "id": 81,
+      "nome": "Barbearia Candeias",
+      "slug": "barbearia-candeias",
+      "count": 1,
+      "city": "Coimbra",
+      "municipality": "Coimbra",
+      "district": "Coimbra",
+      "zone": "",
+      "locality": "Coimbra",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Coimbra"
+    },
+    {
+      "scope": "barbearia",
+      "id": 82,
+      "nome": "Barbearia Coliseu",
+      "slug": "barbearia-coliseu",
+      "count": 1,
+      "city": "Coimbra",
+      "municipality": "Coimbra",
+      "district": "Coimbra",
+      "zone": "",
+      "locality": "Coimbra",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Coimbra"
+    },
+    {
+      "scope": "barbearia",
+      "id": 83,
+      "nome": "Barbearia Estação",
+      "slug": "barbearia-estacao",
+      "count": 1,
+      "city": "Coimbra",
+      "municipality": "Coimbra",
+      "district": "Coimbra",
+      "zone": "",
+      "locality": "Coimbra",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Coimbra"
+    },
+    {
+      "scope": "barbearia",
+      "id": 84,
+      "nome": "Barbearia Lorde",
+      "slug": "barbearia-lorde",
+      "count": 1,
+      "city": "Coimbra",
+      "municipality": "Coimbra",
+      "district": "Coimbra",
+      "zone": "",
+      "locality": "Coimbra",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Coimbra"
+    },
+    {
+      "scope": "barbearia",
+      "id": 85,
+      "nome": "Barbearia Number 1",
+      "slug": "barbearia-number-1",
+      "count": 1,
+      "city": "Coimbra",
+      "municipality": "Coimbra",
+      "district": "Coimbra",
+      "zone": "",
+      "locality": "Coimbra",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Coimbra"
+    },
+    {
+      "scope": "barbearia",
+      "id": 86,
+      "nome": "Barbearia Vítor",
+      "slug": "barbearia-vitor",
+      "count": 1,
+      "city": "Coimbra",
+      "municipality": "Coimbra",
+      "district": "Coimbra",
+      "zone": "",
+      "locality": "Coimbra",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Coimbra"
+    },
+    {
+      "scope": "barbearia",
+      "id": 87,
+      "nome": "Gonçalo Santos Barber Shop",
+      "slug": "goncalo-santos-barber-shop",
+      "count": 1,
+      "city": "Coimbra",
+      "municipality": "Coimbra",
+      "district": "Coimbra",
+      "zone": "",
+      "locality": "Coimbra",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Coimbra"
+    },
+    {
+      "scope": "barbearia",
+      "id": 88,
+      "nome": "Mr Barbearia",
+      "slug": "mr-barbearia",
+      "count": 1,
+      "city": "Coimbra",
+      "municipality": "Coimbra",
+      "district": "Coimbra",
+      "zone": "",
+      "locality": "Coimbra",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Coimbra"
+    },
+    {
+      "scope": "barbearia",
+      "id": 89,
+      "nome": "New Look Barbearia",
+      "slug": "new-look-barbearia",
+      "count": 1,
+      "city": "Coimbra",
+      "municipality": "Coimbra",
+      "district": "Coimbra",
+      "zone": "",
+      "locality": "Coimbra",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Coimbra"
+    },
+    {
+      "scope": "barbearia",
+      "id": 90,
+      "nome": "Wings Barbershop",
+      "slug": "wings-barbershop",
+      "count": 1,
+      "city": "Coimbra",
+      "municipality": "Coimbra",
+      "district": "Coimbra",
+      "zone": "",
+      "locality": "Coimbra",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Coimbra"
+    },
+    {
+      "scope": "barbearia",
+      "id": 91,
+      "nome": "Barbearia António – Figueira da Foz",
+      "slug": "barbearia-antonio-figueira-da-foz",
+      "count": 1,
+      "city": "Figueira da Foz",
+      "municipality": "Figueira da Foz",
+      "district": "Coimbra",
+      "zone": "",
+      "locality": "Figueira da Foz",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Figueira da Foz | Distrito: Coimbra"
+    },
+    {
+      "scope": "barbearia",
+      "id": 92,
+      "nome": "Barbearia Alves",
+      "slug": "barbearia-alves",
+      "count": 1,
+      "city": "Évora",
+      "municipality": "Évora",
+      "district": "Évora",
+      "zone": "",
+      "locality": "Évora",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Évora"
+    },
+    {
+      "scope": "barbearia",
+      "id": 93,
+      "nome": "Barbearia Évora Style",
+      "slug": "barbearia-evora-style",
+      "count": 1,
+      "city": "Évora",
+      "municipality": "Évora",
+      "district": "Évora",
+      "zone": "",
+      "locality": "Évora",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Évora"
+    },
+    {
+      "scope": "barbearia",
+      "id": 94,
+      "nome": "Chacal's Barbearia",
+      "slug": "chacal-s-barbearia",
+      "count": 1,
+      "city": "Albufeira",
+      "municipality": "Albufeira",
+      "district": "Faro",
+      "zone": "",
+      "locality": "Albufeira",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Albufeira | Distrito: Faro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 95,
+      "nome": "Patrick Barbershop",
+      "slug": "patrick-barbershop",
+      "count": 1,
+      "city": "Albufeira",
+      "municipality": "Albufeira",
+      "district": "Faro",
+      "zone": "",
+      "locality": "Albufeira",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Albufeira | Distrito: Faro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 96,
+      "nome": "Ruaça Barbershop",
+      "slug": "ruaca-barbershop",
+      "count": 1,
+      "city": "Albufeira",
+      "municipality": "Albufeira",
+      "district": "Faro",
+      "zone": "",
+      "locality": "Albufeira",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Albufeira | Distrito: Faro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 97,
+      "nome": "1920 Barbershop – Faro",
+      "slug": "1920-barbershop-faro",
+      "count": 1,
+      "city": "Faro",
+      "municipality": "Faro",
+      "district": "Faro",
+      "zone": "",
+      "locality": "Faro",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Faro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 98,
+      "nome": "Barbearia Evandro Garcia",
+      "slug": "barbearia-evandro-garcia",
+      "count": 1,
+      "city": "Faro",
+      "municipality": "Faro",
+      "district": "Faro",
+      "zone": "",
+      "locality": "Faro",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Faro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 99,
+      "nome": "Barbearia S. Barba",
+      "slug": "barbearia-s-barba",
+      "count": 1,
+      "city": "Faro",
+      "municipality": "Faro",
+      "district": "Faro",
+      "zone": "Santa Bárbara de Nexe",
+      "locality": "Santa Bárbara de Nexe",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Faro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 100,
+      "nome": "Butterfly Cabeleireiro & Barbearia",
+      "slug": "butterfly-cabeleireiro-barbearia",
+      "count": 1,
+      "city": "Faro",
+      "municipality": "Faro",
+      "district": "Faro",
+      "zone": "Santa Bárbara de Nexe",
+      "locality": "Santa Bárbara de Nexe",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Faro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 101,
+      "nome": "CJ Barbearia",
+      "slug": "cj-barbearia",
+      "count": 1,
+      "city": "Faro",
+      "municipality": "Faro",
+      "district": "Faro",
+      "zone": "",
+      "locality": "Faro",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Faro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 102,
+      "nome": "J.L Barber's Faro",
+      "slug": "j-l-barber-s-faro",
+      "count": 1,
+      "city": "Faro",
+      "municipality": "Faro",
+      "district": "Faro",
+      "zone": "",
+      "locality": "Faro",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Faro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 103,
+      "nome": "O Profeta Barbearia",
+      "slug": "o-profeta-barbearia",
+      "count": 1,
+      "city": "Faro",
+      "municipality": "Faro",
+      "district": "Faro",
+      "zone": "",
+      "locality": "Faro",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Faro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 104,
+      "nome": "Alfa Barbers - Barbearia",
+      "slug": "alfa-barbers-barbearia",
+      "count": 1,
+      "city": "Lagos",
+      "municipality": "Lagos",
+      "district": "Faro",
+      "zone": "",
+      "locality": "Lagos",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Lagos | Distrito: Faro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 105,
+      "nome": "BarberShop Abreu",
+      "slug": "barbershop-abreu",
+      "count": 1,
+      "city": "Lagos",
+      "municipality": "Lagos",
+      "district": "Faro",
+      "zone": "",
+      "locality": "Lagos",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Lagos | Distrito: Faro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 106,
+      "nome": "The Barbers",
+      "slug": "the-barbers",
+      "count": 1,
+      "city": "Loulé",
+      "municipality": "Loulé",
+      "district": "Faro",
+      "zone": "Almancil",
+      "locality": "Almancil",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Loulé | Distrito: Faro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 107,
+      "nome": "Boss Barbearia",
+      "slug": "boss-barbearia",
+      "count": 1,
+      "city": "Portimão",
+      "municipality": "Portimão",
+      "district": "Faro",
+      "zone": "",
+      "locality": "Portimão",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Portimão | Distrito: Faro"
+    },
+    {
+      "scope": "barbearia",
+      "id": 108,
+      "nome": "Barbearia Central – Guarda",
+      "slug": "barbearia-central-guarda",
+      "count": 1,
+      "city": "Guarda",
+      "municipality": "Guarda",
+      "district": "Guarda",
+      "zone": "",
+      "locality": "Guarda",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Guarda"
+    },
+    {
+      "scope": "barbearia",
+      "id": 109,
+      "nome": "Barbearia São Romão – Seia",
+      "slug": "barbearia-sao-romao-seia",
+      "count": 1,
+      "city": "Seia",
+      "municipality": "Seia",
+      "district": "Guarda",
+      "zone": "",
+      "locality": "Seia",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Seia | Distrito: Guarda"
+    },
+    {
+      "scope": "barbearia",
+      "id": 110,
+      "nome": "Barbearia Mustache – Caldas da Rainha",
+      "slug": "barbearia-mustache-caldas-da-rainha",
+      "count": 1,
+      "city": "Caldas da Rainha",
+      "municipality": "Caldas da Rainha",
+      "district": "Leiria",
+      "zone": "",
+      "locality": "Caldas da Rainha",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Caldas da Rainha | Distrito: Leiria"
+    },
+    {
+      "scope": "barbearia",
+      "id": 111,
+      "nome": "Barba Negra Leiria",
+      "slug": "barba-negra-leiria",
+      "count": 1,
+      "city": "Leiria",
+      "municipality": "Leiria",
+      "district": "Leiria",
+      "zone": "",
+      "locality": "Leiria",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Leiria"
+    },
+    {
+      "scope": "barbearia",
+      "id": 112,
+      "nome": "Barbearia of Brothers",
+      "slug": "barbearia-of-brothers",
+      "count": 1,
+      "city": "Leiria",
+      "municipality": "Leiria",
+      "district": "Leiria",
+      "zone": "",
+      "locality": "Leiria",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Leiria"
+    },
+    {
+      "scope": "barbearia",
+      "id": 113,
+      "nome": "Bruno César Barbeiro",
+      "slug": "bruno-cesar-barbeiro",
+      "count": 1,
+      "city": "Leiria",
+      "municipality": "Leiria",
+      "district": "Leiria",
+      "zone": "",
+      "locality": "Leiria",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Leiria"
+    },
+    {
+      "scope": "barbearia",
+      "id": 114,
+      "nome": "EVOLUTION Men’s Salon",
+      "slug": "evolution-men-s-salon",
+      "count": 1,
+      "city": "Leiria",
+      "municipality": "Leiria",
+      "district": "Leiria",
+      "zone": "",
+      "locality": "Leiria",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Leiria"
+    },
+    {
+      "scope": "barbearia",
+      "id": 115,
+      "nome": "The Barber House – Leiria",
+      "slug": "the-barber-house-leiria",
+      "count": 1,
+      "city": "Leiria",
+      "municipality": "Leiria",
+      "district": "Leiria",
+      "zone": "",
+      "locality": "Leiria",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Leiria"
+    },
+    {
+      "scope": "barbearia",
+      "id": 116,
+      "nome": "Barbearia Brasileira",
+      "slug": "barbearia-brasileira",
+      "count": 1,
+      "city": "Nazaré",
+      "municipality": "Nazaré",
+      "district": "Leiria",
+      "zone": "",
+      "locality": "Nazaré",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Nazaré | Distrito: Leiria"
+    },
+    {
+      "scope": "barbearia",
+      "id": 117,
+      "nome": "Mr. Barber Lisboa",
+      "slug": "mr-barber-lisboa",
+      "count": 1,
+      "city": "Amadora",
+      "municipality": "Amadora",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Amadora",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Amadora | Distrito: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 118,
+      "nome": "ricky barber shop",
+      "slug": "ricky-barber-shop",
+      "count": 1,
+      "city": "Falagueira-Venda Nova Amadora",
+      "municipality": "Amadora",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Falagueira-Venda Nova Amadora",
+      "reasons": [
+        "city_needs_municipality_context",
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Falagueira-Venda Nova Amadora | Concelho: Amadora | Distrito: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 119,
+      "nome": "Aneel barbershop",
+      "slug": "aneel-barbershop",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 120,
+      "nome": "Barbearia 1025",
+      "slug": "barbearia-1025",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 121,
+      "nome": "Barbearia do Prakass",
+      "slug": "barbearia-do-prakass",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 122,
+      "nome": "Barbearia Lisboa",
+      "slug": "barbearia-lisboa",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 123,
+      "nome": "Barbearia Nova Lisboa",
+      "slug": "barbearia-nova-lisboa",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 124,
+      "nome": "Barbearia O Barbólogo",
+      "slug": "barbearia-o-barbologo",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 125,
+      "nome": "Barbearia Suprema",
+      "slug": "barbearia-suprema",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 126,
+      "nome": "Barbearia Vintage Lisboa",
+      "slug": "barbearia-vintage-lisboa",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 127,
+      "nome": "Barbearia Zé Nunes",
+      "slug": "barbearia-ze-nunes",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 128,
+      "nome": "Beard Man Barber Shop",
+      "slug": "beard-man-barber-shop",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 129,
+      "nome": "Bento Barbearias",
+      "slug": "bento-barbearias",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 130,
+      "nome": "Blessed Cutz Barbershop",
+      "slug": "blessed-cutz-barbershop",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 131,
+      "nome": "Brave Barber Shop",
+      "slug": "brave-barber-shop",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 132,
+      "nome": "Casimiro Barbershop",
+      "slug": "casimiro-barbershop",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "Benfica",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa | Zona: Benfica"
+    },
+    {
+      "scope": "barbearia",
+      "id": 133,
+      "nome": "Cristiano Barber Shop",
+      "slug": "cristiano-barber-shop",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 134,
+      "nome": "Cut by André Silva",
+      "slug": "cut-by-andre-silva",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 135,
+      "nome": "El Patron Barbershop",
+      "slug": "el-patron-barbershop",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 136,
+      "nome": "Exodo Barbearia",
+      "slug": "exodo-barbearia",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 137,
+      "nome": "Kings Barbearia",
+      "slug": "kings-barbearia",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 138,
+      "nome": "Ranzulla Barbershop",
+      "slug": "ranzulla-barbershop",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 139,
+      "nome": "Ricardus's Barber Shop",
+      "slug": "ricardus-s-barber-shop",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 140,
+      "nome": "Vix Barbershop",
+      "slug": "vix-barbershop",
+      "count": 1,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Lisboa",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 141,
+      "nome": "2685 FINEST - BARBEARIA",
+      "slug": "2685-finest-barbearia",
+      "count": 1,
+      "city": "Loures",
+      "municipality": "Loures",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Loures",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Loures | Distrito: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 142,
+      "nome": "GOLDEN HAND",
+      "slug": "golden-hand",
+      "count": 1,
+      "city": "Loures",
+      "municipality": "Loures",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Loures",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Loures | Distrito: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 143,
+      "nome": "JD Barbearia e Estética Feminina",
+      "slug": "jd-barbearia-e-estetica-feminina",
+      "count": 1,
+      "city": "Loures",
+      "municipality": "Loures",
+      "district": "Lisboa",
+      "zone": "Camarate",
+      "locality": "Loures",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Loures | Distrito: Lisboa | Zona: Camarate"
+    },
+    {
+      "scope": "barbearia",
+      "id": 144,
+      "nome": "Nobre Arte Barbearia – Torres Vedras",
+      "slug": "nobre-arte-barbearia-torres-vedras",
+      "count": 1,
+      "city": "Torres Vedras",
+      "municipality": "Torres Vedras",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "Torres Vedras",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Torres Vedras | Distrito: Lisboa"
+    },
+    {
+      "scope": "barbearia",
+      "id": 145,
+      "nome": "Korte JB Barbershop",
+      "slug": "korte-jb-barbershop",
+      "count": 1,
+      "city": "Lousada",
+      "municipality": "Lousada",
+      "district": "Porto",
+      "zone": "",
+      "locality": "Lousada",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Lousada | Distrito: Porto"
+    },
+    {
+      "scope": "barbearia",
+      "id": 146,
+      "nome": "BarberCrew Matosinhos",
+      "slug": "barbercrew-matosinhos",
+      "count": 1,
+      "city": "Matosinhos",
+      "municipality": "Matosinhos",
+      "district": "Porto",
+      "zone": "",
+      "locality": "Matosinhos",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Matosinhos | Distrito: Porto"
+    },
+    {
+      "scope": "barbearia",
+      "id": 147,
+      "nome": "Montes Barber /MLSG",
+      "slug": "montes-barber-mlsg",
+      "count": 1,
+      "city": "Matosinhos",
+      "municipality": "Matosinhos",
+      "district": "Porto",
+      "zone": "",
+      "locality": "Matosinhos",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Matosinhos | Distrito: Porto"
+    },
+    {
+      "scope": "barbearia",
+      "id": 148,
+      "nome": "Barbearia e Tattoo Asgard Porto",
+      "slug": "barbearia-e-tattoo-asgard-porto",
+      "count": 1,
+      "city": "Porto",
+      "municipality": "Porto",
+      "district": "Porto",
+      "zone": "",
+      "locality": "Porto",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Porto"
+    },
+    {
+      "scope": "barbearia",
+      "id": 149,
+      "nome": "Barbearia Maria Cruz",
+      "slug": "barbearia-maria-cruz",
+      "count": 1,
+      "city": "Porto",
+      "municipality": "Porto",
+      "district": "Porto",
+      "zone": "",
+      "locality": "Porto",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Porto"
+    },
+    {
+      "scope": "barbearia",
+      "id": 150,
+      "nome": "Barbearia Porto Los Patrones",
+      "slug": "barbearia-porto-los-patrones",
+      "count": 1,
+      "city": "Porto",
+      "municipality": "Porto",
+      "district": "Porto",
+      "zone": "",
+      "locality": "Porto",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Porto"
+    },
+    {
+      "scope": "barbearia",
+      "id": 151,
+      "nome": "Black Studio Bs",
+      "slug": "black-studio-bs",
+      "count": 1,
+      "city": "Porto",
+      "municipality": "Porto",
+      "district": "Porto",
+      "zone": "",
+      "locality": "Porto",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Porto"
+    },
+    {
+      "scope": "barbearia",
+      "id": 152,
+      "nome": "j.schwalbe.hair",
+      "slug": "j-schwalbe-hair",
+      "count": 1,
+      "city": "Porto",
+      "municipality": "Porto",
+      "district": "Porto",
+      "zone": "",
+      "locality": "Porto",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Porto"
+    },
+    {
+      "scope": "barbearia",
+      "id": 153,
+      "nome": "Casablanca Barbershop",
+      "slug": "casablanca-barbershop",
+      "count": 1,
+      "city": "Vila Nova de Gaia",
+      "municipality": "Vila Nova de Gaia",
+      "district": "Porto",
+      "zone": "",
+      "locality": "Vila Nova de Gaia",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Vila Nova de Gaia | Distrito: Porto"
+    },
+    {
+      "scope": "barbearia",
+      "id": 154,
+      "nome": "Studio Gênese",
+      "slug": "studio-genese",
+      "count": 1,
+      "city": "Vila Nova de Gaia",
+      "municipality": "Vila Nova de Gaia",
+      "district": "Porto",
+      "zone": "",
+      "locality": "Vila Nova de Gaia",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Vila Nova de Gaia | Distrito: Porto"
+    },
+    {
+      "scope": "barbearia",
+      "id": 155,
+      "nome": "Studio Mão de Ouro",
+      "slug": "studio-mao-de-ouro",
+      "count": 1,
+      "city": "Vila Nova de Gaia",
+      "municipality": "Vila Nova de Gaia",
+      "district": "Porto",
+      "zone": "",
+      "locality": "Vila Nova de Gaia",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Vila Nova de Gaia | Distrito: Porto"
+    },
+    {
+      "scope": "barbearia",
+      "id": 156,
+      "nome": "Barbearia Costa – Ourém",
+      "slug": "barbearia-costa-ourem",
+      "count": 1,
+      "city": "Ourém",
+      "municipality": "Ourém",
+      "district": "Santarém",
+      "zone": "",
+      "locality": "Ourém",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Ourém | Distrito: Santarém"
+    },
+    {
+      "scope": "barbearia",
+      "id": 157,
+      "nome": "Barbearia Moderna – Santarém",
+      "slug": "barbearia-moderna-santarem",
+      "count": 1,
+      "city": "Santarém",
+      "municipality": "Santarém",
+      "district": "Santarém",
+      "zone": "",
+      "locality": "Santarém",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Santarém"
+    },
+    {
+      "scope": "barbearia",
+      "id": 158,
+      "nome": "Barbearia Alcácer do Sal",
+      "slug": "barbearia-alcacer-do-sal",
+      "count": 1,
+      "city": "Alcácer do Sal",
+      "municipality": "Alcácer do Sal",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Alcácer do Sal",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Alcácer do Sal | Distrito: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 159,
+      "nome": "Barbearia Monte Cristo",
+      "slug": "barbearia-monte-cristo",
+      "count": 1,
+      "city": "Almada",
+      "municipality": "Almada",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Almada",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Almada | Distrito: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 160,
+      "nome": "Barbearia Nacional",
+      "slug": "barbearia-nacional",
+      "count": 1,
+      "city": "Almada",
+      "municipality": "Almada",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Almada",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Almada | Distrito: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 161,
+      "nome": "Garcias Barber",
+      "slug": "garcias-barber",
+      "count": 1,
+      "city": "Almada",
+      "municipality": "Almada",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Almada",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Almada | Distrito: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 162,
+      "nome": "Barbearia Barreiro Elite",
+      "slug": "barbearia-barreiro-elite",
+      "count": 1,
+      "city": "Barreiro",
+      "municipality": "Barreiro",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Barreiro",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Barreiro | Distrito: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 163,
+      "nome": "Barbearia Grândola Clássica",
+      "slug": "barbearia-grandola-classica",
+      "count": 1,
+      "city": "Grândola",
+      "municipality": "Grândola",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Grândola",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Grândola | Distrito: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 164,
+      "nome": "Barbearia Boavida",
+      "slug": "barbearia-boavida",
+      "count": 1,
+      "city": "Montijo",
+      "municipality": "Montijo",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Montijo",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Montijo | Distrito: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 165,
+      "nome": "Barbearia Montijo Urbana",
+      "slug": "barbearia-montijo-urbana",
+      "count": 1,
+      "city": "Montijo",
+      "municipality": "Montijo",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Montijo",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Montijo | Distrito: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 166,
+      "nome": "Cannon Barber",
+      "slug": "cannon-barber",
+      "count": 1,
+      "city": "Montijo",
+      "municipality": "Montijo",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Montijo",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Montijo | Distrito: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 167,
+      "nome": "Barbearia Campos",
+      "slug": "barbearia-campos",
+      "count": 1,
+      "city": "Santiago do Cacém",
+      "municipality": "Santiago do Cacém",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Santiago do Cacém",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Santiago do Cacém | Distrito: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 168,
+      "nome": "Barbearia Santiago do Cacém",
+      "slug": "barbearia-santiago-do-cacem",
+      "count": 1,
+      "city": "Santiago do Cacém",
+      "municipality": "Santiago do Cacém",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Santiago do Cacém",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Santiago do Cacém | Distrito: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 169,
+      "nome": "Barbearia Bueno",
+      "slug": "barbearia-bueno",
+      "count": 1,
+      "city": "Setúbal",
+      "municipality": "Setúbal",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Setúbal",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 170,
+      "nome": "Barbearia Clássica Setúbal",
+      "slug": "barbearia-classica-setubal",
+      "count": 1,
+      "city": "Setúbal",
+      "municipality": "Setúbal",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Setúbal",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 171,
+      "nome": "Barbearia RickGino",
+      "slug": "barbearia-rickgino",
+      "count": 1,
+      "city": "Setúbal",
+      "municipality": "Setúbal",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Setúbal",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 172,
+      "nome": "Lucas Black Barbearia",
+      "slug": "lucas-black-barbearia",
+      "count": 1,
+      "city": "Setúbal",
+      "municipality": "Setúbal",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Setúbal",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 173,
+      "nome": "Studio Fama By Fabiano The Barber",
+      "slug": "studio-fama-by-fabiano-the-barber",
+      "count": 1,
+      "city": "Setúbal",
+      "municipality": "Setúbal",
+      "district": "Setúbal",
+      "zone": "Cave Direita",
+      "locality": "Setúbal",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Setúbal | Zona: Cave Direita"
+    },
+    {
+      "scope": "barbearia",
+      "id": 174,
+      "nome": "Barbearia Sines Moderna",
+      "slug": "barbearia-sines-moderna",
+      "count": 1,
+      "city": "Sines",
+      "municipality": "Sines",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "Sines",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Sines | Distrito: Setúbal"
+    },
+    {
+      "scope": "barbearia",
+      "id": 175,
+      "nome": "Barbearia Chaves",
+      "slug": "barbearia-chaves",
+      "count": 1,
+      "city": "Chaves",
+      "municipality": "Chaves",
+      "district": "Vila Real",
+      "zone": "",
+      "locality": "Chaves",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Chaves | Distrito: Vila Real"
+    },
+    {
+      "scope": "barbearia",
+      "id": 176,
+      "nome": "Douro Barber Shop",
+      "slug": "douro-barber-shop",
+      "count": 1,
+      "city": "Peso da Régua",
+      "municipality": "Peso da Régua",
+      "district": "Vila Real",
+      "zone": "",
+      "locality": "Peso da Régua",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Peso da Régua | Distrito: Vila Real"
+    },
+    {
+      "scope": "barbearia",
+      "id": 177,
+      "nome": "Barbearia Central",
+      "slug": "barbearia-central",
+      "count": 1,
+      "city": "Vila Real",
+      "municipality": "Vila Real",
+      "district": "Vila Real",
+      "zone": "",
+      "locality": "Vila Real",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Vila Real"
+    },
+    {
+      "scope": "barbearia",
+      "id": 178,
+      "nome": "Barbearia Moderna",
+      "slug": "barbearia-moderna",
+      "count": 1,
+      "city": "Vila Real",
+      "municipality": "Vila Real",
+      "district": "Vila Real",
+      "zone": "",
+      "locality": "Vila Real",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Vila Real"
+    },
+    {
+      "scope": "barbearia",
+      "id": 179,
+      "nome": "Barbearia Real",
+      "slug": "barbearia-real",
+      "count": 1,
+      "city": "Vila Real",
+      "municipality": "Vila Real",
+      "district": "Vila Real",
+      "zone": "",
+      "locality": "Vila Real",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Vila Real"
+    },
+    {
+      "scope": "barbearia",
+      "id": 180,
+      "nome": "Pifaros Barber Shop",
+      "slug": "pifaros-barber-shop",
+      "count": 1,
+      "city": "Vila Real",
+      "municipality": "Vila Real",
+      "district": "Vila Real",
+      "zone": "",
+      "locality": "Vila Real",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Vila Real"
+    },
+    {
+      "scope": "barbearia",
+      "id": 181,
+      "nome": "The Six - Barber Shop",
+      "slug": "the-six-barber-shop",
+      "count": 1,
+      "city": "Vila Real",
+      "municipality": "Vila Real",
+      "district": "Vila Real",
+      "zone": "",
+      "locality": "Vila Real",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Vila Real"
+    },
+    {
+      "scope": "barbearia",
+      "id": 182,
+      "nome": "Barbearia Lima – Lamego",
+      "slug": "barbearia-lima-lamego",
+      "count": 1,
+      "city": "Lamego",
+      "municipality": "Lamego",
+      "district": "Viseu",
+      "zone": "",
+      "locality": "Lamego",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Lamego | Distrito: Viseu"
+    },
+    {
+      "scope": "barbearia",
+      "id": 183,
+      "nome": "Balder",
+      "slug": "balder",
+      "count": 1,
+      "city": "Viseu",
+      "municipality": "Viseu",
+      "district": "Viseu",
+      "zone": "",
+      "locality": "Viseu",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Viseu"
+    },
+    {
+      "scope": "barbearia",
+      "id": 184,
+      "nome": "Barbearia Loureiro – Viseu",
+      "slug": "barbearia-loureiro-viseu",
+      "count": 1,
+      "city": "Viseu",
+      "municipality": "Viseu",
+      "district": "Viseu",
+      "zone": "",
+      "locality": "Viseu",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Viseu"
+    },
+    {
+      "scope": "barbearia",
+      "id": 185,
+      "nome": "Barbearia Resende",
+      "slug": "barbearia-resende",
+      "count": 1,
+      "city": "Viseu",
+      "municipality": "Viseu",
+      "district": "Viseu",
+      "zone": "",
+      "locality": "Viseu",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Viseu"
+    },
+    {
+      "scope": "barbearia",
+      "id": 186,
+      "nome": "Ebenezer Barber Shop",
+      "slug": "ebenezer-barber-shop",
+      "count": 1,
+      "city": "Viseu",
+      "municipality": "Viseu",
+      "district": "Viseu",
+      "zone": "",
+      "locality": "Viseu",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Viseu"
+    },
+    {
+      "scope": "barbearia",
+      "id": 187,
+      "nome": "Rise barbearia",
+      "slug": "rise-barbearia",
+      "count": 1,
+      "city": "Viseu",
+      "municipality": "Viseu",
+      "district": "Viseu",
+      "zone": "",
+      "locality": "Viseu",
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Viseu"
+    },
+    {
+      "scope": "barbearia",
+      "id": 188,
+      "nome": "Barbearia Faialense",
+      "slug": "barbearia-faialense",
+      "count": 1,
+      "city": "Horta (Angústias)",
+      "municipality": "Horta",
+      "district": "Açores",
+      "zone": "",
+      "locality": "Horta (Angústias)",
+      "reasons": [
+        "city_needs_municipality_context",
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Horta (Angústias) | Concelho: Horta | Distrito: Açores"
+    },
+    {
+      "scope": "barbearia",
+      "id": 189,
+      "nome": "Barbearia Central PDL",
+      "slug": "barbearia-central-pdl",
+      "count": 1,
+      "city": "Ponta Delgada",
+      "municipality": "Ponta Delgada",
+      "district": "Açores",
+      "zone": "",
+      "locality": "Ponta Delgada",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Ponta Delgada | Distrito: Açores"
+    },
+    {
+      "scope": "barbearia",
+      "id": 190,
+      "nome": "Barbearia Corte & Estilo",
+      "slug": "barbearia-corte-estilo",
+      "count": 1,
+      "city": "Ponta Delgada",
+      "municipality": "Ponta Delgada",
+      "district": "Açores",
+      "zone": "",
+      "locality": "Ponta Delgada",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Ponta Delgada | Distrito: Açores"
+    },
+    {
+      "scope": "barbearia",
+      "id": 191,
+      "nome": "Barbearia Mad Cutter",
+      "slug": "barbearia-mad-cutter",
+      "count": 1,
+      "city": "Ponta Delgada",
+      "municipality": "Ponta Delgada",
+      "district": "Açores",
+      "zone": "",
+      "locality": "Ponta Delgada",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Ponta Delgada | Distrito: Açores"
+    },
+    {
+      "scope": "barbearia",
+      "id": 192,
+      "nome": "Barbearia The Men’s Club",
+      "slug": "barbearia-the-men-s-club",
+      "count": 1,
+      "city": "Ponta Delgada",
+      "municipality": "Ponta Delgada",
+      "district": "Açores",
+      "zone": "",
+      "locality": "Ponta Delgada",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Ponta Delgada | Distrito: Açores"
+    },
+    {
+      "scope": "barbearia",
+      "id": 193,
+      "nome": "Fidelis Cabeleireiros",
+      "slug": "fidelis-cabeleireiros",
+      "count": 1,
+      "city": "Ponta Delgada",
+      "municipality": "Ponta Delgada",
+      "district": "Açores",
+      "zone": "",
+      "locality": "Ponta Delgada",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Ponta Delgada | Distrito: Açores"
+    },
+    {
+      "scope": "barbearia",
+      "id": 194,
+      "nome": "Barbearia Alegria - Barbershop",
+      "slug": "barbearia-alegria-barbershop",
+      "count": 1,
+      "city": "Funchal",
+      "municipality": "Funchal",
+      "district": "Madeira",
+      "zone": "",
+      "locality": "Funchal",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Funchal | Distrito: Madeira"
+    },
+    {
+      "scope": "barbearia",
+      "id": 195,
+      "nome": "Gentleman1415",
+      "slug": "gentleman1415",
+      "count": 1,
+      "city": "Funchal",
+      "municipality": "Funchal",
+      "district": "Madeira",
+      "zone": "",
+      "locality": "Funchal",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Funchal | Distrito: Madeira"
+    },
+    {
+      "scope": "barbearia",
+      "id": 196,
+      "nome": "Old Skull Barbershop",
+      "slug": "old-skull-barbershop",
+      "count": 1,
+      "city": "Funchal",
+      "municipality": "Funchal",
+      "district": "Madeira",
+      "zone": "",
+      "locality": "Funchal",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Funchal | Distrito: Madeira"
+    },
+    {
+      "scope": "barbearia",
+      "id": 197,
+      "nome": "Pro Style Barber Shop",
+      "slug": "pro-style-barber-shop",
+      "count": 1,
+      "city": "Funchal",
+      "municipality": "Funchal",
+      "district": "Madeira",
+      "zone": "Fração B",
+      "locality": "Funchal",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Funchal | Distrito: Madeira | Zona: Fração B"
+    },
+    {
+      "scope": "barbearia",
+      "id": 198,
+      "nome": "The Underground Barbershop",
+      "slug": "the-underground-barbershop",
+      "count": 1,
+      "city": "Funchal",
+      "municipality": "Funchal",
+      "district": "Madeira",
+      "zone": "",
+      "locality": "Funchal",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Funchal | Distrito: Madeira"
+    },
+    {
+      "scope": "barbearia",
+      "id": 199,
+      "nome": "Wildcat Barber - TNT Barbershop",
+      "slug": "wildcat-barber-tnt-barbershop",
+      "count": 1,
+      "city": "Funchal",
+      "municipality": "Funchal",
+      "district": "Madeira",
+      "zone": "",
+      "locality": "Funchal",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Funchal | Distrito: Madeira"
+    }
+  ],
+  "city_pages": [
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Águeda",
+      "slug": "agueda",
+      "count": 1,
+      "city": "Águeda",
+      "municipality": "Águeda",
+      "district": "Aveiro",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Águeda"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Águeda | Distrito: Aveiro"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Albufeira",
+      "slug": "albufeira",
+      "count": 3,
+      "city": "Albufeira",
+      "municipality": "Albufeira",
+      "district": "Faro",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Albufeira"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Albufeira | Distrito: Faro"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Alcácer do Sal",
+      "slug": "alcacer-do-sal",
+      "count": 1,
+      "city": "Alcácer do Sal",
+      "municipality": "Alcácer do Sal",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Alcácer do Sal"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Alcácer do Sal | Distrito: Setúbal"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Alcântara",
+      "slug": "alcantara",
+      "count": 2,
+      "city": "Alcântara",
+      "municipality": "Alcântara",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Alcântara"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Alcântara"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Almada",
+      "slug": "almada",
+      "count": 3,
+      "city": "Almada",
+      "municipality": "Almada",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Almada"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Almada | Distrito: Setúbal"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Amadora",
+      "slug": "amadora",
+      "count": 1,
+      "city": "Amadora",
+      "municipality": "Amadora",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Amadora"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Amadora | Distrito: Lisboa"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Arganil",
+      "slug": "arganil",
+      "count": 1,
+      "city": "Arganil",
+      "municipality": "Arganil",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Arganil"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Arganil"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Arganil Arganil",
+      "slug": "arganil-arganil",
+      "count": 1,
+      "city": "Arganil Arganil",
+      "municipality": "Arganil Arganil",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Arganil Arganil"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Arganil Arganil"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Aveiro",
+      "slug": "aveiro",
+      "count": 2,
+      "city": "Aveiro",
+      "municipality": "Aveiro",
+      "district": "Aveiro",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Aveiro"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Aveiro"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Azeitão",
+      "slug": "azeitao",
+      "count": 2,
+      "city": "Azeitão",
+      "municipality": "Azeitão",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Azeitão"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Azeitão"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Baguim do Monte (Rio Tinto)",
+      "slug": "baguim-do-monte-rio-tinto",
+      "count": 1,
+      "city": "Baguim do Monte (Rio Tinto)",
+      "municipality": "Baguim do Monte (Rio Tinto)",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Baguim do Monte (Rio Tinto)"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Baguim do Monte (Rio Tinto)"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Barreiro",
+      "slug": "barreiro",
+      "count": 1,
+      "city": "Barreiro",
+      "municipality": "Barreiro",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Barreiro"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Barreiro | Distrito: Setúbal"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Beja",
+      "slug": "beja",
+      "count": 1,
+      "city": "Beja",
+      "municipality": "Beja",
+      "district": "Beja",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Beja"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Beja"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Braga",
+      "slug": "braga",
+      "count": 4,
+      "city": "Braga",
+      "municipality": "Braga",
+      "district": "Braga",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Braga"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Braga"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Bragança",
+      "slug": "braganca",
+      "count": 1,
+      "city": "Bragança",
+      "municipality": "Bragança",
+      "district": "Bragança",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Bragança"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Bragança"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Bucelas",
+      "slug": "bucelas",
+      "count": 1,
+      "city": "Bucelas",
+      "municipality": "Bucelas",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Bucelas"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Bucelas"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Caldas da Rainha",
+      "slug": "caldas-da-rainha",
+      "count": 1,
+      "city": "Caldas da Rainha",
+      "municipality": "Caldas da Rainha",
+      "district": "Leiria",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Caldas da Rainha"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Caldas da Rainha | Distrito: Leiria"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Calheta",
+      "slug": "calheta",
+      "count": 1,
+      "city": "Calheta",
+      "municipality": "Calheta",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Calheta"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Calheta"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Carapeços",
+      "slug": "carapecos",
+      "count": 1,
+      "city": "Carapeços",
+      "municipality": "Carapeços",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Carapeços"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Carapeços"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Carnaxide",
+      "slug": "carnaxide",
+      "count": 1,
+      "city": "Carnaxide",
+      "municipality": "Carnaxide",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Carnaxide"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Carnaxide"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Castelo Branco",
+      "slug": "castelo-branco",
+      "count": 1,
+      "city": "Castelo Branco",
+      "municipality": "Castelo Branco",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Castelo Branco"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Castelo Branco"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Chaves",
+      "slug": "chaves",
+      "count": 1,
+      "city": "Chaves",
+      "municipality": "Chaves",
+      "district": "Vila Real",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Chaves"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Chaves | Distrito: Vila Real"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Coimbra",
+      "slug": "coimbra",
+      "count": 12,
+      "city": "Coimbra",
+      "municipality": "Coimbra",
+      "district": "Coimbra",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Coimbra"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Coimbra"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Covilhã",
+      "slug": "covilha",
+      "count": 2,
+      "city": "Covilhã",
+      "municipality": "Covilhã",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Covilhã"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Covilhã | Distrito: Castelo Branco"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Espinho",
+      "slug": "espinho",
+      "count": 1,
+      "city": "Espinho",
+      "municipality": "Espinho",
+      "district": "Aveiro",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Espinho"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Espinho | Distrito: Aveiro"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Esposende",
+      "slug": "esposende",
+      "count": 1,
+      "city": "Esposende",
+      "municipality": "Esposende",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Esposende"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Esposende"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Évora",
+      "slug": "evora",
+      "count": 2,
+      "city": "Évora",
+      "municipality": "Évora",
+      "district": "Évora",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Évora"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Évora"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Fafe",
+      "slug": "fafe",
+      "count": 2,
+      "city": "Fafe",
+      "municipality": "Fafe",
+      "district": "Braga",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Fafe"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Fafe | Distrito: Braga"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Falagueira-Venda Nova Amadora",
+      "slug": "falagueira-venda-nova-amadora",
+      "count": 1,
+      "city": "Falagueira-Venda Nova Amadora",
+      "municipality": "Amadora",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Falagueira-Venda Nova Amadora"
+      ],
+      "reasons": [
+        "page_needs_municipality_context",
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Falagueira-Venda Nova Amadora | Concelho: Amadora | Distrito: Lisboa"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Faro",
+      "slug": "faro",
+      "count": 7,
+      "city": "Faro",
+      "municipality": "Faro",
+      "district": "Faro",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Faro"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Faro"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Figueira da Foz",
+      "slug": "figueira-da-foz",
+      "count": 1,
+      "city": "Figueira da Foz",
+      "municipality": "Figueira da Foz",
+      "district": "Coimbra",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Figueira da Foz"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Figueira da Foz | Distrito: Coimbra"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Funchal",
+      "slug": "funchal",
+      "count": 6,
+      "city": "Funchal",
+      "municipality": "Funchal",
+      "district": "Madeira",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Funchal"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Funchal | Distrito: Madeira"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Grândola",
+      "slug": "grandola",
+      "count": 1,
+      "city": "Grândola",
+      "municipality": "Grândola",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Grândola"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Grândola | Distrito: Setúbal"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Guarda",
+      "slug": "guarda",
+      "count": 1,
+      "city": "Guarda",
+      "municipality": "Guarda",
+      "district": "Guarda",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Guarda"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Guarda"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Guimarães",
+      "slug": "guimaraes",
+      "count": 5,
+      "city": "Guimarães",
+      "municipality": "Guimarães",
+      "district": "Braga",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Guimarães"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Guimarães | Distrito: Braga"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Horta (Angústias)",
+      "slug": "horta-angustias",
+      "count": 1,
+      "city": "Horta (Angústias)",
+      "municipality": "Horta",
+      "district": "Açores",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Horta (Angústias)"
+      ],
+      "reasons": [
+        "page_needs_municipality_context",
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Horta (Angústias) | Concelho: Horta | Distrito: Açores"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Ilha do Faial",
+      "slug": "ilha-do-faial",
+      "count": 1,
+      "city": "Ilha do Faial",
+      "municipality": "Ilha do Faial",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Ilha do Faial"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Ilha do Faial"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Ilha do Pico",
+      "slug": "ilha-do-pico",
+      "count": 1,
+      "city": "Ilha do Pico",
+      "municipality": "Ilha do Pico",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Ilha do Pico"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Ilha do Pico"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Ilha Terceira",
+      "slug": "ilha-terceira",
+      "count": 2,
+      "city": "Ilha Terceira",
+      "municipality": "Ilha Terceira",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Ilha Terceira"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Ilha Terceira"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Lagos",
+      "slug": "lagos",
+      "count": 2,
+      "city": "Lagos",
+      "municipality": "Lagos",
+      "district": "Faro",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Lagos"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Lagos | Distrito: Faro"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Lamego",
+      "slug": "lamego",
+      "count": 1,
+      "city": "Lamego",
+      "municipality": "Lamego",
+      "district": "Viseu",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Lamego"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Lamego | Distrito: Viseu"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Leiria",
+      "slug": "leiria",
+      "count": 5,
+      "city": "Leiria",
+      "municipality": "Leiria",
+      "district": "Leiria",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Leiria"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Leiria"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Lisboa",
+      "slug": "lisboa",
+      "count": 22,
+      "city": "Lisboa",
+      "municipality": "Lisboa",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Lisboa"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Lisboa"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Loulé",
+      "slug": "loule",
+      "count": 1,
+      "city": "Loulé",
+      "municipality": "Loulé",
+      "district": "Faro",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Loulé"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Loulé | Distrito: Faro"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Loures",
+      "slug": "loures",
+      "count": 3,
+      "city": "Loures",
+      "municipality": "Loures",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Loures"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Loures | Distrito: Lisboa"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Lousada",
+      "slug": "lousada",
+      "count": 1,
+      "city": "Lousada",
+      "municipality": "Lousada",
+      "district": "Porto",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Lousada"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Lousada | Distrito: Porto"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Macedo de Cavaleiros",
+      "slug": "macedo-de-cavaleiros",
+      "count": 2,
+      "city": "Macedo de Cavaleiros",
+      "municipality": "Macedo de Cavaleiros",
+      "district": "Bragança",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Macedo de Cavaleiros"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Macedo de Cavaleiros | Distrito: Bragança"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Matosinhos",
+      "slug": "matosinhos",
+      "count": 2,
+      "city": "Matosinhos",
+      "municipality": "Matosinhos",
+      "district": "Porto",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Matosinhos"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Matosinhos | Distrito: Porto"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Montijo",
+      "slug": "montijo",
+      "count": 3,
+      "city": "Montijo",
+      "municipality": "Montijo",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Montijo"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Montijo | Distrito: Setúbal"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Nazaré",
+      "slug": "nazare",
+      "count": 1,
+      "city": "Nazaré",
+      "municipality": "Nazaré",
+      "district": "Leiria",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Nazaré"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Nazaré | Distrito: Leiria"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Odivelas",
+      "slug": "odivelas",
+      "count": 1,
+      "city": "Odivelas",
+      "municipality": "Odivelas",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Odivelas"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Odivelas"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Ourém",
+      "slug": "ourem",
+      "count": 1,
+      "city": "Ourém",
+      "municipality": "Ourém",
+      "district": "Santarém",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Ourém"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Ourém | Distrito: Santarém"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Ovar",
+      "slug": "ovar",
+      "count": 1,
+      "city": "Ovar",
+      "municipality": "Ovar",
+      "district": "Aveiro",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Ovar"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Ovar | Distrito: Aveiro"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Parede - Jardins da Parede",
+      "slug": "parede-jardins-da-parede",
+      "count": 1,
+      "city": "Parede - Jardins da Parede",
+      "municipality": "Parede - Jardins da Parede",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Parede - Jardins da Parede"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Parede - Jardins da Parede"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Peso da Régua",
+      "slug": "peso-da-regua",
+      "count": 1,
+      "city": "Peso da Régua",
+      "municipality": "Peso da Régua",
+      "district": "Vila Real",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Peso da Régua"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Peso da Régua | Distrito: Vila Real"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Pindelo",
+      "slug": "pindelo",
+      "count": 1,
+      "city": "Pindelo",
+      "municipality": "Pindelo",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Pindelo"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Pindelo"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Ponta Delgada",
+      "slug": "ponta-delgada",
+      "count": 5,
+      "city": "Ponta Delgada",
+      "municipality": "Ponta Delgada",
+      "district": "Açores",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Ponta Delgada"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Ponta Delgada | Distrito: Açores"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Ponte de Sor",
+      "slug": "ponte-de-sor",
+      "count": 1,
+      "city": "Ponte de Sor",
+      "municipality": "Ponte de Sor",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Ponte de Sor"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Ponte de Sor"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Portimão",
+      "slug": "portimao",
+      "count": 1,
+      "city": "Portimão",
+      "municipality": "Portimão",
+      "district": "Faro",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Portimão"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Portimão | Distrito: Faro"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Porto",
+      "slug": "porto",
+      "count": 5,
+      "city": "Porto",
+      "municipality": "Porto",
+      "district": "Porto",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Porto"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Porto"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Póvoa de Santa Iria",
+      "slug": "povoa-de-santa-iria",
+      "count": 1,
+      "city": "Póvoa de Santa Iria",
+      "municipality": "Póvoa de Santa Iria",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Póvoa de Santa Iria"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Póvoa de Santa Iria"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Prior Velho",
+      "slug": "prior-velho",
+      "count": 1,
+      "city": "Prior Velho",
+      "municipality": "Prior Velho",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Prior Velho"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Prior Velho"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Quinta da Redonda",
+      "slug": "quinta-da-redonda",
+      "count": 1,
+      "city": "Quinta da Redonda",
+      "municipality": "Quinta da Redonda",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Quinta da Redonda"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Quinta da Redonda"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "S. João da Madeira",
+      "slug": "s-joao-da-madeira",
+      "count": 1,
+      "city": "S. João da Madeira",
+      "municipality": "São João da Madeira",
+      "district": "Aveiro",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "S. João da Madeira"
+      ],
+      "reasons": [
+        "page_needs_municipality_context",
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: S. João da Madeira | Concelho: São João da Madeira | Distrito: Aveiro"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Samora Correia",
+      "slug": "samora-correia",
+      "count": 1,
+      "city": "Samora Correia",
+      "municipality": "Samora Correia",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Samora Correia"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Samora Correia"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Santarém",
+      "slug": "santarem",
+      "count": 1,
+      "city": "Santarém",
+      "municipality": "Santarém",
+      "district": "Santarém",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Santarém"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Santarém"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Santiago do Cacém",
+      "slug": "santiago-do-cacem",
+      "count": 2,
+      "city": "Santiago do Cacém",
+      "municipality": "Santiago do Cacém",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Santiago do Cacém"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Santiago do Cacém | Distrito: Setúbal"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Santo Tirso",
+      "slug": "santo-tirso",
+      "count": 3,
+      "city": "Santo Tirso",
+      "municipality": "Santo Tirso",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Santo Tirso"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Santo Tirso"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "São Brás de Alportel",
+      "slug": "sao-bras-de-alportel",
+      "count": 1,
+      "city": "São Brás de Alportel",
+      "municipality": "São Brás de Alportel",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "São Brás de Alportel"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: São Brás de Alportel"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "São Martinho",
+      "slug": "sao-martinho",
+      "count": 1,
+      "city": "São Martinho",
+      "municipality": "São Martinho",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "São Martinho"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: São Martinho"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Seia",
+      "slug": "seia",
+      "count": 1,
+      "city": "Seia",
+      "municipality": "Seia",
+      "district": "Guarda",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Seia"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Seia | Distrito: Guarda"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Setúbal",
+      "slug": "setubal",
+      "count": 5,
+      "city": "Setúbal",
+      "municipality": "Setúbal",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Setúbal"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Setúbal"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Sines",
+      "slug": "sines",
+      "count": 1,
+      "city": "Sines",
+      "municipality": "Sines",
+      "district": "Setúbal",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Sines"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Sines | Distrito: Setúbal"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Tocha",
+      "slug": "tocha",
+      "count": 2,
+      "city": "Tocha",
+      "municipality": "Tocha",
+      "district": "",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Tocha"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Tocha"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Torres Vedras",
+      "slug": "torres-vedras",
+      "count": 1,
+      "city": "Torres Vedras",
+      "municipality": "Torres Vedras",
+      "district": "Lisboa",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Torres Vedras"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Torres Vedras | Distrito: Lisboa"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Vila Nova de Famalicao",
+      "slug": "vila-nova-de-famalicao",
+      "count": 5,
+      "city": "Vila Nova de Famalicao",
+      "municipality": "Vila Nova de Famalicão",
+      "district": "Braga",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Vila Nova de Famalicao",
+        "Vila Nova de Famalicão"
+      ],
+      "reasons": [
+        "page_merges_city_name_variants",
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Vila Nova de Famalicao | Distrito: Braga"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Vila Nova de Gaia",
+      "slug": "vila-nova-de-gaia",
+      "count": 3,
+      "city": "Vila Nova de Gaia",
+      "municipality": "Vila Nova de Gaia",
+      "district": "Porto",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Vila Nova de Gaia"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Vila Nova de Gaia | Distrito: Porto"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Vila Real",
+      "slug": "vila-real",
+      "count": 5,
+      "city": "Vila Real",
+      "municipality": "Vila Real",
+      "district": "Vila Real",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Vila Real"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Vila Real"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Viseu",
+      "slug": "viseu",
+      "count": 5,
+      "city": "Viseu",
+      "municipality": "Viseu",
+      "district": "Viseu",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Viseu"
+      ],
+      "reasons": [],
+      "needs_context": false,
+      "suggested_display": "Cidade: Viseu"
+    }
+  ]
+}

@@ -96,6 +96,67 @@
     return form.locative ? "Barbearias " + form.locative : "Barbearias";
   }
 
+  function trimText(value) {
+    return String(value || "").trim();
+  }
+
+  function sameGeoValue(left, right) {
+    const normalizedLeft = normalizar(trimText(left));
+    const normalizedRight = normalizar(trimText(right));
+    return Boolean(normalizedLeft && normalizedRight && normalizedLeft === normalizedRight);
+  }
+
+  function buildGeoHierarchy(barber) {
+    if (!barber) {
+      return [];
+    }
+
+    const city = sanitizePublicCity(barber.city);
+    const locality = sanitizePublicCity(barber.locality);
+    const municipality = sanitizePublicCity(barber.municipality);
+    const district = sanitizePublicCity(barber.district);
+    const zone = trimText(barber.zone);
+    const items = [];
+
+    if (city) {
+      items.push({ label: "Cidade", value: city, href: barber.cityUrl || "" });
+    } else if (locality) {
+      items.push({ label: "Localidade", value: locality, href: "" });
+    }
+
+    if (municipality && !sameGeoValue(municipality, city) && !sameGeoValue(municipality, locality)) {
+      items.push({ label: "Concelho", value: municipality, href: "" });
+    }
+
+    if (district && !sameGeoValue(district, city) && !sameGeoValue(district, municipality) && !sameGeoValue(district, locality)) {
+      items.push({ label: "Distrito", value: district, href: "" });
+    }
+
+    if (zone && ![city, locality, municipality, district].some(function(value) {
+      return sameGeoValue(zone, value);
+    })) {
+      items.push({ label: "Zona", value: zone, href: "" });
+    }
+
+    return items;
+  }
+
+  function formatGeoEntry(entry) {
+    return entry && entry.value ? entry.label + ": " + entry.value : "";
+  }
+
+  function getPrimaryGeoLabel(barber) {
+    const items = buildGeoHierarchy(barber);
+    return items.length ? formatGeoEntry(items[0]) : "Localização a confirmar";
+  }
+
+  function getGeoHierarchyLabel(barber) {
+    const items = buildGeoHierarchy(barber);
+    return items.length
+      ? items.map(formatGeoEntry).filter(Boolean).join(" · ")
+      : "Localização a confirmar";
+  }
+
   function slugify(texto) {
     return normalizar(texto)
       .replace(/[^a-z0-9]+/g, "-")
@@ -476,6 +537,7 @@
       city: city,
       citySlug: slugify(city),
       locality: (location && location.locality) || raw.localidade || "",
+      municipality: (location && location.municipality) || raw.municipality || raw.municipio || raw.concelho || city,
       morada: (location && location.displayAddress) || raw.morada || "",
       addressRaw: (location && location.addressRaw) || raw.address_raw || raw.morada || "",
       telefone: telefone,
@@ -573,6 +635,9 @@
       const haystack = [
         barber.name,
         barber.city,
+        barber.municipality,
+        barber.district,
+        barber.zone,
         barber.locality,
         barber.morada,
         barber.observacoes
@@ -673,9 +738,9 @@
     inferirCidade: inferirCidade,
     getLocalityForm: getLocalityForm,
     getBarbersLabel: getBarbersLabel,
-    getDisplayPlace: function(barber) {
-      return barber && (barber.city || barber.locality || barber.district) ? (barber.city || barber.locality || barber.district) : "Localização a confirmar";
-    },
+    getDisplayPlace: getPrimaryGeoLabel,
+    getDisplayHierarchy: getGeoHierarchyLabel,
+    getGeoHierarchy: buildGeoHierarchy,
     getBarbers: getBarbers,
     getStats: getStats,
     getPopularCities: getPopularCities,

@@ -60,9 +60,152 @@ function barbersLabel(value) {
   return utils.barbeariasNaLocalidade(value);
 }
 
+function trimText(value) {
+  return String(value || "").trim();
+}
+
+function sameGeoValue(left, right) {
+  const normalizedLeft = normalizar(trimText(left));
+  const normalizedRight = normalizar(trimText(right));
+  return Boolean(normalizedLeft && normalizedRight && normalizedLeft === normalizedRight);
+}
+
+function buildGeoHierarchy(barber, options) {
+  if (!barber) return [];
+
+  const settings = options || {};
+  const showZone = settings.showZone !== false;
+  const city = hasPublicCity(barber.city) ? barber.city : "";
+  const locality = hasPublicCity(barber.locality) ? barber.locality : "";
+  const municipality = hasPublicCity(barber.municipality) ? barber.municipality : "";
+  const district = hasPublicCity(barber.district) ? barber.district : "";
+  const zone = trimText(barber.zone);
+  const items = [];
+
+  if (city) {
+    items.push({ label: "Cidade", value: city, href: barber.cityUrl || "" });
+  } else if (locality) {
+    items.push({ label: "Localidade", value: locality, href: "" });
+  }
+
+  if (municipality && !sameGeoValue(municipality, city) && !sameGeoValue(municipality, locality)) {
+    items.push({ label: "Concelho", value: municipality, href: "" });
+  }
+
+  if (district && !sameGeoValue(district, city) && !sameGeoValue(district, municipality) && !sameGeoValue(district, locality)) {
+    items.push({ label: "Distrito", value: district, href: "" });
+  }
+
+  if (showZone && zone && ![city, locality, municipality, district].some((value) => sameGeoValue(zone, value))) {
+    items.push({ label: "Zona", value: zone, href: "" });
+  }
+
+  return items;
+}
+
+function buildCityHierarchyEntries(city) {
+  if (!city) return [];
+
+  const items = [];
+  if (city.name) {
+    items.push({ label: "Cidade", value: city.name, href: city.url || "" });
+  }
+  if (city.municipality && !sameGeoValue(city.municipality, city.name)) {
+    items.push({ label: "Concelho", value: city.municipality, href: "" });
+  }
+  if (city.district && !sameGeoValue(city.district, city.name) && !sameGeoValue(city.district, city.municipality)) {
+    items.push({ label: "Distrito", value: city.district, href: "" });
+  }
+  return items;
+}
+
+function formatGeoEntry(entry) {
+  return entry && entry.value ? entry.label + ": " + entry.value : "";
+}
+
+function renderHierarchyText(entries, prefix) {
+  if (!entries || !entries.length) return "";
+
+  return '<div class="location-compact">' + entries.map((entry) => {
+    const valueMarkup = entry.href
+      ? '<a href="' + escapeHtml(prefix + entry.href) + '">' + escapeHtml(entry.value) + "</a>"
+      : escapeHtml(entry.value);
+    return '<span><strong>' + escapeHtml(entry.label) + ":</strong> " + valueMarkup + "</span>";
+  }).join("") + "</div>";
+}
+
+function renderHierarchyRows(entries, prefix) {
+  if (!entries || !entries.length) return "";
+
+  return entries.map((entry) => {
+    const valueMarkup = entry.href
+      ? '<a href="' + escapeHtml(prefix + entry.href) + '">' + escapeHtml(entry.value) + "</a>"
+      : escapeHtml(entry.value);
+    return '<div class="meta-row"><strong>' + escapeHtml(entry.label) + "</strong><span>" + valueMarkup + "</span></div>";
+  }).join("");
+}
+
+function buildLocationNarrative(barber) {
+  if (!barber) return "";
+
+  const city = hasPublicCity(barber.city) ? barber.city : "";
+  const locality = hasPublicCity(barber.locality) ? barber.locality : "";
+  const municipality = hasPublicCity(barber.municipality) ? barber.municipality : "";
+  const district = hasPublicCity(barber.district) ? barber.district : "";
+  const zone = trimText(barber.zone);
+  const parts = [];
+  const primaryPlace = city || locality;
+
+  if (zone && ![city, locality, municipality, district].some((value) => sameGeoValue(zone, value))) {
+    parts.push("na zona de " + zone);
+  }
+
+  if (primaryPlace) {
+    parts.push(locativeLabel(primaryPlace));
+  }
+
+  if (municipality && !sameGeoValue(municipality, primaryPlace)) {
+    parts.push("no concelho de " + municipality);
+  }
+
+  if (district && !sameGeoValue(district, primaryPlace) && !sameGeoValue(district, municipality)) {
+    parts.push("no distrito de " + district);
+  }
+
+  return parts.join(", ");
+}
+
+function buildCityContext(cityName, hierarchy) {
+  const parts = [];
+
+  if (cityName) {
+    parts.push(locativeLabel(cityName));
+  }
+
+  if (hierarchy && hierarchy.municipality && !sameGeoValue(hierarchy.municipality, cityName)) {
+    parts.push("no concelho de " + hierarchy.municipality);
+  }
+
+  if (
+    hierarchy &&
+    hierarchy.district &&
+    !sameGeoValue(hierarchy.district, cityName) &&
+    !sameGeoValue(hierarchy.district, hierarchy.municipality)
+  ) {
+    parts.push("no distrito de " + hierarchy.district);
+  }
+
+  return parts.join(", ");
+}
+
+function uniqueNonEmpty(values) {
+  return Array.from(new Set((values || []).map((value) => trimText(value)).filter(Boolean)));
+}
+
 function publicLocationLabel(barber) {
   if (!barber) return "Localização a confirmar";
-  return barber.city || barber.locality || barber.district || "Localização a confirmar";
+  const hierarchy = buildGeoHierarchy(barber, { showZone: false });
+  return hierarchy.length ? formatGeoEntry(hierarchy[0]) : "Localização a confirmar";
 }
 
 function cleanSegment(value) {
@@ -245,15 +388,10 @@ function displayUrl(value) {
 }
 
 function buildProfileEditorial(barber) {
-  const cityLocative = barber.city ? locativeLabel(barber.city) : "";
-  const localityLocative = barber.locality ? locativeLabel(barber.locality) : "";
-  const intro = barber.zone && barber.city && barber.zone !== barber.city
-    ? barber.name + " fica na zona de " + barber.zone + ", " + cityLocative + "."
-    : barber.city
-      ? barber.name + " fica " + cityLocative + "."
-      : barber.locality
-        ? barber.name + " fica " + localityLocative + "."
-        : barber.name + " tem a localização pública ainda em revisão.";
+  const locationNarrative = buildLocationNarrative(barber);
+  const intro = locationNarrative
+    ? barber.name + " fica " + locationNarrative + "."
+    : barber.name + " tem a localização pública ainda em revisão.";
   const addressSentence = barber.morada
     ? "A morada publicada é " + barber.morada + "."
     : "A ficha pública ainda não mostra uma morada completa.";
@@ -276,18 +414,17 @@ function buildProfileEditorial(barber) {
 
 function buildCardSummary(barber) {
   const bits = [];
-  if (barber.zone && barber.zone !== barber.city) bits.push(barber.zone);
   if (barber.telefone) bits.push("telefone");
   else if (barber.booking) bits.push("marcação online");
   else if (barber.website || barber.instagram || barber.facebook) bits.push("links úteis");
   if (barber.horario) bits.push("horário");
   return bits.length
-    ? "Ficha com " + joinNatural(bits) + "."
-    : "Consulta a morada e a localização desta barbearia.";
+    ? "Ficha com " + joinNatural(bits) + " e morada para consultar rapidamente."
+    : "Consulta a morada e a localização confirmada desta barbearia.";
 }
 
-function buildCityIntro(cityName, cityBarbers) {
-  const cityLocative = locativeLabel(cityName);
+function buildCityIntro(cityName, cityBarbers, hierarchy) {
+  const cityContext = buildCityContext(cityName, hierarchy);
   const withPhone = cityBarbers.filter((barber) => barber.telefone).length;
   const withBooking = cityBarbers.filter((barber) => barber.booking).length;
   const withSocial = cityBarbers.filter((barber) => barber.instagram || barber.facebook || barber.website).length;
@@ -303,7 +440,7 @@ function buildCityIntro(cityName, cityBarbers) {
       ? "1 ficha mostra presença online"
       : withSocial + " fichas mostram presença online";
   return [
-    "Esta página reúne " + totalLabel + " já listada" + (cityBarbers.length === 1 ? "" : "s") + " " + cityLocative + ".",
+    "Esta página reúne " + totalLabel + " já listada" + (cityBarbers.length === 1 ? "" : "s") + " " + cityContext + ".",
     "Podes comparar moradas, telefones, mapa e links úteis antes de escolher. Neste momento, " + phoneLabel + " e " + socialLabel + ".",
     withBooking
       ? (withBooking === 1
@@ -313,10 +450,10 @@ function buildCityIntro(cityName, cityBarbers) {
   ].join(" ");
 }
 
-function buildCityGuide(cityName) {
-  const cityLocative = locativeLabel(cityName);
+function buildCityGuide(cityName, hierarchy) {
+  const cityContext = buildCityContext(cityName, hierarchy);
   return [
-    cityLocative.charAt(0).toUpperCase() + cityLocative.slice(1) + ", vale a pena começar pela morada e pela zona para perceber se a barbearia encaixa no teu percurso habitual.",
+    cityContext.charAt(0).toUpperCase() + cityContext.slice(1) + ", começa por confirmar morada, zona e contexto geográfico antes de comparar as fichas.",
     "Quando há telefone, website ou Instagram, confirma primeiro disponibilidade, tipo de serviço e se aceitam marcação online.",
     "Se estiveres entre várias opções, dá prioridade às fichas com morada completa, contactos claros e informação atualizada."
   ];
@@ -355,6 +492,7 @@ function buildSlugData(rawBarbers) {
       streetNumber: location.streetNumber || "",
       complement: location.complement || "",
       locality: location.locality || "",
+      municipality: location.municipality || item.municipality || item.concelho || city,
       codigoPostal: location.postalCode || item.codigo_postal || utils.extrairCodigoPostal(item.morada || ""),
       district: location.district || item.distrito || "",
       country: location.country || "Portugal",
@@ -399,8 +537,14 @@ function buildSlugData(rawBarbers) {
   cities.forEach((city) => {
     city.barbearias = city.barbers.slice().sort((a, b) => a.name.localeCompare(b.name, "pt"));
     city.lastmod = city.barbearias.reduce((latest, barber) => barber.lastmod > latest ? barber.lastmod : latest, TODAY);
-    city.intro = buildCityIntro(city.name, city.barbearias);
-    city.guide = buildCityGuide(city.name);
+    city.municipalityValues = uniqueNonEmpty(city.barbearias.map((barber) => barber.municipality));
+    city.districtValues = uniqueNonEmpty(city.barbearias.map((barber) => barber.district));
+    city.municipality = city.municipalityValues.length === 1 ? city.municipalityValues[0] : "";
+    city.district = city.districtValues.length === 1 ? city.districtValues[0] : "";
+    city.hasMixedMunicipalities = city.municipalityValues.length > 1;
+    city.hasMixedDistricts = city.districtValues.length > 1;
+    city.intro = buildCityIntro(city.name, city.barbearias, city);
+    city.guide = buildCityGuide(city.name, city);
     city.storeCategory = pickStoreCategorySlug(city.barbearias);
     city.magazineArticle = "como-montar-uma-rotina-simples-de-barba-em-casa";
   });
@@ -571,6 +715,29 @@ function renderBaseStyles(extraStyles) {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+    }
+    .location-compact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .location-compact strong {
+      color: var(--text);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-right: 4px;
+    }
+    .location-compact a {
+      color: var(--accent-strong);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(176, 138, 74, 0.35);
+    }
+    .location-compact a:hover {
+      border-color: rgba(176, 138, 74, 0.65);
     }
     .summary-panel {
       padding: 18px;
@@ -763,21 +930,17 @@ ${options.body || ""}
 }
 
 function renderBarberCard(barber, prefix, options) {
-  const cityLink = barber.cityUrl ? prefix + barber.cityUrl : prefix + "cidades/";
-  const locationChip = barber.city
-    ? '<a class="pill pill-link" href="' + escapeHtml(cityLink) + '">' + escapeHtml(barber.city) + "</a>"
-    : barber.locality
-      ? '<span class="pill">' + escapeHtml(barber.locality) + "</span>"
-      : "";
+  const locationSummary = renderHierarchyText(buildGeoHierarchy(barber, options), prefix);
   const primaryLink = barber.primaryLink
     ? '<a class="btn btn-primary" href="' + escapeHtml(barber.primaryLink.href) + '"' + (barber.primaryLink.external ? ' target="_blank" rel="nofollow noopener noreferrer"' : "") + ">" + escapeHtml(barber.primaryLink.label) + "</a>"
     : "";
+  const utilityTags = [
+    barber.horario ? '<span class="tag">Horário disponível</span>' : ""
+  ].filter(Boolean).join("");
   return `
   <article class="card">
-    <div class="tag-row">
-      ${locationChip}
-      ${options && options.showZone && barber.zone ? '<span class="tag">' + escapeHtml(barber.zone) + "</span>" : ""}
-    </div>
+    ${locationSummary}
+    ${utilityTags ? '<div class="tag-row">' + utilityTags + "</div>" : ""}
     <h3><a href="${escapeHtml(prefix + barber.profileUrl)}">${escapeHtml(barber.name)}</a></h3>
     <p>${escapeHtml(options && options.longCopy ? barber.editorial : barber.cardSummary)}</p>
     ${barber.morada ? '<p><strong>Morada:</strong> ' + escapeHtml(barber.morada) + "</p>" : ""}
@@ -793,7 +956,9 @@ function renderProfilePage(barber, citiesMap) {
   const city = barber.citySlug ? citiesMap.get(barber.citySlug) : null;
   const sameCity = city ? city.barbearias.filter((item) => item.slug !== barber.slug).slice(0, 3) : [];
   const canonical = absoluteUrl(barber.profileUrl);
-  const placeLabel = publicLocationLabel(barber);
+  const hierarchyEntries = buildGeoHierarchy(barber, { showZone: true });
+  const hierarchyText = renderHierarchyText(hierarchyEntries, prefix);
+  const hierarchyRows = renderHierarchyRows(hierarchyEntries, prefix);
   const title = barber.city
     ? barber.name + " " + locativeLabel(barber.city) + " | Contactos, morada e mapa | OndeCortar.pt"
     : barber.name + " | Contactos, morada e mapa | OndeCortar.pt";
@@ -880,11 +1045,8 @@ ${renderHeader(prefix, "cidades")}
           <span class="eyebrow">Perfil de barbearia</span>
           <h1>${escapeHtml(barber.name)}</h1>
           <p>${escapeHtml(barber.editorial)}</p>
-          <div class="tag-row">
-            ${placeLabel ? '<span class="tag">' + escapeHtml(placeLabel) + '</span>' : ""}
-            ${barber.zone ? '<span class="tag">' + escapeHtml(barber.zone) + "</span>" : ""}
-            ${barber.horario ? '<span class="tag">Horário disponível</span>' : ""}
-          </div>
+          ${hierarchyText}
+          ${barber.horario ? '<div class="tag-row"><span class="tag">Horário disponível</span></div>' : ""}
           <div class="hero-actions">
             ${barber.primaryLink ? '<a class="btn btn-primary" href="' + escapeHtml(barber.primaryLink.href) + '"' + (barber.primaryLink.external ? ' target="_blank" rel="nofollow noopener noreferrer"' : "") + ">" + escapeHtml(barber.primaryLink.label) + "</a>" : ""}
             ${barber.mapUrl ? '<a class="btn btn-secondary" href="' + escapeHtml(barber.mapUrl) + '" target="_blank" rel="nofollow noopener noreferrer">Abrir mapa</a>' : ""}
@@ -892,9 +1054,7 @@ ${renderHeader(prefix, "cidades")}
           </div>
         </div>
         <aside class="summary-panel">
-          ${barber.city ? '<div class="summary-row"><span>Cidade</span>' + escapeHtml(barber.city) + '</div>' : ""}
-          ${!barber.city && barber.locality ? '<div class="summary-row"><span>Localidade</span>' + escapeHtml(barber.locality) + '</div>' : ""}
-          ${barber.zone ? '<div class="summary-row"><span>Zona</span>' + escapeHtml(barber.zone) + '</div>' : ""}
+          ${hierarchyEntries.map((entry) => '<div class="summary-row"><span>' + escapeHtml(entry.label) + '</span>' + escapeHtml(entry.value) + '</div>').join("")}
           <div class="summary-row"><span>Informação atualizada</span>${escapeHtml(formatDate(barber.lastmod))}</div>
         </aside>
       </div>
@@ -907,9 +1067,7 @@ ${renderHeader(prefix, "cidades")}
         <article class="card">
           <h2>Informação principal</h2>
           <div class="meta-list">
-            ${barber.city ? '<div class="meta-row"><strong>Cidade</strong><span>' + escapeHtml(barber.city) + '</span></div>' : ""}
-            ${!barber.city && barber.locality ? '<div class="meta-row"><strong>Localidade</strong><span>' + escapeHtml(barber.locality) + '</span></div>' : ""}
-            ${barber.zone ? '<div class="meta-row"><strong>Zona</strong><span>' + escapeHtml(barber.zone) + '</span></div>' : ""}
+            ${hierarchyRows}
             <div class="meta-row"><strong>Morada completa</strong><span>${escapeHtml(barber.morada || "Morada não disponível")}</span></div>
             <div class="meta-row"><strong>Telefone</strong><span>${barber.telefone ? '<a href="' + escapeHtml(telephoneHref(barber.telefone)) + '">' + escapeHtml(barber.telefone) + "</a>" : "Telefone não disponível"}</span></div>
             <div class="meta-row"><strong>Horário</strong><span>${escapeHtml(barber.horario || "Horário não disponível")}</span></div>
@@ -996,6 +1154,8 @@ function renderCityPage(city) {
   const canonical = absoluteUrl(city.url);
   const cityBarbersLabel = barbersLabel(city.name);
   const cityLocative = locativeLabel(city.name);
+  const cityHierarchyEntries = buildCityHierarchyEntries(city);
+  const cityHierarchyText = renderHierarchyText(cityHierarchyEntries, prefix);
   const title = cityBarbersLabel + " | Mapa, contactos e perfis | OndeCortar.pt";
   const description = "Encontra barbearias " + cityLocative + " com morada, contactos, mapa e links úteis. Compara opções e escolhe melhor no OndeCortar.pt.";
   const structuredData = [
@@ -1044,12 +1204,14 @@ ${renderHeader(prefix, "cidades")}
           <span class="eyebrow">Página de cidade</span>
           <h1>${escapeHtml(cityBarbersLabel)}</h1>
           <p>${escapeHtml(city.intro)}</p>
+          ${cityHierarchyText}
           <div class="hero-actions">
             <a class="btn btn-primary" href="#lista-barbearias">Ver barbearias</a>
             <a class="btn btn-secondary" href="${prefix}registar.html">Adicionar barbearia nesta cidade</a>
           </div>
         </div>
         <aside class="summary-panel">
+          ${cityHierarchyEntries.map((entry) => '<div class="summary-row"><span>' + escapeHtml(entry.label) + '</span>' + escapeHtml(entry.value) + '</div>').join("")}
           <div class="summary-row"><span>Total listado</span>${escapeHtml(String(city.barbearias.length))} ficha${city.barbearias.length === 1 ? "" : "s"}</div>
           <div class="summary-row"><span>Última atualização</span>${escapeHtml(formatDate(city.lastmod))}</div>
           <div class="summary-row"><span>Exploração rápida</span><a href="#lista-barbearias">Perfis individuais</a></div>

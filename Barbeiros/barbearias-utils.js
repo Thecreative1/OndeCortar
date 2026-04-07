@@ -531,10 +531,15 @@
       return null;
     }
 
+    function matchTerm(text, needle) {
+      const escapedNeedle = needle.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      return new RegExp("(^|[\\s,;-])" + escapedNeedle + "($|[\\s,;-])").test(text);
+    }
+
     for (let index = 0; index < MUNICIPIO_RULES.length; index += 1) {
       const rule = MUNICIPIO_RULES[index];
       const matched = rule.needles.some(function(needle) {
-        return normalized === needle || normalized.indexOf(needle) !== -1 || needle.indexOf(normalized) !== -1;
+        return normalized === needle || matchTerm(normalized, needle);
       });
 
       if (matched) {
@@ -712,6 +717,7 @@
   function normalizarLocalizacaoBarbearia(item) {
     const raw = item || {};
     const addressRaw = trimToNull(raw.address_raw || raw.addressRaw || raw.morada) || "";
+    const manualMunicipality = sanitizarCidadePublica(raw.municipality || raw.municipio || raw.concelho);
     const manualCity = sanitizarCidadePublica(raw.city || raw.concelho);
     const manualZone = trimToNull(raw.zone || raw.freguesia);
     const manualDistrict = trimToNull(raw.district || raw.distrito);
@@ -740,10 +746,12 @@
 
     const admin = inferirLocalizacaoAdministrativa(city || parsedLocality || manualCity || "");
     const district = manualDistrict || admin.distrito || "";
+    const municipality = manualMunicipality || admin.concelho || city || "";
     const postalCode = parsed.postalCode || manualPostalCode || "";
     const streetNormalized = normalizarTexto(parsed.street);
     const manualCityNormalized = normalizarTexto(manualCity);
     const localityNormalized = normalizarTexto(parsedLocality);
+    const municipalityNormalized = normalizarTexto(municipality);
     const adminMunicipioNormalized = normalizarTexto(admin.concelho);
     const adminFreguesiaNormalized = normalizarTexto(admin.freguesia);
 
@@ -828,6 +836,18 @@
       zoneSource = "";
     }
 
+    if (zone && municipalityNormalized && normalizarTexto(zone) === municipalityNormalized) {
+      issues.push("zone_equals_municipality");
+      zone = "";
+      zoneSource = "";
+    }
+
+    if (zone && district && normalizarTexto(zone) === normalizarTexto(district)) {
+      issues.push("zone_equals_district");
+      zone = "";
+      zoneSource = "";
+    }
+
     if (city && city.length < 3) {
       issues.push("city_too_short");
     }
@@ -863,6 +883,7 @@
       postalCode: postalCode,
       locality: parsedLocality || city || "",
       city: city || "",
+      municipality: municipality || "",
       zone: zone || "",
       district: district,
       country: "Portugal",
