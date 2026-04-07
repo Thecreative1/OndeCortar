@@ -3,7 +3,7 @@ const path = require("path");
 const vm = require("vm");
 
 const ROOT = path.resolve(__dirname, "..");
-const VERSION = "20260407-seo-1";
+const VERSION = "20260407-commerce-2";
 const TODAY = "2026-04-07";
 const SITE_URL = "https://ondecortar.pt/";
 const DEFAULT_OG_IMAGE = SITE_URL + "imagens/banner.jpg";
