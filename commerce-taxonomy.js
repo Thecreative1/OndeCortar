@@ -110,9 +110,13 @@
     {
       slug: "manutencao-de-maquinas",
       title: "Manutenção de máquinas",
-      intro: "Produtos e consumíveis para prolongar a vida útil da máquina e reduzir falhas evitáveis.",
+      intro: "Produtos essenciais para lubrificar, limpar e conservar máquinas de corte. Uma boa manutenção ajuda a evitar falhas, melhora o desempenho e prolonga a vida útil do equipamento.",
       top: ["wahl-clipper-oil", "syprin-lubrificante-maquinas", "wahl-clipper-oil-pack"],
-      picks: [["Melhor para limpeza rápida", "beardburys-spray"], ["Melhor para organização", "colcolo-organizador"], ["Melhor para higiene de serviço", "eurostil-rolos"]],
+      picks: [["Melhor para limpeza rápida", "beardburys-spray"], ["Melhor para lubrificação", "wahl-clipper-oil"], ["Melhor para higiene de serviço", "eurostil-rolos"]],
+      topTitle: "Os essenciais para manter a máquina em forma",
+      topCopy: "Lubrificantes, sprays e cuidados básicos para proteger a máquina, reduzir desgaste e manter um corte consistente.",
+      guidePanelTitle: "Guias rápidos para não comprares à cegas",
+      guidePanelCopy: "Nem todos os produtos de manutenção servem o mesmo propósito. Estes guias ajudam-te a perceber o que usar para lubrificar, limpar ou desinfetar sem complicar.",
       articles: ["como-manter-a-maquina-de-cortar-cabelo-a-funcionar-bem-por-mais-tempo", "o-essencial-para-manter-uma-bancada-de-barbeiro-organizada"],
       faqs: [
         ["Com que frequência devo limpar a máquina?", "Mais vale uma rotina curta e consistente do que grandes limpezas raras."],
