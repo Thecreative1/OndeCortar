@@ -40,6 +40,22 @@ function pickChangedValues(raw, clean, metadata) {
     changed.coords = metadata.coordsOriginais;
   }
 
+  if (metadata.locationOriginal.morada && metadata.locationOriginal.morada !== clean.morada) {
+    changed.morada = metadata.locationOriginal.morada;
+  }
+
+  if (metadata.locationOriginal.concelho && metadata.locationOriginal.concelho !== clean.concelho) {
+    changed.concelho = metadata.locationOriginal.concelho;
+  }
+
+  if (metadata.locationOriginal.freguesia && metadata.locationOriginal.freguesia !== clean.freguesia) {
+    changed.freguesia = metadata.locationOriginal.freguesia;
+  }
+
+  if (metadata.locationOriginal.distrito && metadata.locationOriginal.distrito !== clean.distrito) {
+    changed.distrito = metadata.locationOriginal.distrito;
+  }
+
   if (metadata.statusMotivos.length) {
     changed.motivos = metadata.statusMotivos.slice();
   }
@@ -56,7 +72,7 @@ function normalizarBarbearia(raw, index) {
   const email = utils.validarEmail(raw.email);
   const coordsOriginais = Array.isArray(raw.coords) ? raw.coords : null;
   const coords = utils.normalizarCoords(raw.coords);
-  const admin = utils.inferirLocalizacaoAdministrativa(morada);
+  const location = utils.normalizarLocalizacaoBarbearia(raw);
   const observacoes = utils.trimToNull(raw.observacoes);
   const horario = utils.trimToNull(raw.horario);
   const statusMotivos = [];
@@ -81,14 +97,29 @@ function normalizarBarbearia(raw, index) {
     statusMotivos.push("email_invalido");
   }
 
+  if (location.needsReview) {
+    Array.prototype.push.apply(statusMotivos, location.issues);
+  }
+
   const clean = {
     nome: nomeData.nome,
     slug: utils.slugify(nomeData.nome),
-    distrito: admin.distrito,
-    concelho: admin.concelho,
-    freguesia: admin.freguesia,
-    morada: morada,
-    codigo_postal: utils.extrairCodigoPostal(morada),
+    distrito: location.district,
+    concelho: location.city,
+    freguesia: location.zone,
+    city: location.city,
+    zone: location.zone,
+    morada: location.displayAddress || morada,
+    address_raw: morada,
+    street: location.street,
+    street_number: location.streetNumber,
+    complemento: location.complement,
+    localidade: location.locality,
+    codigo_postal: location.postalCode,
+    country: location.country,
+    data_confidence: location.dataConfidence,
+    needs_review: location.needsReview,
+    location_flags: location.issues,
     telefone: telefoneData.telefone,
     email: email,
     website: linksData.website,
@@ -127,6 +158,12 @@ function normalizarBarbearia(raw, index) {
     emailOriginal: emailOriginal,
     linksValorOriginal: linksData.valorOriginal,
     coordsOriginais: coordsOriginais,
+    locationOriginal: {
+      morada: morada,
+      concelho: utils.trimToNull(raw.concelho),
+      freguesia: utils.trimToNull(raw.freguesia),
+      distrito: utils.trimToNull(raw.distrito)
+    },
     statusMotivos: statusMotivos
   });
 

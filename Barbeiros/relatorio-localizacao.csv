@@ -1,0 +1,204 @@
+id,nome,slug,address_raw,current_city,current_zone,current_postal_code,inferred_locality,normalized_city,normalized_zone,normalized_postal_code,street,street_number,data_confidence,auto_fixable,needs_review,reasons
+1,Barbearia Fora D’Horas,,"Rua de Santa Eulália, Guimarães, Braga 4800-098",,,,Braga,Braga,Guimarães,4800-098,Rua de Santa Eulália,,high,true,false,city_missing_with_valid_locality
+2,Treze Barbershop,,"Praceta Padre Luís Gonzaga Fonseca, Loja 23, Guimarães",,,,Guimarães,Guimarães,,,Praceta Padre Luís Gonzaga Fonseca,Loja 23,medium,true,false,city_missing_with_valid_locality
+3,Black Rock Barbearia,,"Largo da República do Brasil, C. Comercial São Francisco, Loja 32, Guimarães",,,,Guimarães,Guimarães,,,Largo da República do Brasil,Loja 32,medium,true,false,city_missing_with_valid_locality
+4,NewVision Barbershop,,"Rua Teixeira de Pascoais, 452, Guimarães",,,,Guimarães,Guimarães,,,Rua Teixeira de Pascoais,452,medium,true,false,city_missing_with_valid_locality
+5,The Barbers Studio,,"Rua Teixeira de Pascoais, 40B, Guimarães",,,,Guimarães,Guimarães,,,Rua Teixeira de Pascoais,40B,medium,true,false,city_missing_with_valid_locality
+6,1920 Barber Shop,,"GuimarãeShopping, Guimarães",,,,Guimarães,Guimarães,,,GuimarãeShopping,,medium,true,false,city_missing_with_valid_locality
+7,Barbearia Fafense,,"Rua Ponte do Ranha, nº 298, Fafe",,,,Fafe,Fafe,,,Rua Ponte do Ranha,,medium,true,false,city_missing_with_valid_locality
+8,Barbershop DuArt,,"Rua dos Aliados, Loja 5, 4820-248 Fafe",,,,Fafe,Fafe,,4820-248,Rua dos Aliados,Loja 5,high,true,false,city_missing_with_valid_locality
+9,Korte JB Barbershop,,"R. Constituição da República 29, 4620-657 Lousada",,,,Lousada,Lousada,,4620-657,R. Constituição da República,29,high,true,false,city_missing_with_valid_locality
+10,Barbearia Valadar,,"Rua Eng. Moura Pegado 2, 5340-211 Macedo de Cavaleiros",,,,Macedo de Cavaleiros,Macedo de Cavaleiros,,5340-211,Rua Eng. Moura Pegado,2,high,true,false,city_missing_with_valid_locality
+11,The Six - Barber Shop,,"R. de Santo António, Ed. Santo António, Bloco De Piso 2, Loja AS, 5000-607 Vila Real",,,,Vila Real,Vila Real,,5000-607,R. de Santo António,Loja AS,high,true,false,city_missing_with_valid_locality
+12,Barbearia Real,,"Rua de Santo António 45, 5000-607 Vila Real",,,,Vila Real,Vila Real,,5000-607,Rua de Santo António,45,high,true,false,city_missing_with_valid_locality
+13,Barbearia do António,,"Av. Professor Doutor Cavaco Silva 100, 5340-278 Macedo de Cavaleiros",,,,Macedo de Cavaleiros,Macedo de Cavaleiros,,5340-278,Av. Professor Doutor Cavaco Silva,100,high,true,false,city_missing_with_valid_locality
+14,Barbearia Chaves,,"Rua Direita 12, 5400-123 Chaves",,,,Chaves,Chaves,,5400-123,Rua Direita,12,high,true,false,city_missing_with_valid_locality
+15,Barbearia Bragança Classic,,"Av. Sá Carneiro 103, 5300-252 Bragança",,,,Bragança,Bragança,,5300-252,Av. Sá Carneiro,103,high,true,false,city_missing_with_valid_locality
+16,Douro Barber Shop,,"Av. João Franco 10, 5050-233 Peso da Régua",,,,Peso da Régua,Peso da Régua,,5050-233,Av. João Franco,10,high,true,false,city_missing_with_valid_locality
+17,Barbearia Vintage Lisboa,,"R. Luciano Cordeiro 81B, 1150-216 Lisboa",,,,Lisboa,Lisboa,,1150-216,R. Luciano Cordeiro,81B,high,true,false,city_missing_with_valid_locality
+18,Cut by André Silva,,"Rua Alexandre Herculano 35, 1250-010 Lisboa",,,,Lisboa,Lisboa,,1250-010,Rua Alexandre Herculano,35,high,true,false,city_missing_with_valid_locality
+19,Nobre Arte Barbearia – Torres Vedras,,"Rua António Leal d’Ascensão 22B, 2560-302 Torres Vedras",,,,Torres Vedras,Torres Vedras,,2560-302,Rua António Leal d’Ascensão,22B,high,true,false,city_missing_with_valid_locality
+20,Barbearia Mustache – Caldas da Rainha,,"Rua do Comércio 74, 2500-110 Caldas da Rainha",,,,Caldas da Rainha,Caldas da Rainha,,2500-110,Rua do Comércio,74,high,true,false,city_missing_with_valid_locality
+21,The Barber House – Leiria,,"Rua Dom Manuel de Aguiar 8B, 2400-137 Leiria",,,,Leiria,Leiria,,2400-137,Rua Dom Manuel de Aguiar,8B,high,true,false,city_missing_with_valid_locality
+22,Barbearia Antunes – Coimbra,,"Rua da Sofia 92, 3000-389 Coimbra",,,,Coimbra,Coimbra,,3000-389,Rua da Sofia,92,high,true,false,city_missing_with_valid_locality
+23,Barbearia António – Figueira da Foz,,"Av. Saraiva de Carvalho 6, 3080-154 Figueira da Foz",,,,Figueira da Foz,Figueira da Foz,,3080-154,Av. Saraiva de Carvalho,6,high,true,false,city_missing_with_valid_locality
+24,Barbearia Monteiro – Castelo Branco,,"Rua Bartolomeu da Costa 1, 6000-179 Castelo Branco",,,,Castelo Branco,Castelo Branco,,6000-179,Rua Bartolomeu da Costa,1,high,true,false,city_missing_with_valid_locality
+25,Old School Barber Shop – Covilhã,,"Rua 1º de Maio 21, 6200-066 Covilhã",,,,Covilhã,Covilhã,,6200-066,Rua 1º de Maio,21,high,true,false,city_missing_with_valid_locality
+26,Barbearia São Romão – Seia,,"Av. 1º de Maio 4, 6270-443 Seia",,,,Seia,Seia,,6270-443,Av. 1º de Maio,4,high,true,false,city_missing_with_valid_locality
+27,Barbearia Central – Guarda,,"Rua Vasco Borges 18, 6300-535 Guarda",,,,Guarda,Guarda,,6300-535,Rua Vasco Borges,18,high,true,false,city_missing_with_valid_locality
+28,Barbearia Loureiro – Viseu,,"Rua Formosa 170, 3500-137 Viseu",,,,Viseu,Viseu,,3500-137,Rua Formosa,170,high,true,false,city_missing_with_valid_locality
+29,Barbearia Lima – Lamego,,"Rua da Olaria 26, 5100-120 Lamego",,,,Lamego,Lamego,,5100-120,Rua da Olaria,26,high,true,false,city_missing_with_valid_locality
+30,Barbearia Elite – Aveiro,,"Rua Conselheiro Luís Magalhães 12, 3800-215 Aveiro",,,,Aveiro,Aveiro,,3800-215,Rua Conselheiro Luís Magalhães,12,high,true,false,city_missing_with_valid_locality
+31,Barbearia RickGino,,"Av. da Independência das Colónias 19, loja A, 2900-407 Setúbal",,,,Setúbal,Setúbal,,2900-407,Av. da Independência das Colónias,19,high,true,false,city_missing_with_valid_locality
+32,Barbearia Moura – Espinho,,"Rua 23, 4500-276 Espinho",,,,Espinho,Espinho,,4500-276,Rua,23,high,true,false,city_missing_with_valid_locality
+33,Barbearia Lima – São João da Madeira,,"Rua Padre Oliveira Lopes 113, 3700-230 S. João da Madeira",,,,S. João da Madeira,S. João da Madeira,,3700-230,Rua Padre Oliveira Lopes,113,high,true,false,city_missing_with_valid_locality
+34,Barbearia Silvério – Ovar,,"Av. Sá Carneiro 53, 3880-049 Ovar",,,,Ovar,Ovar,,3880-049,Av. Sá Carneiro,53,high,true,false,city_missing_with_valid_locality
+35,Barbearia Pereira – Águeda,,"Rua Dr. João O. Amaral, 3750-107 Águeda",,,,Águeda,Águeda,,3750-107,Rua Dr. João O. Amaral,,high,true,false,city_missing_with_valid_locality
+36,Barbearia Costa – Ourém,,"Rua Dr. Francisco Sá Carneiro 18, 2490-541 Ourém",,,,Ourém,Ourém,,2490-541,Rua Dr. Francisco Sá Carneiro,18,high,true,false,city_missing_with_valid_locality
+37,Barbearia Moderna – Santarém,,"Av. Madre Andaluz 5, 2000-210 Santarém",,,,Santarém,Santarém,,2000-210,Av. Madre Andaluz,5,high,true,false,city_missing_with_valid_locality
+38,Ruaça Barbershop,,"R. Alexandre Herculano n.º 18, 8200-271 Albufeira",,,,Albufeira,Albufeira,,8200-271,R. Alexandre Herculano n.º,18,high,true,false,city_missing_with_valid_locality
+39,Chacal's Barbearia,,"Rua Cândido dos Reis 12, 8200-103 Albufeira",,,,Albufeira,Albufeira,,8200-103,Rua Cândido dos Reis,12,high,true,false,city_missing_with_valid_locality
+40,Patrick Barbershop,,"Rua do Movimento das Forças Armadas 32, 8200-157 Albufeira",,,,Albufeira,Albufeira,,8200-157,Rua do Movimento das Forças Armadas,32,high,true,false,city_missing_with_valid_locality
+41,1920 Barbershop – Faro,,"Fórum Algarve, Loja 0.02, EN 125 - Km 103, 8009-020 Faro",,,,Faro,Faro,,8009-020,Fórum Algarve,Loja 0.02,high,true,false,city_missing_with_valid_locality
+42,CJ Barbearia,,"Largo Dr. Francisco Sá Carneiro 47, 8000-151 Faro",,,,Faro,Faro,,8000-151,Largo Dr. Francisco Sá Carneiro,47,high,true,false,city_missing_with_valid_locality
+43,J.L Barber's Faro,,"Estrada da Penha, Faro",,,,Faro,Faro,,,Estrada da Penha,,medium,true,false,city_missing_with_valid_locality
+44,Barbearia Evandro Garcia,,"Largo de Camões n 3, 8000-140 Faro",,,,Faro,Faro,,8000-140,Largo de Camões n,3,high,true,false,city_missing_with_valid_locality
+45,O Profeta Barbearia,,"Rua Doutor José de Matos 33, Faro",,,,Faro,Faro,,,Rua Doutor José de Matos,33,medium,true,false,city_missing_with_valid_locality
+46,The Barbers,,"Mar Shopping Algarve, Avenida do Algarve Loja 1.38, 8135-185 Almancil",,,,Almancil,Almancil,,8135-185,Mar Shopping Algarve,,high,true,false,city_missing_with_valid_locality
+47,Boss Barbearia,,"Rua M de Albuquerque 1, 8500-510 Portimão",,,,Portimão,Portimão,,8500-510,Rua M de Albuquerque,1,high,true,false,city_missing_with_valid_locality
+48,Barbearia Monte Cristo,,"Rua Capitão Leitão 103, 2800-135 Almada",,,,Almada,Almada,,2800-135,Rua Capitão Leitão,103,high,true,false,city_missing_with_valid_locality
+49,Barbearia Clássica Setúbal,,"Avenida Luísa Todi 123, 2900-461 Setúbal",,,,Setúbal,Setúbal,,2900-461,Avenida Luísa Todi,123,high,true,false,city_missing_with_valid_locality
+50,Lucas Black Barbearia,,"Avenida Doutor António Rodrigues Manito 143, Setúbal",,,,Setúbal,Setúbal,,,Avenida Doutor António Rodrigues Manito,143,medium,true,false,city_missing_with_valid_locality
+51,Barbearia Bueno,,"Rua António José Batista, Loja 35, 2910-400, Setúbal",,,,Setúbal,Setúbal,,2910-400,Rua António José Batista,Loja 35,high,true,false,city_missing_with_valid_locality
+52,Barbearia Todi,,Setúbal,,,,Setúbal,Setúbal,,,,,medium,true,false,city_missing_with_valid_locality
+53,Barbearia Évora Style,,"Rua de Aviz 45, 7000-645 Évora",,,,Évora,Évora,,7000-645,Rua de Aviz,45,high,true,false,city_missing_with_valid_locality
+54,Barbearia Beja Moderna,,"Praça da República 10, 7800-427 Beja",,,,Beja,Beja,,7800-427,Praça da República,10,high,true,false,city_missing_with_valid_locality
+55,Barbearia Barreiro Elite,,"Rua Miguel Bombarda 67, 2830-356 Barreiro",,,,Barreiro,Barreiro,,2830-356,Rua Miguel Bombarda,67,high,true,false,city_missing_with_valid_locality
+56,Barbearia Montijo Urbana,,"Avenida dos Pescadores 89, 2870-114 Montijo",,,,Montijo,Montijo,,2870-114,Avenida dos Pescadores,89,high,true,false,city_missing_with_valid_locality
+57,Barbearia Alcácer do Sal,,"Rua do Comércio 22, 7580-123 Alcácer do Sal",,,,Alcácer do Sal,Alcácer do Sal,,7580-123,Rua do Comércio,22,high,true,false,city_missing_with_valid_locality
+58,Barbearia Grândola Clássica,,"Rua Nova 15, 7570-289 Grândola",,,,Grândola,Grândola,,7570-289,Rua Nova,15,high,true,false,city_missing_with_valid_locality
+59,Barbearia Santiago do Cacém,,"Avenida Manuel da Fonseca 30, 7540-136 Santiago do Cacém",,,,Santiago do Cacém,Santiago do Cacém,,7540-136,Avenida Manuel da Fonseca,30,high,true,false,city_missing_with_valid_locality
+60,Barbearia Sines Moderna,,"Rua Vasco da Gama 8, 7520-239 Sines",,,,Sines,Sines,,7520-239,Rua Vasco da Gama,8,high,true,false,city_missing_with_valid_locality
+61,Barbearia Corte & Estilo,,"Rua Pedro Homem 49, 9500-099 Ponta Delgada",,,,Ponta Delgada,Ponta Delgada,,9500-099,Rua Pedro Homem,49,high,true,false,city_missing_with_valid_locality
+62,Barbearia Mad Cutter,,"Rua Dr. João Francisco Cabral 41, 9500-208 Ponta Delgada",,,,Ponta Delgada,Ponta Delgada,,9500-208,Rua Dr. João Francisco Cabral,41,high,true,false,city_missing_with_valid_locality
+63,Fidelis Cabeleireiros,,"Avenida Infante Dom Henrique 103, 9500-150 Ponta Delgada",,,,Ponta Delgada,Ponta Delgada,,9500-150,Avenida Infante Dom Henrique,103,high,true,false,city_missing_with_valid_locality
+64,Barbearia The Men’s Club,,"Rua dos Mercadores 61, 9500-092 Ponta Delgada",,,,Ponta Delgada,Ponta Delgada,,9500-092,Rua dos Mercadores,61,high,true,false,city_missing_with_valid_locality
+65,Barbearia Central PDL,,"Rua do Melo 2B, 9500-091 Ponta Delgada",,,,Ponta Delgada,Ponta Delgada,,9500-091,Rua do Melo,2B,high,true,false,city_missing_with_valid_locality
+66,Barbearia Açores Central,,Ponta Delgada,,,,Ponta Delgada,Ponta Delgada,,,,,medium,true,false,city_missing_with_valid_locality
+67,Barbearia António e Caetano,,"Rua de São João, Angra do Heroísmo, Ilha Terceira",,,,Ilha Terceira,Ilha Terceira,Angra do Heroísmo,,Rua de São João,,medium,true,false,city_missing_with_valid_locality
+68,The Barber - Terceira,,"R. Direita 123, Angra do Heroísmo, Ilha Terceira",,,,Ilha Terceira,Ilha Terceira,Angra do Heroísmo,,R. Direita,123,medium,true,false,city_missing_with_valid_locality
+69,Barbearia Machado,,"Rua Serpa Pinto, Horta, Ilha do Faial",,,,Ilha do Faial,Ilha do Faial,Horta,,Rua Serpa Pinto,,medium,true,false,city_missing_with_valid_locality
+70,Barbearia São Roque,,"Rua Maestro Simão Machado, São Roque do Pico, Ilha do Pico",,,,Ilha do Pico,Ilha do Pico,São Roque do Pico,,Rua Maestro Simão Machado,,medium,true,false,city_missing_with_valid_locality
+71,Barbearia Paulo,,"Vila do Porto, Santa Maria",,,,Santa Maria,Santa Maria,,,Vila do Porto,,medium,true,false,city_missing_with_valid_locality
+72,Barbearia Madeira Style,,Funchal,,,,Funchal,Funchal,,,,,medium,true,false,city_missing_with_valid_locality
+73,Black Studio Bs,,"Rua de 9 de Julho 344, Loja, 4250-356 Porto",,,,Porto,Porto,,4250-356,Rua de 9 de Julho,344,high,true,false,city_missing_with_valid_locality
+74,j.schwalbe.hair,,"Rua da Restauração 321, 4050-465 Porto",,,,Porto,Porto,,4050-465,Rua da Restauração,321,high,true,false,city_missing_with_valid_locality
+75,Barbearia Porto Los Patrones,,"R. Aires de Ornelas, 4350-150 Porto",,,,Porto,Porto,,4350-150,R. Aires de Ornelas,,high,true,false,city_missing_with_valid_locality
+76,Montes Barber /MLSG,,"Rua Roberto Ivens 1389, 4450-257 Matosinhos",,,,Matosinhos,Matosinhos,,4450-257,Rua Roberto Ivens,1389,high,true,false,city_missing_with_valid_locality
+77,BarberCrew Matosinhos,,"Rua do Godinho 106, 4450-145 Matosinhos",,,,Matosinhos,Matosinhos,,4450-145,Rua do Godinho,106,high,true,false,city_missing_with_valid_locality
+78,Casablanca Barbershop,,"Rua Jardim 239, 4405-827 Vila Nova de Gaia",,,,Vila Nova de Gaia,Vila Nova de Gaia,,4405-827,Rua Jardim,239,high,true,false,city_missing_with_valid_locality
+79,Studio Mão de Ouro,,"Rua da Escola de Laborim 188, 4430-093 Vila Nova de Gaia",,,,Vila Nova de Gaia,Vila Nova de Gaia,,4430-093,Rua da Escola de Laborim,188,high,true,false,city_missing_with_valid_locality
+80,BMbarbeariamonte,,"Rua do Fujacal 43, R/c, 4705-097 Braga",,,,Braga,Braga,,4705-097,Rua do Fujacal,43,high,true,false,city_missing_with_valid_locality
+81,M2 BARBEARIA,,"Rua dos Barbosas, Loja 255, 4715-267 Braga",,,,Braga,Braga,,4715-267,Rua dos Barbosas,Loja 255,high,true,false,city_missing_with_valid_locality
+82,Danniel Sampaio Barbearia,,"Rua Ana Plácido, Edifício Ana Plácido 236, 4760-120 Vila Nova de Famalicão",,,,Vila Nova de Famalicão,Vila Nova de Famalicão,,4760-120,Rua Ana Plácido,,high,true,false,city_missing_with_valid_locality
+83,Ebenezer Barber Shop,,"Rua Tenente Manuel Joaquim, n 33 bloco C, 3510-086 Viseu",,,,Viseu,Viseu,,3510-086,Rua Tenente Manuel Joaquim,,high,true,false,city_missing_with_valid_locality
+84,Balder,,"Lg São Pedro 52, Loja AM, 3500-695 Viseu",,,,Viseu,Viseu,,3500-695,Lg São Pedro 52,Loja AM,high,true,false,city_missing_with_valid_locality
+85,Barba Negra Leiria,,"Largo Marechal Gomes da Costa 38, 2400-148 Leiria",,,,Leiria,Leiria,,2400-148,Largo Marechal Gomes da Costa,38,high,true,false,city_missing_with_valid_locality
+86,EVOLUTION Men’s Salon,,"Rua Fonte Cabeço D’el Rei, 1, 2400-719 Leiria",,,,Leiria,Leiria,,2400-719,Rua Fonte Cabeço D’el Rei,1,high,true,false,city_missing_with_valid_locality
+87,Bruno César Barbeiro,,"Rua de Atenas, 4, 2415-586 Leiria",,,,Leiria,Leiria,,2415-586,Rua de Atenas,4,high,true,false,city_missing_with_valid_locality
+88,Barbearia Brasileira,,"R. Heróis do Ultramar 75, 2450-027 Nazaré",,,,Nazaré,Nazaré,,2450-027,R. Heróis do Ultramar,75,high,true,false,city_missing_with_valid_locality
+89,Aneel barbershop,,"Rua Marquês de Sá da Bandeira 66, 1050-150 Lisboa",,,,Lisboa,Lisboa,,1050-150,Rua Marquês de Sá da Bandeira,66,high,true,false,city_missing_with_valid_locality
+90,Exodo Barbearia,,"Avenida Marconi 12C, 1000-205 Lisboa",,,,Lisboa,Lisboa,,1000-205,Avenida Marconi,12C,high,true,false,city_missing_with_valid_locality
+91,Ranzulla Barbershop,,"Avenida Colégio Militar n29E, próximo ao Centro Comercial Colombo, 1500-179 Lisboa",,,,Lisboa,Lisboa,,1500-179,Avenida Colégio Militar n29E,,high,true,false,city_missing_with_valid_locality
+92,Casimiro Barbershop,,"Rua Actor Robles Monteiro, Benfica, N1, 1500-017 Lisboa",,,,Lisboa,Lisboa,Benfica,1500-017,Rua Actor Robles Monteiro,,high,true,false,city_missing_with_valid_locality
+93,Mr. Barber Lisboa,,"Rua Manuel Lemos Peixoto, Nr 2F, 2610-110 Amadora",,,,Amadora,Amadora,,2610-110,Rua Manuel Lemos Peixoto,,high,true,false,city_missing_with_valid_locality
+94,GOLDEN HAND,,"Largo Maj. Rosa Bastos, 13, 2620-118 Loures",,,,Loures,Loures,,2620-118,Largo Maj. Rosa Bastos,13,high,true,false,city_missing_with_valid_locality
+95,JD Barbearia e Estética Feminina,,"Rua da Liberdade 67, Bairro de Santiago, Camarate, 2680-071 Loures",,,,Loures,Loures,Camarate,2680-071,Rua da Liberdade,67,high,true,false,city_missing_with_valid_locality
+96,2685 FINEST - BARBEARIA,,"Rua Herbert Gilbert, 10 e 10A, 2685-085 Loures",,,,Loures,Loures,,2685-085,Rua Herbert Gilbert,,high,true,false,city_missing_with_valid_locality
+97,Garcias Barber,,"Rua das Quintinhas n1, 2820-352 Almada",,,,Almada,Almada,,2820-352,Rua das Quintinhas n1,,high,true,false,city_missing_with_valid_locality
+98,Cannon Barber,,"R. Cidade de Ponta Delgada 82, 2870-261 Montijo",,,,Montijo,Montijo,,2870-261,R. Cidade de Ponta Delgada,82,high,true,false,city_missing_with_valid_locality
+99,Studio Fama By Fabiano The Barber,,"Praceta Fernando Pessoa, 15, Cave Direita, 2900-692 Setúbal",,,,Setúbal,Setúbal,Cave Direita,2900-692,Praceta Fernando Pessoa,15,high,true,false,city_missing_with_valid_locality
+100,Alfa Barbers - Barbearia,,"Av. do Cabo Bojador 6 Loja-E, 8600-315 Lagos",,,,Lagos,Lagos,,8600-315,Av. do Cabo Bojador,6,high,true,false,city_missing_with_valid_locality
+101,BarberShop Abreu,,"R. Prof. Joaquim Alberto Taquelim 2, 8600-760 Lagos",,,,Lagos,Lagos,,8600-760,R. Prof. Joaquim Alberto Taquelim,2,high,true,false,city_missing_with_valid_locality
+102,Pro Style Barber Shop,,"Avenida da Madalena 101, Fração B, 9020-330 Funchal",,,,Funchal,Funchal,Fração B,9020-330,Avenida da Madalena,101,high,true,false,city_missing_with_valid_locality
+103,Rise barbearia,,"Rua Fernando Teixeira, Lote 31 – Abraveses, Viseu",,,,Viseu,Viseu,,,Rua Fernando Teixeira,,medium,true,false,city_missing_with_valid_locality
+104,4740 Barber Shop,,"Largo Frei Manuel de Barros 4740-201, Esposende",,,,Esposende,Esposende,,4740-201,Largo Frei Manuel de Barros,4740-201,high,true,false,city_missing_with_valid_locality
+105,Arlem Barber,,"Avenida Movimento das Forças Armadas 74, 2840-444",,,,,,,2840-444,Avenida Movimento das Forças Armadas,74,low,false,true,low_confidence_location
+106,Barbearia,,"Rua de Lisboa, Azeitão",,,,Azeitão,Azeitão,,,Rua de Lisboa,,medium,true,false,city_missing_with_valid_locality
+107,Barbearia 1025,,"Rua da Glória 17, 1250-115 Lisboa",,,,Lisboa,Lisboa,,1250-115,Rua da Glória,17,high,true,false,city_missing_with_valid_locality
+108,Barbearia 98 Men’s Space,,"Rua General Vasco Gonçalves, 2135-130 Samora Correia",,,,Samora Correia,Samora Correia,,2135-130,Rua General Vasco Gonçalves,,high,true,false,city_missing_with_valid_locality
+109,Barbearia Abel,,"Rua de São Tomé 7, 2685-326 Prior Velho",,,,Prior Velho,Prior Velho,,2685-326,Rua de São Tomé,7,high,true,false,city_missing_with_valid_locality
+110,Barbearia Alegria - Barbershop,,"Rua dos Tanoeiros 64, 9000-057 Funchal",,,,Funchal,Funchal,,9000-057,Rua dos Tanoeiros,64,high,true,false,city_missing_with_valid_locality
+111,Barbearia Alves,,"Avenida de São Sebastião, Évora",,,,Évora,Évora,,,Avenida de São Sebastião,,medium,true,false,city_missing_with_valid_locality
+112,Barbearia Bagaça,,"Rua Brigadeiro Correia Cardoso 213, 3030-084 Coimbra",,,,Coimbra,Coimbra,,3030-084,Rua Brigadeiro Correia Cardoso,213,high,true,false,city_missing_with_valid_locality
+113,Barbearia Boavida,,"Rua Doutor Manuel da Cruz Júnior 34, 2870-121 Montijo",,,,Montijo,Montijo,,2870-121,Rua Doutor Manuel da Cruz Júnior,34,high,true,false,city_missing_with_valid_locality
+114,Barbearia Campos,,"Rua de Moçambique 14, 7540-145 Santiago do Cacém",,,,Santiago do Cacém,Santiago do Cacém,,7540-145,Rua de Moçambique,14,high,true,false,city_missing_with_valid_locality
+115,Barbearia Candeias,,"Rua Mouzinho de Albuquerque 56, 3030-063 Coimbra",,,,Coimbra,Coimbra,,3030-063,Rua Mouzinho de Albuquerque,56,high,true,false,city_missing_with_valid_locality
+116,Barbearia Carlos Silva,,"Rua de Lisboa EN120, 7540-163",,,,,,,7540-163,Rua de Lisboa EN120,,low,false,true,low_confidence_location
+117,Barbearia Carlos Vaz,,"Rua Guilherme Gomes Fernandes 81 B, 2675 Odivelas",,,,Odivelas,Odivelas,,,Rua Guilherme Gomes Fernandes,81,medium,true,false,city_missing_with_valid_locality
+118,Barbearia Central,,"Rua dos Combatentes da Grande Guerra 47, 5000-635 Vila Real",,,,Vila Real,Vila Real,,5000-635,Rua dos Combatentes da Grande Guerra,47,high,true,false,city_missing_with_valid_locality
+119,Barbearia Coliseu,,"Rua do Brasil 386, 3030-775 Coimbra",,,,Coimbra,Coimbra,,3030-775,Rua do Brasil,386,high,true,false,city_missing_with_valid_locality
+120,Barbearia Couto,,"Avenida Dom João Garcia Bacelar 2020, 3060-704 Tocha",,,,Tocha,Tocha,,3060-704,Avenida Dom João Garcia Bacelar,2020,high,true,false,city_missing_with_valid_locality
+121,Barbearia do Cardoso,,Avenida 25 de Abril de 1974 11A,,,,,,,,Avenida 25 de Abril de,1974,low,false,true,low_confidence_location
+122,Barbearia do Gui,,"Rua Dom Afonso Henriques 7, 2670-637 Bucelas",,,,Bucelas,Bucelas,,2670-637,Rua Dom Afonso Henriques,7,high,true,false,city_missing_with_valid_locality
+123,Barbearia do Prakass,,"Rua Cavaleiro de Oliveira 47-C, Lisboa",,,,Lisboa,Lisboa,,,Rua Cavaleiro de Oliveira 47-C,,medium,true,false,city_missing_with_valid_locality
+124,Barbearia do Senhor,,"Rua José Castanheira Nunes 13, 3300-062 Arganil Arganil",,,,Arganil Arganil,Arganil Arganil,,3300-062,Rua José Castanheira Nunes,13,high,true,false,city_missing_with_valid_locality
+125,Barbearia do Zela,,"Rua de Fontelas, Pindelo",,,,Pindelo,Pindelo,,,Rua de Fontelas,,medium,true,false,city_missing_with_valid_locality
+126,Barbearia Dom Oliveira,,"Rua João XXI 14B, 2790-327",,,,,,,2790-327,Rua João XXI,14B,low,false,true,low_confidence_location
+127,Barbearia e Tattoo Asgard Porto,,"Rua de Oliveira Monteiro, 4050-072 Porto",,,,Porto,Porto,,4050-072,Rua de Oliveira Monteiro,,high,true,false,city_missing_with_valid_locality
+128,Barbearia Estação,,"Rua António José de Almeida 273, 3000-045 Coimbra",,,,Coimbra,Coimbra,,3000-045,Rua António José de Almeida,273,high,true,false,city_missing_with_valid_locality
+129,Barbearia Faialense,,"Estrada Regional de Santa Bárbara 5A, 9900-045 Horta (Angústias)",,,,Horta (Angústias),Horta (Angústias),,9900-045,Estrada Regional de Santa Bárbara,5A,high,true,false,city_missing_with_valid_locality
+130,Barbearia Inclusive,,"Rua do Alviela 9, 2625-046 Póvoa de Santa Iria",,,,Póvoa de Santa Iria,Póvoa de Santa Iria,,2625-046,Rua do Alviela,9,high,true,false,city_missing_with_valid_locality
+131,Barbearia Irmãos,,Rua Direita 86,,,,,,,,Rua Direita,86,low,false,true,low_confidence_location
+132,Barbearia Lisboa,,"Rua Cidade de Manchester 35, 1170-098 Lisboa",,,,Lisboa,Lisboa,,1170-098,Rua Cidade de Manchester,35,high,true,false,city_missing_with_valid_locality
+133,Barbearia Lorde,,"Avenida Fernando Namora 254, 3030-185 Coimbra",,,,Coimbra,Coimbra,,3030-185,Avenida Fernando Namora,254,high,true,false,city_missing_with_valid_locality
+134,Barbearia Maria Cruz,,"Avenida do Doutor Antunes Guimarães 47, 4100-079 Porto",,,,Porto,Porto,,4100-079,Avenida do Doutor Antunes Guimarães,47,high,true,false,city_missing_with_valid_locality
+135,Barbearia Moderna,,5000-446 Vila Real,,,,Vila Real,Vila Real,,5000-446,,,high,true,false,city_missing_with_valid_locality
+136,Barbearia Nacional,,"Praça General Humberto Delgado, Almada",,,,Almada,Almada,,,Praça General Humberto Delgado,,medium,true,false,city_missing_with_valid_locality
+137,Barbearia Nova Lisboa,,"Avenida da Igreja 1D, 1700-230 Lisboa",,,,Lisboa,Lisboa,,1700-230,Avenida da Igreja,1D,high,true,false,city_missing_with_valid_locality
+138,Barbearia Number 1,,"Rua General Humberto Delgado 283, 3030-327 Coimbra",,,,Coimbra,Coimbra,,3030-327,Rua General Humberto Delgado,283,high,true,false,city_missing_with_valid_locality
+139,Barbearia O Barbólogo,,"R. Cervantes 2, 1000-095 Lisboa",,,,Lisboa,Lisboa,,1000-095,R. Cervantes,2,high,true,false,city_missing_with_valid_locality
+140,Barbearia O Seu Espaço,,"Rua dos Lusíadas 126, 1300-285 Alcântara",,,,Alcântara,Alcântara,,1300-285,Rua dos Lusíadas,126,high,true,false,city_missing_with_valid_locality
+141,Barbearia Oásis o Carlos,,Rua Joaquim António de Aguiar 124,,,,,,,,Rua Joaquim António de Aguiar,124,low,false,true,low_confidence_location
+142,Barbearia of Brothers,,"Avenida Nossa Senhora de Fátima 62, 2414-140 Leiria",,,,Leiria,Leiria,,2414-140,Avenida Nossa Senhora de Fátima,62,high,true,false,city_missing_with_valid_locality
+143,Barbearia Paulo Freitas,,"Largo Doutor Augusto de Oliveira Coimbra 8, 3300-020 Arganil",,,,Arganil,Arganil,,3300-020,Largo Doutor Augusto de Oliveira Coimbra,8,high,true,false,city_missing_with_valid_locality
+144,Barbearia Ponto H,,"Rua Gustavo Ferreira Pinto Bastos 06, 3810-128 Aveiro",,,,Aveiro,Aveiro,,3810-128,Rua Gustavo Ferreira Pinto Bastos,06,high,true,false,city_missing_with_valid_locality
+145,Barbearia Portugal por João Alves,,"Rua dos Lusíadas 127B, 1300-369 Alcântara",,,,Alcântara,Alcântara,,1300-369,Rua dos Lusíadas,127B,high,true,false,city_missing_with_valid_locality
+146,Barbearia Resende,,"Av. Aquilino Ribeiro L 5 R/C FRENTE, 3515-114 Viseu",,,,Viseu,Viseu,,3515-114,Av. Aquilino Ribeiro L,5,high,true,false,city_missing_with_valid_locality
+147,Barbearia S. Barba,,"R. de Loule 2, 8005-491 Santa Bárbara de Nexe, Faro",,,,Santa Bárbara de Nexe,Santa Bárbara de Nexe,,8005-491,R. de Loule,2,high,true,false,city_missing_with_valid_locality
+148,Barbearia Sa,,"Estrada Simão Gonçalves da Câmara, 9370-139 Calheta",,,,Calheta,Calheta,,9370-139,Estrada Simão Gonçalves da Câmara,,high,true,false,city_missing_with_valid_locality
+149,Barbearia Suprema,,"Estrada de Benfica 399, Lisboa",,,,Lisboa,Lisboa,,,Estrada de Benfica,399,medium,true,false,city_missing_with_valid_locality
+150,Barbearia Tradição,,"Rua Jacinta Marto 6, 1150-192",,,,,,,1150-192,Rua Jacinta Marto,6,low,false,true,low_confidence_location
+151,Barbearia Vítor,,"Rua do Brasil 408, 3030-775 Coimbra",,,,Coimbra,Coimbra,,3030-775,Rua do Brasil,408,high,true,false,city_missing_with_valid_locality
+152,Barbearia Zé Nunes,,"Rua da Indústria 50B, 1300 Lisboa",,,,Lisboa,Lisboa,,,Rua da Indústria,50B,medium,true,false,city_missing_with_valid_locality
+153,Barber Shop,,"Rua Serpa Pinto 3, São Brás de Alportel",,,,São Brás de Alportel,São Brás de Alportel,,,Rua Serpa Pinto,3,medium,true,false,city_missing_with_valid_locality
+154,Barbershop TalentoVanguarda,,"Rua de Camões 585, 4000-376",,,,,,,4000-376,Rua de Camões,585,low,false,true,low_confidence_location
+155,Beard Man Barber Shop,,"Rua de Campo de Ourique 36A, 1250-041 Lisboa",,,,Lisboa,Lisboa,,1250-041,Rua de Campo de Ourique,36A,high,true,false,city_missing_with_valid_locality
+156,Bento Barbearias,,"Rua Pascoal de Melo 110, Lisboa",,,,Lisboa,Lisboa,,,Rua Pascoal de Melo,110,medium,true,false,city_missing_with_valid_locality
+157,Bento's Barber Shop & Vespa Bar,,"Rua do Cemitério 209, 3060-655 Tocha",,,,Tocha,Tocha,,3060-655,Rua do Cemitério,209,high,true,false,city_missing_with_valid_locality
+158,Blessed Cutz Barbershop,,"Estrada de Benfica 182, 1500-073 Lisboa",,,,Lisboa,Lisboa,,1500-073,Estrada de Benfica,182,high,true,false,city_missing_with_valid_locality
+159,Brave Barber Shop,,"Rua da Penha de França 213A, 1170 182 Lisboa",,,,Lisboa,Lisboa,,1170-182,Rua da Penha de França,213A,high,true,false,city_missing_with_valid_locality
+160,Bronk's Barber Shop,,"Rua Centro de Artes Lote 7, 6200-505 Covilhã",,,,Covilhã,Covilhã,,6200-505,Rua Centro de Artes Lote,7,high,true,false,city_missing_with_valid_locality
+161,Buda Barber,,Rua Caldas Xavier 5,,,,,,,,Rua Caldas Xavier,5,low,false,true,low_confidence_location
+162,Butterfly Cabeleireiro & Barbearia,,"R. de Loule 20, Santa Bárbara de Nexe, Portugal",,,,Portugal,Portugal,Santa Bárbara de Nexe,,R. de Loule,20,medium,true,false,city_missing_with_valid_locality
+163,Champions Barber Shop,,Rua Manuel Barbuda e Vasconcelos 1,,,,,,,,Rua Manuel Barbuda e Vasconcelos,1,low,false,true,low_confidence_location
+164,Cortes & Discos,,"Rua Poeta Sebastião da Gama 30/32, 2925-589 Azeitão",,,,Azeitão,Azeitão,,2925-589,Rua Poeta Sebastião da Gama 30/32,,high,true,false,city_missing_with_valid_locality
+165,Costa Barbershop,,"Rua João de Carapeços, Carapeços",,,,Carapeços,Carapeços,,,Rua João de Carapeços,,medium,true,false,city_missing_with_valid_locality
+166,Cristiano Barber Shop,,"Rua Ernesto da Silva 10, 1500-267 Lisboa",,,,Lisboa,Lisboa,,1500-267,Rua Ernesto da Silva,10,high,true,false,city_missing_with_valid_locality
+167,Domus Hair Studio,,"Rua David Afonso Moutinho 54, 4435-659 Baguim do Monte (Rio Tinto)",,,,Baguim do Monte (Rio Tinto),Baguim do Monte (Rio Tinto),,4435-659,Rua David Afonso Moutinho,54,high,true,false,city_missing_with_valid_locality
+168,El Shaddai Barber Styler,,"Rua Soares de Paços 11A, 2790-440",,,,,,,2790-440,Rua Soares de Paços,11A,low,false,true,low_confidence_location
+169,El Patron Barbershop,,"Praça General Vicente de Freitas, 1500-076 Lisboa",,,,Lisboa,Lisboa,,1500-076,Praça General Vicente de Freitas,,high,true,false,city_missing_with_valid_locality
+170,FADO - Barbearia,,"Largo Terra Grande 7, 2790-157 Carnaxide",,,,Carnaxide,Carnaxide,,2790-157,Largo Terra Grande,7,high,true,false,city_missing_with_valid_locality
+171,FG Male Image & Grooming,,"R. Q.ta de Cabanas, 4700-003 Braga",,,,Braga,Braga,,4700-003,R. Q.ta de Cabanas,,high,true,false,city_missing_with_valid_locality
+172,Figaro's Barbershop,,"Rua da Madalena 63, 1100-321",,,,,,,1100-321,Rua da Madalena,63,low,false,true,low_confidence_location
+173,Francisco Maia - Barbeiro,,"Rua Augusto Correia 48, 4760-125 Vila Nova de Famalicao",,,,Vila Nova de Famalicao,Vila Nova de Famalicao,,4760-125,Rua Augusto Correia,48,high,true,false,city_missing_with_valid_locality
+174,Gentleman1415,,"Rua da Casa Branca 53, 9000-113 Funchal",,,,Funchal,Funchal,,9000-113,Rua da Casa Branca,53,high,true,false,city_missing_with_valid_locality
+175,Gonçalo Santos Barber Shop,,"Rua Carlos Seixas 187, 3030-177 Coimbra",,,,Coimbra,Coimbra,,3030-177,Rua Carlos Seixas,187,high,true,false,city_missing_with_valid_locality
+176,Homens da Praça,,"Rua Capitão Manuel Carvalho 3, 4760-020 Vila Nova de Famalicao",,,,Vila Nova de Famalicao,Vila Nova de Famalicao,,4760-020,Rua Capitão Manuel Carvalho,3,high,true,false,city_missing_with_valid_locality
+177,JL Barbearia,,"Rua Dom Nuno Álvares Pereira, 4780-439 Santo Tirso",,,,Santo Tirso,Santo Tirso,,4780-439,Rua Dom Nuno Álvares Pereira,,high,true,false,city_missing_with_valid_locality
+178,JR - Cabeleireiro de Homens - Barbearia,,"Avenida da Liberdade, Ponte de Sor",,,,Ponte de Sor,Ponte de Sor,,,Avenida da Liberdade,,medium,true,false,city_missing_with_valid_locality
+179,Kadette Barbershop,,Avenida O Século,,,,,,,,Avenida O Século,,low,false,true,low_confidence_location
+180,Kings Barbearia,,"Rua da Penha de França 59, 1170 302 Lisboa",,,,Lisboa,Lisboa,,1170-302,Rua da Penha de França,59,high,true,false,city_missing_with_valid_locality
+181,Lord Jack & Friends,,"Avenida Narciso Ferreira 30, 4760-105 Vila Nova de Famalicao",,,,Vila Nova de Famalicao,Vila Nova de Famalicao,,4760-105,Avenida Narciso Ferreira,30,high,true,false,city_missing_with_valid_locality
+182,Los Moustachios,,Rua Cidade de Riom 466,,,,,,,,Rua Cidade de Riom,466,low,false,true,low_confidence_location
+183,Madeira Island Tattoo & Barber Shop,,"Rua Nova do Vale da Ajuda 2, 9000-250 São Martinho",,,,São Martinho,São Martinho,,9000-250,Rua Nova do Vale da Ajuda,2,high,true,false,city_missing_with_valid_locality
+184,MenConcept,,"Avenida das Tílias 136, 2775-335 Parede - Jardins da Parede",,,,Parede - Jardins da Parede,Parede - Jardins da Parede,,2775-335,Avenida das Tílias,136,high,true,false,city_missing_with_valid_locality
+185,Mr Barbearia,,"Rua Ferreira Borges 70, 3000-414 Coimbra",,,,Coimbra,Coimbra,,3000-414,Rua Ferreira Borges,70,high,true,false,city_missing_with_valid_locality
+186,New Look Barbearia,,"Rua João de Deus Ramos, 3030-328 Coimbra",,,,Coimbra,Coimbra,,3030-328,Rua João de Deus Ramos,,high,true,false,city_missing_with_valid_locality
+187,Nineteen Cuts,,"Largo de Domingos Moreira 32, 4780-371 Santo Tirso",,,,Santo Tirso,Santo Tirso,,4780-371,Largo de Domingos Moreira,32,high,true,false,city_missing_with_valid_locality
+188,Nova Barbearia,,"Rua Delfim de Lima 3574 loja j, 4410-229",,,,,,,4410-229,Rua Delfim de Lima,3574,low,false,true,low_confidence_location
+189,Old Skull Barbershop,,"Rua dos Aranhas 80, Funchal",,,,Funchal,Funchal,,,Rua dos Aranhas,80,medium,true,false,city_missing_with_valid_locality
+190,Pachioni's Barbearia,,Praça Comandante José Brás 8,,,,,,,,Praça Comandante José Brás,8,low,false,true,low_confidence_location
+191,Pifaros Barber Shop,,"Rua 31 de Janeiro 11, 5000-603 Vila Real",,,,Vila Real,Vila Real,,5000-603,Rua 31 de Janeiro,11,high,true,false,city_missing_with_valid_locality
+192,Pluma Barber Shop,,"Rua Alves Roçadas 190, 4760-118 Vila Nova de Famalicao",,,,Vila Nova de Famalicao,Vila Nova de Famalicao,,4760-118,Rua Alves Roçadas,190,high,true,false,city_missing_with_valid_locality
+193,Ricardus's Barber Shop,,"Travessa da Boa Hora à Ajuda 33 A, 1300-102 Lisboa",,,,Lisboa,Lisboa,,1300-102,Travessa da Boa Hora à Ajuda,33,high,true,false,city_missing_with_valid_locality
+194,ricky barber shop,,"Avenida do Brasil, 2700-133 Falagueira-Venda Nova Amadora",,,,Falagueira-Venda Nova Amadora,Falagueira-Venda Nova Amadora,,2700-133,Avenida do Brasil,,high,true,false,city_missing_with_valid_locality
+195,SOUSA Barbershop,,"Rua Bernando Santareno 23, 2650-424",,,,,,,2650-424,Rua Bernando Santareno,23,low,false,true,low_confidence_location
+196,Studio Gênese,,"Avenida Infante Dom Henrique 476, 4400-257 Vila Nova de Gaia",,,,Vila Nova de Gaia,Vila Nova de Gaia,,4400-257,Avenida Infante Dom Henrique,476,high,true,false,city_missing_with_valid_locality
+197,The Barbershop,,Rua Manuel da Ponte 31,,,,,,,,Rua Manuel da Ponte,31,low,false,true,low_confidence_location
+198,The Underground Barbershop,,"Rua da Conceição 97A, 9050-026 Funchal",,,,Funchal,Funchal,,9050-026,Rua da Conceição,97A,high,true,false,city_missing_with_valid_locality
+199,Torrez Barbearia,,"Avenida Padre Luís Gonzaga Martins Pinheiro 617, 4780-213 Santo Tirso",,,,Santo Tirso,Santo Tirso,,4780-213,Avenida Padre Luís Gonzaga Martins Pinheiro,617,high,true,false,city_missing_with_valid_locality
+200,Valgrind - The Viking Barber Tattoo Studio,,"Rua dos 3 Lagares Lote 1, 5000-577 Quinta da Redonda",,,,Quinta da Redonda,Quinta da Redonda,,5000-577,Rua dos 3 Lagares Lote,1,high,true,false,city_missing_with_valid_locality
+201,Vix Barbershop,,"Estrada da Luz 148d loja f, 1600-160 Lisboa",,,,Lisboa,Lisboa,,1600-160,Estrada da Luz,148d,high,true,false,city_missing_with_valid_locality
+202,Wildcat Barber - TNT Barbershop,,"Rua Nova do Vale da Ajuda 1, 9000-116 Funchal",,,,Funchal,Funchal,,9000-116,Rua Nova do Vale da Ajuda,1,high,true,false,city_missing_with_valid_locality
+203,Wings Barbershop,,"Rua Câmara Pestana Lote 3, 3030-163 Coimbra",,,,Coimbra,Coimbra,,3030-163,Rua Câmara Pestana Lote,3,high,true,false,city_missing_with_valid_locality

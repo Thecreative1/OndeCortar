@@ -33,6 +33,7 @@
   const rawBarbers = rawBarbersSource.filter(function(item) {
     return item && item.mostrar_no_mapa !== false;
   });
+  const locationUtils = window.BarbeariasUtils || null;
   const streetRegex = /(rua|r\.|avenida|av\.|praceta|pra[cç]a|largo|estrada|travessa|tv\.|rotunda|alameda|ed\.|edif|bloco|loja|shopping|centro comercial|guimaraeshopping|c\. comercial|piso|andar|n\.?º|n\.?o|bairro)/i;
   const accentPairs = [
     ["#e5efe3", "#516255"],
@@ -429,7 +430,10 @@
 
   function createBarber(raw, index) {
     const name = raw.name || raw.nome || "Barbearia";
-    const city = raw.concelho || inferirCidade(raw.morada);
+    const location = locationUtils && typeof locationUtils.normalizarLocalizacaoBarbearia === "function"
+      ? locationUtils.normalizarLocalizacaoBarbearia(raw)
+      : null;
+    const city = (location && location.city) || raw.city || raw.concelho || inferirCidade(raw.morada);
     const accent = getAccent(index);
     const links = normalizeLinks(raw);
     const rawPhone = String(raw.telefone || "").trim();
@@ -440,7 +444,8 @@
       name: name,
       city: city,
       citySlug: slugify(city),
-      morada: raw.morada || "",
+      morada: (location && location.displayAddress) || raw.morada || "",
+      addressRaw: (location && location.addressRaw) || raw.address_raw || raw.morada || "",
       telefone: telefone,
       telefoneOriginal: rawPhone,
       website: links.website,
@@ -453,7 +458,9 @@
       observacoes: raw.observacoes || "",
       coords: Array.isArray(raw.coords) ? raw.coords : null,
       accent: accent,
-      initials: initialsFromName(name)
+      initials: initialsFromName(name),
+      district: (location && location.district) || raw.distrito || "",
+      zone: (location && location.zone) || raw.zone || raw.freguesia || ""
     };
 
     barber.tags = buildUsefulTags(barber);

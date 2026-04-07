@@ -10,6 +10,7 @@
   }
 })(typeof globalThis !== "undefined" ? globalThis : this, function() {
   const DATA_VALIDACAO = "2026-04-05";
+  const CODIGO_POSTAL_REGEX = /\b(\d{4})(?:[-\s]?(\d{3}))\b/;
   const STREET_REGEX = /(rua|r\.|avenida|av\.|praceta|pra[cç]a|largo|estrada|travessa|tv\.|rotunda|alameda|ed\.|edif|bloco|loja|shopping|centro comercial|guimaraeshopping|forum|fórum|c\. comercial|bairro|parque|mercado)/i;
   const VENUE_REGEX = /(shopping|centro comercial|forum|fórum|loja|mercado|studio|barbershop|barber shop|barbearia)/i;
   const PLACEHOLDER_PHONE_DIGITS = new Set([
@@ -273,8 +274,8 @@
   }
 
   function extrairCodigoPostal(morada) {
-    const match = String(morada || "").match(/\b\d{4}-\d{3}\b/);
-    return match ? match[0] : "";
+    const match = String(morada || "").match(CODIGO_POSTAL_REGEX);
+    return match ? match[1] + "-" + match[2] : "";
   }
 
   function moradaEhGenerica(morada) {
@@ -333,28 +334,427 @@
     return [Number(coords[0]), Number(coords[1])];
   }
 
-  function inferirLocalizacaoAdministrativa(morada) {
-    const normalized = normalizarTexto(morada);
+  function limparSegmentoMorada(value) {
+    return String(value == null ? "" : value)
+      .replace(/[–—]/g, ",")
+      .replace(/\s+/g, " ")
+      .trim()
+      .replace(/^[-,\s]+|[-,\s]+$/g, "");
+  }
+
+  function limparTextoLocalizacao(value) {
+    return limparSegmentoMorada(value)
+      .replace(/\b\d{4}(?:[-\s]?\d{3})?\b/g, "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .replace(/^[-,\s]+|[-,\s]+$/g, "");
+  }
+
+  function ehSegmentoPorta(value) {
+    const text = trimToNull(value);
+
+    if (!text) {
+      return false;
+    }
+
+    if (/^\d+[A-Za-z]?(?:-\d+[A-Za-z]?)?$/.test(text)) {
+      return true;
+    }
+
+    if (/^\d+\s*(?:º|o|a)\b/i.test(text)) {
+      return true;
+    }
+
+    if (/^(?:loja|lj|porta|piso|andar|bloco|frac[cç][aã]o|fraccao|sala|gabinete)\s*[-A-Za-z0-9.º/]+$/i.test(text)) {
+      return true;
+    }
+
+    if (/^(?:r\/c|rc|esq|dto|dt|frente|tras|traseiras?)$/i.test(normalizarTexto(text))) {
+      return true;
+    }
+
+    return false;
+  }
+
+  function ehSegmentoRua(value) {
+    return STREET_REGEX.test(String(value || ""));
+  }
+
+  function ehSegmentoVenue(value) {
+    return VENUE_REGEX.test(String(value || ""));
+  }
+
+  function ehSegmentoLocalidadeValido(value) {
+    const text = limparTextoLocalizacao(value);
+
+    if (!text || text.length < 3) {
+      return false;
+    }
+
+    if (!/[A-Za-zÀ-ÿ]/.test(text) || /\d/.test(text)) {
+      return false;
+    }
+
+    if (ehSegmentoRua(text) || ehSegmentoVenue(text) || ehSegmentoPorta(text)) {
+      return false;
+    }
+
+    return true;
+  }
+
+  function ehZonaValida(value, context) {
+    const text = limparTextoLocalizacao(value);
+
+    if (!ehSegmentoLocalidadeValido(text)) {
+      return false;
+    }
+
+    const normalized = normalizarTexto(text);
+    const city = context && context.city ? normalizarTexto(context.city) : "";
+    const street = context && context.street ? normalizarTexto(context.street) : "";
+    const streetNumber = context && context.streetNumber ? normalizarTexto(context.streetNumber) : "";
+    const postalCode = context && context.postalCode ? normalizarTexto(context.postalCode) : "";
+
+    if (!normalized || normalized.length < 3) {
+      return false;
+    }
+
+    if (city && normalized === city) {
+      return false;
+    }
+
+    if (street && street.indexOf(normalized) !== -1) {
+      return false;
+    }
+
+    if (streetNumber && normalized === streetNumber) {
+      return false;
+    }
+
+    if (postalCode && normalized === postalCode) {
+      return false;
+    }
+
+    return true;
+  }
+
+  function encontrarRegraMunicipio(value) {
+    const normalized = normalizarTexto(value);
+
+    if (!normalized) {
+      return null;
+    }
 
     for (let index = 0; index < MUNICIPIO_RULES.length; index += 1) {
       const rule = MUNICIPIO_RULES[index];
       const matched = rule.needles.some(function(needle) {
-        return normalized.indexOf(needle) !== -1;
+        return normalized === needle || normalized.indexOf(needle) !== -1 || needle.indexOf(normalized) !== -1;
       });
 
       if (matched) {
-        return {
-          distrito: rule.distrito || "",
-          concelho: rule.concelho || "",
-          freguesia: rule.freguesia || ""
-        };
+        return rule;
       }
+    }
+
+    return null;
+  }
+
+  function extrairNumeroPortaDaLinha(value) {
+    const text = trimToNull(value) || "";
+
+    if (!text || !ehSegmentoRua(text)) {
+      return {
+        street: text,
+        streetNumber: "",
+        trailing: ""
+      };
+    }
+
+    const match = text.match(/^(.*\D)\s+(\d+[A-Za-z]?(?:-\d+[A-Za-z]?)?)(?:\s+(.*))?$/);
+
+    if (!match) {
+      return {
+        street: text,
+        streetNumber: "",
+        trailing: ""
+      };
+    }
+
+    return {
+      street: trimToNull(match[1]) || text,
+      streetNumber: trimToNull(match[2]) || "",
+      trailing: trimToNull(match[3]) || ""
+    };
+  }
+
+  function construirMoradaNormalizada(parts) {
+    const items = [];
+    const streetLine = [parts.street, parts.streetNumber].filter(Boolean).join(" ");
+
+    if (streetLine) {
+      items.push(streetLine);
+    }
+
+    if (parts.complement) {
+      items.push(parts.complement);
+    }
+
+    const postalLine = [parts.postalCode, parts.locality || parts.city].filter(Boolean).join(" ");
+
+    if (postalLine) {
+      items.push(postalLine);
+    }
+
+    return items.join(", ");
+  }
+
+  function parseAddressComponents(addressRaw) {
+    const raw = trimToNull(addressRaw) || "";
+    const segments = raw
+      .split(",")
+      .map(limparSegmentoMorada)
+      .filter(Boolean);
+    let postalCode = "";
+    let locality = "";
+    let localityIndex = -1;
+    let postalSegmentIndex = -1;
+
+    for (let index = segments.length - 1; index >= 0; index -= 1) {
+      if (CODIGO_POSTAL_REGEX.test(segments[index])) {
+        postalSegmentIndex = index;
+        postalCode = extrairCodigoPostal(segments[index]);
+        break;
+      }
+    }
+
+    if (postalSegmentIndex !== -1) {
+      const postalSegment = segments[postalSegmentIndex];
+      const inlineLocality = limparTextoLocalizacao(postalSegment.replace(/^\s*\d{4}(?:[-\s]?\d{3})?\s*/, "").replace(postalCode, " "));
+
+      if (ehSegmentoLocalidadeValido(inlineLocality)) {
+        locality = inlineLocality;
+        localityIndex = postalSegmentIndex;
+      } else if (segments[postalSegmentIndex + 1] && ehSegmentoLocalidadeValido(segments[postalSegmentIndex + 1])) {
+        locality = limparTextoLocalizacao(segments[postalSegmentIndex + 1]);
+        localityIndex = postalSegmentIndex + 1;
+      }
+    }
+
+    if (!locality) {
+      for (let index = segments.length - 1; index >= 0; index -= 1) {
+        if (ehSegmentoLocalidadeValido(segments[index])) {
+          locality = limparTextoLocalizacao(segments[index]);
+          localityIndex = index;
+          break;
+        }
+      }
+    }
+
+    const cutoffIndex = localityIndex !== -1 ? localityIndex : (postalSegmentIndex !== -1 ? postalSegmentIndex : segments.length);
+    const preLocationSegments = segments.slice(0, cutoffIndex);
+    const firstLine = preLocationSegments[0] || "";
+    const streetData = extrairNumeroPortaDaLinha(firstLine);
+    const complementParts = [];
+    const zoneCandidates = [];
+    let streetNumber = streetData.streetNumber;
+
+    if (streetData.trailing) {
+      complementParts.push(streetData.trailing);
+    }
+
+    preLocationSegments.slice(1).forEach(function(segment) {
+      const clean = limparTextoLocalizacao(segment);
+
+      if (!clean) {
+        return;
+      }
+
+      if (!streetNumber && ehSegmentoPorta(clean)) {
+        streetNumber = clean;
+        return;
+      }
+
+      if (ehSegmentoPorta(clean) || ehSegmentoRua(clean) || ehSegmentoVenue(clean)) {
+        complementParts.push(segment);
+        return;
+      }
+
+      zoneCandidates.push(clean);
+    });
+
+    return {
+      addressRaw: raw,
+      segments: segments,
+      street: streetData.street || firstLine || "",
+      streetNumber: streetNumber || "",
+      complement: complementParts.join(", "),
+      postalCode: postalCode,
+      locality: locality,
+      zoneCandidate: zoneCandidates[0] || "",
+      tailSegments: localityIndex !== -1 ? segments.slice(localityIndex) : [],
+      displayAddress: construirMoradaNormalizada({
+        street: streetData.street || firstLine || "",
+        streetNumber: streetNumber || "",
+        complement: complementParts.join(", "),
+        postalCode: postalCode,
+        locality: locality,
+        city: ""
+      })
+    };
+  }
+
+  function inferirLocalizacaoAdministrativa(value) {
+    const parsed = parseAddressComponents(value);
+    const candidate = parsed.locality || trimToNull(value) || "";
+    const rule = encontrarRegraMunicipio(candidate);
+
+    if (rule) {
+      return {
+        distrito: rule.distrito || "",
+        concelho: rule.concelho || "",
+        freguesia: rule.freguesia || ""
+      };
     }
 
     return {
       distrito: "",
       concelho: "",
       freguesia: ""
+    };
+  }
+
+  function normalizarLocalizacaoBarbearia(item) {
+    const raw = item || {};
+    const addressRaw = trimToNull(raw.address_raw || raw.addressRaw || raw.morada) || "";
+    const manualCity = trimToNull(raw.city || raw.concelho);
+    const manualZone = trimToNull(raw.zone || raw.freguesia);
+    const manualDistrict = trimToNull(raw.district || raw.distrito);
+    const manualPostalCode = trimToNull(raw.postal_code || raw.codigo_postal);
+    const parsed = parseAddressComponents(addressRaw);
+    const issues = [];
+    let city = "";
+    let citySource = "";
+    let zone = "";
+    let zoneSource = "";
+
+    if (parsed.locality) {
+      city = parsed.locality;
+      citySource = parsed.postalCode ? "postal_locality" : "address_locality";
+    } else if (manualCity) {
+      city = manualCity;
+      citySource = "manual";
+    }
+
+    const admin = inferirLocalizacaoAdministrativa(city || parsed.locality || manualCity || "");
+    const district = manualDistrict || admin.distrito || "";
+    const postalCode = parsed.postalCode || manualPostalCode || "";
+    const streetNormalized = normalizarTexto(parsed.street);
+    const manualCityNormalized = normalizarTexto(manualCity);
+    const localityNormalized = normalizarTexto(parsed.locality);
+
+    if (manualCity && parsed.locality && manualCityNormalized !== localityNormalized) {
+      issues.push(postalCode ? "city_differs_from_postal_locality" : "city_differs_from_address_locality");
+    }
+
+    if (manualCity && parsed.street && streetNormalized.indexOf(manualCityNormalized) !== -1 && parsed.locality && manualCityNormalized !== localityNormalized) {
+      issues.push("city_matches_street_name_not_locality");
+    }
+
+    if (!city && parsed.locality) {
+      issues.push("city_missing_with_valid_locality");
+      city = parsed.locality;
+      citySource = parsed.postalCode ? "postal_locality" : "address_locality";
+    }
+
+    if (manualZone && /^\d+[A-Za-z]?$/.test(manualZone)) {
+      issues.push("zone_number_or_door");
+    }
+
+    if (manualZone && parsed.streetNumber && normalizarTexto(manualZone) === normalizarTexto(parsed.streetNumber)) {
+      issues.push("zone_equals_street_number");
+    }
+
+    if (manualZone && postalCode && normalizarTexto(manualZone) === normalizarTexto(postalCode)) {
+      issues.push("zone_equals_postal_code");
+    }
+
+    if (manualZone && !ehZonaValida(manualZone, {
+      city: city,
+      street: parsed.street,
+      streetNumber: parsed.streetNumber,
+      postalCode: postalCode
+    })) {
+      issues.push("zone_invalid");
+    }
+
+    if (manualZone && ehZonaValida(manualZone, {
+      city: city,
+      street: parsed.street,
+      streetNumber: parsed.streetNumber,
+      postalCode: postalCode
+    })) {
+      zone = limparTextoLocalizacao(manualZone);
+      zoneSource = "manual";
+    } else if (parsed.zoneCandidate && ehZonaValida(parsed.zoneCandidate, {
+      city: city,
+      street: parsed.street,
+      streetNumber: parsed.streetNumber,
+      postalCode: postalCode
+    })) {
+      zone = parsed.zoneCandidate;
+      zoneSource = "address_segment";
+    }
+
+    if (zone && city && normalizarTexto(zone) === normalizarTexto(city)) {
+      issues.push("zone_equals_city");
+      zone = "";
+      zoneSource = "";
+    }
+
+    if (city && city.length < 3) {
+      issues.push("city_too_short");
+    }
+
+    if (zone && zone.length < 3) {
+      issues.push("zone_too_short");
+      zone = "";
+      zoneSource = "";
+    }
+
+    const displayAddress = construirMoradaNormalizada({
+      street: parsed.street,
+      streetNumber: parsed.streetNumber,
+      complement: parsed.complement,
+      postalCode: postalCode,
+      locality: parsed.locality,
+      city: city
+    }) || addressRaw;
+    const dataConfidence = citySource === "postal_locality"
+      ? (issues.length ? "medium" : "high")
+      : citySource === "address_locality"
+        ? "medium"
+        : citySource === "manual"
+          ? (issues.length ? "low" : "medium")
+          : "low";
+    const finalIssues = Array.from(new Set(issues.concat(dataConfidence === "low" ? ["low_confidence_location"] : [])));
+
+    return {
+      addressRaw: addressRaw,
+      street: parsed.street || "",
+      streetNumber: parsed.streetNumber || "",
+      complement: parsed.complement || "",
+      postalCode: postalCode,
+      locality: parsed.locality || city || "",
+      city: city || "",
+      zone: zone || "",
+      district: district,
+      country: "Portugal",
+      citySource: citySource,
+      zoneSource: zoneSource,
+      displayAddress: displayAddress,
+      dataConfidence: dataConfidence,
+      needsReview: finalIssues.length > 0,
+      issues: finalIssues
     };
   }
 
@@ -447,6 +847,9 @@
     moradaEhUtil: moradaEhUtil,
     coordsSaoValidas: coordsSaoValidas,
     normalizarCoords: normalizarCoords,
+    parseAddressComponents: parseAddressComponents,
+    normalizarLocalizacaoBarbearia: normalizarLocalizacaoBarbearia,
+    ehZonaValida: ehZonaValida,
     inferirLocalizacaoAdministrativa: inferirLocalizacaoAdministrativa,
     validarEmail: validarEmail,
     determinarStatus: determinarStatus,

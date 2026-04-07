@@ -225,7 +225,7 @@ function displayUrl(value) {
 function buildProfileEditorial(barber) {
   const intro = barber.zone && barber.zone !== barber.city
     ? barber.name + " fica na zona de " + barber.zone + ", em " + barber.city + "."
-    : barber.name + " está listado em " + barber.city + ".";
+    : barber.name + " está localizado em " + barber.city + ".";
   const addressSentence = barber.morada
     ? "A ficha pública mostra a morada em " + barber.morada + "."
     : "A ficha pública ainda não mostra uma morada completa.";
@@ -291,15 +291,13 @@ function pickStoreCategorySlug(cityBarbers) {
 
 function buildSlugData(rawBarbers) {
   const barbers = rawBarbers.map((item, index) => {
-    const inferred = utils.inferirLocalizacaoAdministrativa(item.morada || "");
-    const fallbackCity = inferirCidadeFallback(item.morada || "");
-    const city = item.concelho || inferred.concelho || fallbackCity || "Portugal";
+    const location = utils.normalizarLocalizacaoBarbearia(item);
+    const city = location.city || "Portugal";
     const links = normalizeLinks(item);
     const normalizedPhone = utils.normalizarTelefone(item.telefone || "");
     const phone = normalizedPhone.telefone ? formatarTelefoneVisual(normalizedPhone.telefone) : "";
     const slug = item.slug || slugify((item.nome || "barbearia") + "-" + city + "-" + (index + 1));
     const citySlug = city && city !== "Portugal" ? slugify(city) : "";
-    const zone = inferirZona(item, city);
     const barber = {
       id: index + 1,
       slug: slug,
@@ -308,8 +306,15 @@ function buildSlugData(rawBarbers) {
       citySlug: citySlug,
       cityUrl: citySlug ? "cidades/" + citySlug + "/" : "",
       profileUrl: "barbearias/" + slug + "/",
-      morada: item.morada || "",
-      codigoPostal: item.codigo_postal || utils.extrairCodigoPostal(item.morada || ""),
+      morada: location.displayAddress || item.morada || "",
+      addressRaw: location.addressRaw || item.address_raw || item.morada || "",
+      street: location.street || "",
+      streetNumber: location.streetNumber || "",
+      complement: location.complement || "",
+      locality: location.locality || city,
+      codigoPostal: location.postalCode || item.codigo_postal || utils.extrairCodigoPostal(item.morada || ""),
+      district: location.district || item.distrito || "",
+      country: location.country || "Portugal",
       telefone: phone,
       email: utils.validarEmail(item.email || ""),
       website: links.website,
@@ -320,7 +325,10 @@ function buildSlugData(rawBarbers) {
       horario: String(item.horario || "").trim(),
       observacoes: String(item.observacoes || "").trim(),
       coords: utils.normalizarCoords(item.coords),
-      zone: zone,
+      zone: location.zone || "",
+      dataConfidence: location.dataConfidence || "low",
+      needsReview: Boolean(location.needsReview),
+      locationFlags: location.issues || [],
       lastmod: item.ultima_validacao || TODAY
     };
     barber.mapUrl = buildMapLink(barber);
@@ -761,9 +769,10 @@ function renderProfilePage(barber, citiesMap) {
       "telephone": barber.telefone ? String(barber.telefone).replace(/\s+/g, " ") : undefined,
       "address": barber.morada ? {
         "@type": "PostalAddress",
-        "streetAddress": barber.morada,
+        "streetAddress": [barber.street, barber.streetNumber, barber.complement].filter(Boolean).join(" "),
         "postalCode": barber.codigoPostal || undefined,
-        "addressLocality": barber.city,
+        "addressLocality": barber.locality || barber.city,
+        "addressRegion": barber.district || undefined,
         "addressCountry": "PT"
       } : undefined,
       "openingHours": barber.horario || undefined,
@@ -829,7 +838,7 @@ ${renderHeader(prefix, "cidades")}
         </div>
         <aside class="summary-panel">
           <div class="summary-row"><span>Cidade</span>${escapeHtml(barber.city)}</div>
-          <div class="summary-row"><span>Zona</span>${escapeHtml(barber.zone || barber.city)}</div>
+          ${barber.zone ? '<div class="summary-row"><span>Zona</span>' + escapeHtml(barber.zone) + '</div>' : ""}
           <div class="summary-row"><span>Informação atualizada</span>${escapeHtml(formatDate(barber.lastmod))}</div>
         </aside>
       </div>
@@ -842,7 +851,8 @@ ${renderHeader(prefix, "cidades")}
         <article class="card">
           <h2>Informação principal</h2>
           <div class="meta-list">
-            <div class="meta-row"><strong>Cidade e zona</strong><span>${escapeHtml(barber.city + (barber.zone && barber.zone !== barber.city ? " | " + barber.zone : ""))}</span></div>
+            <div class="meta-row"><strong>Cidade</strong><span>${escapeHtml(barber.city)}</span></div>
+            ${barber.zone ? '<div class="meta-row"><strong>Zona</strong><span>' + escapeHtml(barber.zone) + '</span></div>' : ""}
             <div class="meta-row"><strong>Morada completa</strong><span>${escapeHtml(barber.morada || "Morada não disponível")}</span></div>
             <div class="meta-row"><strong>Telefone</strong><span>${barber.telefone ? '<a href="' + escapeHtml(telephoneHref(barber.telefone)) + '">' + escapeHtml(barber.telefone) + "</a>" : "Telefone não disponível"}</span></div>
             <div class="meta-row"><strong>Horário</strong><span>${escapeHtml(barber.horario || "Horário não disponível")}</span></div>
