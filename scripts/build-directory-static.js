@@ -453,8 +453,8 @@ function buildCityIntro(cityName, cityBarbers, hierarchy) {
 function buildCityGuide(cityName, hierarchy) {
   const cityContext = buildCityContext(cityName, hierarchy);
   return [
-    cityContext.charAt(0).toUpperCase() + cityContext.slice(1) + ", começa por confirmar morada, zona e contexto geográfico antes de comparar as fichas.",
-    "Quando há telefone, website ou Instagram, confirma primeiro disponibilidade, tipo de serviço e se aceitam marcação online.",
+    cityContext.charAt(0).toUpperCase() + cityContext.slice(1) + ", começa por confirmar morada e contactos antes de escolher.",
+    "Quando há telefone, website ou Instagram, verifica primeiro disponibilidade e tipo de serviço.",
     "Se estiveres entre várias opções, dá prioridade às fichas com morada completa, contactos claros e informação atualizada."
   ];
 }
