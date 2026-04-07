@@ -771,12 +771,12 @@
       }
     ]);
     const heroQuickLinks = [
-      { label: "Maquinas de cortar", slug: "maquinas-de-cortar" },
-      { label: "Kits de barba", slug: "kits-de-barba" },
+      { label: "Máquinas", slug: "maquinas-de-cortar" },
+      { label: "Kits", slug: "kits-de-barba" },
       { label: "Navalhas", slug: "navalhas-e-laminas" },
-      { label: "Shavers", slug: "trimmers-e-shavers" },
-      { label: "Oleos e cuidados", slug: "oleos-e-balms" },
-      { label: "Acessorios", slug: "acessorios-de-barbeiro" }
+      { label: "Trimmers", slug: "trimmers-e-shavers" },
+      { label: "Óleos", slug: "oleos-e-balms" },
+      { label: "Acessórios", slug: "acessorios-de-barbeiro" }
     ].map(function(item) {
       return (
         '<a class="store-quick-pill" href="' + categoryHref(item.slug) + '">' +
@@ -786,19 +786,55 @@
     }).join("");
     const featured = featuredPicks.map(function(item) {
       const product = productMap.get(item.product);
+      if (!product) return "";
       return renderProductCard(product, {
         dense: true,
         label: item.label,
         highlight: item.note
       });
     }).join("");
-    const needCards = needs.map(function(item) {
-      return '<article class="category-card"><div class="meta-row"><span class="tag">Necessidade</span></div><h3>' + e(item.title) + "</h3><p>" + e(item.copy) + '</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="' + needHref(item.slug) + '">Explorar</a></div></article>';
-    }).join("");
-    const categoryCards = categories.map(function(item) { return renderCategoryCard(item, true); }).join("");
-    const comparisonRows = quickComparison.map(function(item) {
+    const needCards = quickComparison.map(function(item) {
       const product = productMap.get(item[1]);
-      return '<div class="comparison-row"><strong>' + e(item[0]) + '</strong><div><h3>' + e(product.name) + '</h3><p>' + e(product.summary) + '</p></div><a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Ver recomendação</a></div>';
+      const label = item[0] === "Melhor kit para começar" ? "Melhor para começar" : item[0];
+      if (!product) return "";
+      return (
+        '<a class="store-need-card" href="' + productHref(product.slug) + '">' +
+          '<span class="tag">Escolha rápida</span>' +
+          '<strong>' + e(label) + '</strong>' +
+          '<p>' + e(product.name) + "</p>" +
+          '<span class="store-need-link">Ver opção</span>' +
+        "</a>"
+      );
+    }).join("");
+    const categoryCards = categories.map(function(item) { return renderCategoryCard(item, false); }).join("");
+    const guideArticles = [];
+    const seenGuideSlugs = new Set();
+    function pushGuide(slugValue) {
+      if (!slugValue || seenGuideSlugs.has(slugValue)) return;
+      const article = articleMap.get(slugValue);
+      if (!article) return;
+      seenGuideSlugs.add(slugValue);
+      guideArticles.push(article);
+    }
+
+    featuredPicks.forEach(function(item) {
+      const product = productMap.get(item.product);
+      if (product && product.articles && product.articles[0]) {
+        pushGuide(product.articles[0]);
+      }
+    });
+    articles.forEach(function(item) {
+      if (guideArticles.length >= 4) return;
+      pushGuide(item.slug);
+    });
+
+    const guideLinks = guideArticles.slice(0, 4).map(function(article) {
+      return (
+        '<a class="store-guide-link" href="' + articleHref(article.slug) + '">' +
+          '<strong>' + e(article.title) + '</strong>' +
+          '<span>Ler guia</span>' +
+        "</a>"
+      );
     }).join("");
     return (
       renderHeader() +
@@ -806,23 +842,21 @@
         '<section class="section store-intro-section"><div class="container">' +
           '<div class="store-hero-shell">' +
             '<div class="hero-card store-hero-main-card store-hero-compact-card">' +
-              '<span class="section-flag">LOJA ONDECORTAR</span>' +
-              '<h1>Produtos de barbearia recomendados para escolher melhor</h1>' +
-              '<p>Começa pelos produtos mais recomendados e explora por categoria.</p>' +
+              '<span class="section-flag">LOJA</span>' +
+              '<h1>Máquinas, kits e cuidados recomendados</h1>' +
+              '<p>Entra pelas top escolhas ou vai direto à categoria certa.</p>' +
               '<div class="hero-actions">' +
                 '<a class="btn btn-primary" href="#top-escolhas">Ver Top Escolhas</a>' +
                 '<a class="btn btn-secondary" href="#categorias">Ver categorias</a>' +
               '</div>' +
-              '<p class="store-hero-note">Links afiliados identificados em todas as páginas comerciais</p>' +
             '</div>' +
-            '<nav class="store-quick-bar" aria-label="Categorias rapidas">' + heroQuickLinks + '</nav>' +
+            '<nav class="store-quick-bar" aria-label="Categorias rápidas">' + heroQuickLinks + '</nav>' +
           '</div>' +
         '</div></section>' +
-        '<section class="section" id="top-escolhas"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Top Escolhas</span><h2>Produtos para abrir primeiro</h2><p>Os produtos mais fáceis de recomendar para começares já.</p></div></div><div class="product-grid product-grid--dense product-grid--top-choices">' + featured + '</div></div></section>' +
-        '<section class="section" id="categorias"><div class="container"><div class="section-header"><div><span class="eyebrow">Categorias</span><h2>Comprar por categoria</h2><p>Se já sabes o tipo de produto que queres, entra diretamente na categoria certa.</p></div></div><div class="category-grid">' + categoryCards + '</div></div></section>' +
-        '<section class="section" id="comparar"><div class="container comparison-card"><div class="section-header"><div><span class="eyebrow">Comparações rápidas</span><h2>Compara e decide em minutos</h2><p>Quatro caminhos rápidos para encontrares o produto certo.</p></div></div><div class="comparison-table">' + comparisonRows + '</div></div></section>' +
-        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Por necessidade</span><h2>Escolhe pela tua situação</h2><p>Se ainda não sabes que produto faz sentido, começa pela forma como o vais usar.</p></div></div><div class="need-grid">' + needCards + '</div></div></section>' +
-        renderWhyBuy() +
+        '<section class="section" id="top-escolhas"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Top Escolhas</span><h2>Abre estas opções primeiro</h2><p>As recomendações mais diretas para comprar melhor sem perder tempo.</p></div></div><div class="product-grid product-grid--dense product-grid--top-choices">' + featured + '</div></div></section>' +
+        '<section class="section" id="categorias"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Categorias</span><h2>Ir direto ao tipo de produto</h2><p>Escolhe a categoria certa e vê menos opções, mais alinhadas com o que precisas.</p></div></div><div class="category-grid">' + categoryCards + '</div></div></section>' +
+        '<section class="section" id="escolhas-por-necessidade"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Escolhas por necessidade</span><h2>Atalhos rápidos para decidir</h2><p>Quatro caminhos curtos para chegares à opção certa sem abrir comparações longas.</p></div></div><div class="store-need-grid">' + needCards + '</div></div></section>' +
+        '<section class="section store-guides-section"><div class="container"><div class="store-guide-panel"><div class="store-guide-header"><div><span class="eyebrow">Revista OndeCortar</span><h2>Guias rápidos para confirmar antes de comprar</h2></div><a class="btn btn-secondary btn-small" href="' + href("revista/") + '">Ver revista</a></div><div class="store-guide-row">' + guideLinks + '</div></div></div></section>' +
         '<section class="section"><div class="container">' + renderDisclosure() + "</div></section>" +
       "</main>" +
       renderFooter()

@@ -828,13 +828,13 @@ p {
 }
 
 .store-intro-section {
-  padding-top: 4px;
-  padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 8px;
 }
 
 .store-hero-shell {
   display: grid;
-  gap: 8px;
+  gap: 10px;
 }
 
 .store-hero-grid {
@@ -846,44 +846,44 @@ p {
 
 .store-hero-main-card {
   display: grid;
-  gap: 6px;
-  padding: 16px 18px;
+  gap: 8px;
+  padding: 14px 16px;
   border-color: rgba(188, 168, 133, 0.92);
   background:
     radial-gradient(circle at top right, rgba(176, 138, 74, 0.18), transparent 40%),
     linear-gradient(180deg, rgba(251, 247, 239, 0.99), rgba(242, 232, 214, 0.98));
-  box-shadow: 0 18px 38px rgba(34, 32, 28, 0.09);
+  box-shadow: 0 16px 30px rgba(34, 32, 28, 0.08);
   align-content: start;
 }
 
 .store-hero-main-card h1 {
-  font-size: clamp(1.55rem, 2.1vw, 1.95rem);
-  line-height: 0.98;
-  max-width: 9ch;
+  font-size: clamp(1.42rem, 1.9vw, 1.8rem);
+  line-height: 1;
+  max-width: 13ch;
   letter-spacing: -0.03em;
   margin: 0;
 }
 
 .store-hero-main-card p {
-  max-width: 48ch;
-  font-size: 0.93rem;
-  line-height: 1.45;
+  max-width: 44ch;
+  font-size: 0.92rem;
+  line-height: 1.4;
   margin: 0;
 }
 
 .store-hero-main-card .section-flag {
-  min-height: 28px;
-  padding: 5px 11px;
+  min-height: 26px;
+  padding: 4px 10px;
 }
 
 .store-hero-main-card .hero-actions {
-  gap: 7px;
+  gap: 8px;
   margin-top: 0;
 }
 
 .store-hero-main-card .btn {
-  min-height: 40px;
-  padding: 0 14px;
+  min-height: 38px;
+  padding: 0 13px;
 }
 
 .store-hero-main-card .btn-secondary {
@@ -894,18 +894,18 @@ p {
 }
 
 .store-hero-compact-card {
-  gap: 8px;
-  padding: 14px 18px;
+  gap: 10px;
+  padding: 14px 16px;
 }
 
 .store-hero-compact-card h1 {
-  max-width: 16ch;
-  font-size: clamp(1.35rem, 1.9vw, 1.72rem);
+  max-width: 14ch;
+  font-size: clamp(1.35rem, 2vw, 1.76rem);
   line-height: 1.02;
 }
 
 .store-hero-compact-card p {
-  max-width: 60ch;
+  max-width: 42ch;
 }
 
 .store-hero-compact-card .hero-actions {
@@ -969,8 +969,8 @@ p {
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
-  padding: 10px 12px;
-  border-radius: 18px;
+  padding: 8px 10px;
+  border-radius: 16px;
   border: 1px solid rgba(216, 205, 183, 0.96);
   background: rgba(251, 247, 239, 0.84);
   box-shadow: 0 12px 26px rgba(34, 32, 28, 0.05);
@@ -981,13 +981,13 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 38px;
-  padding: 0 14px;
+  min-height: 34px;
+  padding: 0 12px;
   border-radius: 999px;
   border: 1px solid rgba(188, 168, 133, 0.88);
   background: rgba(247, 239, 227, 0.9);
   color: var(--ink-strong);
-  font-size: 0.93rem;
+  font-size: 0.9rem;
   font-weight: 700;
   white-space: nowrap;
   scroll-snap-align: start;
@@ -1031,7 +1031,134 @@ body[data-page="store"] #categorias.section {
 }
 
 body[data-page="store"] #categorias .category-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
   margin-top: 0;
+}
+
+body[data-page="store"] #categorias .category-card {
+  padding: 18px;
+  gap: 12px;
+}
+
+body[data-page="store"] #categorias .category-card .product-copy {
+  gap: 8px;
+}
+
+body[data-page="store"] #categorias .category-card h3 {
+  font-size: 1.12rem;
+}
+
+.store-need-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.store-need-card {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(188, 168, 133, 0.9);
+  background:
+    radial-gradient(circle at top left, rgba(176, 138, 74, 0.14), transparent 38%),
+    linear-gradient(180deg, rgba(251, 247, 239, 0.98), rgba(244, 236, 223, 0.96));
+  box-shadow: 0 16px 32px rgba(34, 32, 28, 0.05);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.store-need-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(176, 138, 74, 0.8);
+  box-shadow: 0 18px 34px rgba(34, 32, 28, 0.08);
+}
+
+.store-need-card .tag {
+  justify-self: start;
+}
+
+.store-need-card strong {
+  font-size: 1.02rem;
+  line-height: 1.22;
+  color: var(--ink-strong);
+}
+
+.store-need-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.store-need-link {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.store-guides-section {
+  padding-top: 8px;
+}
+
+.store-guide-panel {
+  display: grid;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: 22px;
+  border: 1px solid rgba(188, 168, 133, 0.88);
+  background: rgba(251, 247, 239, 0.78);
+  box-shadow: 0 14px 30px rgba(34, 32, 28, 0.04);
+}
+
+.store-guide-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.store-guide-header h2 {
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  max-width: 28ch;
+}
+
+.store-guide-header .btn {
+  align-self: start;
+}
+
+.store-guide-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.store-guide-link {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(216, 205, 183, 0.96);
+  background: rgba(255, 252, 246, 0.9);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.store-guide-link:hover {
+  transform: translateY(-1px);
+  border-color: rgba(176, 138, 74, 0.74);
+  box-shadow: 0 12px 24px rgba(34, 32, 28, 0.05);
+}
+
+.store-guide-link strong {
+  font-size: 0.98rem;
+  line-height: 1.35;
+  color: var(--ink-strong);
+}
+
+.store-guide-link span {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--accent);
 }
 
 .store-note strong {
@@ -1525,6 +1652,16 @@ body[data-page="article"] .article-header p {
     grid-template-columns: 1fr;
   }
 
+  body[data-page="store"] #categorias .category-grid,
+  .store-need-grid,
+  .store-guide-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .store-guide-header {
+    align-items: start;
+  }
+
   .magazine-home-grid,
   .magazine-lead-card {
     grid-template-columns: 1fr;
@@ -1726,7 +1863,7 @@ body[data-page="article"] .article-header p {
   }
 
   .store-hero-main-card h1 {
-    max-width: 11ch;
+    max-width: none;
   }
 
   .store-hero-compact-card h1 {
@@ -1745,6 +1882,24 @@ body[data-page="article"] .article-header p {
 
   .store-choice-card .card-actions {
     flex-direction: row;
+  }
+
+  body[data-page="store"] #categorias .category-grid,
+  .store-need-grid,
+  .store-guide-row {
+    grid-template-columns: 1fr;
+  }
+
+  .store-guide-panel {
+    padding: 18px;
+  }
+
+  .store-guide-header {
+    align-items: stretch;
+  }
+
+  .store-guide-header .btn {
+    width: 100%;
   }
 
   .magazine-home-header {
