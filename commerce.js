@@ -655,7 +655,7 @@
   function renderProductCard(product, options) {
     const opts = normalizeProductCardOptions(options);
     const primaryHref = opts.primaryHref || amazonPtUrl(product.amazon);
-    const primaryLabel = opts.primaryLabel || "Ver na Amazon.es";
+    const primaryLabel = opts.primaryLabel || "Ver preço";
     const primaryAttrs = /^https?:/i.test(primaryHref)
       ? ' target="_blank" rel="sponsored nofollow noopener noreferrer"'
       : "";
@@ -891,7 +891,6 @@
         '<section class="section section--store-start" id="categorias"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Categorias</span><h2>Encontra exatamente o que procuras</h2><p>Navega por categoria e compra com confiança.</p></div></div><div class="product-grid product-grid--top-choices">' + featured + '</div><div class="category-grid">' + categoryCards + '</div></div></section>' +
         '<section class="section" id="escolhas-por-necessidade"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Escolher pelo uso</span><h2>Atalhos rápidos</h2><p>Quatro entradas curtas para decidir mais depressa.</p></div></div><div class="store-need-grid">' + needCards + '</div></div></section>' +
         '<section class="section store-endcap-section"><div class="container"><div class="store-endcap-shell">' +
-          (guideLinks ? '<div class="store-magazine-note"><div class="store-magazine-intro"><span class="eyebrow">Revista</span><strong class="store-magazine-title">Ainda a decidir?</strong><p>Lê o guia e compra com a decisão certa.</p></div><div class="store-magazine-links">' + guideLinks + '</div><div class="store-magazine-cta"><a class="btn btn-secondary btn-small" href="' + href("revista/") + '">Ver revista</a></div></div>' : "") +
           renderDisclosure({ variant: "store" }) +
         '</div></div></section>' +
       "</main>" +
