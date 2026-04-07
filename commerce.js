@@ -388,7 +388,19 @@
     return (slugs || []).map(function(item) { return articleMap.get(item); }).filter(Boolean);
   }
 
-  function renderDisclosure() {
+  function renderDisclosure(options) {
+    const opts = options || {};
+    if (opts.variant === "store") {
+      return (
+        '<div class="disclosure disclosure--store">' +
+          '<div class="disclosure-copy">' +
+            '<span class="eyebrow disclosure-eyebrow">Transparência</span>' +
+            '<strong class="disclosure-title">Links identificados. Escolha com clareza.</strong>' +
+            '<p>' + e(affiliateNotice) + "</p>" +
+          "</div>" +
+        "</div>"
+      );
+    }
     return '<div class="disclosure"><strong>Transparência:</strong> ' + e(affiliateNotice) + "</div>";
   }
 
@@ -876,24 +888,13 @@
     return (
       renderHeader() +
       '<main>' +
-        '<section class="section store-intro-section"><div class="container">' +
-          '<div class="store-hero-shell">' +
-            '<div class="hero-card store-hero-main-card store-hero-compact-card store-hero-minimal-card">' +
-              '<span class="section-flag">LOJA</span>' +
-              '<h1>Escolhe melhor. Compra mais rápido.</h1>' +
-              '<p>Máquinas, kits e cuidados prontos para comprar sem perder tempo.</p>' +
-              '<div class="hero-actions">' +
-                '<a class="btn btn-primary" href="#top-escolhas">Ver Top Escolhas</a>' +
-                '<a class="btn btn-secondary" href="#categorias">Ver categorias</a>' +
-              '</div>' +
-            '</div>' +
-          '</div>' +
-        '</div></section>' +
-        '<section class="section" id="top-escolhas"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Top Escolhas</span><h2>Os favoritos para acertar à primeira</h2><p>As escolhas com mais saída para comprares com mais confiança.</p></div></div><div class="product-grid product-grid--dense product-grid--top-choices">' + featured + '</div></div></section>' +
+        '<section class="section section--store-start" id="top-escolhas"><div class="container"><div class="section-header section-header--compact store-start-header"><div><span class="section-flag">LOJA</span><h2>Top escolhas da loja</h2><p>Máquinas, kits e cuidados prontos para comparar e comprar sem perder tempo.</p></div><div class="hero-actions store-start-actions"><a class="btn btn-secondary btn-small" href="#categorias">Ver categorias</a></div></div><div class="product-grid product-grid--dense product-grid--top-choices">' + featured + '</div></div></section>' +
         '<section class="section" id="categorias"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Categorias</span><h2>Compra pelo que realmente precisas</h2><p>Escolhe a categoria certa e encontra a melhor opção mais depressa.</p></div></div><div class="category-grid">' + categoryCards + '</div></div></section>' +
         '<section class="section" id="escolhas-por-necessidade"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Escolher pelo uso</span><h2>Atalhos rápidos</h2><p>Quatro entradas curtas para decidir mais depressa.</p></div></div><div class="store-need-grid">' + needCards + '</div></div></section>' +
-        (guideLinks ? '<section class="section store-magazine-strip"><div class="container"><div class="store-magazine-note"><span class="eyebrow">Revista</span><p>Se ainda tens dúvidas antes de clicar, lê um destes guias:</p><div class="store-magazine-links">' + guideLinks + '</div><a class="btn btn-secondary btn-small" href="' + href("revista/") + '">Ver revista</a></div></div></section>' : "") +
-        '<section class="section"><div class="container">' + renderDisclosure() + "</div></section>" +
+        '<section class="section store-endcap-section"><div class="container"><div class="store-endcap-shell">' +
+          (guideLinks ? '<div class="store-magazine-note"><div class="store-magazine-intro"><span class="eyebrow">Revista</span><strong class="store-magazine-title">Ainda a decidir?</strong><p>Entra por um guia curto e escolhe com mais confiança.</p></div><div class="store-magazine-links">' + guideLinks + '</div><div class="store-magazine-cta"><a class="btn btn-secondary btn-small" href="' + href("revista/") + '">Ver revista</a></div></div>' : "") +
+          renderDisclosure({ variant: "store" }) +
+        '</div></div></section>' +
       "</main>" +
       renderFooter()
     );
