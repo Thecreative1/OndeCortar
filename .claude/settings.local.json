@@ -8,7 +8,14 @@
       "Bash(xargs sed:*)",
       "Bash(sed -i 's/Máquinas, aparadores e conjuntos pensados para escolher com mais critério e menos ruído de catálogo\\\\./Máquinas e aparadores para cortar cabelo em casa ou num posto de barbeiro./g' loja/maquinas-de-cortar/index.html)",
       "Bash(sed -i 's/Uma área pensada para presentes úteis, com menos ruído e mais contexto para acertar melhor\\\\./Kits e conjuntos mais fáceis de escolher para oferecer, com menos risco de errar./g' loja/para-oferecer/index.html)",
-      "Bash(python3 -c ':*)"
+      "Bash(python3 -c ':*)",
+      "Bash(python3 fix_seo.py)",
+      "Bash(py --version)",
+      "Bash(/c/Users/Phoenix/AppData/Local/Microsoft/WindowsApps/python3 fix_seo.py)",
+      "Read(//c/Users/Phoenix/AppData/Local/Programs/Python//**)",
+      "Bash(ls /c/Python*)",
+      "Bash(find /c -name \"python.exe\" -maxdepth 6)",
+      "Bash(/c/Users/Phoenix/AppData/Local/Programs/Python/Python310/python.exe \"E:/GIT_HUB/OndeCortar/fix_seo.py\")"
     ]
   }
 }

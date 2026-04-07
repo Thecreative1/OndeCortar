@@ -2,7 +2,6 @@
   const html = document.documentElement;
   if (html) {
     html.setAttribute("lang", "pt-PT");
-    html.setAttribute("xml:lang", "pt-PT");
     html.setAttribute("translate", "no");
   }
   if (document.head) {
@@ -123,12 +122,18 @@
     const ogTitle = document.querySelector('meta[property="og:title"]');
     const ogDesc = document.querySelector('meta[property="og:description"]');
     const ogUrl = document.querySelector('meta[property="og:url"]');
+    const ogType = document.querySelector('meta[property="og:type"]');
     const canonicalTag = document.querySelector('link[rel="canonical"]');
+    const twTitle = document.querySelector('meta[name="twitter:title"]');
+    const twDesc = document.querySelector('meta[name="twitter:description"]');
     if (metaDesc) metaDesc.setAttribute("content", description);
     if (ogTitle) ogTitle.setAttribute("content", title);
     if (ogDesc) ogDesc.setAttribute("content", description);
     if (ogUrl) ogUrl.setAttribute("content", canonical);
+    if (ogType && page === "product") ogType.setAttribute("content", "product");
     if (canonicalTag) canonicalTag.setAttribute("href", canonical);
+    if (twTitle) twTitle.setAttribute("content", title);
+    if (twDesc) twDesc.setAttribute("content", description);
   }
 
   function setRobots(content) {
@@ -239,11 +244,11 @@
   }
 
   function articlePublishedDate(article) {
-    return article.datePublished || "2026-04-05";
+    return article.datePublished || null;
   }
 
   function articleUpdatedDate(article) {
-    return article.dateModified || "2026-04-07";
+    return article.dateModified || article.datePublished || null;
   }
 
   function formatDatePt(value) {
@@ -839,7 +844,7 @@
         "</a>"
       );
     }).join("");
-    const categoryCards = categories.map(function(item) { return renderCategoryCard(item, false); }).join("");
+    const categoryCards = categories.map(function(item) { return renderCategoryCard(item, true); }).join("");
     const guideArticles = [];
     const seenGuideSlugs = new Set();
     function pushGuide(slugValue) {
@@ -875,8 +880,8 @@
           '<div class="store-hero-shell">' +
             '<div class="hero-card store-hero-main-card store-hero-compact-card store-hero-minimal-card">' +
               '<span class="section-flag">LOJA</span>' +
-              '<h1>Top máquinas, kits e cuidados</h1>' +
-              '<p>Os produtos aparecem já abaixo.</p>' +
+              '<h1>Escolhe melhor. Compra mais rápido.</h1>' +
+              '<p>Máquinas, kits e cuidados prontos para comprar sem perder tempo.</p>' +
               '<div class="hero-actions">' +
                 '<a class="btn btn-primary" href="#top-escolhas">Ver Top Escolhas</a>' +
                 '<a class="btn btn-secondary" href="#categorias">Ver categorias</a>' +
@@ -884,8 +889,8 @@
             '</div>' +
           '</div>' +
         '</div></section>' +
-        '<section class="section" id="top-escolhas"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Top Escolhas</span><h2>Produtos para abrir primeiro</h2><p>As opções mais diretas para comparar e clicar.</p></div></div><div class="product-grid product-grid--dense product-grid--top-choices">' + featured + '</div></div></section>' +
-        '<section class="section" id="categorias"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Categorias</span><h2>Comprar por categoria</h2><p>Vai direto ao tipo de produto que procuras.</p></div></div><div class="category-grid">' + categoryCards + '</div></div></section>' +
+        '<section class="section" id="top-escolhas"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Top Escolhas</span><h2>Os favoritos para acertar à primeira</h2><p>As escolhas com mais saída para comprares com mais confiança.</p></div></div><div class="product-grid product-grid--dense product-grid--top-choices">' + featured + '</div></div></section>' +
+        '<section class="section" id="categorias"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Categorias</span><h2>Compra pelo que realmente precisas</h2><p>Escolhe a categoria certa e encontra a melhor opção mais depressa.</p></div></div><div class="category-grid">' + categoryCards + '</div></div></section>' +
         '<section class="section" id="escolhas-por-necessidade"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Escolher pelo uso</span><h2>Atalhos rápidos</h2><p>Quatro entradas curtas para decidir mais depressa.</p></div></div><div class="store-need-grid">' + needCards + '</div></div></section>' +
         (guideLinks ? '<section class="section store-magazine-strip"><div class="container"><div class="store-magazine-note"><span class="eyebrow">Revista</span><p>Se ainda tens dúvidas antes de clicar, lê um destes guias:</p><div class="store-magazine-links">' + guideLinks + '</div><a class="btn btn-secondary btn-small" href="' + href("revista/") + '">Ver revista</a></div></div></section>' : "") +
         '<section class="section"><div class="container">' + renderDisclosure() + "</div></section>" +
@@ -971,6 +976,14 @@
         "description": product.summary,
         "image": absoluteUrl(product.image),
         "url": canonical,
+        "brand": { "@type": "Brand", "name": (product.brand || product.name.split(" ")[0]) },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": product.amazon || canonical,
+          "seller": { "@type": "Organization", "name": "Amazon.es" }
+        },
         "category": (product.categories || []).map(function(item) {
           const category = categoryMap.get(item);
           return category ? category.title : item;
@@ -1129,6 +1142,11 @@
         "mainEntityOfPage": canonical,
         "datePublished": publishedDate,
         "dateModified": updatedDate,
+        "author": {
+          "@type": "Organization",
+          "name": "OndeCortar.pt",
+          "url": "https://ondecortar.pt/"
+        },
         "publisher": {
           "@type": "Organization",
           "name": "OndeCortar.pt",

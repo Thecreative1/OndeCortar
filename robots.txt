@@ -1,10 +1,4 @@
 User-agent: *
-Allow: /
-Allow: /imagens/
-Allow: /Barbeiros/
-Allow: /loja/
-Allow: /revista/
-Allow: /barbearias/
-Allow: /cidades/
+Disallow:
 
 Sitemap: https://ondecortar.pt/sitemap.xml

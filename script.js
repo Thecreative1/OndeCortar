@@ -2,7 +2,6 @@
   const html = document.documentElement;
   if (html) {
     html.setAttribute("lang", "pt-PT");
-    html.setAttribute("xml:lang", "pt-PT");
     html.setAttribute("translate", "no");
   }
   if (document.head) {
