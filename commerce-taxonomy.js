@@ -26,7 +26,7 @@
       slug: "maquinas-de-cortar",
       title: "Máquinas de cortar",
       intro: "As melhores máquinas para um corte perfeito em casa.",
-      top: ["wahl-super-taper", "braun-series-5-aio5545", "hatteker-completa"],
+      top: ["wahl-color-pro-cordless-clipper-combo", "philips-hc7650-15-series-7000", "babylisspro-chromfx-clipper"],
       picks: [["Melhor para casa", "braun-series-5-aio5545"], ["Melhor para uso frequente", "wahl-super-taper"], ["Melhor preço/versatilidade", "hatteker-completa"]],
       articles: ["como-escolher-uma-maquina-de-cortar-cabelo-para-usar-em-casa", "aparador-multifuncoes-ou-maquina-profissional-qual-compensa-mais", "7-erros-ao-comprar-uma-maquina-de-cortar-cabelo-barata", "como-manter-a-maquina-de-cortar-cabelo-a-funcionar-bem-por-mais-tempo"],
       faqs: [
@@ -39,7 +39,7 @@
       slug: "trimmers-e-shavers",
       title: "Trimmers e shavers",
       intro: "Ferramentas para detalhe, contornos e manutenção entre cortes completos.",
-      top: ["philips-bt3238", "solati-aparador", "braun-series-5-aio5545"],
+      top: ["philips-oneblade-pro-360", "braun-beardtrimmer-5-bt5500", "panasonic-er-gb43"],
       picks: [["Melhor para barba", "philips-bt3238"], ["Melhor para contornos", "solati-aparador"], ["Melhor versatilidade", "braun-series-5-aio5545"]],
       articles: ["aparador-multifuncoes-ou-maquina-profissional-qual-compensa-mais", "como-escolher-uma-maquina-de-cortar-cabelo-para-usar-em-casa"],
       faqs: [
@@ -51,7 +51,7 @@
       slug: "kits-de-barba",
       title: "Kits de barba",
       intro: "Tudo o que precisas para uma rotina de barba completa.",
-      top: ["kit-xikezan", "viking-sandalwood", "king-c-rotina"],
+      top: ["viking-revolution-beard-grooming-kit", "king-c-gillette-beard-trimmer-kit", "king-c-gillette-beard-clipper"],
       picks: [["Melhor para começar", "viking-sandalwood"], ["Melhor kit completo", "kit-xikezan"], ["Melhor opção clássica", "king-c-rotina"]],
       articles: ["melhor-kit-de-barba-para-comecar-sem-comprar-as-cegas", "o-que-vale-a-pena-num-kit-de-barba-e-o-que-e-so-ruido-de-catalogo", "como-montar-uma-rotina-simples-de-barba-em-casa"],
       faqs: [
@@ -63,7 +63,7 @@
       slug: "cremes-e-espumas",
       title: "Cremes e espumas",
       intro: "O produto certo faz toda a diferença no barbear diário.",
-      top: ["proraso-creme", "gillette-labs-gel", "proraso-pre-barba"],
+      top: ["proraso-creme", "taylor-of-old-bond-street-sandalwood", "proraso-pre-barba"],
       picks: [["Melhor para rotina clássica", "proraso-creme"], ["Melhor para rapidez", "gillette-labs-gel"], ["Melhor para pele sensível", "proraso-pre-barba"]],
       articles: ["creme-espuma-ou-gel-de-barbear-qual-escolher", "como-montar-uma-rotina-simples-de-barba-em-casa", "como-escolher-laminas-sem-irritar-a-pele-desnecessariamente"],
       faqs: [
@@ -111,7 +111,7 @@
       slug: "manutencao-de-maquinas",
       title: "Manutenção de máquinas",
       intro: "Produtos e consumíveis para prolongar a vida útil da máquina e reduzir falhas evitáveis.",
-      top: ["beardburys-spray", "colcolo-organizador", "eurostil-rolos"],
+      top: ["wahl-clipper-oil", "syprin-lubrificante-maquinas", "wahl-clipper-oil-pack"],
       picks: [["Melhor para limpeza rápida", "beardburys-spray"], ["Melhor para organização", "colcolo-organizador"], ["Melhor para higiene de serviço", "eurostil-rolos"]],
       articles: ["como-manter-a-maquina-de-cortar-cabelo-a-funcionar-bem-por-mais-tempo", "o-essencial-para-manter-uma-bancada-de-barbeiro-organizada"],
       faqs: [
@@ -123,7 +123,7 @@
       slug: "oleos-e-balms",
       title: "Óleos e balms",
       intro: "Escolhas para hidratar, disciplinar e simplificar a rotina de barba sem comprar demais.",
-      top: ["viking-sandalwood", "kit-xikezan", "zilberhaar-escova"],
+      top: ["viking-revolution-beard-oil", "honest-amish-beard-balm", "charlemagne-beard-balm"],
       picks: [["Melhor para rotina diária", "viking-sandalwood"], ["Melhor para começar", "kit-xikezan"], ["Melhor complemento", "zilberhaar-escova"]],
       articles: ["como-montar-uma-rotina-simples-de-barba-em-casa", "melhor-kit-de-barba-para-comecar-sem-comprar-as-cegas", "escova-de-barba-ou-pente-qual-usar-no-dia-a-dia"],
       faqs: [
