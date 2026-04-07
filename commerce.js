@@ -454,54 +454,101 @@
       .slice(0, 4);
   }
 
-  function collectMagazineProducts(articleList, categoryList, limit) {
+  function productPrimaryCategory(product) {
+    if (!product || !Array.isArray(product.categories)) return null;
+    for (let index = 0; index < product.categories.length; index += 1) {
+      const category = categoryMap.get(product.categories[index]);
+      if (category) return category;
+    }
+    return null;
+  }
+
+  function articlePrimaryCategory(article) {
+    const explicit = categoryMap.get(article.relatedCategory || "");
+    if (explicit) return explicit;
+
+    const recommended = articleRecommendedEntries(article);
+    for (let index = 0; index < recommended.length; index += 1) {
+      const category = productPrimaryCategory(recommended[index].product);
+      if (category) return category;
+    }
+
+    const related = getProducts(article.relatedProducts || []);
+    for (let index = 0; index < related.length; index += 1) {
+      const category = productPrimaryCategory(related[index]);
+      if (category) return category;
+    }
+
+    const hub = hubMap.get(article.hub || "");
+    if (hub && Array.isArray(hub.categories)) {
+      for (let index = 0; index < hub.categories.length; index += 1) {
+        const category = categoryMap.get(hub.categories[index]);
+        if (category) return category;
+      }
+    }
+
+    return null;
+  }
+
+  function articleQuickAnswerItems(article) {
+    const explicit = article.quickAnswers || [];
+    if (explicit.length) return explicit.slice(0, 4);
+
+    const faqs = article.faqs || [];
+    if (faqs.length) {
+      return faqs.slice(0, 4).map(function(item) {
+        return [item[0], item[1]];
+      });
+    }
+
+    return (article.sections || [])
+      .map(function(item) {
+        const paragraph = Array.isArray(item[1]) && item[1][0] ? item[1][0] : "";
+        return [item[0], paragraph];
+      })
+      .filter(function(item) { return item[0] && item[1]; })
+      .slice(0, 4);
+  }
+
+  function collectMagazineCategories(articleList, categoryList, limit) {
     const seen = new Set();
     const result = [];
 
-    function pushProduct(product) {
-      if (!product || !product.slug || seen.has(product.slug)) return;
-      seen.add(product.slug);
-      result.push(product);
-    }
-
-    function pushSlug(slug) {
-      if (!slug) return;
-      pushProduct(productMap.get(slug));
+    function pushCategory(category) {
+      if (!category || !category.slug || seen.has(category.slug)) return;
+      seen.add(category.slug);
+      result.push(category);
     }
 
     (categoryList || []).forEach(function(category) {
-      (category.top || []).forEach(pushSlug);
-      pushProduct(categoryLeadProduct(category));
+      pushCategory(category);
     });
 
     (articleList || []).forEach(function(article) {
-      articleRecommendedEntries(article).forEach(function(entry) {
-        pushProduct(entry.product);
-      });
-      (article.relatedProducts || []).forEach(pushSlug);
+      pushCategory(articlePrimaryCategory(article));
     });
 
     return result.slice(0, limit || 4);
   }
 
-  function renderMagazineProductShelf(title, copy, list, ctaHref, ctaLabel) {
+  function renderMagazineStoreBridge(title, copy, list, ctaHref, ctaLabel) {
     if (!list || !list.length) return "";
     return (
       '<section class="section"><div class="container">' +
-        '<div class="section-header"><div><span class="eyebrow">Produtos em destaque</span><h2>' + e(title) + '</h2><p>' + e(copy) + '</p></div>' +
+        '<div class="section-header"><div><span class="eyebrow">Passar para a loja</span><h2>' + e(title) + '</h2><p>' + e(copy) + '</p></div>' +
           (ctaHref ? '<div class="hero-actions"><a class="btn btn-secondary" href="' + ctaHref + '">' + e(ctaLabel || "Ver categoria") + '</a></div>' : "") +
         '</div>' +
-        '<div class="product-grid product-grid--dense magazine-product-grid">' + list.map(function(product) { return renderProductCard(product, { dense: true }); }).join("") + '</div>' +
+        '<div class="category-grid">' + list.map(function(category) { return renderCategoryCard(category, false); }).join("") + '</div>' +
       '</div></section>'
     );
   }
 
   function renderArticleQuickAnswers(article) {
-    const items = article.quickAnswers || [];
+    const items = articleQuickAnswerItems(article);
     if (!items.length) return "";
     return (
-      '<section class="section"><div class="container">' +
-        '<div class="section-header"><div><span class="eyebrow">Resposta rápida</span><h2>O que interessa saber primeiro</h2><p>Os pontos principais para perceber depressa se este guia te serve.</p></div></div>' +
+      '<section class="section" id="resposta-rapida"><div class="container">' +
+        '<div class="section-header"><div><span class="eyebrow">Resposta rápida</span><h2>Resposta curta para esta dúvida</h2><p>Se queres a versão rápida antes do detalhe, começa por estes pontos.</p></div></div>' +
         '<div class="quick-answer-grid">' +
           items.map(function(item) {
             return '<article class="quick-answer-card"><strong>' + e(item[0]) + '</strong><p>' + e(item[1]) + '</p></article>';
@@ -513,10 +560,10 @@
 
   function renderArticleSidebar(article) {
     const list = article.checklist || [];
-    const category = categoryMap.get(article.relatedCategory || "");
+    const category = articlePrimaryCategory(article);
     return (
       (list.length ? '<div class="callout-card article-sidebar-card"><span class="eyebrow">Resumo prático</span><h3>O que confirmar antes de escolher</h3><ul class="rich-list">' + list.map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></div>' : "") +
-      (category ? '<div class="callout-card article-sidebar-card"><span class="eyebrow">Categoria relacionada</span><h3>' + e(category.title) + '</h3><p>' + e(article.categoryCta || category.intro) + '</p><div class="card-actions"><a class="btn btn-primary btn-small" href="' + editorialCategoryHref(category.slug) + '">Ver Top Escolhas</a></div></div>' : "")
+      (category ? '<div class="callout-card article-sidebar-card"><span class="eyebrow">Continuar na loja</span><h3>' + e(category.title) + '</h3><p>' + e(article.categoryCta || category.intro) + '</p><div class="card-actions"><a class="btn btn-primary btn-small" href="' + editorialCategoryHref(category.slug) + '">Ver categoria da loja</a></div></div>' : "")
     );
   }
 
@@ -531,11 +578,14 @@
   }
 
   function renderArticleDecisionStrip(article) {
+    const category = articlePrimaryCategory(article);
     const entries = articleRecommendedEntries(article).slice(0, 3);
     if (!entries.length) return "";
     return (
-      '<section class="section" id="atalhos-compra"><div class="container">' +
-        '<div class="section-header section-header--compact"><div><span class="eyebrow">Atalhos de compra</span><h2>Produtos a considerar enquanto lês</h2><p>Vê aqui produtos ligados ao tema sem saíres do artigo.</p></div></div>' +
+      '<section class="section" id="perfis-de-uso"><div class="container">' +
+        '<div class="section-header section-header--compact"><div><span class="eyebrow">Perfis de uso</span><h2>Recomendações por tipo de utilização</h2><p>Se o teu caso é parecido com um destes perfis, continua pela opção certa na loja.</p></div>' +
+          (category ? '<div class="hero-actions"><a class="btn btn-secondary btn-small" href="' + editorialCategoryHref(category.slug) + '">Ver categoria da loja</a></div>' : "") +
+        '</div>' +
         '<div class="article-inline-products">' +
           entries.map(function(entry) {
             return (
@@ -545,68 +595,41 @@
                   '<span class="tag">' + e(entry.product.bestFor) + '</span>' +
                   '<strong>' + e(entry.product.name) + '</strong>' +
                   '<p>' + e(entry.blurb) + '</p>' +
-                  '<div class="card-actions"><a class="btn btn-secondary btn-small" href="' + productHref(entry.product.slug) + '">Ver produto</a></div>' +
+                  '<div class="card-actions"><a class="btn btn-secondary btn-small" href="' + productHref(entry.product.slug) + '">Abrir na loja</a></div>' +
                 '</div>' +
               '</article>'
             );
           }).join("") +
         '</div>' +
-      '</div></section>'
-    );
-  }
-
-  function renderArticleRecommendedProducts(article) {
-    const entries = articleRecommendedEntries(article);
-    if (!entries.length) return "";
-    return (
-      '<section class="section" id="produtos-artigo"><div class="container">' +
-        '<div class="section-header"><div><span class="eyebrow">Produtos recomendados</span><h2>Produtos ligados a este guia</h2><p>Se já percebeste o que precisas, continua por estes produtos.</p></div></div>' +
-        '<div class="product-grid article-recommend-grid">' +
-          entries.map(function(entry) {
-            return (
-              '<article class="product-card article-recommend-card">' +
-                '<img src="' + href(entry.product.image) + '" alt="' + e(entry.product.alt) + '" loading="lazy" />' +
-                '<div class="product-copy">' +
-                  '<div class="meta-row"><span class="tag">' + e(entry.product.bestFor) + '</span></div>' +
-                  '<h3 class="product-card-title">' + e(entry.product.name) + '</h3>' +
-                  '<p class="product-highlight-line">' + e(productHighlightLine(entry.product, entry.blurb)) + '</p>' +
-                  '<p class="product-support-line article-note">' + e(entry.note) + '</p>' +
-                  '<div class="card-actions"><a class="btn btn-secondary btn-small" href="' + productHref(entry.product.slug) + '">Ver produto</a><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(entry.product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver na Amazon.es</a></div>' +
-                '</div>' +
-              '</article>'
-            );
-          }).join("") +
-        '</div>' +
-        '<div class="section" style="padding:18px 0 0;">' + renderDisclosure() + '</div>' +
       '</div></section>'
     );
   }
 
   function renderArticleCategoryBridge(article) {
-    const category = categoryMap.get(article.relatedCategory || "");
+    const category = articlePrimaryCategory(article);
     if (!category) return "";
     return (
       '<section class="section"><div class="container callout-card article-category-bridge">' +
-        '<span class="eyebrow">Categoria da loja ligada a este guia</span>' +
+        '<span class="eyebrow">Continuar na loja</span>' +
         '<h2>' + e(category.title) + '</h2>' +
         '<p>' + e(article.categoryCta || category.intro) + '</p>' +
-        '<div class="hero-actions"><a class="btn btn-primary" href="' + editorialCategoryHref(category.slug) + '">Ver Top Escolhas da categoria</a><a class="btn btn-secondary" href="' + categoryHref(category.slug) + '">Abrir categoria completa</a></div>' +
+        '<div class="hero-actions"><a class="btn btn-primary" href="' + editorialCategoryHref(category.slug) + '">Ver categoria da loja</a><a class="btn btn-secondary" href="' + categoryHref(category.slug) + '">Abrir categoria completa</a></div>' +
       '</div></section>'
     );
   }
 
   function renderArticleFinalCta(article) {
-    const category = categoryMap.get(article.relatedCategory || "");
-    const title = article.finalCta && article.finalCta.title ? article.finalCta.title : "Comparar produtos desta categoria";
-    const copy = article.finalCta && article.finalCta.copy ? article.finalCta.copy : "Usa a categoria ligada para ver menos opções, mas mais alinhadas com o que acabaste de ler.";
+    const category = articlePrimaryCategory(article);
+    const title = article.finalCta && article.finalCta.title ? article.finalCta.title : "Leva esta resposta para a loja";
+    const copy = article.finalCta && article.finalCta.copy ? article.finalCta.copy : "A loja organiza as opções desta compra para comparares com menos ruído e mais clareza.";
     return (
       '<section class="section"><div class="container callout-card article-final-cta">' +
         '<span class="eyebrow">Próximo passo</span>' +
         '<h2>' + e(title) + '</h2>' +
         '<p>' + e(copy) + '</p>' +
         '<div class="hero-actions">' +
-          (category ? '<a class="btn btn-primary" href="' + editorialCategoryHref(category.slug) + '">Ver Top Escolhas da categoria</a>' : "") +
-          '<a class="btn btn-secondary" href="' + href("revista/") + '">Voltar à Revista</a>' +
+          (category ? '<a class="btn btn-primary" href="' + editorialCategoryHref(category.slug) + '">Ir para a loja</a>' : "") +
+          '<a class="btn btn-secondary" href="' + href("revista/") + '">Ler mais guias</a>' +
         '</div>' +
       '</div></section>'
     );
@@ -672,7 +695,7 @@
   function renderArticleCard(article, options) {
     const opts = options || {};
     const hub = hubMap.get(article.hub);
-    const category = categoryMap.get(article.relatedCategory || "");
+    const category = articlePrimaryCategory(article);
     const cover = articleCoverData(article);
     const classes = ["article-card"];
     if (opts.compact) {
@@ -710,9 +733,20 @@
     if (!list.length) return "";
     return (
         '<section class="section"><div class="container">' +
-        '<div class="section-header"><div><span class="eyebrow">Revista OndeCortar</span><h2>' + e(title) + '</h2><p>Mais artigos sobre o mesmo tema para esclarecer dúvidas e comparar melhor.</p></div></div>' +
+        '<div class="section-header"><div><span class="eyebrow">Revista OndeCortar</span><h2>' + e(title) + '</h2><p>Mais respostas para continuares a pesquisa antes de entrares na loja.</p></div></div>' +
         '<div class="article-grid">' + list.map(renderArticleCard).join("") + "</div>" +
       "</div></section>"
+    );
+  }
+
+  function renderGuideLinkPanel(title, copy, list, ctaHref, ctaLabel) {
+    if (!list || !list.length) return "";
+    return (
+      '<section class="section"><div class="container"><div class="store-guide-panel"><div class="store-guide-header"><div><span class="eyebrow">Revista OndeCortar</span><h2>' + e(title) + '</h2><p>' + e(copy) + '</p></div>' +
+        (ctaHref ? '<a class="btn btn-secondary btn-small" href="' + ctaHref + '">' + e(ctaLabel || "Ver revista") + '</a>' : "") +
+      '</div><div class="store-guide-row">' + list.map(function(article) {
+        return '<a class="store-guide-link" href="' + articleHref(article.slug) + '"><strong>' + e(article.title) + '</strong><span>Ler guia</span></a>';
+      }).join("") + '</div></div></div></section>'
     );
   }
 
@@ -912,13 +946,13 @@
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container hero-card category-hero-card"><div class="hero-grid">' +
-          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja/") + '">Loja</a><span>/</span><span>' + e(category.title) + '</span></div><span class="section-flag">Categoria da loja</span><h1>' + e(category.title) + '</h1><p>' + e(introShort) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#top-escolhas">Ver Top Escolhas</a>' + (relatedArticles[0] ? '<a class="btn btn-secondary" href="' + articleHref(relatedArticles[0].slug) + '">Ler guia relacionado</a>' : '<a class="btn btn-secondary" href="' + href("loja/") + '">Voltar à loja</a>') + '</div></div>' +
-          '<div class="hero-side"><div class="shop-mini-grid">' + topProducts.slice(0, 2).map(renderMiniProduct).join("") + '</div><div class="store-note"><strong>Ligação à revista</strong><p>' + e((relatedArticles.length ? "Tens " + relatedArticles.length + " guia" + (relatedArticles.length === 1 ? "" : "s") + " ligado" + (relatedArticles.length === 1 ? "" : "s") + " a esta categoria" : "Esta categoria mostra primeiro os produtos principais")) + ' para perceberes diferenças antes de abrir um produto.</p></div></div>' +
+          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja/") + '">Loja</a><span>/</span><span>' + e(category.title) + '</span></div><span class="section-flag">Categoria da loja</span><h1>' + e(category.title) + '</h1><p>' + e(introShort) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#top-escolhas">Ver Top Escolhas</a>' + (relatedArticles[0] ? '<a class="btn btn-secondary" href="' + articleHref(relatedArticles[0].slug) + '">Ver guia da revista</a>' : '<a class="btn btn-secondary" href="' + href("loja/") + '">Voltar à loja</a>') + '</div></div>' +
+          '<div class="hero-side"><div class="shop-mini-grid">' + topProducts.slice(0, 2).map(renderMiniProduct).join("") + '</div><div class="store-note"><strong>Ligação à revista</strong><p>' + e((relatedArticles.length ? "Tens " + relatedArticles.length + " guia" + (relatedArticles.length === 1 ? "" : "s") + " nesta categoria" : "Esta categoria foi pensada para te levar primeiro às opções certas")) + ' para tirares dúvidas de compra antes de abrires um produto.</p></div></div>' +
         '</div></div></section>' +
         '<section class="section" id="top-escolhas"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Top Escolhas</span><h2>Produtos que vale a pena abrir primeiro</h2><p>Os produtos aparecem logo abaixo do título para chegares mais rápido à compra.</p></div></div><div class="product-grid product-grid--dense product-grid--category-top">' + topProducts.map(function(item, index) { return renderProductCard(item, { dense: true, label: pickLabelMap.get(item.slug) || (index === 0 ? "Top escolha" : item.bestFor) }); }).join("") + '</div></div></section>' +
         renderCategoryGuide(category) +
         '<section class="section"><div class="container comparison-card"><div class="section-header"><div><span class="eyebrow">Melhor para</span><h2>Comparação rápida</h2><p>Quatro atalhos para chegares ao tipo de produto certo.</p></div></div><div class="comparison-table">' + comparisonRows + '</div></div></section>' +
-        (relatedArticles.length ? '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Revista</span><h2>Artigos relacionados</h2><p>Se ainda tens dúvidas, usa estes guias antes de abrir um produto específico.</p></div></div><div class="article-grid">' + relatedArticles.slice(0, 3).map(renderArticleCard).join("") + '</div></div></section>' : '') +
+        (relatedArticles.length ? renderGuideLinkPanel("Guias para tirar dúvidas nesta categoria", "A revista aprofunda diferenças, erros comuns e critérios de compra antes de voltares à loja.", relatedArticles.slice(0, 4), href("revista/"), "Ver revista") : '') +
         '<section class="section" id="faq-categoria"><div class="container">' + renderFaq(category.faqs) + '</div></section>' +
         renderWhyBuy() +
         '<section class="section"><div class="container">' + renderDisclosure() + '</div></section>' +
@@ -995,7 +1029,7 @@
     const highlightArticles = featured.slice(1, 4);
     const remainingArticles = featured.slice(4).length ? featured.slice(4) : featured.slice(1);
     const leadCover = leadArticle ? articleCoverData(leadArticle) : null;
-    const highlightedProducts = collectMagazineProducts(featured.slice(0, 6), [], 4);
+    const featuredCategories = collectMagazineCategories(featured.slice(0, 6), [], 4);
     const canonical = "https://ondecortar.pt/revista/";
     setMeta("Revista OndeCortar | Guias de compra, comparações e uso prático", "Revista OndeCortar com guias de compra, comparações e artigos práticos ligados às categorias da loja.", canonical);
     setStructuredData([
@@ -1024,7 +1058,7 @@
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container">' +
-          '<div class="section-header magazine-home-header"><div><span class="eyebrow">Revista OndeCortar</span><h1>Guias práticos e comparações para escolher o produto certo</h1><p>Cada artigo liga à categoria certa da loja e aos produtos relacionados, para passares do guia à escolha com mais clareza.</p></div><div class="hero-actions"><a class="btn btn-primary" href="#artigos">Ver guias</a><a class="btn btn-secondary" href="#seccoes">Ver secções</a></div></div>' +
+          '<div class="section-header magazine-home-header"><div><span class="eyebrow">Revista OndeCortar</span><h1>Guias para responder dúvidas de compra e levar-te à loja certa</h1><p>A revista atrai a pesquisa, responde à pergunta e encaminha depois para a categoria da loja que faz mais sentido.</p></div><div class="hero-actions"><a class="btn btn-primary" href="#artigos">Ver guias</a><a class="btn btn-secondary" href="' + href("loja/") + '">Entrar na loja</a></div></div>' +
           '<div class="magazine-home-grid">' +
             (leadArticle ? '<article class="editorial-card magazine-lead-card"><div class="magazine-lead-visual">' +
               '<a class="article-thumb article-thumb--' + leadCover.kind + '" href="' + articleHref(leadArticle.slug) + '">' +
@@ -1034,7 +1068,7 @@
             '<div class="magazine-highlight-list">' + highlightArticles.map(function(item) { return renderArticleCard(item, { compact: true }); }).join("") + '</div>' +
           '</div>' +
         '</div></section>' +
-        renderMagazineProductShelf("Produtos recomendados para começar já", "Produtos ligados aos guias em destaque, para começares pela parte prática.", highlightedProducts, href("loja/"), "Ver loja") +
+        renderMagazineStoreBridge("Quando estiveres pronto para comparar, entra por categoria", "A loja organiza as opções para passares do conteúdo à comparação com menos ruído.", featuredCategories, href("loja/"), "Entrar na loja") +
         '<section class="section" id="seccoes"><div class="container"><div class="section-header"><div><span class="eyebrow">Secções da revista</span><h2>Explorar por tema</h2><p>Se preferires navegar por assunto, aqui tens os principais temas editoriais.</p></div></div><div class="hub-grid">' + mainHubs.map(function(item) { return '<article class="hub-card"><h3>' + e(item.title) + '</h3><p>' + e(item.intro) + '</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="' + hubHref(item.slug) + '">Ver secção</a></div></article>'; }).join("") + '</div></div></section>' +
         '<section class="section" id="artigos"><div class="container"><div class="section-header"><div><span class="eyebrow">Em destaque</span><h2>Artigos em destaque</h2><p>Entra pelo artigo que te interessa e passa logo para a categoria ou o produto certo.</p></div></div><div class="article-grid">' + remainingArticles.map(function(item) { return renderArticleCard(item); }).join("") + '</div></div></section>' +
       '</main>' +
@@ -1049,7 +1083,6 @@
     setMeta(hub.title + " | Revista OndeCortar", hub.intro, canonical);
     const hubArticles = getArticles(hub.articles);
     const hubCategories = (hub.categories || []).map(function(item) { return categoryMap.get(item); }).filter(Boolean);
-    const hubProducts = collectMagazineProducts(hubArticles, hubCategories, 4);
     setStructuredData([
       {
         "@context": "https://schema.org",
@@ -1070,10 +1103,9 @@
     return (
       renderHeader() +
       '<main>' +
-        '<section class="section"><div class="container hero-card"><div class="hero-grid"><div class="hero-copy"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span><span>' + e(hub.title) + '</span></div><span class="section-flag">Cluster editorial</span><h1>' + e(hub.title) + '</h1><p>' + e(hub.intro) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#artigos-cluster">Ver artigos</a>' + (hubCategories[0] ? '<a class="btn btn-secondary" href="' + editorialCategoryHref(hubCategories[0].slug) + '">Ver Top Escolhas da categoria</a>' : "") + '</div></div><div class="hero-side"><div class="panel-note"><strong>Como usar esta secção</strong><p>Aqui tens artigos, categorias e produtos ligados à mesma compra.</p></div></div></div></div></section>' +
-        renderMagazineProductShelf("Produtos em destaque neste tema", "Os produtos aparecem logo no início para consultares opções concretas enquanto lês este tema.", hubProducts, hubCategories[0] ? editorialCategoryHref(hubCategories[0].slug) : href("loja/"), hubCategories[0] ? "Ver Top Escolhas" : "Ver loja") +
+        '<section class="section"><div class="container hero-card"><div class="hero-grid"><div class="hero-copy"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span><span>' + e(hub.title) + '</span></div><span class="section-flag">Cluster editorial</span><h1>' + e(hub.title) + '</h1><p>' + e(hub.intro) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#artigos-cluster">Ver artigos</a>' + (hubCategories[0] ? '<a class="btn btn-secondary" href="' + editorialCategoryHref(hubCategories[0].slug) + '">Ir para a loja</a>' : "") + '</div></div><div class="hero-side"><div class="panel-note"><strong>Como usar esta secção</strong><p>Lê os artigos deste tema e passa depois para a categoria da loja que melhor encaixa na tua compra.</p></div></div></div></div></section>' +
         '<section class="section" id="artigos-cluster"><div class="container"><div class="section-header"><div><span class="eyebrow">Artigos</span><h2>Artigos deste cluster</h2><p>Guias e comparações para perceber o tema e abrir a categoria certa da loja.</p></div></div><div class="article-grid">' + hubArticles.map(renderArticleCard).join("") + '</div></div></section>' +
-        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Categorias ligadas</span><h2>Onde este cluster toca na loja</h2></div></div><div class="category-grid">' + hubCategories.map(function(item) { return renderCategoryCard(item, false); }).join("") + '</div></div></section>' +
+        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Continuar na loja</span><h2>Categorias ligadas a este tema</h2><p>Quando a dúvida estiver resolvida, entra na loja pela categoria mais alinhada com este tema.</p></div></div><div class="category-grid">' + hubCategories.map(function(item) { return renderCategoryCard(item, false); }).join("") + '</div></div></section>' +
       '</main>' +
       renderFooter()
     );
@@ -1083,6 +1115,7 @@
     const article = articleMap.get(value);
     if (!article) return renderNotFound("Artigo não encontrado");
     const hub = hubMap.get(article.hub);
+    const category = articlePrimaryCategory(article);
     const canonical = "https://ondecortar.pt/revista/" + value + "/";
     const metaTitle = article.metaTitle || (article.title + " | Revista OndeCortar");
     const metaDescription = article.metaDescription || article.excerpt;
@@ -1130,17 +1163,16 @@
     return (
       renderHeader() +
       '<main>' +
-        '<section class="section"><div class="container hero-card article-header"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span>' + (hub ? '<a href="' + hubHref(article.hub) + '">' + e(hub.title) + '</a>' : '<span>Revista</span>') + '</div><span class="section-flag">Artigo da Revista</span><h1>' + e(article.title) + '</h1><div class="article-dates"><span>Publicado em ' + e(formatDatePt(publishedDate)) + '</span><span>Atualizado em ' + e(formatDatePt(updatedDate)) + '</span></div><p>' + e(article.intro) + '</p><p class="article-subcopy">' + e(article.subIntro || article.excerpt) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#atalhos-compra">Ver atalhos de compra</a>' + (article.relatedCategory ? '<a class="btn btn-secondary" href="' + editorialCategoryHref(article.relatedCategory) + '">Ver categoria ligada</a>' : "") + '</div></div></section>' +
+        '<section class="section"><div class="container hero-card article-header"><div class="breadcrumbs"><a href="' + href("revista/") + '">Revista</a><span>/</span>' + (hub ? '<a href="' + hubHref(article.hub) + '">' + e(hub.title) + '</a>' : '<span>Revista</span>') + '</div><span class="section-flag">Artigo da Revista</span><h1>' + e(article.title) + '</h1><div class="article-dates"><span>Publicado em ' + e(formatDatePt(publishedDate)) + '</span><span>Atualizado em ' + e(formatDatePt(updatedDate)) + '</span></div><p>' + e(article.intro) + '</p><p class="article-subcopy">' + e(article.subIntro || article.excerpt) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#resposta-rapida">Ver resposta rápida</a>' + (category ? '<a class="btn btn-secondary" href="' + editorialCategoryHref(category.slug) + '">Ver categoria da loja</a>' : "") + '</div></div></section>' +
         renderArticleQuickAnswers(article) +
-        renderArticleCategoryBridge(article) +
-        renderArticleDecisionStrip(article) +
         '<section class="section"><div class="container article-layout"><div class="article-body">' +
           (article.sections || []).map(function(item) { return '<article class="article-section"><h2>' + e(item[0]) + '</h2>' + item[1].map(function(text) { return "<p>" + e(text) + "</p>"; }).join("") + "</article>"; }).join("") +
         '</div><aside class="stack">' + renderArticleSidebar(article) + '</aside></div></section>' +
-        renderArticleRecommendedProducts(article) +
-        renderArticleFinalCta(article) +
+        renderArticleDecisionStrip(article) +
+        renderArticleCategoryBridge(article) +
         (article.faqs && article.faqs.length ? '<section class="section" id="faq-artigo"><div class="container">' + renderFaq(article.faqs) + '</div></section>' : "") +
         renderRelatedArticles("Artigos relacionados", article.relatedArticles) +
+        renderArticleFinalCta(article) +
       '</main>' +
       renderFooter()
     );

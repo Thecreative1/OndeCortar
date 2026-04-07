@@ -1123,6 +1123,13 @@ body[data-page="store"] #categorias .category-card h3 {
   max-width: 28ch;
 }
 
+.store-guide-header p {
+  margin: 0;
+  max-width: 56ch;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .store-guide-header .btn {
   align-self: start;
 }
