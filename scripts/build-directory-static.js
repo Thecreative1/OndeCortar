@@ -48,6 +48,18 @@ function hasPublicCity(value) {
   return Boolean(text) && !utils.ehPaisConhecido(text);
 }
 
+function localityForm(value) {
+  return utils.obterFormaLocalidade(value);
+}
+
+function locativeLabel(value) {
+  return localityForm(value).locative || ("em " + String(value || "").trim());
+}
+
+function barbersLabel(value) {
+  return utils.barbeariasNaLocalidade(value);
+}
+
 function publicLocationLabel(barber) {
   if (!barber) return "Localização a confirmar";
   return barber.city || barber.locality || barber.district || "Localização a confirmar";
@@ -233,29 +245,30 @@ function displayUrl(value) {
 }
 
 function buildProfileEditorial(barber) {
-  const placeLabel = publicLocationLabel(barber);
+  const cityLocative = barber.city ? locativeLabel(barber.city) : "";
+  const localityLocative = barber.locality ? locativeLabel(barber.locality) : "";
   const intro = barber.zone && barber.city && barber.zone !== barber.city
-    ? barber.name + " fica na zona de " + barber.zone + ", em " + barber.city + "."
+    ? barber.name + " fica na zona de " + barber.zone + ", " + cityLocative + "."
     : barber.city
-      ? barber.name + " fica em " + barber.city + "."
+      ? barber.name + " fica " + cityLocative + "."
       : barber.locality
-        ? barber.name + " está localizado em " + barber.locality + "."
+        ? barber.name + " fica " + localityLocative + "."
         : barber.name + " tem a localização pública ainda em revisão.";
   const addressSentence = barber.morada
     ? "A morada publicada é " + barber.morada + "."
     : "A ficha pública ainda não mostra uma morada completa.";
   const channels = [];
   if (barber.telefone) channels.push("telefone");
-  if (barber.booking) channels.push("ligação de marcação");
+  if (barber.booking) channels.push("ligação para marcação");
   if (barber.website) channels.push("website");
   if (barber.instagram) channels.push("Instagram");
   if (barber.facebook) channels.push("Facebook");
   if (barber.email) channels.push("email");
   const contactSentence = channels.length
-    ? "Tens disponível " + joinNatural(channels) + " para escolher o contacto mais direto."
+    ? "Nesta ficha encontras " + joinNatural(channels) + " para escolher a forma de contacto mais prática."
     : "Nesta ficha podes confirmar a morada e os dados públicos disponíveis antes de contactar.";
   const horarioSentence = barber.horario
-    ? "O horário atualmente indicado é " + barber.horario + "."
+    ? "O horário indicado é " + barber.horario + "."
     : "O horário ainda não foi indicado publicamente nesta ficha.";
   const updatedSentence = "Informação atualizada em " + formatDate(barber.lastmod) + ".";
   return [intro, addressSentence, contactSentence, horarioSentence, updatedSentence].join(" ");
@@ -264,33 +277,48 @@ function buildProfileEditorial(barber) {
 function buildCardSummary(barber) {
   const bits = [];
   if (barber.zone && barber.zone !== barber.city) bits.push(barber.zone);
-  if (barber.telefone) bits.push("telefone disponível");
+  if (barber.telefone) bits.push("telefone");
   else if (barber.booking) bits.push("marcação online");
   else if (barber.website || barber.instagram || barber.facebook) bits.push("links úteis");
-  if (barber.horario) bits.push("horário indicado");
+  if (barber.horario) bits.push("horário");
   return bits.length
-    ? "Ficha em " + joinNatural(bits) + "."
+    ? "Ficha com " + joinNatural(bits) + "."
     : "Consulta a morada e a localização desta barbearia.";
 }
 
 function buildCityIntro(cityName, cityBarbers) {
+  const cityLocative = locativeLabel(cityName);
   const withPhone = cityBarbers.filter((barber) => barber.telefone).length;
   const withBooking = cityBarbers.filter((barber) => barber.booking).length;
   const withSocial = cityBarbers.filter((barber) => barber.instagram || barber.facebook || barber.website).length;
+  const totalLabel = cityBarbers.length + " barbearia" + (cityBarbers.length === 1 ? "" : "s");
+  const phoneLabel = withPhone === 0
+    ? "nenhuma ficha mostra telefone"
+    : withPhone === 1
+      ? "1 ficha mostra telefone"
+      : withPhone + " fichas mostram telefone";
+  const socialLabel = withSocial === 0
+    ? "nenhuma ficha mostra presença online"
+    : withSocial === 1
+      ? "1 ficha mostra presença online"
+      : withSocial + " fichas mostram presença online";
   return [
-    "Esta página reúne " + cityBarbers.length + " barbearias em " + cityName + " já listadas no OndeCortar.pt.",
-    "Podes comparar moradas, telefones, mapa e links úteis antes de escolher, com " + withPhone + " fichas a mostrar telefone e " + withSocial + " a mostrar presença online.",
+    "Esta página reúne " + totalLabel + " já listada" + (cityBarbers.length === 1 ? "" : "s") + " " + cityLocative + ".",
+    "Podes comparar moradas, telefones, mapa e links úteis antes de escolher. Neste momento, " + phoneLabel + " e " + socialLabel + ".",
     withBooking
-      ? "Algumas opções também já apresentam marcação online, o que ajuda a decidir com mais rapidez quando queres tratar de corte, barba ou manutenção regular."
-      : "Mesmo quando a marcação online ainda não aparece, a listagem ajuda a perceber rapidamente que espaços têm informação suficiente para contactar e comparar."
+      ? (withBooking === 1
+        ? "Uma das opções já tem marcação online, o que facilita o primeiro contacto."
+        : "Algumas opções também já têm marcação online, o que facilita o primeiro contacto.")
+      : "Mesmo quando a marcação online ainda não aparece, esta lista ajuda a perceber que espaços já têm informação suficiente para comparar e contactar."
   ].join(" ");
 }
 
 function buildCityGuide(cityName) {
+  const cityLocative = locativeLabel(cityName);
   return [
-    "Em " + cityName + ", vale a pena começar pela morada e pela zona para perceber se a barbearia encaixa no teu percurso habitual.",
-    "Quando existem telefone, website ou Instagram, confirma primeiro disponibilidade, estilo de serviço e se aceitam marcação online.",
-    "Se estiveres entre várias opções, compara a clareza dos dados públicos: fichas com morada completa, contactos e informação atualizada tendem a facilitar a decisão."
+    cityLocative.charAt(0).toUpperCase() + cityLocative.slice(1) + ", vale a pena começar pela morada e pela zona para perceber se a barbearia encaixa no teu percurso habitual.",
+    "Quando há telefone, website ou Instagram, confirma primeiro disponibilidade, tipo de serviço e se aceitam marcação online.",
+    "Se estiveres entre várias opções, dá prioridade às fichas com morada completa, contactos claros e informação atualizada."
   ];
 }
 
@@ -685,7 +713,7 @@ function renderFooter(prefix) {
           <img src="${prefix}imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
           <strong>OndeCortar.pt</strong>
         </div>
-        <p>Diretório de barbearias em Portugal com páginas locais, perfis completos, loja e revista para continuar a decisão.</p>
+        <p>Diretório de barbearias em Portugal com páginas locais, perfis completos, loja e revista para encontrares um espaço e comparares produtos no mesmo site.</p>
       </div>
       <div class="footer-links">
         <a href="${prefix}index.html">Homepage</a>
@@ -767,10 +795,10 @@ function renderProfilePage(barber, citiesMap) {
   const canonical = absoluteUrl(barber.profileUrl);
   const placeLabel = publicLocationLabel(barber);
   const title = barber.city
-    ? barber.name + " em " + barber.city + " | Contactos, morada e mapa | OndeCortar.pt"
+    ? barber.name + " " + locativeLabel(barber.city) + " | Contactos, morada e mapa | OndeCortar.pt"
     : barber.name + " | Contactos, morada e mapa | OndeCortar.pt";
   const description = barber.city
-    ? "Vê morada, telefone, mapa, horário e links úteis de " + barber.name + " em " + barber.city + "."
+    ? "Vê morada, telefone, mapa, horário e links úteis de " + barber.name + " " + locativeLabel(barber.city) + "."
     : "Vê morada, telefone, mapa, horário e links úteis de " + barber.name + ".";
   const structuredData = [
     {
@@ -824,7 +852,7 @@ function renderProfilePage(barber, citiesMap) {
   const sameCityMarkup = sameCity.length
     ? sameCity.map((item) => renderBarberCard(item, prefix, { showZone: true })).join("")
     : city
-      ? '<article class="card"><h3>Mais opções em ' + escapeHtml(city.name) + '</h3><p>À medida que o diretório crescer nesta cidade, esta área passa a mostrar mais alternativas locais.</p><div class="card-actions"><a class="btn btn-secondary" href="' + escapeHtml(prefix + city.url) + '">Ver página da cidade</a></div></article>'
+      ? '<article class="card"><h3>Mais opções ' + escapeHtml(locativeLabel(city.name)) + '</h3><p>À medida que o diretório crescer nesta cidade, esta área passa a mostrar mais alternativas locais.</p><div class="card-actions"><a class="btn btn-secondary" href="' + escapeHtml(prefix + city.url) + '">Ver página da cidade</a></div></article>'
       : '<article class="card"><h3>Continuar no diretório</h3><p>Esta ficha ainda está a ser afinada a nível de localização. Enquanto isso, podes explorar outras barbearias no diretório.</p><div class="card-actions"><a class="btn btn-secondary" href="' + escapeHtml(prefix + 'index.html#explorar') + '">Ver diretório</a></div></article>';
   const linksMetaMarkup = [
     barber.booking ? '<div class="meta-row"><strong>Marcação</strong><span><a href="' + escapeHtml(barber.booking) + '" target="_blank" rel="nofollow noopener noreferrer">Abrir marcação</a></span></div>' : "",
@@ -927,8 +955,8 @@ ${renderHeader(prefix, "cidades")}
       <div class="section-header">
         <div>
           <span class="eyebrow">${city ? "Mesma cidade" : "Diretório"}</span>
-          <h2>${city ? "Outras barbearias em " + escapeHtml(city.name) : "Outras barbearias no diretório"}</h2>
-          <p>${city ? "Explora mais opções nesta cidade para comparar localização, contactos e informação disponível." : "Explora outras fichas com morada, contactos e localização já publicados."}</p>
+          <h2>${city ? escapeHtml(barbersLabel(city.name)) : "Outras barbearias no diretório"}</h2>
+          <p>${city ? "Explora mais opções nesta cidade para comparar morada, contactos e informação útil antes de escolher." : "Explora outras fichas com morada, contactos e localização já publicados."}</p>
         </div>
       </div>
       <div class="barber-grid">
@@ -966,8 +994,10 @@ ${Array.isArray(barber.coords) ? `
 function renderCityPage(city) {
   const prefix = "../../";
   const canonical = absoluteUrl(city.url);
-  const title = "Barbearias em " + city.name + " | Mapa, contactos e perfis | OndeCortar.pt";
-  const description = "Encontra barbearias em " + city.name + " com morada, contactos, mapa e links úteis. Compara opções e escolhe melhor no OndeCortar.pt.";
+  const cityBarbersLabel = barbersLabel(city.name);
+  const cityLocative = locativeLabel(city.name);
+  const title = cityBarbersLabel + " | Mapa, contactos e perfis | OndeCortar.pt";
+  const description = "Encontra barbearias " + cityLocative + " com morada, contactos, mapa e links úteis. Compara opções e escolhe melhor no OndeCortar.pt.";
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -981,14 +1011,14 @@ function renderCityPage(city) {
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "name": "Barbearias em " + city.name,
+      "name": cityBarbersLabel,
       "description": description,
       "url": canonical
     },
     {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "name": "Barbearias em " + city.name,
+      "name": cityBarbersLabel,
       "itemListElement": city.barbearias.map((barber, index) => ({
         "@type": "ListItem",
         "position": index + 1,
@@ -1012,7 +1042,7 @@ ${renderHeader(prefix, "cidades")}
             <span>${escapeHtml(city.name)}</span>
           </div>
           <span class="eyebrow">Página de cidade</span>
-          <h1>Barbearias em ${escapeHtml(city.name)}</h1>
+          <h1>${escapeHtml(cityBarbersLabel)}</h1>
           <p>${escapeHtml(city.intro)}</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#lista-barbearias">Ver barbearias</a>
@@ -1020,7 +1050,7 @@ ${renderHeader(prefix, "cidades")}
           </div>
         </div>
         <aside class="summary-panel">
-          <div class="summary-row"><span>Total listado</span>${escapeHtml(String(city.barbearias.length))} fichas</div>
+          <div class="summary-row"><span>Total listado</span>${escapeHtml(String(city.barbearias.length))} ficha${city.barbearias.length === 1 ? "" : "s"}</div>
           <div class="summary-row"><span>Última atualização</span>${escapeHtml(formatDate(city.lastmod))}</div>
           <div class="summary-row"><span>Exploração rápida</span><a href="#lista-barbearias">Perfis individuais</a></div>
         </aside>
@@ -1033,8 +1063,8 @@ ${renderHeader(prefix, "cidades")}
       <div class="section-header">
         <div>
           <span class="eyebrow">Perfis locais</span>
-          <h2>Lista de barbearias em ${escapeHtml(city.name)}</h2>
-          <p>Todos os perfis abaixo mostram morada, contactos, mapa e ligação direta para a ficha individual.</p>
+          <h2>${escapeHtml(cityBarbersLabel)}</h2>
+          <p>Todos os perfis abaixo mostram morada, contactos, mapa e acesso direto à ficha individual.</p>
         </div>
       </div>
       <div class="barber-grid">
@@ -1047,23 +1077,23 @@ ${renderHeader(prefix, "cidades")}
     <div class="container grid-2">
       <article class="card">
         <span class="eyebrow">Escolher melhor</span>
-        <h2>Como escolher uma barbearia em ${escapeHtml(city.name)}</h2>
+        <h2>Como escolher uma barbearia ${escapeHtml(cityLocative)}</h2>
         <ul class="list-clean">
           ${city.guide.map((item) => "<li>" + escapeHtml(item) + "</li>").join("")}
         </ul>
       </article>
       <aside class="stack">
         <article class="card">
-          <span class="eyebrow">Ligação interna</span>
-          <h3>Da cidade para a decisão</h3>
-          <p>Depois de encontrares uma barbearia nesta cidade, podes seguir para a loja ou para a revista se quiseres comparar produtos e rotinas em casa.</p>
+          <span class="eyebrow">Loja e revista</span>
+          <h3>Depois da pesquisa, o que podes ver a seguir</h3>
+          <p>Depois de encontrares uma barbearia nesta cidade, também podes abrir a loja ou a revista para comparar produtos e rotinas em casa.</p>
           <div class="card-actions">
             <a class="btn btn-primary" href="${prefix}loja/${escapeHtml(city.storeCategory)}/">Ver categoria da loja</a>
             <a class="btn btn-secondary" href="${prefix}revista/${escapeHtml(city.magazineArticle)}/">Ler artigo relacionado</a>
           </div>
         </article>
         <article class="card">
-          <h3>És dono de uma barbearia em ${escapeHtml(city.name)}?</h3>
+            <h3>És dono de uma barbearia ${escapeHtml(cityLocative)}?</h3>
           <p>Uma ficha completa melhora a presença nesta página de cidade, acrescenta contactos úteis e cria um perfil mais forte para Google e utilizadores.</p>
           <div class="card-actions">
             <a class="btn btn-primary" href="${prefix}registar.html">Adicionar ou atualizar</a>
@@ -1124,14 +1154,14 @@ ${renderHeader(prefix, "cidades")}
         <div>
           <span class="eyebrow">Cidades</span>
           <h2>Páginas locais disponíveis</h2>
-          <p>Cada página de cidade reúne perfis individuais, texto editorial, orientação prática e ligação interna para loja e revista.</p>
+          <p>Cada página de cidade reúne perfis individuais, texto útil, orientação prática e links para a loja e para a revista.</p>
         </div>
       </div>
       <div class="city-grid">
         ${cities.map((city) => `
           <article class="card">
-            <span class="pill">${escapeHtml(String(city.barbearias.length))} barbearias</span>
-            <h3><a href="${prefix + city.url}">Barbearias em ${escapeHtml(city.name)}</a></h3>
+            <span class="pill">${escapeHtml(String(city.barbearias.length))} barbearia${city.barbearias.length === 1 ? "" : "s"}</span>
+            <h3><a href="${prefix + city.url}">${escapeHtml(barbersLabel(city.name))}</a></h3>
             <p>${escapeHtml(city.intro)}</p>
             <div class="card-actions">
               <a class="btn btn-secondary" href="${prefix + city.url}">Ver página da cidade</a>

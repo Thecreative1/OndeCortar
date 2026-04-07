@@ -14,6 +14,48 @@
   const STREET_REGEX = /(rua|r\.|avenida|av\.|praceta|pra[cç]a|largo|estrada|travessa|tv\.|rotunda|alameda|ed\.|edif|bloco|loja|shopping|centro comercial|guimaraeshopping|forum|fórum|c\. comercial|bairro|parque|mercado)/i;
   const VENUE_REGEX = /(shopping|centro comercial|forum|fórum|loja|mercado|studio|barbershop|barber shop|barbearia)/i;
   const COUNTRY_SEGMENTS = new Set(["portugal", "portugal continental", "pt"]);
+  const LOCALITY_FRONTEND_FORMS = {
+    "lisboa": { locative: "em Lisboa" },
+    "guimaraes": { locative: "em Guimarães" },
+    "braga": { locative: "em Braga" },
+    "faro": { locative: "em Faro" },
+    "coimbra": { locative: "em Coimbra" },
+    "aveiro": { locative: "em Aveiro" },
+    "leiria": { locative: "em Leiria" },
+    "setubal": { locative: "em Setúbal" },
+    "setúbal": { locative: "em Setúbal" },
+    "evora": { locative: "em Évora" },
+    "évora": { locative: "em Évora" },
+    "loule": { locative: "em Loulé" },
+    "loulé": { locative: "em Loulé" },
+    "vila nova de gaia": { locative: "em Vila Nova de Gaia" },
+    "matosinhos": { locative: "em Matosinhos" },
+    "fafe": { locative: "em Fafe" },
+    "porto": { locative: "no Porto" },
+    "barreiro": { locative: "no Barreiro" },
+    "montijo": { locative: "no Montijo" },
+    "funchal": { locative: "no Funchal" },
+    "prior velho": { locative: "no Prior Velho" },
+    "amadora": { locative: "na Amadora" },
+    "nazare": { locative: "na Nazaré" },
+    "nazaré": { locative: "na Nazaré" },
+    "guarda": { locative: "na Guarda" },
+    "covilha": { locative: "na Covilhã" },
+    "covilhã": { locative: "na Covilhã" },
+    "figueira da foz": { locative: "na Figueira da Foz" },
+    "povoa de santa iria": { locative: "na Póvoa de Santa Iria" },
+    "póvoa de santa iria": { locative: "na Póvoa de Santa Iria" },
+    "calheta": { locative: "na Calheta" },
+    "tocha": { locative: "na Tocha" },
+    "quinta da redonda": { locative: "na Quinta da Redonda" },
+    "ilha do faial": { locative: "na Ilha do Faial" },
+    "ilha do pico": { locative: "na Ilha do Pico" },
+    "ilha terceira": { locative: "na Ilha Terceira" },
+    "horta (angustias)": { locative: "na Horta (Angústias)" },
+    "horta (angústias)": { locative: "na Horta (Angústias)" },
+    "falagueira-venda nova amadora": { locative: "na Falagueira-Venda Nova Amadora" },
+    "parede - jardins da parede": { locative: "na Parede - Jardins da Parede" }
+  };
   const PLACEHOLDER_PHONE_DIGITS = new Set([
     "351253000000",
     "351259123456",
@@ -365,6 +407,29 @@
     }
 
     return text;
+  }
+
+  function obterFormaLocalidade(value) {
+    const text = trimToNull(value) || "";
+    const normalized = normalizarTexto(text);
+    const entry = LOCALITY_FRONTEND_FORMS[normalized];
+
+    if (!text) {
+      return {
+        name: "",
+        locative: ""
+      };
+    }
+
+    return {
+      name: text,
+      locative: entry && entry.locative ? entry.locative : "em " + text
+    };
+  }
+
+  function barbeariasNaLocalidade(value) {
+    const form = obterFormaLocalidade(value);
+    return form.locative ? "Barbearias " + form.locative : "Barbearias";
   }
 
   function ehSegmentoPorta(value) {
@@ -892,6 +957,8 @@
     normalizarTexto: normalizarTexto,
     ehPaisConhecido: ehPaisConhecido,
     sanitizarCidadePublica: sanitizarCidadePublica,
+    obterFormaLocalidade: obterFormaLocalidade,
+    barbeariasNaLocalidade: barbeariasNaLocalidade,
     normalizarNome: normalizarNome,
     normalizarTelefone: normalizarTelefone,
     telefonePlaceholderReason: telefonePlaceholderReason,

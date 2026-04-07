@@ -75,6 +75,27 @@
     return text && !isCountryValue(text) ? text : "";
   }
 
+  function getLocalityForm(value) {
+    if (locationUtils && typeof locationUtils.obterFormaLocalidade === "function") {
+      return locationUtils.obterFormaLocalidade(value);
+    }
+
+    const text = String(value || "").trim();
+    return {
+      name: text,
+      locative: text ? "em " + text : ""
+    };
+  }
+
+  function getBarbersLabel(value) {
+    if (locationUtils && typeof locationUtils.barbeariasNaLocalidade === "function") {
+      return locationUtils.barbeariasNaLocalidade(value);
+    }
+
+    const form = getLocalityForm(value);
+    return form.locative ? "Barbearias " + form.locative : "Barbearias";
+  }
+
   function slugify(texto) {
     return normalizar(texto)
       .replace(/[^a-z0-9]+/g, "-")
@@ -300,18 +321,18 @@
     }
 
     if (!details.length) {
-      return "Vê morada e informação útil desta barbearia.";
+      return "Consulta a morada e os dados públicos desta barbearia.";
     }
 
     if (details.length === 1) {
-      return capitalize(details[0]) + " disponível.";
+      return "Tem " + details[0] + ".";
     }
 
     if (details.length === 2) {
-      return capitalize(details[0]) + " e " + details[1] + " disponíveis.";
+      return "Tem " + details[0] + " e " + details[1] + ".";
     }
 
-    return capitalize(details.slice(0, -1).join(", ")) + " e " + details[details.length - 1] + " disponíveis.";
+    return "Tem " + details.slice(0, -1).join(", ") + " e " + details[details.length - 1] + ".";
   }
 
   function buildUsefulTags(barber) {
@@ -650,6 +671,8 @@
     slugify: slugify,
     formatarTelefone: formatarTelefone,
     inferirCidade: inferirCidade,
+    getLocalityForm: getLocalityForm,
+    getBarbersLabel: getBarbersLabel,
     getDisplayPlace: function(barber) {
       return barber && (barber.city || barber.locality || barber.district) ? (barber.city || barber.locality || barber.district) : "Localização a confirmar";
     },

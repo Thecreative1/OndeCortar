@@ -1547,7 +1547,7 @@
           <span class="eyebrow">Barbearias em Portugal</span>
           <h1 class="hero-title">Encontra barbearias em Portugal</h1>
           <p class="hero-subtitle">Pesquisa por cidade, zona ou nome e vê morada, contacto e localização num só lugar.</p>
-          <p class="hero-intro-copy">O OndeCortar junta diretório, loja e revista no mesmo sítio: encontras barbearias em Portugal com páginas por cidade, perfis individuais, produtos recomendados e guias práticos para continuar a decisão.</p>
+          <p class="hero-intro-copy">O OndeCortar junta diretório, loja e revista no mesmo sítio: encontras barbearias em Portugal com páginas por cidade, perfis individuais, produtos recomendados e guias práticos para continuares a pesquisa ou comprares com mais segurança.</p>
 
           <div class="hero-link-block">
             <strong>Cidades principais com página própria</strong>
@@ -1573,7 +1573,7 @@
             <div class="hero-promo-head">
               <span class="eyebrow">Para donos de barbearias</span>
               <h3>Queres trazer mais clientes para a tua barbearia?</h3>
-              <p>Cria a tua ficha no OndeCortar e ganha presença no mapa, na pesquisa e na página da tua cidade.</p>
+              <p>Cria a tua ficha no OndeCortar e passa a aparecer no mapa, na pesquisa e na página da tua cidade.</p>
             </div>
 
             <div class="hero-promo-points">
@@ -1587,7 +1587,7 @@
               </div>
               <div class="hero-promo-point">
                 <strong>Mais contactos</strong>
-                <span>Facilita chamadas, cliques, visitas ao perfil e descoberta local.</span>
+                <span>Facilita chamadas, cliques e visitas ao perfil para quem te procura na tua zona.</span>
               </div>
             </div>
 
@@ -1637,7 +1637,7 @@
           <article class="how-step">
             <span class="how-step-num">1</span>
             <h3>Procura por cidade, zona ou nome</h3>
-            <p>Usa a pesquisa para encontrar barbearias perto de ti ou numa zona específica de Portugal.</p>
+          <p>Usa a pesquisa para encontrar barbearias perto de ti ou numa cidade ou zona específica.</p>
           </article>
           <article class="how-step">
             <span class="how-step-num">2</span>
@@ -1791,7 +1791,7 @@
           <article class="city-card surface-card">
             <strong>Braga</strong>
             <h3><a href="cidades/braga/">Barbearias em Braga</a></h3>
-            <p>Entrada rápida para comparar perfis e abrir a ficha certa em Braga.</p>
+            <p>Página local com perfis, contactos e acesso rápido às fichas de Braga.</p>
             <a class="btn btn-secondary btn-small" href="cidades/braga/">Explorar Braga</a>
           </article>
           <article class="city-card surface-card">
@@ -1827,7 +1827,7 @@
         <div class="owner-copy">
           <span class="eyebrow">Para donos de barbearias</span>
           <h2>Tens uma barbearia? Faz-te encontrar com mais facilidade</h2>
-          <p>Adiciona ou atualiza a tua ficha para ganhares mais visibilidade no mapa, na pesquisa e na página da tua cidade, com um perfil mais completo para novos clientes.</p>
+          <p>Adiciona ou atualiza a tua ficha para apareceres melhor no mapa, na pesquisa e na página da tua cidade, com um perfil mais completo para novos clientes.</p>
           <div class="owner-actions">
             <a class="btn btn-primary" href="registar.html">Adicionar ou atualizar barbearia</a>
             <a class="btn btn-secondary" href="faq.html">Ver FAQ</a>
@@ -2105,11 +2105,12 @@
 
       function renderCities() {
         citiesGrid.innerHTML = popularCities.map(function(item) {
+          const label = directory.getBarbersLabel(item.city);
           return (
             '<article class="city-card">' +
               "<strong>" + item.count + "</strong>" +
-              "<h3>" + directory.escapeHtml(item.city) + "</h3>" +
-              "<p>Uma entrada rápida para descobrir barbearias já presentes nesta zona.</p>" +
+              "<h3>" + directory.escapeHtml(label) + "</h3>" +
+              "<p>Vê as barbearias já listadas nesta cidade e abre a ficha certa mais depressa.</p>" +
               '<button class="btn btn-secondary btn-small" type="button" data-city-search="' + directory.escapeHtml(item.city) + '">Explorar ' + directory.escapeHtml(item.city) + "</button>" +
             "</article>"
           );
