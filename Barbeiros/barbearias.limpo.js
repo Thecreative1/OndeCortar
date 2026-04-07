@@ -1595,46 +1595,6 @@ const barbearias = [
     "qualidade_ficha": "alta"
   },
   {
-    "nome": "Butterfly Cabeleireiro & Barbearia",
-    "slug": "butterfly-cabeleireiro-barbearia",
-    "distrito": "",
-    "concelho": "Portugal",
-    "freguesia": "Santa Bárbara de Nexe",
-    "city": "Portugal",
-    "zone": "Santa Bárbara de Nexe",
-    "morada": "R. de Loule 20, Portugal",
-    "address_raw": "R. de Loule 20, Santa Bárbara de Nexe, Portugal",
-    "street": "R. de Loule",
-    "street_number": "20",
-    "complemento": "",
-    "localidade": "Portugal",
-    "codigo_postal": "",
-    "country": "Portugal",
-    "data_confidence": "medium",
-    "needs_review": false,
-    "location_flags": [],
-    "telefone": "+351 913 889 678",
-    "email": null,
-    "website": null,
-    "instagram": null,
-    "facebook": null,
-    "google_maps": null,
-    "horario": null,
-    "observacoes": null,
-    "coords": [
-      37.1036125,
-      -7.9634904
-    ],
-    "status": "confirmado",
-    "fontes": [],
-    "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
-    "qualidade_ficha": "alta",
-    "valor_original": {
-      "morada": "R. de Loule 20, Santa Bárbara de Nexe, Portugal"
-    }
-  },
-  {
     "nome": "Barbearia Inclusive",
     "slug": "barbearia-inclusive",
     "distrito": "",
@@ -1786,49 +1746,6 @@ const barbearias = [
     "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
-  },
-  {
-    "nome": "Barbearia S. Barba",
-    "slug": "barbearia-s-barba",
-    "distrito": "",
-    "concelho": "Santa Bárbara de Nexe",
-    "freguesia": "",
-    "city": "Santa Bárbara de Nexe",
-    "zone": "",
-    "morada": "R. de Loule 2, 8005-491 Santa Bárbara de Nexe",
-    "address_raw": "R. de Loule 2, 8005-491 Santa Bárbara de Nexe, Faro",
-    "street": "R. de Loule",
-    "street_number": "2",
-    "complemento": "",
-    "localidade": "Santa Bárbara de Nexe",
-    "codigo_postal": "8005-491",
-    "country": "Portugal",
-    "data_confidence": "high",
-    "needs_review": false,
-    "location_flags": [],
-    "telefone": null,
-    "email": null,
-    "website": null,
-    "instagram": null,
-    "facebook": "https://www.facebook.com/s.barbaearia/",
-    "google_maps": null,
-    "horario": null,
-    "observacoes": null,
-    "coords": [
-      37.1038645,
-      -7.964627
-    ],
-    "status": "confirmado",
-    "fontes": [
-      "https://www.facebook.com/s.barbaearia/"
-    ],
-    "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
-    "qualidade_ficha": "alta",
-    "valor_original": {
-      "website": "https://www.facebook.com/s.barbaearia/",
-      "morada": "R. de Loule 2, 8005-491 Santa Bárbara de Nexe, Faro"
-    }
   },
   {
     "nome": "Barbearia Paulo",
@@ -4014,45 +3931,6 @@ const barbearias = [
     "qualidade_ficha": "alta"
   },
   {
-    "nome": "The Barbers",
-    "slug": "the-barbers",
-    "distrito": "Faro",
-    "concelho": "Almancil",
-    "freguesia": "",
-    "city": "Almancil",
-    "zone": "",
-    "morada": "Mar Shopping Algarve, Avenida do Algarve Loja 1.38, 8135-185 Almancil",
-    "address_raw": "Mar Shopping Algarve, Avenida do Algarve Loja 1.38, 8135-185 Almancil",
-    "street": "Mar Shopping Algarve",
-    "street_number": "",
-    "complemento": "Avenida do Algarve Loja 1.38",
-    "localidade": "Almancil",
-    "codigo_postal": "8135-185",
-    "country": "Portugal",
-    "data_confidence": "high",
-    "needs_review": false,
-    "location_flags": [],
-    "telefone": "+351 289 992 084",
-    "email": null,
-    "website": "https://thebarbers.pt/",
-    "instagram": null,
-    "facebook": null,
-    "google_maps": null,
-    "horario": null,
-    "observacoes": null,
-    "coords": [
-      37.07,
-      -8.03
-    ],
-    "status": "confirmado",
-    "fontes": [
-      "https://thebarbers.pt/"
-    ],
-    "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
-    "qualidade_ficha": "alta"
-  },
-  {
     "nome": "1920 Barbershop – Faro",
     "slug": "1920-barbershop-faro",
     "distrito": "Faro",
@@ -4132,6 +4010,89 @@ const barbearias = [
     "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia S. Barba",
+    "slug": "barbearia-s-barba",
+    "distrito": "Faro",
+    "concelho": "Faro",
+    "freguesia": "Santa Bárbara de Nexe",
+    "city": "Faro",
+    "zone": "Santa Bárbara de Nexe",
+    "morada": "R. de Loule 2, 8005-491 Santa Bárbara de Nexe",
+    "address_raw": "R. de Loule 2, 8005-491 Santa Bárbara de Nexe, Faro",
+    "street": "R. de Loule",
+    "street_number": "2",
+    "complemento": "",
+    "localidade": "Santa Bárbara de Nexe",
+    "codigo_postal": "8005-491",
+    "country": "Portugal",
+    "data_confidence": "high",
+    "needs_review": false,
+    "location_flags": [],
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/s.barbaearia/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.1038645,
+      -7.964627
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://www.facebook.com/s.barbaearia/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta",
+    "valor_original": {
+      "website": "https://www.facebook.com/s.barbaearia/",
+      "morada": "R. de Loule 2, 8005-491 Santa Bárbara de Nexe, Faro"
+    }
+  },
+  {
+    "nome": "Butterfly Cabeleireiro & Barbearia",
+    "slug": "butterfly-cabeleireiro-barbearia",
+    "distrito": "Faro",
+    "concelho": "Faro",
+    "freguesia": "Santa Bárbara de Nexe",
+    "city": "Faro",
+    "zone": "Santa Bárbara de Nexe",
+    "morada": "R. de Loule 20, Santa Bárbara de Nexe",
+    "address_raw": "R. de Loule 20, Santa Bárbara de Nexe, Portugal",
+    "street": "R. de Loule",
+    "street_number": "20",
+    "complemento": "",
+    "localidade": "Santa Bárbara de Nexe",
+    "codigo_postal": "",
+    "country": "Portugal",
+    "data_confidence": "medium",
+    "needs_review": false,
+    "location_flags": [],
+    "telefone": "+351 913 889 678",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.1036125,
+      -7.9634904
+    ],
+    "status": "confirmado",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta",
+    "valor_original": {
+      "morada": "R. de Loule 20, Santa Bárbara de Nexe, Portugal"
+    }
   },
   {
     "nome": "CJ Barbearia",
@@ -4326,6 +4287,45 @@ const barbearias = [
     "status": "confirmado",
     "fontes": [
       "https://www.fresha.com/lp/en/tt/men%27s-haircuts/in/pt-rural-faro-district/lagos"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": true,
+    "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "The Barbers",
+    "slug": "the-barbers",
+    "distrito": "Faro",
+    "concelho": "Loulé",
+    "freguesia": "Almancil",
+    "city": "Loulé",
+    "zone": "Almancil",
+    "morada": "Mar Shopping Algarve, Avenida do Algarve Loja 1.38, 8135-185 Almancil",
+    "address_raw": "Mar Shopping Algarve, Avenida do Algarve Loja 1.38, 8135-185 Almancil",
+    "street": "Mar Shopping Algarve",
+    "street_number": "",
+    "complemento": "Avenida do Algarve Loja 1.38",
+    "localidade": "Almancil",
+    "codigo_postal": "8135-185",
+    "country": "Portugal",
+    "data_confidence": "high",
+    "needs_review": false,
+    "location_flags": [],
+    "telefone": "+351 289 992 084",
+    "email": null,
+    "website": "https://thebarbers.pt/",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.07,
+      -8.03
+    ],
+    "status": "confirmado",
+    "fontes": [
+      "https://thebarbers.pt/"
     ],
     "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": true,

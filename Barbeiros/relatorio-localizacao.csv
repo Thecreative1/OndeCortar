@@ -44,7 +44,7 @@ id,nome,slug,address_raw,current_city,current_zone,current_postal_code,inferred_
 43,J.L Barber's Faro,,"Estrada da Penha, Faro",,,,Faro,Faro,,,Estrada da Penha,,medium,true,false,city_missing_with_valid_locality
 44,Barbearia Evandro Garcia,,"Largo de Camões n 3, 8000-140 Faro",,,,Faro,Faro,,8000-140,Largo de Camões n,3,high,true,false,city_missing_with_valid_locality
 45,O Profeta Barbearia,,"Rua Doutor José de Matos 33, Faro",,,,Faro,Faro,,,Rua Doutor José de Matos,33,medium,true,false,city_missing_with_valid_locality
-46,The Barbers,,"Mar Shopping Algarve, Avenida do Algarve Loja 1.38, 8135-185 Almancil",,,,Almancil,Almancil,,8135-185,Mar Shopping Algarve,,high,true,false,city_missing_with_valid_locality
+46,The Barbers,,"Mar Shopping Algarve, Avenida do Algarve Loja 1.38, 8135-185 Almancil",,,,Almancil,Loulé,Almancil,8135-185,Mar Shopping Algarve,,high,true,false,city_missing_with_valid_locality
 47,Boss Barbearia,,"Rua M de Albuquerque 1, 8500-510 Portimão",,,,Portimão,Portimão,,8500-510,Rua M de Albuquerque,1,high,true,false,city_missing_with_valid_locality
 48,Barbearia Monte Cristo,,"Rua Capitão Leitão 103, 2800-135 Almada",,,,Almada,Almada,,2800-135,Rua Capitão Leitão,103,high,true,false,city_missing_with_valid_locality
 49,Barbearia Clássica Setúbal,,"Avenida Luísa Todi 123, 2900-461 Setúbal",,,,Setúbal,Setúbal,,2900-461,Avenida Luísa Todi,123,high,true,false,city_missing_with_valid_locality
@@ -145,7 +145,7 @@ id,nome,slug,address_raw,current_city,current_zone,current_postal_code,inferred_
 144,Barbearia Ponto H,,"Rua Gustavo Ferreira Pinto Bastos 06, 3810-128 Aveiro",,,,Aveiro,Aveiro,,3810-128,Rua Gustavo Ferreira Pinto Bastos,06,high,true,false,city_missing_with_valid_locality
 145,Barbearia Portugal por João Alves,,"Rua dos Lusíadas 127B, 1300-369 Alcântara",,,,Alcântara,Alcântara,,1300-369,Rua dos Lusíadas,127B,high,true,false,city_missing_with_valid_locality
 146,Barbearia Resende,,"Av. Aquilino Ribeiro L 5 R/C FRENTE, 3515-114 Viseu",,,,Viseu,Viseu,,3515-114,Av. Aquilino Ribeiro L,5,high,true,false,city_missing_with_valid_locality
-147,Barbearia S. Barba,,"R. de Loule 2, 8005-491 Santa Bárbara de Nexe, Faro",,,,Santa Bárbara de Nexe,Santa Bárbara de Nexe,,8005-491,R. de Loule,2,high,true,false,city_missing_with_valid_locality
+147,Barbearia S. Barba,,"R. de Loule 2, 8005-491 Santa Bárbara de Nexe, Faro",,,,Santa Bárbara de Nexe,Faro,Santa Bárbara de Nexe,8005-491,R. de Loule,2,high,true,false,city_missing_with_valid_locality
 148,Barbearia Sa,,"Estrada Simão Gonçalves da Câmara, 9370-139 Calheta",,,,Calheta,Calheta,,9370-139,Estrada Simão Gonçalves da Câmara,,high,true,false,city_missing_with_valid_locality
 149,Barbearia Suprema,,"Estrada de Benfica 399, Lisboa",,,,Lisboa,Lisboa,,,Estrada de Benfica,399,medium,true,false,city_missing_with_valid_locality
 150,Barbearia Tradição,,"Rua Jacinta Marto 6, 1150-192",,,,,,,1150-192,Rua Jacinta Marto,6,low,false,true,low_confidence_location
@@ -160,7 +160,7 @@ id,nome,slug,address_raw,current_city,current_zone,current_postal_code,inferred_
 159,Brave Barber Shop,,"Rua da Penha de França 213A, 1170 182 Lisboa",,,,Lisboa,Lisboa,,1170-182,Rua da Penha de França,213A,high,true,false,city_missing_with_valid_locality
 160,Bronk's Barber Shop,,"Rua Centro de Artes Lote 7, 6200-505 Covilhã",,,,Covilhã,Covilhã,,6200-505,Rua Centro de Artes Lote,7,high,true,false,city_missing_with_valid_locality
 161,Buda Barber,,Rua Caldas Xavier 5,,,,,,,,Rua Caldas Xavier,5,low,false,true,low_confidence_location
-162,Butterfly Cabeleireiro & Barbearia,,"R. de Loule 20, Santa Bárbara de Nexe, Portugal",,,,Portugal,Portugal,Santa Bárbara de Nexe,,R. de Loule,20,medium,true,false,city_missing_with_valid_locality
+162,Butterfly Cabeleireiro & Barbearia,,"R. de Loule 20, Santa Bárbara de Nexe, Portugal",,,,Santa Bárbara de Nexe,Faro,Santa Bárbara de Nexe,,R. de Loule,20,medium,true,false,city_missing_with_valid_locality
 163,Champions Barber Shop,,Rua Manuel Barbuda e Vasconcelos 1,,,,,,,,Rua Manuel Barbuda e Vasconcelos,1,low,false,true,low_confidence_location
 164,Cortes & Discos,,"Rua Poeta Sebastião da Gama 30/32, 2925-589 Azeitão",,,,Azeitão,Azeitão,,2925-589,Rua Poeta Sebastião da Gama 30/32,,high,true,false,city_missing_with_valid_locality
 165,Costa Barbershop,,"Rua João de Carapeços, Carapeços",,,,Carapeços,Carapeços,,,Rua João de Carapeços,,medium,true,false,city_missing_with_valid_locality

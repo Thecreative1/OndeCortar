@@ -36,6 +36,7 @@
   ]);
   const MUNICIPIO_RULES = [
     { needles: ["almancil"], distrito: "Faro", concelho: "Loulé", freguesia: "Almancil" },
+    { needles: ["santa barbara de nexe", "santa bárbara de nexe"], distrito: "Faro", concelho: "Faro", freguesia: "Santa Bárbara de Nexe" },
     { needles: ["albufeira"], distrito: "Faro", concelho: "Albufeira" },
     { needles: ["lagos"], distrito: "Faro", concelho: "Lagos" },
     { needles: ["portimao", "portimão"], distrito: "Faro", concelho: "Portimão" },
@@ -650,6 +651,9 @@
     const manualZone = trimToNull(raw.zone || raw.freguesia);
     const manualDistrict = trimToNull(raw.district || raw.distrito);
     const manualPostalCode = trimToNull(raw.postal_code || raw.codigo_postal);
+    const hasNormalizedLocationFields = Boolean(
+      trimToNull(raw.street || raw.street_number || raw.codigo_postal || raw.localidade || raw.address_raw || raw.addressRaw)
+    );
     const parsed = parseAddressComponents(addressRaw);
     const parsedLocality = sanitizarCidadePublica(parsed.locality);
     const issues = [];
@@ -658,7 +662,10 @@
     let zone = "";
     let zoneSource = "";
 
-    if (parsedLocality) {
+    if (manualCity && hasNormalizedLocationFields) {
+      city = manualCity;
+      citySource = "manual";
+    } else if (parsedLocality) {
       city = parsedLocality;
       citySource = parsed.postalCode ? "postal_locality" : "address_locality";
     } else if (manualCity) {
@@ -672,6 +679,22 @@
     const streetNormalized = normalizarTexto(parsed.street);
     const manualCityNormalized = normalizarTexto(manualCity);
     const localityNormalized = normalizarTexto(parsedLocality);
+    const adminMunicipioNormalized = normalizarTexto(admin.concelho);
+    const adminFreguesiaNormalized = normalizarTexto(admin.freguesia);
+
+    if (
+      city &&
+      admin.concelho &&
+      admin.freguesia &&
+      localityNormalized &&
+      localityNormalized === adminFreguesiaNormalized &&
+      adminMunicipioNormalized &&
+      adminMunicipioNormalized !== localityNormalized &&
+      (!manualCity || manualCityNormalized === localityNormalized)
+    ) {
+      city = admin.concelho;
+      citySource = parsed.postalCode ? "postal_municipality" : "address_municipality";
+    }
 
     if (manualCity && parsedLocality && manualCityNormalized !== localityNormalized) {
       issues.push(postalCode ? "city_differs_from_postal_locality" : "city_differs_from_address_locality");
@@ -716,6 +739,14 @@
     })) {
       zone = limparTextoLocalizacao(manualZone);
       zoneSource = "manual";
+    } else if (admin.freguesia && ehZonaValida(admin.freguesia, {
+      city: city,
+      street: parsed.street,
+      streetNumber: parsed.streetNumber,
+      postalCode: postalCode
+    }) && normalizarTexto(admin.freguesia) === localityNormalized) {
+      zone = admin.freguesia;
+      zoneSource = "admin_freguesia";
     } else if (parsed.zoneCandidate && ehZonaValida(parsed.zoneCandidate, {
       city: city,
       street: parsed.street,
@@ -750,9 +781,9 @@
       locality: parsedLocality,
       city: city
     }) || addressRaw;
-    const dataConfidence = citySource === "postal_locality"
+    const dataConfidence = citySource === "postal_locality" || citySource === "postal_municipality"
       ? (issues.length ? "medium" : "high")
-      : citySource === "address_locality"
+      : citySource === "address_locality" || citySource === "address_municipality"
         ? "medium"
         : citySource === "manual"
           ? (issues.length ? "low" : "medium")

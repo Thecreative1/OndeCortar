@@ -1240,10 +1240,34 @@ function buildSitemapIndex(entries) {
   return lines.join("\n") + "\n";
 }
 
+function syncGeneratedSubdirectories(relativeDir, desiredSlugs) {
+  const targetDir = path.join(ROOT, relativeDir);
+  const keep = new Set(desiredSlugs || []);
+
+  if (!fs.existsSync(targetDir)) {
+    return;
+  }
+
+  fs.readdirSync(targetDir, { withFileTypes: true }).forEach((entry) => {
+    if (!entry.isDirectory()) {
+      return;
+    }
+
+    if (keep.has(entry.name)) {
+      return;
+    }
+
+    fs.rmSync(path.join(targetDir, entry.name), { recursive: true, force: true });
+  });
+}
+
 function main() {
   const rawBarbers = loadBarbers();
   const data = buildSlugData(rawBarbers);
   const citiesMap = new Map(data.cities.map((city) => [city.slug, city]));
+
+  syncGeneratedSubdirectories("barbearias", data.barbers.map((barber) => barber.slug));
+  syncGeneratedSubdirectories("cidades", data.cities.map((city) => city.slug));
 
   data.barbers.forEach((barber) => {
     writeFile(path.join("barbearias", barber.slug, "index.html"), renderProfilePage(barber, citiesMap));
