@@ -637,21 +637,17 @@
       return getBarbers();
     }
 
+    const queryPattern = new RegExp("(?:^|\\s)" + query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+
     return barbers.filter(function(barber) {
-      const haystack = [
+      const haystack = normalizar([
         barber.name,
         barber.city,
-        barber.municipality,
-        barber.district,
-        barber.zone,
         barber.locality,
-        barber.morada,
-        barber.observacoes
-      ]
-        .map(normalizar)
-        .join(" ");
+        barber.zone
+      ].join(" "));
 
-      return haystack.includes(query);
+      return queryPattern.test(haystack);
     });
   }
 

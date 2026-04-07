@@ -20,7 +20,8 @@
       "Read(//e/GIT_HUB/OndeCortar/**)",
       "Bash(python patch_highlights.py)",
       "Bash(python3:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(node -e ':*)"
     ]
   }
 }

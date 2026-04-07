@@ -51,7 +51,7 @@
       slug: "kits-de-barba",
       title: "Kits de barba",
       intro: "Tudo o que precisas para uma rotina de barba completa.",
-      top: ["viking-revolution-beard-grooming-kit", "king-c-gillette-beard-trimmer-kit", "king-c-gillette-beard-clipper"],
+      top: ["viking-revolution-beard-grooming-kit", "king-c-gillette-beard-trimmer-kit", "king-c-rotina"],
       picks: [["Melhor para começar", "viking-sandalwood"], ["Melhor kit completo", "kit-xikezan"], ["Melhor opção clássica", "king-c-rotina"]],
       articles: ["melhor-kit-de-barba-para-comecar-sem-comprar-as-cegas", "o-que-vale-a-pena-num-kit-de-barba-e-o-que-e-so-ruido-de-catalogo", "como-montar-uma-rotina-simples-de-barba-em-casa"],
       faqs: [
@@ -112,7 +112,7 @@
       title: "Manutenção de máquinas",
       intro: "Produtos essenciais para lubrificar, limpar e conservar máquinas de corte. Uma boa manutenção ajuda a evitar falhas, melhora o desempenho e prolonga a vida útil do equipamento.",
       top: ["wahl-clipper-oil", "syprin-lubrificante-maquinas", "wahl-clipper-oil-pack"],
-      picks: [["Melhor para limpeza rápida", "beardburys-spray"], ["Melhor para lubrificação", "wahl-clipper-oil"], ["Melhor para higiene de serviço", "eurostil-rolos"]],
+      picks: [["Melhor para limpeza rápida", "beardburys-spray"], ["Melhor para lubrificação", "wahl-clipper-oil"], ["Melhor para uso regular", "wahl-clipper-oil-pack"]],
       topTitle: "Os essenciais para manter a máquina em forma",
       topCopy: "Lubrificantes, sprays e cuidados básicos para proteger a máquina, reduzir desgaste e manter um corte consistente.",
       guidePanelTitle: "Guias rápidos para não comprares à cegas",
