@@ -29,10 +29,10 @@ barbearia,27,Barbearia Sa,barbearia-sa,1,Calheta,Calheta,,,Calheta,false,,Cidade
 barbearia,28,Costa Barbershop,costa-barbershop,1,Carapeços,Carapeços,,,Carapeços,false,,Cidade: Carapeços
 barbearia,29,FADO - Barbearia,fado-barbearia,1,Carnaxide,Carnaxide,,,Carnaxide,false,,Cidade: Carnaxide
 barbearia,30,4740 Barber Shop,4740-barber-shop,1,Esposende,Esposende,,,Esposende,false,,Cidade: Esposende
-barbearia,31,Barbearia Machado,barbearia-machado,1,Ilha do Faial,Ilha do Faial,,Horta,Ilha do Faial,false,zone_matches_other_municipality,Cidade: Ilha do Faial
-barbearia,32,Barbearia São Roque,barbearia-sao-roque,1,Ilha do Pico,Ilha do Pico,,São Roque do Pico,Ilha do Pico,false,zone_matches_other_municipality,Cidade: Ilha do Pico
-barbearia,33,Barbearia António e Caetano,barbearia-antonio-e-caetano,1,Ilha Terceira,Ilha Terceira,,Angra do Heroísmo,Ilha Terceira,false,zone_matches_other_municipality,Cidade: Ilha Terceira
-barbearia,34,The Barber - Terceira,the-barber-terceira,1,Ilha Terceira,Ilha Terceira,,Angra do Heroísmo,Ilha Terceira,false,zone_matches_other_municipality,Cidade: Ilha Terceira
+barbearia,31,Barbearia Machado,barbearia-machado,1,Ilha do Faial,Ilha do Faial,,,Ilha do Faial,false,,Cidade: Ilha do Faial
+barbearia,32,Barbearia São Roque,barbearia-sao-roque,1,Ilha do Pico,Ilha do Pico,,,Ilha do Pico,false,,Cidade: Ilha do Pico
+barbearia,33,Barbearia António e Caetano,barbearia-antonio-e-caetano,1,Ilha Terceira,Ilha Terceira,,,Ilha Terceira,false,,Cidade: Ilha Terceira
+barbearia,34,The Barber - Terceira,the-barber-terceira,1,Ilha Terceira,Ilha Terceira,,,Ilha Terceira,false,,Cidade: Ilha Terceira
 barbearia,35,Barbearia Carlos Vaz,barbearia-carlos-vaz,1,Odivelas,Odivelas,,,Odivelas,false,,Cidade: Odivelas
 barbearia,36,MenConcept,menconcept,1,Parede - Jardins da Parede,Parede - Jardins da Parede,,,Parede - Jardins da Parede,false,,Cidade: Parede - Jardins da Parede
 barbearia,37,Barbearia do Zela,barbearia-do-zela,1,Pindelo,Pindelo,,,Pindelo,false,,Cidade: Pindelo
@@ -55,13 +55,13 @@ barbearia,53,Barbearia Moura – Espinho,barbearia-moura-espinho,1,Espinho,Espin
 barbearia,54,Barbearia Silvério – Ovar,barbearia-silverio-ovar,1,Ovar,Ovar,Aveiro,,Ovar,true,city_needs_district_context,Cidade: Ovar | Distrito: Aveiro
 barbearia,55,Barbearia Lima – São João da Madeira,barbearia-lima-sao-joao-da-madeira,1,S. João da Madeira,São João da Madeira,Aveiro,,S. João da Madeira,true,city_needs_municipality_context|city_needs_district_context,Cidade: S. João da Madeira | Concelho: São João da Madeira | Distrito: Aveiro
 barbearia,56,Barbearia Beja Moderna,barbearia-beja-moderna,1,Beja,Beja,Beja,,Beja,false,,Cidade: Beja
-barbearia,57,Barbearia Fora D’Horas,barbearia-fora-d-horas,1,Braga,Braga,Braga,Guimarães,Braga,false,zone_matches_other_municipality,Cidade: Braga
-barbearia,58,BMbarbeariamonte,bmbarbeariamonte,1,Braga,Braga,Braga,,Braga,false,,Cidade: Braga
-barbearia,59,FG Male Image & Grooming,fg-male-image-grooming,1,Braga,Braga,Braga,,Braga,false,,Cidade: Braga
-barbearia,60,M2 BARBEARIA,m2-barbearia,1,Braga,Braga,Braga,,Braga,false,,Cidade: Braga
-barbearia,61,Barbearia Fafense,barbearia-fafense,1,Fafe,Fafe,Braga,,Fafe,true,city_needs_district_context,Cidade: Fafe | Distrito: Braga
-barbearia,62,Barbershop DuArt,barbershop-duart,1,Fafe,Fafe,Braga,,Fafe,true,city_needs_district_context,Cidade: Fafe | Distrito: Braga
-barbearia,63,1920 Barber Shop,1920-barber-shop,1,Guimarães,Guimarães,Braga,,Guimarães,true,city_needs_district_context,Cidade: Guimarães | Distrito: Braga
+barbearia,57,BMbarbeariamonte,bmbarbeariamonte,1,Braga,Braga,Braga,,Braga,false,,Cidade: Braga
+barbearia,58,FG Male Image & Grooming,fg-male-image-grooming,1,Braga,Braga,Braga,,Braga,false,,Cidade: Braga
+barbearia,59,M2 BARBEARIA,m2-barbearia,1,Braga,Braga,Braga,,Braga,false,,Cidade: Braga
+barbearia,60,Barbearia Fafense,barbearia-fafense,1,Fafe,Fafe,Braga,,Fafe,true,city_needs_district_context,Cidade: Fafe | Distrito: Braga
+barbearia,61,Barbershop DuArt,barbershop-duart,1,Fafe,Fafe,Braga,,Fafe,true,city_needs_district_context,Cidade: Fafe | Distrito: Braga
+barbearia,62,1920 Barber Shop,1920-barber-shop,1,Guimarães,Guimarães,Braga,,Guimarães,true,city_needs_district_context,Cidade: Guimarães | Distrito: Braga
+barbearia,63,Barbearia Fora D’Horas,barbearia-fora-d-horas,1,Guimarães,Guimarães,Braga,,Guimarães,true,city_needs_district_context,Cidade: Guimarães | Distrito: Braga
 barbearia,64,Black Rock Barbearia,black-rock-barbearia,1,Guimarães,Guimarães,Braga,,Guimarães,true,city_needs_district_context,Cidade: Guimarães | Distrito: Braga
 barbearia,65,NewVision Barbershop,newvision-barbershop,1,Guimarães,Guimarães,Braga,,Guimarães,true,city_needs_district_context,Cidade: Guimarães | Distrito: Braga
 barbearia,66,The Barbers Studio,the-barbers-studio,1,Guimarães,Guimarães,Braga,,Guimarães,true,city_needs_district_context,Cidade: Guimarães | Distrito: Braga
@@ -211,7 +211,7 @@ pagina_cidade,,Azeitão,azeitao,2,Azeitão,Azeitão,,,,false,,Cidade: Azeitão
 pagina_cidade,,Baguim do Monte (Rio Tinto),baguim-do-monte-rio-tinto,1,Baguim do Monte (Rio Tinto),Baguim do Monte (Rio Tinto),,,,false,,Cidade: Baguim do Monte (Rio Tinto)
 pagina_cidade,,Barreiro,barreiro,1,Barreiro,Barreiro,Setúbal,,,true,page_needs_district_context,Cidade: Barreiro | Distrito: Setúbal
 pagina_cidade,,Beja,beja,1,Beja,Beja,Beja,,,false,,Cidade: Beja
-pagina_cidade,,Braga,braga,4,Braga,Braga,Braga,,,false,,Cidade: Braga
+pagina_cidade,,Braga,braga,3,Braga,Braga,Braga,,,false,,Cidade: Braga
 pagina_cidade,,Bragança,braganca,1,Bragança,Bragança,Bragança,,,false,,Cidade: Bragança
 pagina_cidade,,Bucelas,bucelas,1,Bucelas,Bucelas,,,,false,,Cidade: Bucelas
 pagina_cidade,,Caldas da Rainha,caldas-da-rainha,1,Caldas da Rainha,Caldas da Rainha,Leiria,,,true,page_needs_district_context,Cidade: Caldas da Rainha | Distrito: Leiria
@@ -232,7 +232,7 @@ pagina_cidade,,Figueira da Foz,figueira-da-foz,1,Figueira da Foz,Figueira da Foz
 pagina_cidade,,Funchal,funchal,6,Funchal,Funchal,Madeira,,,true,page_needs_district_context,Cidade: Funchal | Distrito: Madeira
 pagina_cidade,,Grândola,grandola,1,Grândola,Grândola,Setúbal,,,true,page_needs_district_context,Cidade: Grândola | Distrito: Setúbal
 pagina_cidade,,Guarda,guarda,1,Guarda,Guarda,Guarda,,,false,,Cidade: Guarda
-pagina_cidade,,Guimarães,guimaraes,5,Guimarães,Guimarães,Braga,,,true,page_needs_district_context,Cidade: Guimarães | Distrito: Braga
+pagina_cidade,,Guimarães,guimaraes,6,Guimarães,Guimarães,Braga,,,true,page_needs_district_context,Cidade: Guimarães | Distrito: Braga
 pagina_cidade,,Horta (Angústias),horta-angustias,1,Horta (Angústias),Horta,Açores,,,true,page_needs_municipality_context|page_needs_district_context,Cidade: Horta (Angústias) | Concelho: Horta | Distrito: Açores
 pagina_cidade,,Ilha do Faial,ilha-do-faial,1,Ilha do Faial,Ilha do Faial,,,,false,,Cidade: Ilha do Faial
 pagina_cidade,,Ilha do Pico,ilha-do-pico,1,Ilha do Pico,Ilha do Pico,,,,false,,Cidade: Ilha do Pico

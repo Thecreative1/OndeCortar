@@ -1,11 +1,11 @@
 # Relatório de hierarquia geográfica
 
-Gerado em 2026-04-07T13:55:51.555Z.
+Gerado em 2026-04-07T14:09:10.777Z.
 
 ## Resumo
 
 - Fichas auditadas: 199
-- Fichas que precisam de contexto geográfico explícito: 71
+- Fichas que precisam de contexto geográfico explícito: 72
 - Páginas de cidade auditadas: 79
 - Páginas de cidade que precisam de contexto adicional: 38
 
@@ -27,11 +27,11 @@ Gerado em 2026-04-07T13:55:51.555Z.
 - Barbearia Fafense -> Cidade: Fafe | Distrito: Braga (city_needs_district_context)
 - Barbershop DuArt -> Cidade: Fafe | Distrito: Braga (city_needs_district_context)
 - 1920 Barber Shop -> Cidade: Guimarães | Distrito: Braga (city_needs_district_context)
+- Barbearia Fora D’Horas -> Cidade: Guimarães | Distrito: Braga (city_needs_district_context)
 - Black Rock Barbearia -> Cidade: Guimarães | Distrito: Braga (city_needs_district_context)
 - NewVision Barbershop -> Cidade: Guimarães | Distrito: Braga (city_needs_district_context)
 - The Barbers Studio -> Cidade: Guimarães | Distrito: Braga (city_needs_district_context)
 - Treze Barbershop -> Cidade: Guimarães | Distrito: Braga (city_needs_district_context)
-- Danniel Sampaio Barbearia -> Cidade: Vila Nova de Famalicão | Distrito: Braga (city_needs_district_context)
 
 ## Exemplos de páginas de cidade revistas
 

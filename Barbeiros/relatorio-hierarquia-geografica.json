@@ -1,8 +1,8 @@
 {
   "summary": {
-    "generated_at": "2026-04-07T13:55:51.550Z",
+    "generated_at": "2026-04-07T14:09:10.773Z",
     "barbers_total": 199,
-    "barbers_needing_context": 71,
+    "barbers_needing_context": 72,
     "city_pages_total": 79,
     "city_pages_needing_context": 38
   },
@@ -474,11 +474,9 @@
       "city": "Ilha do Faial",
       "municipality": "Ilha do Faial",
       "district": "",
-      "zone": "Horta",
+      "zone": "",
       "locality": "Ilha do Faial",
-      "reasons": [
-        "zone_matches_other_municipality"
-      ],
+      "reasons": [],
       "needs_context": false,
       "suggested_display": "Cidade: Ilha do Faial"
     },
@@ -491,11 +489,9 @@
       "city": "Ilha do Pico",
       "municipality": "Ilha do Pico",
       "district": "",
-      "zone": "São Roque do Pico",
+      "zone": "",
       "locality": "Ilha do Pico",
-      "reasons": [
-        "zone_matches_other_municipality"
-      ],
+      "reasons": [],
       "needs_context": false,
       "suggested_display": "Cidade: Ilha do Pico"
     },
@@ -508,11 +504,9 @@
       "city": "Ilha Terceira",
       "municipality": "Ilha Terceira",
       "district": "",
-      "zone": "Angra do Heroísmo",
+      "zone": "",
       "locality": "Ilha Terceira",
-      "reasons": [
-        "zone_matches_other_municipality"
-      ],
+      "reasons": [],
       "needs_context": false,
       "suggested_display": "Cidade: Ilha Terceira"
     },
@@ -525,11 +519,9 @@
       "city": "Ilha Terceira",
       "municipality": "Ilha Terceira",
       "district": "",
-      "zone": "Angra do Heroísmo",
+      "zone": "",
       "locality": "Ilha Terceira",
-      "reasons": [
-        "zone_matches_other_municipality"
-      ],
+      "reasons": [],
       "needs_context": false,
       "suggested_display": "Cidade: Ilha Terceira"
     },
@@ -875,23 +867,6 @@
     {
       "scope": "barbearia",
       "id": 57,
-      "nome": "Barbearia Fora D’Horas",
-      "slug": "barbearia-fora-d-horas",
-      "count": 1,
-      "city": "Braga",
-      "municipality": "Braga",
-      "district": "Braga",
-      "zone": "Guimarães",
-      "locality": "Braga",
-      "reasons": [
-        "zone_matches_other_municipality"
-      ],
-      "needs_context": false,
-      "suggested_display": "Cidade: Braga"
-    },
-    {
-      "scope": "barbearia",
-      "id": 58,
       "nome": "BMbarbeariamonte",
       "slug": "bmbarbeariamonte",
       "count": 1,
@@ -906,7 +881,7 @@
     },
     {
       "scope": "barbearia",
-      "id": 59,
+      "id": 58,
       "nome": "FG Male Image & Grooming",
       "slug": "fg-male-image-grooming",
       "count": 1,
@@ -921,7 +896,7 @@
     },
     {
       "scope": "barbearia",
-      "id": 60,
+      "id": 59,
       "nome": "M2 BARBEARIA",
       "slug": "m2-barbearia",
       "count": 1,
@@ -936,7 +911,7 @@
     },
     {
       "scope": "barbearia",
-      "id": 61,
+      "id": 60,
       "nome": "Barbearia Fafense",
       "slug": "barbearia-fafense",
       "count": 1,
@@ -953,7 +928,7 @@
     },
     {
       "scope": "barbearia",
-      "id": 62,
+      "id": 61,
       "nome": "Barbershop DuArt",
       "slug": "barbershop-duart",
       "count": 1,
@@ -970,9 +945,26 @@
     },
     {
       "scope": "barbearia",
-      "id": 63,
+      "id": 62,
       "nome": "1920 Barber Shop",
       "slug": "1920-barber-shop",
+      "count": 1,
+      "city": "Guimarães",
+      "municipality": "Guimarães",
+      "district": "Braga",
+      "zone": "",
+      "locality": "Guimarães",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Guimarães | Distrito: Braga"
+    },
+    {
+      "scope": "barbearia",
+      "id": 63,
+      "nome": "Barbearia Fora D’Horas",
+      "slug": "barbearia-fora-d-horas",
       "count": 1,
       "city": "Guimarães",
       "municipality": "Guimarães",
@@ -3408,7 +3400,7 @@
       "id": "",
       "nome": "Braga",
       "slug": "braga",
-      "count": 4,
+      "count": 3,
       "city": "Braga",
       "municipality": "Braga",
       "district": "Braga",
@@ -3805,7 +3797,7 @@
       "id": "",
       "nome": "Guimarães",
       "slug": "guimaraes",
-      "count": 5,
+      "count": 6,
       "city": "Guimarães",
       "municipality": "Guimarães",
       "district": "Braga",

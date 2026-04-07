@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-07T13:55:51.521Z",
+  "generated_at": "2026-04-07T14:09:10.750Z",
   "total": 203,
   "flagged": 18,
   "entries": [
@@ -7,22 +7,20 @@
       "id": 1,
       "nome": "Barbearia Fora D’Horas",
       "slug": "",
-      "address_raw": "Rua de Santa Eulália, Guimarães, Braga 4800-098",
-      "current_city": "",
+      "address_raw": "Rua de Santa Eulália, 4800-098 Guimarães",
+      "current_city": "Guimarães",
       "current_zone": "",
       "current_postal_code": "",
-      "inferred_locality": "Braga",
-      "normalized_city": "Braga",
+      "inferred_locality": "Guimarães",
+      "normalized_city": "Guimarães",
       "normalized_zone": "",
       "normalized_postal_code": "4800-098",
       "street": "Rua de Santa Eulália",
       "street_number": "",
       "data_confidence": "high",
-      "auto_fixable": true,
+      "auto_fixable": false,
       "needs_review": false,
-      "reasons": [
-        "city_missing_with_valid_locality"
-      ]
+      "reasons": []
     },
     {
       "id": 2,
