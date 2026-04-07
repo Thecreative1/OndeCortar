@@ -2015,6 +2015,15 @@
           const city = cityButton.getAttribute("data-city-search") || "";
           syncSearchInputs(city);
           updateDirectory(city);
+          const mapaSection = document.getElementById("mapa");
+          if (mapaSection) {
+            setTimeout(function() {
+              const header = document.querySelector(".site-header");
+              const offset = header ? header.offsetHeight + 16 : 80;
+              const top = mapaSection.getBoundingClientRect().top + window.pageYOffset - offset;
+              window.scrollTo({ top: top, behavior: "smooth" });
+            }, 50);
+          }
         }
 
         if (mapButton) {
