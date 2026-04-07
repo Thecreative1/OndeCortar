@@ -25,7 +25,7 @@
     {
       slug: "maquinas-de-cortar",
       title: "Máquinas de cortar",
-      intro: "Máquinas e aparadores para cortar cabelo em casa ou num posto de barbeiro.",
+      intro: "As melhores máquinas para um corte perfeito em casa.",
       top: ["wahl-super-taper", "braun-series-5-aio5545", "hatteker-completa"],
       picks: [["Melhor para casa", "braun-series-5-aio5545"], ["Melhor para uso frequente", "wahl-super-taper"], ["Melhor preço/versatilidade", "hatteker-completa"]],
       articles: ["como-escolher-uma-maquina-de-cortar-cabelo-para-usar-em-casa", "aparador-multifuncoes-ou-maquina-profissional-qual-compensa-mais", "7-erros-ao-comprar-uma-maquina-de-cortar-cabelo-barata", "como-manter-a-maquina-de-cortar-cabelo-a-funcionar-bem-por-mais-tempo"],
@@ -50,7 +50,7 @@
     {
       slug: "kits-de-barba",
       title: "Kits de barba",
-      intro: "Kits para começar uma rotina, oferecer melhor e perceber o que faz sentido comprar junto.",
+      intro: "Tudo o que precisas para uma rotina de barba completa.",
       top: ["kit-xikezan", "viking-sandalwood", "king-c-rotina"],
       picks: [["Melhor para começar", "viking-sandalwood"], ["Melhor kit completo", "kit-xikezan"], ["Melhor opção clássica", "king-c-rotina"]],
       articles: ["melhor-kit-de-barba-para-comecar-sem-comprar-as-cegas", "o-que-vale-a-pena-num-kit-de-barba-e-o-que-e-so-ruido-de-catalogo", "como-montar-uma-rotina-simples-de-barba-em-casa"],
@@ -62,7 +62,7 @@
     {
       slug: "cremes-e-espumas",
       title: "Cremes e espumas",
-      intro: "Produtos para ganhar conforto no barbear e perceber quando creme, espuma, gel ou pré-barba fazem realmente diferença.",
+      intro: "O produto certo faz toda a diferença no barbear diário.",
       top: ["proraso-creme", "gillette-labs-gel", "proraso-pre-barba"],
       picks: [["Melhor para rotina clássica", "proraso-creme"], ["Melhor para rapidez", "gillette-labs-gel"], ["Melhor para pele sensível", "proraso-pre-barba"]],
       articles: ["creme-espuma-ou-gel-de-barbear-qual-escolher", "como-montar-uma-rotina-simples-de-barba-em-casa", "como-escolher-laminas-sem-irritar-a-pele-desnecessariamente"],
@@ -74,7 +74,7 @@
     {
       slug: "navalhas-e-laminas",
       title: "Navalhas e lâminas",
-      intro: "Uma secção para quem quer perceber melhor o barbear clássico, o controlo da lâmina e o que muda entre formatos.",
+      intro: "Navalhas e lâminas para um barbear clássico e preciso.",
       top: ["asipro-navalha", "king-c-dupla", "derby-premium"],
       picks: [["Melhor para começar", "asipro-navalha"], ["Melhor máquina clássica", "king-c-dupla"], ["Melhor reposição", "derby-premium"]],
       articles: ["navalha-classica-ou-maquina-de-seguranca-diferencas-reais", "como-escolher-laminas-sem-irritar-a-pele-desnecessariamente"],
@@ -172,28 +172,28 @@
     {
       slug: "guias-de-compra",
       title: "Guias de compra",
-      intro: "Artigos para filtrar opções, perceber o que importa e sair do ruído antes de comprar.",
+      intro: "Tudo o que precisas de saber antes de escolher.",
       categories: ["maquinas-de-cortar", "kits-de-barba", "cremes-e-espumas", "navalhas-e-laminas"],
       articles: ["como-escolher-uma-maquina-de-cortar-cabelo-para-usar-em-casa", "melhor-kit-de-barba-para-comecar-sem-comprar-as-cegas", "creme-espuma-ou-gel-de-barbear-qual-escolher", "navalha-classica-ou-maquina-de-seguranca-diferencas-reais"]
     },
     {
       slug: "comparacoes",
       title: "Comparações",
-      intro: "Comparações diretas para perceber o que muda entre formatos, kits e acessórios antes de clicar.",
+      intro: "Compara lado a lado e escolhe o que funciona para ti.",
       categories: ["maquinas-de-cortar", "kits-de-barba", "escovas-e-pentes", "navalhas-e-laminas"],
       articles: ["o-que-vale-a-pena-num-kit-de-barba-e-o-que-e-so-ruido-de-catalogo", "aparador-multifuncoes-ou-maquina-profissional-qual-compensa-mais", "escova-de-barba-ou-pente-qual-usar-no-dia-a-dia", "como-escolher-laminas-sem-irritar-a-pele-desnecessariamente"]
     },
     {
       slug: "erros-comuns",
       title: "Erros comuns",
-      intro: "Conteúdo para evitar compras fracas, expectativas erradas e decisões feitas só pelo marketing.",
+      intro: "Evita arrependimentos e compra com confiança.",
       categories: ["maquinas-de-cortar", "kits-de-barba", "cremes-e-espumas", "navalhas-e-laminas"],
       articles: ["7-erros-ao-comprar-uma-maquina-de-cortar-cabelo-barata", "o-que-vale-a-pena-num-kit-de-barba-e-o-que-e-so-ruido-de-catalogo", "como-escolher-laminas-sem-irritar-a-pele-desnecessariamente", "creme-espuma-ou-gel-de-barbear-qual-escolher"]
     },
     {
       slug: "conteudo-pratico",
       title: "Conteúdo prático",
-      intro: "Guias utilitários para montar rotina, manter equipamento e ligar uso real à compra certa.",
+      intro: "Dicas práticas para tirar o máximo dos teus produtos.",
       categories: ["kits-de-barba", "escovas-e-pentes", "maquinas-de-cortar", "acessorios-de-barbeiro"],
       articles: ["como-montar-uma-rotina-simples-de-barba-em-casa", "como-manter-a-maquina-de-cortar-cabelo-a-funcionar-bem-por-mais-tempo", "o-essencial-para-manter-uma-bancada-de-barbeiro-organizada"]
     },

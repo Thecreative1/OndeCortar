@@ -499,6 +499,11 @@ p {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+.product-grid--top-choices {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 40px;
+}
+
 .editorial-card,
 .category-card,
 .comparison-card,
@@ -1921,6 +1926,9 @@ body[data-page="article"] .article-header p {
   .product-grid--dense {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+  .product-grid--top-choices {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .footer-shell {
@@ -2139,6 +2147,7 @@ body[data-page="article"] .article-header p {
   .product-grid,
   .related-grid,
   .product-grid--dense,
+  .product-grid--top-choices,
   .article-inline-products {
     grid-template-columns: 1fr;
   }
