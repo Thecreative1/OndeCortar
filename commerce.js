@@ -888,8 +888,7 @@
     return (
       renderHeader() +
       '<main>' +
-        '<section class="section section--store-start" id="top-escolhas"><div class="container"><div class="section-header section-header--compact store-start-header"><div><span class="section-flag">LOJA</span><h2>Top escolhas da loja</h2><p>Máquinas, kits e cuidados prontos para comparar e comprar sem perder tempo.</p></div><div class="hero-actions store-start-actions"><a class="btn btn-secondary btn-small" href="#categorias">Ver categorias</a></div></div><div class="product-grid product-grid--dense product-grid--top-choices">' + featured + '</div></div></section>' +
-        '<section class="section" id="categorias"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Categorias</span><h2>Compra pelo que realmente precisas</h2><p>Escolhe a categoria certa e encontra a melhor opção mais depressa.</p></div></div><div class="category-grid">' + categoryCards + '</div></div></section>' +
+        '<section class="section section--store-start" id="categorias"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Categorias</span><h2>Encontra exatamente o que procuras</h2><p>Navega por categoria e compra com confiança.</p></div></div><div class="product-grid product-grid--top-choices">' + featured + '</div><div class="category-grid">' + categoryCards + '</div></div></section>' +
         '<section class="section" id="escolhas-por-necessidade"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Escolher pelo uso</span><h2>Atalhos rápidos</h2><p>Quatro entradas curtas para decidir mais depressa.</p></div></div><div class="store-need-grid">' + needCards + '</div></div></section>' +
         '<section class="section store-endcap-section"><div class="container"><div class="store-endcap-shell">' +
           (guideLinks ? '<div class="store-magazine-note"><div class="store-magazine-intro"><span class="eyebrow">Revista</span><strong class="store-magazine-title">Ainda a decidir?</strong><p>Entra por um guia curto e escolhe com mais confiança.</p></div><div class="store-magazine-links">' + guideLinks + '</div><div class="store-magazine-cta"><a class="btn btn-secondary btn-small" href="' + href("revista/") + '">Ver revista</a></div></div>' : "") +
@@ -1077,7 +1076,7 @@
                 '<img src="' + leadCover.src + '" alt="' + e(leadCover.alt) + '" loading="lazy" />' +
               '</a>' +
             '</div></article>' : "") +
-            '<aside class="editorial-card magazine-story-column"><div class="magazine-story-column-header"><span class="eyebrow">Últimos artigos</span><h2>O que ler a seguir</h2><p>Uma coluna editorial para continuar a leitura sem sensação de catálogo.</p></div><div class="magazine-story-list">' + spotlightArticles.map(renderMagazineStoryItem).join("") + '</div></aside>' +
+            '<aside class="editorial-card magazine-story-column"><div class="magazine-story-column-header"><span class="eyebrow">Últimos artigos</span><h2>O que ler a seguir</h2><p>Mais artigos para continuares a explorar.</p></div><div class="magazine-story-list">' + spotlightArticles.map(renderMagazineStoryItem).join("") + '</div></aside>' +
           '</div>' +
         '</div></section>' +
         '<section class="section" id="artigos"><div class="container"><div class="section-header"><div><span class="eyebrow">Artigos</span><h2>Últimos artigos da revista</h2><p>Guias e comparações para responder à dúvida com calma antes de ires para a loja.</p></div></div><div class="article-grid">' + remainingArticles.map(function(item) { return renderArticleCard(item); }).join("") + '</div></div></section>' +
