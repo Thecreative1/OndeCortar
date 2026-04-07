@@ -15,7 +15,9 @@
       "Read(//c/Users/Phoenix/AppData/Local/Programs/Python//**)",
       "Bash(ls /c/Python*)",
       "Bash(find /c -name \"python.exe\" -maxdepth 6)",
-      "Bash(/c/Users/Phoenix/AppData/Local/Programs/Python/Python310/python.exe \"E:/GIT_HUB/OndeCortar/fix_seo.py\")"
+      "Bash(/c/Users/Phoenix/AppData/Local/Programs/Python/Python310/python.exe \"E:/GIT_HUB/OndeCortar/fix_seo.py\")",
+      "Read(//e/GIT_HUB/OndeCortar/=== og:type product page \\(loja/**)",
+      "Read(//e/GIT_HUB/OndeCortar/**)"
     ]
   }
 }
