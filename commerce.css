@@ -1715,47 +1715,54 @@ body[data-page="article"] .nav-links a.is-current {
 body[data-page="store"] .disclosure--store {
   position: relative;
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 16px;
-  align-items: center;
-  padding: 18px 20px;
-  border-color: rgba(196, 175, 139, 0.88);
-  background:
-    linear-gradient(180deg, rgba(251, 247, 239, 0.96), rgba(245, 238, 226, 0.94));
-  box-shadow: 0 14px 30px rgba(34, 32, 28, 0.05);
+  grid-template-columns: 10px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  width: 100%;
+  max-width: 920px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  border-color: rgba(196, 175, 139, 0.56);
+  background: rgba(251, 247, 239, 0.62);
+  box-shadow: none;
 }
 
 body[data-page="store"] .disclosure--store::before {
   content: "";
-  width: 46px;
-  height: 46px;
-  border-radius: 16px;
-  border: 1px solid rgba(196, 175, 139, 0.88);
-  background:
-    radial-gradient(circle at top left, rgba(176, 138, 74, 0.2), transparent 42%),
-    linear-gradient(180deg, rgba(255, 252, 246, 0.98), rgba(242, 232, 214, 0.96));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  width: 10px;
+  height: 10px;
+  margin-top: 0.5rem;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(176, 138, 74, 0.55);
+  box-shadow: none;
 }
 
 body[data-page="store"] .disclosure--store .disclosure-copy {
   display: grid;
-  gap: 4px;
+  gap: 3px;
 }
 
 body[data-page="store"] .disclosure--store .disclosure-eyebrow {
   justify-self: start;
+  min-height: 24px;
+  padding: 0 9px;
+  font-size: 0.72rem;
+  opacity: 0.92;
 }
 
 body[data-page="store"] .disclosure--store .disclosure-title {
   display: block;
   color: var(--ink-strong);
-  font-size: 1rem;
+  font-size: 0.94rem;
+  line-height: 1.35;
 }
 
 body[data-page="store"] .disclosure--store p {
   margin: 0;
-  color: var(--muted);
-  line-height: 1.55;
+  color: var(--muted-soft);
+  font-size: 0.94rem;
+  line-height: 1.5;
 }
 
 .faq-item {
@@ -2262,6 +2269,10 @@ body[data-page="article"] .article-header p {
 
   body[data-page="store"] .disclosure--store {
     grid-template-columns: 1fr;
+  }
+
+  body[data-page="store"] .disclosure--store::before {
+    display: none;
   }
 
   .store-guide-header {

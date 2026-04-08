@@ -525,6 +525,7 @@
       font-size: 14px;
       font-weight: 700;
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+      transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
     .hero-map-search .hero-results {
@@ -551,6 +552,12 @@
     .hero-map-search .hero-map-shell.has-results .hero-map-count {
       left: auto;
       right: 20px;
+    }
+
+    .hero-map-search .hero-map-shell.has-popup .hero-map-count {
+      opacity: 0;
+      transform: translateY(8px);
+      pointer-events: none;
     }
 
     .hero-map-search .hero-map-shell .leaflet-top.leaflet-right {
@@ -1436,15 +1443,15 @@
     }
 
     .custom-marker {
-      width: 22px;
-      height: 22px;
+      width: 32px;
+      height: 32px;
       display: block;
       border-radius: 999px;
-      background: var(--marker-color, var(--accent));
-      border: 3px solid rgba(255, 255, 255, 0.96);
+      background: url("imagens/logo-ondecortar-marker.png") center / cover no-repeat;
+      border: 2px solid rgba(255, 255, 255, 0.96);
       box-shadow:
-        0 0 0 2px rgba(57, 70, 60, 0.34),
-        0 10px 18px rgba(44, 55, 44, 0.24);
+        0 0 0 1px rgba(157, 122, 54, 0.42),
+        0 10px 20px rgba(44, 55, 44, 0.24);
     }
 
     .popup-card {
@@ -2314,6 +2321,18 @@
         position: "topright"
       }).addTo(map);
 
+      map.on("popupopen", function() {
+        if (heroMapShell) {
+          heroMapShell.classList.add("has-popup");
+        }
+      });
+
+      map.on("popupclose", function() {
+        if (heroMapShell) {
+          heroMapShell.classList.remove("has-popup");
+        }
+      });
+
       updateDirectory("");
 
       window.addEventListener("resize", function() {
@@ -2525,8 +2544,8 @@
             Math.max(36, Math.round(topOverlayHeight + 22))
           ],
           paddingBottomRight: [
-            Math.max(36, Math.round(rightOverlayWidth + 16)),
-            Math.max(36, Math.round(bottomOverlayHeight + 16))
+            Math.max(36, Math.round(rightOverlayWidth + 20)),
+            Math.max(56, Math.round(bottomOverlayHeight + 44))
           ]
         };
       }
@@ -2972,14 +2991,15 @@
           const marker = L.marker(barber.coords, {
             icon: L.divIcon({
               className: "custom-marker-shell",
-              html: '<span class="custom-marker" style="--marker-color:' + barber.accent.foreground + ';"></span>',
-              iconSize: [22, 22],
-              iconAnchor: [11, 11],
-              popupAnchor: [0, -10]
+              html: '<span class="custom-marker"></span>',
+              iconSize: [32, 32],
+              iconAnchor: [16, 16],
+              popupAnchor: [0, -14]
             })
           })
             .addTo(map)
             .bindPopup(buildPopup(barber), {
+              keepInView: true,
               autoPanPaddingTopLeft: popupPadding.paddingTopLeft,
               autoPanPaddingBottomRight: popupPadding.paddingBottomRight
             });
@@ -2998,7 +3018,9 @@
             fillOpacity: 1
           })
             .addTo(map)
-            .bindPopup('<div class="popup-card"><strong>A tua localização</strong><p>Usamos este ponto para mostrar as barbearias mais próximas.</p></div>');
+            .bindPopup('<div class="popup-card"><strong>A tua localização</strong><p>Usamos este ponto para mostrar as barbearias mais próximas.</p></div>', {
+              keepInView: true
+            });
 
           visiblePoints.push(L.latLng(state.userCoords[0], state.userCoords[1]));
         }
