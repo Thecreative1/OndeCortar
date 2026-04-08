@@ -524,17 +524,29 @@
     }
 
     .hero-map-search .hero-results {
-      margin-top: 14px;
+      position: absolute;
+      top: calc(100% + 14px);
+      left: 0;
+      z-index: 25;
+      width: min(760px, 100%);
       max-width: min(760px, 100%);
+      margin-top: 0;
       padding: 14px;
       border: 1px solid #ddd2c1;
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(6px);
       box-shadow: 0 12px 28px rgba(73, 57, 35, 0.08);
     }
 
     .hero-map-search .hero-results-list {
-      max-height: 220px;
+      max-height: 200px;
+      padding-right: 4px;
+    }
+
+    .hero-map-search .hero-map-shell.has-results .hero-map-count {
+      left: auto;
+      right: 20px;
     }
 
     .hero-map-search .hero-map-shell .leaflet-top.leaflet-left {
@@ -1694,6 +1706,13 @@
         flex-direction: column;
       }
 
+      .hero-map-search .hero-results {
+        position: static;
+        width: auto;
+        max-width: none;
+        margin-top: 14px;
+      }
+
       .hero-map-search .hero-search-input,
       .hero-map-search .hero-btn {
         flex: 0 0 auto;
@@ -1711,6 +1730,7 @@
 
       .hero-map-search .hero-map-count {
         left: 16px;
+        right: auto;
         bottom: 16px;
         padding: 9px 14px;
         font-size: 13px;
@@ -1754,6 +1774,7 @@
 
       .hero-map-search .hero-map-count {
         left: 14px;
+        right: auto;
         bottom: 14px;
       }
     }
@@ -2238,6 +2259,7 @@
       const heroResultsHeading = document.getElementById("heroResultsHeading");
       const heroResultsCount = document.getElementById("heroResultsCount");
       const heroResultsList = document.getElementById("heroResultsList");
+      const heroMapShell = document.querySelector(".hero-map-shell");
       const featuredGrid = document.getElementById("featuredGrid");
       const citiesGrid = document.getElementById("citiesGrid");
       const directoryCities = document.getElementById("directoryCities");
@@ -2377,6 +2399,12 @@
         }
       }
 
+      function setHeroResultsState(isActive) {
+        if (heroMapShell) {
+          heroMapShell.classList.toggle("has-results", Boolean(isActive));
+        }
+      }
+
       function setLocateButtonState(isLoading) {
         if (!heroLocateBtn) {
           return;
@@ -2461,6 +2489,7 @@
 
       function showHeroMessage(title, message, countText) {
         setHeroResultsHeading(title);
+        setHeroResultsState(true);
         heroResults.hidden = false;
         heroResultsCount.textContent = countText || "";
         heroResultsList.innerHTML = '<div class="hero-results-empty">' + directory.escapeHtml(message) + "</div>";
@@ -2614,12 +2643,14 @@
         setHeroResultsHeading(settings.title || defaultHeroResultsHeading);
 
         if (!shouldShow) {
+          setHeroResultsState(false);
           heroResults.hidden = true;
           heroResultsCount.textContent = "0 resultados";
           heroResultsList.innerHTML = "";
           return;
         }
 
+        setHeroResultsState(true);
         heroResults.hidden = false;
         heroResultsCount.textContent = settings.countText || (list.length + " resultado" + (list.length === 1 ? "" : "s"));
 
