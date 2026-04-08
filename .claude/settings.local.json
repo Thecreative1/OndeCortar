@@ -23,7 +23,14 @@
       "Bash(python:*)",
       "Bash(node -e ':*)",
       "Bash(node scripts/sync-commerce-static.js)",
-      "Bash(node scripts/build-directory-static.js)"
+      "Bash(node scripts/build-directory-static.js)",
+      "WebFetch(domain:www.amazon.es)",
+      "Bash(curl -L -s -o \"imagens/produtos/parker-srx.jpg\" \"https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=ES&ASIN=B01MQIAAC1&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL300_\")",
+      "Bash(powershell -Command 'try { Invoke-WebRequest -Uri '\\\\''https://images-na.ssl-images-amazon.com/images/P/B01MQIAAC1.01.LZZZZZZZ.jpg'\\\\'' -OutFile '\\\\''imagens/produtos/parker-srx.jpg'\\\\'' -UseBasicParsing; Write-Host '\\\\''OK'\\\\'' } catch { Write-Host '\\\\''FAIL: '\\\\'' + $_.Exception.Message }')",
+      "Bash(powershell -Command 'try { Invoke-WebRequest -Uri '\\\\''https://images-na.ssl-images-amazon.com/images/P/B07J6ZG678.01.LZZZZZZZ.jpg'\\\\'' -OutFile '\\\\''imagens/produtos/wilkinson-pincel.jpg'\\\\'' -UseBasicParsing; Write-Host '\\\\''OK'\\\\'' } catch { Write-Host '\\\\''FAIL: '\\\\'' + $_.Exception.Message }')",
+      "Bash(powershell -Command 'try { $r = Invoke-WebRequest -Uri '\\\\''https://images-na.ssl-images-amazon.com/images/P/B01MQIAAC1.__TRACKED_VAR__.jpg'\\\\'' -UseBasicParsing; Write-Host '\\\\''__TRACKED_VAR__: '\\\\'' + $r.RawContentLength } catch { Write-Host '\\\\''__TRACKED_VAR__: FAIL'\\\\'' }')",
+      "Bash(powershell -Command ':*)",
+      "Bash(powershell:*)"
     ]
   }
 }
