@@ -2316,6 +2316,14 @@
 
       updateDirectory("");
 
+      window.addEventListener("resize", function() {
+        syncHeroShellHeight();
+        map.invalidateSize({
+          pan: false,
+          debounceMoveend: true
+        });
+      });
+
       heroSearchForm.addEventListener("submit", function(event) {
         event.preventDefault();
         const value = heroSearchInput.value.trim();
