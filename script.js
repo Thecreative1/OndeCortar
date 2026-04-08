@@ -630,24 +630,54 @@
       });
   }
 
+  function escapeRegExp(value) {
+    return String(value || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function buildWordSearchPattern(query, requireTrailingBoundary) {
+    const suffix = requireTrailingBoundary ? "(?:\\s|$)" : "";
+    return new RegExp("(?:^|\\s)" + escapeRegExp(query) + suffix);
+  }
+
+  function matchesSearchFields(values, pattern) {
+    return (values || []).some(function(value) {
+      const normalized = normalizar(value).replace(/\s+/g, " ").trim();
+      return Boolean(normalized) && pattern.test(normalized);
+    });
+  }
+
   function searchBarbers(term) {
-    const query = normalizar(term);
+    const query = normalizar(term).replace(/\s+/g, " ").trim();
 
     if (!query || query.length < 2) {
       return getBarbers();
     }
 
-    const queryPattern = new RegExp("(?:^|\\s)" + query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    const strictLocationPattern = buildWordSearchPattern(query, true);
+    const flexiblePattern = buildWordSearchPattern(query, false);
+    const strictLocationResults = barbers.filter(function(barber) {
+      return matchesSearchFields([barber.city, barber.locality, barber.zone], strictLocationPattern);
+    });
+
+    if (strictLocationResults.length) {
+      return strictLocationResults;
+    }
+
+    const flexibleNameResults = barbers.filter(function(barber) {
+      return matchesSearchFields([barber.name], flexiblePattern);
+    });
+
+    if (flexibleNameResults.length) {
+      return flexibleNameResults;
+    }
 
     return barbers.filter(function(barber) {
-      const haystack = normalizar([
+      return matchesSearchFields([
         barber.name,
         barber.city,
         barber.locality,
         barber.zone
-      ].join(" "));
-
-      return queryPattern.test(haystack);
+      ], flexiblePattern);
     });
   }
 
