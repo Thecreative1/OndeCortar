@@ -2993,6 +2993,10 @@
           return;
         }
 
+        map.invalidateSize({
+          pan: false,
+          debounceMoveend: true
+        });
         const overlayPadding = getHeroOverlayPadding();
         map.setView(marker.getLatLng(), 13, { animate: true });
         map.panInside(marker.getLatLng(), overlayPadding);
