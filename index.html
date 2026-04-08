@@ -2418,7 +2418,35 @@
       }
 
       function resetMapToDefault() {
+        map.invalidateSize({
+          pan: false,
+          debounceMoveend: true
+        });
         map.fitBounds(defaultMapBounds, getHeroOverlayPadding());
+      }
+
+      function syncHeroShellHeight() {
+        if (!heroMapShell) {
+          return;
+        }
+
+        heroMapShell.style.minHeight = "";
+
+        if (window.innerWidth <= 760 || !heroResults || heroResults.hidden || !heroSearchCard) {
+          return;
+        }
+
+        const shellRect = heroMapShell.getBoundingClientRect();
+        const cardRect = heroSearchCard.getBoundingClientRect();
+        const resultsRect = heroResults.getBoundingClientRect();
+        const mapCountRect = heroMapCount ? heroMapCount.getBoundingClientRect() : null;
+        const requiredBottom = Math.max(
+          resultsRect.bottom,
+          mapCountRect ? mapCountRect.bottom : shellRect.top,
+          cardRect.bottom
+        ) - shellRect.top;
+
+        heroMapShell.style.minHeight = Math.max(660, Math.ceil(requiredBottom + 24)) + "px";
       }
 
       function getHeroOverlayPadding() {
@@ -2564,6 +2592,7 @@
         heroResults.hidden = false;
         heroResultsCount.textContent = countText || "";
         heroResultsList.innerHTML = '<div class="hero-results-empty">' + directory.escapeHtml(message) + "</div>";
+        syncHeroShellHeight();
       }
 
       function handleLocateSearch() {
