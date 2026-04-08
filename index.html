@@ -2644,6 +2644,8 @@
         const settings = options || {};
         const cleanTerm = String(term || "").trim();
         const shouldShow = settings.forceOpen || Boolean(cleanTerm);
+        const previewLimit = Number.isFinite(settings.limit) ? settings.limit : 3;
+        const previewList = list.slice(0, previewLimit);
 
         setHeroResultsHeading(settings.title || defaultHeroResultsHeading);
 
@@ -2664,7 +2666,7 @@
           return;
         }
 
-        heroResultsList.innerHTML = list.map(function(barber) {
+        heroResultsList.innerHTML = previewList.map(function(barber) {
           const placeLabel = getPrimaryLocationLabel(barber);
           const distanceLabel = typeof barber.distanceKm === "number"
             ? '<span class="tag tag-small">' + directory.escapeHtml(formatDistanceLabel(barber.distanceKm)) + "</span>"
