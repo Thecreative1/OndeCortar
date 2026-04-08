@@ -2299,7 +2299,7 @@
           return barber.coords;
         });
       const defaultMapBounds = defaultMapPoints.length
-        ? L.latLngBounds(defaultMapPoints).pad(0.16)
+        ? L.latLngBounds(defaultMapPoints).pad(0.08)
         : L.latLngBounds([[30.2, -31.9], [43.2, -5.4]]);
       const map = L.map("map", {
         scrollWheelZoom: true,
@@ -2425,12 +2425,43 @@
         searchInput.value = value;
       }
 
+      function getDefaultMapFitOptions() {
+        if (!heroMapShell || !heroSearchCard || window.innerWidth <= 760) {
+          return {
+            paddingTopLeft: [24, 24],
+            paddingBottomRight: [24, 24],
+            maxZoom: 5
+          };
+        }
+
+        const shellRect = heroMapShell.getBoundingClientRect();
+        const cardRect = heroSearchCard.getBoundingClientRect();
+        const mapCountRect = heroMapCount ? heroMapCount.getBoundingClientRect() : null;
+        const cardWidth = Math.max(0, cardRect.right - shellRect.left);
+        const cardHeight = Math.max(0, cardRect.bottom - shellRect.top);
+        const bottomOverlayHeight = mapCountRect
+          ? Math.max(0, shellRect.bottom - mapCountRect.top)
+          : 0;
+
+        return {
+          paddingTopLeft: [
+            Math.max(36, Math.round(cardWidth * 0.52)),
+            Math.max(36, Math.round(cardHeight * 0.18))
+          ],
+          paddingBottomRight: [
+            36,
+            Math.max(36, Math.round(bottomOverlayHeight + 16))
+          ],
+          maxZoom: 5
+        };
+      }
+
       function resetMapToDefault() {
         map.invalidateSize({
           pan: false,
           debounceMoveend: true
         });
-        map.fitBounds(defaultMapBounds, getHeroOverlayPadding());
+        map.fitBounds(defaultMapBounds, getDefaultMapFitOptions());
       }
 
       function syncHeroShellHeight() {
