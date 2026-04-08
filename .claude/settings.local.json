@@ -30,7 +30,8 @@
       "Bash(powershell -Command 'try { Invoke-WebRequest -Uri '\\\\''https://images-na.ssl-images-amazon.com/images/P/B07J6ZG678.01.LZZZZZZZ.jpg'\\\\'' -OutFile '\\\\''imagens/produtos/wilkinson-pincel.jpg'\\\\'' -UseBasicParsing; Write-Host '\\\\''OK'\\\\'' } catch { Write-Host '\\\\''FAIL: '\\\\'' + $_.Exception.Message }')",
       "Bash(powershell -Command 'try { $r = Invoke-WebRequest -Uri '\\\\''https://images-na.ssl-images-amazon.com/images/P/B01MQIAAC1.__TRACKED_VAR__.jpg'\\\\'' -UseBasicParsing; Write-Host '\\\\''__TRACKED_VAR__: '\\\\'' + $r.RawContentLength } catch { Write-Host '\\\\''__TRACKED_VAR__: FAIL'\\\\'' }')",
       "Bash(powershell -Command ':*)",
-      "Bash(powershell:*)"
+      "Bash(powershell:*)",
+      "Bash(ls \"E:/GIT_HUB/OndeCortar/imagens/produtos/\"*.svg)"
     ]
   }
 }
