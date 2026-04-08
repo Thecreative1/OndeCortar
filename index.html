@@ -2750,6 +2750,7 @@
           heroResults.hidden = true;
           heroResultsCount.textContent = "0 resultados";
           heroResultsList.innerHTML = "";
+          syncHeroShellHeight();
           return;
         }
 
@@ -2759,6 +2760,7 @@
 
         if (!list.length) {
           heroResultsList.innerHTML = '<div class="hero-results-empty">' + directory.escapeHtml(settings.emptyMessage || "Ainda não encontrámos barbearias para essa pesquisa. Experimenta outra cidade, zona ou nome.") + "</div>";
+          syncHeroShellHeight();
           return;
         }
 
@@ -2785,6 +2787,7 @@
             "</article>"
           );
         }).join("");
+        syncHeroShellHeight();
       }
 
       function formatDistanceLabel(distanceKm) {
@@ -2882,6 +2885,10 @@
       }
 
       function renderMarkers(list) {
+        map.invalidateSize({
+          pan: false,
+          debounceMoveend: true
+        });
         map.closePopup();
 
         state.markers.forEach(function(marker) {
@@ -2945,7 +2952,8 @@
 
         if (visiblePoints.length === 1) {
           const overlayPadding = getHeroOverlayPadding();
-          map.setView(visiblePoints[0], state.userCoords ? 12 : 13);
+          const singleResultZoom = state.userCoords ? 12 : (list.length > 1 ? 11 : 13);
+          map.setView(visiblePoints[0], singleResultZoom);
           map.panInside(visiblePoints[0], overlayPadding);
           return;
         }
