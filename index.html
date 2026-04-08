@@ -380,7 +380,7 @@
 
     .hero-map-search .hero-map-shell {
       position: relative;
-      min-height: 620px;
+      min-height: 560px;
       overflow: hidden;
       border: 1px solid #d7c8b5;
       border-radius: 30px;
@@ -396,11 +396,11 @@
 
     .hero-map-search .hero-search-card {
       position: absolute;
-      top: 24px;
-      left: 24px;
+      top: 22px;
+      left: 22px;
       z-index: 20;
-      width: min(760px, calc(100% - 48px));
-      padding: 20px;
+      width: min(880px, calc(100% - 44px));
+      padding: 18px 20px;
       border: 1px solid #d7c8b5;
       border-radius: 28px;
       background: rgba(245, 239, 228, 0.96);
@@ -423,18 +423,18 @@
     }
 
     .hero-map-search .hero-title {
-      max-width: 13ch;
+      max-width: 15ch;
       margin: 0 0 8px;
       color: #2d2418;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2rem, 3.2vw, 3rem);
-      line-height: 1.03;
+      font-size: clamp(1.95rem, 2.8vw, 2.85rem);
+      line-height: 0.98;
       letter-spacing: -0.02em;
     }
 
     .hero-map-search .hero-subtitle {
-      max-width: 680px;
-      margin: 0 0 16px;
+      max-width: 760px;
+      margin: 0 0 14px;
       color: #6e6559;
       font-size: 16px;
       line-height: 1.45;
@@ -443,12 +443,13 @@
     .hero-map-search .hero-search-form {
       display: flex;
       flex-wrap: wrap;
+      align-items: stretch;
       gap: 10px;
     }
 
     .hero-map-search .hero-search-input {
-      flex: 1 1 360px;
-      min-width: 260px;
+      flex: 1 1 460px;
+      min-width: 0;
       height: 58px;
       padding: 0 18px;
       border: 1px solid #ddd2c1;
@@ -469,6 +470,8 @@
     }
 
     .hero-map-search .hero-btn {
+      flex: 0 0 auto;
+      min-width: 160px;
       height: 58px;
       padding: 0 22px;
       border: 1px solid transparent;
@@ -522,6 +525,7 @@
 
     .hero-map-search .hero-results {
       margin-top: 14px;
+      max-width: min(760px, 100%);
       padding: 14px;
       border: 1px solid #ddd2c1;
       border-radius: 20px;
@@ -1514,7 +1518,7 @@
       }
 
       .hero-map-search .hero-map-shell {
-        min-height: 640px;
+        min-height: 580px;
       }
     }
 
@@ -1665,21 +1669,24 @@
       }
 
       .hero-map-search .hero-map-shell {
-        min-height: 640px;
+        min-height: 600px;
       }
 
       .hero-map-search .hero-search-card {
-        top: 16px;
-        left: 16px;
-        width: calc(100% - 32px);
+        top: 14px;
+        left: 14px;
+        width: calc(100% - 28px);
         padding: 16px;
       }
 
       .hero-map-search .hero-title {
-        font-size: 2rem;
+        max-width: none;
+        font-size: clamp(1.72rem, 7vw, 2.15rem);
+        line-height: 1.02;
       }
 
       .hero-map-search .hero-subtitle {
+        max-width: none;
         font-size: 15px;
       }
 
@@ -1689,7 +1696,17 @@
 
       .hero-map-search .hero-search-input,
       .hero-map-search .hero-btn {
+        flex: 0 0 auto;
+        min-width: 0;
         width: 100%;
+      }
+
+      .hero-map-search .hero-search-input {
+        height: 56px;
+      }
+
+      .hero-map-search .hero-btn {
+        height: 54px;
       }
 
       .hero-map-search .hero-map-count {
@@ -1718,7 +1735,7 @@
 
     @media (max-width: 560px) {
       .hero-map-search .hero-map-shell {
-        min-height: 620px;
+        min-height: 560px;
         border-radius: 22px;
       }
 
@@ -1727,11 +1744,17 @@
       }
 
       .hero-map-search .hero-title {
-        font-size: 1.8rem;
+        font-size: 1.62rem;
       }
 
       .hero-map-search .hero-subtitle {
+        font-size: 14px;
         margin-bottom: 14px;
+      }
+
+      .hero-map-search .hero-map-count {
+        left: 14px;
+        bottom: 14px;
       }
     }
   </style>
@@ -2228,9 +2251,12 @@
       renderFeatured();
       renderCities();
 
+      const defaultMapBounds = L.latLngBounds(
+        [[30.2, -31.9], [43.2, -5.4]]
+      );
       const map = L.map("map", {
         scrollWheelZoom: false
-      }).setView([39.55, -8.05], 6);
+      });
 
       L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
         attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
@@ -2337,6 +2363,12 @@
       function syncSearchInputs(value) {
         heroSearchInput.value = value;
         searchInput.value = value;
+      }
+
+      function resetMapToDefault() {
+        map.fitBounds(defaultMapBounds, {
+          padding: [24, 24]
+        });
       }
 
       function setHeroResultsHeading(title) {
@@ -2766,7 +2798,7 @@
         }
 
         if (!visiblePoints.length || (!state.userCoords && list.length === allBarbers.length)) {
-          map.setView([39.55, -8.05], 6);
+          resetMapToDefault();
           return;
         }
 
