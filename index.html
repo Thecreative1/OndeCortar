@@ -380,12 +380,16 @@
 
     .hero-map-search .hero-map-shell {
       position: relative;
-      min-height: 540px;
+      min-height: 560px;
       overflow: hidden;
       border: 1px solid #d7c8b5;
       border-radius: 30px;
       background: #dfe8ea;
       box-shadow: 0 18px 50px rgba(73, 57, 35, 0.08);
+    }
+
+    .hero-map-search .hero-map-shell.has-results {
+      min-height: 660px;
     }
 
     .hero-map-search .hero-map {
@@ -399,8 +403,8 @@
       top: 24px;
       left: 24px;
       z-index: 20;
-      width: min(680px, calc(100% - 236px));
-      padding: 15px 16px;
+      width: min(700px, calc(100% - 460px));
+      padding: 14px 16px;
       border: 1px solid #d7c8b5;
       border-radius: 28px;
       background: rgba(245, 239, 228, 0.96);
@@ -423,17 +427,17 @@
     }
 
     .hero-map-search .hero-title {
-      max-width: 12.5ch;
+      max-width: 16ch;
       margin: 0 0 6px;
       color: #2d2418;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.72rem, 2.35vw, 2.35rem);
-      line-height: 1;
+      font-size: clamp(1.62rem, 2.1vw, 2.1rem);
+      line-height: 0.98;
       letter-spacing: -0.02em;
     }
 
     .hero-map-search .hero-subtitle {
-      max-width: 560px;
+      max-width: 600px;
       margin: 0 0 10px;
       color: #6e6559;
       font-size: 14px;
@@ -448,7 +452,7 @@
     }
 
     .hero-map-search .hero-search-input {
-      flex: 1 1 280px;
+      flex: 1 1 320px;
       min-width: 0;
       height: 54px;
       padding: 0 18px;
@@ -1532,6 +1536,10 @@
       .hero-map-search .hero-map-shell {
         min-height: 580px;
       }
+
+      .hero-map-search .hero-map-shell.has-results {
+        min-height: 680px;
+      }
     }
 
     @media (max-width: 760px) {
@@ -1684,6 +1692,10 @@
         min-height: 600px;
       }
 
+      .hero-map-search .hero-map-shell.has-results {
+        min-height: 600px;
+      }
+
       .hero-map-search .hero-search-card {
         top: 14px;
         left: 14px;
@@ -1757,6 +1769,10 @@
       .hero-map-search .hero-map-shell {
         min-height: 560px;
         border-radius: 22px;
+      }
+
+      .hero-map-search .hero-map-shell.has-results {
+        min-height: 560px;
       }
 
       .hero-map-search .hero-search-card {
@@ -2275,9 +2291,16 @@
       renderFeatured();
       renderCities();
 
-      const defaultMapBounds = L.latLngBounds(
-        [[30.2, -31.9], [43.2, -5.4]]
-      );
+      const defaultMapPoints = allBarbers
+        .filter(function(barber) {
+          return Array.isArray(barber.coords) && barber.coords.length === 2;
+        })
+        .map(function(barber) {
+          return barber.coords;
+        });
+      const defaultMapBounds = defaultMapPoints.length
+        ? L.latLngBounds(defaultMapPoints).pad(0.16)
+        : L.latLngBounds([[30.2, -31.9], [43.2, -5.4]]);
       const map = L.map("map", {
         scrollWheelZoom: true,
         zoomControl: false
@@ -2395,9 +2418,7 @@
       }
 
       function resetMapToDefault() {
-        map.fitBounds(defaultMapBounds, {
-          padding: [24, 24]
-        });
+        map.fitBounds(defaultMapBounds, getHeroOverlayPadding());
       }
 
       function getHeroOverlayPadding() {
@@ -2420,7 +2441,10 @@
           Math.max(0, cardRect.right - shellRect.left),
           resultsRect ? Math.max(0, resultsRect.right - shellRect.left) : 0
         );
-        const topOverlayHeight = Math.max(0, cardRect.bottom - shellRect.top);
+        const topOverlayHeight = Math.max(
+          0,
+          (resultsRect ? resultsRect.bottom : cardRect.bottom) - shellRect.top
+        );
         const rightOverlayWidth = mapCountRect && heroMapShell.classList.contains("has-results")
           ? Math.max(0, shellRect.right - mapCountRect.left)
           : 0;
