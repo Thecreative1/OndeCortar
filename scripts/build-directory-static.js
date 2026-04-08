@@ -456,7 +456,7 @@ function buildCityIntro(cityName, cityBarbers, hierarchy) {
       ? (withBooking === 1
         ? "Uma das opções já tem marcação online, o que facilita o primeiro contacto."
         : "Algumas opções também já têm marcação online, o que facilita o primeiro contacto.")
-      : "Mesmo quando a marcação online ainda não aparece, esta lista ajuda a perceber que espaços já têm informação suficiente para comparar e contactar."
+      : "Mesmo quando a marcação online ainda não está disponível, esta lista ajuda a perceber quais as barbearias com informação suficiente para comparar e contactar."
   ].join(" ");
 }
 
@@ -903,7 +903,7 @@ function renderFooter(prefix) {
           <img src="${prefix}imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
           <strong>OndeCortar.pt</strong>
         </div>
-        <p>Diretório de barbearias em Portugal com páginas locais, perfis completos, loja e revista para encontrares um espaço e comparares produtos no mesmo site.</p>
+        <p>Diretório de barbearias em Portugal com páginas por cidade, perfis com morada e contactos, loja e revista num único site.</p>
       </div>
       <div class="footer-links">
         <a href="${prefix}index.html">Homepage</a>

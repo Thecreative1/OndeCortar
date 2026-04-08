@@ -2,12 +2,12 @@
   window.OndeCortarCommerce = window.OndeCortarCommerce || {};
   window.OndeCortarCommerce.affiliateNotice = "Alguns links nesta página são links de afiliado. O OndeCortar pode receber comissão por compras elegíveis.";
   window.OndeCortarCommerce.needs = [
-    { slug: "para-casa", title: "Para casa", copy: "Escolhas simples para manutenção regular em casa." },
-    { slug: "para-barbeiros", title: "Para barbeiros", copy: "Peças úteis para posto, manutenção e ritmo de trabalho." },
-    { slug: "para-barba", title: "Para barba", copy: "Rotina, conforto e manutenção entre cortes." },
-    { slug: "para-contornos-e-fades", title: "Para contornos e fades", copy: "Mais detalhe, linhas e acabamento." },
-    { slug: "para-manutencao-e-higiene", title: "Para manutenção e higiene", copy: "Limpeza, apoio e organização de rotina." },
-    { slug: "para-oferecer", title: "Para oferecer", copy: "Kits e conjuntos mais fáceis de acertar." }
+    { slug: "para-casa", title: "Para casa", copy: "Para quem quer manter cabelo e barba em dia sem complicar a rotina." },
+    { slug: "para-barbeiros", title: "Para barbeiros", copy: "Ferramentas e acessórios para posto de trabalho, manutenção e ritmo diário." },
+    { slug: "para-barba", title: "Para barba", copy: "Para ter a barba sempre apresentável entre visitas ao barbeiro." },
+    { slug: "para-contornos-e-fades", title: "Para contornos e fades", copy: "Para quem quer mais precisão nas linhas, contornos e acabamento." },
+    { slug: "para-manutencao-e-higiene", title: "Para manutenção e higiene", copy: "Para manter máquinas limpas, lubrificadas e prontas a usar." },
+    { slug: "para-oferecer", title: "Para oferecer", copy: "Kits com boa apresentação e uso claro — mais fáceis de escolher como presente." }
   ];
   window.OndeCortarCommerce.featuredPicks = [
     { label: "Melhor máquina para casa", product: "braun-series-5-aio5545", note: "Versátil e direta para quem quer resolver cabelo e barba no mesmo aparelho." },
@@ -176,35 +176,35 @@
     {
       slug: "guias-de-compra",
       title: "Guias de compra",
-      intro: "Tudo o que precisas de saber antes de escolher.",
+      intro: "Guias práticos para escolher com critério e evitar arrependimentos.",
       categories: ["maquinas-de-cortar", "kits-de-barba", "cremes-e-espumas", "navalhas-e-laminas"],
       articles: ["como-escolher-uma-maquina-de-cortar-cabelo-para-usar-em-casa", "melhor-kit-de-barba-para-comecar-sem-comprar-as-cegas", "creme-espuma-ou-gel-de-barbear-qual-escolher", "navalha-classica-ou-maquina-de-seguranca-diferencas-reais"]
     },
     {
       slug: "comparacoes",
       title: "Comparações",
-      intro: "Compara lado a lado e escolhe o que funciona para ti.",
+      intro: "Compara as diferenças reais entre produtos e escolhe com menos dúvidas.",
       categories: ["maquinas-de-cortar", "kits-de-barba", "escovas-e-pentes", "navalhas-e-laminas"],
       articles: ["o-que-vale-a-pena-num-kit-de-barba-e-o-que-e-so-ruido-de-catalogo", "aparador-multifuncoes-ou-maquina-profissional-qual-compensa-mais", "escova-de-barba-ou-pente-qual-usar-no-dia-a-dia", "como-escolher-laminas-sem-irritar-a-pele-desnecessariamente"]
     },
     {
       slug: "erros-comuns",
       title: "Erros comuns",
-      intro: "Evita arrependimentos e compra com confiança.",
+      intro: "Os erros mais frequentes na compra de produtos de barbearia e como evitá-los.",
       categories: ["maquinas-de-cortar", "kits-de-barba", "cremes-e-espumas", "navalhas-e-laminas"],
       articles: ["7-erros-ao-comprar-uma-maquina-de-cortar-cabelo-barata", "o-que-vale-a-pena-num-kit-de-barba-e-o-que-e-so-ruido-de-catalogo", "como-escolher-laminas-sem-irritar-a-pele-desnecessariamente", "creme-espuma-ou-gel-de-barbear-qual-escolher"]
     },
     {
       slug: "conteudo-pratico",
       title: "Conteúdo prático",
-      intro: "Dicas práticas para tirar o máximo dos teus produtos.",
+      intro: "Como usar e manter os teus produtos para durarem mais e funcionarem melhor.",
       categories: ["kits-de-barba", "escovas-e-pentes", "maquinas-de-cortar", "acessorios-de-barbeiro"],
       articles: ["como-montar-uma-rotina-simples-de-barba-em-casa", "como-manter-a-maquina-de-cortar-cabelo-a-funcionar-bem-por-mais-tempo", "o-essencial-para-manter-uma-bancada-de-barbeiro-organizada"]
     },
     {
       slug: "cuidados-com-a-barba",
       title: "Cuidados com a barba",
-      intro: "Rotina, conforto e manutenção entre cortes.",
+      intro: "Como montar uma rotina simples para ter a barba sempre arrumada entre cortes.",
       categories: ["oleos-e-balms", "cremes-e-espumas", "escovas-e-pentes"],
       articles: ["o-essencial-para-tratar-da-barba-em-casa", "como-reduzir-irritacao-ao-fazer-a-barba"],
       legacy: true
@@ -212,7 +212,7 @@
     {
       slug: "maquinas-e-manutencao",
       title: "Máquinas e manutenção",
-      intro: "Escolher e cuidar melhor do equipamento.",
+      intro: "Como escolher a máquina certa e cuidar dela para durar mais e cortar melhor.",
       categories: ["maquinas-de-cortar", "manutencao-de-maquinas", "trimmers-e-shavers"],
       articles: ["como-limpar-uma-maquina-de-cortar-cabelo", "trimmer-vs-shaver-diferencas-reais"],
       legacy: true
@@ -220,7 +220,7 @@
     {
       slug: "para-barbeiros",
       title: "Para barbeiros",
-      intro: "Conteúdo ligado ao posto de trabalho, organização e rotina do dia a dia.",
+      intro: "Produtos e guias para posto de trabalho, organização de bancada e ritmo diário.",
       categories: ["para-barbeiros", "acessorios-de-barbeiro"],
       articles: ["o-que-um-barbeiro-precisa-no-posto-de-trabalho", "como-limpar-uma-maquina-de-cortar-cabelo"],
       legacy: true
@@ -228,7 +228,7 @@
     {
       slug: "estilo-e-tendencias",
       title: "Estilo e tendências",
-      intro: "Uma área para ligar rotina e estilo sem cair em conteúdo vazio.",
+      intro: "Guias práticos para ligar a rotina ao estilo sem perder tempo.",
       categories: ["navalhas-e-laminas", "escovas-e-pentes", "acessorios-de-barbeiro"],
       articles: ["o-essencial-para-tratar-da-barba-em-casa", "historia-do-poste-de-barbeiro"],
       legacy: true
@@ -236,7 +236,7 @@
     {
       slug: "presentes-e-kits",
       title: "Presentes e kits",
-      intro: "Sugestões para oferecer com mais confiança e menos adivinhação.",
+      intro: "Os kits mais seguros para oferecer a quem gosta de barba bem tratada.",
       categories: ["para-oferecer", "kits-de-barba"],
       articles: ["melhor-kit-de-barba-para-oferecer"],
       legacy: true

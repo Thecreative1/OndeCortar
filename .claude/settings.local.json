@@ -21,7 +21,9 @@
       "Bash(python patch_highlights.py)",
       "Bash(python3:*)",
       "Bash(python:*)",
-      "Bash(node -e ':*)"
+      "Bash(node -e ':*)",
+      "Bash(node scripts/sync-commerce-static.js)",
+      "Bash(node scripts/build-directory-static.js)"
     ]
   }
 }
