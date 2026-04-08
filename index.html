@@ -2531,6 +2531,25 @@
         };
       }
 
+      function getResultsMapFitOptions(resultCount) {
+        const overlayPadding = getHeroOverlayPadding();
+        const maxZoom = state.userCoords
+          ? 11
+          : (resultCount >= 6 ? 9 : (resultCount >= 3 ? 10 : 11));
+
+        return {
+          paddingTopLeft: [
+            overlayPadding.paddingTopLeft[0],
+            overlayPadding.paddingTopLeft[1]
+          ],
+          paddingBottomRight: [
+            overlayPadding.paddingBottomRight[0],
+            overlayPadding.paddingBottomRight[1]
+          ],
+          maxZoom: maxZoom
+        };
+      }
+
       function setHeroResultsHeading(title) {
         if (heroResultsHeading) {
           heroResultsHeading.textContent = title || defaultHeroResultsHeading;
@@ -2991,7 +3010,7 @@
 
         if (visiblePoints.length === 1) {
           const overlayPadding = getHeroOverlayPadding();
-          const singleResultZoom = state.userCoords ? 12 : (list.length > 1 ? 11 : 13);
+          const singleResultZoom = state.userCoords ? 12 : (list.length > 1 ? 10 : 13);
           map.setView(visiblePoints[0], singleResultZoom);
           map.panInside(visiblePoints[0], overlayPadding);
           return;
@@ -2999,7 +3018,7 @@
 
         const bounds = L.latLngBounds(visiblePoints);
 
-        map.fitBounds(bounds, getHeroOverlayPadding());
+        map.fitBounds(bounds, getResultsMapFitOptions(list.length));
       }
 
       function buildPopup(barber) {
