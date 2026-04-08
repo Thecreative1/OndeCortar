@@ -374,6 +374,185 @@
       padding: 22px 0 14px;
     }
 
+    .hero-map-search {
+      padding: 20px 0 8px;
+    }
+
+    .hero-map-search .hero-map-shell {
+      position: relative;
+      min-height: 620px;
+      overflow: hidden;
+      border: 1px solid #d7c8b5;
+      border-radius: 30px;
+      background: #dfe8ea;
+      box-shadow: 0 18px 50px rgba(73, 57, 35, 0.08);
+    }
+
+    .hero-map-search .hero-map {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .hero-map-search .hero-search-card {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      z-index: 20;
+      width: min(760px, calc(100% - 48px));
+      padding: 20px;
+      border: 1px solid #d7c8b5;
+      border-radius: 28px;
+      background: rgba(245, 239, 228, 0.96);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 22px 40px rgba(73, 57, 35, 0.12);
+    }
+
+    .hero-map-search .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      margin-bottom: 12px;
+      border: 1px solid #d7c8b5;
+      border-radius: 999px;
+      background: #efe4cf;
+      color: #9b7a36;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-map-search .hero-title {
+      max-width: 13ch;
+      margin: 0 0 8px;
+      color: #2d2418;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 3.2vw, 3rem);
+      line-height: 1.03;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-map-search .hero-subtitle {
+      max-width: 680px;
+      margin: 0 0 16px;
+      color: #6e6559;
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    .hero-map-search .hero-search-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-map-search .hero-search-input {
+      flex: 1 1 360px;
+      min-width: 260px;
+      height: 58px;
+      padding: 0 18px;
+      border: 1px solid #ddd2c1;
+      border-radius: 18px;
+      background: #ffffff;
+      color: #2d2418;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .hero-map-search .hero-search-input:focus {
+      border-color: #395540;
+      box-shadow: 0 0 0 3px rgba(57, 85, 64, 0.12);
+    }
+
+    .hero-map-search .hero-search-input::placeholder {
+      color: #8a7f71;
+    }
+
+    .hero-map-search .hero-btn {
+      height: 58px;
+      padding: 0 22px;
+      border: 1px solid transparent;
+      border-radius: 18px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .hero-map-search .hero-btn:disabled {
+      cursor: wait;
+      opacity: 0.72;
+    }
+
+    .hero-map-search .hero-btn-primary {
+      background: #395540;
+      color: #ffffff;
+    }
+
+    .hero-map-search .hero-btn-primary:hover {
+      background: #45634c;
+    }
+
+    .hero-map-search .hero-btn-secondary {
+      border-color: #d7c8b5;
+      background: rgba(255, 255, 255, 0.92);
+      color: #2d2418;
+    }
+
+    .hero-map-search .hero-btn-secondary:hover {
+      background: #ffffff;
+    }
+
+    .hero-map-search .hero-map-count {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      z-index: 20;
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 16px;
+      border: 1px solid #d7c8b5;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.94);
+      color: #2d2418;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    .hero-map-search .hero-results {
+      margin-top: 14px;
+      padding: 14px;
+      border: 1px solid #ddd2c1;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 12px 28px rgba(73, 57, 35, 0.08);
+    }
+
+    .hero-map-search .hero-results-list {
+      max-height: 220px;
+    }
+
+    .hero-map-search .hero-map-shell .leaflet-top.leaflet-left {
+      top: 16px;
+      left: 16px;
+    }
+
+    .hero-map-search .hero-map-shell .leaflet-control-zoom a {
+      width: 40px;
+      height: 40px;
+      line-height: 38px;
+      border-radius: 12px;
+      border: 1px solid #d7c8b5;
+      color: #2d2418;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    .hero-map-search .hero-map-shell .leaflet-control-attribution {
+      font-size: 11px;
+      opacity: 0.8;
+    }
+
     .hero-layout {
       display: grid;
       grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
@@ -1333,6 +1512,10 @@
       .hero-map-frame #map {
         height: 420px;
       }
+
+      .hero-map-search .hero-map-shell {
+        min-height: 640px;
+      }
     }
 
     @media (max-width: 760px) {
@@ -1481,6 +1664,41 @@
         height: min(54vh, 360px);
       }
 
+      .hero-map-search .hero-map-shell {
+        min-height: 640px;
+      }
+
+      .hero-map-search .hero-search-card {
+        top: 16px;
+        left: 16px;
+        width: calc(100% - 32px);
+        padding: 16px;
+      }
+
+      .hero-map-search .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-map-search .hero-subtitle {
+        font-size: 15px;
+      }
+
+      .hero-map-search .hero-search-form {
+        flex-direction: column;
+      }
+
+      .hero-map-search .hero-search-input,
+      .hero-map-search .hero-btn {
+        width: 100%;
+      }
+
+      .hero-map-search .hero-map-count {
+        left: 16px;
+        bottom: 16px;
+        padding: 9px 14px;
+        font-size: 13px;
+      }
+
       .result-card {
         grid-template-columns: 1fr;
       }
@@ -1495,6 +1713,25 @@
 
       .popup-card {
         min-width: 0;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero-map-search .hero-map-shell {
+        min-height: 620px;
+        border-radius: 22px;
+      }
+
+      .hero-map-search .hero-search-card {
+        border-radius: 22px;
+      }
+
+      .hero-map-search .hero-title {
+        font-size: 1.8rem;
+      }
+
+      .hero-map-search .hero-subtitle {
+        margin-bottom: 14px;
       }
     }
   </style>
@@ -1567,46 +1804,51 @@
   </header>
 
   <main id="main-content">
-    <section class="hero" id="mapa">
-      <div class="container hero-layout">
-        <div class="hero-copy">
-          <span class="eyebrow">Barbearias em Portugal</span>
-          <h1 class="hero-title">Encontra barbearias em Portugal</h1>
-          <p class="hero-subtitle">Pesquisa por cidade, zona ou nome, ou usa o mapa para encontrar a barbearia certa.</p>
+    <section class="hero hero-map-search" id="mapa" aria-label="Pesquisa principal de barbearias">
+      <div class="container">
+        <div class="hero-map-shell">
+          <div class="hero-search-card">
+            <span class="hero-badge">Barbearias em Portugal</span>
 
-          <form class="hero-search" id="heroSearchForm" role="search" aria-label="Pesquisar barbearias a partir do hero">
-            <input id="heroSearchInput" type="text" placeholder="Procura por cidade, zona ou nome" />
-            <button class="btn btn-primary" type="submit">Explorar</button>
-          </form>
+            <h1 class="hero-title">Procura por cidade, zona ou nome</h1>
+            <p class="hero-subtitle">
+              Encontra mais depressa a barbearia certa e usa o mapa para explorar melhor a zona.
+            </p>
 
-          <div class="hero-results" id="heroResults" hidden>
-            <div class="hero-results-head">
-              <strong>Resultados da pesquisa</strong>
-              <span class="pill" id="heroResultsCount">0 resultados</span>
+            <form class="hero-search-form" id="heroSearchForm" role="search">
+              <input
+                type="text"
+                id="heroSearchInput"
+                class="hero-search-input"
+                placeholder="Cidade, zona ou nome da barbearia"
+                aria-label="Cidade, zona ou nome da barbearia"
+                autocomplete="off"
+              />
+
+              <button type="submit" class="hero-btn hero-btn-primary">
+                Procurar
+              </button>
+
+              <button type="button" class="hero-btn hero-btn-secondary" id="heroLocateBtn">
+                Usar localização
+              </button>
+            </form>
+
+            <div class="hero-results" id="heroResults" hidden>
+              <div class="hero-results-head">
+                <strong id="heroResultsHeading">Resultados da pesquisa</strong>
+                <span class="pill" id="heroResultsCount">0 resultados</span>
+              </div>
+              <div class="hero-results-list" id="heroResultsList"></div>
+              <a class="btn btn-secondary btn-small" href="#explorar">Ver todos os resultados</a>
             </div>
-            <div class="hero-results-list" id="heroResultsList"></div>
-            <a class="btn btn-secondary btn-small" href="#explorar">Ver todos os resultados</a>
           </div>
 
-          <div class="hero-owner-cta">
-            <p>Tens uma barbearia? <a href="registar.html">Junta-te ao mapa.</a></p>
+          <div class="hero-map-count">
+            <span data-barbearias-total>199</span>&nbsp;barbearias mapeadas
           </div>
 
-          <p class="hero-intro-copy">Começa pela pesquisa e abre logo morada, contacto e localização. Se preferires, explora o mapa interativo para perceber rapidamente o que tens perto de ti.</p>
-        </div>
-
-        <div class="hero-visual">
-          <div class="hero-map-topline">
-            <div>
-              <h2>Explora no mapa</h2>
-              <p>Usa o mapa como atalho visual para ver barbearias, comparar zonas e entrar direto nos detalhes.</p>
-            </div>
-            <span class="hero-map-badge"><span data-barbearias-total>199</span>&nbsp;barbearias no mapa</span>
-          </div>
-
-          <div class="hero-map-frame">
-            <div id="map"></div>
-          </div>
+          <div id="map" class="hero-map" aria-label="Mapa de barbearias em Portugal"></div>
         </div>
       </div>
 
@@ -1952,11 +2194,15 @@
         currentTerm: "",
         results: allBarbers,
         markers: [],
-        markersBySlug: new Map()
+        markersBySlug: new Map(),
+        userCoords: null,
+        userMarker: null,
+        locateRequestId: 0
       };
 
       const heroSearchForm = document.getElementById("heroSearchForm");
       const heroSearchInput = document.getElementById("heroSearchInput");
+      const heroLocateBtn = document.getElementById("heroLocateBtn");
       const directorySearchForm = document.getElementById("directorySearchForm");
       const searchInput = document.getElementById("searchInput");
       const clearSearchButton = document.getElementById("clearSearchButton");
@@ -1966,11 +2212,13 @@
       const resultsList = document.getElementById("resultsList");
       const emptyState = document.getElementById("emptyState");
       const heroResults = document.getElementById("heroResults");
+      const heroResultsHeading = document.getElementById("heroResultsHeading");
       const heroResultsCount = document.getElementById("heroResultsCount");
       const heroResultsList = document.getElementById("heroResultsList");
       const featuredGrid = document.getElementById("featuredGrid");
       const citiesGrid = document.getElementById("citiesGrid");
       const directoryCities = document.getElementById("directoryCities");
+      const defaultHeroResultsHeading = heroResultsHeading ? heroResultsHeading.textContent : "Resultados da pesquisa";
       const totalTargets = document.querySelectorAll("[data-barbearias-total]");
       totalTargets.forEach(function(target) {
         target.textContent = stats.total;
@@ -2006,6 +2254,10 @@
         syncSearchInputs("");
         updateDirectory("");
       });
+
+      if (heroLocateBtn) {
+        heroLocateBtn.addEventListener("click", handleLocateSearch);
+      }
 
       document.addEventListener("click", function(event) {
         const cityButton = event.target.closest("[data-city-search]");
@@ -2087,6 +2339,150 @@
         searchInput.value = value;
       }
 
+      function setHeroResultsHeading(title) {
+        if (heroResultsHeading) {
+          heroResultsHeading.textContent = title || defaultHeroResultsHeading;
+        }
+      }
+
+      function setLocateButtonState(isLoading) {
+        if (!heroLocateBtn) {
+          return;
+        }
+
+        heroLocateBtn.disabled = isLoading;
+        heroLocateBtn.textContent = isLoading ? "A localizar..." : "Usar localização";
+      }
+
+      function clearUserLocation() {
+        state.userCoords = null;
+
+        if (state.userMarker) {
+          map.removeLayer(state.userMarker);
+          state.userMarker = null;
+        }
+      }
+
+      function getDistanceKm(originCoords, targetCoords) {
+        const earthRadiusKm = 6371;
+        const toRadians = function(value) {
+          return value * Math.PI / 180;
+        };
+        const latitudeDelta = toRadians(targetCoords[0] - originCoords[0]);
+        const longitudeDelta = toRadians(targetCoords[1] - originCoords[1]);
+        const latitudeA = toRadians(originCoords[0]);
+        const latitudeB = toRadians(targetCoords[0]);
+        const haversine =
+          Math.sin(latitudeDelta / 2) * Math.sin(latitudeDelta / 2) +
+          Math.cos(latitudeA) * Math.cos(latitudeB) *
+          Math.sin(longitudeDelta / 2) * Math.sin(longitudeDelta / 2);
+
+        return earthRadiusKm * 2 * Math.atan2(Math.sqrt(haversine), Math.sqrt(1 - haversine));
+      }
+
+      function getNearbyBarbers(coords) {
+        const ranked = allBarbers
+          .filter(function(barber) {
+            return Array.isArray(barber.coords) && barber.coords.length === 2;
+          })
+          .map(function(barber) {
+            return {
+              barber: barber,
+              distanceKm: getDistanceKm(coords, barber.coords)
+            };
+          })
+          .sort(function(a, b) {
+            return a.distanceKm - b.distanceKm || b.barber.score - a.barber.score || a.barber.name.localeCompare(b.barber.name, "pt");
+          });
+
+        const nearby = ranked.filter(function(entry) {
+          return entry.distanceKm <= 25;
+        });
+        const selection = (nearby.length ? nearby : ranked).slice(0, 12);
+
+        return selection.map(function(entry) {
+          return Object.assign({}, entry.barber, {
+            distanceKm: entry.distanceKm
+          });
+        });
+      }
+
+      function getLocateErrorMessage(error) {
+        if (!error) {
+          return "Não foi possível usar a tua localização agora.";
+        }
+
+        if (error.code === error.PERMISSION_DENIED) {
+          return "Ativa a localização no navegador para ver as barbearias mais perto de ti.";
+        }
+
+        if (error.code === error.POSITION_UNAVAILABLE) {
+          return "Não foi possível obter a tua localização neste momento.";
+        }
+
+        if (error.code === error.TIMEOUT) {
+          return "A localização demorou demasiado tempo. Tenta novamente.";
+        }
+
+        return "Não foi possível usar a tua localização agora.";
+      }
+
+      function showHeroMessage(title, message, countText) {
+        setHeroResultsHeading(title);
+        heroResults.hidden = false;
+        heroResultsCount.textContent = countText || "";
+        heroResultsList.innerHTML = '<div class="hero-results-empty">' + directory.escapeHtml(message) + "</div>";
+      }
+
+      function handleLocateSearch() {
+        if (!navigator.geolocation) {
+          showHeroMessage("Mais perto de si", "A localização não está disponível neste dispositivo.", "");
+          return;
+        }
+
+        state.locateRequestId += 1;
+        const requestId = state.locateRequestId;
+        setLocateButtonState(true);
+
+        navigator.geolocation.getCurrentPosition(function(position) {
+          if (requestId !== state.locateRequestId) {
+            return;
+          }
+
+          const coords = [position.coords.latitude, position.coords.longitude];
+          const nearbyBarbers = getNearbyBarbers(coords);
+
+          setLocateButtonState(false);
+          state.currentTerm = "";
+          state.results = nearbyBarbers;
+          state.userCoords = coords;
+          syncSearchInputs("");
+
+          renderHeroResults(nearbyBarbers, "", {
+            forceOpen: true,
+            title: "Mais perto de si",
+            countText: nearbyBarbers.length + " barbearia" + (nearbyBarbers.length === 1 ? "" : "s") + " por perto",
+            emptyMessage: "Ainda não encontrámos barbearias com coordenadas próximas da tua localização."
+          });
+          renderResults(nearbyBarbers);
+          updateSummary(nearbyBarbers, "", {
+            mode: "location"
+          });
+          renderMarkers(nearbyBarbers);
+        }, function(error) {
+          if (requestId !== state.locateRequestId) {
+            return;
+          }
+
+          setLocateButtonState(false);
+          showHeroMessage("Mais perto de si", getLocateErrorMessage(error), "");
+        }, {
+          enableHighAccuracy: true,
+          timeout: 10000,
+          maximumAge: 300000
+        });
+      }
+
       function renderCityChips(container, list) {
         if (!container) {
           return;
@@ -2166,6 +2562,9 @@
       }
 
       function updateDirectory(term) {
+        state.locateRequestId += 1;
+        clearUserLocation();
+        setLocateButtonState(false);
         state.currentTerm = term;
         state.results = sortBarbers(directory.searchBarbers(term));
         syncSearchInputs(term);
@@ -2175,10 +2574,14 @@
         renderMarkers(state.results);
       }
 
-      function renderHeroResults(list, term) {
+      function renderHeroResults(list, term, options) {
+        const settings = options || {};
         const cleanTerm = String(term || "").trim();
+        const shouldShow = settings.forceOpen || Boolean(cleanTerm);
 
-        if (!cleanTerm) {
+        setHeroResultsHeading(settings.title || defaultHeroResultsHeading);
+
+        if (!shouldShow) {
           heroResults.hidden = true;
           heroResultsCount.textContent = "0 resultados";
           heroResultsList.innerHTML = "";
@@ -2186,19 +2589,26 @@
         }
 
         heroResults.hidden = false;
-        heroResultsCount.textContent = list.length + " resultado" + (list.length === 1 ? "" : "s");
+        heroResultsCount.textContent = settings.countText || (list.length + " resultado" + (list.length === 1 ? "" : "s"));
 
         if (!list.length) {
-          heroResultsList.innerHTML = '<div class="hero-results-empty">Ainda não encontrámos barbearias para essa pesquisa. Experimenta outra cidade, zona ou nome.</div>';
+          heroResultsList.innerHTML = '<div class="hero-results-empty">' + directory.escapeHtml(settings.emptyMessage || "Ainda não encontrámos barbearias para essa pesquisa. Experimenta outra cidade, zona ou nome.") + "</div>";
           return;
         }
 
         heroResultsList.innerHTML = list.map(function(barber) {
           const placeLabel = getPrimaryLocationLabel(barber);
+          const distanceLabel = typeof barber.distanceKm === "number"
+            ? '<span class="tag tag-small">' + directory.escapeHtml(formatDistanceLabel(barber.distanceKm)) + "</span>"
+            : "";
+
           return (
             '<article class="hero-result-item">' +
               '<div class="hero-result-copy">' +
-                '<span class="tag tag-small">' + directory.escapeHtml(placeLabel) + "</span>" +
+                '<div class="result-topline">' +
+                  '<span class="tag tag-small">' + directory.escapeHtml(placeLabel) + "</span>" +
+                  distanceLabel +
+                "</div>" +
                 "<strong>" + directory.escapeHtml(barber.name) + "</strong>" +
                 "<p>" + directory.escapeHtml(barber.description) + "</p>" +
               "</div>" +
@@ -2211,10 +2621,31 @@
         }).join("");
       }
 
-      function updateSummary(list, term) {
+      function formatDistanceLabel(distanceKm) {
+        if (distanceKm < 1) {
+          return Math.round(distanceKm * 1000) + " m";
+        }
+
+        return distanceKm.toFixed(1).replace(".", ",") + " km";
+      }
+
+      function updateSummary(list, term, options) {
+        const settings = options || {};
         const cleanTerm = String(term || "").trim();
         searchCount.textContent = "A mostrar " + list.length + (list.length === 1 ? " barbearia" : " barbearias");
-          resultsVisiblePill.textContent = list.length ? "Perfil e contactos" : "Sem resultados";
+        resultsVisiblePill.textContent = list.length
+          ? (settings.mode === "location" ? "Mais perto de si" : "Perfil e contactos")
+          : "Sem resultados";
+
+        if (settings.mode === "location") {
+          if (!list.length) {
+            resultsMessage.textContent = "Ainda não encontrámos barbearias com coordenadas perto da tua localização.";
+            return;
+          }
+
+          resultsMessage.textContent = "Mostramos as barbearias mais próximas com base na tua localização atual.";
+          return;
+        }
 
         if (!cleanTerm) {
           resultsMessage.textContent = "Procura por cidade, zona ou nome da barbearia.";
@@ -2289,8 +2720,14 @@
           map.removeLayer(marker);
         });
 
+        if (state.userMarker) {
+          map.removeLayer(state.userMarker);
+          state.userMarker = null;
+        }
+
         state.markers = [];
         state.markersBySlug = new Map();
+        const visiblePoints = [];
 
         list.forEach(function(barber) {
           if (!Array.isArray(barber.coords)) {
@@ -2311,23 +2748,34 @@
 
           state.markers.push(marker);
           state.markersBySlug.set(barber.slug, marker);
+          visiblePoints.push(marker.getLatLng());
         });
 
-        if (!state.markers.length || list.length === allBarbers.length) {
+        if (state.userCoords) {
+          state.userMarker = L.circleMarker(state.userCoords, {
+            radius: 8,
+            color: "#395540",
+            weight: 3,
+            fillColor: "#ffffff",
+            fillOpacity: 1
+          })
+            .addTo(map)
+            .bindPopup('<div class="popup-card"><strong>A tua localização</strong><p>Usamos este ponto para mostrar as barbearias mais próximas.</p></div>');
+
+          visiblePoints.push(L.latLng(state.userCoords[0], state.userCoords[1]));
+        }
+
+        if (!visiblePoints.length || (!state.userCoords && list.length === allBarbers.length)) {
           map.setView([39.55, -8.05], 6);
           return;
         }
 
-        if (state.markers.length === 1) {
-          map.setView(state.markers[0].getLatLng(), 13);
+        if (visiblePoints.length === 1) {
+          map.setView(visiblePoints[0], state.userCoords ? 12 : 13);
           return;
         }
 
-        const bounds = L.latLngBounds(
-          state.markers.map(function(marker) {
-            return marker.getLatLng();
-          })
-        );
+        const bounds = L.latLngBounds(visiblePoints);
 
         map.fitBounds(bounds, { padding: [36, 36] });
       }
