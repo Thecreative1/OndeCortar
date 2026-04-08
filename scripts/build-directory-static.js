@@ -139,15 +139,9 @@ function renderHierarchyText(entries, prefix) {
   }).join("") + "</div>";
 }
 
-function renderHierarchyRows(entries, prefix) {
-  if (!entries || !entries.length) return "";
-
-  return entries.map((entry) => {
-    const valueMarkup = entry.href
-      ? '<a href="' + escapeHtml(prefix + entry.href) + '">' + escapeHtml(entry.value) + "</a>"
-      : escapeHtml(entry.value);
-    return '<div class="meta-row"><strong>' + escapeHtml(entry.label) + "</strong><span>" + valueMarkup + "</span></div>";
-  }).join("");
+function renderSummaryRow(label, valueMarkup) {
+  if (!label || !valueMarkup) return "";
+  return '<div class="summary-row"><span>' + escapeHtml(label) + "</span>" + valueMarkup + "</div>";
 }
 
 function buildLocationNarrative(barber) {
@@ -780,6 +774,13 @@ function renderBaseStyles(extraStyles) {
       font-weight: 700;
       color: var(--accent-strong);
     }
+    .summary-row a {
+      color: var(--accent-strong);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: rgba(176, 138, 74, 0.52);
+      text-underline-offset: 0.12em;
+    }
     .btn {
       display: inline-flex;
       align-items: center;
@@ -980,8 +981,6 @@ function renderProfilePage(barber, citiesMap) {
   const sameCity = city ? city.barbearias.filter((item) => item.slug !== barber.slug).slice(0, 3) : [];
   const canonical = absoluteUrl(barber.profileUrl);
   const hierarchyEntries = buildGeoHierarchy(barber, { showZone: true });
-  const hierarchyText = renderHierarchyText(hierarchyEntries, prefix);
-  const hierarchyRows = renderHierarchyRows(hierarchyEntries, prefix);
   const title = barber.city
     ? barber.name + " " + locativeLabel(barber.city) + " | Contactos, morada e mapa | OndeCortar.pt"
     : barber.name + " | Contactos, morada e mapa | OndeCortar.pt";
@@ -1050,6 +1049,13 @@ function renderProfilePage(barber, citiesMap) {
     barber.email ? '<div class="meta-row"><strong>Email</strong><span><a href="mailto:' + escapeHtml(barber.email) + '">' + escapeHtml(barber.email) + '</a></span></div>' : "",
     barber.mapUrl ? '<div class="meta-row"><strong>Mapa externo</strong><span><a href="' + escapeHtml(barber.mapUrl) + '" target="_blank" rel="nofollow noopener noreferrer">Abrir localização</a></span></div>' : ""
   ].join("");
+  const summaryRowsMarkup = [
+    ...hierarchyEntries.map((entry) => renderSummaryRow(entry.label, escapeHtml(entry.value))),
+    renderSummaryRow("Morada completa", escapeHtml(barber.morada || "Morada não disponível")),
+    renderSummaryRow("Telefone", barber.telefone ? '<a href="' + escapeHtml(telephoneHref(barber.telefone)) + '">' + escapeHtml(barber.telefone) + "</a>" : "Por confirmar"),
+    renderSummaryRow("Horário", escapeHtml(barber.horario || "Por confirmar")),
+    renderSummaryRow("Informação atualizada", escapeHtml(formatDate(barber.lastmod)))
+  ].join("");
   const body = `
 ${renderHeader(prefix, "cidades")}
 <main>
@@ -1068,7 +1074,6 @@ ${renderHeader(prefix, "cidades")}
           <span class="eyebrow">Perfil de barbearia</span>
           <h1>${escapeHtml(barber.name)}</h1>
           <p>${escapeHtml(barber.editorial)}</p>
-          ${hierarchyText}
           ${barber.horario ? '<div class="tag-row"><span class="tag">Horário disponível</span></div>' : ""}
           <div class="hero-actions">
             ${barber.primaryLink ? '<a class="btn btn-primary" href="' + escapeHtml(barber.primaryLink.href) + '"' + (barber.primaryLink.external ? ' target="_blank" rel="nofollow noopener noreferrer"' : "") + ">" + escapeHtml(barber.primaryLink.label) + "</a>" : ""}
@@ -1077,8 +1082,7 @@ ${renderHeader(prefix, "cidades")}
           </div>
         </div>
         <aside class="summary-panel">
-          ${hierarchyEntries.map((entry) => '<div class="summary-row"><span>' + escapeHtml(entry.label) + '</span>' + escapeHtml(entry.value) + '</div>').join("")}
-          <div class="summary-row"><span>Informação atualizada</span>${escapeHtml(formatDate(barber.lastmod))}</div>
+          ${summaryRowsMarkup}
         </aside>
       </div>
     </div>
@@ -1088,26 +1092,8 @@ ${renderHeader(prefix, "cidades")}
     <div class="container grid-2">
       <div class="stack">
         <article class="card">
-          <h2>Informação principal</h2>
-          <div class="meta-list">
-            ${hierarchyRows}
-            <div class="meta-row"><strong>Morada completa</strong><span>${escapeHtml(barber.morada || "Morada não disponível")}</span></div>
-            <div class="meta-row"><strong>Telefone</strong><span>${barber.telefone ? '<a href="' + escapeHtml(telephoneHref(barber.telefone)) + '">' + escapeHtml(barber.telefone) + "</a>" : "Telefone não disponível"}</span></div>
-            <div class="meta-row"><strong>Horário</strong><span>${escapeHtml(barber.horario || "Horário não disponível")}</span></div>
-            <div class="meta-row"><strong>Links úteis</strong><span>${[
-              barber.website ? '<a href="' + escapeHtml(barber.website) + '" target="_blank" rel="nofollow noopener noreferrer">Website</a>' : "",
-              barber.instagram ? '<a href="' + escapeHtml(barber.instagram) + '" target="_blank" rel="nofollow noopener noreferrer">Instagram</a>' : "",
-              barber.booking ? '<a href="' + escapeHtml(barber.booking) + '" target="_blank" rel="nofollow noopener noreferrer">Marcação</a>' : ""
-            ].filter(Boolean).join(" | ") || "Sem links públicos adicionais"}</span></div>
-          </div>
-        </article>
-        <article class="card">
           <h2>Descrição útil</h2>
           <p>${escapeHtml(barber.editorial)}</p>
-        </article>
-        <article class="card">
-          <h2>Informação atualizada</h2>
-          <p>Os dados desta ficha foram revistos pela última vez em ${escapeHtml(formatDate(barber.lastmod))}. Se encontrares alguma diferença em morada, contactos, horários ou links, usa o formulário de atualização para corrigir a página.</p>
         </article>
         ${mapSection}
       </div>
@@ -1115,7 +1101,7 @@ ${renderHeader(prefix, "cidades")}
         <article class="card">
           <h3>Ligações úteis</h3>
           <div class="meta-list">
-            ${linksMetaMarkup}
+            ${linksMetaMarkup || '<div class="meta-row"><strong>Links públicos</strong><span>Sem links públicos adicionais nesta ficha.</span></div>'}
           </div>
         </article>
         <article class="card">
