@@ -2260,6 +2260,8 @@
       const heroResultsCount = document.getElementById("heroResultsCount");
       const heroResultsList = document.getElementById("heroResultsList");
       const heroMapShell = document.querySelector(".hero-map-shell");
+      const heroSearchCard = document.querySelector(".hero-search-card");
+      const heroMapCount = document.querySelector(".hero-map-count");
       const featuredGrid = document.getElementById("featuredGrid");
       const citiesGrid = document.getElementById("citiesGrid");
       const directoryCities = document.getElementById("directoryCities");
@@ -2396,6 +2398,46 @@
         map.fitBounds(defaultMapBounds, {
           padding: [24, 24]
         });
+      }
+
+      function getHeroOverlayPadding() {
+        const fallbackPadding = {
+          paddingTopLeft: [36, 36],
+          paddingBottomRight: [36, 36]
+        };
+
+        if (!heroMapShell || !heroSearchCard) {
+          return fallbackPadding;
+        }
+
+        const shellRect = heroMapShell.getBoundingClientRect();
+        const cardRect = heroSearchCard.getBoundingClientRect();
+        const resultsVisible = heroResults && !heroResults.hidden;
+        const resultsRect = resultsVisible ? heroResults.getBoundingClientRect() : null;
+        const mapCountRect = heroMapCount ? heroMapCount.getBoundingClientRect() : null;
+
+        const leftOverlayWidth = Math.max(
+          Math.max(0, cardRect.right - shellRect.left),
+          resultsRect ? Math.max(0, resultsRect.right - shellRect.left) : 0
+        );
+        const topOverlayHeight = Math.max(0, cardRect.bottom - shellRect.top);
+        const rightOverlayWidth = mapCountRect && heroMapShell.classList.contains("has-results")
+          ? Math.max(0, shellRect.right - mapCountRect.left)
+          : 0;
+        const bottomOverlayHeight = mapCountRect
+          ? Math.max(0, shellRect.bottom - mapCountRect.top)
+          : 0;
+
+        return {
+          paddingTopLeft: [
+            Math.max(36, Math.round(leftOverlayWidth + 26)),
+            Math.max(36, Math.round(topOverlayHeight + 22))
+          ],
+          paddingBottomRight: [
+            Math.max(36, Math.round(rightOverlayWidth + 16)),
+            Math.max(36, Math.round(bottomOverlayHeight + 16))
+          ]
+        };
       }
 
       function setHeroResultsHeading(title) {
@@ -2631,6 +2673,7 @@
         state.locateRequestId += 1;
         clearUserLocation();
         setLocateButtonState(false);
+        map.closePopup();
         state.currentTerm = term;
         state.results = sortBarbers(directory.searchBarbers(term));
         syncSearchInputs(term);
@@ -2786,6 +2829,8 @@
       }
 
       function renderMarkers(list) {
+        map.closePopup();
+
         state.markers.forEach(function(marker) {
           map.removeLayer(marker);
         });
@@ -2804,6 +2849,8 @@
             return;
           }
 
+          const popupPadding = getHeroOverlayPadding();
+
           const marker = L.marker(barber.coords, {
             icon: L.divIcon({
               className: "custom-marker-shell",
@@ -2814,7 +2861,10 @@
             })
           })
             .addTo(map)
-            .bindPopup(buildPopup(barber));
+            .bindPopup(buildPopup(barber), {
+              autoPanPaddingTopLeft: popupPadding.paddingTopLeft,
+              autoPanPaddingBottomRight: popupPadding.paddingBottomRight
+            });
 
           state.markers.push(marker);
           state.markersBySlug.set(barber.slug, marker);
@@ -2841,13 +2891,15 @@
         }
 
         if (visiblePoints.length === 1) {
+          const overlayPadding = getHeroOverlayPadding();
           map.setView(visiblePoints[0], state.userCoords ? 12 : 13);
+          map.panInside(visiblePoints[0], overlayPadding);
           return;
         }
 
         const bounds = L.latLngBounds(visiblePoints);
 
-        map.fitBounds(bounds, { padding: [36, 36] });
+        map.fitBounds(bounds, getHeroOverlayPadding());
       }
 
       function buildPopup(barber) {
@@ -2880,7 +2932,9 @@
           return;
         }
 
+        const overlayPadding = getHeroOverlayPadding();
         map.setView(marker.getLatLng(), 13, { animate: true });
+        map.panInside(marker.getLatLng(), overlayPadding);
         marker.openPopup();
       }
     })();
