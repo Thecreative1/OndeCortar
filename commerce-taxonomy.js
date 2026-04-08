@@ -4,7 +4,7 @@
   window.OndeCortarCommerce.needs = [
     { slug: "para-casa", title: "Para casa", copy: "Para manutenção em casa sem comprar três aparelhos para fazer o mesmo." },
     { slug: "para-barbeiros", title: "Para barbeiros", copy: "Ferramentas e apoio para ritmo de posto, manutenção e bancada mais funcional." },
-    { slug: "para-barba", title: "Para barba", copy: "Para manter a barba cuidada entre barbas feitas e visitas ao barbeiro." },
+    { slug: "para-barba", title: "Para barba", copy: "Para manter a barba cuidada entre visitas ao barbeiro." },
     { slug: "para-contornos-e-fades", title: "Para contornos e fades", copy: "Para quem precisa de mais controlo em linhas, nuca e acabamentos." },
     { slug: "para-manutencao-e-higiene", title: "Para manutenção e higiene", copy: "Para conservar máquinas e utensílios com menos desgaste e menos falhas evitáveis." },
     { slug: "para-oferecer", title: "Para oferecer", copy: "Kits e conjuntos que fazem sentido para oferecer sem complicar a escolha." }
@@ -84,7 +84,7 @@
     {
       slug: "kits-de-barba",
       title: "Kits de barba",
-      intro: "Kits que ajudam a montar uma rotina de barba sem comprar às cegas nem encher a gaveta com peças que não entram no dia a dia.",
+      intro: "Kits que ajudam a montar uma rotina de barba sem comprar às cegas nem encher a gaveta com peças que raramente se usam.",
       top: ["viking-revolution-beard-grooming-kit", "king-c-gillette-beard-trimmer-kit", "king-c-rotina"],
       picks: [["Primeira rotina de barba", "viking-sandalwood"], ["Presente mais completo", "kit-xikezan"], ["Barbear clássico em conjunto", "king-c-rotina"]],
       topTitle: "Kits que fazem sentido pela composição",
