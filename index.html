@@ -1570,6 +1570,84 @@
       }
     }
 
+    @media (max-width: 900px) {
+      .hero-map-search .hero-map-shell {
+        display: grid;
+        gap: 14px;
+        min-height: auto;
+        padding: 14px;
+        overflow: visible;
+      }
+
+      .hero-map-search .hero-map-shell.has-results {
+        min-height: auto;
+      }
+
+      .hero-map-search .hero-search-card {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: auto;
+        max-width: none;
+        padding: 16px;
+      }
+
+      .hero-map-search .hero-title {
+        max-width: none;
+        font-size: clamp(1.56rem, 4vw, 2rem);
+        line-height: 0.98;
+      }
+
+      .hero-map-search .hero-subtitle {
+        max-width: none;
+        font-size: 15px;
+      }
+
+      .hero-map-search .hero-search-form {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-map-search .hero-results {
+        position: static;
+        width: auto;
+        max-width: none;
+        margin-top: 14px;
+      }
+
+      .hero-map-search .hero-results-list {
+        max-height: min(34vh, 260px);
+      }
+
+      .hero-map-search .hero-search-input,
+      .hero-map-search .hero-btn {
+        min-width: 0;
+        width: 100%;
+      }
+
+      .hero-map-search .hero-search-input {
+        height: 56px;
+      }
+
+      .hero-map-search .hero-btn {
+        height: 54px;
+      }
+
+      .hero-map-search .hero-map {
+        position: relative;
+        inset: auto;
+        min-height: min(52vh, 420px);
+      }
+
+      .hero-map-search .hero-map-count {
+        left: 16px;
+        right: auto;
+        bottom: 16px;
+        padding: 9px 14px;
+        font-size: 13px;
+      }
+    }
+
     @media (max-width: 760px) {
       body.nav-open {
         overflow: hidden;
@@ -1714,82 +1792,6 @@
 
       .hero-map-frame #map {
         height: min(54vh, 360px);
-      }
-
-      .hero-map-search .hero-map-shell {
-        display: grid;
-        gap: 14px;
-        min-height: auto;
-        padding: 14px;
-        overflow: visible;
-      }
-
-      .hero-map-search .hero-map-shell.has-results {
-        min-height: auto;
-      }
-
-      .hero-map-search .hero-search-card {
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        width: auto;
-        max-width: none;
-        padding: 16px;
-      }
-
-      .hero-map-search .hero-title {
-        max-width: none;
-        font-size: clamp(1.56rem, 6vw, 1.9rem);
-        line-height: 0.98;
-      }
-
-      .hero-map-search .hero-subtitle {
-        max-width: none;
-        font-size: 15px;
-      }
-
-      .hero-map-search .hero-search-form {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-map-search .hero-results {
-        position: static;
-        width: auto;
-        max-width: none;
-        margin-top: 14px;
-      }
-
-      .hero-map-search .hero-results-list {
-        max-height: min(34vh, 260px);
-      }
-
-      .hero-map-search .hero-search-input,
-      .hero-map-search .hero-btn {
-        min-width: 0;
-        width: 100%;
-      }
-
-      .hero-map-search .hero-search-input {
-        height: 56px;
-      }
-
-      .hero-map-search .hero-btn {
-        height: 54px;
-      }
-
-      .hero-map-search .hero-map {
-        position: relative;
-        inset: auto;
-        min-height: min(52vh, 360px);
-      }
-
-      .hero-map-search .hero-map-count {
-        left: 16px;
-        right: auto;
-        bottom: 16px;
-        padding: 9px 14px;
-        font-size: 13px;
       }
 
       .result-card {
@@ -2956,6 +2958,22 @@
         return distanceKm.toFixed(1).replace(".", ",") + " km";
       }
 
+      function getPopupOptions() {
+        if (window.innerWidth <= 900) {
+          return {
+            autoPan: true,
+            keepInView: true,
+            autoPanPaddingTopLeft: L.point(20, 20),
+            autoPanPaddingBottomRight: L.point(20, 20)
+          };
+        }
+
+        return {
+          autoPan: false,
+          keepInView: false
+        };
+      }
+
       function updateSummary(list, term, options) {
         const settings = options || {};
         const cleanTerm = String(term || "").trim();
@@ -3074,13 +3092,10 @@
               iconSize: [32, 32],
               iconAnchor: [16, 32],
               popupAnchor: [0, -30]
-            })
+          })
           })
             .addTo(map)
-            .bindPopup(buildPopup(barber), {
-              autoPan: false,
-              keepInView: false
-            });
+            .bindPopup(buildPopup(barber), getPopupOptions());
 
           state.markers.push(marker);
           state.markersBySlug.set(barber.slug, marker);
@@ -3096,10 +3111,7 @@
             fillOpacity: 1
           })
             .addTo(map)
-            .bindPopup('<div class="popup-card"><strong>A tua localização</strong><p>Usamos este ponto para mostrar as barbearias mais próximas.</p></div>', {
-              autoPan: false,
-              keepInView: false
-            });
+            .bindPopup('<div class="popup-card"><strong>A tua localização</strong><p>Usamos este ponto para mostrar as barbearias mais próximas.</p></div>', getPopupOptions());
 
           visiblePoints.push(L.latLng(state.userCoords[0], state.userCoords[1]));
         }

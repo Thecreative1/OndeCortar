@@ -575,6 +575,13 @@ function renderBaseStyles(extraStyles) {
       --gold: #a6772d;
       --shadow: 0 24px 60px rgba(31, 25, 19, 0.1);
       --shadow-soft: 0 16px 36px rgba(31, 25, 19, 0.08);
+      --mobile-nav-panel: rgba(251, 246, 238, 0.98);
+      --mobile-nav-border: rgba(207, 191, 162, 0.94);
+      --mobile-nav-link-bg: rgba(244, 235, 220, 0.94);
+      --mobile-nav-toggle-border: rgba(176, 139, 83, 0.72);
+      --mobile-nav-toggle-bg: rgba(251, 246, 238, 0.9);
+      --mobile-nav-shadow: 0 22px 46px rgba(31, 25, 19, 0.14);
+      --mobile-nav-backdrop: rgba(24, 20, 16, 0.28);
       --container: min(1160px, calc(100% - 32px));
       --radius-lg: 24px;
       --radius-md: 18px;
@@ -875,8 +882,8 @@ function renderBaseStyles(extraStyles) {
       .hero-grid, .grid-2, .barber-grid, .city-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 760px) {
-      .nav { flex-direction: column; align-items: stretch; border-radius: 28px; }
-      .brand { justify-content: center; }
+      .nav:not([data-mobile-nav]) { flex-direction: column; align-items: stretch; border-radius: 28px; }
+      .nav:not([data-mobile-nav]) .brand { justify-content: center; }
       .nav-links, .hero-actions, .card-actions, .footer-links { flex-direction: column; align-items: stretch; }
       .nav-links a, .btn { width: 100%; }
       .hero-card, .card, .footer-shell { padding: 22px; }
@@ -890,15 +897,27 @@ function renderHeader(prefix, currentSection) {
   return `
   <header class="site-header">
     <div class="container">
-      <nav class="nav" aria-label="Navegação principal">
-        <a class="brand" href="${prefix}index.html">
-          <img src="${prefix}imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
-          <span class="brand-text">
-            <strong>OndeCortar.pt</strong>
-            <span>Barbearias em Portugal</span>
-          </span>
-        </a>
-        <div class="nav-links">
+      <nav class="nav" aria-label="Navegação principal" data-mobile-nav data-mobile-nav-breakpoint="900">
+        <div class="nav-main-row">
+          <a class="brand" href="${prefix}index.html">
+            <img src="${prefix}imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
+            <span class="brand-text">
+              <strong>OndeCortar.pt</strong>
+              <span>Barbearias em Portugal</span>
+            </span>
+          </a>
+          <div class="nav-mobile-actions">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNavLinks" data-nav-toggle>
+              <span class="nav-toggle-label">Menu</span>
+              <span class="nav-toggle-box" aria-hidden="true">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="nav-links" id="siteNavLinks" aria-hidden="false">
           <a href="${prefix}index.html#explorar">Explorar</a>
           <a class="${currentSection === "cidades" ? "is-current" : ""}" href="${prefix}cidades/">Cidades</a>
           <a href="${prefix}registar.html">Adicionar barbearia</a>
@@ -908,6 +927,7 @@ function renderHeader(prefix, currentSection) {
           <a class="nav-cta" href="${prefix}index.html#mapa">Voltar ao mapa</a>
         </div>
       </nav>
+      <button class="nav-backdrop" type="button" aria-label="Fechar menu" aria-hidden="true" data-nav-backdrop hidden></button>
     </div>
   </header>`;
 }
@@ -961,6 +981,8 @@ function renderDocument(options) {
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   ${options.extraHead || ""}
   ${renderBaseStyles(options.extraStyles)}
+  <link rel="stylesheet" href="${escapeHtml(options.prefix || "")}mobile-nav.css" />
+  <script src="${escapeHtml(options.prefix || "")}mobile-nav.js" defer></script>
 ${structuredData ? "\n" + structuredData : ""}
 </head>
 <body>
