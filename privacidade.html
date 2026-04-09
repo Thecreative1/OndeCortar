@@ -11,12 +11,20 @@
   <link rel="alternate" hreflang="x-default" href="https://ondecortar.pt/privacidade.html" />
   <style>
     :root {
-      --mobile-nav-panel: rgba(12, 12, 13, 0.98);
-      --mobile-nav-border: rgba(255, 255, 255, 0.12);
-      --mobile-nav-link-bg: rgba(255, 255, 255, 0.04);
-      --mobile-nav-toggle-border: rgba(255, 255, 255, 0.14);
-      --mobile-nav-toggle-bg: rgba(255, 255, 255, 0.04);
-      --mobile-nav-shadow: 0 24px 60px rgba(0, 0, 0, 0.36);
+      --bg: #efe4d1;
+      --surface: rgba(251, 246, 238, 0.94);
+      --text: #181410;
+      --muted: #4e473d;
+      --border: #cfbfa2;
+      --accent: #425a47;
+      --accent-strong: #2f4535;
+      --gold: #a6772d;
+      --mobile-nav-panel: rgba(251, 246, 238, 0.98);
+      --mobile-nav-border: rgba(207, 191, 162, 0.94);
+      --mobile-nav-link-bg: rgba(244, 235, 220, 0.94);
+      --mobile-nav-toggle-border: rgba(176, 139, 83, 0.72);
+      --mobile-nav-toggle-bg: rgba(251, 246, 238, 0.9);
+      --mobile-nav-shadow: 0 24px 60px rgba(31, 25, 19, 0.16);
       --mobile-nav-backdrop: rgba(0, 0, 0, 0.56);
     }
 
@@ -24,10 +32,19 @@
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(255, 196, 0, 0.12), transparent 24%),
-        linear-gradient(180deg, #0b0b0c 0%, #141415 100%);
-      color: #f4f4f4;
+        radial-gradient(circle at top left, rgba(166, 119, 45, 0.14), transparent 24%),
+        radial-gradient(circle at top right, rgba(66, 90, 71, 0.1), transparent 26%),
+        linear-gradient(180deg, #f5ecde 0%, var(--bg) 36%, #e7d8c0 100%);
+      color: var(--text);
     }
+
+    a {
+      color: var(--accent-strong);
+      text-decoration-color: rgba(166, 119, 45, 0.52);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+    .brand, .nav-links a, .nav-cta { text-decoration: none; }
 
     .container {
       width: min(920px, calc(100% - 32px));
@@ -36,10 +53,10 @@
     }
 
     .card {
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      background: var(--surface);
       border-radius: 24px;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.26);
+      box-shadow: 0 24px 60px rgba(31, 25, 19, 0.09);
     }
 
     .site-header {
@@ -52,11 +69,11 @@
       align-items: center;
       gap: 18px;
       padding: 14px 18px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--border);
       border-radius: 999px;
-      background: rgba(8, 8, 8, 0.74);
+      background: rgba(250, 244, 233, 0.94);
       backdrop-filter: blur(10px);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.26);
+      box-shadow: 0 24px 60px rgba(31, 25, 19, 0.1);
     }
 
     .brand {
@@ -86,7 +103,7 @@
 
     .brand-text span {
       font-size: 0.82rem;
-      color: #c7c7c7;
+      color: var(--muted);
     }
 
     .nav-links {
@@ -94,7 +111,7 @@
       gap: 18px;
       flex-wrap: wrap;
       align-items: center;
-      color: #c7c7c7;
+      color: var(--muted);
       font-size: 0.95rem;
     }
 
@@ -107,8 +124,8 @@
 
     .nav-links a:hover,
     .nav-links a.nav-link-active {
-      background: rgba(255, 196, 0, 0.1);
-      color: #f4f4f4;
+      background: rgba(166, 119, 45, 0.14);
+      color: var(--text);
     }
 
     .nav-cta {
@@ -117,10 +134,10 @@
       justify-content: center;
       padding: 10px 16px;
       border-radius: 999px;
-      background: linear-gradient(135deg, #ffc400, #ffab2e);
-      color: #111;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #fff;
       font-weight: 800;
-      box-shadow: 0 10px 24px rgba(255, 196, 0, 0.18);
+      box-shadow: 0 10px 24px rgba(66, 90, 71, 0.22);
     }
 
     .card {
@@ -138,7 +155,7 @@
     }
 
     p {
-      color: #c4c4c4;
+      color: var(--muted);
       line-height: 1.75;
       margin: 0 0 14px;
     }
@@ -168,9 +185,9 @@
         justify-content: center;
         min-height: 48px;
         padding: 12px 14px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid var(--border);
         border-radius: 14px;
-        background: rgba(255, 255, 255, 0.04);
+        background: rgba(244, 235, 220, 0.94);
         text-align: center;
       }
 
@@ -246,7 +263,7 @@
 
     <section class="card">
       <h2>Contacto e direitos</h2>
-      <p>Para pedir atualização, remoção ou esclarecimentos sobre os dados enviados, contacta <a href="mailto:contacto@ondecortar.pt" style="color:#ffc400;">contacto@ondecortar.pt</a>.</p>
+      <p>Para pedir atualização, remoção ou esclarecimentos sobre os dados enviados, contacta <a href="mailto:contacto@ondecortar.pt" style="color:#a6772d;">contacto@ondecortar.pt</a>.</p>
     </section>
   </div>
 </body>

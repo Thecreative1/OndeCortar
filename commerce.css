@@ -1,33 +1,33 @@
 :root {
-  --bg-main: #f2ebdd;
-  --bg-surface: #fbf7ef;
-  --bg-soft: #efe6d6;
-  --text-main: #191714;
-  --text-secondary: #5c554b;
-  --ink-strong: #22201c;
+  --bg-main: #efe4d1;
+  --bg-surface: #fbf5ea;
+  --bg-soft: #e7dac3;
+  --text-main: #181410;
+  --text-secondary: #4e473d;
+  --ink-strong: #1f1913;
   --green-primary: #425a47;
-  --green-hover: #314238;
-  --gold-main: #b08a4a;
-  --gold-soft: #c7a66a;
-  --gold-border: #d6c19b;
-  --border-soft: #d8cdb7;
-  --border-strong: #bca885;
-  --shadow-soft-color: rgba(34, 32, 28, 0.08);
-  --shadow-medium-color: rgba(34, 32, 28, 0.14);
+  --green-hover: #2f4535;
+  --gold-main: #a6772d;
+  --gold-soft: #c79853;
+  --gold-border: #d7b882;
+  --border-soft: #cfbfa2;
+  --border-strong: #b08b53;
+  --shadow-soft-color: rgba(31, 25, 19, 0.09);
+  --shadow-medium-color: rgba(31, 25, 19, 0.15);
   --bg: var(--bg-main);
-  --surface: rgba(251, 247, 239, 0.92);
+  --surface: rgba(251, 245, 234, 0.94);
   --surface-solid: var(--bg-surface);
   --surface-soft: var(--bg-soft);
-  --surface-strong: #e4d8c3;
+  --surface-strong: #ddcfb2;
   --text: var(--text-main);
   --muted: var(--text-secondary);
-  --muted-soft: #81796d;
+  --muted-soft: #6d6559;
   --border: var(--border-soft);
   --accent: var(--green-primary);
   --accent-strong: var(--green-hover);
   --gold: var(--gold-main);
   --shadow: 0 24px 60px var(--shadow-soft-color);
-  --shadow-soft: 0 16px 36px rgba(34, 32, 28, 0.06);
+  --shadow-soft: 0 16px 36px rgba(31, 25, 19, 0.07);
   --radius-xl: 28px;
   --radius-lg: 24px;
   --radius-md: 18px;
@@ -49,32 +49,56 @@ body {
   color: var(--text);
   overflow-x: clip;
   background:
-    radial-gradient(circle at top left, rgba(176, 138, 74, 0.14), transparent 32%),
-    radial-gradient(circle at top right, rgba(66, 90, 71, 0.08), transparent 28%),
-    linear-gradient(180deg, #f7f1e6 0%, var(--bg-main) 38%, #ebe1cf 100%);
+    radial-gradient(circle at top left, rgba(166, 119, 45, 0.14), transparent 32%),
+    radial-gradient(circle at top right, rgba(66, 90, 71, 0.1), transparent 28%),
+    linear-gradient(180deg, #f5ecde 0%, var(--bg-main) 38%, #e6d7bf 100%);
 }
 
 body[data-page="store"],
 body[data-page="category"],
 body[data-page="product"] {
   background:
-    radial-gradient(circle at top left, rgba(176, 138, 74, 0.22), transparent 28%),
-    radial-gradient(circle at top right, rgba(34, 32, 28, 0.08), transparent 22%),
-    linear-gradient(180deg, #f8f1e5 0%, #f2e8d6 38%, #e8dcc7 100%);
+    radial-gradient(circle at top left, rgba(166, 119, 45, 0.2), transparent 28%),
+    radial-gradient(circle at top right, rgba(31, 25, 19, 0.08), transparent 22%),
+    linear-gradient(180deg, #f6ede0 0%, #efe2cd 38%, #e3d2b7 100%);
 }
 
 body[data-page="magazine"],
 body[data-page="hub"],
 body[data-page="article"] {
   background:
-    radial-gradient(circle at top left, rgba(176, 138, 74, 0.08), transparent 24%),
-    radial-gradient(circle at top right, rgba(66, 90, 71, 0.05), transparent 20%),
-    linear-gradient(180deg, #faf6ee 0%, #f4eee2 34%, #ede4d4 100%);
+    radial-gradient(circle at top left, rgba(166, 119, 45, 0.09), transparent 24%),
+    radial-gradient(circle at top right, rgba(66, 90, 71, 0.06), transparent 20%),
+    linear-gradient(180deg, #faf5ed 0%, #f2eadb 34%, #e9ddcb 100%);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+main p a,
+main li a,
+main h1 a,
+main h2 a,
+main h3 a,
+.meta-row a {
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-decoration-color: rgba(166, 119, 45, 0.52);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+main p a:hover,
+main li a:hover,
+main h1 a:hover,
+main h2 a:hover,
+main h3 a:hover,
+.meta-row a:hover {
+  color: var(--accent);
+  text-decoration-color: rgba(166, 119, 45, 0.84);
 }
 
 img {
@@ -94,6 +118,24 @@ button:focus-visible {
 
 [hidden] {
   display: none !important;
+}
+
+.brand,
+.nav-links a,
+.btn,
+.eyebrow,
+.pill,
+.tag,
+.section-flag,
+.store-quick-pill,
+.store-magazine-link,
+.store-guide-link,
+.article-thumb,
+.featured-thumb,
+.product-stage,
+.visual-block,
+.popup-actions a {
+  text-decoration: none;
 }
 
 .container {
@@ -120,10 +162,10 @@ button:focus-visible {
   gap: 18px;
   position: relative;
   padding: 14px 18px;
-  border: 1px solid rgba(216, 205, 183, 0.9);
+  border: 1px solid rgba(207, 191, 162, 0.94);
   border-radius: 999px;
-  background: rgba(251, 247, 239, 0.92);
-  box-shadow: 0 16px 34px rgba(34, 32, 28, 0.08);
+  background: rgba(250, 244, 233, 0.94);
+  box-shadow: 0 18px 40px rgba(31, 25, 19, 0.1);
 }
 
 .nav-main-row {
@@ -138,16 +180,16 @@ button:focus-visible {
 body[data-page="store"] .nav,
 body[data-page="category"] .nav,
 body[data-page="product"] .nav {
-  background: rgba(250, 244, 234, 0.94);
-  border-color: rgba(188, 168, 133, 0.92);
-  box-shadow: 0 18px 36px rgba(34, 32, 28, 0.1);
+  background: rgba(249, 242, 229, 0.96);
+  border-color: rgba(176, 139, 83, 0.72);
+  box-shadow: 0 18px 36px rgba(31, 25, 19, 0.12);
 }
 
 body[data-page="magazine"] .nav,
 body[data-page="hub"] .nav,
 body[data-page="article"] .nav {
-  background: rgba(251, 248, 241, 0.92);
-  border-color: rgba(216, 205, 183, 0.82);
+  background: rgba(251, 247, 239, 0.92);
+  border-color: rgba(207, 191, 162, 0.82);
 }
 
 .brand {
@@ -162,7 +204,7 @@ body[data-page="article"] .nav {
   height: 48px;
   border-radius: 50%;
   object-fit: contain;
-  background: rgba(255, 251, 244, 0.9);
+  background: rgba(255, 251, 244, 0.96);
   box-shadow: var(--shadow-soft);
 }
 
@@ -204,8 +246,8 @@ body[data-page="article"] .nav {
   justify-content: center;
   gap: 8px;
   padding: 0 14px;
-  border: 1px solid rgba(188, 168, 133, 0.84);
-  background: rgba(251, 247, 239, 0.96);
+  border: 1px solid rgba(176, 139, 83, 0.72);
+  background: rgba(250, 244, 233, 0.98);
   color: var(--ink-strong);
 }
 
@@ -246,14 +288,14 @@ body[data-page="article"] .nav {
   min-height: 42px;
   padding: 10px 14px;
   border-radius: 999px;
-  color: var(--muted);
+  color: var(--text-secondary);
   font-weight: 600;
 }
 
 .nav-links a:hover,
 .nav-links a.is-current {
   color: var(--ink-strong);
-  background: rgba(176, 138, 74, 0.12);
+  background: rgba(166, 119, 45, 0.14);
 }
 
 .nav-links .nav-cta {
@@ -295,27 +337,27 @@ body[data-page="store"] main {
 .hero-card {
   padding: 24px;
   background:
-    radial-gradient(circle at top left, rgba(176, 138, 74, 0.14), transparent 28%),
-    linear-gradient(180deg, rgba(251, 247, 239, 0.98), rgba(244, 236, 223, 0.94));
+    radial-gradient(circle at top left, rgba(166, 119, 45, 0.18), transparent 28%),
+    linear-gradient(180deg, rgba(252, 247, 239, 0.99), rgba(239, 229, 211, 0.95));
 }
 
 body[data-page="store"] .hero-card,
 body[data-page="category"] .hero-card,
 body[data-page="product"] .hero-card {
-  border-color: rgba(188, 168, 133, 0.9);
+  border-color: rgba(176, 139, 83, 0.72);
   background:
-    radial-gradient(circle at top left, rgba(176, 138, 74, 0.2), transparent 24%),
-    linear-gradient(180deg, rgba(251, 247, 239, 0.99), rgba(243, 233, 217, 0.97));
-  box-shadow: 0 24px 56px rgba(34, 32, 28, 0.1);
+    radial-gradient(circle at top left, rgba(166, 119, 45, 0.22), transparent 24%),
+    linear-gradient(180deg, rgba(251, 246, 238, 0.99), rgba(236, 225, 206, 0.97));
+  box-shadow: 0 24px 56px rgba(31, 25, 19, 0.11);
 }
 
 body[data-page="magazine"] .hero-card,
 body[data-page="hub"] .hero-card,
 body[data-page="article"] .hero-card {
   background:
-    radial-gradient(circle at top left, rgba(176, 138, 74, 0.08), transparent 24%),
-    linear-gradient(180deg, rgba(252, 249, 243, 0.98), rgba(246, 240, 231, 0.96));
-  box-shadow: 0 20px 46px rgba(34, 32, 28, 0.07);
+    radial-gradient(circle at top left, rgba(166, 119, 45, 0.1), transparent 24%),
+    linear-gradient(180deg, rgba(252, 249, 243, 0.98), rgba(243, 236, 226, 0.96));
+  box-shadow: 0 20px 46px rgba(31, 25, 19, 0.08);
 }
 
 .hero-grid,
@@ -354,8 +396,8 @@ body[data-page="product"] .hero-copy h1 {
 }
 
 .eyebrow {
-  background: rgba(176, 138, 74, 0.12);
-  border-color: rgba(214, 193, 155, 0.94);
+  background: rgba(166, 119, 45, 0.14);
+  border-color: rgba(215, 184, 130, 0.94);
   color: var(--gold-main);
 }
 
@@ -440,18 +482,19 @@ p {
 .btn-primary {
   color: #fff;
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-  box-shadow: 0 16px 36px rgba(66, 90, 71, 0.18);
+  box-shadow: 0 16px 36px rgba(66, 90, 71, 0.22);
 }
 
 .btn-secondary {
-  background: rgba(251, 247, 239, 0.82);
+  background: rgba(248, 239, 225, 0.96);
   border-color: var(--border-strong);
   color: var(--ink-strong);
+  box-shadow: 0 12px 24px rgba(31, 25, 19, 0.06);
 }
 
 .btn-soft {
-  background: rgba(66, 90, 71, 0.08);
-  border-color: rgba(66, 90, 71, 0.14);
+  background: rgba(66, 90, 71, 0.12);
+  border-color: rgba(66, 90, 71, 0.24);
   color: var(--accent-strong);
 }
 
@@ -528,8 +571,8 @@ p {
   border-radius: 22px;
   border: 1px solid var(--border);
   background:
-    radial-gradient(circle at top left, rgba(176, 138, 74, 0.12), transparent 34%),
-    linear-gradient(180deg, rgba(252, 249, 243, 0.98), rgba(244, 236, 223, 0.94));
+    radial-gradient(circle at top left, rgba(166, 119, 45, 0.14), transparent 34%),
+    linear-gradient(180deg, rgba(252, 247, 239, 0.99), rgba(239, 229, 211, 0.95));
   box-shadow: var(--shadow-soft);
 }
 
@@ -578,7 +621,7 @@ p {
   aspect-ratio: 4 / 3;
   object-fit: contain;
   border-radius: 18px;
-  background: linear-gradient(180deg, #fffdfa, #f4eee4);
+  background: linear-gradient(180deg, #fcf8ef, #e9dcc4);
   padding: 16px;
 }
 
@@ -590,8 +633,8 @@ p {
 .panel-note {
   padding: 18px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.68);
+  background: rgba(252, 247, 239, 0.82);
+  border: 1px solid rgba(207, 191, 162, 0.7);
 }
 
 .category-card,
@@ -602,7 +645,7 @@ p {
 }
 
 .product-card {
-  background: rgba(251, 247, 239, 0.94);
+  background: rgba(249, 242, 229, 0.96);
 }
 
 .product-card .product-copy,
@@ -864,24 +907,24 @@ body[data-page="store"] .store-start-actions .btn {
 .magazine-story-link {
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--accent-strong);
 }
 
 .magazine-story-link-muted {
-  color: var(--muted-soft);
+  color: #62594d;
 }
 
 .category-card,
 .editorial-card {
-  background: rgba(251, 247, 239, 0.94);
+  background: rgba(251, 246, 238, 0.96);
 }
 
 .category-thumb,
 .featured-thumb,
 .product-stage {
   border-radius: 20px;
-  border: 1px solid rgba(216, 205, 183, 0.95);
-  background: linear-gradient(180deg, #fffdf8, #f0e6d5);
+  border: 1px solid rgba(207, 191, 162, 0.95);
+  background: linear-gradient(180deg, #fcf8ef, #e8dcc4);
   overflow: hidden;
 }
 
@@ -938,9 +981,9 @@ body[data-page="store"] .store-start-actions .btn {
   gap: 12px;
   padding: 14px;
   border-radius: 18px;
-  border: 1px solid rgba(188, 168, 133, 0.82);
-  background: rgba(251, 247, 239, 0.92);
-  box-shadow: 0 10px 22px rgba(34, 32, 28, 0.06);
+  border: 1px solid rgba(176, 139, 83, 0.7);
+  background: rgba(249, 242, 229, 0.96);
+  box-shadow: 0 10px 22px rgba(31, 25, 19, 0.07);
 }
 
 .shop-mini-card img {
@@ -948,7 +991,7 @@ body[data-page="store"] .store-start-actions .btn {
   height: 84px;
   object-fit: contain;
   border-radius: 14px;
-  background: linear-gradient(180deg, #fffdf8, #efe4d1);
+  background: linear-gradient(180deg, #fcf8ef, #e8dcc4);
   padding: 10px;
 }
 
@@ -967,8 +1010,8 @@ body[data-page="store"] .store-start-actions .btn {
 .store-metric {
   padding: 16px 18px;
   border-radius: 18px;
-  border: 1px solid rgba(188, 168, 133, 0.86);
-  background: rgba(251, 247, 239, 0.9);
+  border: 1px solid rgba(176, 139, 83, 0.72);
+  background: rgba(249, 242, 229, 0.94);
 }
 
 .store-metric strong {
@@ -976,7 +1019,7 @@ body[data-page="store"] .store-start-actions .btn {
   margin-bottom: 4px;
   font-size: 1.6rem;
   font-family: "Playfair Display", Georgia, serif;
-  color: #7e684a;
+  color: var(--gold-main);
 }
 
 .store-intro-section {
@@ -1000,11 +1043,11 @@ body[data-page="store"] .store-start-actions .btn {
   display: grid;
   gap: 8px;
   padding: 14px 16px;
-  border-color: rgba(188, 168, 133, 0.92);
+  border-color: rgba(176, 139, 83, 0.78);
   background:
-    radial-gradient(circle at top right, rgba(176, 138, 74, 0.18), transparent 40%),
-    linear-gradient(180deg, rgba(251, 247, 239, 0.99), rgba(242, 232, 214, 0.98));
-  box-shadow: 0 16px 30px rgba(34, 32, 28, 0.08);
+    radial-gradient(circle at top right, rgba(166, 119, 45, 0.2), transparent 40%),
+    linear-gradient(180deg, rgba(251, 246, 238, 0.99), rgba(236, 225, 206, 0.98));
+  box-shadow: 0 16px 30px rgba(31, 25, 19, 0.1);
   align-content: start;
 }
 
@@ -1108,10 +1151,10 @@ body[data-page="store"] .store-start-actions .btn {
   grid-template-columns: minmax(210px, 0.86fr) minmax(0, 1.14fr);
   gap: 14px;
   padding: 16px;
-  border-color: rgba(188, 168, 133, 0.94);
+  border-color: rgba(176, 139, 83, 0.8);
   background:
-    radial-gradient(circle at top left, rgba(176, 138, 74, 0.16), transparent 34%),
-    linear-gradient(180deg, rgba(251, 247, 239, 0.99), rgba(244, 235, 220, 0.97));
+    radial-gradient(circle at top left, rgba(166, 119, 45, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(251, 246, 238, 0.99), rgba(238, 228, 211, 0.97));
 }
 
 .store-hero-spotlight-card h2 {
@@ -1150,9 +1193,9 @@ body[data-page="store"] .store-start-actions .btn {
   flex-wrap: wrap;
   padding: 8px 10px;
   border-radius: 16px;
-  border: 1px solid rgba(216, 205, 183, 0.96);
-  background: rgba(251, 247, 239, 0.84);
-  box-shadow: 0 12px 26px rgba(34, 32, 28, 0.05);
+  border: 1px solid rgba(207, 191, 162, 0.92);
+  background: rgba(249, 242, 229, 0.92);
+  box-shadow: 0 12px 26px rgba(31, 25, 19, 0.06);
   scroll-snap-type: x proximity;
 }
 
@@ -1163,8 +1206,8 @@ body[data-page="store"] .store-start-actions .btn {
   min-height: 34px;
   padding: 0 12px;
   border-radius: 999px;
-  border: 1px solid rgba(188, 168, 133, 0.88);
-  background: rgba(247, 239, 227, 0.9);
+  border: 1px solid rgba(176, 139, 83, 0.78);
+  background: rgba(244, 235, 220, 0.96);
   color: var(--ink-strong);
   font-size: 0.9rem;
   font-weight: 700;
@@ -1196,9 +1239,9 @@ body[data-page="store"] .store-start-actions .btn {
 .store-note {
   padding: 18px;
   border-radius: 18px;
-  border: 1px solid rgba(188, 168, 133, 0.84);
-  background: rgba(247, 239, 227, 0.94);
-  box-shadow: 0 12px 28px rgba(34, 32, 28, 0.06);
+  border: 1px solid rgba(176, 139, 83, 0.76);
+  background: rgba(244, 235, 220, 0.96);
+  box-shadow: 0 12px 28px rgba(31, 25, 19, 0.07);
 }
 
 body[data-page="store"] #categorias.section {
@@ -1258,11 +1301,11 @@ body[data-page="store"] #categorias .category-card h3 {
   gap: 10px;
   padding: 18px;
   border-radius: 22px;
-  border: 1px solid rgba(188, 168, 133, 0.9);
+  border: 1px solid rgba(176, 139, 83, 0.78);
   background:
-    radial-gradient(circle at top left, rgba(176, 138, 74, 0.14), transparent 38%),
-    linear-gradient(180deg, rgba(251, 247, 239, 0.98), rgba(244, 236, 223, 0.96));
-  box-shadow: 0 16px 32px rgba(34, 32, 28, 0.05);
+    radial-gradient(circle at top left, rgba(166, 119, 45, 0.16), transparent 38%),
+    linear-gradient(180deg, rgba(251, 246, 238, 0.98), rgba(239, 229, 211, 0.96));
+  box-shadow: 0 16px 32px rgba(31, 25, 19, 0.06);
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -1316,11 +1359,11 @@ body[data-page="store"] #categorias .category-card h3 {
   gap: 18px;
   padding: 20px 22px;
   border-radius: 26px;
-  border: 1px solid rgba(196, 175, 139, 0.92);
+  border: 1px solid rgba(176, 139, 83, 0.8);
   background:
-    radial-gradient(circle at top right, rgba(176, 138, 74, 0.18), transparent 34%),
-    linear-gradient(180deg, rgba(251, 247, 239, 0.98), rgba(243, 234, 218, 0.95));
-  box-shadow: 0 18px 38px rgba(34, 32, 28, 0.08);
+    radial-gradient(circle at top right, rgba(166, 119, 45, 0.2), transparent 34%),
+    linear-gradient(180deg, rgba(251, 246, 238, 0.98), rgba(237, 226, 208, 0.95));
+  box-shadow: 0 18px 38px rgba(31, 25, 19, 0.09);
   overflow: hidden;
 }
 
@@ -1380,13 +1423,13 @@ body[data-page="store"] #categorias .category-card h3 {
   min-height: 44px;
   padding: 10px 14px;
   border-radius: 16px;
-  border: 1px solid rgba(188, 168, 133, 0.88);
-  background: rgba(255, 252, 246, 0.96);
+  border: 1px solid rgba(176, 139, 83, 0.72);
+  background: rgba(252, 247, 239, 0.98);
   color: var(--ink-strong);
   font-size: 0.92rem;
   font-weight: 700;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 12px 24px rgba(34, 32, 28, 0.05);
+  box-shadow: 0 12px 24px rgba(31, 25, 19, 0.06);
 }
 
 .store-magazine-link:hover {
@@ -1405,9 +1448,9 @@ body[data-page="store"] #categorias .category-card h3 {
   gap: 14px;
   padding: 18px 20px;
   border-radius: 22px;
-  border: 1px solid rgba(188, 168, 133, 0.88);
-  background: rgba(251, 247, 239, 0.78);
-  box-shadow: 0 14px 30px rgba(34, 32, 28, 0.04);
+  border: 1px solid rgba(176, 139, 83, 0.72);
+  background: rgba(249, 242, 229, 0.9);
+  box-shadow: 0 14px 30px rgba(31, 25, 19, 0.06);
 }
 
 .store-guide-header {
@@ -1445,8 +1488,8 @@ body[data-page="store"] #categorias .category-card h3 {
   gap: 4px;
   padding: 14px 16px;
   border-radius: 18px;
-  border: 1px solid rgba(216, 205, 183, 0.96);
-  background: rgba(255, 252, 246, 0.9);
+  border: 1px solid rgba(207, 191, 162, 0.92);
+  background: rgba(252, 247, 239, 0.96);
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -1496,8 +1539,8 @@ body[data-page="store"] #categorias .category-card h3 {
 .product-hero-panel {
   padding: 16px 18px;
   border-radius: 16px;
-  border: 1px solid rgba(188, 168, 133, 0.9);
-  background: rgba(247, 239, 227, 0.94);
+  border: 1px solid rgba(176, 139, 83, 0.72);
+  background: rgba(244, 235, 220, 0.96);
   display: grid;
   gap: 10px;
 }
@@ -1519,11 +1562,11 @@ body[data-page="store"] #categorias .category-card h3 {
 .buy-box {
   padding: 24px;
   border-radius: 22px;
-  border: 1px solid rgba(188, 168, 133, 0.95);
+  border: 1px solid rgba(176, 139, 83, 0.82);
   background:
-    radial-gradient(circle at top left, rgba(176, 138, 74, 0.18), transparent 32%),
-    linear-gradient(180deg, rgba(251, 247, 239, 0.99), rgba(243, 233, 217, 0.98));
-  box-shadow: 0 22px 44px rgba(34, 32, 28, 0.12);
+    radial-gradient(circle at top left, rgba(166, 119, 45, 0.2), transparent 32%),
+    linear-gradient(180deg, rgba(251, 246, 238, 0.99), rgba(236, 225, 206, 0.98));
+  box-shadow: 0 22px 44px rgba(31, 25, 19, 0.13);
 }
 
 .buy-box .price-hint {
@@ -1539,44 +1582,44 @@ body[data-page="store"] #categorias .category-card h3 {
 }
 
 .magazine-card {
-  background: rgba(255, 255, 251, 0.9);
+  background: rgba(252, 248, 241, 0.94);
 }
 
 body[data-page="magazine"] .editorial-card,
 body[data-page="hub"] .editorial-card,
 body[data-page="article"] .article-card,
 body[data-page="magazine"] .hub-card {
-  background: rgba(252, 249, 243, 0.9);
-  box-shadow: 0 18px 40px rgba(34, 32, 28, 0.06);
+  background: rgba(252, 248, 241, 0.94);
+  box-shadow: 0 18px 40px rgba(31, 25, 19, 0.07);
 }
 
 body[data-page="magazine"] .eyebrow,
 body[data-page="hub"] .eyebrow,
 body[data-page="article"] .eyebrow {
-  background: rgba(176, 138, 74, 0.08);
-  border-color: rgba(214, 193, 155, 0.78);
-  color: #7b6541;
+  background: rgba(166, 119, 45, 0.1);
+  border-color: rgba(215, 184, 130, 0.8);
+  color: #8a6428;
 }
 
 body[data-page="store"] .eyebrow,
 body[data-page="category"] .eyebrow,
 body[data-page="product"] .eyebrow {
-  background: rgba(176, 138, 74, 0.14);
-  border-color: rgba(214, 193, 155, 0.94);
+  background: rgba(166, 119, 45, 0.14);
+  border-color: rgba(215, 184, 130, 0.94);
   color: var(--gold-main);
 }
 
 body[data-page="store"] .category-card {
   position: relative;
   overflow: hidden;
-  border-color: rgba(188, 168, 133, 0.94);
-  background: linear-gradient(180deg, rgba(251, 247, 239, 0.98), rgba(244, 235, 220, 0.96));
-  box-shadow: 0 18px 40px rgba(34, 32, 28, 0.08);
+  border-color: rgba(176, 139, 83, 0.78);
+  background: linear-gradient(180deg, rgba(250, 244, 233, 0.99), rgba(237, 226, 208, 0.96));
+  box-shadow: 0 18px 40px rgba(31, 25, 19, 0.09);
 }
 
 body[data-page="store"] .category-card .tag {
-  background: rgba(176, 138, 74, 0.14);
-  border-color: rgba(214, 193, 155, 0.94);
+  background: rgba(166, 119, 45, 0.14);
+  border-color: rgba(215, 184, 130, 0.94);
   color: var(--gold-main);
 }
 
@@ -1585,7 +1628,7 @@ body[data-page="store"] .category-card::before {
   position: absolute;
   inset: 0 0 auto 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--gold-main), rgba(176, 138, 74, 0.15));
+  background: linear-gradient(90deg, var(--gold-main), rgba(166, 119, 45, 0.15));
 }
 
 body[data-page="store"] .category-card:hover,
@@ -2039,8 +2082,9 @@ body[data-page="article"] .article-header p {
 }
 
 .footer-links a {
-  color: var(--muted);
-  font-weight: 600;
+  color: var(--accent-strong);
+  font-weight: 700;
+  text-decoration: none;
 }
 
 @media (max-width: 1040px) {
