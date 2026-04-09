@@ -33,7 +33,8 @@
       "Bash(powershell:*)",
       "Bash(ls \"E:/GIT_HUB/OndeCortar/imagens/produtos/\"*.svg)",
       "Bash(ls imagens/produtos/*.svg)",
-      "Bash(wc:*)"
+      "Bash(wc:*)",
+      "Bash(git:*)"
     ]
   }
 }
