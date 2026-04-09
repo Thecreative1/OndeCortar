@@ -218,8 +218,8 @@
             "Se queres uma resposta rápida, abre duas ou três opções fortes e só depois vais ao detalhe.",
             "Se o uso vai ser frequente, dá mais peso a conforto, consistência e facilidade de manutenção do que à lista de extras.",
             (category.articles || []).length
-              ? "Se ainda houver dúvidas, os artigos ligados a esta categoria ajudam a fechar a escolha."
-              : "Usa esta categoria para filtrar depressa antes de abrires um produto específico."
+              ? "Se ainda houver algo por perceber, os artigos ligados a esta categoria aprofundam o tema."
+              : "Usa esta categoria para encontrar a opção que melhor se encaixa no teu caso."
           ]
     };
   }
@@ -495,7 +495,7 @@
     if (!items.length) return "";
     return (
       '<section class="section section--editorial-trust"><div class="container">' +
-        '<div class="section-header section-header--compact"><div><span class="eyebrow">' + e(opts.eyebrow || "Critério editorial") + '</span><h2>' + e(opts.title || "Conteúdo com contexto antes de te mandar para a loja") + '</h2><p>' + e(opts.copy || "Mostramos datas, critério editorial e transparência comercial para que percebas por que razão cada recomendação aparece aqui.") + '</p></div></div>' +
+        '<div class="section-header section-header--compact"><div><span class="eyebrow">' + e(opts.eyebrow || "Critério editorial") + '</span><h2>' + e(opts.title || "Critério editorial visível em cada artigo") + '</h2><p>' + e(opts.copy || "Datas, critérios de avaliação e transparência sobre links afiliados — para que percebas como cada recomendação chega ao artigo.") + '</p></div></div>' +
         '<div class="trust-grid">' + items.map(function(item) {
           return '<article class="trust-card"><span class="eyebrow">' + e(item.eyebrow) + '</span><h3>' + e(item.title) + '</h3><p>' + e(item.copy) + '</p></article>';
         }).join("") + '</div>' +
@@ -555,13 +555,13 @@
   }
 
   function renderWhyBuy(category) {
-    const title = category && category.ctaTitle ? category.ctaTitle : "Escolhe menos opções, mas com mais critério";
+    const title = category && category.ctaTitle ? category.ctaTitle : "Menos opções, mais certas";
     const copy = category && category.ctaCopy
       ? category.ctaCopy
-      : "Compara poucas opções fortes, percebe o teu caso de uso e só depois vais ao detalhe.";
+      : "Cada categoria tem poucas opções selecionadas com critério — para que não precises de comparar tudo.";
     return (
       '<section class="section"><div class="container callout-card">' +
-        '<span class="eyebrow">Fechar decisão</span>' +
+        '<span class="eyebrow">Explorar categoria</span>' +
         "<h2>" + e(title) + "</h2>" +
         "<p>" + e(copy) + "</p>" +
       "</div></section>"
@@ -698,13 +698,13 @@
     const category = articlePrimaryCategory(article);
     return (
       '<section class="section" id="resposta-rapida"><div class="container">' +
-        '<div class="section-header"><div><span class="eyebrow">Resposta rápida</span><h2>A resposta curta antes do detalhe</h2><p>Se queres perceber o essencial em segundos, começa por aqui.</p></div></div>' +
+        '<div class="section-header"><div><span class="eyebrow">Resposta rápida</span><h2>O essencial, sem o detalhe todo</h2><p>Se queres uma leitura rápida antes de aprofundar, começa por aqui.</p></div></div>' +
         '<div class="quick-answer-grid">' +
           items.map(function(item) {
             return '<article class="quick-answer-card"><strong>' + e(item[0]) + '</strong><p>' + e(item[1]) + '</p></article>';
           }).join("") +
         '</div>' +
-        (category ? '<div class="quick-answer-store-nudge"><p>Já tens contexto suficiente? <a href="' + editorialCategoryHref(category.slug) + '">' + e(categoryActionLabel(category, "compare")) + ' →</a></p></div>' : "") +
+        (category ? '<div class="quick-answer-store-nudge"><p>Queres explorar mais? <a href="' + editorialCategoryHref(category.slug) + '">' + e(categoryActionLabel(category, "compare")) + ' →</a></p></div>' : "") +
       '</div></section>'
     );
   }
@@ -713,8 +713,8 @@
     const list = article.checklist || [];
     const category = articlePrimaryCategory(article);
     return (
-      (list.length ? '<div class="callout-card article-sidebar-card"><span class="eyebrow">Resumo prático</span><h3>Pontos a confirmar antes de escolher</h3><ul class="rich-list">' + list.map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></div>' : "") +
-      (category ? '<div class="callout-card article-sidebar-card"><span class="eyebrow">Continuar na loja</span><h3>' + e(category.title) + '</h3><p>' + e(article.categoryCta || category.intro) + '</p><div class="card-actions"><a class="btn btn-primary btn-small" href="' + editorialCategoryHref(category.slug) + '">' + e(categoryActionLabel(category, "compare")) + '</a></div></div>' : "")
+      (list.length ? '<div class="callout-card article-sidebar-card"><span class="eyebrow">Resumo prático</span><h3>O essencial deste guia</h3><ul class="rich-list">' + list.map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></div>' : "") +
+      (category ? '<div class="callout-card article-sidebar-card"><span class="eyebrow">Explorar categoria</span><h3>' + e(category.title) + '</h3><p>' + e(article.categoryCta || category.intro) + '</p><div class="card-actions"><a class="btn btn-primary btn-small" href="' + editorialCategoryHref(category.slug) + '">' + e(categoryActionLabel(category, "compare")) + '</a></div></div>' : "")
     );
   }
 
@@ -728,7 +728,7 @@
 
     if (checklist.length) {
       cards.push(
-        '<article class="callout-card article-support-card"><span class="eyebrow">Resumo prático</span><h3>Pontos a confirmar antes de escolher</h3><ul class="rich-list">' + checklist.map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></article>'
+        '<article class="callout-card article-support-card"><span class="eyebrow">Resumo prático</span><h3>O essencial deste guia</h3><ul class="rich-list">' + checklist.map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></article>'
       );
     }
 
@@ -744,7 +744,7 @@
 
     if (category) {
       cards.push(
-        '<article class="callout-card article-support-card"><span class="eyebrow">Continuar na loja</span><h3>' + e(category.title) + '</h3><p>' + e(article.categoryCta || category.intro) + '</p><div class="card-actions"><a class="btn btn-primary btn-small" href="' + editorialCategoryHref(category.slug) + '">' + e(categoryActionLabel(category, "compare")) + '</a><a class="btn btn-soft btn-small" href="' + categoryHref(category.slug) + '">' + e(categoryActionLabel(category, "all")) + '</a></div></article>'
+        '<article class="callout-card article-support-card"><span class="eyebrow">Explorar categoria</span><h3>' + e(category.title) + '</h3><p>' + e(article.categoryCta || category.intro) + '</p><div class="card-actions"><a class="btn btn-primary btn-small" href="' + editorialCategoryHref(category.slug) + '">' + e(categoryActionLabel(category, "compare")) + '</a><a class="btn btn-soft btn-small" href="' + categoryHref(category.slug) + '">' + e(categoryActionLabel(category, "all")) + '</a></div></article>'
       );
     }
 
@@ -769,7 +769,7 @@
     if (!entries.length) return "";
     return (
       '<section class="section" id="perfis-de-uso"><div class="container">' +
-        '<div class="section-header section-header--compact"><div><span class="eyebrow">Perfis de uso</span><h2>Recomendações por tipo de uso</h2><p>Se o teu caso se enquadra num destes perfis, vai diretamente para a opção certa na loja.</p></div>' +
+        '<div class="section-header section-header--compact"><div><span class="eyebrow">Perfis de uso</span><h2>Opções por tipo de uso</h2><p>Se o teu caso se enquadra num destes perfis, encontras a opção mais próxima do teu contexto.</p></div>' +
           (category ? '<div class="hero-actions"><a class="btn btn-secondary btn-small" href="' + editorialCategoryHref(category.slug) + '">' + e(categoryActionLabel(category, "compare")) + '</a></div>' : "") +
         '</div>' +
         '<div class="article-inline-products">' +
@@ -788,7 +788,7 @@
             );
           }).join("") +
         '</div>' +
-        (category ? '<div class="article-category-shortcut"><a href="' + categoryHref(category.slug) + '">Ver todas as opções de ' + e(category.title) + ' e comparar →</a></div>' : "") +
+        (category ? '<div class="article-category-shortcut"><a href="' + categoryHref(category.slug) + '">Explorar ' + e(category.title) + ' →</a></div>' : "") +
       '</div></section>'
     );
   }
@@ -798,7 +798,7 @@
     if (!category) return "";
     return (
       '<section class="section"><div class="container callout-card article-category-bridge">' +
-        '<span class="eyebrow">Continuar na loja</span>' +
+        '<span class="eyebrow">Explorar categoria</span>' +
         '<h2>' + e(category.title) + '</h2>' +
         '<p>' + e(article.categoryCta || category.intro) + '</p>' +
         '<div class="hero-actions"><a class="btn btn-primary" href="' + editorialCategoryHref(category.slug) + '">' + e(categoryActionLabel(category, "compare")) + '</a><a class="btn btn-secondary" href="' + categoryHref(category.slug) + '">' + e(categoryActionLabel(category, "all")) + '</a></div>' +
@@ -810,8 +810,8 @@
     const productArticles = getArticles(product.articles || []);
     if (!productArticles.length) return "";
     return renderGuideLinkPanel(
-      "Ler antes de decidir",
-      "Guias desta categoria que ajudam a perceber se esta é mesmo a escolha certa para o teu caso.",
+      "Artigos relacionados",
+      "Leituras sobre o mesmo tema para quem quer perceber mais antes de seguir em frente.",
       productArticles.slice(0, 2),
       href("revista/"),
       "Ver revista"
@@ -832,17 +832,17 @@
   function renderArticleFinalCta(article) {
     const category = articlePrimaryCategory(article);
     const hub = hubMap.get(article.hub || "");
-    const defaultTitle = category ? "Ver as melhores opções de " + category.title : "Já tens o que precisas para escolher";
+    const defaultTitle = category ? "Explorar " + category.title : "Queres ir mais fundo neste tema?";
     const defaultCopy = category
-      ? "Compara as escolhas mais fortes desta categoria com o contexto que acabaste de ler. Menos opções, mais acertadas."
-      : "Vai para a loja e compara as opções desta categoria com contexto — menos escolhas, mais certas.";
+      ? "Se este tema ficou claro, as opções desta categoria estão organizadas pelo mesmo critério."
+      : "Podes continuar por este tema ou explorar categorias relacionadas.";
     const title = article.finalCta && article.finalCta.title ? article.finalCta.title : defaultTitle;
     const copy = article.finalCta && article.finalCta.copy ? article.finalCta.copy : defaultCopy;
     const primaryLabel = category ? categoryActionLabel(category, "compare") : "Ir para a loja";
     const secondaryLabel = hub ? "Explorar " + hub.title.toLowerCase() : "Ler mais guias";
     return (
       '<section class="section"><div class="container callout-card article-final-cta">' +
-        '<span class="eyebrow">Próximo passo</span>' +
+        '<span class="eyebrow">Continuar</span>' +
         '<h2>' + e(title) + '</h2>' +
         '<p>' + e(copy) + '</p>' +
         '<div class="hero-actions">' +
@@ -953,7 +953,7 @@
     if (!list.length) return "";
     return (
         '<section class="section"><div class="container">' +
-        '<div class="section-header"><div><span class="eyebrow">Revista OndeCortar</span><h2>' + e(title) + '</h2><p>Se ainda tens uma dúvida aberta, continua por um destes ângulos antes de voltares à loja.</p></div></div>' +
+        '<div class="section-header"><div><span class="eyebrow">Revista OndeCortar</span><h2>' + e(title) + '</h2><p>Se ainda há um ângulo por explorar, estas leituras cobrem o mesmo tema de forma diferente.</p></div></div>' +
         '<div class="article-grid">' + list.map(renderArticleCard).join("") + "</div>" +
       "</div></section>"
     );
@@ -1151,12 +1151,12 @@
       '<main>' +
         '<section class="section"><div class="container hero-card category-hero-card"><div class="hero-grid">' +
           '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja/") + '">Loja</a><span>/</span><span>' + e(category.title) + '</span></div><span class="section-flag">Escolha por categoria</span><h1>' + e(category.title) + '</h1><p>' + e(introShort) + '</p><div class="hero-actions"><a class="btn btn-primary" href="#top-escolhas">Ver melhores opções</a>' + (relatedArticles[0] ? '<a class="btn btn-soft" href="' + articleHref(relatedArticles[0].slug) + '">' + e(articleActionLabel(relatedArticles[0])) + '</a>' : '<a class="btn btn-soft" href="' + href("loja/") + '">Voltar à loja</a>') + '</div></div>' +
-          '<div class="hero-side"><div class="shop-mini-grid">' + topProducts.slice(0, 2).map(renderMiniProduct).join("") + '</div><div class="store-note"><strong>' + e(category.guidePanelTitle || "Lê o guia certo") + '</strong><p>' + e(category.guidePanelCopy || "Se ainda faltar resolver a dúvida principal, os artigos desta categoria ajudam a fechar a escolha.") + '</p></div></div>' +
+          '<div class="hero-side"><div class="shop-mini-grid">' + topProducts.slice(0, 2).map(renderMiniProduct).join("") + '</div><div class="store-note"><strong>' + e(category.guidePanelTitle || "Lê o guia certo") + '</strong><p>' + e(category.guidePanelCopy || "Se ainda houver algo por perceber, os artigos desta categoria aprofundam o tema.") + '</p></div></div>' +
         '</div></div></section>' +
         '<section class="section" id="top-escolhas"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Melhores opções</span><h2>' + e(category.topTitle || "As melhores opções desta categoria") + '</h2><p>' + e(category.topCopy || "Compara pelo teu caso de uso e escolhe a opção que encaixa melhor no teu dia a dia.") + '</p></div></div><div class="product-grid product-grid--dense product-grid--category-top">' + topProducts.map(function(item, index) { return renderProductCard(item, { dense: true, label: pickLabelMap.get(item.slug) || (index === 0 ? "Melhor escolha" : item.bestFor) }); }).join("") + '</div></div></section>' +
         renderCategoryGuide(category) +
-        '<section class="section"><div class="container comparison-card"><div class="section-header"><div><span class="eyebrow">Atalho de escolha</span><h2>' + e(category.comparisonTitle || "Comparação rápida") + '</h2><p>' + e(category.comparisonCopy || "Qual é o teu caso? Escolhe o perfil mais parecido e vai direto à opção certa.") + '</p></div></div><div class="comparison-table">' + comparisonRows + '</div></div></section>' +
-        (relatedArticles.length ? renderGuideLinkPanel(category.magazineTitle || "Guias para decidir com mais segurança", category.magazineCopy || "A revista aprofunda diferenças, erros comuns e critérios de compra antes de voltares à loja.", relatedArticles.slice(0, 4), href("revista/"), "Ver mais guias") : '') +
+        '<section class="section"><div class="container comparison-card"><div class="section-header"><div><span class="eyebrow">Atalho de escolha</span><h2>' + e(category.comparisonTitle || "Comparação rápida") + '</h2><p>' + e(category.comparisonCopy || "Qual é o teu caso? Escolhe o perfil mais parecido e encontra a opção mais próxima do teu contexto.") + '</p></div></div><div class="comparison-table">' + comparisonRows + '</div></div></section>' +
+        (relatedArticles.length ? renderGuideLinkPanel(category.magazineTitle || "Leituras ligadas a esta categoria", category.magazineCopy || "A revista aprofunda diferenças, erros comuns e critérios de avaliação para quem quer mais contexto.", relatedArticles.slice(0, 4), href("revista/"), "Ver mais guias") : '') +
         '<section class="section" id="faq-categoria"><div class="container">' + renderFaq(category.faqs) + '</div></section>' +
         renderWhyBuy(category) +
         '<section class="section"><div class="container">' + renderDisclosure() + '</div></section>' +
@@ -1272,12 +1272,12 @@
       {
         eyebrow: "Datas visíveis",
         title: "Cada guia mostra contexto editorial",
-        copy: "Publicação, revisão e leitura estimada aparecem nos artigos para que percebas o grau de atualização antes de sair para a loja."
+        copy: "Publicação, revisão e leitura estimada aparecem nos artigos para que percebas o grau de atualização antes de aprofundar."
       },
       {
         eyebrow: "Como avaliamos",
-        title: "Uso real antes de extras de catálogo",
-        copy: "Priorizamos conforto, manutenção, coerência da compra e relação qualidade-preço em vez de listas longas de acessórios."
+        title: "Uso real acima de especificações",
+        copy: "Priorizamos conforto, manutenção e o que faz diferença no dia a dia em vez de listas longas de acessórios."
       },
       {
         eyebrow: "Transparência",
@@ -1289,7 +1289,7 @@
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container">' +
-          '<div class="section-header magazine-home-header"><div><span class="eyebrow">Revista OndeCortar</span><h1>Guias, comparações e respostas para comprar melhor</h1><p>Artigos práticos para perceber o que comprar, o que evitar e qual a diferença real entre as opções.</p></div><div class="hero-actions"><a class="btn btn-primary" href="#artigos">Ver últimos guias</a><a class="btn btn-secondary" href="#seccoes">Explorar temas</a></div></div>' +
+          '<div class="section-header magazine-home-header"><div><span class="eyebrow">Revista OndeCortar</span><h1>Guias, comparações e respostas para perceber melhor</h1><p>Artigos práticos sobre o que funciona, o que evitar e qual a diferença real entre as opções.</p></div><div class="hero-actions"><a class="btn btn-primary" href="#artigos">Ver últimos guias</a><a class="btn btn-secondary" href="#seccoes">Explorar temas</a></div></div>' +
           '<div class="magazine-editorial-grid">' +
             (leadArticle ? '<article class="editorial-card magazine-feature-card"><div class="magazine-feature-copy"><div class="meta-row"><span class="tag">Artigo em destaque</span>' + (leadCategory ? '<span class="tag">' + e(leadCategory.title) + '</span>' : "") + '</div><h2>' + e(leadArticle.title) + '</h2><p>' + e(leadArticle.intro || leadArticle.excerpt) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + articleHref(leadArticle.slug) + '">' + e(articleActionLabel(leadArticle)) + '</a><a class="btn btn-secondary" href="#artigos">Explorar mais leituras</a></div></div><div class="magazine-feature-media">' +
               '<a class="article-thumb article-thumb--' + leadCover.kind + '" href="' + articleHref(leadArticle.slug) + '">' +
@@ -1305,9 +1305,9 @@
           copy: "A revista existe para responder a dúvidas reais, com critério e sem pressa. Quanto mais perceberes, mais fácil fica chegar à tua própria conclusão.",
           items: trustItems
         }) +
-        renderMagazineStoreBridge("Já sabes o que precisas?", "Vai direto à categoria certa e compara as opções com o contexto que acabaste de ler.", topCategories, href("loja/"), "Ver todas as categorias") +
+        renderMagazineStoreBridge("Queres explorar por categoria?", "As categorias da loja estão organizadas pelo mesmo critério dos guias — para quando quiseres ir mais fundo.", topCategories, href("loja/"), "Ver todas as categorias") +
         '<section class="section" id="artigos"><div class="container"><div class="section-header"><div><span class="eyebrow">Artigos</span><h2>Últimos artigos da revista</h2><p>Guias e comparações sobre o que realmente importa perceber.</p></div></div><div class="article-grid">' + remainingArticles.map(function(item) { return renderArticleCard(item); }).join("") + '</div></div></section>' +
-        '<section class="section" id="seccoes"><div class="container"><div class="section-header"><div><span class="eyebrow">Temas</span><h2>Explorar por tema</h2><p>Escolhe um tema e encontra guias, comparações e recomendações de produto ligadas.</p></div></div><div class="hub-grid">' + mainHubs.map(renderHubCard).join("") + '</div></div></section>' +
+        '<section class="section" id="seccoes"><div class="container"><div class="section-header"><div><span class="eyebrow">Temas</span><h2>Explorar por tema</h2><p>Escolhe um tema e encontra guias, comparações e leituras ligadas.</p></div></div><div class="hub-grid">' + mainHubs.map(renderHubCard).join("") + '</div></div></section>' +
       '</main>' +
       renderFooter()
     );
@@ -1360,7 +1360,7 @@
           (leadArticle ? '<div class="magazine-editorial-grid hub-editorial-grid"><article class="editorial-card magazine-feature-card"><div class="magazine-feature-copy"><div class="meta-row"><span class="tag">Guia principal</span>' + (leadCategory ? '<span class="tag">' + e(leadCategory.title) + '</span>' : "") + '</div><h2>' + e(leadArticle.title) + '</h2><p>' + e(leadArticle.intro || leadArticle.excerpt) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + articleHref(leadArticle.slug) + '">' + e(articleActionLabel(leadArticle)) + '</a>' + (leadCategory ? '<a class="btn btn-secondary" href="' + editorialCategoryHref(leadCategory.slug) + '">' + e(categoryActionLabel(leadCategory)) + '</a>' : '') + '</div></div><div class="magazine-feature-media"><a class="article-thumb article-thumb--' + leadCover.kind + '" href="' + articleHref(leadArticle.slug) + '"><img src="' + leadCover.src + '" alt="' + e(leadCover.alt) + '" loading="lazy" /></a></div></article><aside class="editorial-card magazine-story-column"><div class="magazine-story-column-header"><span class="eyebrow">Leituras seguintes</span><h2>O que explorar a seguir</h2><p>Abre só o que resolve a dúvida que ainda ficou em aberto.</p></div><div class="magazine-story-list">' + supportArticles.map(renderMagazineStoryItem).join("") + '</div></aside></div>' : '<div class="article-grid">' + hubArticles.map(renderArticleCard).join("") + '</div>') +
         '</div></section>' +
         (supplementaryArticles.length ? '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Ir mais fundo</span><h2>O que ainda pode ficar por responder</h2><p>Para quem leu o essencial e ainda tem uma dúvida em aberto. Cada artigo responde a um ângulo diferente do mesmo tema.</p></div></div><div class="article-grid">' + supplementaryArticles.map(renderArticleCard).join("") + '</div></div></section>' : "") +
-        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Continuar na loja</span><h2>Categorias ligadas a este tema</h2><p>Quando tiveres resposta suficiente, entra na loja pela categoria mais alinhada com o teu caso.</p></div></div><div class="category-grid">' + hubCategories.map(function(item) { return renderCategoryCard(item, false); }).join("") + '</div></div></section>' +
+        '<section class="section"><div class="container"><div class="section-header"><div><span class="eyebrow">Explorar categoria</span><h2>Categorias ligadas a este tema</h2><p>Para quando quiseres continuar por uma categoria específica, com o mesmo critério dos guias.</p></div></div><div class="category-grid">' + hubCategories.map(function(item) { return renderCategoryCard(item, false); }).join("") + '</div></div></section>' +
       '</main>' +
       renderFooter()
     );
@@ -1455,7 +1455,7 @@
     if (!category) return;
     const bar = document.createElement("div");
     bar.className = "article-progress-bar";
-    bar.innerHTML = '<span>Já tens o que precisas?</span><a href="' + categoryHref(category.slug) + '">Ver ' + e(category.title) + ' →</a>';
+    bar.innerHTML = '<span>Queres ir mais fundo?</span><a href="' + categoryHref(category.slug) + '">Explorar ' + e(category.title) + ' →</a>';
     document.body.appendChild(bar);
 
     const finalCta = document.querySelector(".article-final-cta");
