@@ -3,8 +3,8 @@ const path = require("path");
 const vm = require("vm");
 
 const ROOT = path.resolve(__dirname, "..");
-const VERSION = "20260407-commerce-2";
-const TODAY = "2026-04-07";
+const VERSION = "20260409-commerce-ux";
+const TODAY = new Date().toISOString().slice(0, 10);
 const SITE_URL = "https://ondecortar.pt/";
 const DEFAULT_OG_IMAGE = SITE_URL + "imagens/banner.jpg";
 const NAV_SCRIPT = `
@@ -13,17 +13,37 @@ const NAV_SCRIPT = `
       var nav = document.querySelector(".nav");
       var toggle = document.querySelector("[data-nav-toggle]");
       var navLinks = document.getElementById("siteNavLinks");
+      var backdrop = document.querySelector("[data-nav-backdrop]");
+      var toggleLabel = toggle ? toggle.querySelector(".nav-toggle-label") : null;
       if (!nav || !toggle || !navLinks) return;
 
       function setOpen(nextOpen) {
+        var mobile = window.innerWidth <= 760;
         nav.classList.toggle("is-open", nextOpen);
         document.body.classList.toggle("nav-open", nextOpen);
         toggle.setAttribute("aria-expanded", String(nextOpen));
+        navLinks.setAttribute("aria-hidden", String(mobile ? !nextOpen : false));
+        if ("inert" in navLinks) {
+          navLinks.inert = mobile ? !nextOpen : false;
+        }
+        if (toggleLabel) {
+          toggleLabel.textContent = nextOpen ? "Fechar" : "Menu";
+        }
+        if (backdrop) {
+          backdrop.hidden = !nextOpen;
+          backdrop.setAttribute("aria-hidden", String(!nextOpen));
+        }
       }
 
       toggle.addEventListener("click", function() {
         setOpen(!nav.classList.contains("is-open"));
       });
+
+      if (backdrop) {
+        backdrop.addEventListener("click", function() {
+          setOpen(false);
+        });
+      }
 
       navLinks.addEventListener("click", function(event) {
         if (event.target.closest("a")) {
@@ -48,6 +68,8 @@ const NAV_SCRIPT = `
           setOpen(false);
         }
       });
+
+      setOpen(false);
     })();
   </script>`;
 
@@ -128,6 +150,7 @@ function selectorMatches(node, selector) {
 
 function createSandbox(spec, data) {
   const headNodes = [];
+  const bodyNodes = [];
   const app = { innerHTML: "" };
   const dataset = {};
 
@@ -171,11 +194,34 @@ function createSandbox(spec, data) {
   appendInitialNode("meta", { property: "og:image", content: spec.ogImage || DEFAULT_OG_IMAGE });
   appendInitialNode("link", { rel: "canonical", href: spec.canonical || "" });
 
+  const body = {
+    dataset: dataset,
+    scrollHeight: 4200,
+    classList: {
+      add() {},
+      remove() {},
+      toggle() {}
+    },
+    appendChild(node) {
+      node.parentNode = body;
+      bodyNodes.push(node);
+      return node;
+    },
+    removeChild(node) {
+      const index = bodyNodes.indexOf(node);
+      if (index !== -1) {
+        bodyNodes.splice(index, 1);
+      }
+      node.parentNode = null;
+      return node;
+    }
+  };
+
   const document = {
     title: spec.title || "",
     documentElement: createNode("html"),
     head: head,
-    body: { dataset: dataset },
+    body: body,
     createElement(tagName) {
       return createNode(tagName);
     },
@@ -196,6 +242,10 @@ function createSandbox(spec, data) {
       href: spec.canonical || SITE_URL,
       search: spec.search || ""
     },
+    innerHeight: 900,
+    scrollY: 0,
+    addEventListener() {},
+    removeEventListener() {},
     OndeCortarCommerce: data
   };
 
@@ -535,6 +585,8 @@ function main() {
     const metaTitle = article.metaTitle || `${article.title} | Revista OndeCortar`;
     const metaDescription = article.metaDescription || article.excerpt || article.intro;
     const hub = hubMap.get(article.hub);
+    const publishedDate = article.datePublished || null;
+    const updatedDate = article.dateModified || article.datePublished || null;
     writeFile(
       path.join("revista", article.slug, "index.html"),
       renderStaticPage(
@@ -553,6 +605,13 @@ function main() {
               "headline": article.title,
               "description": metaDescription,
               "mainEntityOfPage": SITE_URL + "revista/" + article.slug + "/",
+              "datePublished": publishedDate,
+              "dateModified": updatedDate,
+              "author": {
+                "@type": "Organization",
+                "name": "OndeCortar.pt",
+                "url": SITE_URL
+              },
               "publisher": {
                 "@type": "Organization",
                 "name": "OndeCortar.pt",

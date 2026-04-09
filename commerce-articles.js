@@ -3,6 +3,8 @@
   window.OndeCortarCommerce.articles = [
     {
       slug: "melhores-maquinas-para-cortar-cabelo-em-casa",
+      datePublished: "2025-11-13",
+      dateModified: "2025-11-13",
       hub: "guias-de-compra",
       title: "Melhores máquinas para cortar cabelo em casa",
       excerpt: "Guia prático para perceber que tipo de máquina faz sentido em casa e evitar escolhas desajustadas.",
@@ -76,6 +78,8 @@
     },
     {
       slug: "trimmer-vs-shaver-diferencas-reais",
+      datePublished: "2025-11-20",
+      dateModified: "2025-11-20",
       hub: "guias-de-compra",
       title: "Trimmer vs shaver: diferenças reais",
       excerpt: "Dois formatos parecidos na teoria, mas com papéis diferentes na prática.",
@@ -110,6 +114,8 @@
     },
     {
       slug: "como-limpar-uma-maquina-de-cortar-cabelo",
+      datePublished: "2025-11-27",
+      dateModified: "2025-11-27",
       hub: "maquinas-e-manutencao",
       title: "Como limpar uma máquina de cortar cabelo",
       excerpt: "Uma rotina simples de manutenção prolonga a vida útil da máquina e evita problemas desnecessários.",
@@ -140,6 +146,8 @@
     },
     {
       slug: "melhor-kit-de-barba-para-oferecer",
+      datePublished: "2025-12-04",
+      dateModified: "2025-12-04",
       hub: "presentes-e-kits",
       title: "Melhor kit de barba para oferecer",
       excerpt: "Como escolher um kit que faça sentido sem depender de promessas exageradas.",
@@ -170,6 +178,8 @@
     },
     {
       slug: "o-essencial-para-tratar-da-barba-em-casa",
+      datePublished: "2025-12-11",
+      dateModified: "2025-12-11",
       hub: "cuidados-com-a-barba",
       title: "O essencial para tratar da barba em casa",
       excerpt: "Menos ruído e mais clareza sobre o que costuma realmente fazer diferença.",
@@ -200,6 +210,8 @@
     },
     {
       slug: "como-reduzir-irritacao-ao-fazer-a-barba",
+      datePublished: "2025-12-18",
+      dateModified: "2025-12-18",
       hub: "cuidados-com-a-barba",
       title: "Como reduzir irritação ao fazer a barba",
       excerpt: "Importa perceber onde o processo está a criar fricção desnecessária.",
@@ -230,6 +242,8 @@
     },
     {
       slug: "o-que-um-barbeiro-precisa-no-posto-de-trabalho",
+      datePublished: "2025-12-25",
+      dateModified: "2025-12-25",
       hub: "para-barbeiros",
       title: "O que um barbeiro precisa no posto de trabalho",
       excerpt: "Nem tudo tem o mesmo peso. Algumas compras pequenas melhoram muito o dia a dia.",
@@ -260,6 +274,8 @@
     },
     {
       slug: "historia-do-poste-de-barbeiro",
+      datePublished: "2026-01-01",
+      dateModified: "2026-01-01",
       hub: "estilo-e-tendencias",
       title: "A história do poste de barbeiro: porque usamos este símbolo sem saber o que significa",
       metaTitle: "A história do poste de barbeiro: porque usamos este símbolo sem saber o que significa | Revista OndeCortar",
