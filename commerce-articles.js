@@ -373,6 +373,8 @@
     {
       series: "core-2026",
       slug: "como-escolher-uma-maquina-de-cortar-cabelo-para-usar-em-casa",
+      datePublished: "2026-01-08",
+      dateModified: "2026-01-08",
       hub: "guias-de-compra",
       title: "Como escolher uma máquina de cortar cabelo para usar em casa",
       metaTitle: "Como escolher uma máquina de cortar cabelo para usar em casa | Revista OndeCortar",
@@ -443,6 +445,8 @@
     {
       series: "core-2026",
       slug: "melhor-kit-de-barba-para-comecar-sem-comprar-as-cegas",
+      datePublished: "2026-01-15",
+      dateModified: "2026-01-15",
       hub: "guias-de-compra",
       title: "Melhor kit de barba para começar sem comprar às cegas",
       metaTitle: "Melhor kit de barba para começar sem comprar às cegas | Revista OndeCortar",
@@ -513,6 +517,8 @@
     {
       series: "core-2026",
       slug: "creme-espuma-ou-gel-de-barbear-qual-escolher",
+      datePublished: "2026-01-22",
+      dateModified: "2026-01-22",
       hub: "guias-de-compra",
       title: "Creme, espuma ou gel de barbear: qual escolher",
       metaTitle: "Creme, espuma ou gel de barbear: qual escolher | Revista OndeCortar",
@@ -583,6 +589,8 @@
     {
       series: "core-2026",
       slug: "navalha-classica-ou-maquina-de-seguranca-diferencas-reais",
+      datePublished: "2026-01-29",
+      dateModified: "2026-01-29",
       hub: "guias-de-compra",
       title: "Navalha clássica ou máquina de segurança: diferenças reais",
       metaTitle: "Navalha clássica ou máquina de segurança: diferenças reais | Revista OndeCortar",
@@ -653,6 +661,8 @@
     {
       series: "core-2026",
       slug: "o-que-vale-a-pena-num-kit-de-barba-e-o-que-e-so-ruido-de-catalogo",
+      datePublished: "2026-02-05",
+      dateModified: "2026-02-05",
       hub: "comparacoes",
       title: "O que vale a pena num kit de barba e o que é só ruído de catálogo",
       metaTitle: "O que vale a pena num kit de barba e o que é só ruído de catálogo | Revista OndeCortar",
@@ -723,6 +733,8 @@
     {
       series: "core-2026",
       slug: "aparador-multifuncoes-ou-maquina-profissional-qual-compensa-mais",
+      datePublished: "2026-02-12",
+      dateModified: "2026-02-12",
       hub: "comparacoes",
       title: "Aparador multifunções ou máquina profissional: qual compensa mais",
       metaTitle: "Aparador multifunções ou máquina profissional: qual compensa mais | Revista OndeCortar",
@@ -792,6 +804,8 @@
     },
     {
       series: "core-2026",
+      datePublished: "2026-02-19",
+      dateModified: "2026-02-19",
       slug: "escova-de-barba-ou-pente-qual-usar-no-dia-a-dia",
       hub: "comparacoes",
       title: "Escova de barba ou pente: qual usar no dia a dia",
@@ -862,6 +876,8 @@
     },
     {
       series: "core-2026",
+      datePublished: "2026-02-26",
+      dateModified: "2026-02-26",
       slug: "como-escolher-laminas-sem-irritar-a-pele-desnecessariamente",
       hub: "comparacoes",
       title: "Como escolher lâminas sem irritar a pele desnecessariamente",
@@ -932,6 +948,8 @@
     },
     {
       series: "core-2026",
+      datePublished: "2026-03-04",
+      dateModified: "2026-03-04",
       slug: "como-montar-uma-rotina-simples-de-barba-em-casa",
       hub: "conteudo-pratico",
       title: "Como montar uma rotina simples de barba em casa",
@@ -1002,6 +1020,8 @@
     },
     {
       series: "core-2026",
+      datePublished: "2026-03-11",
+      dateModified: "2026-03-11",
       slug: "7-erros-ao-comprar-uma-maquina-de-cortar-cabelo-barata",
       hub: "erros-comuns",
       title: "7 erros ao comprar uma máquina de cortar cabelo barata",
@@ -1072,6 +1092,8 @@
     },
     {
       series: "core-2026",
+      datePublished: "2026-03-18",
+      dateModified: "2026-03-18",
       slug: "como-manter-a-maquina-de-cortar-cabelo-a-funcionar-bem-por-mais-tempo",
       hub: "conteudo-pratico",
       title: "Como manter a máquina de cortar cabelo a funcionar bem por mais tempo",
@@ -1142,6 +1164,8 @@
     },
     {
       series: "core-2026",
+      datePublished: "2026-03-25",
+      dateModified: "2026-03-25",
       slug: "o-essencial-para-manter-uma-bancada-de-barbeiro-organizada",
       hub: "conteudo-pratico",
       title: "O essencial para manter uma bancada de barbeiro organizada",
