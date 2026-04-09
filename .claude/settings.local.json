@@ -34,7 +34,20 @@
       "Bash(ls \"E:/GIT_HUB/OndeCortar/imagens/produtos/\"*.svg)",
       "Bash(ls imagens/produtos/*.svg)",
       "Bash(wc:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash([ ! -f \"E:\\\\GIT_HUB\\\\OndeCortar/imagens/produtos/$img\" ])",
+      "Bash(sed 's/slug: \"//')",
+      "Bash(sed 's/\"$//')",
+      "Bash(read slug:*)",
+      "Bash([ ! -d \"E:\\\\GIT_HUB\\\\OndeCortar/produto/$slug\" ])",
+      "Bash(sed 's/image: \"//')",
+      "Bash(read img:*)",
+      "Bash([ ! -f \"E:\\\\GIT_HUB\\\\OndeCortar/$img\" ])",
+      "Bash(sed 's/amazon: \"//')",
+      "Bash(sed 's/.*href=\"//')",
+      "Bash(sed 's/\".*//')",
+      "Bash(sed 's/href=\"//')",
+      "Bash(node:*)"
     ]
   }
 }
