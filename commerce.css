@@ -801,10 +801,10 @@ body[data-page="store"] .store-start-actions .btn {
 
 .magazine-feature-media .article-thumb img {
   height: 100%;
-  min-height: 320px;
+  min-height: 260px;
   aspect-ratio: 4 / 5;
   object-fit: contain;
-  padding: 20px;
+  padding: 10px;
 }
 
 .magazine-story-column {
