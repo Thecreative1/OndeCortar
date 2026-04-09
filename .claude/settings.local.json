@@ -31,7 +31,9 @@
       "Bash(powershell -Command 'try { $r = Invoke-WebRequest -Uri '\\\\''https://images-na.ssl-images-amazon.com/images/P/B01MQIAAC1.__TRACKED_VAR__.jpg'\\\\'' -UseBasicParsing; Write-Host '\\\\''__TRACKED_VAR__: '\\\\'' + $r.RawContentLength } catch { Write-Host '\\\\''__TRACKED_VAR__: FAIL'\\\\'' }')",
       "Bash(powershell -Command ':*)",
       "Bash(powershell:*)",
-      "Bash(ls \"E:/GIT_HUB/OndeCortar/imagens/produtos/\"*.svg)"
+      "Bash(ls \"E:/GIT_HUB/OndeCortar/imagens/produtos/\"*.svg)",
+      "Bash(ls imagens/produtos/*.svg)",
+      "Bash(wc:*)"
     ]
   }
 }

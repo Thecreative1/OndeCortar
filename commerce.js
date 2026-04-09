@@ -430,7 +430,7 @@
   function renderMiniProduct(product) {
     return (
       '<a class="shop-mini-card" href="' + productHref(product.slug) + '">' +
-        '<img src="' + href(product.image) + '" alt="' + e(product.alt) + '" loading="lazy" />' +
+        '<img src="' + href(product.image) + '" alt="' + e(product.alt || product.name) + '" loading="lazy" />' +
         '<div><strong>' + e(product.name) + '</strong><p>' + e(product.summary) + '</p><span class="tag">Ver produto</span></div>' +
       "</a>"
     );
@@ -664,7 +664,7 @@
     if (opts.prominent) classes.push("product-card--prominent");
     return (
       '<article class="' + classes.join(" ") + '">' +
-        '<img src="' + href(product.image) + '" alt="' + e(product.alt) + '" loading="lazy" />' +
+        '<img src="' + href(product.image) + '" alt="' + e(product.alt || product.name) + '" loading="lazy" />' +
         '<div class="product-copy">' +
           '<div class="meta-row"><span class="tag">' + e(opts.label || product.bestFor) + "</span></div>" +
           '<h3 class="product-card-title">' + e(product.name) + "</h3>" +
@@ -783,7 +783,7 @@
     if (!product) return "";
     return (
       '<article class="editorial-card store-hero-spotlight-card">' +
-        '<div class="featured-thumb"><img src="' + href(product.image) + '" alt="' + e(product.alt) + '" loading="lazy" /></div>' +
+        '<div class="featured-thumb"><img src="' + href(product.image) + '" alt="' + e(product.alt || product.name) + '" loading="lazy" /></div>' +
         '<div class="store-hero-spotlight-copy">' +
           '<div class="meta-row"><span class="tag">' + e(item.label) + '</span><span class="tag">' + e(product.bestFor) + '</span></div>' +
           '<h2>' + e(product.name) + '</h2>' +
@@ -800,7 +800,7 @@
     if (!product) return "";
     return (
       '<article class="shop-mini-card store-choice-card">' +
-        '<img src="' + href(product.image) + '" alt="' + e(product.alt) + '" loading="lazy" />' +
+        '<img src="' + href(product.image) + '" alt="' + e(product.alt || product.name) + '" loading="lazy" />' +
         '<div><span class="tag">' + e(item.label) + '</span><strong>' + e(product.name) + '</strong><p>' + e(item.note) + '</p><div class="card-actions"><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Comprar</a><a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Detalhes</a></div></div>' +
       '</article>'
     );
@@ -1001,24 +1001,24 @@
     const leadGuideSlug = (product.articles && product.articles[0]) ? product.articles[0] : "";
     const leadGuide = leadGuideSlug ? articleMap.get(leadGuideSlug) : null;
     const related = products.filter(function(item) {
-      return item.slug !== product.slug && item.categories.some(function(category) { return product.categories.indexOf(category) !== -1; });
+      return item.slug !== product.slug && Array.isArray(item.categories) && Array.isArray(product.categories) && item.categories.some(function(category) { return product.categories.indexOf(category) !== -1; });
     }).slice(0, 3);
     return (
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container hero-card"><div class="hero-grid">' +
-          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja/") + '">Loja</a><span>/</span><span>' + e(product.name) + '</span></div><span class="section-flag">Recomendação OndeCortar</span><span class="eyebrow">' + e(product.bestFor) + '</span><h1>' + e(product.name) + '</h1><p>' + e(product.summary) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a><a class="btn btn-secondary" href="' + categoryHref(product.categories[0]) + '">Ver categoria</a></div><div class="product-hero-panel"><strong>Antes de comprar</strong><ul class="rich-list"><li>Melhor para: ' + e(product.bestFor) + '</li><li>Ponto forte: ' + e(leadStrength || product.summary) + '</li><li>Outra vantagem: ' + e(secondStrength || product.useCase) + '</li></ul><div class="card-actions"><a class="btn btn-secondary btn-small" href="#relacionados">Ver alternativas</a></div></div></div>' +
-      '<div class="hero-side"><div class="product-stage"><img src="' + href(product.image) + '" alt="' + e(product.alt) + '" loading="lazy" /></div><div class="store-note"><strong>Porque recomendamos</strong><p>' + e(product.highlight || product.summary) + '</p></div></div>' +
+          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja/") + '">Loja</a><span>/</span><span>' + e(product.name) + '</span></div><span class="section-flag">Recomendação OndeCortar</span><span class="eyebrow">' + e(product.bestFor) + '</span><h1>' + e(product.name) + '</h1><p>' + e(product.summary) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a><a class="btn btn-secondary" href="' + (product.categories && product.categories[0] ? categoryHref(product.categories[0]) : href("loja/")) + '">Ver categoria</a></div><div class="product-hero-panel"><strong>Antes de comprar</strong><ul class="rich-list"><li>Melhor para: ' + e(product.bestFor) + '</li><li>Ponto forte: ' + e(leadStrength || product.summary) + '</li><li>Outra vantagem: ' + e(secondStrength || product.useCase) + '</li></ul><div class="card-actions"><a class="btn btn-secondary btn-small" href="#relacionados">Ver alternativas</a></div></div></div>' +
+      '<div class="hero-side"><div class="product-stage"><img src="' + href(product.image) + '" alt="' + e(product.alt || product.name) + '" loading="lazy" /></div><div class="store-note"><strong>Porque recomendamos</strong><p>' + e(product.highlight || product.summary) + '</p></div></div>' +
         '</div></div></section>' +
         '<section class="section"><div class="container split-grid">' +
           '<div class="stack">' +
             '<div class="product-highlight"><h3>Para quem é</h3><p>' + e(product.summary) + '</p></div>' +
             '<div class="product-highlight"><h3>Onde faz sentido</h3><p>' + e(product.useCase) + '</p></div>' +
-            '<div class="product-highlight"><h3>Pontos fortes</h3><ul class="rich-list">' + product.strengths.map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></div>' +
-            '<div class="product-highlight"><h3>Limitações</h3><ul class="rich-list">' + product.limits.map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></div>' +
+            '<div class="product-highlight"><h3>Pontos fortes</h3><ul class="rich-list">' + (product.strengths || []).map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></div>' +
+            '<div class="product-highlight"><h3>Limitações</h3><ul class="rich-list">' + (product.limits || []).map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></div>' +
           '</div>' +
           '<div class="stack">' +
-            '<div class="buy-box"><span class="price-hint">Loja afiliada</span><h3>Confirmar preço e disponibilidade</h3><p>O preço e o stock mudam com frequência. Confirma diretamente na Amazon.es antes de decidir.</p><div class="card-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a><a class="btn btn-secondary" href="' + categoryHref(product.categories[0]) + '">Voltar à categoria</a></div></div>' +
+            '<div class="buy-box"><span class="price-hint">Loja afiliada</span><h3>Confirmar preço e disponibilidade</h3><p>O preço e o stock mudam com frequência. Confirma diretamente na Amazon.es antes de decidir.</p><div class="card-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a><a class="btn btn-secondary" href="' + (product.categories && product.categories[0] ? categoryHref(product.categories[0]) : href("loja/")) + '">Voltar à categoria</a></div></div>' +
             renderDisclosure() +
           '</div>' +
         '</div></section>' +
