@@ -1823,15 +1823,71 @@
 
       .hero-map-search .hero-search-card {
         border-radius: 22px;
+        padding: 14px;
       }
 
       .hero-map-search .hero-title {
-        font-size: 1.42rem;
+        font-size: 1.28rem;
+        margin-bottom: 2px;
       }
 
       .hero-map-search .hero-subtitle {
         font-size: 14px;
         margin-bottom: 14px;
+      }
+
+      .hero-map-search .hero-map-shell.has-results .hero-subtitle {
+        display: none;
+      }
+
+      .hero-map-search .hero-badge {
+        margin-bottom: 8px;
+        padding: 6px 12px;
+      }
+
+      .hero-map-search .hero-search-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .hero-map-search .hero-search-input {
+        grid-column: 1 / -1;
+        height: 52px;
+      }
+
+      .hero-map-search .hero-btn {
+        height: 48px;
+        min-width: 0;
+        padding: 0 12px;
+        font-size: 13px;
+      }
+
+      .hero-map-search .hero-results {
+        margin-top: 10px;
+        padding: 12px;
+        gap: 10px;
+      }
+
+      .hero-map-search .hero-result-item {
+        padding: 10px;
+        gap: 8px;
+      }
+
+      .hero-map-search .hero-result-copy {
+        gap: 6px;
+      }
+
+      .hero-map-search .hero-result-copy p {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      .hero-map-search .hero-result-actions .btn,
+      .hero-map-search .hero-results > .btn {
+        width: 100%;
+        justify-content: center;
       }
 
       .hero-map-search .hero-map-count {
@@ -2296,6 +2352,10 @@
       const stats = directory.getStats();
       const popularCities = directory.getPopularCities(8);
       const allBarbers = sortBarbers(directory.getBarbers());
+      const allBarbersBySlug = new Map(allBarbers.map(function(barber) {
+        return [barber.slug, barber];
+      }));
+      const savedSearchStateKey = "ondecortar-home-search-state";
       const state = {
         currentTerm: "",
         results: allBarbers,
@@ -2378,7 +2438,9 @@
         }
       });
 
-      updateDirectory("");
+      if (!restoreSavedSearchState()) {
+        updateDirectory("");
+      }
 
       window.addEventListener("resize", function() {
         syncHeroShellHeight();
@@ -2487,6 +2549,170 @@
       function syncSearchInputs(value) {
         heroSearchInput.value = value;
         searchInput.value = value;
+      }
+
+      function saveSearchState(payload) {
+        try {
+          if (!window.sessionStorage) {
+            return;
+          }
+
+          if (!payload) {
+            window.sessionStorage.removeItem(savedSearchStateKey);
+            return;
+          }
+
+          window.sessionStorage.setItem(savedSearchStateKey, JSON.stringify(payload));
+        } catch (error) {
+          // Ignore storage errors so the search experience keeps working.
+        }
+      }
+
+      function readSavedSearchState() {
+        try {
+          if (!window.sessionStorage) {
+            return null;
+          }
+
+          const rawValue = window.sessionStorage.getItem(savedSearchStateKey);
+
+          if (!rawValue) {
+            return null;
+          }
+
+          const parsed = JSON.parse(rawValue);
+          return parsed && typeof parsed === "object" ? parsed : null;
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function isBackForwardNavigation() {
+        if (!window.performance || typeof window.performance.getEntriesByType !== "function") {
+          return false;
+        }
+
+        const navigationEntries = window.performance.getEntriesByType("navigation");
+
+        return Boolean(navigationEntries.length && navigationEntries[0].type === "back_forward");
+      }
+
+      function saveTermSearchState(term) {
+        const cleanTerm = String(term || "").trim();
+
+        if (!cleanTerm) {
+          saveSearchState(null);
+          return;
+        }
+
+        saveSearchState({
+          mode: "term",
+          term: cleanTerm
+        });
+      }
+
+      function saveLocationSearchState(coords, list) {
+        if (!Array.isArray(coords) || coords.length !== 2) {
+          saveSearchState(null);
+          return;
+        }
+
+        saveSearchState({
+          mode: "location",
+          coords: [Number(coords[0]), Number(coords[1])],
+          slugs: list
+            .map(function(barber) {
+              return barber.slug;
+            })
+            .filter(Boolean)
+        });
+      }
+
+      function getSavedLocationResults(savedState) {
+        if (!savedState || !Array.isArray(savedState.coords) || savedState.coords.length !== 2) {
+          return [];
+        }
+
+        const coords = [Number(savedState.coords[0]), Number(savedState.coords[1])];
+
+        if (!Number.isFinite(coords[0]) || !Number.isFinite(coords[1])) {
+          return [];
+        }
+
+        return (Array.isArray(savedState.slugs) ? savedState.slugs : [])
+          .map(function(slug) {
+            const barber = allBarbersBySlug.get(slug);
+
+            if (!barber) {
+              return null;
+            }
+
+            const nextBarber = Object.assign({}, barber);
+
+            if (Array.isArray(barber.coords) && barber.coords.length === 2) {
+              nextBarber.distanceKm = getDistanceKm(coords, barber.coords);
+            }
+
+            return nextBarber;
+          })
+          .filter(Boolean);
+      }
+
+      function restoreLocationSearch(savedState) {
+        const coords = [Number(savedState.coords[0]), Number(savedState.coords[1])];
+        const nearbyBarbers = getSavedLocationResults(savedState);
+
+        state.locateRequestId += 1;
+        setLocateButtonState(false);
+        map.closePopup();
+        state.currentTerm = "";
+        state.results = nearbyBarbers;
+        state.userCoords = coords;
+        syncSearchInputs("");
+
+        renderHeroResults(nearbyBarbers, "", {
+          forceOpen: true,
+          title: "Mais perto de si",
+          countText: nearbyBarbers.length + " barbearia" + (nearbyBarbers.length === 1 ? "" : "s") + " por perto",
+          emptyMessage: "Ainda não encontrámos barbearias com coordenadas próximas da tua localização."
+        });
+        renderResults(nearbyBarbers);
+        updateSummary(nearbyBarbers, "", {
+          mode: "location"
+        });
+        renderMarkers(nearbyBarbers);
+      }
+
+      function restoreSavedSearchState() {
+        if (!isBackForwardNavigation()) {
+          return false;
+        }
+
+        const savedState = readSavedSearchState();
+
+        if (!savedState) {
+          return false;
+        }
+
+        if (savedState.mode === "term") {
+          const cleanTerm = String(savedState.term || "").trim();
+
+          if (!cleanTerm) {
+            saveSearchState(null);
+            return false;
+          }
+
+          updateDirectory(cleanTerm);
+          return true;
+        }
+
+        if (savedState.mode === "location" && Array.isArray(savedState.coords) && savedState.coords.length === 2) {
+          restoreLocationSearch(savedState);
+          return true;
+        }
+
+        saveSearchState(null);
+        return false;
       }
 
       function getDefaultMapFitOptions() {
@@ -2790,6 +3016,7 @@
             mode: "location"
           });
           renderMarkers(nearbyBarbers);
+          saveLocationSearchState(coords, nearbyBarbers);
         }, function(error) {
           if (requestId !== state.locateRequestId) {
             return;
@@ -2894,6 +3121,7 @@
         renderResults(state.results);
         updateSummary(state.results, term);
         renderMarkers(state.results);
+        saveTermSearchState(term);
       }
 
       function renderHeroResults(list, term, options) {
