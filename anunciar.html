@@ -30,6 +30,13 @@
       --red: #e63946;
       --radius: 26px;
       --shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+      --mobile-nav-panel: rgba(12, 12, 13, 0.98);
+      --mobile-nav-border: rgba(255, 255, 255, 0.12);
+      --mobile-nav-link-bg: rgba(255, 255, 255, 0.04);
+      --mobile-nav-toggle-border: rgba(255, 255, 255, 0.14);
+      --mobile-nav-toggle-bg: rgba(255, 255, 255, 0.04);
+      --mobile-nav-shadow: 0 24px 60px rgba(0, 0, 0, 0.36);
+      --mobile-nav-backdrop: rgba(0, 0, 0, 0.56);
     }
 
     * { box-sizing: border-box; }
@@ -347,19 +354,33 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="mobile-nav.css" />
+  <script src="mobile-nav.js" defer></script>
 </head>
 <body>
   <div class="container">
     <header class="site-header">
-      <nav class="nav">
-        <a class="brand" href="index.html">
-          <img class="brand-logo" src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
-          <span class="brand-text">
-            <strong>OndeCortar.pt</strong>
-            <span>Barbearias em Portugal</span>
-          </span>
-        </a>
-        <div class="nav-links">
+      <nav class="nav" aria-label="Navegação principal" data-mobile-nav data-mobile-nav-breakpoint="900">
+        <div class="nav-main-row">
+          <a class="brand" href="index.html">
+            <img class="brand-logo" src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
+            <span class="brand-text">
+              <strong>OndeCortar.pt</strong>
+              <span>Barbearias em Portugal</span>
+            </span>
+          </a>
+          <div class="nav-mobile-actions">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNavLinks" data-nav-toggle>
+              <span class="nav-toggle-label">Menu</span>
+              <span class="nav-toggle-box" aria-hidden="true">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="nav-links" id="siteNavLinks" aria-hidden="false">
           <a href="index.html#explorar">Explorar</a>
           <a href="index.html#cidades">Cidades</a>
           <a href="registar.html">Adicionar barbearia</a>
@@ -369,6 +390,7 @@
           <a class="nav-cta" href="index.html#mapa">Voltar ao mapa</a>
         </div>
       </nav>
+      <button class="nav-backdrop" type="button" aria-label="Fechar menu" aria-hidden="true" data-nav-backdrop hidden></button>
     </header>
 
     <section class="hero">

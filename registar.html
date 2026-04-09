@@ -45,6 +45,13 @@
       --container: min(1160px, calc(100% - 32px));
       --radius-lg: 24px;
       --radius-md: 18px;
+      --mobile-nav-panel: rgba(251, 247, 239, 0.98);
+      --mobile-nav-border: rgba(216, 205, 183, 0.96);
+      --mobile-nav-link-bg: rgba(244, 236, 223, 0.92);
+      --mobile-nav-toggle-border: rgba(188, 168, 133, 0.84);
+      --mobile-nav-toggle-bg: rgba(251, 247, 239, 0.74);
+      --mobile-nav-shadow: 0 22px 46px rgba(34, 32, 28, 0.14);
+      --mobile-nav-backdrop: rgba(24, 20, 16, 0.3);
     }
 
     * { box-sizing: border-box; }
@@ -347,6 +354,7 @@
       .hero, .form-card, .side-card, .footer-shell { padding: 22px; }
     }
   </style>
+  <link rel="stylesheet" href="mobile-nav.css" />
   <script>
     function redirecionarDepoisDeSubmeter(event) {
       event.preventDefault();
@@ -370,19 +378,32 @@
       });
     }
   </script>
+  <script src="mobile-nav.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <nav class="nav" aria-label="Navegação principal">
-        <a class="brand" href="index.html">
-          <img src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
-          <span class="brand-text">
-            <strong>OndeCortar.pt</strong>
-            <span>Barbearias em Portugal</span>
-          </span>
-        </a>
-        <div class="nav-links">
+      <nav class="nav" aria-label="Navegação principal" data-mobile-nav data-mobile-nav-breakpoint="900">
+        <div class="nav-main-row">
+          <a class="brand" href="index.html">
+            <img src="imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
+            <span class="brand-text">
+              <strong>OndeCortar.pt</strong>
+              <span>Barbearias em Portugal</span>
+            </span>
+          </a>
+          <div class="nav-mobile-actions">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNavLinks" data-nav-toggle>
+              <span class="nav-toggle-label">Menu</span>
+              <span class="nav-toggle-box" aria-hidden="true">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="nav-links" id="siteNavLinks" aria-hidden="false">
           <a href="index.html#explorar">Explorar</a>
           <a href="index.html#cidades">Cidades</a>
           <a class="nav-link-active" href="registar.html" aria-current="page">Adicionar barbearia</a>
@@ -392,6 +413,7 @@
           <a class="nav-cta" href="index.html#mapa">Voltar ao mapa</a>
         </div>
       </nav>
+      <button class="nav-backdrop" type="button" aria-label="Fechar menu" aria-hidden="true" data-nav-backdrop hidden></button>
     </div>
   </header>
 
