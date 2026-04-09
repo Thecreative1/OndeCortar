@@ -1717,18 +1717,23 @@
       }
 
       .hero-map-search .hero-map-shell {
-        min-height: 600px;
+        display: grid;
+        gap: 14px;
+        min-height: auto;
+        padding: 14px;
+        overflow: visible;
       }
 
       .hero-map-search .hero-map-shell.has-results {
-        min-height: 600px;
+        min-height: auto;
       }
 
       .hero-map-search .hero-search-card {
-        top: 14px;
-        left: 14px;
-        right: 14px;
-        width: calc(100% - 28px);
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: auto;
         max-width: none;
         padding: 16px;
       }
@@ -1755,6 +1760,10 @@
         margin-top: 14px;
       }
 
+      .hero-map-search .hero-results-list {
+        max-height: min(34vh, 260px);
+      }
+
       .hero-map-search .hero-search-input,
       .hero-map-search .hero-btn {
         min-width: 0;
@@ -1767,6 +1776,12 @@
 
       .hero-map-search .hero-btn {
         height: 54px;
+      }
+
+      .hero-map-search .hero-map {
+        position: relative;
+        inset: auto;
+        min-height: min(52vh, 360px);
       }
 
       .hero-map-search .hero-map-count {
@@ -1796,12 +1811,12 @@
 
     @media (max-width: 560px) {
       .hero-map-search .hero-map-shell {
-        min-height: 560px;
+        min-height: auto;
         border-radius: 22px;
       }
 
       .hero-map-search .hero-map-shell.has-results {
-        min-height: 560px;
+        min-height: auto;
       }
 
       .hero-map-search .hero-search-card {
