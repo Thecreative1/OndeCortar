@@ -53,7 +53,8 @@
       "Bash(ls -d barbearias/*/)",
       "Bash(ls -d cidades/*/)",
       "Bash(ls -d produto/*/)",
-      "Bash([ -f \"$dir/index.html\" ])"
+      "Bash([ -f \"$dir/index.html\" ])",
+      "Bash(ls E:/GIT_HUB/OndeCortar/imagens/logo*)"
     ]
   }
 }
