@@ -1,13 +1,13 @@
 # Relatório de hierarquia geográfica
 
-Gerado em 2026-04-07T14:09:10.777Z.
+Gerado em 2026-04-13T07:59:37.543Z.
 
 ## Resumo
 
-- Fichas auditadas: 199
-- Fichas que precisam de contexto geográfico explícito: 72
-- Páginas de cidade auditadas: 79
-- Páginas de cidade que precisam de contexto adicional: 38
+- Fichas auditadas: 217
+- Fichas que precisam de contexto geográfico explícito: 90
+- Páginas de cidade auditadas: 87
+- Páginas de cidade que precisam de contexto adicional: 46
 
 ## Regras aplicadas no frontend
 
@@ -42,11 +42,11 @@ Gerado em 2026-04-07T14:09:10.777Z.
 - Amadora -> Cidade: Amadora | Distrito: Lisboa (page_needs_district_context)
 - Barreiro -> Cidade: Barreiro | Distrito: Setúbal (page_needs_district_context)
 - Caldas da Rainha -> Cidade: Caldas da Rainha | Distrito: Leiria (page_needs_district_context)
+- Castelo de Vide -> Cidade: Castelo de Vide | Distrito: Portalegre (page_needs_district_context)
 - Chaves -> Cidade: Chaves | Distrito: Vila Real (page_needs_district_context)
 - Covilhã -> Cidade: Covilhã | Distrito: Castelo Branco (page_needs_district_context)
 - Espinho -> Cidade: Espinho | Distrito: Aveiro (page_needs_district_context)
 - Fafe -> Cidade: Fafe | Distrito: Braga (page_needs_district_context)
-- Falagueira-Venda Nova Amadora -> Cidade: Falagueira-Venda Nova Amadora | Concelho: Amadora | Distrito: Lisboa (page_needs_municipality_context, page_needs_district_context)
 
 ## Nota
 

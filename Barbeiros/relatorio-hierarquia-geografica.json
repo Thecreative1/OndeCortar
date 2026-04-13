@@ -1,10 +1,10 @@
 {
   "summary": {
-    "generated_at": "2026-04-07T14:09:10.773Z",
-    "barbers_total": 199,
-    "barbers_needing_context": 72,
-    "city_pages_total": 79,
-    "city_pages_needing_context": 38
+    "generated_at": "2026-04-13T07:59:37.539Z",
+    "barbers_total": 217,
+    "barbers_needing_context": 90,
+    "city_pages_total": 87,
+    "city_pages_needing_context": 46
   },
   "template_review": {
     "city_pages": "contexto administrativo visível no topo e no resumo quando concelho ou distrito diferem da cidade",
@@ -3146,6 +3146,313 @@
       ],
       "needs_context": true,
       "suggested_display": "Cidade: Funchal | Distrito: Madeira"
+    },
+    {
+      "scope": "barbearia",
+      "id": 200,
+      "nome": "Cabeleireira Anita",
+      "slug": "cabeleireira-anita",
+      "count": 1,
+      "city": "Sertã",
+      "municipality": "Sertã",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "Sertã",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Sertã | Distrito: Castelo Branco"
+    },
+    {
+      "scope": "barbearia",
+      "id": 201,
+      "nome": "Manuel Peres Barbara",
+      "slug": "manuel-peres-barbara",
+      "count": 1,
+      "city": "Sertã",
+      "municipality": "Sertã",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "Sertã",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Sertã | Distrito: Castelo Branco"
+    },
+    {
+      "scope": "barbearia",
+      "id": 202,
+      "nome": "Maria C S Branco Ferreira",
+      "slug": "maria-c-s-branco-ferreira",
+      "count": 1,
+      "city": "Sertã",
+      "municipality": "Sertã",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "Sertã",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Sertã | Distrito: Castelo Branco"
+    },
+    {
+      "scope": "barbearia",
+      "id": 203,
+      "nome": "Lita Salão Cabeleireiro",
+      "slug": "lita-salao-cabeleireiro",
+      "count": 1,
+      "city": "Proença-a-Nova",
+      "municipality": "Proença-a-Nova",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "Proença-a-Nova",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Proença-a-Nova | Distrito: Castelo Branco"
+    },
+    {
+      "scope": "barbearia",
+      "id": 204,
+      "nome": "Salão Etelvina",
+      "slug": "salao-etelvina",
+      "count": 1,
+      "city": "Proença-a-Nova",
+      "municipality": "Proença-a-Nova",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "Proença-a-Nova",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Proença-a-Nova | Distrito: Castelo Branco"
+    },
+    {
+      "scope": "barbearia",
+      "id": 205,
+      "nome": "Antonio J Sousa Ferreira",
+      "slug": "antonio-j-sousa-ferreira",
+      "count": 1,
+      "city": "Mação",
+      "municipality": "Mação",
+      "district": "Santarém",
+      "zone": "",
+      "locality": "Mação",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Mação | Distrito: Santarém"
+    },
+    {
+      "scope": "barbearia",
+      "id": 206,
+      "nome": "Lurdes Emilia M Gaspar",
+      "slug": "lurdes-emilia-m-gaspar",
+      "count": 1,
+      "city": "Mação",
+      "municipality": "Mação",
+      "district": "Santarém",
+      "zone": "",
+      "locality": "Mação",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Mação | Distrito: Santarém"
+    },
+    {
+      "scope": "barbearia",
+      "id": 207,
+      "nome": "Maria O Domingos Cristovão",
+      "slug": "maria-o-domingos-cristovao",
+      "count": 1,
+      "city": "Mação",
+      "municipality": "Mação",
+      "district": "Santarém",
+      "zone": "",
+      "locality": "Mação",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Mação | Distrito: Santarém"
+    },
+    {
+      "scope": "barbearia",
+      "id": 208,
+      "nome": "Salão de Cabeleireiro Manuela",
+      "slug": "salao-de-cabeleireiro-manuela",
+      "count": 1,
+      "city": "Mação",
+      "municipality": "Mação",
+      "district": "Santarém",
+      "zone": "",
+      "locality": "Mação",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Mação | Distrito: Santarém"
+    },
+    {
+      "scope": "barbearia",
+      "id": 209,
+      "nome": "Cabeleireiro Mari",
+      "slug": "cabeleireiro-mari",
+      "count": 1,
+      "city": "Nisa",
+      "municipality": "Nisa",
+      "district": "Portalegre",
+      "zone": "",
+      "locality": "Nisa",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Nisa | Distrito: Portalegre"
+    },
+    {
+      "scope": "barbearia",
+      "id": 210,
+      "nome": "Dulce Maria Ventura",
+      "slug": "dulce-maria-ventura",
+      "count": 1,
+      "city": "Nisa",
+      "municipality": "Nisa",
+      "district": "Portalegre",
+      "zone": "",
+      "locality": "Nisa",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Nisa | Distrito: Portalegre"
+    },
+    {
+      "scope": "barbearia",
+      "id": 211,
+      "nome": "Ana & Sofia Lda",
+      "slug": "ana-sofia-lda",
+      "count": 1,
+      "city": "Castelo de Vide",
+      "municipality": "Castelo de Vide",
+      "district": "Portalegre",
+      "zone": "",
+      "locality": "Castelo de Vide",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Castelo de Vide | Distrito: Portalegre"
+    },
+    {
+      "scope": "barbearia",
+      "id": 212,
+      "nome": "Cabeleireiro Candy",
+      "slug": "cabeleireiro-candy",
+      "count": 1,
+      "city": "Castelo de Vide",
+      "municipality": "Castelo de Vide",
+      "district": "Portalegre",
+      "zone": "",
+      "locality": "Castelo de Vide",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Castelo de Vide | Distrito: Portalegre"
+    },
+    {
+      "scope": "barbearia",
+      "id": 213,
+      "nome": "Cabeleireiro Susana",
+      "slug": "cabeleireiro-susana",
+      "count": 1,
+      "city": "Castelo de Vide",
+      "municipality": "Castelo de Vide",
+      "district": "Portalegre",
+      "zone": "",
+      "locality": "Castelo de Vide",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Castelo de Vide | Distrito: Portalegre"
+    },
+    {
+      "scope": "barbearia",
+      "id": 214,
+      "nome": "Maria Ana B Padeiro",
+      "slug": "maria-ana-b-padeiro",
+      "count": 1,
+      "city": "Castelo de Vide",
+      "municipality": "Castelo de Vide",
+      "district": "Portalegre",
+      "zone": "",
+      "locality": "Castelo de Vide",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Castelo de Vide | Distrito: Portalegre"
+    },
+    {
+      "scope": "barbearia",
+      "id": 215,
+      "nome": "Rosa M M Florindo Gomes",
+      "slug": "rosa-m-m-florindo-gomes",
+      "count": 1,
+      "city": "Gavião",
+      "municipality": "Gavião",
+      "district": "Portalegre",
+      "zone": "",
+      "locality": "Gavião",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Gavião | Distrito: Portalegre"
+    },
+    {
+      "scope": "barbearia",
+      "id": 216,
+      "nome": "Salão Cabeleireira Luzia",
+      "slug": "salao-cabeleireira-luzia",
+      "count": 1,
+      "city": "Sobreira Formosa",
+      "municipality": "Proença-a-Nova",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "Sobreira Formosa",
+      "reasons": [
+        "city_needs_municipality_context",
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Sobreira Formosa | Concelho: Proença-a-Nova | Distrito: Castelo Branco"
+    },
+    {
+      "scope": "barbearia",
+      "id": 217,
+      "nome": "Dina Cabeleireiro",
+      "slug": "dina-cabeleireiro",
+      "count": 1,
+      "city": "Vila de Rei",
+      "municipality": "Vila de Rei",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "Vila de Rei",
+      "reasons": [
+        "city_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Vila de Rei | Distrito: Castelo Branco"
     }
   ],
   "city_pages": [
@@ -3544,6 +3851,26 @@
     {
       "scope": "pagina_cidade",
       "id": "",
+      "nome": "Castelo de Vide",
+      "slug": "castelo-de-vide",
+      "count": 4,
+      "city": "Castelo de Vide",
+      "municipality": "Castelo de Vide",
+      "district": "Portalegre",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Castelo de Vide"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Castelo de Vide | Distrito: Portalegre"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
       "nome": "Chaves",
       "slug": "chaves",
       "count": 1,
@@ -3753,6 +4080,26 @@
       ],
       "needs_context": true,
       "suggested_display": "Cidade: Funchal | Distrito: Madeira"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Gavião",
+      "slug": "gaviao",
+      "count": 1,
+      "city": "Gavião",
+      "municipality": "Gavião",
+      "district": "Portalegre",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Gavião"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Gavião | Distrito: Portalegre"
     },
     {
       "scope": "pagina_cidade",
@@ -4026,6 +4373,26 @@
     {
       "scope": "pagina_cidade",
       "id": "",
+      "nome": "Mação",
+      "slug": "macao",
+      "count": 4,
+      "city": "Mação",
+      "municipality": "Mação",
+      "district": "Santarém",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Mação"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Mação | Distrito: Santarém"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
       "nome": "Macedo de Cavaleiros",
       "slug": "macedo-de-cavaleiros",
       "count": 2,
@@ -4102,6 +4469,26 @@
       ],
       "needs_context": true,
       "suggested_display": "Cidade: Nazaré | Distrito: Leiria"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Nisa",
+      "slug": "nisa",
+      "count": 2,
+      "city": "Nisa",
+      "municipality": "Nisa",
+      "district": "Portalegre",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Nisa"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Nisa | Distrito: Portalegre"
     },
     {
       "scope": "pagina_cidade",
@@ -4332,6 +4719,26 @@
     {
       "scope": "pagina_cidade",
       "id": "",
+      "nome": "Proença-a-Nova",
+      "slug": "proenca-a-nova",
+      "count": 2,
+      "city": "Proença-a-Nova",
+      "municipality": "Proença-a-Nova",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Proença-a-Nova"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Proença-a-Nova | Distrito: Castelo Branco"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
       "nome": "Quinta da Redonda",
       "slug": "quinta-da-redonda",
       "count": 1,
@@ -4501,6 +4908,26 @@
     {
       "scope": "pagina_cidade",
       "id": "",
+      "nome": "Sertã",
+      "slug": "serta",
+      "count": 3,
+      "city": "Sertã",
+      "municipality": "Sertã",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Sertã"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Sertã | Distrito: Castelo Branco"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
       "nome": "Setúbal",
       "slug": "setubal",
       "count": 5,
@@ -4539,6 +4966,27 @@
     {
       "scope": "pagina_cidade",
       "id": "",
+      "nome": "Sobreira Formosa",
+      "slug": "sobreira-formosa",
+      "count": 1,
+      "city": "Sobreira Formosa",
+      "municipality": "Proença-a-Nova",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Sobreira Formosa"
+      ],
+      "reasons": [
+        "page_needs_municipality_context",
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Sobreira Formosa | Concelho: Proença-a-Nova | Distrito: Castelo Branco"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
       "nome": "Tocha",
       "slug": "tocha",
       "count": 2,
@@ -4573,6 +5021,26 @@
       ],
       "needs_context": true,
       "suggested_display": "Cidade: Torres Vedras | Distrito: Lisboa"
+    },
+    {
+      "scope": "pagina_cidade",
+      "id": "",
+      "nome": "Vila de Rei",
+      "slug": "vila-de-rei",
+      "count": 1,
+      "city": "Vila de Rei",
+      "municipality": "Vila de Rei",
+      "district": "Castelo Branco",
+      "zone": "",
+      "locality": "",
+      "variants": [
+        "Vila de Rei"
+      ],
+      "reasons": [
+        "page_needs_district_context"
+      ],
+      "needs_context": true,
+      "suggested_display": "Cidade: Vila de Rei | Distrito: Castelo Branco"
     },
     {
       "scope": "pagina_cidade",

@@ -198,6 +198,24 @@ barbearia,196,Old Skull Barbershop,old-skull-barbershop,1,Funchal,Funchal,Madeir
 barbearia,197,Pro Style Barber Shop,pro-style-barber-shop,1,Funchal,Funchal,Madeira,Fração B,Funchal,true,city_needs_district_context,Cidade: Funchal | Distrito: Madeira | Zona: Fração B
 barbearia,198,The Underground Barbershop,the-underground-barbershop,1,Funchal,Funchal,Madeira,,Funchal,true,city_needs_district_context,Cidade: Funchal | Distrito: Madeira
 barbearia,199,Wildcat Barber - TNT Barbershop,wildcat-barber-tnt-barbershop,1,Funchal,Funchal,Madeira,,Funchal,true,city_needs_district_context,Cidade: Funchal | Distrito: Madeira
+barbearia,200,Cabeleireira Anita,cabeleireira-anita,1,Sertã,Sertã,Castelo Branco,,Sertã,true,city_needs_district_context,Cidade: Sertã | Distrito: Castelo Branco
+barbearia,201,Manuel Peres Barbara,manuel-peres-barbara,1,Sertã,Sertã,Castelo Branco,,Sertã,true,city_needs_district_context,Cidade: Sertã | Distrito: Castelo Branco
+barbearia,202,Maria C S Branco Ferreira,maria-c-s-branco-ferreira,1,Sertã,Sertã,Castelo Branco,,Sertã,true,city_needs_district_context,Cidade: Sertã | Distrito: Castelo Branco
+barbearia,203,Lita Salão Cabeleireiro,lita-salao-cabeleireiro,1,Proença-a-Nova,Proença-a-Nova,Castelo Branco,,Proença-a-Nova,true,city_needs_district_context,Cidade: Proença-a-Nova | Distrito: Castelo Branco
+barbearia,204,Salão Etelvina,salao-etelvina,1,Proença-a-Nova,Proença-a-Nova,Castelo Branco,,Proença-a-Nova,true,city_needs_district_context,Cidade: Proença-a-Nova | Distrito: Castelo Branco
+barbearia,205,Antonio J Sousa Ferreira,antonio-j-sousa-ferreira,1,Mação,Mação,Santarém,,Mação,true,city_needs_district_context,Cidade: Mação | Distrito: Santarém
+barbearia,206,Lurdes Emilia M Gaspar,lurdes-emilia-m-gaspar,1,Mação,Mação,Santarém,,Mação,true,city_needs_district_context,Cidade: Mação | Distrito: Santarém
+barbearia,207,Maria O Domingos Cristovão,maria-o-domingos-cristovao,1,Mação,Mação,Santarém,,Mação,true,city_needs_district_context,Cidade: Mação | Distrito: Santarém
+barbearia,208,Salão de Cabeleireiro Manuela,salao-de-cabeleireiro-manuela,1,Mação,Mação,Santarém,,Mação,true,city_needs_district_context,Cidade: Mação | Distrito: Santarém
+barbearia,209,Cabeleireiro Mari,cabeleireiro-mari,1,Nisa,Nisa,Portalegre,,Nisa,true,city_needs_district_context,Cidade: Nisa | Distrito: Portalegre
+barbearia,210,Dulce Maria Ventura,dulce-maria-ventura,1,Nisa,Nisa,Portalegre,,Nisa,true,city_needs_district_context,Cidade: Nisa | Distrito: Portalegre
+barbearia,211,Ana & Sofia Lda,ana-sofia-lda,1,Castelo de Vide,Castelo de Vide,Portalegre,,Castelo de Vide,true,city_needs_district_context,Cidade: Castelo de Vide | Distrito: Portalegre
+barbearia,212,Cabeleireiro Candy,cabeleireiro-candy,1,Castelo de Vide,Castelo de Vide,Portalegre,,Castelo de Vide,true,city_needs_district_context,Cidade: Castelo de Vide | Distrito: Portalegre
+barbearia,213,Cabeleireiro Susana,cabeleireiro-susana,1,Castelo de Vide,Castelo de Vide,Portalegre,,Castelo de Vide,true,city_needs_district_context,Cidade: Castelo de Vide | Distrito: Portalegre
+barbearia,214,Maria Ana B Padeiro,maria-ana-b-padeiro,1,Castelo de Vide,Castelo de Vide,Portalegre,,Castelo de Vide,true,city_needs_district_context,Cidade: Castelo de Vide | Distrito: Portalegre
+barbearia,215,Rosa M M Florindo Gomes,rosa-m-m-florindo-gomes,1,Gavião,Gavião,Portalegre,,Gavião,true,city_needs_district_context,Cidade: Gavião | Distrito: Portalegre
+barbearia,216,Salão Cabeleireira Luzia,salao-cabeleireira-luzia,1,Sobreira Formosa,Proença-a-Nova,Castelo Branco,,Sobreira Formosa,true,city_needs_municipality_context|city_needs_district_context,Cidade: Sobreira Formosa | Concelho: Proença-a-Nova | Distrito: Castelo Branco
+barbearia,217,Dina Cabeleireiro,dina-cabeleireiro,1,Vila de Rei,Vila de Rei,Castelo Branco,,Vila de Rei,true,city_needs_district_context,Cidade: Vila de Rei | Distrito: Castelo Branco
 pagina_cidade,,Águeda,agueda,1,Águeda,Águeda,Aveiro,,,true,page_needs_district_context,Cidade: Águeda | Distrito: Aveiro
 pagina_cidade,,Albufeira,albufeira,3,Albufeira,Albufeira,Faro,,,true,page_needs_district_context,Cidade: Albufeira | Distrito: Faro
 pagina_cidade,,Alcácer do Sal,alcacer-do-sal,1,Alcácer do Sal,Alcácer do Sal,Setúbal,,,true,page_needs_district_context,Cidade: Alcácer do Sal | Distrito: Setúbal
@@ -219,6 +237,7 @@ pagina_cidade,,Calheta,calheta,1,Calheta,Calheta,,,,false,,Cidade: Calheta
 pagina_cidade,,Carapeços,carapecos,1,Carapeços,Carapeços,,,,false,,Cidade: Carapeços
 pagina_cidade,,Carnaxide,carnaxide,1,Carnaxide,Carnaxide,,,,false,,Cidade: Carnaxide
 pagina_cidade,,Castelo Branco,castelo-branco,1,Castelo Branco,Castelo Branco,Castelo Branco,,,false,,Cidade: Castelo Branco
+pagina_cidade,,Castelo de Vide,castelo-de-vide,4,Castelo de Vide,Castelo de Vide,Portalegre,,,true,page_needs_district_context,Cidade: Castelo de Vide | Distrito: Portalegre
 pagina_cidade,,Chaves,chaves,1,Chaves,Chaves,Vila Real,,,true,page_needs_district_context,Cidade: Chaves | Distrito: Vila Real
 pagina_cidade,,Coimbra,coimbra,12,Coimbra,Coimbra,Coimbra,,,false,,Cidade: Coimbra
 pagina_cidade,,Covilhã,covilha,2,Covilhã,Covilhã,Castelo Branco,,,true,page_needs_district_context,Cidade: Covilhã | Distrito: Castelo Branco
@@ -230,6 +249,7 @@ pagina_cidade,,Falagueira-Venda Nova Amadora,falagueira-venda-nova-amadora,1,Fal
 pagina_cidade,,Faro,faro,7,Faro,Faro,Faro,,,false,,Cidade: Faro
 pagina_cidade,,Figueira da Foz,figueira-da-foz,1,Figueira da Foz,Figueira da Foz,Coimbra,,,true,page_needs_district_context,Cidade: Figueira da Foz | Distrito: Coimbra
 pagina_cidade,,Funchal,funchal,6,Funchal,Funchal,Madeira,,,true,page_needs_district_context,Cidade: Funchal | Distrito: Madeira
+pagina_cidade,,Gavião,gaviao,1,Gavião,Gavião,Portalegre,,,true,page_needs_district_context,Cidade: Gavião | Distrito: Portalegre
 pagina_cidade,,Grândola,grandola,1,Grândola,Grândola,Setúbal,,,true,page_needs_district_context,Cidade: Grândola | Distrito: Setúbal
 pagina_cidade,,Guarda,guarda,1,Guarda,Guarda,Guarda,,,false,,Cidade: Guarda
 pagina_cidade,,Guimarães,guimaraes,6,Guimarães,Guimarães,Braga,,,true,page_needs_district_context,Cidade: Guimarães | Distrito: Braga
@@ -244,10 +264,12 @@ pagina_cidade,,Lisboa,lisboa,22,Lisboa,Lisboa,Lisboa,,,false,,Cidade: Lisboa
 pagina_cidade,,Loulé,loule,1,Loulé,Loulé,Faro,,,true,page_needs_district_context,Cidade: Loulé | Distrito: Faro
 pagina_cidade,,Loures,loures,3,Loures,Loures,Lisboa,,,true,page_needs_district_context,Cidade: Loures | Distrito: Lisboa
 pagina_cidade,,Lousada,lousada,1,Lousada,Lousada,Porto,,,true,page_needs_district_context,Cidade: Lousada | Distrito: Porto
+pagina_cidade,,Mação,macao,4,Mação,Mação,Santarém,,,true,page_needs_district_context,Cidade: Mação | Distrito: Santarém
 pagina_cidade,,Macedo de Cavaleiros,macedo-de-cavaleiros,2,Macedo de Cavaleiros,Macedo de Cavaleiros,Bragança,,,true,page_needs_district_context,Cidade: Macedo de Cavaleiros | Distrito: Bragança
 pagina_cidade,,Matosinhos,matosinhos,2,Matosinhos,Matosinhos,Porto,,,true,page_needs_district_context,Cidade: Matosinhos | Distrito: Porto
 pagina_cidade,,Montijo,montijo,3,Montijo,Montijo,Setúbal,,,true,page_needs_district_context,Cidade: Montijo | Distrito: Setúbal
 pagina_cidade,,Nazaré,nazare,1,Nazaré,Nazaré,Leiria,,,true,page_needs_district_context,Cidade: Nazaré | Distrito: Leiria
+pagina_cidade,,Nisa,nisa,2,Nisa,Nisa,Portalegre,,,true,page_needs_district_context,Cidade: Nisa | Distrito: Portalegre
 pagina_cidade,,Odivelas,odivelas,1,Odivelas,Odivelas,,,,false,,Cidade: Odivelas
 pagina_cidade,,Ourém,ourem,1,Ourém,Ourém,Santarém,,,true,page_needs_district_context,Cidade: Ourém | Distrito: Santarém
 pagina_cidade,,Ovar,ovar,1,Ovar,Ovar,Aveiro,,,true,page_needs_district_context,Cidade: Ovar | Distrito: Aveiro
@@ -260,6 +282,7 @@ pagina_cidade,,Portimão,portimao,1,Portimão,Portimão,Faro,,,true,page_needs_d
 pagina_cidade,,Porto,porto,5,Porto,Porto,Porto,,,false,,Cidade: Porto
 pagina_cidade,,Póvoa de Santa Iria,povoa-de-santa-iria,1,Póvoa de Santa Iria,Póvoa de Santa Iria,,,,false,,Cidade: Póvoa de Santa Iria
 pagina_cidade,,Prior Velho,prior-velho,1,Prior Velho,Prior Velho,,,,false,,Cidade: Prior Velho
+pagina_cidade,,Proença-a-Nova,proenca-a-nova,2,Proença-a-Nova,Proença-a-Nova,Castelo Branco,,,true,page_needs_district_context,Cidade: Proença-a-Nova | Distrito: Castelo Branco
 pagina_cidade,,Quinta da Redonda,quinta-da-redonda,1,Quinta da Redonda,Quinta da Redonda,,,,false,,Cidade: Quinta da Redonda
 pagina_cidade,,S. João da Madeira,s-joao-da-madeira,1,S. João da Madeira,São João da Madeira,Aveiro,,,true,page_needs_municipality_context|page_needs_district_context,Cidade: S. João da Madeira | Concelho: São João da Madeira | Distrito: Aveiro
 pagina_cidade,,Samora Correia,samora-correia,1,Samora Correia,Samora Correia,,,,false,,Cidade: Samora Correia
@@ -269,10 +292,13 @@ pagina_cidade,,Santo Tirso,santo-tirso,3,Santo Tirso,Santo Tirso,,,,false,,Cidad
 pagina_cidade,,São Brás de Alportel,sao-bras-de-alportel,1,São Brás de Alportel,São Brás de Alportel,,,,false,,Cidade: São Brás de Alportel
 pagina_cidade,,São Martinho,sao-martinho,1,São Martinho,São Martinho,,,,false,,Cidade: São Martinho
 pagina_cidade,,Seia,seia,1,Seia,Seia,Guarda,,,true,page_needs_district_context,Cidade: Seia | Distrito: Guarda
+pagina_cidade,,Sertã,serta,3,Sertã,Sertã,Castelo Branco,,,true,page_needs_district_context,Cidade: Sertã | Distrito: Castelo Branco
 pagina_cidade,,Setúbal,setubal,5,Setúbal,Setúbal,Setúbal,,,false,,Cidade: Setúbal
 pagina_cidade,,Sines,sines,1,Sines,Sines,Setúbal,,,true,page_needs_district_context,Cidade: Sines | Distrito: Setúbal
+pagina_cidade,,Sobreira Formosa,sobreira-formosa,1,Sobreira Formosa,Proença-a-Nova,Castelo Branco,,,true,page_needs_municipality_context|page_needs_district_context,Cidade: Sobreira Formosa | Concelho: Proença-a-Nova | Distrito: Castelo Branco
 pagina_cidade,,Tocha,tocha,2,Tocha,Tocha,,,,false,,Cidade: Tocha
 pagina_cidade,,Torres Vedras,torres-vedras,1,Torres Vedras,Torres Vedras,Lisboa,,,true,page_needs_district_context,Cidade: Torres Vedras | Distrito: Lisboa
+pagina_cidade,,Vila de Rei,vila-de-rei,1,Vila de Rei,Vila de Rei,Castelo Branco,,,true,page_needs_district_context,Cidade: Vila de Rei | Distrito: Castelo Branco
 pagina_cidade,,Vila Nova de Famalicao,vila-nova-de-famalicao,5,Vila Nova de Famalicao,Vila Nova de Famalicão,Braga,,,true,page_merges_city_name_variants|page_needs_district_context,Cidade: Vila Nova de Famalicao | Distrito: Braga
 pagina_cidade,,Vila Nova de Gaia,vila-nova-de-gaia,3,Vila Nova de Gaia,Vila Nova de Gaia,Porto,,,true,page_needs_district_context,Cidade: Vila Nova de Gaia | Distrito: Porto
 pagina_cidade,,Vila Real,vila-real,5,Vila Real,Vila Real,Vila Real,,,false,,Cidade: Vila Real
