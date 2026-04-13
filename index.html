@@ -573,10 +573,6 @@
       box-shadow: 0 12px 28px rgba(73, 57, 35, 0.1);
     }
 
-    .hero-map-search .hero-results-list {
-      max-height: 156px;
-      padding-right: 4px;
-    }
 
     .hero-map-search .hero-map-shell.has-results .hero-map-count {
       left: auto;
@@ -1619,10 +1615,6 @@
         margin-top: 14px;
       }
 
-      .hero-map-search .hero-results-list {
-        max-height: min(34vh, 260px);
-      }
-
       .hero-map-search .hero-search-input,
       .hero-map-search .hero-btn {
         min-width: 0;
@@ -1872,23 +1864,6 @@
         gap: 10px;
       }
 
-      .hero-map-search .hero-result-item {
-        padding: 10px;
-        gap: 8px;
-      }
-
-      .hero-map-search .hero-result-copy {
-        gap: 6px;
-      }
-
-      .hero-map-search .hero-result-copy p {
-        display: -webkit-box;
-        overflow: hidden;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-      }
-
-      .hero-map-search .hero-result-actions .btn,
       .hero-map-search .hero-results > .btn {
         width: 100%;
         justify-content: center;
@@ -2005,7 +1980,6 @@
                 <strong id="heroResultsHeading">Resultados da pesquisa</strong>
                 <span class="pill" id="heroResultsCount">0 resultados</span>
               </div>
-              <div class="hero-results-list" id="heroResultsList"></div>
               <a class="btn btn-secondary btn-small" href="#explorar">Ver todos os resultados</a>
             </div>
           </div>
@@ -2384,7 +2358,6 @@
       const heroResults = document.getElementById("heroResults");
       const heroResultsHeading = document.getElementById("heroResultsHeading");
       const heroResultsCount = document.getElementById("heroResultsCount");
-      const heroResultsList = document.getElementById("heroResultsList");
       const heroMapShell = document.querySelector(".hero-map-shell");
       const heroSearchCard = document.querySelector(".hero-search-card");
       const heroMapCount = document.querySelector(".hero-map-count");
@@ -2980,8 +2953,7 @@
         setHeroResultsHeading(title);
         setHeroResultsState(true);
         heroResults.hidden = false;
-        heroResultsCount.textContent = countText || "";
-        heroResultsList.innerHTML = '<div class="hero-results-empty">' + directory.escapeHtml(message) + "</div>";
+        heroResultsCount.textContent = countText || message || "";
         syncHeroShellHeight();
       }
 
@@ -3132,8 +3104,6 @@
         const settings = options || {};
         const cleanTerm = String(term || "").trim();
         const shouldShow = settings.forceOpen || Boolean(cleanTerm);
-        const previewLimit = Number.isFinite(settings.limit) ? settings.limit : 3;
-        const previewList = list.slice(0, previewLimit);
 
         setHeroResultsHeading(settings.title || defaultHeroResultsHeading);
 
@@ -3141,7 +3111,6 @@
           setHeroResultsState(false);
           heroResults.hidden = true;
           heroResultsCount.textContent = "0 resultados";
-          heroResultsList.innerHTML = "";
           syncHeroShellHeight();
           return;
         }
@@ -3149,36 +3118,6 @@
         setHeroResultsState(true);
         heroResults.hidden = false;
         heroResultsCount.textContent = settings.countText || (list.length + " resultado" + (list.length === 1 ? "" : "s"));
-
-        if (!list.length) {
-          heroResultsList.innerHTML = '<div class="hero-results-empty">' + directory.escapeHtml(settings.emptyMessage || "Ainda não encontrámos barbearias para essa pesquisa. Experimenta outra cidade, zona ou nome.") + "</div>";
-          syncHeroShellHeight();
-          return;
-        }
-
-        heroResultsList.innerHTML = previewList.map(function(barber) {
-          const placeLabel = getPrimaryLocationLabel(barber);
-          const distanceLabel = typeof barber.distanceKm === "number"
-            ? '<span class="tag tag-small">' + directory.escapeHtml(formatDistanceLabel(barber.distanceKm)) + "</span>"
-            : "";
-
-          return (
-            '<article class="hero-result-item">' +
-              '<div class="hero-result-copy">' +
-                '<div class="result-topline">' +
-                  '<span class="tag tag-small">' + directory.escapeHtml(placeLabel) + "</span>" +
-                  distanceLabel +
-                "</div>" +
-                "<strong>" + directory.escapeHtml(barber.name) + "</strong>" +
-                "<p>" + directory.escapeHtml(barber.description) + "</p>" +
-              "</div>" +
-              '<div class="hero-result-actions">' +
-                '<a class="btn btn-secondary btn-small" href="' + barber.url + '">Ver perfil</a>' +
-                renderContactAction(barber, "btn btn-primary btn-small") +
-              "</div>" +
-            "</article>"
-          );
-        }).join("");
         syncHeroShellHeight();
       }
 
