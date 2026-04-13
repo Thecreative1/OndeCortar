@@ -1464,8 +1464,8 @@
     }
 
     .custom-marker {
-      width: 42px;
-      height: 42px;
+      width: 48px;
+      height: 48px;
       display: block;
       border-radius: 999px;
       background: url("imagens/logo-ondecortar-marker-hd.png") center / contain no-repeat;
@@ -1473,6 +1473,22 @@
       box-shadow:
         0 0 0 1px rgba(157, 122, 54, 0.42),
         0 10px 20px rgba(44, 55, 44, 0.24);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      will-change: transform;
+    }
+
+    .custom-marker:hover {
+      transform: scale(1.18);
+      box-shadow:
+        0 0 0 1px rgba(157, 122, 54, 0.6),
+        0 14px 28px rgba(44, 55, 44, 0.34);
+    }
+
+    .custom-marker--active {
+      transform: scale(1.28);
+      box-shadow:
+        0 0 0 2px rgba(157, 122, 54, 0.75),
+        0 16px 32px rgba(44, 55, 44, 0.38);
     }
 
     .popup-card {
@@ -2341,6 +2357,7 @@
         markersBySlug: new Map(),
         userCoords: null,
         userMarker: null,
+        activeMarker: null,
         locateRequestId: 0
       };
 
@@ -3232,6 +3249,7 @@
       }
 
       function renderMarkers(list) {
+        setActiveMarker(null);
         map.invalidateSize({
           pan: false,
           debounceMoveend: true
@@ -3260,9 +3278,9 @@
             icon: L.divIcon({
               className: "custom-marker-shell",
               html: '<span class="custom-marker"></span>',
-              iconSize: [42, 42],
-              iconAnchor: [21, 42],
-              popupAnchor: [0, -40]
+              iconSize: [48, 48],
+              iconAnchor: [24, 48],
+              popupAnchor: [0, -46]
           })
           })
             .addTo(map)
@@ -3328,6 +3346,24 @@
         );
       }
 
+      function setActiveMarker(marker) {
+        if (state.activeMarker) {
+          const prevEl = state.activeMarker.getElement();
+          if (prevEl) {
+            const prevSpan = prevEl.querySelector(".custom-marker");
+            if (prevSpan) prevSpan.classList.remove("custom-marker--active");
+          }
+        }
+        state.activeMarker = marker || null;
+        if (marker) {
+          const el = marker.getElement();
+          if (el) {
+            const span = el.querySelector(".custom-marker");
+            if (span) span.classList.add("custom-marker--active");
+          }
+        }
+      }
+
       function focusMarker(slug) {
         const marker = state.markersBySlug.get(slug);
 
@@ -3335,6 +3371,7 @@
           return;
         }
 
+        setActiveMarker(marker);
         map.invalidateSize({
           pan: false,
           debounceMoveend: true
