@@ -49,7 +49,11 @@
       "Bash(sed 's/href=\"//')",
       "Bash(node:*)",
       "Bash([ ! -d \"E:/GIT_HUB/OndeCortar/barbearias/$slug\" ])",
-      "Bash([ -d \"E:/GIT_HUB/OndeCortar/barbearias/$slug\" ])"
+      "Bash([ -d \"E:/GIT_HUB/OndeCortar/barbearias/$slug\" ])",
+      "Bash(ls -d barbearias/*/)",
+      "Bash(ls -d cidades/*/)",
+      "Bash(ls -d produto/*/)",
+      "Bash([ -f \"$dir/index.html\" ])"
     ]
   }
 }
