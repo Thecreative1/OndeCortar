@@ -54,7 +54,12 @@
       "Bash(ls -d cidades/*/)",
       "Bash(ls -d produto/*/)",
       "Bash([ -f \"$dir/index.html\" ])",
-      "Bash(ls E:/GIT_HUB/OndeCortar/imagens/logo*)"
+      "Bash(ls E:/GIT_HUB/OndeCortar/imagens/logo*)",
+      "Bash(find ./revista -name \"index.html\" -exec grep -l \"datePublished\" {} \\\\;)",
+      "Bash(ls imagens/produtos/*.jpg)",
+      "Bash(read f:*)",
+      "Bash(find revista:*)",
+      "Bash(find loja:*)"
     ]
   }
 }
