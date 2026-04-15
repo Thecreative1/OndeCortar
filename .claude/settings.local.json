@@ -59,7 +59,8 @@
       "Bash(ls imagens/produtos/*.jpg)",
       "Bash(read f:*)",
       "Bash(find revista:*)",
-      "Bash(find loja:*)"
+      "Bash(find loja:*)",
+      "WebSearch"
     ]
   }
 }

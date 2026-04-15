@@ -1453,7 +1453,7 @@ const barbearias = [
     "email": null,
     "website": null,
     "instagram": null,
-    "facebook": "https://www.facebook.com/profile.php?id=100063545409660",
+    "facebook": null,
     "google_maps": null,
     "horario": null,
     "observacoes": null,
