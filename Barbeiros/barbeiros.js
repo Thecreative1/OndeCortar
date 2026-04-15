@@ -507,7 +507,7 @@ const barbearias = [
   nome: "Barbearia Paulo",
   morada: "Vila do Porto, Santa Maria",
   telefone: "+351 296 882 150",
-  facebook: "https://www.facebook.com/profile.php?id=100063781357982",
+  facebook: null,
   coords: [36.9658, -25.0962]
 },
 {

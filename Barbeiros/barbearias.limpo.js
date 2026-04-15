@@ -1813,7 +1813,7 @@ const barbearias = [
     "email": null,
     "website": null,
     "instagram": null,
-    "facebook": "https://www.facebook.com/profile.php?id=100063781357982",
+    "facebook": null,
     "google_maps": null,
     "horario": null,
     "observacoes": null,
@@ -1993,7 +1993,7 @@ const barbearias = [
   {
     "nome": "Madeira Island Tattoo & Barber Shop",
     "slug": "madeira-island-tattoo-barber-shop",
-    "distrito": "",
+    "distrito": "Madeira",
     "concelho": "São Martinho",
     "municipality": "São Martinho",
     "freguesia": "",

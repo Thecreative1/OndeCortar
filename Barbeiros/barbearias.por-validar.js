@@ -23,7 +23,7 @@ const barbeariasPorValidar = [
     "email": null,
     "website": null,
     "instagram": null,
-    "facebook": "https://www.facebook.com/profile.php?id=100063781357982",
+    "facebook": null,
     "google_maps": null,
     "horario": null,
     "observacoes": null,
