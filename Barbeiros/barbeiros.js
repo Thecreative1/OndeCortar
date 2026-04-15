@@ -486,7 +486,7 @@ const barbearias = [
   nome: "The Barber - Terceira",
   morada: "R. Direita 123, Angra do Heroísmo, Ilha Terceira",
   telefone: "+351 965 478 625",
-  facebook: "https://www.facebook.com/profile.php?id=100063545409660",
+  facebook: null,
   coords: [38.6550, -27.2215]
 },
 {
