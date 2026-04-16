@@ -1726,4 +1726,61 @@ const barbearias = [
 
   // === FIM EXPANSÃO ÉVORA E ALENTEJO CENTRAL – ABRIL 2026 ===
 
+  // === EXPANSÃO CIDADES SEM COBERTURA – ABRIL 2026 ===
+
+  // --- Portalegre ---
+  {
+    nome: "Barbearia Magotto",
+    morada: "Rua 1º de Maio 111, 7300-205 Portalegre",
+    city: "Portalegre",
+    distrito: "Portalegre",
+    telefone: "+351 245 094 420",
+    website: "https://client.tuaagenda.com/c/MAGOTTOBARBEARIA",
+    coords: [39.2980, -7.4298]
+  },
+
+  // --- Viana do Castelo ---
+  {
+    nome: "Barber Show Viana",
+    morada: "Rua Rodrigo da Fontinha 6, Viana do Castelo",
+    city: "Viana do Castelo",
+    distrito: "Viana do Castelo",
+    telefone: "+351 964 488 920",
+    instagram: "https://www.instagram.com/barbershowviana/",
+    coords: [41.6955, -8.8305]
+  },
+
+  // --- Cascais ---
+  {
+    nome: "Cuts & Whiskey",
+    morada: "Avenida 25 de Abril 722, loja D15, 2750-512 Cascais",
+    city: "Cascais",
+    distrito: "Lisboa",
+    telefone: "+351 938 888 848",
+    instagram: "https://www.instagram.com/cutsandwhiskey/",
+    coords: [38.6972, -9.4228]
+  },
+
+  // --- Tomar ---
+  {
+    nome: "Barbearia FuZeiro",
+    morada: "Avenida Torres Pinheiro 146, 2300-329 Tomar",
+    city: "Tomar",
+    distrito: "Santarém",
+    telefone: "+351 914 731 237",
+    coords: [39.6062, -8.4088]
+  },
+
+  // --- Moura ---
+  {
+    nome: "O Barbeiro",
+    morada: "Rua Serpa Pinto, 7860-069 Moura",
+    city: "Moura",
+    distrito: "Beja",
+    telefone: "+351 966 041 102",
+    coords: [38.1408, -7.4521]
+  },
+
+  // === FIM EXPANSÃO CIDADES SEM COBERTURA – ABRIL 2026 ===
+
 ];

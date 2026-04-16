@@ -4,8 +4,8 @@ Data da auditoria: `2026-04-05`
 
 ## Resumo
 
-- Total de entradas: **229**
-- Confirmadas: **203**
+- Total de entradas: **234**
+- Confirmadas: **208**
 - Por validar: **23**
 - Incompletas: **3**
 - Sem coordenadas validas: **3**

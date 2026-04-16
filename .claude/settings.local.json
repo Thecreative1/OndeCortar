@@ -65,7 +65,13 @@
       "WebFetch(domain:www.cylex.pt)",
       "WebFetch(domain:diariodosul.pt)",
       "WebFetch(domain:www.facebook.com)",
-      "Bash([ -f \"E:/GIT_HUB/OndeCortar/barbearias/$slug/index.html\" ])"
+      "Bash([ -f \"E:/GIT_HUB/OndeCortar/barbearias/$slug/index.html\" ])",
+      "WebFetch(domain:www.cascaisbarbershop.pt)",
+      "WebFetch(domain:noona.app)",
+      "WebFetch(domain:www.labarberia.pt)",
+      "WebFetch(domain:booksy.com)",
+      "WebFetch(domain:bussola-pt.com)",
+      "WebFetch(domain:linktr.ee)"
     ]
   }
 }
