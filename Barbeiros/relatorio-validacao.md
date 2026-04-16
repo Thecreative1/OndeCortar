@@ -4,14 +4,14 @@ Data da auditoria: `2026-04-05`
 
 ## Resumo
 
-- Total de entradas: **203**
-- Confirmadas: **180**
-- Por validar: **20**
+- Total de entradas: **229**
+- Confirmadas: **203**
+- Por validar: **23**
 - Incompletas: **3**
 - Sem coordenadas validas: **3**
 - Com telefone invalido ou placeholder: **19**
-- Com morada generica: **4**
-- Escondidas do mapa (`mostrar_no_mapa: false`): **4**
+- Com morada generica: **7**
+- Escondidas do mapa (`mostrar_no_mapa: false`): **7**
 
 ## Notas da auditoria
 
@@ -30,9 +30,9 @@ Data da auditoria: `2026-04-05`
 - **Barbearia Bragança Classic**: status `por_validar`, qualidade `media`, problemas `status_por_validar, telefone_invalido`
 - **Barbearia Chaves**: status `por_validar`, qualidade `media`, problemas `status_por_validar, telefone_invalido`
 - **Barbearia Clássica Setúbal**: status `por_validar`, qualidade `media`, problemas `status_por_validar, telefone_invalido`
+- **Barbearia da Vila**: status `por_validar`, qualidade `baixa`, problemas `status_por_validar, morada_generica`
 - **Barbearia do António**: status `por_validar`, qualidade `media`, problemas `status_por_validar, telefone_invalido`
 - **Barbearia Grândola Clássica**: status `por_validar`, qualidade `media`, problemas `status_por_validar, telefone_invalido`
+- **Barbearia Milénio**: status `por_validar`, qualidade `baixa`, problemas `status_por_validar, morada_generica`
 - **Barbearia Monte Cristo**: status `por_validar`, qualidade `media`, problemas `status_por_validar, telefone_invalido`
 - **Barbearia Montijo Urbana**: status `por_validar`, qualidade `media`, problemas `status_por_validar, telefone_invalido`
-- **Barbearia Paulo**: status `por_validar`, qualidade `baixa`, problemas `status_por_validar, morada_generica`
-- **Barbearia Real**: status `por_validar`, qualidade `media`, problemas `status_por_validar, telefone_invalido`

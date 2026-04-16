@@ -1468,4 +1468,262 @@ const barbearias = [
   },
   // === FIM IMPORTACAO OSM VALIDADA 2026-04-05 ===
 
+  // === ÉVORA E ALENTEJO CENTRAL – EXPANSÃO ABRIL 2026 ===
+
+  // --- Évora ---
+  {
+    nome: "20Age Cuts",
+    morada: "Rua Nova 19, 7000-536 Évora",
+    city: "Évora",
+    distrito: "Évora",
+    telefone: "+351 266 701 550",
+    website: "https://www.20agecuts.com/",
+    instagram: "https://www.instagram.com/20agecuts/",
+    facebook: "https://www.facebook.com/20agecutsevora/",
+    coords: [38.5737, -7.9090]
+  },
+
+  {
+    nome: "Barbearia Perdigão desde 1987",
+    morada: "Rua Cinco de Outubro 25, 7000-854 Évora",
+    city: "Évora",
+    distrito: "Évora",
+    telefone: "+351 266 702 112",
+    coords: [38.5747, -7.9080]
+  },
+
+  {
+    nome: "Barbearia Gonçalves",
+    morada: "Rua do Raimundo 46, 7000-661 Évora",
+    city: "Évora",
+    distrito: "Évora",
+    telefone: "+351 266 079 316",
+    coords: [38.5718, -7.9082]
+  },
+
+  {
+    nome: "Barbeiro Nuno Perdigão",
+    morada: "Rua Romão Ramalho 9, 7000-650 Évora",
+    city: "Évora",
+    distrito: "Évora",
+    telefone: "+351 962 319 829",
+    facebook: "https://www.facebook.com/nunoperdigaobarber/",
+    coords: [38.5725, -7.9095]
+  },
+
+  {
+    nome: "Barbearia Marriço",
+    morada: "Rua Marechal Costa Gomes 30, 7005-145 Évora",
+    city: "Évora",
+    distrito: "Évora",
+    telefone: "+351 969 853 712",
+    coords: [38.5712, -7.9060]
+  },
+
+  {
+    nome: "Barbearia DOMI",
+    morada: "Rua de Serpa Pinto 55, 7000-537 Évora",
+    city: "Évora",
+    distrito: "Évora",
+    telefone: "+351 962 462 496",
+    coords: [38.5716, -7.9073]
+  },
+
+  {
+    nome: "RJCortes",
+    morada: "Rua de Serpa Pinto 73, 7000-537 Évora",
+    city: "Évora",
+    distrito: "Évora",
+    telefone: "+351 913 602 847",
+    coords: [38.5715, -7.9071]
+  },
+
+  {
+    nome: "DM Cuts",
+    morada: "Rua de Valdevinos 26, 7000-868 Évora",
+    city: "Évora",
+    distrito: "Évora",
+    telefone: "+351 966 733 390",
+    coords: [38.5683, -7.9138]
+  },
+
+  {
+    nome: "Leno dos Cortes",
+    morada: "Rua de Aviz 14, 7000-599 Évora",
+    city: "Évora",
+    distrito: "Évora",
+    telefone: "+351 961 503 020",
+    coords: [38.5720, -7.9098]
+  },
+
+  {
+    nome: "CarapinhaStylus Barbearia",
+    morada: "Rua Sá de Miranda 121 B, 7000-929 Évora",
+    city: "Évora",
+    distrito: "Évora",
+    telefone: "+351 926 871 405",
+    coords: [38.5652, -7.9080]
+  },
+
+  {
+    nome: "Cortes de Lisboa Évora Plaza",
+    morada: "Rua Luís Adelino Fonseca 4, piso 0, loja 0.36, 7005-345 Évora",
+    city: "Évora",
+    distrito: "Évora",
+    telefone: "+351 916 197 036",
+    website: "https://cortesdelisboa.pt/",
+    coords: [38.5803, -7.9148]
+  },
+
+  {
+    nome: "BELLE Hair & Barbershop",
+    morada: "Rua do Frei-Aleixo 25, Évora",
+    city: "Évora",
+    distrito: "Évora",
+    telefone: "+351 964 188 603",
+    instagram: "https://www.instagram.com/belle_hairnbarber/",
+    coords: [38.5695, -7.9107]
+  },
+
+  {
+    nome: "Sir Lopes Barbershop",
+    morada: "Rua da Escola 7, Senhora da Saúde, Évora",
+    city: "Évora",
+    distrito: "Évora",
+    telefone: "+351 961 880 118",
+    facebook: "https://www.facebook.com/people/Sir-Lopes-Barbershop/61554730315899/",
+    coords: [38.5744, -7.8872]
+  },
+
+  // --- Montemor-o-Novo ---
+  {
+    nome: "Barbearia Do Avô Zé",
+    morada: "Rua do Passo 3, 7050-169 Montemor-o-Novo",
+    city: "Montemor-o-Novo",
+    distrito: "Évora",
+    telefone: "+351 938 015 648",
+    coords: [38.6468, -8.2190]
+  },
+
+  {
+    nome: "Barbearia Ebenézer",
+    morada: "Rua dos Bombeiros Voluntários 14, 7050-228 Montemor-o-Novo",
+    city: "Montemor-o-Novo",
+    distrito: "Évora",
+    telefone: "+351 920 343 581",
+    coords: [38.6481, -8.2185]
+  },
+
+  {
+    nome: "Barbearia Bruno Ferreira",
+    morada: "Rua 5 de Outubro, 7050-355 Montemor-o-Novo",
+    city: "Montemor-o-Novo",
+    distrito: "Évora",
+    telefone: "+351 912 513 509",
+    instagram: "https://www.instagram.com/bfbarbearia1/",
+    coords: [38.6474, -8.2198]
+  },
+
+  {
+    nome: "Thekingbarberia",
+    morada: "Avenida Gago Coutinho, 7050-113 Montemor-o-Novo",
+    city: "Montemor-o-Novo",
+    distrito: "Évora",
+    telefone: "+351 927 251 604",
+    coords: [38.6458, -8.2152]
+  },
+
+  // --- Vendas Novas ---
+  {
+    nome: "Barbearia Pinto",
+    morada: "Rua Bartolomeu Dias 16A, 7080-057 Vendas Novas",
+    city: "Vendas Novas",
+    distrito: "Évora",
+    telefone: "+351 925 910 480",
+    website: "https://www.fresha.com/lvp/barbearia-pinto-rua-bartolomeu-dias-vendas-novas-LkBoK9",
+    coords: [38.6803, -8.4650]
+  },
+
+  {
+    nome: "Barbearia do Zé",
+    morada: "Avenida da República 98, 7080-100 Vendas Novas",
+    city: "Vendas Novas",
+    distrito: "Évora",
+    coords: [38.6784, -8.4615]
+  },
+
+  // --- Estremoz ---
+  {
+    nome: "Tira Barber",
+    morada: "Rua 31 de Janeiro 55, 7100-101 Estremoz",
+    city: "Estremoz",
+    distrito: "Évora",
+    telefone: "+351 268 032 868",
+    facebook: "https://www.facebook.com/RoxoBarber/",
+    coords: [38.8443, -7.5893]
+  },
+
+  {
+    nome: "Barbearia 99",
+    morada: "Rua Victor Cordon 13, 7100-560 Estremoz",
+    city: "Estremoz",
+    distrito: "Évora",
+    telefone: "+351 967 599 926",
+    coords: [38.8455, -7.5861]
+  },
+
+  // --- Borba ---
+  {
+    nome: "20Age Cuts Borba",
+    morada: "Mercado Municipal, Borba",
+    city: "Borba",
+    distrito: "Évora",
+    telefone: "+351 961 282 806",
+    website: "https://www.20agecuts.com/",
+    instagram: "https://www.instagram.com/20agecuts/",
+    coords: [38.7973, -7.4526]
+  },
+
+  // --- Vila Viçosa ---
+  {
+    nome: "Barbearia Pinto",
+    morada: "Largo Mouzinho de Albuquerque 35, 7160-274 Vila Viçosa",
+    city: "Vila Viçosa",
+    distrito: "Évora",
+    telefone: "+351 926 926 744",
+    coords: [38.7808, -7.4168]
+  },
+
+  {
+    nome: "Barbearia da Vila",
+    morada: "Vila Viçosa",
+    city: "Vila Viçosa",
+    distrito: "Évora",
+    facebook: "https://www.facebook.com/barbearia.da.vila1/",
+    coords: [38.7806, -7.4174]
+  },
+
+  // --- Arraiolos ---
+  {
+    nome: "Souza Barber",
+    morada: "Arraiolos",
+    city: "Arraiolos",
+    distrito: "Évora",
+    telefone: "+351 910 810 842",
+    facebook: "https://www.facebook.com/SouzaBarberArraiolos/",
+    coords: [38.7205, -7.9856]
+  },
+
+  // --- Coruche ---
+  {
+    nome: "Barbearia Milénio",
+    morada: "Coruche",
+    city: "Coruche",
+    distrito: "Santarém",
+    telefone: "+351 933 273 839",
+    coords: [38.9552, -8.5220]
+  },
+
+  // === FIM EXPANSÃO ÉVORA E ALENTEJO CENTRAL – ABRIL 2026 ===
+
 ];

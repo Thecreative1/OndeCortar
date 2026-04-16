@@ -32,9 +32,7 @@ const barbeariasPorValidar = [
       -25.0962
     ],
     "status": "por_validar",
-    "fontes": [
-      "https://www.facebook.com/profile.php?id=100063781357982"
-    ],
+    "fontes": [],
     "ultima_validacao": "2026-04-05",
     "mostrar_no_mapa": false,
     "qualidade_ficha": "baixa",
@@ -226,6 +224,96 @@ const barbeariasPorValidar = [
     }
   },
   {
+    "nome": "Souza Barber",
+    "slug": "souza-barber",
+    "distrito": "Évora",
+    "concelho": "Arraiolos",
+    "municipality": "Arraiolos",
+    "freguesia": "",
+    "city": "Arraiolos",
+    "zone": "",
+    "morada": "Arraiolos",
+    "address_raw": "Arraiolos",
+    "street": "",
+    "street_number": "",
+    "complemento": "",
+    "localidade": "Arraiolos",
+    "codigo_postal": "",
+    "country": "Portugal",
+    "data_confidence": "medium",
+    "needs_review": false,
+    "location_flags": [],
+    "telefone": "+351 910 810 842",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/SouzaBarberArraiolos/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7205,
+      -7.9856
+    ],
+    "status": "por_validar",
+    "fontes": [
+      "https://www.facebook.com/SouzaBarberArraiolos/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": false,
+    "qualidade_ficha": "baixa",
+    "valor_original": {
+      "motivos": [
+        "morada_generica"
+      ]
+    }
+  },
+  {
+    "nome": "Barbearia da Vila",
+    "slug": "barbearia-da-vila",
+    "distrito": "Évora",
+    "concelho": "Vila Viçosa",
+    "municipality": "Vila Viçosa",
+    "freguesia": "",
+    "city": "Vila Viçosa",
+    "zone": "",
+    "morada": "Vila Viçosa",
+    "address_raw": "Vila Viçosa",
+    "street": "",
+    "street_number": "",
+    "complemento": "",
+    "localidade": "Vila Viçosa",
+    "codigo_postal": "",
+    "country": "Portugal",
+    "data_confidence": "medium",
+    "needs_review": false,
+    "location_flags": [],
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/barbearia.da.vila1/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7806,
+      -7.4174
+    ],
+    "status": "por_validar",
+    "fontes": [
+      "https://www.facebook.com/barbearia.da.vila1/"
+    ],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": false,
+    "qualidade_ficha": "baixa",
+    "valor_original": {
+      "motivos": [
+        "morada_generica"
+      ]
+    }
+  },
+  {
     "nome": "Patrick Barbershop",
     "slug": "patrick-barbershop",
     "distrito": "Faro",
@@ -360,6 +448,49 @@ const barbeariasPorValidar = [
       "telefone": "+351 912 345 678",
       "motivos": [
         "telefone_placeholder"
+      ]
+    }
+  },
+  {
+    "nome": "Barbearia Milénio",
+    "slug": "barbearia-milenio",
+    "distrito": "Santarém",
+    "concelho": "Coruche",
+    "municipality": "Coruche",
+    "freguesia": "",
+    "city": "Coruche",
+    "zone": "",
+    "morada": "Coruche",
+    "address_raw": "Coruche",
+    "street": "",
+    "street_number": "",
+    "complemento": "",
+    "localidade": "Coruche",
+    "codigo_postal": "",
+    "country": "Portugal",
+    "data_confidence": "medium",
+    "needs_review": false,
+    "location_flags": [],
+    "telefone": "+351 933 273 839",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.9552,
+      -8.522
+    ],
+    "status": "por_validar",
+    "fontes": [],
+    "ultima_validacao": "2026-04-05",
+    "mostrar_no_mapa": false,
+    "qualidade_ficha": "baixa",
+    "valor_original": {
+      "motivos": [
+        "morada_generica"
       ]
     }
   },

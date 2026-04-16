@@ -60,7 +60,11 @@
       "Bash(read f:*)",
       "Bash(find revista:*)",
       "Bash(find loja:*)",
-      "WebSearch"
+      "WebSearch",
+      "WebFetch(domain:www.fresha.com)",
+      "WebFetch(domain:www.cylex.pt)",
+      "WebFetch(domain:diariodosul.pt)",
+      "WebFetch(domain:www.facebook.com)"
     ]
   }
 }
