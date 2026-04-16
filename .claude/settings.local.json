@@ -64,7 +64,8 @@
       "WebFetch(domain:www.fresha.com)",
       "WebFetch(domain:www.cylex.pt)",
       "WebFetch(domain:diariodosul.pt)",
-      "WebFetch(domain:www.facebook.com)"
+      "WebFetch(domain:www.facebook.com)",
+      "Bash([ -f \"E:/GIT_HUB/OndeCortar/barbearias/$slug/index.html\" ])"
     ]
   }
 }
