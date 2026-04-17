@@ -479,7 +479,7 @@ const barbearias = [
   nome: "Barbearia António e Caetano",
   morada: "Rua de São João, Angra do Heroísmo, Ilha Terceira",
   telefone: "+351 295 215 123",
-  google: "https://goo.gl/maps/LmXh3rgGkk5HKRhe6",
+  google: null,
   coords: [38.6556, -27.2178]
 },
 {
@@ -493,14 +493,14 @@ const barbearias = [
   nome: "Barbearia Machado",
   morada: "Rua Serpa Pinto, Horta, Ilha do Faial",
   telefone: "+351 292 292 401",
-  google: "https://goo.gl/maps/njXCdUYhJmeMQknc6",
+  google: null,
   coords: [38.5358, -28.6272]
 },
 {
   nome: "Barbearia São Roque",
   morada: "Rua Maestro Simão Machado, São Roque do Pico, Ilha do Pico",
   telefone: "+351 292 642 321",
-  google: "https://goo.gl/maps/CnDkgbtb4EG7pW3Z9",
+  google: null,
   coords: [38.5170, -28.3040]
 },
 {

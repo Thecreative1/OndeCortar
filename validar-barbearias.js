@@ -108,6 +108,10 @@ function validateItem(item, index) {
     warnings.push(label + ": website parece conter um link de Google Maps.");
   }
 
+  if (item.google_maps && /goo\.gl\/maps/i.test(item.google_maps)) {
+    warnings.push(label + ": google_maps usa um shortlink legado goo.gl/maps que pode estar quebrado.");
+  }
+
   if (item.mostrar_no_mapa && (!utils.moradaEhUtil(item.morada) || !utils.coordsSaoValidas(item.coords))) {
     errors.push(label + ": esta visivel no mapa sem cumprir os criterios minimos.");
   }

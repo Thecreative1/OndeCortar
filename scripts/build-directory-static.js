@@ -373,11 +373,11 @@ function buildPrimaryLink(barber) {
 }
 
 function buildMapLink(barber) {
-  if (barber.google) {
-    return barber.google;
-  }
   if (Array.isArray(barber.coords)) {
     return "https://www.google.com/maps/search/?api=1&query=" + barber.coords[0] + "," + barber.coords[1];
+  }
+  if (barber.google) {
+    return barber.google;
   }
   if (barber.morada) {
     return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(barber.morada);

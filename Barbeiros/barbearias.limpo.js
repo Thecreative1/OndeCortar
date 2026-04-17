@@ -1325,7 +1325,7 @@ const barbearias = [
     "website": null,
     "instagram": null,
     "facebook": null,
-    "google_maps": "https://goo.gl/maps/njXCdUYhJmeMQknc6",
+    "google_maps": null,
     "horario": null,
     "observacoes": null,
     "coords": [
@@ -1368,7 +1368,7 @@ const barbearias = [
     "website": null,
     "instagram": null,
     "facebook": null,
-    "google_maps": "https://goo.gl/maps/CnDkgbtb4EG7pW3Z9",
+    "google_maps": null,
     "horario": null,
     "observacoes": null,
     "coords": [
@@ -1411,7 +1411,7 @@ const barbearias = [
     "website": null,
     "instagram": null,
     "facebook": null,
-    "google_maps": "https://goo.gl/maps/LmXh3rgGkk5HKRhe6",
+    "google_maps": null,
     "horario": null,
     "observacoes": null,
     "coords": [
