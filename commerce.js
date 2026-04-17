@@ -177,7 +177,7 @@
     const articleCount = (category.articles || []).length;
     return [
       category.intro,
-      "A ideia é filtrar depressa, perceber onde cada opção faz sentido e evitar compras feitas só pela lista de extras.",
+      "A ideia é filtrar depressa, perceber onde cada opção faz sentido e evitar compras guiadas apenas por listas de extras.",
       topCount ? "Começa pelas recomendações mais fortes e usa-as como base para comparar o resto da categoria." : "",
       articleCount ? "Se ainda houver dúvida, a revista ajuda a fechar a decisão com mais contexto." : "Quando fizer sentido, a revista entra para aprofundar o que a categoria não precisa de repetir."
     ].join(" ");
@@ -186,7 +186,7 @@
   function categoryShortIntro(category) {
     const articleCount = (category.articles || []).length;
     return category.intro + " " + (articleCount
-      ? "Começa pelas escolhas mais fortes e usa os guias da revista para resolver a dúvida que ainda faltar."
+      ? "Começa pelas escolhas mais fortes e usa os guias da revista para resolver a dúvida que ainda falte."
       : "Começa pelas escolhas mais fortes e filtra pelo teu caso de uso.");
   }
 
@@ -215,7 +215,7 @@
       points: (category.guidePoints && category.guidePoints.length)
         ? category.guidePoints
         : [
-            "Se queres uma resposta rápida, abre duas ou três opções fortes e só depois vais ao detalhe.",
+            "Se queres uma resposta rápida, abre duas ou três opções fortes e só depois vai ao detalhe.",
             "Se o uso vai ser frequente, dá mais peso a conforto, consistência e facilidade de manutenção do que à lista de extras.",
             (category.articles || []).length
               ? "Se ainda houver algo por perceber, os artigos ligados a esta categoria aprofundam o tema."
@@ -493,7 +493,7 @@
     if (!items.length) return "";
     return (
       '<section class="section section--editorial-trust"><div class="container">' +
-        '<div class="section-header section-header--compact"><div><span class="eyebrow">' + e(opts.eyebrow || "Critério editorial") + '</span><h2>' + e(opts.title || "Critério editorial visível em cada artigo") + '</h2><p>' + e(opts.copy || "Datas, critérios de avaliação e transparência sobre links afiliados — para que percebas como cada recomendação chega ao artigo.") + '</p></div></div>' +
+        '<div class="section-header section-header--compact"><div><span class="eyebrow">' + e(opts.eyebrow || "Critério editorial") + '</span><h2>' + e(opts.title || "Critério editorial transparente em cada artigo") + '</h2><p>' + e(opts.copy || "Datas, critérios de avaliação e transparência sobre links afiliados — para que percebas como cada recomendação chega ao artigo.") + '</p></div></div>' +
         '<div class="trust-grid">' + items.map(function(item) {
           return '<article class="trust-card"><span class="eyebrow">' + e(item.eyebrow) + '</span><h3>' + e(item.title) + '</h3><p>' + e(item.copy) + '</p></article>';
         }).join("") + '</div>' +
@@ -733,7 +733,7 @@
     cards.push(
       '<article class="callout-card article-support-card article-trust-card"><span class="eyebrow">Critério editorial</span><h3>Como revemos este guia</h3><ul class="rich-list">' +
         (publishedDate ? '<li>Publicado em ' + e(formatDatePt(publishedDate)) + '.</li>' : "") +
-        (updatedDate ? '<li>Revisto editorialmente em ' + e(formatDatePt(updatedDate)) + '.</li>' : "") +
+        (updatedDate ? '<li>Revisto em' + e(formatDatePt(updatedDate)) + '.</li>' : "") +
         '<li>Leitura estimada: ' + e(readingTime) + ' min.</li>' +
         '<li>Critérios: uso real, manutenção, conforto e relação qualidade-preço.</li>' +
         '<li>Links afiliados são assinalados sem alterar a recomendação editorial.</li>' +
@@ -1090,7 +1090,7 @@
       renderHeader() +
       '<main>' +
         '<section class="section section--store-start" id="categorias"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Loja OndeCortar</span><h2>Escolhe menos. Acerta melhor.</h2><p>Máquinas, kits, navalhas e acessórios organizados para filtrar depressa, comparar com critério e evitar compras de catálogo.</p></div></div><div class="product-grid product-grid--top-choices">' + featured + '</div><div class="category-grid">' + categoryCards + '</div></div></section>' +
-        '<section class="section" id="escolhas-por-necessidade"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Começar pelo uso</span><h2>Ainda não sabes por onde pegar?</h2><p>Parte do contexto real: casa, barba, manutenção ou presente. É a forma mais rápida de evitar abrir opções que não te servem.</p></div></div><div class="store-need-grid">' + needCards + '</div></div></section>' +
+        '<section class="section" id="escolhas-por-necessidade"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Começar pelo uso</span><h2>Ainda não sabes por onde pegar?</h2><p>Parte do contexto real: casa, barba, manutenção ou presente. É a forma mais rápida de evitar ver opções que não te servem.</p></div></div><div class="store-need-grid">' + needCards + '</div></div></section>' +
         '<section class="section store-endcap-section"><div class="container"><div class="store-endcap-shell">' +
           renderDisclosure({ variant: "store" }) +
         '</div></div></section>' +
@@ -1211,7 +1211,7 @@
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container hero-card"><div class="hero-grid">' +
-          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja/") + '">Loja</a><span>/</span><span>' + e(product.name) + '</span></div><span class="section-flag">Recomendação OndeCortar</span><span class="eyebrow">' + e(product.bestFor) + '</span><h1>' + e(product.name) + '</h1><p>' + e(product.summary) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a><a class="btn btn-secondary" href="' + (product.categories && product.categories[0] ? categoryHref(product.categories[0]) : href("loja/")) + '">' + e(categoryActionLabel(product.categories && product.categories[0] ? categoryMap.get(product.categories[0]) : null)) + '</a></div><div class="product-hero-panel"><strong>Antes de comprar</strong><ul class="rich-list"><li>Melhor para: ' + e(product.bestFor) + '</li><li>Ponto forte: ' + e(leadStrength || product.summary) + '</li><li>Outra vantagem: ' + e(secondStrength || product.useCase) + '</li></ul><div class="card-actions"><a class="btn btn-secondary btn-small" href="#relacionados">Ver alternativas</a></div></div></div>' +
+          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja/") + '">Loja</a><span>/</span><span>' + e(product.name) + '</span></div><span class="section-flag">Recomendação OndeCortar</span><span class="eyebrow">' + e(product.bestFor) + '</span><h1>' + e(product.name) + '</h1><p>' + e(product.summary) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a><a class="btn btn-secondary" href="' + (product.categories && product.categories[0] ? categoryHref(product.categories[0]) : href("loja/")) + '">' + e(categoryActionLabel(product.categories && product.categories[0] ? categoryMap.get(product.categories[0]) : null)) + '</a></div><div class="product-hero-panel"><strong>Antes de comprar</strong><ul class="rich-list"><li>Melhor para: ' + e(product.bestFor) + '</li><li>Ponto forte: ' + e(leadStrength || product.summary) + '</li><li>Mais a favor:' + e(secondStrength || product.useCase) + '</li></ul><div class="card-actions"><a class="btn btn-secondary btn-small" href="#relacionados">Ver alternativas</a></div></div></div>' +
       '<div class="hero-side"><div class="product-stage"><img src="' + href(product.image) + '" alt="' + e(product.alt || product.name) + '" loading="lazy" /></div><div class="store-note"><strong>Porque recomendamos</strong><p>' + e(product.highlight || product.summary) + '</p></div></div>' +
         '</div></div></section>' +
         '<section class="section"><div class="container split-grid">' +
@@ -1227,7 +1227,7 @@
           '</div>' +
         '</div></section>' +
         renderProductArticleLinks(product) +
-        '<section class="section" id="relacionados"><div class="container"><div class="section-header"><div><span class="eyebrow">Comparar alternativas</span><h2>Outras opções que vale a pena ver</h2><p>Se este produto está perto do que procuras mas ainda não fecha a decisão, estas alternativas ajudam a calibrar melhor a escolha.</p></div></div><div class="related-grid">' + related.map(function(item) { return renderProductCard(item, { dense: true }); }).join("") + '</div></div></section>' +
+        '<section class="section" id="relacionados"><div class="container"><div class="section-header"><div><span class="eyebrow">Comparar alternativas</span><h2>Outras opções que vale a pena ver</h2><p>Se este produto está perto do que procuras mas ainda não fecha a decisão, estas alternativas ajudam a afinar a escolha.</p></div></div><div class="related-grid">' + related.map(function(item) { return renderProductCard(item, { dense: true }); }).join("") + '</div></div></section>' +
       '</main>' +
       renderFooter()
     );
@@ -1288,7 +1288,7 @@
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container">' +
-          '<div class="section-header magazine-home-header"><div><span class="eyebrow">Revista OndeCortar</span><h1>Guias, comparações e respostas para perceber melhor</h1><p>Artigos práticos sobre o que funciona, o que evitar e qual a diferença real entre as opções.</p></div><div class="hero-actions"><a class="btn btn-primary" href="#artigos">Ver últimos guias</a><a class="btn btn-secondary" href="#seccoes">Explorar temas</a></div></div>' +
+          '<div class="section-header magazine-home-header"><div><span class="eyebrow">Revista OndeCortar</span><h1>Guias, comparações e respostas para perceber melhor</h1><p>Artigos práticos sobre o que funciona, o que evitar e as diferenças reais entre opções.</p></div><div class="hero-actions"><a class="btn btn-primary" href="#artigos">Ver últimos guias</a><a class="btn btn-secondary" href="#seccoes">Explorar temas</a></div></div>' +
           '<div class="magazine-editorial-grid">' +
             (leadArticle ? '<article class="editorial-card magazine-feature-card"><div class="magazine-feature-copy"><div class="meta-row"><span class="tag">Artigo em destaque</span>' + (leadCategory ? '<span class="tag">' + e(leadCategory.title) + '</span>' : "") + '</div><h2>' + e(leadArticle.title) + '</h2><p>' + e(leadArticle.intro || leadArticle.excerpt) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + articleHref(leadArticle.slug) + '">' + e(articleActionLabel(leadArticle)) + '</a><a class="btn btn-secondary" href="#artigos">Explorar mais leituras</a></div></div><div class="magazine-feature-media">' +
               '<a class="article-thumb article-thumb--' + leadCover.kind + '" href="' + articleHref(leadArticle.slug) + '">' +

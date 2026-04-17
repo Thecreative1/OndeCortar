@@ -574,7 +574,7 @@
           "O que costuma ser erro",
           [
             "O erro mais comum é mudar sempre de formato sem rever técnica, pressão da lâmina ou frequência do barbear. Muitas vezes o desconforto não vem só do produto.",
-            "Outro erro é achar que mais passos significam melhor resultado. Se a tua pele já responde bem a uma rotina simples, não há vantagem automática em a tornar mais longa."
+            "Outro erro é achar que mais passos significam melhor resultado. Se a tua pele já responde bem a uma rotina simples, não há vantagem automática em torná-la mais longa."
           ]
         ]
       ],
@@ -756,7 +756,7 @@
       metaTitle: "Aparador multifunções ou máquina profissional: qual compensa mais | Revista OndeCortar",
       metaDescription: "Compara aparadores multifunções e máquinas profissionais para perceber qual compensa mais no teu tipo de uso.",
       excerpt: "A escolha certa depende menos do preço e mais do tipo de uso, da frequência e do nível de exigência no corte.",
-      intro: "Aparador multifunções e máquina profissional não concorrem exatamente pelo mesmo lugar, mas muitas compras começam como se fossem equivalentes. O resultado é gastar demais no que não precisas ou ficar curto no que usas realmente.",
+      intro: "Aparador multifunções e máquina profissional não se destinam exatamente ao mesmo uso, mas muitas compras começam como se fossem equivalentes. O resultado é gastar demais no que não precisas ou ficar curto no que usas realmente.",
       subIntro: "Neste comparativo, a pergunta central é simples: o que compensa mais para o teu uso atual e não para a imagem que o produto tenta vender.",
       quickAnswers: [
         ["Melhor para casa", "O multifunções costuma compensar mais quando queres versatilidade e simplicidade."],
@@ -783,7 +783,7 @@
           "O erro de comparar mal",
           [
             "O erro mais comum é olhar para a máquina profissional como upgrade automático. Nem sempre é. Para muita gente, significa pagar mais por uma robustez que nunca será aproveitada.",
-            "No outro extremo, também é erro esperar que um multifunções entregue a mesma consistência de uma máquina feita para corte regular mais exigente."
+            "No outro extremo, também é erro esperar que um multifunções entregue a mesma consistência que uma máquina feita para corte regular mais exigente."
           ]
         ],
         [
@@ -912,7 +912,7 @@
         [
           "O que importa na prática",
           [
-            "Na prática, o objetivo não é encontrar a lâmina perfeita para toda a gente. É encontrar uma que te dê conforto suficiente dentro da tua técnica, frequência e tipo de pele.",
+            "Na prática, o objetivo não é encontrar a lâmina perfeita para toda a gente. É encontrar uma que te dê conforto suficiente tendo em conta a tua técnica, frequência de barbear e tipo de pele.",
             "Por isso, a melhor abordagem costuma ser começar por referências equilibradas e não por extremos que prometem agressividade máxima ou suavidade milagrosa."
           ]
         ],
@@ -984,7 +984,7 @@
         [
           "Começa pelo que vais mesmo usar",
           [
-            "Para a maioria das pessoas, a base começa com um produto de conforto e um acessório de alinhamento. Isso já basta para manter a barba mais arrumada sem criar uma rotina pesada.",
+            "Para a maioria das pessoas, a base começa com um produto de cuidado e um acessório de alinhamento. Isso já basta para manter a barba mais arrumada sem criar uma rotina pesada.",
             "Quando a barba cresce mais ou quando queres manter melhor as linhas, uma ferramenta simples de aparar passa a fazer sentido."
           ]
         ],
@@ -1070,7 +1070,7 @@
         [
           "3. Ignorar manutenção e autonomia",
           [
-            "Mesmo uma máquina económica precisa de rotina mínima para durar. Se já compras a pensar que não vais cuidar nada, o risco de falhar cedo aumenta.",
+            "Mesmo uma máquina económica precisa de rotina mínima para durar. Se já compras a pensar que não vais cuidar de nada, o risco de falhar cedo aumenta.",
             "Autonomia, limpeza e arrumação pesam muito mais do que parecem quando a máquina entra mesmo em uso."
           ]
         ],
@@ -1207,7 +1207,7 @@
         [
           "O que deve vir primeiro",
           [
-            "Antes de pensar em extras, convém garantir uma base: forma clara de guardar máquinas e acessórios, peça simples para higiene e apoio suficiente para o serviço correr sem tropeços.",
+            "Antes de pensar em extras, convém garantir uma base: uma forma clara de guardar máquinas e acessórios, uma peça simples para higiene e apoio suficiente para o serviço correr sem tropeços.",
             "Quando esta base existe, fica mais fácil perceber que compra seguinte realmente acrescenta valor."
           ]
         ],
@@ -1235,7 +1235,7 @@
       recommendedProducts: [
         { slug: "colcolo-organizador", blurb: "Boa peça de base para manter ferramentas arrumadas e acessíveis.", note: "Ajuda muito quando já tens várias peças em rotação." },
         { slug: "uraqt-capa", blurb: "Básico útil para conforto e higiene no serviço.", note: "Compra de apoio que tende a ter utilidade imediata." },
-        { slug: "luz-anel-led", blurb: "Boa adição quando o posto também serve para fotos, vídeo ou melhor visibilidade.", note: "Faz mais sentido se a apresentação visual também faz parte do trabalho." }
+        { slug: "tru-barber-mat", blurb: "Boa adição para proteger a bancada e manter as ferramentas no lugar durante o trabalho.", note: "Faz mais sentido quando a organização da bancada é parte do fluxo diário." }
       ],
       relatedCategory: "acessorios-de-barbeiro",
       categoryCta: "Queres reforçar o posto de trabalho? Explora a categoria completa de Acessórios de Barbeiro.",

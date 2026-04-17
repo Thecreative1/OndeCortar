@@ -1,6 +1,6 @@
 (function() {
   window.OndeCortarCommerce = window.OndeCortarCommerce || {};
-  window.OndeCortarCommerce.affiliateNotice = "Alguns links da loja são afiliados. Se comprares através deles, o OndeCortar pode receber uma comissão por compras elegíveis.";
+  window.OndeCortarCommerce.affiliateNotice = "Alguns links da loja são afiliados. Se comprares através deles, o OndeCortar.pt pode receber uma comissão por compras elegíveis.";
   window.OndeCortarCommerce.needs = [
     { slug: "para-casa", title: "Para casa", copy: "Para manutenção em casa sem comprar três aparelhos para fazer o mesmo." },
     { slug: "para-barbeiros", title: "Para barbeiros", copy: "Ferramentas e apoio para ritmo de posto, manutenção e bancada mais funcional." },
@@ -59,7 +59,7 @@
       top: ["philips-oneblade-pro-360", "braun-beardtrimmer-5-bt5500", "panasonic-er-gb43"],
       picks: [["Barba curta sem complicação", "philips-bt3238"], ["Retoques entre cortes", "solati-aparador"], ["Uma só ferramenta para várias zonas", "braun-series-5-aio5545"]],
       topTitle: "Trimmers e shavers para tarefas diferentes",
-      topCopy: "Aqui interessa perceber se precisas de aparar comprimento, desenhar linhas ou chegar mais rente. Um aparelho raro faz tudo bem ao mesmo tempo.",
+      topCopy: "Aqui interessa perceber se precisas de aparar comprimento, desenhar linhas ou chegar mais rente. Raramente um aparelho faz tudo bem ao mesmo tempo.",
       guidePanelTitle: "A dúvida que costuma baralhar",
       guidePanelCopy: "Os guias desta categoria ajudam a distinguir trimmer, shaver e tudo-em-um, para não comprares a ferramenta errada para o tipo de acabamento que procuras.",
       guideTitle: "Como escolher entre aparar, contornar ou barbear rente",
@@ -153,7 +153,7 @@
       guideCopy: "Barbear clássico pode compensar, mas não serve toda a gente da mesma forma. Convém perceber o nível de controlo e prática que cada formato pede.",
       guidePoints: [
         "Se queres uma entrada mais segura, a máquina de segurança costuma ser o passo mais previsível.",
-        "Se o objetivo é perfilado e detalhe, a navalha pede mais mão, mas dá outro controlo.",
+        "Se o objetivo é perfilado e detalhe, a navalha pede mais mão, mas oferece maior controlo.",
         "Nas lâminas, conforto e agressividade sentem-se na pele; não convém escolher só pelo preço por unidade."
       ],
       comparisonTitle: "Escolhe pelo grau de controlo",
@@ -233,7 +233,7 @@
       top: ["wahl-clipper-oil", "syprin-lubrificante-maquinas", "wahl-clipper-oil-pack"],
       picks: [["Entre usos e sem perder tempo", "beardburys-spray"], ["Óleo simples que resolve", "wahl-clipper-oil"], ["Reposição para uso regular", "wahl-clipper-oil-pack"]],
       topTitle: "O básico que prolonga a vida da máquina",
-      topCopy: "Boa manutenção não é ritual longo. É usar o produto certo no momento certo, com regularidade suficiente para evitar desgaste desnecessário.",
+      topCopy: "Boa manutenção não é um ritual longo. É usar o produto certo no momento certo, com regularidade suficiente para evitar desgaste desnecessário.",
       guidePanelTitle: "Nem tudo faz o mesmo trabalho",
       guidePanelCopy: "Aqui convém distinguir lubrificar, limpar e desinfetar. Os guias no fim ajudam a perceber o papel de cada produto sem complicar a rotina.",
       guideTitle: "Como montar manutenção simples que funcione",
@@ -258,7 +258,7 @@
     {
       slug: "oleos-e-balms",
       title: "Óleos e balms",
-      intro: "Óleos e balms para tirar secura, melhorar o toque e dar mais controlo à barba sem complicar a rotina.",
+      intro: "Óleos e balms para combater a secura, melhorar o toque e dar mais controlo à barba sem complicar a rotina.",
       top: ["viking-revolution-beard-oil", "honest-amish-beard-balm", "charlemagne-beard-balm"],
       picks: [["Para hidratar todos os dias", "viking-revolution-beard-oil"], ["Para segurar barbas mais cheias", "honest-amish-beard-balm"], ["Para acabamento mais limpo", "charlemagne-beard-balm"]],
       topTitle: "Escolhas para hidratar ou disciplinar",
@@ -353,7 +353,7 @@
       guidePanelTitle: "O presente certo depende menos do preço do que parece",
       guidePanelCopy: "Os guias desta categoria ajudam a perceber quando um kit é aposta segura e quando um conjunto pode falhar por ser demasiado específico.",
       guideTitle: "Como oferecer sem cair no presente genérico",
-      guideCopy: "Quem recebe tem de perceber rapidamente para que serve o conjunto e se o vai usar. Essa é a diferença entre acertar e ficar no bonito.",
+      guideCopy: "Quem recebe tem de perceber rapidamente para que serve o conjunto e se o vai usar. Essa é a diferença entre acertar e ficar apenas pela aparência.",
       guidePoints: [
         "Para presente, kits com uso intuitivo costumam funcionar melhor do que ferramentas muito técnicas.",
         "Se não sabes o nível de experiência da pessoa, evita opções demasiado especializadas.",
@@ -397,7 +397,7 @@
     {
       slug: "conteudo-pratico",
       title: "Conteúdo prático",
-      intro: "Como usar e manter os teus produtos para durarem mais e funcionarem melhor.",
+      intro: "Como usar e manter os teus equipamentos para durarem mais e funcionarem melhor.",
       categories: ["kits-de-barba", "escovas-e-pentes", "maquinas-de-cortar", "acessorios-de-barbeiro"],
       articles: ["como-montar-uma-rotina-simples-de-barba-em-casa", "como-manter-a-maquina-de-cortar-cabelo-a-funcionar-bem-por-mais-tempo", "o-essencial-para-manter-uma-bancada-de-barbeiro-organizada"]
     },

@@ -1967,7 +1967,7 @@
 
             <h1 class="hero-title">Procura por cidade, zona ou nome</h1>
             <p class="hero-subtitle">
-              Encontra mais depressa a barbearia certa e usa o mapa para explorar melhor a zona.
+              Encontra a barbearia certa mais depressa e usa o mapa para explorar a zona.
             </p>
 
             <form class="hero-search-form" id="heroSearchForm" role="search">
@@ -2114,7 +2114,7 @@
 
             <div class="empty-state" id="emptyState" hidden>
               <div>
-                <h3>Ainda não encontrámos resultados para essa pesquisa.</h3>
+                <h3>Não encontrámos resultados para esta pesquisa.</h3>
                 <p>Experimenta outra cidade ou procura por outro nome.</p>
               </div>
             </div>
@@ -2664,9 +2664,9 @@
 
         renderHeroResults(nearbyBarbers, "", {
           forceOpen: true,
-          title: "Mais perto de si",
+          title: "Mais perto de ti",
           countText: nearbyBarbers.length + " barbearia" + (nearbyBarbers.length === 1 ? "" : "s") + " por perto",
-          emptyMessage: "Ainda não encontrámos barbearias com coordenadas próximas da tua localização."
+          emptyMessage: "Não encontrámos barbearias próximas da tua localização."
         });
         renderResults(nearbyBarbers);
         updateSummary(nearbyBarbers, "", {
@@ -2974,7 +2974,7 @@
 
       function handleLocateSearch() {
         if (!navigator.geolocation) {
-          showHeroMessage("Mais perto de si", "A localização não está disponível neste dispositivo.", "");
+          showHeroMessage("Mais perto de ti", "A localização não está disponível no teu dispositivo.", "");
           return;
         }
 
@@ -2998,9 +2998,9 @@
 
           renderHeroResults(nearbyBarbers, "", {
             forceOpen: true,
-            title: "Mais perto de si",
+            title: "Mais perto de ti",
             countText: nearbyBarbers.length + " barbearia" + (nearbyBarbers.length === 1 ? "" : "s") + " por perto",
-            emptyMessage: "Ainda não encontrámos barbearias com coordenadas próximas da tua localização."
+            emptyMessage: "Não encontrámos barbearias próximas da tua localização."
           });
           renderResults(nearbyBarbers);
           updateSummary(nearbyBarbers, "", {
@@ -3014,7 +3014,7 @@
           }
 
           setLocateButtonState(false);
-          showHeroMessage("Mais perto de si", getLocateErrorMessage(error), "");
+          showHeroMessage("Mais perto de ti", getLocateErrorMessage(error), "");
         }, {
           enableHighAccuracy: true,
           timeout: 10000,
@@ -3165,12 +3165,12 @@
         const cleanTerm = String(term || "").trim();
         searchCount.textContent = "A mostrar " + list.length + (list.length === 1 ? " barbearia" : " barbearias");
         resultsVisiblePill.textContent = list.length
-          ? (settings.mode === "location" ? "Mais perto de si" : "Perfil e contactos")
+          ? (settings.mode === "location" ? "Mais perto de ti" : "Perfil e contactos")
           : "Sem resultados";
 
         if (settings.mode === "location") {
           if (!list.length) {
-            resultsMessage.textContent = "Ainda não encontrámos barbearias com coordenadas perto da tua localização.";
+            resultsMessage.textContent = "Não encontrámos barbearias próximas da tua localização.";
             return;
           }
 
@@ -3184,7 +3184,7 @@
         }
 
         if (!list.length) {
-          resultsMessage.textContent = "Ainda não encontrámos resultados para essa pesquisa. Experimenta outra cidade ou procura por outro nome.";
+          resultsMessage.textContent = "Não encontrámos resultados para esta pesquisa. Experimenta outra cidade ou procura por outro nome.";
           return;
         }
 
