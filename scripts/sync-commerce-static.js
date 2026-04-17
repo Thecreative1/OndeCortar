@@ -18,7 +18,7 @@ const NAV_SCRIPT = `
       if (!nav || !toggle || !navLinks) return;
 
       function setOpen(nextOpen) {
-        var mobile = window.innerWidth <= 760;
+        var mobile = window.innerWidth <= 900;
         nav.classList.toggle("is-open", nextOpen);
         document.body.classList.toggle("nav-open", nextOpen);
         toggle.setAttribute("aria-expanded", String(nextOpen));
@@ -64,7 +64,7 @@ const NAV_SCRIPT = `
       });
 
       window.addEventListener("resize", function() {
-        if (window.innerWidth > 760) {
+        if (window.innerWidth > 900) {
           setOpen(false);
         }
       });

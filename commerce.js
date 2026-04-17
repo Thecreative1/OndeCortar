@@ -329,10 +329,7 @@
   }
 
   function coreArticles() {
-    const list = articles.filter(function(item) {
-      return item.series === "core-2026";
-    });
-    return list.length ? list : articles;
+    return articles;
   }
 
   function currentSection() {
@@ -394,6 +391,7 @@
           '<a href="' + href("revista/") + '">Revista</a>' +
           '<a href="' + href("index.html#explorar") + '">Mapa</a>' +
           '<a href="' + href("faq.html") + '">FAQ</a>' +
+          '<a href="' + href("privacidade.html") + '">Privacidade</a>' +
         "</div>" +
       "</div></footer>"
     );
@@ -411,7 +409,7 @@
     }
 
     function setOpen(nextOpen) {
-      const mobile = window.innerWidth <= 760;
+      const mobile = window.innerWidth <= 900;
       nav.classList.toggle("is-open", nextOpen);
       document.body.classList.toggle("nav-open", nextOpen);
       toggle.setAttribute("aria-expanded", String(nextOpen));
@@ -457,7 +455,7 @@
     });
 
     window.addEventListener("resize", function() {
-      if (window.innerWidth > 760) {
+      if (window.innerWidth > 900) {
         setOpen(false);
       }
     });
@@ -1144,6 +1142,7 @@
     }] : []));
     const comparisonRows = (category.picks || []).map(function(item) {
       const product = productMap.get(item[1]);
+      if (!product) return "";
       return '<div class="comparison-row"><strong>' + e(item[0]) + '</strong><div><h3>' + e(product.name) + '</h3><p>' + e(product.summary) + '</p></div><a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Ver produto</a></div>';
     }).join("");
     return (
@@ -1395,7 +1394,11 @@
         "publisher": {
           "@type": "Organization",
           "name": "OndeCortar.pt",
-          "url": "https://ondecortar.pt/"
+          "url": "https://ondecortar.pt/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://ondecortar.pt/imagens/logo-ondecortar-round.png"
+          }
         }
       },
       {

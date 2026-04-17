@@ -5,7 +5,7 @@ const utils = require("../Barbeiros/barbearias-utils.js");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE_URL = "https://ondecortar.pt/";
-const TODAY = "2026-04-07";
+const TODAY = new Date().toISOString().slice(0, 10);
 const DEFAULT_OG_IMAGE = SITE_URL + "imagens/banner.jpg";
 
 function escapeHtml(value) {
