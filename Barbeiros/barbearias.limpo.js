@@ -5289,7 +5289,7 @@ const barbearias = [
   },
   {
     "nome": "Barbearia Pinto",
-    "slug": "barbearia-pinto",
+    "slug": "barbearia-pinto-vendas-novas",
     "distrito": "Évora",
     "concelho": "Vendas Novas",
     "municipality": "Vendas Novas",
@@ -12130,7 +12130,7 @@ const barbearias = [
   },
   {
     "nome": "O Barbeiro",
-    "slug": "o-barbeiro",
+    "slug": "o-barbeiro-moimenta-da-beira",
     "distrito": "Viseu",
     "concelho": "Moimenta da Beira",
     "municipality": "Moimenta da Beira",

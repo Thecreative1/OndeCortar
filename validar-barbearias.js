@@ -24,6 +24,21 @@ function isIsoDate(value) {
   return /^\d{4}-\d{2}-\d{2}$/.test(String(value || ""));
 }
 
+function allowedSlugs(item) {
+  const slugs = [utils.slugify(item.nome)];
+  [
+    item.city,
+    item.localidade,
+    item.concelho,
+    item.municipality
+  ].forEach(function(location) {
+    if (location) {
+      slugs.push(utils.slugify(item.nome + "-" + location));
+    }
+  });
+  return Array.from(new Set(slugs));
+}
+
 function validateItem(item, index) {
   const errors = [];
   const warnings = [];
@@ -58,7 +73,7 @@ function validateItem(item, index) {
     }
   });
 
-  if (item.slug !== utils.slugify(item.nome)) {
+  if (allowedSlugs(item).indexOf(item.slug) === -1) {
     errors.push(label + ": o slug nao corresponde ao nome.");
   }
 
