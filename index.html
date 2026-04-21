@@ -1087,6 +1087,10 @@
       padding: 22px;
     }
 
+    #resultsTitle {
+      scroll-margin-top: 112px;
+    }
+
     .panel-topline {
       display: flex;
       justify-content: space-between;
@@ -1998,7 +2002,7 @@
                 <strong id="heroResultsHeading">Resultados da pesquisa</strong>
                 <span class="pill" id="heroResultsCount">0 resultados</span>
               </div>
-              <a class="btn btn-secondary btn-small" href="#explorar">Ver todos os resultados</a>
+              <a class="btn btn-secondary btn-small" href="#resultsTitle" data-scroll-results>Ver todos os resultados</a>
             </div>
           </div>
 
@@ -4489,20 +4493,18 @@
       document.addEventListener("click", function(event) {
         const cityButton = event.target.closest("[data-city-search]");
         const mapButton = event.target.closest("[data-focus-marker]");
+        const resultsLink = event.target.closest("[data-scroll-results]");
+
+        if (resultsLink) {
+          event.preventDefault();
+          scrollToResults();
+        }
 
         if (cityButton) {
           const city = cityButton.getAttribute("data-city-search") || "";
           syncSearchInputs(city);
           updateDirectory(city);
-          const mapaSection = document.getElementById("mapa");
-          if (mapaSection) {
-            setTimeout(function() {
-              const header = document.querySelector(".site-header");
-              const offset = header ? header.offsetHeight + 16 : 80;
-              const top = mapaSection.getBoundingClientRect().top + window.pageYOffset - offset;
-              window.scrollTo({ top: top, behavior: "smooth" });
-            }, 50);
-          }
+          setTimeout(scrollToResults, 50);
         }
 
         if (mapButton) {
@@ -4564,6 +4566,23 @@
       function syncSearchInputs(value) {
         heroSearchInput.value = value;
         searchInput.value = value;
+      }
+
+      function scrollToResults() {
+        const target = document.getElementById("resultsTitle") || document.getElementById("resultsList") || document.getElementById("explorar");
+
+        if (!target) {
+          return;
+        }
+
+        const header = document.querySelector(".site-header");
+        const offset = header ? header.offsetHeight + 16 : 80;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: Math.max(0, top),
+          behavior: "smooth"
+        });
       }
 
       function saveSearchState(payload) {
