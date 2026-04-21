@@ -766,6 +766,11 @@ body[data-page="store"] .section--store-start {
   padding-top: 6px;
 }
 
+body[data-page="store"] .store-home-title {
+  max-width: none;
+  font-size: clamp(2rem, 4.1vw, 3rem);
+}
+
 body[data-page="store"] .store-start-header {
   align-items: end;
   margin-bottom: 16px;

@@ -1089,7 +1089,7 @@
     return (
       renderHeader() +
       '<main>' +
-        '<section class="section section--store-start" id="categorias"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Loja OndeCortar</span><h2>Escolhe menos. Acerta melhor.</h2><p>Máquinas, kits, navalhas e acessórios organizados para filtrar depressa, comparar com critério e evitar compras de catálogo.</p></div></div><div class="product-grid product-grid--top-choices">' + featured + '</div><div class="category-grid">' + categoryCards + '</div></div></section>' +
+        '<section class="section section--store-start" id="categorias"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Loja OndeCortar</span><h1 class="store-home-title">Escolhe menos. Acerta melhor.</h1><p>Máquinas, kits, navalhas e acessórios organizados para filtrar depressa, comparar com critério e evitar compras de catálogo.</p></div></div><div class="product-grid product-grid--top-choices">' + featured + '</div><div class="category-grid">' + categoryCards + '</div></div></section>' +
         '<section class="section" id="escolhas-por-necessidade"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Começar pelo uso</span><h2>Ainda não sabes por onde pegar?</h2><p>Parte do contexto real: casa, barba, manutenção ou presente. É a forma mais rápida de evitar ver opções que não te servem.</p></div></div><div class="store-need-grid">' + needCards + '</div></div></section>' +
         '<section class="section store-endcap-section"><div class="container"><div class="store-endcap-shell">' +
           renderDisclosure({ variant: "store" }) +
