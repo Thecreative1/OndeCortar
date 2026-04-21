@@ -1501,6 +1501,83 @@ function syncGeneratedSubdirectories(relativeDir, desiredSlugs) {
   });
 }
 
+function buildHomepageStaticList(barbers) {
+  const LI_STYLE = "padding:16px;border:1px solid #cfbfa2;border-radius:14px;background:#fbf5ea;";
+  const H4_STYLE = "margin:0 0 6px;font-size:1rem;font-family:'Plus Jakarta Sans',sans-serif;";
+  const P_STYLE  = "margin:4px 0 0;font-size:0.875rem;color:#4e473d;line-height:1.5;";
+
+  const items = barbers.map((barber) => {
+    const name = escapeHtml(barber.name);
+    const profileUrl = barber.profileUrl;
+    const city = barber.city || "";
+    const morada = trimText(barber.morada);
+
+    const address = morada
+      ? { "@type": "PostalAddress", "streetAddress": morada, "addressCountry": "PT",
+          ...(city ? { "addressLocality": city } : {}) }
+      : undefined;
+
+    const jsonLd = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": barber.name,
+      "url": absoluteUrl(profileUrl),
+      ...(address ? { "address": address } : {})
+    });
+
+    const cityLine   = city   ? `\n      <p style="${P_STYLE}">${escapeHtml(city)}</p>` : "";
+    const moradaLine = morada ? `\n      <p style="${P_STYLE}">${escapeHtml(morada)}</p>` : "";
+
+    return `    <li style="${LI_STYLE}">
+      <script type="application/ld+json">${jsonLd}<\/script>
+      <h4 style="${H4_STYLE}"><a href="${escapeHtml(profileUrl)}">${name}</a></h4>${cityLine}${moradaLine}
+    </li>`;
+  });
+
+  const UL_STYLE = "list-style:none;margin:0;padding:0;display:grid;gap:14px;";
+  return `  <ul style="${UL_STYLE}" aria-label="Lista de barbearias em Portugal">\n`
+    + items.join("\n") + "\n  </ul>";
+}
+
+function buildHomepageItemListJsonLd(barbers) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Barbearias em Portugal",
+    "url": SITE_URL,
+    "numberOfItems": barbers.length,
+    "itemListElement": barbers.map((barber, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": barber.name,
+      "url": absoluteUrl(barber.profileUrl)
+    }))
+  };
+  return '<script type="application/ld+json">' + JSON.stringify(schema) + "<\/script>";
+}
+
+function patchIndexHtml(staticListHtml, headJsonLd) {
+  const indexPath = path.join(ROOT, "index.html");
+  let html = fs.readFileSync(indexPath, "utf8");
+
+  const listRe   = /<!-- STATIC-LIST-START -->[\s\S]*?<!-- STATIC-LIST-END -->/;
+  const jsonLdRe = /<!-- JSON-LD-BARBEARIAS-START -->[\s\S]*?<!-- JSON-LD-BARBEARIAS-END -->/;
+
+  if (!listRe.test(html)) {
+    throw new Error("Marker <!-- STATIC-LIST-START --> não encontrado em index.html");
+  }
+  if (!jsonLdRe.test(html)) {
+    throw new Error("Marker <!-- JSON-LD-BARBEARIAS-START --> não encontrado em index.html");
+  }
+
+  html = html.replace(listRe,
+    "<!-- STATIC-LIST-START -->\n" + staticListHtml + "\n  <!-- STATIC-LIST-END -->");
+  html = html.replace(jsonLdRe,
+    "<!-- JSON-LD-BARBEARIAS-START -->\n  " + headJsonLd + "\n  <!-- JSON-LD-BARBEARIAS-END -->");
+
+  fs.writeFileSync(indexPath, html, "utf8");
+}
+
 function main() {
   const rawBarbers = loadBarbers();
   const data = buildSlugData(rawBarbers);
@@ -1547,10 +1624,16 @@ function main() {
     { loc: SITE_URL + "sitemap-revista.xml", lastmod: TODAY }
   ]));
 
+  patchIndexHtml(
+    buildHomepageStaticList(data.barbers),
+    buildHomepageItemListJsonLd(data.barbers)
+  );
+
   console.log(JSON.stringify({
     generatedBarbers: data.barbers.length,
     generatedCities: data.cities.length,
-    sitemaps: 5
+    sitemaps: 5,
+    homepageStaticList: data.barbers.length
   }, null, 2));
 }
 

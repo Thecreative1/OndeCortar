@@ -74,7 +74,10 @@
       "WebFetch(domain:linktr.ee)",
       "Bash(ls *)",
       "Bash(rm imagens/produtos/barberboss-kit.jpg imagens/produtos/cecotec-precisioncare.jpg imagens/produtos/estacaotrabalho.jpg imagens/produtos/la-toja-espuma.jpg imagens/produtos/longivia-pente.jpg imagens/produtos/luz-anel-led.svg imagens/produtos/luz.jpg imagens/produtos/proalo.jpg imagens/produtos/sapiens-navalha.jpg)",
-      "Bash(rm audit_article1_desktop.png audit_article1_mobile.png audit_article2_desktop_v2.png audit_article2_mobile_v2.png audit_article3_desktop_v2.png audit_article3_mobile_v2.png audit_home_desktop.png audit_home_mobile.png audit_product_desktop_v2.png audit_product_mobile_v2.png audit_store_desktop.png audit_topic_desktop.png audit_topic_mobile.png)"
+      "Bash(rm audit_article1_desktop.png audit_article1_mobile.png audit_article2_desktop_v2.png audit_article2_mobile_v2.png audit_article3_desktop_v2.png audit_article3_mobile_v2.png audit_home_desktop.png audit_home_mobile.png audit_product_desktop_v2.png audit_product_mobile_v2.png audit_store_desktop.png audit_topic_desktop.png audit_topic_mobile.png)",
+      "Bash(sed -n '1920,1923p' index.html)",
+      "Bash(sed -n '2125,2135p' index.html)",
+      "Bash(sed -n '3960,3965p' index.html)"
     ]
   }
 }
