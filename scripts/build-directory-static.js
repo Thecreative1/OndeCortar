@@ -881,7 +881,7 @@ function renderBaseStyles(extraStyles) {
     @media (max-width: 980px) {
       .hero-grid, .grid-2, .barber-grid, .city-grid { grid-template-columns: 1fr; }
     }
-    @media (max-width: 760px) {
+    @media (max-width: 1100px) {
       .nav:not([data-mobile-nav]) { flex-direction: column; align-items: stretch; border-radius: 28px; }
       .nav:not([data-mobile-nav]) .brand { justify-content: center; }
       .nav-links, .hero-actions, .card-actions, .footer-links { flex-direction: column; align-items: stretch; }
@@ -897,7 +897,7 @@ function renderHeader(prefix, currentSection) {
   return `
   <header class="site-header">
     <div class="container">
-      <nav class="nav" aria-label="Navegação principal" data-mobile-nav data-mobile-nav-breakpoint="900">
+      <nav class="nav" aria-label="Navegação principal" data-mobile-nav data-mobile-nav-breakpoint="1100">
         <div class="nav-main-row">
           <a class="brand" href="${prefix}index.html">
             <img src="${prefix}imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />

@@ -7,7 +7,7 @@
     const navLinks = navLinksId ? document.getElementById(navLinksId) : null;
     const toggleLabel = toggle ? toggle.querySelector(".nav-toggle-label") : null;
     const breakpointValue = nav ? Number(nav.getAttribute("data-mobile-nav-breakpoint")) : NaN;
-    const breakpoint = Number.isFinite(breakpointValue) ? breakpointValue : 900;
+    const breakpoint = Number.isFinite(breakpointValue) ? breakpointValue : 1100;
 
     if (!nav || !toggle || !navLinks || !backdrop) {
       return;

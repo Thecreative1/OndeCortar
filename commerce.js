@@ -409,7 +409,7 @@
     }
 
     function setOpen(nextOpen) {
-      const mobile = window.innerWidth <= 900;
+      const mobile = window.innerWidth <= 1100;
       nav.classList.toggle("is-open", nextOpen);
       document.body.classList.toggle("nav-open", nextOpen);
       toggle.setAttribute("aria-expanded", String(nextOpen));
@@ -455,7 +455,7 @@
     });
 
     window.addEventListener("resize", function() {
-      if (window.innerWidth > 900) {
+      if (window.innerWidth > 1100) {
         setOpen(false);
       }
     });

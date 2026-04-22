@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+.nav[data-mobile-nav] .nav-links .nav-cta {
+  color: #fff;
+}
+
 .nav[data-mobile-nav] .nav-main-row {
   display: flex;
   align-items: center;
@@ -68,7 +72,7 @@
   display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   body.nav-open {
     overflow: hidden;
   }
