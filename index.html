@@ -4361,6 +4361,7 @@
         robotsTag.setAttribute("content", "noindex,follow");
       }
 
+      document.addEventListener("DOMContentLoaded", function() {
       const directory = window.OndeCortarData;
       setupNavigation();
 
@@ -5422,6 +5423,7 @@
         map.panInside(marker.getLatLng(), overlayPadding);
         marker.openPopup();
       }
+      }); // DOMContentLoaded
     })();
   </script>
 </body>
