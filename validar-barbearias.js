@@ -25,7 +25,14 @@ function isIsoDate(value) {
 }
 
 function allowedSlugs(item) {
-  const slugs = [utils.slugify(item.nome)];
+  const sluggableName = String(item.nome || "")
+    .replace(/['’´`]/g, "")
+    .replace(/\bbarbearia\b/gi, "")
+    .trim();
+  const slugs = [
+    utils.slugify(item.nome),
+    utils.slugify(sluggableName)
+  ];
   [
     item.city,
     item.localidade,
@@ -34,9 +41,10 @@ function allowedSlugs(item) {
   ].forEach(function(location) {
     if (location) {
       slugs.push(utils.slugify(item.nome + "-" + location));
+      slugs.push(utils.slugify(sluggableName + "-" + location));
     }
   });
-  return Array.from(new Set(slugs));
+  return Array.from(new Set(slugs.filter(Boolean)));
 }
 
 function validateItem(item, index) {

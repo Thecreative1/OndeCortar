@@ -1,4 +1,12 @@
 {
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-directory-static.js",
+    "validate": "node validar-barbearias.js",
+    "audit:links": "node scripts/audit-site-links.js",
+    "smoke": "node scripts/smoke-missing-barbearias.js",
+    "test": "npm run validate && npm run build && npm run smoke && npm run audit:links"
+  },
   "devDependencies": {
     "@playwright/test": "^1.59.1"
   }

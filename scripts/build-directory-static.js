@@ -35,6 +35,13 @@ function loadBarbers() {
   return utils.obterBarbeariasPublicas(context.data || []);
 }
 
+function latestLastmod(entries, fallback) {
+  return (entries || []).reduce((latest, entry) => {
+    const value = String((entry && entry.lastmod) || "").trim();
+    return value && value > latest ? value : latest;
+  }, fallback || "1970-01-01");
+}
+
 function normalizar(value) {
   return utils.normalizarTexto(value);
 }
@@ -540,7 +547,7 @@ function buildSlugData(rawBarbers) {
 
   cities.forEach((city) => {
     city.barbearias = city.barbers.slice().sort((a, b) => a.name.localeCompare(b.name, "pt"));
-    city.lastmod = city.barbearias.reduce((latest, barber) => barber.lastmod > latest ? barber.lastmod : latest, TODAY);
+    city.lastmod = latestLastmod(city.barbearias);
     city.municipalityValues = uniqueNonEmpty(city.barbearias.map((barber) => barber.municipality));
     city.districtValues = uniqueNonEmpty(city.barbearias.map((barber) => barber.district));
     city.municipality = city.municipalityValues.length === 1 ? city.municipalityValues[0] : "";
@@ -555,7 +562,8 @@ function buildSlugData(rawBarbers) {
 
   return {
     barbers: barbers,
-    cities: Array.from(cities.values()).sort((a, b) => b.barbearias.length - a.barbearias.length || a.name.localeCompare(b.name, "pt"))
+    cities: Array.from(cities.values()).sort((a, b) => b.barbearias.length - a.barbearias.length || a.name.localeCompare(b.name, "pt")),
+    siteLastmod: latestLastmod(barbers, TODAY)
   };
 }
 
@@ -1598,12 +1606,12 @@ function main() {
   writeFile("barbearia.html", buildLegacyBarberRedirect());
 
   writeFile("sitemap-pages.xml", buildSitemap([
-    { loc: SITE_URL, lastmod: TODAY },
-    { loc: SITE_URL + "cidades/", lastmod: TODAY },
-    { loc: SITE_URL + "faq.html", lastmod: TODAY },
-    { loc: SITE_URL + "registar.html", lastmod: TODAY },
-    { loc: SITE_URL + "anunciar.html", lastmod: TODAY },
-    { loc: SITE_URL + "privacidade.html", lastmod: TODAY }
+    { loc: SITE_URL, lastmod: data.siteLastmod },
+    { loc: SITE_URL + "cidades/", lastmod: data.siteLastmod },
+    { loc: SITE_URL + "faq.html", lastmod: data.siteLastmod },
+    { loc: SITE_URL + "registar.html", lastmod: data.siteLastmod },
+    { loc: SITE_URL + "anunciar.html", lastmod: data.siteLastmod },
+    { loc: SITE_URL + "privacidade.html", lastmod: data.siteLastmod }
   ]));
 
   writeFile("sitemap-cidades.xml", buildSitemap(data.cities.map((city) => ({
@@ -1617,11 +1625,11 @@ function main() {
   }))));
 
   writeFile("sitemap.xml", buildSitemapIndex([
-    { loc: SITE_URL + "sitemap-pages.xml", lastmod: TODAY },
-    { loc: SITE_URL + "sitemap-barbearias.xml", lastmod: TODAY },
-    { loc: SITE_URL + "sitemap-cidades.xml", lastmod: TODAY },
-    { loc: SITE_URL + "sitemap-loja.xml", lastmod: TODAY },
-    { loc: SITE_URL + "sitemap-revista.xml", lastmod: TODAY }
+    { loc: SITE_URL + "sitemap-pages.xml", lastmod: data.siteLastmod },
+    { loc: SITE_URL + "sitemap-barbearias.xml", lastmod: data.siteLastmod },
+    { loc: SITE_URL + "sitemap-cidades.xml", lastmod: data.siteLastmod },
+    { loc: SITE_URL + "sitemap-loja.xml", lastmod: data.siteLastmod },
+    { loc: SITE_URL + "sitemap-revista.xml", lastmod: data.siteLastmod }
   ]));
 
   patchIndexHtml(
