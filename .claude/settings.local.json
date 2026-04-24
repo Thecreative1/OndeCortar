@@ -77,7 +77,19 @@
       "Bash(rm audit_article1_desktop.png audit_article1_mobile.png audit_article2_desktop_v2.png audit_article2_mobile_v2.png audit_article3_desktop_v2.png audit_article3_mobile_v2.png audit_home_desktop.png audit_home_mobile.png audit_product_desktop_v2.png audit_product_mobile_v2.png audit_store_desktop.png audit_topic_desktop.png audit_topic_mobile.png)",
       "Bash(sed -n '1920,1923p' index.html)",
       "Bash(sed -n '2125,2135p' index.html)",
-      "Bash(sed -n '3960,3965p' index.html)"
+      "Bash(sed -n '3960,3965p' index.html)",
+      "Bash(cat)",
+      "Bash(chmod +x /tmp/analyze.sh)",
+      "Bash(/tmp/analyze.sh)",
+      "Bash(chmod +x /tmp/extract.sh)",
+      "Bash(/tmp/extract.sh)",
+      "Bash(chmod +x /tmp/extract2.sh)",
+      "Bash(/tmp/extract2.sh)",
+      "Bash(chmod +x /tmp/full_analysis.sh)",
+      "Bash(/tmp/full_analysis.sh)",
+      "Bash(chmod +x /tmp/count_words.sh)",
+      "Bash(/tmp/count_words.sh)",
+      "Read(//tmp/**)"
     ]
   }
 }
