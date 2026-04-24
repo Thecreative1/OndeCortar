@@ -280,7 +280,7 @@
       title: "A história do poste de barbeiro: porque usamos este símbolo sem saber o que significa",
       metaTitle: "A história do poste de barbeiro: porque usamos este símbolo sem saber o que significa | Revista OndeCortar",
       metaDescription: "O poste de barbeiro está em quase todas as barbearias, mas pouca gente sabe de onde vem. Descobre a história real deste símbolo e o que significam as suas cores.",
-      ogImage: "https://ondecortar.pt/imagens/produtos/luz.jpg",
+      ogImage: "imagens/produtos/poste-barbeiro-classico.jpg",
       excerpt: "O poste de barbeiro está em quase todas as barbearias, mas pouca gente sabe de onde vem ou o que significam realmente as suas cores.",
       intro: "Há símbolos que vemos tantas vezes que deixamos de os questionar. O poste de barbeiro é um deles. Está à porta de barbearias em todo o mundo, aparece em logótipos, decoração e montras, e tornou-se quase sinónimo imediato de barbearia.",
       subIntro: "Mas a verdade é que a maioria das pessoas não sabe de onde vem este símbolo. A história é mais antiga, mais curiosa e mais útil para perceber porque continua a funcionar tão bem numa fachada moderna.",

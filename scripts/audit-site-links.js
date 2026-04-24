@@ -2,7 +2,8 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
-const IGNORE_DIRS = new Set([".git", ".claude", "imagens"]);
+const SITE_HOSTS = new Set(["ondecortar.pt", "www.ondecortar.pt"]);
+const IGNORE_DIRS = new Set([".git", ".claude", "imagens", "node_modules", "test-results"]);
 const HTML_FILES = [];
 const ISSUES = [];
 const anchorCache = new Map();
@@ -47,7 +48,28 @@ function getAnchors(filePath) {
 
 function normalizeTarget(currentFile, href) {
   const trimmed = String(href || "").trim();
-  if (!trimmed || /^(?:https?:|mailto:|tel:|javascript:|data:)/i.test(trimmed)) {
+  if (!trimmed || /^(?:mailto:|tel:|javascript:|data:)/i.test(trimmed)) {
+    return null;
+  }
+
+  if (/^https?:/i.test(trimmed)) {
+    try {
+      const url = new URL(trimmed);
+      if (!SITE_HOSTS.has(url.hostname.toLowerCase())) {
+        return null;
+      }
+      return normalizeTarget(currentFile, url.pathname + url.hash);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  return normalizeLocalTarget(currentFile, trimmed);
+}
+
+function normalizeLocalTarget(currentFile, href) {
+  const trimmed = String(href || "").trim();
+  if (!trimmed) {
     return null;
   }
 
@@ -79,6 +101,49 @@ function normalizeTarget(currentFile, href) {
     filePath: resolvedPath,
     hash
   };
+}
+
+function normalizeAssetTarget(currentFile, src) {
+  const trimmed = String(src || "").trim();
+  if (!trimmed || /^(?:data:|blob:|mailto:|tel:|javascript:)/i.test(trimmed)) {
+    return null;
+  }
+
+  if (/^https?:/i.test(trimmed)) {
+    try {
+      const url = new URL(trimmed);
+      if (!SITE_HOSTS.has(url.hostname.toLowerCase())) {
+        return null;
+      }
+      return normalizeLocalTarget(currentFile, url.pathname);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  return normalizeLocalTarget(currentFile, trimmed);
+}
+
+function collectAssetSources(contents) {
+  const sources = [];
+  const imgRegex = /<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi;
+  const metaImageRegex = /<meta\b(?=[^>]*(?:property|name)=["'](?:og:image|twitter:image)["'])[^>]*\bcontent=["']([^"']+)["'][^>]*>/gi;
+  const linkIconRegex = /<link\b(?=[^>]*\brel=["'][^"']*(?:icon|apple-touch-icon)[^"']*["'])[^>]*\bhref=["']([^"']+)["'][^>]*>/gi;
+  let match;
+
+  while ((match = imgRegex.exec(contents))) {
+    sources.push({ kind: "img_src", value: match[1] });
+  }
+
+  while ((match = metaImageRegex.exec(contents))) {
+    sources.push({ kind: "meta_image", value: match[1] });
+  }
+
+  while ((match = linkIconRegex.exec(contents))) {
+    sources.push({ kind: "icon_href", value: match[1] });
+  }
+
+  return sources;
 }
 
 function auditFile(filePath) {
@@ -121,6 +186,23 @@ function auditFile(filePath) {
       }
     }
   }
+
+  collectAssetSources(contents).forEach(({ kind, value }) => {
+    const target = normalizeAssetTarget(filePath, value);
+    if (!target) {
+      return;
+    }
+
+    if (!fs.existsSync(target.filePath)) {
+      ISSUES.push({
+        type: "broken_asset",
+        assetType: kind,
+        file: path.relative(ROOT, filePath),
+        src: value,
+        target: path.relative(ROOT, target.filePath)
+      });
+    }
+  });
 }
 
 walk(ROOT);
