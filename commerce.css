@@ -855,6 +855,84 @@ body[data-page="store"] .store-start-actions .btn {
   padding: 10px;
 }
 
+.magazine-decision-section {
+  position: relative;
+  padding-top: 20px;
+}
+
+.magazine-decision-grid,
+.magazine-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.magazine-decision-card {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  min-height: 100%;
+  padding: 20px;
+  border: 1px solid rgba(176, 138, 74, 0.42);
+  border-radius: var(--radius-md);
+  background:
+    radial-gradient(circle at top right, rgba(166, 119, 45, 0.16), transparent 38%),
+    linear-gradient(180deg, rgba(251, 246, 238, 0.98), rgba(242, 231, 212, 0.96));
+  box-shadow: 0 18px 42px rgba(31, 25, 19, 0.08);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.magazine-decision-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(166, 119, 45, 0.78);
+  box-shadow: 0 22px 54px rgba(31, 25, 19, 0.12);
+}
+
+.magazine-decision-card h3 {
+  margin: 0;
+  font-size: 1.18rem;
+  line-height: 1.2;
+}
+
+.magazine-decision-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.magazine-decision-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-self: end;
+  margin-top: auto;
+}
+
+.magazine-products-section .section-header {
+  align-items: end;
+}
+
+.magazine-product-pick {
+  grid-template-columns: 94px minmax(0, 1fr);
+  align-items: start;
+  background: rgba(251, 246, 238, 0.98);
+}
+
+.magazine-product-pick img {
+  width: 94px;
+  height: 94px;
+}
+
+.magazine-product-pick strong {
+  display: block;
+  margin: 4px 0 6px;
+  line-height: 1.18;
+}
+
+.magazine-product-pick p {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
 .magazine-story-column {
   padding: 22px;
   align-content: start;
@@ -2105,6 +2183,8 @@ body[data-page="article"] .article-header p {
 
   body[data-page="store"] #categorias .category-grid,
   .store-need-grid,
+  .magazine-decision-grid,
+  .magazine-product-grid,
   .store-guide-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2297,6 +2377,8 @@ body[data-page="article"] .article-header p {
   .need-grid,
   .category-grid,
   .comparison-grid,
+  .magazine-decision-grid,
+  .magazine-product-grid,
   .article-grid,
   .hub-grid,
   .quick-answer-grid,
@@ -2385,6 +2467,8 @@ body[data-page="article"] .article-header p {
 
   body[data-page="store"] #categorias .category-grid,
   .store-need-grid,
+  .magazine-decision-grid,
+  .magazine-product-grid,
   .store-guide-row {
     grid-template-columns: 1fr;
   }

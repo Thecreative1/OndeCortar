@@ -351,7 +351,7 @@
 
   function renderHeader() {
     const section = currentSection();
-    const ctaLabel = section === "revista" ? "Ver últimos guias" : "Ver melhores opções";
+    const ctaLabel = section === "revista" ? "Ver loja recomendada" : "Ver melhores opções";
     return (
       '<header class="site-header"><div class="container"><nav class="nav" aria-label="Navegação principal">' +
         '<div class="nav-main-row">' +
@@ -373,7 +373,7 @@
           '<a class="' + (section === "loja" ? "is-current" : "") + '" href="' + href("loja/") + '">Loja</a>' +
           '<a class="' + (section === "revista" ? "is-current" : "") + '" href="' + href("revista/") + '">Revista</a>' +
           '<a href="' + href("faq.html") + '">FAQ</a>' +
-          '<a class="nav-cta" href="' + (section === "revista" ? href("revista/") : href("loja/")) + '">' + e(ctaLabel) + '</a>' +
+          '<a class="nav-cta" href="' + href("loja/") + '">' + e(ctaLabel) + '</a>' +
         "</div>" +
       '</nav><button class="nav-backdrop" type="button" aria-label="Fechar menu" aria-hidden="true" data-nav-backdrop hidden></button></div></header>'
     );
@@ -1009,6 +1009,42 @@
     );
   }
 
+  function renderMagazineDecisionCard(item) {
+    const article = articleMap.get(item.article);
+    const category = categoryMap.get(item.category);
+    if (!article || !category) return "";
+    return (
+      '<article class="magazine-decision-card">' +
+        '<span class="tag">' + e(item.label) + '</span>' +
+        '<h3>' + e(item.title) + '</h3>' +
+        '<p>' + e(item.copy) + '</p>' +
+        '<div class="magazine-decision-actions">' +
+          '<a class="btn btn-primary btn-small" href="' + articleHref(article.slug) + '">' + e(item.articleLabel || articleActionLabel(article)) + '</a>' +
+          '<a class="btn btn-soft btn-small" href="' + editorialCategoryHref(category.slug) + '">' + e(item.categoryLabel || categoryActionLabel(category)) + '</a>' +
+        '</div>' +
+      '</article>'
+    );
+  }
+
+  function renderMagazineProductPick(item) {
+    const product = productMap.get(item.product);
+    if (!product) return "";
+    return (
+      '<article class="shop-mini-card magazine-product-pick">' +
+        '<img src="' + href(product.image) + '" alt="' + e(product.alt || product.name) + '" loading="lazy" />' +
+        '<div>' +
+          '<span class="tag">' + e(item.label) + '</span>' +
+          '<strong>' + e(product.name) + '</strong>' +
+          '<p>' + e(item.note || product.summary) + '</p>' +
+          '<div class="card-actions">' +
+            '<a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a>' +
+            '<a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Ver análise</a>' +
+          '</div>' +
+        '</div>' +
+      '</article>'
+    );
+  }
+
   function renderStoreHome() {
     const canonical = "https://ondecortar.pt/loja/";
     setMeta("Loja OndeCortar | Seleção curta para comprar melhor", "Máquinas, kits, navalhas e acessórios escolhidos com critério, organizados por uso e por categoria.", canonical);
@@ -1242,8 +1278,47 @@
     const leadCover = leadArticle ? articleCoverData(leadArticle) : null;
     const leadCategory = leadArticle ? articlePrimaryCategory(leadArticle) : null;
     const featuredCategories = collectMagazineCategories(featured.slice(0, 6), [], 4);
+    const decisionCards = [
+      {
+        label: "Cabelo em casa",
+        title: "Quero uma máquina sem comprar às cegas",
+        copy: "Começa pelo guia certo e passa direto para as máquinas que vale mesmo a pena comparar.",
+        article: "melhores-maquinas-para-cortar-cabelo-em-casa",
+        category: "maquinas-de-cortar",
+        articleLabel: "Ler guia de máquinas",
+        categoryLabel: "Comparar máquinas"
+      },
+      {
+        label: "Barba e rotina",
+        title: "Quero montar uma rotina simples de barba",
+        copy: "Percebe o essencial antes de comprares kits, óleos ou acessórios que podem ficar parados.",
+        article: "como-montar-uma-rotina-simples-de-barba-em-casa",
+        category: "kits-de-barba",
+        articleLabel: "Ver rotina simples",
+        categoryLabel: "Ver kits úteis"
+      },
+      {
+        label: "Pele sensível",
+        title: "Quero reduzir irritação ao fazer a barba",
+        copy: "Se a pele reage mal, escolhe primeiro o processo e só depois o produto.",
+        article: "como-reduzir-irritacao-ao-fazer-a-barba",
+        category: "cremes-e-espumas",
+        articleLabel: "Reduzir irritação",
+        categoryLabel: "Ver cremes e pré-barba"
+      },
+      {
+        label: "Presente",
+        title: "Quero oferecer algo com menos margem de erro",
+        copy: "Encontra kits e conjuntos com lógica real, em vez de caixas bonitas cheias de ruído.",
+        article: "melhor-kit-de-barba-para-oferecer",
+        category: "para-oferecer",
+        articleLabel: "Ver guia de presentes",
+        categoryLabel: "Ver opções para oferecer"
+      }
+    ];
+    const productPicks = featuredPicks.slice(0, 4);
     const canonical = "https://ondecortar.pt/revista/";
-    setMeta("Revista OndeCortar | Guias de compra, comparações e uso prático", "Guias de compra, comparações e artigos práticos para escolheres produtos de barbearia com mais segurança.", canonical);
+    setMeta("Revista OndeCortar | Guias que ajudam a comprar melhor", "Guias de compra, comparações e atalhos para escolher produtos de barbearia com mais segurança antes de passar para a loja.", canonical);
     setStructuredData([
       {
         "@context": "https://schema.org",
@@ -1288,9 +1363,9 @@
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container">' +
-          '<div class="section-header magazine-home-header"><div><span class="eyebrow">Revista OndeCortar</span><h1>Guias, comparações e respostas para perceber melhor</h1><p>Artigos práticos sobre o que funciona, o que evitar e as diferenças reais entre opções.</p></div><div class="hero-actions"><a class="btn btn-primary" href="#artigos">Ver últimos guias</a><a class="btn btn-secondary" href="#seccoes">Explorar temas</a></div></div>' +
+          '<div class="section-header magazine-home-header"><div><span class="eyebrow">Revista OndeCortar</span><h1>Percebe primeiro. Compra melhor depois.</h1><p>Guias práticos para saíres da dúvida certa para a categoria ou produto mais provável de fazer sentido.</p></div><div class="hero-actions"><a class="btn btn-primary" href="#atalhos-de-compra">Encontrar o meu caso</a><a class="btn btn-secondary" href="' + href("loja/") + '">Ir para a loja</a></div></div>' +
           '<div class="magazine-editorial-grid">' +
-            (leadArticle ? '<article class="editorial-card magazine-feature-card"><div class="magazine-feature-copy"><div class="meta-row"><span class="tag">Artigo em destaque</span>' + (leadCategory ? '<span class="tag">' + e(leadCategory.title) + '</span>' : "") + '</div><h2>' + e(leadArticle.title) + '</h2><p>' + e(leadArticle.intro || leadArticle.excerpt) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + articleHref(leadArticle.slug) + '">' + e(articleActionLabel(leadArticle)) + '</a><a class="btn btn-secondary" href="#artigos">Explorar mais leituras</a></div></div><div class="magazine-feature-media">' +
+            (leadArticle ? '<article class="editorial-card magazine-feature-card"><div class="magazine-feature-copy"><div class="meta-row"><span class="tag">Ponto de entrada</span>' + (leadCategory ? '<span class="tag">' + e(leadCategory.title) + '</span>' : "") + '</div><h2>' + e(leadArticle.title) + '</h2><p>' + e(leadArticle.intro || leadArticle.excerpt) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + articleHref(leadArticle.slug) + '">' + e(articleActionLabel(leadArticle)) + '</a>' + (leadCategory ? '<a class="btn btn-secondary" href="' + editorialCategoryHref(leadCategory.slug) + '">' + e(categoryActionLabel(leadCategory)) + '</a>' : '<a class="btn btn-secondary" href="#artigos">Explorar mais leituras</a>') + '</div></div><div class="magazine-feature-media">' +
               '<a class="article-thumb article-thumb--' + leadCover.kind + '" href="' + articleHref(leadArticle.slug) + '">' +
                 '<img src="' + leadCover.src + '" alt="' + e(leadCover.alt) + '" loading="lazy" />' +
               '</a>' +
@@ -1298,6 +1373,8 @@
             '<aside class="editorial-card magazine-story-column"><div class="magazine-story-column-header"><span class="eyebrow">Últimos artigos</span><h2>O que ler a seguir</h2><p>Mais leituras para aprofundares o tema enquanto ainda tens perguntas em aberto.</p></div><div class="magazine-story-list">' + spotlightArticles.map(renderMagazineStoryItem).join("") + '</div></aside>' +
           '</div>' +
         '</div></section>' +
+        '<section class="section magazine-decision-section" id="atalhos-de-compra"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Atalhos de compra</span><h2>Qual é a tua dúvida agora?</h2><p>Escolhe o cenário mais parecido contigo. Cada caminho começa com contexto editorial e termina numa categoria da loja.</p></div></div><div class="magazine-decision-grid">' + decisionCards.map(renderMagazineDecisionCard).join("") + '</div></div></section>' +
+        (productPicks.length ? '<section class="section magazine-products-section"><div class="container"><div class="section-header"><div><span class="eyebrow">Da revista para a loja</span><h2>Produtos que aparecem mais nos guias</h2><p>Se já tens contexto suficiente, estes são bons pontos de partida para comparar preço, uso e alternativa.</p></div><div class="hero-actions"><a class="btn btn-secondary" href="' + href("loja/") + '">Ver loja completa</a></div></div><div class="magazine-product-grid">' + productPicks.map(renderMagazineProductPick).join("") + '</div></div></section>' : "") +
         renderEditorialTrustSection({
           eyebrow: "Como trabalhamos",
           title: "Contexto antes de tudo. Sempre.",
