@@ -491,9 +491,9 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .stat-item { display: flex; flex-direction: column; gap: 4px; align-items: center; }
 .stat-item strong {
   font-family: var(--oc-font-display); font-weight: 800;
-  font-size: clamp(1.5rem, 3vw, 2rem); color: var(--oc-ink); letter-spacing: -0.03em;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem); color: var(--oc-ink); letter-spacing: -0.03em;
 }
-.stat-item span { font-size: 13px; color: var(--oc-muted); }
+.stat-item span { font-size: 13px; color: var(--oc-muted); font-weight: 500; }
 
 /* ─── Cities Section (dark ink) ──────────────────────────────── */
 .cities-section {
@@ -638,12 +638,13 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 .feature-card:hover { border-color: var(--oc-ink); transform: translateY(-2px); box-shadow: var(--oc-shadow-md); }
 .feature-visual {
-  height: 76px; background: var(--feature-bg, var(--oc-paper-warm));
+  height: 88px; background: var(--feature-bg, var(--oc-clay-soft));
   display: flex; align-items: center; justify-content: center;
 }
 .feature-visual strong {
-  font-family: var(--oc-font-display); font-size: 22px; font-weight: 800;
-  color: var(--feature-fg, var(--oc-ink));
+  font-family: var(--oc-font-display); font-size: 24px; font-weight: 800;
+  color: var(--feature-fg, var(--oc-clay-deep));
+  letter-spacing: -0.02em;
 }
 .feature-copy { padding: 14px; display: flex; flex-direction: column; gap: 5px; }
 .feature-copy h3 a {
@@ -674,9 +675,14 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .site-footer {
   background: var(--oc-ink); color: var(--oc-paper); padding: 52px 0 0;
 }
+/* Override old CSS that renders footer-shell as a cream card */
 .footer-shell {
   display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 28px;
   padding-bottom: 44px; border-bottom: 1px solid var(--oc-ink-line);
+  background: transparent !important;
+  border-radius: 0 !important;
+  margin-inline: 0 !important;
+  box-shadow: none !important;
 }
 .footer-brand-col .brand {
   font-family: var(--oc-font-display); font-size: 19px; font-weight: 800;
@@ -690,10 +696,10 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   font-size: 11px; font-weight: 700; color: var(--oc-paper);
   letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 3px;
 }
-.footer-links-col a { font-size: 13px; color: rgba(244,239,227,.6); text-decoration: none; transition: color var(--oc-dur-fast) var(--oc-ease-out); }
+.footer-links-col a { font-size: 13px; color: rgba(244,239,227,.75); text-decoration: none; transition: color var(--oc-dur-fast) var(--oc-ease-out); }
 .footer-links-col a:hover { color: var(--oc-paper); }
 .footer-bottom {
-  padding: 16px 0; font-size: 11px; color: rgba(244,239,227,.3); text-align: center;
+  padding: 16px 0; font-size: 11px; color: rgba(244,239,227,.45); text-align: center;
 }
 
 /* Hide old footer elements */
