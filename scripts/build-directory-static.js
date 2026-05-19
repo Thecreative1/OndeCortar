@@ -1144,10 +1144,7 @@ function renderProfilePage(barber, citiesMap) {
       '<h2 class="oc-owner__headline" style="font-family:var(--serif);font-weight:700;font-size:' + (isPromoted ? "28" : "36") + 'px;letter-spacing:-0.025em;line-height:1.02;margin-bottom:12px">' + headline + "<\/h2>" +
       '<p style="font-size:14.5px;line-height:1.55;color:rgba(242,236,223,.78);margin-bottom:' + (isPromoted ? "18" : "22") + 'px">' + H(body) + "<\/p>" +
       bullets +
-      '<div style="display:flex;flex-direction:column;gap:10px">' +
-        '<a href="' + H(prefix) + 'registar.html" class="oc-btn oc-btn--gold" style="width:100%">' + (isPromoted ? "Reclamar e completar" : "Atualizar perfil") + " " + iArrow + "<\/a>" +
-        (!isPromoted ? '<a href="' + H(prefix) + 'registar.html" class="oc-btn" style="width:100%;background:transparent;color:var(--paper);border:1px solid rgba(242,236,223,.25)">Reclamar esta ficha<\/a>' : "") +
-      "<\/div>" +
+      '<a href="' + H(prefix) + 'registar.html" class="oc-btn oc-btn--gold" style="width:100%">' + (isPromoted ? "Reclamar e completar" : "Atualizar perfil") + " " + iArrow + "<\/a>" +
     "<\/div>";
   }
 
