@@ -4344,6 +4344,43 @@
       const stats = directory.getStats();
       const popularCities = directory.getPopularCities(8);
       const allBarbers = sortBarbers(directory.getBarbers());
+
+      // ─── Region data (must be before renderRegionChips call) ──────
+      var REGIOES_PT = {
+        "Norte":    ["viana do castelo","esposende","caminha","valenca","melgaco","moncao","braga",
+                     "guimaraes","fafe","famalicao","vila nova de famalicao","santo tirso","porto",
+                     "matosinhos","vila nova de gaia","gondomar","maia","lousada","espinho",
+                     "vila real","chaves","macedo de cavaleiros","braganca","sabrosa","lamego",
+                     "peso da regua","mirandela","vinhais","arcos de valdevez","povoa de lanhoso",
+                     "barcelos","penafiel","amarante","felgueiras","baguim do monte rio tinto",
+                     "paredes de coura","montalegre"],
+        "Centro":   ["aveiro","agueda","ovar","sao joao da madeira","s joao da madeira","estarreja",
+                     "tocha","pindelo","coimbra","figueira da foz","lousa","arganil","ansiao",
+                     "tomar","ourem","caldas da rainha","nazare","leiria","viseu","moimenta da beira",
+                     "sernancelhe","aguiar da beira","guarda","pinhel","figueira de castelo rodrigo",
+                     "castelo branco","covilha","fundao","proenca-a-nova","serta","alijo","carapecos",
+                     "santa luzia"],
+        "Lisboa":   ["lisboa","sintra","loures","odivelas","amadora","oeiras","cascais","carnaxide",
+                     "prior velho","bucelas","povoa de santa iria","almada","seixal","barreiro",
+                     "montijo","azeitao","setubal","alcochete","samora correia","alcantara",
+                     "falagueira-venda nova amadora","parede jardins da parede","torres vedras",
+                     "mafra","quinta da redonda"],
+        "Alentejo": ["evora","montemor-o-novo","vendas novas","estremoz","portalegre","ponte de sor",
+                     "beja","grandola","santiago do cacem","sines","ourique","aljustrel",
+                     "castro verde","serpa","alcacer do sal","almodovar","cercal do alentejo",
+                     "mertola","odemira","santarem","borba","vila vicosa","alenquer"],
+        "Algarve":  ["faro","lagos","portimao","albufeira","loule","tavira",
+                     "vila real de santo antonio","olhao","sao bras de alportel","monte gordo",
+                     "cabanas de tavira","lagoa","monchique","silves","vila nova de cacela"],
+        "Ilhas":    ["funchal","calheta","ponta delgada","ilha terceira","ilha do faial",
+                     "ilha do pico","sao martinho","horta angustias"]
+      };
+
+      function normCity(str) {
+        return (str || "").toLowerCase()
+          .normalize("NFD").replace(/[̀-ͯ]/g, "")
+          .replace(/[()]/g, "").replace(/\s+/g, " ").trim();
+      }
       const allBarbersBySlug = new Map(allBarbers.map(function(barber) {
         return [barber.slug, barber];
       }));
@@ -4385,7 +4422,7 @@
         target.textContent = stats.total;
       });
 
-      renderCityChips(directoryCities, popularCities);
+      renderRegionChips(directoryCities);
       renderFeatured();
       renderCities();
 
@@ -4464,6 +4501,7 @@
       }
 
       document.addEventListener("click", function(event) {
+        const regionButton = event.target.closest("[data-region-search]");
         const cityButton = event.target.closest("[data-city-search]");
         const mapButton = event.target.closest("[data-focus-marker]");
         const resultsLink = event.target.closest("[data-scroll-results]");
@@ -4471,6 +4509,13 @@
         if (resultsLink) {
           event.preventDefault();
           scrollToResults();
+        }
+
+        if (regionButton) {
+          const regiao = regionButton.getAttribute("data-region-search") || "";
+          filterByRegiao(regiao);
+          setTimeout(scrollToResults, 50);
+          return;
         }
 
         if (cityButton) {
@@ -4788,7 +4833,7 @@
       function getHeroOverlayPadding() {
         const fallbackPadding = {
           paddingTopLeft: [36, 36],
-          paddingBottomRight: [36, 36]
+          paddingBottomRight: [36, 56]
         };
 
         if (!heroMapShell || !heroSearchCard) {
@@ -4797,6 +4842,11 @@
 
         const shellRect = heroMapShell.getBoundingClientRect();
         const cardRect = heroSearchCard.getBoundingClientRect();
+
+        // Two-column layout: search card is left of map shell, no overlay → minimal padding
+        if (cardRect.right <= shellRect.left + 10) {
+          return fallbackPadding;
+        }
         const resultsVisible = heroResults && !heroResults.hidden;
         const resultsRect = resultsVisible ? heroResults.getBoundingClientRect() : null;
         const mapCountRect = heroMapCount ? heroMapCount.getBoundingClientRect() : null;
@@ -4869,8 +4919,8 @@
       function getResultsMapFitOptions(resultCount) {
         const overlayPadding = getHeroOverlayPadding();
         const maxZoom = state.userCoords
-          ? 11
-          : (resultCount >= 6 ? 9 : (resultCount >= 3 ? 10 : 11));
+          ? 13
+          : (resultCount >= 6 ? 12 : (resultCount >= 3 ? 13 : 14));
 
         return {
           paddingTopLeft: [
@@ -5037,11 +5087,55 @@
         });
       }
 
-      function renderCityChips(container, list) {
-        if (!container) {
-          return;
+      function getRegiaoForCity(cityRaw) {
+        var cn = normCity(cityRaw);
+        var keys = Object.keys(REGIOES_PT);
+        for (var i = 0; i < keys.length; i++) {
+          if (REGIOES_PT[keys[i]].indexOf(cn) >= 0) return keys[i];
         }
+        return null;
+      }
 
+      function filterByRegiao(regiao) {
+        var cidades = REGIOES_PT[regiao] || [];
+        var filtered = sortBarbers(allBarbers.filter(function(b) {
+          return cidades.indexOf(normCity(b.city)) >= 0;
+        }));
+        state.locateRequestId += 1;
+        clearUserLocation();
+        setLocateButtonState(false);
+        map.closePopup();
+        state.currentTerm = regiao;
+        state.results = filtered;
+        syncSearchInputs(regiao);
+        renderHeroResults(filtered, regiao, { title: "Barbearias — " + regiao });
+        renderResults(filtered);
+        updateSummary(filtered, regiao);
+        renderMarkers(filtered);
+        // Mark active chip
+        const chips = directoryCities ? directoryCities.querySelectorAll("[data-region-search]") : [];
+        chips.forEach(function(c) { c.classList.toggle("is-active", c.getAttribute("data-region-search") === regiao); });
+      }
+
+      function renderRegionChips(container) {
+        if (!container) return;
+        var counts = {};
+        Object.keys(REGIOES_PT).forEach(function(r) { counts[r] = 0; });
+        allBarbers.forEach(function(b) {
+          var r = getRegiaoForCity(b.city);
+          if (r) counts[r]++;
+        });
+        container.innerHTML = Object.keys(REGIOES_PT).map(function(regiao) {
+          return '<button class="city-chip" type="button" data-region-search="' +
+            directory.escapeHtml(regiao) + '">' +
+            directory.escapeHtml(regiao) +
+            ' <span aria-hidden="true">(' + (counts[regiao] || 0) + ')</span>' +
+          '</button>';
+        }).join("");
+      }
+
+      function renderCityChips(container, list) {
+        if (!container) return;
         container.innerHTML = list.map(function(item) {
           return '<button class="city-chip" type="button" data-city-search="' + directory.escapeHtml(item.city) + '">' +
             directory.escapeHtml(item.city) +
