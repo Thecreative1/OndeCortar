@@ -1897,7 +1897,7 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="oc-style.css" />
+  <link rel="stylesheet" href="oc-style.css?v=20260519-nav2" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -1943,6 +1943,8 @@
         <a href="#cidades">Cidades</a>
         <a href="revista/">Magazine</a>
         <a href="loja/">Loja</a>
+        <a class="nav-mobile-link nav-menu-cta" href="registar.html">+ Adicionar barbearia</a>
+        <a class="nav-mobile-link nav-menu-login" href="registar.html">Entrar</a>
       </div>
 
       <div class="nav-actions">
@@ -1965,6 +1967,7 @@
   <main id="main-content">
 
     <!-- ── Directory Tool ──────────────────────────────────────── -->
+    <span id="explorar" class="sr-only" aria-hidden="true"></span>
     <section class="directory-tool" id="mapa" aria-label="Pesquisa de barbearias em Portugal">
 
       <!-- Left column: search + results -->
@@ -4544,6 +4547,7 @@
           nav.classList.toggle("is-open", nextOpen);
           document.body.classList.toggle("nav-open", nextOpen);
           toggle.setAttribute("aria-expanded", String(nextOpen));
+          toggle.setAttribute("aria-label", nextOpen ? "Fechar menu" : "Menu");
         }
 
         toggle.addEventListener("click", function() {
@@ -5487,6 +5491,10 @@
         map.setView(marker.getLatLng(), 13, { animate: true });
         map.panInside(marker.getLatLng(), overlayPadding);
         marker.openPopup();
+
+        if (window.innerWidth <= 860 && heroMapShell) {
+          heroMapShell.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       }
       }); // DOMContentLoaded
     })();
