@@ -1025,15 +1025,23 @@ function renderBarberCard(barber, prefix, options) {
 function renderProfilePage(barber, citiesMap) {
   const prefix = "../../";
   const city = barber.citySlug ? citiesMap.get(barber.citySlug) : null;
-  const sameCity = city ? city.barbearias.filter((item) => item.slug !== barber.slug).slice(0, 3) : [];
+  const sameCity = city ? city.barbearias.filter((i) => i.slug !== barber.slug).slice(0, 3) : [];
   const canonical = absoluteUrl(barber.profileUrl);
-  const hierarchyEntries = buildGeoHierarchy(barber, { showZone: true });
+
+  // ── Derived flags
+  const lastmodDate = barber.lastmod ? new Date(barber.lastmod) : null;
+  const daysSinceUpdate = lastmodDate ? Math.floor((Date.now() - lastmodDate.getTime()) / 86400000) : 999;
+  const isUpdatedRecent = daysSinceUpdate <= 90;
+  const isMinimal = !barber.horario && !barber.email && !barber.website;
+
+  // ── SEO
   const title = barber.city
     ? barber.name + " " + locativeLabel(barber.city) + " | Contactos, morada e mapa | OndeCortar.pt"
     : barber.name + " | Contactos, morada e mapa | OndeCortar.pt";
   const description = barber.city
-    ? "Vê morada, telefone, mapa, horário e links úteis de " + barber.name + " " + locativeLabel(barber.city) + "."
-    : "Vê morada, telefone, mapa, horário e links úteis de " + barber.name + ".";
+    ? "Vê morada, telefone, mapa e contactos de " + barber.name + " " + locativeLabel(barber.city) + ". Diretório de barbearias em Portugal."
+    : "Vê morada, telefone, mapa e contactos de " + barber.name + ". Diretório de barbearias em Portugal.";
+
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -1050,10 +1058,11 @@ function renderProfilePage(barber, citiesMap) {
     },
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "HairSalon",
       "name": barber.name,
       "url": canonical,
       "telephone": barber.telefone ? String(barber.telefone).replace(/\s+/g, " ") : undefined,
+      "email": barber.email || undefined,
       "address": barber.morada ? {
         "@type": "PostalAddress",
         "streetAddress": [barber.street, barber.streetNumber, barber.complement].filter(Boolean).join(" "),
@@ -1063,146 +1072,266 @@ function renderProfilePage(barber, citiesMap) {
         "addressCountry": "PT"
       } : undefined,
       "openingHours": barber.horario || undefined,
-      "sameAs": barber.sameAs.length ? barber.sameAs : undefined,
+      "sameAs": barber.sameAs && barber.sameAs.length ? barber.sameAs : undefined,
       "geo": Array.isArray(barber.coords) ? {
         "@type": "GeoCoordinates",
         "latitude": barber.coords[0],
         "longitude": barber.coords[1]
       } : undefined
     }
-  ];
-  const mapHead = Array.isArray(barber.coords)
-    ? `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" crossorigin="anonymous" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==" crossorigin="anonymous"></script>`
+  ].map((d) => { const c = Object.assign({}, d); Object.keys(c).forEach((k) => c[k] === undefined && delete c[k]); return c; });
+  const jsonLd = structuredData.map((d) => '  <script type="application/ld+json">' + JSON.stringify(d) + "<\/script>").join("\n");
+
+  // ── SVG icons (inline, 18px, stroke 1.5)
+  const iPhone   = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/><\/svg>';
+  const iPin     = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/><\/svg>';
+  const iGlobe   = '<svg class="oc-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/><\/svg>';
+  const iMail    = '<svg class="oc-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/><\/svg>';
+  const iArrow   = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/><\/svg>';
+  const iArrowUR = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/><\/svg>';
+  const iArrowL  = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="M19 12H5m5 5-5-5 5-5"/><\/svg>';
+  const iShare   = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="M12 16V4m-5 5 5-5 5 5M5 14v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5"/><\/svg>';
+  const iSciss   = '<svg class="oc-icon" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/><\/svg>';
+  const iCheck   = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/><\/svg>';
+  const iBadge   = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="m12 3 2 2.5L17 5l.5 3L20 9l-1 3 1 3-2.5 1L17 19l-3-.5L12 21l-2-2.5L7 19l-.5-3L4 15l1-3-1-3 2.5-1L7 5l3 .5z"/><path d="m9 12 2 2 4-4"/><\/svg>';
+  const iSpark   = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/><\/svg>';
+  const iInsta   = '<svg class="oc-icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/><\/svg>';
+
+  // ── Helpers
+  function H(s) { return escapeHtml(String(s || "")); }
+
+  function contactRow(icon, label, value, actionLabel, actionHref) {
+    if (!value) return "";
+    const disp = H(value.length > 42 ? value.substring(0, 40) + "…" : value);
+    const act = actionHref
+      ? '<a href="' + H(actionHref) + '" class="oc-contact-row__action"' + (actionHref.startsWith("http") ? ' target="_blank" rel="noopener noreferrer"' : "") + ">" + H(actionLabel) + "<\/a>"
+      : '<button class="oc-contact-row__action" onclick="navigator.clipboard&&navigator.clipboard.writeText(' + JSON.stringify(value) + ')">' + H(actionLabel) + "<\/button>";
+    return '<div class="oc-contact-row"><span style="color:var(--subtext)">' + icon + "<\/span><div style=\"min-width:0\"><div class=\"oc-contact-row__label\">" + H(label) + "<\/div><div class=\"oc-contact-row__value\">" + disp + "<\/div><\/div>" + act + "<\/div>";
+  }
+
+  function relatedCard(item) {
+    const ph = '<div class="oc-photo oc-related__photo"><div class="oc-photo__label">' + H(item.name.split(" ")[0].toUpperCase()) + "<\/div><\/div>";
+    const dist = item.district || item.zone || item.city || "";
+    return '<a class="oc-related" href="' + H(prefix + item.profileUrl) + '">' +
+      ph +
+      '<div>' +
+        (dist ? '<div class="oc-eyebrow" style="margin-bottom:6px">' + H(dist) + "<\/div>" : "") +
+        '<div style="font-family:var(--serif);font-size:20px;letter-spacing:-0.02em;line-height:1.05;margin-bottom:8px">' + H(item.name) + "<\/div>" +
+        '<p style="font-size:13.5px;color:var(--subtext);line-height:1.5">' + H(item.cardSummary || item.editorial || "") + "<\/p>" +
+      "<\/div>" +
+      '<div style="display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--hairline)">' +
+        '<span class="oc-meta" style="display:flex;align-items:center;gap:6px">' + iPin + " " + H((item.morada || item.city || "").substring(0, 32)) + "<\/span>" +
+        '<span style="display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase">Ver perfil ' + iArrow + "<\/span>" +
+      "<\/div>" +
+    "<\/a>";
+  }
+
+  function ownerBlock(isPromoted) {
+    const eyebrow  = isPromoted ? "ESTA FICHA ESTÁ INCOMPLETA" : "ÉS O DONO?";
+    const headline = isPromoted
+      ? 'Se és o dono, podes <em style="font-style:italic;color:var(--gold-soft)">melhorar</em> esta página.'
+      : 'És o dono desta<br><span style="font-style:italic;color:var(--gold-soft)">barbearia</span>?';
+    const body = isPromoted
+      ? "Adiciona horário, fotografias, serviços e website. Quanto mais completa a ficha, mais clientes vais receber."
+      : "Atualiza os teus dados, adiciona fotografias e serviços, e torna esta página mais atrativa para quem te procura.";
+    const bullets = isPromoted ? "" :
+      '<ul style="list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:10px;font-size:13.5px;color:rgba(242,236,223,.85)">' +
+      ["Adicionar fotografias e serviços","Definir horário e contactos certos","Aparecer destacado na cidade"].map(function(t) {
+        return '<li style="display:flex;align-items:center;gap:10px"><span style="color:var(--gold-soft)">' + iCheck + "<\/span>" + H(t) + "<\/li>";
+      }).join("") + "<\/ul>";
+    return '<div class="oc-card oc-card--ink oc-owner oc-owner-inner" style="padding:26px">' +
+      '<div class="oc-eyebrow" style="color:var(--gold-soft);margin-bottom:14px">' + H(eyebrow) + "<\/div>" +
+      '<h2 class="oc-owner__headline" style="font-family:var(--serif);font-weight:700;font-size:' + (isPromoted ? "28" : "36") + 'px;letter-spacing:-0.025em;line-height:1.02;margin-bottom:12px">' + headline + "<\/h2>" +
+      '<p style="font-size:14.5px;line-height:1.55;color:rgba(242,236,223,.78);margin-bottom:' + (isPromoted ? "18" : "22") + 'px">' + H(body) + "<\/p>" +
+      bullets +
+      '<div style="display:flex;flex-direction:column;gap:10px">' +
+        '<a href="' + H(prefix) + 'registar.html" class="oc-btn oc-btn--gold" style="width:100%">' + (isPromoted ? "Reclamar e completar" : "Atualizar perfil") + " " + iArrow + "<\/a>" +
+        (!isPromoted ? '<a href="' + H(prefix) + 'registar.html" class="oc-btn" style="width:100%;background:transparent;color:var(--paper);border:1px solid rgba(242,236,223,.25)">Reclamar esta ficha<\/a>' : "") +
+      "<\/div>" +
+    "<\/div>";
+  }
+
+  // ── Hero
+  const nameParts = barber.name.replace(/\s*[Bb]arbearia\s*/g, "").trim();
+  const showNameSplit = nameParts && nameParts !== barber.name;
+
+  const phoneHrefVal = barber.telefone ? "tel:" + barber.telefone.replace(/\s/g, "") : "";
+  const mapsUrl = barber.morada
+    ? "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(barber.morada)
+    : (Array.isArray(barber.coords) ? "https://www.google.com/maps/search/?api=1&query=" + barber.coords[0] + "," + barber.coords[1] : "");
+
+  const phoneBtn   = barber.telefone ? '<a class="oc-btn oc-btn--primary" href="' + H(phoneHrefVal) + '" style="width:100%" itemprop="telephone">' + iPhone + ' Ligar agora<span class="oc-mono" style="margin-left:auto;font-size:11px;opacity:.6;letter-spacing:.04em">' + H(barber.telefone) + "<\/span><\/a>" : "";
+  const mapBtn     = mapsUrl ? '<a class="oc-btn oc-btn--ghost" href="#mapa" style="flex:1">' + iPin + " Abrir mapa<\/a>" : "";
+  const webBtn     = barber.website ? '<a class="oc-btn oc-btn--ghost" href="' + H(barber.website) + '" target="_blank" rel="noopener noreferrer" style="flex:1">' + iGlobe + " Website<\/a>" : "";
+  const instBtn    = !barber.website && barber.instagram ? '<a class="oc-btn oc-btn--ghost" href="' + H(barber.instagram) + '" target="_blank" rel="noopener noreferrer" style="flex:1">' + iInsta + " Instagram<\/a>" : "";
+  const secondRow  = (mapBtn || webBtn || instBtn) ? '<div style="display:flex;gap:10px">' + mapBtn + (webBtn || instBtn) + "<\/div>" : "";
+  const claimLink  = '<a class="oc-btn oc-btn--link" href="' + H(prefix) + 'registar.html" style="align-self:flex-start;font-size:13px">És o dono? Atualizar perfil ' + iArrow + "<\/a>";
+
+  const pubPill  = '<span class="oc-pill">Ficha pública<\/span>';
+  const updPill  = isUpdatedRecent
+    ? '<span class="oc-pill oc-pill--gold">' + iBadge + " Info atualizada<\/span>"
+    : '<span class="oc-pill oc-pill--warn">Informação por completar<\/span>';
+  const cityPill = barber.city     ? '<span class="oc-pill">' + iPin + " " + H(barber.city) + "<\/span>" : "";
+  const distPill = barber.district ? '<span class="oc-pill">' + H(barber.district) + " · Distrito<\/span>" : "";
+  const barbPill = '<span class="oc-pill oc-pill--gold">' + iSciss + " Barbearia<\/span>";
+
+  const heroLeft =
+    "<div>" +
+      '<div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;flex-wrap:wrap">' + cityPill + distPill + barbPill + "<\/div>" +
+      '<h1 class="oc-hero-name" style="font-size:46px;margin-bottom:18px" itemprop="name">' +
+        (showNameSplit
+          ? H(nameParts) + '<span style="display:block;font-family:var(--serif);font-style:italic;font-weight:400;font-size:26px;color:var(--gold-deep);letter-spacing:-0.01em;margin-top:4px" class="oc-hero__sublabel">Barbearia<\/span>'
+          : H(barber.name)) +
+      "<\/h1>" +
+      (barber.editorial ? '<p class="oc-hero__blurb" style="font-size:15.5px;line-height:1.55;color:var(--ink);margin-bottom:22px;max-width:340px" itemprop="description">' + H(barber.editorial) + "<\/p>" : "") +
+      '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px">' + pubPill + updPill + "<\/div>" +
+      '<div class="oc-hero__ctas" style="display:flex;flex-direction:column;gap:10px">' + phoneBtn + secondRow + claimLink + "<\/div>" +
+    "<\/div>";
+
+  const heroRight =
+    "<div>" +
+      '<div class="oc-photo oc-hero__photo" style="height:220px" itemprop="photo">' +
+        '<div class="oc-photo__label">FACHADA · OPCIONAL<\/div>' +
+        '<div class="oc-photo__add">' + iSpark + " Adicionar fotografia<\/div>" +
+      "<\/div>" +
+    "<\/div>";
+
+  const heroSection =
+    '<section class="oc-hero" aria-label="Informação principal">' +
+    heroLeft + heroRight +
+    "<\/section>";
+
+  // ── Contacts
+  const missingNote = (!barber.email && !barber.website)
+    ? '<div style="display:flex;align-items:center;gap:10px;padding:14px 0;color:var(--subtext);font-size:13px;font-style:italic">' + iSpark + " Email e website ainda por adicionar pela barbearia.<\/div>"
     : "";
-  const mapSection = Array.isArray(barber.coords)
-    ? `
-        <article class="card">
-          <h2>Mapa</h2>
-          <p>Vê a localização desta barbearia no mapa.</p>
-          <div id="detailMap" aria-label="Mapa de localização"></div>
-        </article>`
+  const instaHandle = barber.instagram
+    ? "@" + (barber.instagram.replace(/\/$/, "").split("/").pop() || "")
     : "";
-  const sameCityMarkup = sameCity.length
-    ? sameCity.map((item) => renderBarberCard(item, prefix, { showZone: true })).join("")
-    : city
-      ? '<article class="card"><h3>Mais opções ' + escapeHtml(locativeLabel(city.name)) + '</h3><p>À medida que o diretório crescer nesta cidade, esta área passa a mostrar mais alternativas locais.</p><div class="card-actions"><a class="btn btn-secondary" href="' + escapeHtml(prefix + city.url) + '">Ver página da cidade</a></div></article>'
-      : '<article class="card"><h3>Continuar no diretório</h3><p>Esta ficha ainda está a ser afinada a nível de localização. Enquanto isso, podes explorar outras barbearias no diretório.</p><div class="card-actions"><a class="btn btn-secondary" href="' + escapeHtml(prefix + 'index.html#explorar') + '">Ver diretório</a></div></article>';
-  const linksMetaMarkup = [
-    barber.booking ? '<div class="meta-row"><strong>Marcação</strong><span><a href="' + escapeHtml(barber.booking) + '" target="_blank" rel="nofollow noopener noreferrer">Abrir marcação</a></span></div>' : "",
-    barber.website ? '<div class="meta-row"><strong>Website</strong><span><a href="' + escapeHtml(barber.website) + '" target="_blank" rel="nofollow noopener noreferrer">' + escapeHtml(displayUrl(barber.website)) + '</a></span></div>' : "",
-    barber.instagram ? '<div class="meta-row"><strong>Instagram</strong><span><a href="' + escapeHtml(barber.instagram) + '" target="_blank" rel="nofollow noopener noreferrer">Ver perfil</a></span></div>' : "",
-    barber.facebook ? '<div class="meta-row"><strong>Facebook</strong><span><a href="' + escapeHtml(barber.facebook) + '" target="_blank" rel="nofollow noopener noreferrer">Ver página</a></span></div>' : "",
-    barber.email ? '<div class="meta-row"><strong>Email</strong><span><a href="mailto:' + escapeHtml(barber.email) + '">' + escapeHtml(barber.email) + '</a></span></div>' : "",
-    barber.mapUrl ? '<div class="meta-row"><strong>Mapa externo</strong><span><a href="' + escapeHtml(barber.mapUrl) + '" target="_blank" rel="nofollow noopener noreferrer">Abrir localização</a></span></div>' : ""
-  ].join("");
-  const summaryRowsMarkup = [
-    ...hierarchyEntries.map((entry) => renderSummaryRow(entry.label, escapeHtml(entry.value))),
-    renderSummaryRow("Morada completa", escapeHtml(barber.morada || "Morada não disponível")),
-    renderSummaryRow("Telefone", barber.telefone ? '<a href="' + escapeHtml(telephoneHref(barber.telefone)) + '">' + escapeHtml(barber.telefone) + "</a>" : "Por confirmar"),
-    renderSummaryRow("Horário", escapeHtml(barber.horario || "Por confirmar")),
-    renderSummaryRow("Informação atualizada", escapeHtml(formatDate(barber.lastmod)))
-  ].join("");
-  const body = `
-${renderHeader(prefix, "cidades")}
-<main>
-  <section class="section">
-    <div class="container hero-card">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <div class="breadcrumbs">
-            <a href="${prefix}index.html">OndeCortar.pt</a>
-            <span>/</span>
-            <a href="${prefix}cidades/">Cidades</a>
-            ${city ? '<span>/</span><a href="' + prefix + city.url + '">' + escapeHtml(city.name) + "</a>" : ""}
-            <span>/</span>
-            <span>${escapeHtml(barber.name)}</span>
-          </div>
-          <span class="eyebrow">Perfil de barbearia</span>
-          <h1>${escapeHtml(barber.name)}</h1>
-          <p>${escapeHtml(barber.editorial)}</p>
-          ${barber.horario ? '<div class="tag-row"><span class="tag">Horário disponível</span></div>' : ""}
-          <div class="hero-actions">
-            ${barber.primaryLink ? '<a class="btn btn-primary" href="' + escapeHtml(barber.primaryLink.href) + '"' + (barber.primaryLink.external ? ' target="_blank" rel="nofollow noopener noreferrer"' : "") + ">" + escapeHtml(barber.primaryLink.label) + "</a>" : ""}
-            ${barber.mapUrl ? '<a class="btn btn-secondary" href="' + escapeHtml(barber.mapUrl) + '" target="_blank" rel="nofollow noopener noreferrer">Abrir mapa</a>' : ""}
-            ${city ? '<a class="btn btn-soft" href="' + prefix + city.url + '">Ver cidade</a>' : ""}
-          </div>
-        </div>
-        <aside class="summary-panel">
-          ${summaryRowsMarkup}
-        </aside>
-      </div>
-    </div>
-  </section>
+  const contactsInner =
+    contactRow(iPin,   "Morada",    barber.morada,   "Copiar", null) +
+    contactRow(iPhone, "Telefone",  barber.telefone, "Ligar",  phoneHrefVal) +
+    contactRow(iMail,  "Email",     barber.email,    "Enviar", barber.email ? "mailto:" + barber.email : "") +
+    contactRow(iGlobe, "Website",   barber.website ? barber.website.replace(/^https?:\/\//, "") : "", "Abrir", barber.website) +
+    contactRow(iInsta, "Instagram", instaHandle,     "Ver",    barber.instagram) +
+    missingNote;
 
-  <section class="section">
-    <div class="container grid-2">
-      <div class="stack">
-        <article class="card">
-          <h2>Descrição útil</h2>
-          <p>${escapeHtml(barber.editorial)}</p>
-        </article>
-        ${mapSection}
-      </div>
-      <aside class="stack">
-        <article class="card">
-          <h3>Ligações úteis</h3>
-          <div class="meta-list">
-            ${linksMetaMarkup || '<div class="meta-row"><strong>Links públicos</strong><span>Sem links públicos adicionais nesta ficha.</span></div>'}
-          </div>
-        </article>
-        <article class="card">
-          <span class="eyebrow">És o dono desta barbearia?</span>
-          <h3>Atualiza esta ficha</h3>
-          <p>Se algum dado estiver desatualizado, podes pedir correção ou completar o perfil com website, Instagram, marcação e horários.</p>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="${prefix}registar.html">Atualizar perfil</a>
-            <a class="btn btn-secondary" href="${prefix}faq.html">Ler FAQ</a>
-          </div>
-        </article>
-      </aside>
-    </div>
-  </section>
+  // ── Hours
+  const hoursInner = barber.horario
+    ? '<p style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)">' + H(barber.horario) + "<\/p>" +
+      '<meta itemprop="openingHours" content="' + H(barber.horario) + '" />'
+    : '<p style="font-size:14px;color:var(--subtext);font-style:italic">O horário aparece aqui assim que a barbearia o adicionar.<\/p>';
 
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <span class="eyebrow">${city ? "Mesma cidade" : "Diretório"}</span>
-          <h2>${city ? escapeHtml(barbersLabel(city.name)) : "Outras barbearias no diretório"}</h2>
-          <p>${city ? "Explora mais opções nesta cidade para comparar morada, contactos e informação útil antes de escolher." : "Explora outras fichas com morada, contactos e localização já publicados."}</p>
-        </div>
-      </div>
-      <div class="barber-grid">
-        ${sameCityMarkup}
-      </div>
-    </div>
-  </section>
-</main>
-${renderFooter(prefix)}
-${Array.isArray(barber.coords) ? `
-<script>
-  (function() {
-    if (!window.L) return;
-    var coords = ${JSON.stringify(barber.coords)};
-    var map = L.map("detailMap", { scrollWheelZoom: false }).setView(coords, 15);
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-      attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
-    }).addTo(map);
-    L.marker(coords).addTo(map).bindPopup(${JSON.stringify(barber.name)}).openPopup();
-  })();
-</script>` : ""}`;
+  // ── Map
+  const hasMap = Array.isArray(barber.coords) || barber.morada;
+  const mapEmbed = Array.isArray(barber.coords)
+    ? '<div id="detailMap" style="height:100%;min-height:220px"><\/div>'
+    : '<div style="height:220px;display:flex;align-items:center;justify-content:center;background:var(--paper-2);border-radius:18px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--subtext)">' + iPin + " " + H(barber.morada || "") + "<\/div>";
+  const mapFooter =
+    (barber.morada ? '<div class="oc-meta" style="display:flex;align-items:center;gap:8px;margin-top:14px">' + iPin + " " + H(barber.morada) + "<\/div>" : "") +
+    (mapsUrl ? '<a class="oc-btn oc-btn--ghost" href="' + H(mapsUrl) + '" target="_blank" rel="noopener noreferrer" style="width:100%;margin-top:10px">Abrir no Google Maps ' + iArrowUR + "<\/a>" : "");
+  const mapWrap = '<div class="oc-map-wrap" style="min-height:220px" id="mapa">' + mapEmbed + "<\/div>" + mapFooter;
 
-  return renderDocument({
-    title: title,
-    description: description,
-    canonical: canonical,
-    prefix: prefix,
-    extraHead: mapHead,
-    extraStyles: "#detailMap { min-height: 320px; border-radius: 18px; overflow: hidden; border: 1px solid var(--border); }",
-    structuredData: structuredData,
-    body: body
-  });
+  // ── Info row (desktop 3-col, mobile stacked sections)
+  const infoRow =
+    '<div class="oc-info-row oc-section" style="padding:0 20px 28px;display:flex;flex-direction:column;gap:24px">' +
+      '<section class="oc-card" style="padding:20px 18px 8px" aria-labelledby="contactos-h">' +
+        '<div class="oc-eyebrow" style="margin-bottom:6px">Ficha<\/div>' +
+        '<h2 id="contactos-h" class="oc-section-head__title" style="margin-bottom:14px">Contactos<\/h2>' +
+        '<address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" style="font-style:normal">' +
+        contactsInner +
+        "<\/address>" +
+      "<\/section>" +
+      '<section class="oc-card" style="padding:20px 18px 16px" aria-labelledby="horario-h">' +
+        '<div class="oc-eyebrow" style="margin-bottom:6px">Esta semana<\/div>' +
+        '<h2 id="horario-h" class="oc-section-head__title" style="margin-bottom:14px">Horário<\/h2>' +
+        hoursInner +
+      "<\/section>" +
+      (hasMap
+        ? '<section class="oc-card" style="padding:20px 18px" aria-labelledby="mapa-desk-h">' +
+            '<div class="oc-eyebrow" style="margin-bottom:6px">' + H((barber.city || "") + (barber.district ? " · " + barber.district : "")) + "<\/div>" +
+            '<h2 id="mapa-desk-h" class="oc-section-head__title" style="margin-bottom:14px">Onde fica<\/h2>' +
+            mapWrap +
+          "<\/section>"
+        : "") +
+    "<\/div>";
+
+  // ── Owner section wrapper
+  function ownerSection(promoted) {
+    return '<section class="oc-owner-wrap oc-section" style="padding:8px 20px 28px" aria-labelledby="dono-h">' +
+      '<h2 id="dono-h" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">És o dono desta barbearia?<\/h2>' +
+      ownerBlock(promoted) +
+    "<\/section>";
+  }
+
+  // ── Related
+  const relatedSection = sameCity.length
+    ? '<section class="oc-section" style="padding:0 20px 28px" aria-labelledby="related-h">' +
+        '<div class="oc-section-head" style="align-items:flex-end;margin-bottom:18px">' +
+          '<div>' +
+            (barber.city ? '<div class="oc-eyebrow" style="margin-bottom:6px">Também em ' + H(barber.city) + "<\/div>" : "") +
+            '<h2 id="related-h" class="oc-section-head__title">Outras barbearias por perto<\/h2>' +
+          "<\/div>" +
+          (city ? '<a href="' + H(prefix + city.url) + '" class="oc-meta" style="display:inline-flex;align-items:center;gap:6px;color:var(--ink)">Ver todas ' + iArrow + "<\/a>" : "") +
+        "<\/div>" +
+        '<div class="oc-related-grid" style="display:flex;flex-direction:column;gap:14px">' +
+          sameCity.map(relatedCard).join("") +
+        "<\/div>" +
+      "<\/section>"
+    : "";
+
+  // ── Footer
+  const footerSection =
+    '<footer class="oc-footer">' +
+      '<div class="oc-footer-inner" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">' +
+        '<a href="' + H(prefix) + '" style="font-family:var(--serif);font-size:18px;letter-spacing:-0.01em;text-decoration:none;color:var(--ink)">OndeCortar<sup style="font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--subtext)">.pt<\/sup><\/a>' +
+        '<span class="oc-meta">Diretório · PT<\/span>' +
+      "<\/div>" +
+      '<div class="oc-hr" style="margin:0 0 14px"><\/div>' +
+      '<p style="font-size:12px;color:var(--subtext);line-height:1.6;margin-bottom:10px">Ficha pública de ' + H(barber.name) + (barber.city ? ", " + H(barber.city) : "") + (barber.district ? ", " + H(barber.district) : "") + ". Esta página foi gerada a partir de informação pública. Se és o dono e queres atualizar dados, clica em <em>Atualizar perfil<\/em>.<\/p>" +
+      '<div class="oc-meta">© 2026 OndeCortar · Barbearias em Portugal<\/div>' +
+    "<\/footer>";
+
+  // ── Sticky bar
+  const stickyBtns = [
+    barber.telefone ? '<a class="oc-sticky-bar__btn oc-sticky-bar__btn--primary" href="' + H(phoneHrefVal) + '">' + iPhone + " Ligar<\/a>" : "",
+    mapsUrl         ? '<a class="oc-sticky-bar__btn" href="#mapa">' + iPin + " Mapa<\/a>" : "",
+    barber.website  ? '<a class="oc-sticky-bar__btn" href="' + H(barber.website) + '" target="_blank" rel="noopener noreferrer">' + iGlobe + " Site<\/a>" : "",
+  ].filter(Boolean);
+  const colTemplate = stickyBtns.length === 3 ? "1.4fr 1fr 1fr" : stickyBtns.length === 2 ? "1.4fr 1fr" : "1fr";
+  const stickyBar = stickyBtns.length
+    ? '<div class="oc-sticky-bar" style="grid-template-columns:' + colTemplate + '">' + stickyBtns.join("") + "<\/div>"
+    : "";
+
+  // ── Leaflet
+  const leafletHead = Array.isArray(barber.coords)
+    ? '\n  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" crossorigin />' +
+      '\n  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin defer><\/script>'
+    : "";
+
+  const leafletInit = Array.isArray(barber.coords) ? '<script>(function(){\n  function init(){\n    if(!window.L||!document.getElementById("detailMap"))return;\n    var c=' + JSON.stringify(barber.coords) + ';\n    var m=L.map("detailMap",{scrollWheelZoom:false}).setView(c,15);\n    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",{attribution:"&copy; OpenStreetMap &copy; CARTO"}).addTo(m);\n    var gi=L.divIcon({className:"",html:\'<div style="width:32px;height:32px;background:#14110D;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(20,17,13,.3)"><div style="width:8px;height:8px;border-radius:50%;background:#B8945F;transform:rotate(45deg)"></div></div>\',iconSize:[32,32],iconAnchor:[16,32],popupAnchor:[0,-36]});\n    L.marker(c,{icon:gi}).addTo(m).bindPopup(' + JSON.stringify(barber.name) + ').openPopup();\n  }\n  document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){setTimeout(init,120);}):setTimeout(init,120);\n})();<\/script>' : "";
+
+  // ── Breadcrumb
+  const crumbItems =
+    '<a href="' + H(prefix) + '">Barbearias<\/a>' +
+    (city ? '<span class="oc-crumb__sep">\/<\/span><a href="' + H(prefix + city.url) + '">' + H(city.name) + "<\/a>" : "") +
+    '<span class="oc-crumb__sep">\/<\/span><span style="color:var(--ink)">' + H(barber.name) + "<\/span>";
+
+  // ── Full page
+  return "<!DOCTYPE html>\n<html lang=\"pt-PT\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <meta name=\"theme-color\" content=\"#14110D\" />\n  <title>" + H(title) + "<\/title>\n  <meta name=\"description\" content=\"" + H(description) + "\" />\n  <link rel=\"canonical\" href=\"" + H(canonical) + "\" />\n  <meta property=\"og:title\" content=\"" + H(title) + "\" />\n  <meta property=\"og:description\" content=\"" + H(description) + "\" />\n  <meta property=\"og:url\" content=\"" + H(canonical) + "\" />\n  <meta property=\"og:type\" content=\"website\" />\n  <meta property=\"og:image\" content=\"" + H(DEFAULT_OG_IMAGE) + "\" />\n  <link rel=\"icon\" href=\"" + H(prefix) + "favicon.ico\" type=\"image/x-icon\" />\n  <link rel=\"apple-touch-icon\" href=\"" + H(prefix) + "apple-touch-icon.png\" />\n  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n  <link href=\"https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap\" rel=\"stylesheet\" />" + leafletHead + "\n  <link rel=\"stylesheet\" href=\"" + H(prefix) + "barbearia-profile.css\" />\n" + jsonLd + "\n<\/head>\n<body>\n\n  <header class=\"oc-topnav oc-mobile-nav\">\n    <a class=\"oc-topnav__back\" href=\"" + H(prefix) + "\">" + iArrowL + " Barbearias<\/a>\n    <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n    <a href=\"" + H(canonical) + "\" class=\"oc-topnav__action\" aria-label=\"Partilhar\">" + iShare + "<\/a>\n  <\/header>\n\n  <header class=\"oc-desktop-nav oc-desktop-only\" style=\"display:none\">\n    <div style=\"display:flex;align-items:center;gap:32px\">\n      <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n      <nav class=\"oc-desktop-nav__links\" aria-label=\"Navegação principal\">\n        <a href=\"" + H(prefix) + "\">Barbearias<\/a>\n        <a href=\"" + H(prefix) + "cidades\/\">Cidades<\/a>\n        <a href=\"" + H(prefix) + "registar.html\">Adicionar barbearia<\/a>\n      <\/nav>\n    <\/div>\n    <div class=\"oc-desktop-nav__actions\">\n      <a href=\"" + H(prefix) + "registar.html\" class=\"oc-btn oc-btn--ghost\" style=\"height:38px;padding:0 16px;font-size:13px\">Reclamar esta barbearia<\/a>\n      <a href=\"" + H(prefix) + "registar.html\" class=\"oc-btn oc-btn--primary\" style=\"height:38px;padding:0 16px;font-size:13px\">Atualizar perfil " + iArrow + "<\/a>\n    <\/div>\n  <\/header>\n\n  <div class=\"oc-page\">\n    <nav class=\"oc-crumb-wrap oc-section\" style=\"padding:14px 20px 0\" aria-label=\"breadcrumb\">\n      <div class=\"oc-crumb\">" + crumbItems + "<\/div>\n    <\/nav>\n\n    <main>\n      <article itemscope itemtype=\"https://schema.org/HairSalon\">\n" +
+    heroSection + "\n" +
+    '        <div class="oc-section oc-mobile-only" style="padding:0 20px 28px"><div class="oc-photo" style="height:200px"><div class="oc-photo__label">FACHADA · OPCIONAL<\/div><div class="oc-photo__add">' + iSpark + " Adicionar fotografia<\/div><\/div><\/div>\n" +
+    '        <div class="oc-pole-wrap oc-section" style="padding:0 20px 28px"><div class="oc-pole"><\/div><\/div>\n' +
+    (isMinimal ? ownerSection(true) + "\n" : "") +
+    infoRow + "\n" +
+    (!isMinimal ? ownerSection(false) + "\n" : "") +
+    relatedSection + "\n" +
+    "      <\/article>\n    <\/main>\n\n" +
+    footerSection + "\n" +
+    "  <\/div>\n\n" +
+    stickyBar + "\n\n" +
+    leafletInit + "\n\n" +
+    '  <script>(function(){var d=document.querySelector(".oc-desktop-nav"),m=document.querySelector(".oc-mobile-nav");function c(){var w=window.innerWidth>=1100;if(d)d.style.display=w?"flex":"none";if(m)m.style.display=w?"flex":"none";}c();window.addEventListener("resize",c);}());<\/script>\n\n<\/body>\n<\/html>';
 }
 
 function renderCityPage(city) {
