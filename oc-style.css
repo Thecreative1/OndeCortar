@@ -230,7 +230,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 
 /* Left: search + results */
 .directory-left {
-  width: 44%; min-width: 300px; max-width: 560px;
+  width: 52%; min-width: 300px; max-width: 680px;
   display: flex; flex-direction: column;
   background: var(--oc-paper);
   border-right: 1px solid var(--oc-line);
