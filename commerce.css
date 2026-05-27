@@ -3269,3 +3269,318 @@ body[data-page="article"] .article-header p {
   .loja-quick-grid,
   .loja-cat-grid { grid-template-columns: 1fr; }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   LOJA V2 REDESIGN — Store & Category visual overrides
+   White cards on warm beige = instant contrast & saleability
+   Appended 2026-05
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ─── CATEGORY PAGE: White product cards ────────────────────────── */
+
+body[data-page="category"] .product-card {
+  background: #ffffff;
+  border: 1px solid rgba(200, 185, 160, 0.4);
+  box-shadow: 0 4px 20px rgba(31, 25, 19, 0.08), 0 1px 3px rgba(31, 25, 19, 0.04);
+}
+
+body[data-page="category"] .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 52px rgba(31, 25, 19, 0.14), 0 4px 12px rgba(31, 25, 19, 0.07);
+  border-color: rgba(176, 138, 74, 0.55);
+}
+
+body[data-page="category"] .product-card img,
+body[data-page="category"] .product-card--dense img {
+  background: linear-gradient(180deg, #fdfcf9, #f3ecdf);
+}
+
+/* Tag/badge: forest green (premium contrast on white) */
+body[data-page="category"] .product-card .tag {
+  background: rgba(66, 90, 71, 0.1);
+  border-color: rgba(66, 90, 71, 0.28);
+  color: var(--green-primary);
+  font-weight: 800;
+}
+
+body[data-page="category"] .product-card-title {
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: var(--ink-strong);
+}
+
+/* Gold highlight = the selling point */
+body[data-page="category"] .product-highlight-line {
+  color: var(--gold-main);
+}
+
+/* "Ver produto" — ghost, low hierarchy */
+body[data-page="category"] .product-card .btn-secondary {
+  background: transparent;
+  border-color: rgba(176, 139, 83, 0.4);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  min-height: 36px;
+}
+
+body[data-page="category"] .product-card .btn-secondary:hover {
+  background: rgba(166, 119, 45, 0.06);
+  border-color: rgba(176, 139, 83, 0.65);
+  color: var(--gold-main);
+}
+
+/* "Ver preço" — THE dominant CTA on every product card */
+body[data-page="category"] .product-card .btn-primary {
+  background: linear-gradient(135deg, #425a47, #2f4535);
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 800;
+  min-height: 50px;
+  letter-spacing: 0.005em;
+  box-shadow: 0 10px 28px rgba(42, 64, 47, 0.32);
+  border-radius: var(--radius-sm);
+}
+
+body[data-page="category"] .product-card .btn-primary:hover {
+  background: linear-gradient(135deg, #4e6b54, #38523e);
+  box-shadow: 0 16px 38px rgba(42, 64, 47, 0.42);
+  transform: translateY(-1px);
+}
+
+/* Mini sidebar cards: white on beige */
+body[data-page="category"] .shop-mini-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(200, 185, 160, 0.5);
+  box-shadow: 0 6px 20px rgba(31, 25, 19, 0.07);
+}
+
+body[data-page="category"] .shop-mini-card:hover {
+  background: #ffffff;
+  border-color: rgba(176, 138, 74, 0.55);
+  box-shadow: 0 14px 34px rgba(31, 25, 19, 0.12);
+}
+
+
+/* ─── STORE HOME: Dark editorial hero ───────────────────────────── */
+
+body[data-page="store"] .loja-hero-card {
+  background:
+    radial-gradient(ellipse at top right, rgba(66, 90, 71, 0.3), transparent 52%),
+    radial-gradient(ellipse at bottom left, rgba(166, 119, 45, 0.12), transparent 44%),
+    linear-gradient(155deg, #1F1B16 0%, #2C2318 55%, #1F1B16 100%);
+  border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 36px 90px rgba(0, 0, 0, 0.3);
+}
+
+body[data-page="store"] .loja-hero-card::after {
+  background: radial-gradient(circle, rgba(166, 119, 45, 0.14), transparent 68%);
+}
+
+body[data-page="store"] .loja-hero-h1 {
+  color: var(--gold-soft);
+}
+
+body[data-page="store"] .loja-hero-tagline {
+  color: rgba(242, 235, 224, 0.97);
+}
+
+body[data-page="store"] .loja-hero-sub {
+  color: rgba(242, 235, 224, 0.68);
+}
+
+body[data-page="store"] .loja-hero-trust {
+  color: rgba(242, 235, 224, 0.4);
+}
+
+/* Gold CTA on dark hero */
+body[data-page="store"] .loja-hero-actions .btn-primary {
+  background: linear-gradient(135deg, var(--gold-main), #7a5e1e);
+  border: none;
+  color: #ffffff;
+  font-weight: 800;
+  box-shadow: 0 16px 40px rgba(166, 119, 45, 0.36);
+}
+
+body[data-page="store"] .loja-hero-actions .btn-primary:hover {
+  background: linear-gradient(135deg, #c08a35, var(--gold-main));
+  box-shadow: 0 20px 52px rgba(166, 119, 45, 0.46);
+}
+
+/* Ghost secondary on dark hero */
+body[data-page="store"] .loja-hero-actions .btn-secondary {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(242, 235, 224, 0.8);
+}
+
+body[data-page="store"] .loja-hero-actions .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(242, 235, 224, 0.96);
+}
+
+
+/* ─── STORE HOME: White featured product cards ──────────────────── */
+
+body[data-page="store"] .loja-feat-card {
+  background: #ffffff;
+  border-color: rgba(200, 185, 160, 0.4);
+  box-shadow: 0 6px 28px rgba(31, 25, 19, 0.09), 0 1px 4px rgba(31, 25, 19, 0.04);
+}
+
+body[data-page="store"] .loja-feat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 56px rgba(31, 25, 19, 0.15), 0 4px 12px rgba(31, 25, 19, 0.07);
+  border-color: rgba(176, 138, 74, 0.55);
+}
+
+body[data-page="store"] .loja-feat-img {
+  background: linear-gradient(180deg, #fdfcf9, #f3ecdf);
+}
+
+/* Green badge instead of gold */
+body[data-page="store"] .loja-feat-badge {
+  background: rgba(66, 90, 71, 0.1);
+  border-color: rgba(66, 90, 71, 0.28);
+  color: var(--green-primary);
+}
+
+/* Green "Ver preço" button */
+body[data-page="store"] .loja-feat-actions .btn-primary {
+  background: linear-gradient(135deg, #425a47, #2f4535);
+  border: none;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.98rem;
+  min-height: 50px;
+  box-shadow: 0 10px 26px rgba(42, 64, 47, 0.28);
+}
+
+body[data-page="store"] .loja-feat-actions .btn-primary:hover {
+  background: linear-gradient(135deg, #4e6b54, #38523e);
+  box-shadow: 0 16px 36px rgba(42, 64, 47, 0.36);
+}
+
+/* Ghost "Ver detalhes" */
+body[data-page="store"] .loja-feat-actions .btn-secondary {
+  background: transparent;
+  border-color: rgba(176, 139, 83, 0.4);
+  color: var(--text-secondary);
+  min-height: 38px;
+  font-size: 0.86rem;
+}
+
+body[data-page="store"] .loja-feat-actions .btn-secondary:hover {
+  background: rgba(166, 119, 45, 0.06);
+  border-color: rgba(176, 139, 83, 0.65);
+}
+
+
+/* ─── STORE HOME: Dark forest green use-case cards ──────────────── */
+
+body[data-page="store"] .loja-uso-card {
+  background: linear-gradient(150deg, #2D3F30 0%, #1F2D22 100%);
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
+}
+
+body[data-page="store"] .loja-uso-card:hover {
+  background: linear-gradient(150deg, #364839 0%, #273528 100%);
+  border-color: rgba(184, 148, 95, 0.28);
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.26);
+  transform: translateY(-3px);
+}
+
+body[data-page="store"] .loja-uso-title {
+  color: rgba(242, 235, 224, 0.96);
+}
+
+body[data-page="store"] .loja-uso-desc {
+  color: rgba(220, 210, 195, 0.62);
+}
+
+body[data-page="store"] .loja-uso-cta {
+  color: var(--gold-soft);
+  font-size: 0.9rem;
+}
+
+
+/* ─── STORE HOME: White quick-pick cards ────────────────────────── */
+
+body[data-page="store"] .loja-quick-card {
+  background: #ffffff;
+  border-color: rgba(200, 185, 160, 0.4);
+  box-shadow: 0 6px 24px rgba(31, 25, 19, 0.08);
+}
+
+body[data-page="store"] .loja-quick-card:hover {
+  box-shadow: 0 20px 46px rgba(31, 25, 19, 0.13);
+  border-color: rgba(176, 138, 74, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Green label instead of gold */
+body[data-page="store"] .loja-quick-label {
+  background: rgba(66, 90, 71, 0.1);
+  border-color: rgba(66, 90, 71, 0.28);
+  color: var(--green-primary);
+}
+
+body[data-page="store"] .loja-quick-avoid {
+  background: rgba(31, 25, 19, 0.03);
+  border-left-color: rgba(176, 139, 83, 0.38);
+}
+
+/* Green "Ver preço" button */
+body[data-page="store"] .loja-quick-actions .btn-primary {
+  background: linear-gradient(135deg, #425a47, #2f4535);
+  border: none;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.98rem;
+  min-height: 50px;
+  box-shadow: 0 10px 26px rgba(42, 64, 47, 0.26);
+}
+
+body[data-page="store"] .loja-quick-actions .btn-primary:hover {
+  background: linear-gradient(135deg, #4e6b54, #38523e);
+  box-shadow: 0 16px 36px rgba(42, 64, 47, 0.36);
+}
+
+
+/* ─── STORE HOME: White category grid cards ─────────────────────── */
+
+body[data-page="store"] .loja-cat-card {
+  background: #ffffff;
+  border-color: rgba(200, 185, 160, 0.4);
+  box-shadow: 0 6px 24px rgba(31, 25, 19, 0.08);
+}
+
+body[data-page="store"] .loja-cat-card:hover {
+  box-shadow: 0 20px 46px rgba(31, 25, 19, 0.13);
+  border-color: rgba(176, 138, 74, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Clean image background on white card */
+body[data-page="store"] .loja-cat-thumb {
+  background: linear-gradient(180deg, #fdfcf9, #f3ecdf);
+}
+
+/* Green "Ver recomendações" button */
+body[data-page="store"] .loja-cat-actions .btn {
+  background: linear-gradient(135deg, #425a47, #2f4535);
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  min-height: 42px;
+  box-shadow: 0 8px 20px rgba(42, 64, 47, 0.24);
+  width: 100%;
+}
+
+body[data-page="store"] .loja-cat-actions .btn:hover {
+  background: linear-gradient(135deg, #4e6b54, #38523e);
+  box-shadow: 0 12px 28px rgba(42, 64, 47, 0.32);
+}
