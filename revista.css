@@ -813,3 +813,95 @@
     transition: none;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   v2 — Dark editorial hero + clean page background
+   Overrides the warm-beige body gradient inherited from commerce.css
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* 1. White background — no more warm beige gradient */
+body[data-page="magazine"] {
+  background: #FFFFFF;
+}
+
+/* ─── 2. Dark editorial hero ─────────────────────────────────────── */
+.rev-hero {
+  background: var(--rev-dark);
+  padding: 64px 0 14px;
+}
+.rev-hero-kicker {
+  color: var(--rev-gold);
+  background: rgba(184, 148, 95, 0.13);
+  border-color: rgba(184, 148, 95, 0.30);
+}
+.rev-hero-h1 {
+  color: #FAF5ED;
+  font-size: clamp(26px, 3.8vw, 44px); /* was clamp(38px,6vw,64px) → 4 lines */
+  max-width: none; /* override commerce.css h1 { max-width: 10.5ch } */
+}
+.rev-hero-sub  { color: rgba(242, 235, 224, 0.72); }
+.rev-hero-trust { color: rgba(242, 235, 224, 0.40); letter-spacing: 0.1em; }
+
+/* Primary CTA: gold on dark — the green gradient disappears on dark bg */
+.rev-hero .btn-primary {
+  background: var(--rev-gold);
+  color: var(--rev-dark);
+  border-color: transparent;
+}
+.rev-hero .btn-primary:hover { background: #cba56e; color: var(--rev-dark); }
+
+/* Secondary CTA: ghost on dark — needs higher specificity than
+   commerce.css's body[data-page="magazine"] .btn-secondary (0,2,1)  */
+body[data-page="magazine"] .rev-hero .btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: rgba(242, 235, 224, 0.88);
+}
+body[data-page="magazine"] .rev-hero .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.44);
+  color: #FAF5ED;
+}
+
+/* ─── 3. Category chips — dark strip, seamlessly fused to hero ───── */
+.rev-cats-section {
+  background: var(--rev-dark);
+  padding: 20px 0 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+.rev-cat-chip {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: rgba(242, 235, 224, 0.76);
+  box-shadow: none;
+}
+.rev-cat-chip:hover,
+.rev-cat-chip.is-active {
+  background: var(--rev-gold);
+  border-color: var(--rev-gold);
+  color: var(--rev-dark);
+}
+
+/* ─── 4. Breathing room after the dark hero+chips zone ──────────── */
+.rev-feature-section { padding-top: 52px; }
+
+/* ─── 5. Crisper article cards on white background ──────────────── */
+.rev-article-card {
+  background: #FFFFFF;
+  border-color: rgba(110, 93, 68, 0.16);
+  box-shadow: 0 1px 4px rgba(20, 17, 13, 0.07), 0 4px 16px rgba(20, 17, 13, 0.05);
+}
+.rev-article-card:hover {
+  border-color: rgba(110, 93, 68, 0.32);
+  box-shadow: 0 8px 32px -6px rgba(20, 17, 13, 0.15);
+}
+
+/* ─── 6. Trust section: subtle warm tint to break visual rhythm ─── */
+.rev-trust-section { background: #F8F5F0; }
+
+/* ─── 7. Mobile: hero text adjustments for dark bg ──────────────── */
+@media (max-width: 560px) {
+  .rev-hero { padding: 48px 0 12px; }
+  .rev-hero-h1 { font-size: clamp(26px, 8vw, 36px); }
+}
