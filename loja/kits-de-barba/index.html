@@ -18,14 +18,703 @@
   <meta property="og:image" content="https://ondecortar.pt/imagens/banner.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../commerce.css" />
   <script type="application/ld+json" data-ondecortar-ld="true">{"@context":"https://schema.org","@type":"CollectionPage","name":"Kits de barba","description":"Recomendações de kits de barba para comparar menos opções, perceber diferenças reais e escolher com mais critério.","url":"https://ondecortar.pt/loja/kits-de-barba/"}</script>
   <script type="application/ld+json" data-ondecortar-ld="true">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Loja","item":"https://ondecortar.pt/loja/"},{"@type":"ListItem","position":2,"name":"Kits de barba","item":"https://ondecortar.pt/loja/kits-de-barba/"}]}</script>
   <script type="application/ld+json" data-ondecortar-ld="true">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Um kit compensa mais do que comprar separado?","acceptedAnswer":{"@type":"Answer","text":"Compensa quando ainda não tens base montada ou quando queres oferecer algo com uso claro. Se já tens metade dos essenciais, vale a pena fazer contas."}},{"@type":"Question","name":"O que costuma ser ruído num kit de barba?","acceptedAnswer":{"@type":"Answer","text":"Peças com pouco uso real, frascos redundantes ou acessórios que parecem acrescentar valor mas acabam esquecidos no fundo da caixa."}}]}</script>
+
+  <style>
+    /* ═══════════════════════════════════════════════════════════
+       Kits de Barba — Signature Page Design
+       Inline styles targeting body[data-slug="kits-de-barba"]
+       ═══════════════════════════════════════════════════════════ */
+
+    /* ── Dark editorial hero ───────────────────────────────────── */
+    body[data-slug="kits-de-barba"] .kits-hero {
+      border-radius: var(--radius-xl);
+      padding: 56px 52px 52px;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 72% 0%,   rgba(166, 119, 45, 0.22), transparent 52%),
+        radial-gradient(ellipse at 0%  110%,  rgba(66, 90, 71, 0.18),  transparent 42%),
+        linear-gradient(158deg, #1D1913 0%, #2B2118 52%, #1D1913 100%);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.32), 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    body[data-slug="kits-de-barba"] .kits-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 85% -10%, rgba(166, 119, 45, 0.13), transparent 50%);
+      pointer-events: none;
+    }
+
+    body[data-slug="kits-de-barba"] .kits-hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      display: grid;
+      gap: 22px;
+    }
+
+    body[data-slug="kits-de-barba"] .kits-hero-breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: rgba(242, 235, 224, 0.3);
+    }
+    body[data-slug="kits-de-barba"] .kits-hero-breadcrumbs a {
+      color: rgba(242, 235, 224, 0.38);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    body[data-slug="kits-de-barba"] .kits-hero-breadcrumbs a:hover {
+      color: rgba(242, 235, 224, 0.65);
+    }
+    body[data-slug="kits-de-barba"] .kits-hero-breadcrumbs .sep {
+      opacity: 0.3;
+    }
+
+    body[data-slug="kits-de-barba"] .kits-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 5px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(166, 119, 45, 0.38);
+      background: rgba(166, 119, 45, 0.14);
+      color: #c79853;
+      font-size: 0.71rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    body[data-slug="kits-de-barba"] .kits-hero-title {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      font-weight: 700;
+      color: rgba(242, 235, 224, 0.97);
+      line-height: 0.93;
+      letter-spacing: -0.03em;
+      margin: 0;
+      max-width: none;
+    }
+
+    body[data-slug="kits-de-barba"] .kits-hero-sub {
+      font-size: 1.04rem;
+      line-height: 1.68;
+      color: rgba(242, 235, 224, 0.56);
+      margin: 0;
+      max-width: 50ch;
+    }
+
+    body[data-slug="kits-de-barba"] .kits-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    body[data-slug="kits-de-barba"] .kits-hero-actions .btn-primary {
+      background: linear-gradient(135deg, #a6772d, #7a5e20);
+      border: none;
+      color: #fff;
+      font-weight: 800;
+      min-height: 52px;
+      padding: 0 30px;
+      font-size: 1rem;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 14px 36px rgba(166, 119, 45, 0.38);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    body[data-slug="kits-de-barba"] .kits-hero-actions .btn-primary:hover {
+      background: linear-gradient(135deg, #bf8f3a, #a6772d);
+      box-shadow: 0 18px 46px rgba(166, 119, 45, 0.48);
+    }
+
+    body[data-slug="kits-de-barba"] .kits-hero-actions .btn-soft {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: rgba(242, 235, 224, 0.76);
+      font-weight: 600;
+      min-height: 52px;
+      padding: 0 26px;
+      font-size: 1rem;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    body[data-slug="kits-de-barba"] .kits-hero-actions .btn-soft:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: rgba(242, 235, 224, 0.92);
+    }
+
+    /* ── Section wrapper ───────────────────────────────────────── */
+    body[data-slug="kits-de-barba"] .kits-products-wrap {
+      display: grid;
+      gap: 20px;
+    }
+
+    /* ── Kit badge shared ──────────────────────────────────────── */
+    .kit-badge {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(66, 90, 71, 0.1);
+      border: 1px solid rgba(66, 90, 71, 0.28);
+      color: #3a5241;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ── FEATURE CARD (first product, full-width horizontal) ───── */
+    .kit-card--feature {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      border-radius: 24px;
+      background: #ffffff;
+      border: 1px solid rgba(200, 185, 160, 0.4);
+      box-shadow: 0 8px 36px rgba(31, 25, 19, 0.1), 0 2px 6px rgba(31, 25, 19, 0.05);
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      animation: kitSlideIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both;
+    }
+
+    .kit-card--feature:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 26px 66px rgba(31, 25, 19, 0.14), 0 4px 14px rgba(31, 25, 19, 0.07);
+      border-color: rgba(166, 138, 74, 0.5);
+    }
+
+    .kit-card--feature .kit-feat-img {
+      width: 100%;
+      height: 100%;
+      min-height: 290px;
+      object-fit: contain;
+      background: linear-gradient(160deg, #fdfcf9 0%, #f5eddf 100%);
+      padding: 32px;
+      display: block;
+    }
+
+    .kit-card--feature .kit-feat-body {
+      padding: 38px 38px 32px;
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .kit-card--feature .kit-feat-title {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.55rem, 2.6vw, 2.05rem);
+      font-weight: 700;
+      color: #1C1813;
+      line-height: 1.15;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .kit-card--feature .kit-feat-highlight {
+      font-size: 1.03rem;
+      font-weight: 700;
+      color: #a6772d;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .kit-card--feature .kit-feat-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+      align-items: center;
+    }
+
+    .kit-cta-price {
+      background: linear-gradient(135deg, #425a47, #2f4535);
+      border: none;
+      color: #fff;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      min-height: 52px;
+      padding: 0 30px;
+      border-radius: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      box-shadow: 0 12px 30px rgba(42, 64, 47, 0.32);
+      transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .kit-cta-price:hover {
+      background: linear-gradient(135deg, #4e6b54, #38523e);
+      box-shadow: 0 18px 44px rgba(42, 64, 47, 0.44);
+      transform: translateY(-2px);
+    }
+
+    .kit-cta-detail {
+      background: transparent;
+      border: 1px solid rgba(176, 139, 83, 0.4);
+      color: #6d6559;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      min-height: 44px;
+      padding: 0 22px;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+      white-space: nowrap;
+    }
+    .kit-cta-detail:hover {
+      border-color: rgba(176, 139, 83, 0.65);
+      background: rgba(166, 119, 45, 0.05);
+      color: #a6772d;
+    }
+
+    /* ── SECONDARY GRID (2 × 2) ───────────────────────────────── */
+    .kits-secondary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .kit-card--secondary {
+      border-radius: 20px;
+      background: #ffffff;
+      border: 1px solid rgba(200, 185, 160, 0.4);
+      box-shadow: 0 5px 22px rgba(31, 25, 19, 0.08);
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .kit-card--secondary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(31, 25, 19, 0.13);
+      border-color: rgba(176, 138, 74, 0.5);
+    }
+
+    .kit-card--secondary .kit-sec-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      background: linear-gradient(160deg, #fdfcf9 0%, #f5eddf 100%);
+      padding: 20px;
+      display: block;
+    }
+
+    .kit-card--secondary .kit-sec-body {
+      padding: 20px 22px 24px;
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .kit-card--secondary .kit-sec-title {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: #1C1813;
+      line-height: 1.2;
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .kit-card--secondary .kit-sec-highlight {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #a6772d;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .kit-card--secondary .kit-sec-actions {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .kit-card--secondary .kit-cta-price {
+      font-size: 0.96rem;
+      min-height: 48px;
+      border-radius: 12px;
+      justify-content: center;
+      padding: 0;
+      width: 100%;
+    }
+
+    .kit-card--secondary .kit-cta-detail {
+      font-size: 0.84rem;
+      min-height: 36px;
+      border-radius: 10px;
+      justify-content: center;
+      padding: 0;
+      width: 100%;
+    }
+
+    /* ── Card entrance animations ──────────────────────────────── */
+    @keyframes kitSlideIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .kits-secondary-grid .kit-card--secondary:nth-child(1) {
+      animation: kitSlideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.13s both;
+    }
+    .kits-secondary-grid .kit-card--secondary:nth-child(2) {
+      animation: kitSlideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.21s both;
+    }
+    .kits-secondary-grid .kit-card--secondary:nth-child(3) {
+      animation: kitSlideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.29s both;
+    }
+    .kits-secondary-grid .kit-card--secondary:nth-child(4) {
+      animation: kitSlideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.37s both;
+    }
+
+    /* ── Responsive ────────────────────────────────────────────── */
+    @media (max-width: 1000px) {
+      .kit-card--feature {
+        grid-template-columns: 240px 1fr;
+      }
+      .kit-card--feature .kit-feat-body {
+        padding: 28px 28px 24px;
+      }
+      body[data-slug="kits-de-barba"] .kits-hero {
+        padding: 42px 36px;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .kit-card--feature {
+        grid-template-columns: 1fr;
+      }
+      .kit-card--feature .kit-feat-img {
+        min-height: auto;
+        aspect-ratio: 16 / 9;
+        padding: 24px;
+      }
+      .kit-card--feature .kit-feat-body {
+        padding: 24px 24px 22px;
+      }
+      body[data-slug="kits-de-barba"] .kits-hero {
+        padding: 36px 28px;
+      }
+      body[data-slug="kits-de-barba"] .kits-hero-title {
+        font-size: clamp(2.5rem, 9vw, 3.6rem);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .kits-secondary-grid {
+        grid-template-columns: 1fr;
+      }
+      body[data-slug="kits-de-barba"] .kits-hero {
+        padding: 30px 22px;
+      }
+      body[data-slug="kits-de-barba"] .kits-hero-actions {
+        flex-direction: column;
+      }
+      body[data-slug="kits-de-barba"] .kits-hero-actions .btn-primary,
+      body[data-slug="kits-de-barba"] .kits-hero-actions .btn-soft {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body data-page="category" data-slug="kits-de-barba" data-root="../../">
-  <div id="app" class="page-shell"><header class="site-header"><div class="container"><nav class="nav" aria-label="Navegação principal"><div class="nav-main-row"><a class="brand" href="../../index.html"><img class="brand-logo" src="../../imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" /><span class="brand-text"><strong>OndeCortar.pt</strong><span>Produtos de barbearia</span></span></a><div class="nav-mobile-actions"><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNavLinks" data-nav-toggle><span class="nav-toggle-label">Menu</span><span class="nav-toggle-box" aria-hidden="true"><span class="nav-toggle-line"></span><span class="nav-toggle-line"></span><span class="nav-toggle-line"></span></span></button></div></div><div class="nav-links" id="siteNavLinks"><a href="../../index.html#explorar">Explorar</a><a href="../../index.html#cidades">Cidades</a><a href="../../registar.html">Adicionar barbearia</a><a class="is-current" href="../../loja/">Loja</a><a class="" href="../../revista/">Revista</a><a href="../../faq.html">FAQ</a><a class="nav-cta" href="../../loja/">Ver melhores opções</a></div></nav><button class="nav-backdrop" type="button" aria-label="Fechar menu" aria-hidden="true" data-nav-backdrop hidden></button></div></header><main><section class="section"><div class="container hero-card category-hero-card"><div class="hero-grid"><div class="hero-copy"><div class="breadcrumbs"><a href="../../loja/">Loja</a><span>/</span><span>Kits de barba</span></div><span class="section-flag">Escolha por categoria</span><h1>Kits de barba</h1><p>Kits que ajudam a montar uma rotina de barba sem comprar às cegas nem encher a gaveta com peças que raramente se usam. Começa pelas escolhas mais fortes e usa os guias da revista para resolver a dúvida que ainda falte.</p><div class="hero-actions"><a class="btn btn-primary" href="#top-escolhas">Ver melhores opções</a><a class="btn btn-soft" href="../../revista/melhor-kit-de-barba-para-comecar-sem-comprar-as-cegas/">Ler guia</a></div></div><div class="hero-side"><div class="shop-mini-grid"><a class="shop-mini-card" href="../../produto/viking-revolution-beard-grooming-kit/"><img src="https://m.media-amazon.com/images/I/81O09kGAwsL._AC_SY300_SX300_QL70_ML2_.jpg" alt="Viking Revolution Beard Grooming Kit com escova, pente, balm, óleo e tesoura" loading="lazy" /><div><strong>Viking Revolution Beard Grooming Kit</strong><p>Indicado para quem quer começar uma rotina de barba com um kit completo e sem escolher peça a peça.</p><span class="tag">Ver produto</span></div></a><a class="shop-mini-card" href="../../produto/king-c-gillette-beard-trimmer-kit/"><img src="https://m.media-amazon.com/images/I/917q61Tr3VL._AC_SY300_SX300_QL70_ML2_.jpg" alt="King C. Gillette Beard Trimmer Kit com três pentes intercambiáveis" loading="lazy" /><div><strong>King C. Gillette Beard Trimmer Kit</strong><p>Indicado para quem quer um kit de barba com foco no aparar, sem excesso de peças.</p><span class="tag">Ver produto</span></div></a></div><div class="store-note"><strong>Nem todos os kits valem pelo mesmo</strong><p>Os guias desta categoria ajudam a perceber quando compensa comprar em conjunto e quando é preferível ir peça a peça.</p></div></div></div></div></section><section class="section" id="top-escolhas"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Melhores opções</span><h2>Kits que fazem sentido pela composição</h2><p>Num kit bom, cada peça tem uso claro. Quando o conjunto existe só para parecer completo, a compra complica-se.</p></div></div><div class="product-grid product-grid--dense product-grid--category-top"><article class="product-card product-card--dense"><img src="https://m.media-amazon.com/images/I/81O09kGAwsL._AC_SY300_SX300_QL70_ML2_.jpg" alt="Viking Revolution Beard Grooming Kit com escova, pente, balm, óleo e tesoura" loading="lazy" /><div class="product-copy"><div class="meta-row"><span class="tag">Melhor escolha</span></div><h3 class="product-card-title">Viking Revolution Beard Grooming Kit</h3><p class="product-highlight-line">Junta escova, pente, balm, óleo e tesoura no mesmo conjunto</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="../../produto/viking-revolution-beard-grooming-kit/">Ver produto</a><a class="btn btn-primary btn-small" href="https://www.amazon.es/dp/B07B53Q3BX?tag=ondecortarp0c-21&amp;language=pt_PT" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a></div></div></article><article class="product-card product-card--dense"><img src="https://m.media-amazon.com/images/I/917q61Tr3VL._AC_SY300_SX300_QL70_ML2_.jpg" alt="King C. Gillette Beard Trimmer Kit com três pentes intercambiáveis" loading="lazy" /><div class="product-copy"><div class="meta-row"><span class="tag">Kit para aparar</span></div><h3 class="product-card-title">King C. Gillette Beard Trimmer Kit</h3><p class="product-highlight-line">Aparador sem fios orientado para manutenção de barba</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="../../produto/king-c-gillette-beard-trimmer-kit/">Ver produto</a><a class="btn btn-primary btn-small" href="https://www.amazon.es/dp/B08B959QTP?tag=ondecortarp0c-21&amp;language=pt_PT" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a></div></div></article><article class="product-card product-card--dense"><img src="../../imagens/produtos/kingc-rotina-kit.jpg" alt="Kit King C. Gillette com maquina, pincel, creme e amaciador" loading="lazy" /><div class="product-copy"><div class="meta-row"><span class="tag">Barbear clássico em conjunto</span></div><h3 class="product-card-title">King C. Gillette Rotina Clássica</h3><p class="product-highlight-line">Conjunto coerente para entrar no barbear clássico</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="../../produto/king-c-rotina/">Ver produto</a><a class="btn btn-primary btn-small" href="https://www.amazon.es/dp/B0FMQBG11X?tag=ondecortarp0c-21&amp;language=pt_PT" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a></div></div></article><article class="product-card product-card--dense"><img src="../../imagens/produtos/KitBarbahomem.jpg" alt="Kit completo com produtos para barba, escova, pente e tesoura" loading="lazy" /><div class="product-copy"><div class="meta-row"><span class="tag">Presente mais completo</span></div><h3 class="product-card-title">Kit Completo de Barba XIKEZAN</h3><p class="product-highlight-line">Conjunto amplo com pente, tesoura, escova e óleo</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="../../produto/kit-xikezan/">Ver produto</a><a class="btn btn-primary btn-small" href="https://www.amazon.es/dp/B0D9787RDN?tag=ondecortarp0c-21&amp;language=pt_PT" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a></div></div></article><article class="product-card product-card--dense"><img src="../../imagens/produtos/VikingRevolution.jpg" alt="Kit Viking Revolution com aroma a sândalo" loading="lazy" /><div class="product-copy"><div class="meta-row"><span class="tag">Primeira rotina de barba</span></div><h3 class="product-card-title">Viking Revolution Sandalwood</h3><p class="product-highlight-line">Inclui óleo, bálsamo, creme e pente para uma rotina base</p><div class="card-actions"><a class="btn btn-secondary btn-small" href="../../produto/viking-sandalwood/">Ver produto</a><a class="btn btn-primary btn-small" href="https://www.amazon.es/dp/B07NRR2T4J?tag=ondecortarp0c-21&amp;language=pt_PT" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a></div></div></article></div></div></section><section class="section"><div class="container category-guide-card"><div class="section-header section-header--compact"><div><span class="eyebrow">Como escolher</span><h2>Como perceber se um kit compensa mesmo</h2><p>Antes de olhares para a apresentação, vê se o conjunto resolve a tua rotina. Há kits ótimos para começar e outros que só acumulam extras.</p></div></div><ul class="rich-list category-guide-points"><li>Para primeira compra, privilegia conjuntos com uso simples e peças que reconheces logo.</li><li>Para presente, conta mais a clareza do conjunto do que o número de frascos e acessórios.</li><li>Se já tens escova, pente ou óleo, um kit demasiado cheio pode repetir metade do que já usas.</li></ul></div></section><section class="section"><div class="container comparison-card"><div class="section-header"><div><span class="eyebrow">Atalho de escolha</span><h2>Atalho por tipo de kit</h2><p>Escolhe entre começar, oferecer ou entrar no barbear clássico sem andar às cegas.</p></div></div><div class="comparison-table"><div class="comparison-row"><strong>Primeira rotina de barba</strong><div><h3>Viking Revolution Sandalwood</h3><p>Indicado para quem quer um kit de barba com boa apresentação para uso diário ou para oferecer.</p></div><a class="btn btn-secondary btn-small" href="../../produto/viking-sandalwood/">Ver produto</a></div><div class="comparison-row"><strong>Presente mais completo</strong><div><h3>Kit Completo de Barba XIKEZAN</h3><p>Indicado para quem quer um conjunto de barba completo para uso em casa ou para oferecer.</p></div><a class="btn btn-secondary btn-small" href="../../produto/kit-xikezan/">Ver produto</a></div><div class="comparison-row"><strong>Barbear clássico em conjunto</strong><div><h3>King C. Gillette Rotina Clássica</h3><p>Indicado para quem aprecia o barbear clássico ou quer oferecer um conjunto coerente nessa linha.</p></div><a class="btn btn-secondary btn-small" href="../../produto/king-c-rotina/">Ver produto</a></div></div></div></section><section class="section"><div class="container"><div class="store-guide-panel"><div class="store-guide-header"><div><span class="eyebrow">Revista OndeCortar</span><h2>Guias para separar kits úteis de ruído de catálogo</h2><p>Aqui explicamos o que vale a pena num kit, o que costuma sobrar e como escolher um conjunto mais ajustado ao perfil de quem o vai usar.</p></div><a class="btn btn-secondary btn-small" href="../../revista/">Ver mais guias</a></div><div class="store-guide-row"><a class="store-guide-link" href="../../revista/melhor-kit-de-barba-para-comecar-sem-comprar-as-cegas/"><strong>Melhor kit de barba para começar sem comprar às cegas</strong><span>Ler guia</span></a><a class="store-guide-link" href="../../revista/o-que-vale-a-pena-num-kit-de-barba-e-o-que-e-so-ruido-de-catalogo/"><strong>O que vale a pena num kit de barba e o que é só ruído de catálogo</strong><span>Ver comparação</span></a><a class="store-guide-link" href="../../revista/como-montar-uma-rotina-simples-de-barba-em-casa/"><strong>Como montar uma rotina simples de barba em casa</strong><span>Ver passo a passo</span></a></div></div></div></section><section class="section" id="faq-categoria"><div class="container"><div class="faq-list-wrap"><h3>Perguntas frequentes</h3><div class="faq-item"><strong>Um kit compensa mais do que comprar separado?</strong><p>Compensa quando ainda não tens base montada ou quando queres oferecer algo com uso claro. Se já tens metade dos essenciais, vale a pena fazer contas.</p></div><div class="faq-item"><strong>O que costuma ser ruído num kit de barba?</strong><p>Peças com pouco uso real, frascos redundantes ou acessórios que parecem acrescentar valor mas acabam esquecidos no fundo da caixa.</p></div></div></div></section><section class="section"><div class="container callout-card"><span class="eyebrow">Explorar categoria</span><h2>Num kit, interessa mais a lógica do conjunto</h2><p>Se resolve uma rotina concreta, compensa. Se junta peças só para encher a caixa, não.</p></div></section><section class="section"><div class="container"><div class="disclosure"><strong>Transparência:</strong> Alguns links da loja são afiliados. Se comprares através deles, o OndeCortar.pt pode receber uma comissão por compras elegíveis.</div></div></section></main><footer><div class="container footer-shell"><div class="footer-intro"><div class="footer-brand"><img src="../../imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" /><strong>OndeCortar.pt</strong></div><p>Recomendações de produtos de barbearia e artigos práticos para escolher com mais segurança.</p></div><div class="footer-links"><a href="../../loja/">Loja</a><a href="../../revista/">Revista</a><a href="../../index.html#explorar">Mapa</a><a href="../../faq.html">FAQ</a><a href="../../privacidade.html">Privacidade</a></div></div></footer></div>
+  <div id="app" class="page-shell"><header class="site-header"><div class="container"><nav class="nav" aria-label="Navegação principal"><div class="nav-main-row"><a class="brand" href="../../index.html"><img class="brand-logo" src="../../imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" /><span class="brand-text"><strong>OndeCortar.pt</strong><span>Produtos de barbearia</span></span></a><div class="nav-mobile-actions"><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNavLinks" data-nav-toggle><span class="nav-toggle-label">Menu</span><span class="nav-toggle-box" aria-hidden="true"><span class="nav-toggle-line"></span><span class="nav-toggle-line"></span><span class="nav-toggle-line"></span></span></button></div></div><div class="nav-links" id="siteNavLinks"><a href="../../index.html#explorar">Explorar</a><a href="../../cidades/">Barbearias</a><a href="../../registar.html">Adicionar barbearia</a><a class="is-current" href="../../loja/">Loja</a><a href="../../revista/">Revista</a><a href="../../faq.html">FAQ</a><a class="nav-cta" href="../../loja/">Ver melhores opções</a></div></nav><button class="nav-backdrop" type="button" aria-label="Fechar menu" aria-hidden="true" data-nav-backdrop hidden></button></div></header>
+
+    <main>
+
+      <!-- ── 1. HERO ─────────────────────────────────────────── -->
+      <section class="section" style="padding-bottom: 8px;">
+        <div class="container">
+          <div class="kits-hero">
+            <div class="kits-hero-inner">
+              <nav class="kits-hero-breadcrumbs" aria-label="Breadcrumb">
+                <a href="../../loja/">Loja</a>
+                <span class="sep">/</span>
+                <span>Kits de barba</span>
+              </nav>
+              <span class="kits-hero-eyebrow">Escolha por categoria</span>
+              <h1 class="kits-hero-title">Kits de barba</h1>
+              <p class="kits-hero-sub">Para montar uma rotina de barba sem comprar às cegas nem encher a gaveta com peças que raramente se usam.</p>
+              <div class="kits-hero-actions">
+                <a class="btn-primary" href="#top-escolhas">Ver melhores opções</a>
+                <a class="btn-soft" href="../../revista/melhor-kit-de-barba-para-comecar-sem-comprar-as-cegas/">Ler guia</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 2. PRODUCT GRID ────────────────────────────────── -->
+      <section class="section" id="top-escolhas">
+        <div class="container">
+          <div class="section-header section-header--compact">
+            <div>
+              <span class="eyebrow">Melhores opções</span>
+              <h2>Kits que fazem sentido pela composição</h2>
+              <p>Num kit bom, cada peça tem uso claro. Quando o conjunto existe só para parecer completo, a compra complica-se.</p>
+            </div>
+          </div>
+
+          <div class="kits-products-wrap">
+
+            <!-- ── Feature card: top pick ── -->
+            <article class="kit-card--feature">
+              <img
+                class="kit-feat-img"
+                src="https://m.media-amazon.com/images/I/81O09kGAwsL._AC_SY300_SX300_QL70_ML2_.jpg"
+                alt="Viking Revolution Beard Grooming Kit com escova, pente, balm, óleo e tesoura"
+                loading="lazy"
+              />
+              <div class="kit-feat-body">
+                <span class="kit-badge">Melhor escolha</span>
+                <h3 class="kit-feat-title">Viking Revolution Beard Grooming Kit</h3>
+                <p class="kit-feat-highlight">Junta escova, pente, balm, óleo e tesoura no mesmo conjunto</p>
+                <div class="kit-feat-actions">
+                  <a class="kit-cta-price" href="https://www.amazon.es/dp/B07B53Q3BX?tag=ondecortarp0c-21&amp;language=pt_PT" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a>
+                  <a class="kit-cta-detail" href="../../produto/viking-revolution-beard-grooming-kit/">Ver produto</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ── 2 × 2 secondary grid ── -->
+            <div class="kits-secondary-grid">
+
+              <article class="kit-card--secondary">
+                <img
+                  class="kit-sec-img"
+                  src="https://m.media-amazon.com/images/I/917q61Tr3VL._AC_SY300_SX300_QL70_ML2_.jpg"
+                  alt="King C. Gillette Beard Trimmer Kit com três pentes intercambiáveis"
+                  loading="lazy"
+                />
+                <div class="kit-sec-body">
+                  <span class="kit-badge">Kit para aparar</span>
+                  <h3 class="kit-sec-title">King C. Gillette Beard Trimmer Kit</h3>
+                  <p class="kit-sec-highlight">Aparador sem fios orientado para manutenção de barba</p>
+                  <div class="kit-sec-actions">
+                    <a class="kit-cta-price" href="https://www.amazon.es/dp/B08B959QTP?tag=ondecortarp0c-21&amp;language=pt_PT" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a>
+                    <a class="kit-cta-detail" href="../../produto/king-c-gillette-beard-trimmer-kit/">Ver produto</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="kit-card--secondary">
+                <img
+                  class="kit-sec-img"
+                  src="../../imagens/produtos/kingc-rotina-kit.jpg"
+                  alt="Kit King C. Gillette com máquina, pincel, creme e amaciador"
+                  loading="lazy"
+                />
+                <div class="kit-sec-body">
+                  <span class="kit-badge">Barbear clássico em conjunto</span>
+                  <h3 class="kit-sec-title">King C. Gillette Rotina Clássica</h3>
+                  <p class="kit-sec-highlight">Conjunto coerente para entrar no barbear clássico</p>
+                  <div class="kit-sec-actions">
+                    <a class="kit-cta-price" href="https://www.amazon.es/dp/B0FMQBG11X?tag=ondecortarp0c-21&amp;language=pt_PT" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a>
+                    <a class="kit-cta-detail" href="../../produto/king-c-rotina/">Ver produto</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="kit-card--secondary">
+                <img
+                  class="kit-sec-img"
+                  src="../../imagens/produtos/KitBarbahomem.jpg"
+                  alt="Kit completo com produtos para barba, escova, pente e tesoura"
+                  loading="lazy"
+                />
+                <div class="kit-sec-body">
+                  <span class="kit-badge">Presente mais completo</span>
+                  <h3 class="kit-sec-title">Kit Completo de Barba XIKEZAN</h3>
+                  <p class="kit-sec-highlight">Conjunto amplo com pente, tesoura, escova e óleo</p>
+                  <div class="kit-sec-actions">
+                    <a class="kit-cta-price" href="https://www.amazon.es/dp/B0D9787RDN?tag=ondecortarp0c-21&amp;language=pt_PT" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a>
+                    <a class="kit-cta-detail" href="../../produto/kit-xikezan/">Ver produto</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="kit-card--secondary">
+                <img
+                  class="kit-sec-img"
+                  src="../../imagens/produtos/VikingRevolution.jpg"
+                  alt="Kit Viking Revolution com aroma a sândalo"
+                  loading="lazy"
+                />
+                <div class="kit-sec-body">
+                  <span class="kit-badge">Primeira rotina de barba</span>
+                  <h3 class="kit-sec-title">Viking Revolution Sandalwood</h3>
+                  <p class="kit-sec-highlight">Inclui óleo, bálsamo, creme e pente para uma rotina base</p>
+                  <div class="kit-sec-actions">
+                    <a class="kit-cta-price" href="https://www.amazon.es/dp/B07NRR2T4J?tag=ondecortarp0c-21&amp;language=pt_PT" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a>
+                    <a class="kit-cta-detail" href="../../produto/viking-sandalwood/">Ver produto</a>
+                  </div>
+                </div>
+              </article>
+
+            </div><!-- /kits-secondary-grid -->
+
+          </div><!-- /kits-products-wrap -->
+        </div>
+      </section>
+
+      <!-- ── 3. GUIDE ────────────────────────────────────────── -->
+      <section class="section">
+        <div class="container category-guide-card">
+          <div class="section-header section-header--compact">
+            <div>
+              <span class="eyebrow">Como escolher</span>
+              <h2>Como perceber se um kit compensa mesmo</h2>
+              <p>Antes de olhares para a apresentação, vê se o conjunto resolve a tua rotina. Há kits ótimos para começar e outros que só acumulam extras.</p>
+            </div>
+          </div>
+          <ul class="rich-list category-guide-points">
+            <li>Para primeira compra, privilegia conjuntos com uso simples e peças que reconheces logo.</li>
+            <li>Para presente, conta mais a clareza do conjunto do que o número de frascos e acessórios.</li>
+            <li>Se já tens escova, pente ou óleo, um kit demasiado cheio pode repetir metade do que já usas.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ── 4. COMPARISON TABLE ─────────────────────────────── -->
+      <section class="section">
+        <div class="container comparison-card">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Atalho de escolha</span>
+              <h2>Atalho por tipo de kit</h2>
+              <p>Escolhe entre começar, oferecer ou entrar no barbear clássico sem andar às cegas.</p>
+            </div>
+          </div>
+          <div class="comparison-table">
+            <div class="comparison-row">
+              <strong>Primeira rotina de barba</strong>
+              <div>
+                <h3>Viking Revolution Sandalwood</h3>
+                <p>Indicado para quem quer um kit de barba com boa apresentação para uso diário ou para oferecer.</p>
+              </div>
+              <a class="btn btn-secondary btn-small" href="../../produto/viking-sandalwood/">Ver produto</a>
+            </div>
+            <div class="comparison-row">
+              <strong>Presente mais completo</strong>
+              <div>
+                <h3>Kit Completo de Barba XIKEZAN</h3>
+                <p>Indicado para quem quer um conjunto de barba completo para uso em casa ou para oferecer.</p>
+              </div>
+              <a class="btn btn-secondary btn-small" href="../../produto/kit-xikezan/">Ver produto</a>
+            </div>
+            <div class="comparison-row">
+              <strong>Barbear clássico em conjunto</strong>
+              <div>
+                <h3>King C. Gillette Rotina Clássica</h3>
+                <p>Indicado para quem aprecia o barbear clássico ou quer oferecer um conjunto coerente nessa linha.</p>
+              </div>
+              <a class="btn btn-secondary btn-small" href="../../produto/king-c-rotina/">Ver produto</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 5. STORE GUIDE PANEL ───────────────────────────── -->
+      <section class="section">
+        <div class="container">
+          <div class="store-guide-panel">
+            <div class="store-guide-header">
+              <div>
+                <span class="eyebrow">Revista OndeCortar</span>
+                <h2>Guias para separar kits úteis de ruído de catálogo</h2>
+                <p>Aqui explicamos o que vale a pena num kit, o que costuma sobrar e como escolher um conjunto mais ajustado ao perfil de quem o vai usar.</p>
+              </div>
+              <a class="btn btn-secondary btn-small" href="../../revista/">Ver mais guias</a>
+            </div>
+            <div class="store-guide-row">
+              <a class="store-guide-link" href="../../revista/melhor-kit-de-barba-para-comecar-sem-comprar-as-cegas/">
+                <strong>Melhor kit de barba para começar sem comprar às cegas</strong>
+                <span>Ler guia</span>
+              </a>
+              <a class="store-guide-link" href="../../revista/o-que-vale-a-pena-num-kit-de-barba-e-o-que-e-so-ruido-de-catalogo/">
+                <strong>O que vale a pena num kit de barba e o que é só ruído de catálogo</strong>
+                <span>Ver comparação</span>
+              </a>
+              <a class="store-guide-link" href="../../revista/como-montar-uma-rotina-simples-de-barba-em-casa/">
+                <strong>Como montar uma rotina simples de barba em casa</strong>
+                <span>Ver passo a passo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 6. FAQ ──────────────────────────────────────────── -->
+      <section class="section" id="faq-categoria">
+        <div class="container">
+          <div class="faq-list-wrap">
+            <h3>Perguntas frequentes</h3>
+            <div class="faq-item">
+              <strong>Um kit compensa mais do que comprar separado?</strong>
+              <p>Compensa quando ainda não tens base montada ou quando queres oferecer algo com uso claro. Se já tens metade dos essenciais, vale a pena fazer contas.</p>
+            </div>
+            <div class="faq-item">
+              <strong>O que costuma ser ruído num kit de barba?</strong>
+              <p>Peças com pouco uso real, frascos redundantes ou acessórios que parecem acrescentar valor mas acabam esquecidos no fundo da caixa.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 7. CALLOUT ─────────────────────────────────────── -->
+      <section class="section">
+        <div class="container callout-card">
+          <span class="eyebrow">Explorar categoria</span>
+          <h2>Num kit, interessa mais a lógica do conjunto</h2>
+          <p>Se resolve uma rotina concreta, compensa. Se junta peças só para encher a caixa, não.</p>
+        </div>
+      </section>
+
+      <!-- ── 8. DISCLOSURE ──────────────────────────────────── -->
+      <section class="section">
+        <div class="container">
+          <div class="disclosure">
+            <strong>Transparência:</strong> Alguns links da loja são afiliados. Se comprares através deles, o OndeCortar.pt pode receber uma comissão por compras elegíveis.
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer><div class="container footer-shell"><div class="footer-intro"><div class="footer-brand"><img src="../../imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" /><strong>OndeCortar.pt</strong></div><p>Recomendações de produtos de barbearia e artigos práticos para escolher com mais segurança.</p></div><div class="footer-links"><a href="../../loja/">Loja</a><a href="../../revista/">Revista</a><a href="../../index.html#explorar">Mapa</a><a href="../../faq.html">FAQ</a><a href="../../privacidade.html">Privacidade</a></div></div></footer>
+  </div>
 
   <script>
     (function() {
@@ -59,33 +748,23 @@
       });
 
       if (backdrop) {
-        backdrop.addEventListener("click", function() {
-          setOpen(false);
-        });
+        backdrop.addEventListener("click", function() { setOpen(false); });
       }
 
       navLinks.addEventListener("click", function(event) {
-        if (event.target.closest("a")) {
-          setOpen(false);
-        }
+        if (event.target.closest("a")) { setOpen(false); }
       });
 
       document.addEventListener("click", function(event) {
-        if (!nav.contains(event.target)) {
-          setOpen(false);
-        }
+        if (!nav.contains(event.target)) { setOpen(false); }
       });
 
       document.addEventListener("keydown", function(event) {
-        if (event.key === "Escape") {
-          setOpen(false);
-        }
+        if (event.key === "Escape") { setOpen(false); }
       });
 
       window.addEventListener("resize", function() {
-        if (window.innerWidth > 1100) {
-          setOpen(false);
-        }
+        if (window.innerWidth > 1100) { setOpen(false); }
       });
 
       setOpen(false);
