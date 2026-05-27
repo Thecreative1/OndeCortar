@@ -89,7 +89,8 @@
       "Bash(/tmp/full_analysis.sh)",
       "Bash(chmod +x /tmp/count_words.sh)",
       "Bash(/tmp/count_words.sh)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }

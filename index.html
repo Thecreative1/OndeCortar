@@ -1975,9 +1975,9 @@
         <div class="directory-left-inner">
 
           <p class="oc-eyebrow dir-eyebrow">BARBEARIAS EM PORTUGAL</p>
-          <h1 class="dir-headline">Encontre o seu <em>barbeiro</em></h1>
+          <h1 class="dir-headline">Encontre uma barbearia <em>perto de si</em></h1>
           <p class="dir-subline">
-            <span data-barbearias-total>339</span>&nbsp;barbearias em todo o país. Atualizado regularmente.
+            <span data-barbearias-total>339</span>&thinsp;barbearias<span class="dir-sep" aria-hidden="true">·</span>67 cidades<span class="dir-sep" aria-hidden="true">·</span>Gratuito
           </p>
 
           <!-- Search field -->
@@ -1988,8 +1988,8 @@
                 type="text"
                 id="heroSearchInput"
                 class="hero-search-input"
-                placeholder="Procurar barbearia, bairro ou cidade…"
-                aria-label="Procurar barbearia, bairro ou cidade"
+                placeholder="Pesquise por cidade, zona ou nome…"
+                aria-label="Pesquise por cidade, zona ou nome"
                 autocomplete="off"
               />
             </div>
@@ -2001,6 +2001,14 @@
               <button type="submit" class="btn btn-primary btn-small">Procurar</button>
             </div>
           </form>
+
+          <!-- Trust indicators -->
+          <div class="dir-trust-strip" aria-label="Estatísticas do diretório">
+            <span class="trust-item"><strong data-barbearias-total>339</strong> barbearias</span>
+            <span class="trust-item"><strong>67</strong> cidades</span>
+            <span class="trust-item">100% gratuito</span>
+            <span class="trust-item">Atualizado regularmente</span>
+          </div>
 
           <!-- Quick results feedback -->
           <div id="heroResults" class="hero-results" hidden>
@@ -2027,7 +2035,7 @@
 
           <!-- Empty state -->
           <div class="empty-state" id="emptyState" hidden>
-            <p>Não encontrámos resultados. Experimenta outra cidade ou outro nome.</p>
+            <p>Não encontrámos resultados para esta pesquisa.<br>Experimente outra cidade, zona ou nome.</p>
           </div>
 
           <!-- Results list -->
@@ -4246,22 +4254,23 @@
             <h2 id="owner-heading" class="owner-cta-headline">
               É dono de uma barbearia?<br><em>Faça-se encontrar.</em>
             </h2>
-            <p class="owner-cta-desc">Crie a sua ficha gratuitamente e passe a aparecer no mapa, na pesquisa e na página da sua cidade — sem comissões, sem mensalidade.</p>
+            <p class="owner-cta-desc">Crie a sua ficha gratuitamente e passe a aparecer no mapa, na pesquisa e na página da sua cidade. Demora poucos minutos — sem comissões, sem mensalidade.</p>
             <div class="owner-cta-actions">
-              <a class="btn btn-primary" href="registar.html">+ Adicionar barbearia</a>
+              <a class="btn btn-primary" href="registar.html">Adicionar a minha barbearia</a>
               <a class="btn btn-secondary" href="faq.html">Saber mais</a>
             </div>
             <ul class="owner-checklist">
-              <li>100% gratuito</li>
-              <li>Sem mensalidade</li>
+              <li>Gratuito · sem comissões</li>
               <li>Aprovação em 24h</li>
+              <li>Aparece no mapa e na sua cidade</li>
+              <li>Pode pedir alteração ou remoção</li>
             </ul>
           </div>
           <div class="owner-visual">
             <div class="owner-mock-card">
               <strong>A sua barbearia aqui</strong>
               <p>Morada, telefone e perfil completo — num só lugar para quem procura.</p>
-              <div class="owner-bubble">+40 visitas / mês</div>
+              <div class="owner-bubble">Demora poucos minutos</div>
             </div>
           </div>
         </div>
@@ -4274,15 +4283,15 @@
         <div class="store-duo">
           <div class="store-card">
             <p class="oc-eyebrow">LOJA</p>
-            <h3>Os melhores produtos para cuidar do cabelo e barba</h3>
-            <p>Máquinas, kits, navalhas e acessórios organizados por categoria, com atalhos para o produto certo.</p>
-            <div><a class="btn btn-secondary" href="loja/">Ver loja de produtos</a></div>
+            <h3>Produtos para cuidar do cabelo e da barba</h3>
+            <p>Máquinas, kits, navalhas e acessórios organizados por categoria — seleção curta para escolher melhor.</p>
+            <div><a class="btn btn-secondary" href="loja/">Ver produtos</a></div>
           </div>
           <div class="store-card">
             <p class="oc-eyebrow">MAGAZINE</p>
             <h3>Guias práticos para decidir com segurança</h3>
-            <p>Guias de compra, comparações e conselhos práticos com ligação direta à categoria e aos produtos certos.</p>
-            <div><a class="btn btn-primary" href="revista/">Ler a Revista</a></div>
+            <p>Guias de compra, comparações e conselhos editoriais com ligação direta ao produto certo.</p>
+            <div><a class="btn btn-primary" href="revista/">Ler guias</a></div>
           </div>
         </div>
       </div>

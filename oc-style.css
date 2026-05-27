@@ -291,6 +291,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   background: var(--oc-card); border: 1px solid var(--oc-line);
   border-radius: var(--oc-r-md); overflow: hidden;
   box-shadow: var(--oc-shadow-sm);
+  flex-shrink: 0; /* never compress the search input in flex columns */
   transition: border-color var(--oc-dur-fast) var(--oc-ease-out),
               box-shadow var(--oc-dur-fast) var(--oc-ease-out);
   /* reset old absolute position */
@@ -887,3 +888,316 @@ footer > div > .footer-links { display: none; }
 }
 
 body.nav-open { overflow: hidden; }
+
+/* ═══════════════════════════════════════════════════════════════
+   Design Refresh — May 2026
+   Targeted polish: hierarchy · trust · mobile · a11y
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Base .oc-eyebrow ────────────────────────────────────────── */
+.oc-eyebrow {
+  font-family: var(--oc-font-body);
+  font-size: 10.5px; font-weight: 700;
+  letter-spacing: 0.09em; text-transform: uppercase;
+  color: var(--oc-clay); line-height: 1;
+}
+
+/* ─── Nav: "Entrar" button uses clay accent ────────────────────── */
+.nav-actions .btn-primary {
+  background: var(--oc-clay);
+  border-color: var(--oc-clay);
+  color: #fff;
+}
+.nav-actions .btn-primary:hover {
+  background: var(--oc-clay-deep);
+  border-color: var(--oc-clay-deep);
+  color: #fff;
+  transform: none;
+}
+
+/* ─── Directory left panel typography ─────────────────────────── */
+.dir-headline {
+  /* ensure display font renders even when old CSS sets h1 to Georgia */
+  font-family: var(--oc-font-display) !important;
+}
+
+.dir-subline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+  font-size: 13px;
+  color: var(--oc-muted);
+  line-height: 1.5;
+  margin-top: 2px;
+}
+.dir-subline .dir-sep {
+  color: var(--oc-line-strong);
+  font-size: 10px;
+  user-select: none;
+}
+
+/* ─── Search card: stronger presence ─────────────────────────── */
+.hero-search-card {
+  border-color: var(--oc-line-strong) !important;
+  box-shadow: var(--oc-shadow-sm) !important;
+  background-color: var(--oc-card) !important;
+}
+.hero-search-card:focus-within {
+  border-color: var(--oc-clay) !important;
+  box-shadow: var(--oc-shadow-clay) !important;
+}
+
+/* Submit: clay accent */
+.hero-search-card .btn.btn-primary {
+  background: var(--oc-clay) !important;
+  border-color: var(--oc-clay) !important;
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+.hero-search-card .btn.btn-primary:hover {
+  background: var(--oc-clay-deep) !important;
+  border-color: var(--oc-clay-deep) !important;
+  transform: none;
+}
+
+/* Locate button: more trustworthy */
+#heroLocateBtn.locate-btn {
+  color: var(--oc-ink-soft);
+  border-color: var(--oc-line-strong);
+  font-weight: 600;
+  font-size: 12px;
+}
+#heroLocateBtn.locate-btn:hover {
+  background: var(--oc-clay-tint);
+  border-color: var(--oc-clay-soft);
+  color: var(--oc-clay-deep);
+}
+#heroLocateBtn.locate-btn:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+/* Trust strip: inline stats below search ──────────────────────── */
+.dir-trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  padding: 8px 0 2px;
+  border-top: 1px solid var(--oc-line);
+  font-size: 11.5px;
+  color: var(--oc-muted);
+  line-height: 1.5;
+}
+.dir-trust-strip .trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+.dir-trust-strip .trust-item strong {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--oc-clay);
+}
+
+/* ─── City chips: clay for active ────────────────────────────── */
+.chip.is-active {
+  background: var(--oc-clay) !important;
+  border-color: var(--oc-clay) !important;
+  color: #fff !important;
+}
+.chip.is-active:hover {
+  background: var(--oc-clay-deep) !important;
+  border-color: var(--oc-clay-deep) !important;
+  color: #fff !important;
+  transform: none !important;
+}
+
+/* ─── Result cards: cleaner visual hierarchy ─────────────────── */
+/* "Ver perfil" is the primary action → ink/dark */
+.result-actions .btn-secondary {
+  background: var(--oc-ink);
+  color: var(--oc-paper);
+  border-color: var(--oc-ink);
+}
+.result-actions .btn-secondary:hover {
+  background: var(--oc-ink-soft);
+  border-color: var(--oc-ink-soft);
+  color: var(--oc-paper);
+  transform: none;
+}
+/* Contact action: clay outline (visible but secondary) */
+.result-actions .btn-primary {
+  background: transparent;
+  color: var(--oc-clay);
+  border-color: var(--oc-clay-soft);
+}
+.result-actions .btn-primary:hover {
+  background: var(--oc-clay-tint);
+  border-color: var(--oc-clay);
+  color: var(--oc-clay-deep);
+  transform: none;
+}
+/* "Ver no mapa": neutral tertiary */
+.result-actions .btn-soft {
+  color: var(--oc-muted);
+  font-weight: 500;
+}
+.result-actions .btn-soft:hover {
+  color: var(--oc-ink);
+  transform: none;
+}
+/* On mobile — full width with centered text */
+@media (max-width: 760px) {
+  .result-actions .btn { justify-content: center; }
+}
+
+/* Result card hover: cleaner */
+.result-card:hover {
+  background: var(--oc-card);
+}
+
+/* ─── Empty state: better styling ────────────────────────────── */
+.empty-state {
+  border: 1px dashed var(--oc-line-strong);
+  background: var(--oc-paper);
+  padding: 32px 20px;
+  margin-top: 4px;
+}
+.empty-state p { color: var(--oc-muted); line-height: 1.65; }
+
+/* ─── Stats strip: clay numbers ──────────────────────────────── */
+.stat-strip { background: var(--oc-card); }
+.stat-item strong { color: var(--oc-clay); }
+
+/* ─── How-it-works: clay step numbers ────────────────────────── */
+.how-step-num { background: var(--oc-clay); }
+
+/* ─── Featured cards: ink CTA ────────────────────────────────── */
+.feature-card .btn-secondary {
+  background: var(--oc-ink);
+  color: var(--oc-paper);
+  border-color: var(--oc-ink);
+}
+.feature-card .btn-secondary:hover {
+  background: var(--oc-ink-soft);
+  border-color: var(--oc-ink-soft);
+  color: var(--oc-paper);
+  transform: none;
+}
+
+/* ─── City cards: button in dark context ─────────────────────── */
+.city-card .btn-secondary {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.22);
+  color: rgba(244,239,227,.9);
+}
+.city-card .btn-secondary:hover {
+  background: rgba(255,255,255,.18);
+  border-color: rgba(255,255,255,.38);
+  color: #fff;
+  transform: none;
+}
+
+/* ─── Owner CTA: persuasive checklist ────────────────────────── */
+.owner-checklist { gap: 8px; flex-direction: row; flex-wrap: wrap; }
+.owner-checklist li {
+  padding: 5px 12px;
+  background: rgba(181,70,46,.07);
+  border: 1px solid rgba(181,70,46,.18);
+  border-radius: var(--oc-r-sm);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--oc-ink-soft);
+}
+.owner-checklist li::before { content: none; }
+
+/* Owner primary CTA: clay */
+.owner-cta-actions .btn-primary {
+  background: var(--oc-clay);
+  border-color: var(--oc-clay);
+  color: #fff;
+}
+.owner-cta-actions .btn-primary:hover {
+  background: var(--oc-clay-deep);
+  border-color: var(--oc-clay-deep);
+}
+
+/* ─── Store & Magazine section ────────────────────────────────── */
+.store-section {
+  background: var(--oc-paper-warm);
+  border-top: 1px solid var(--oc-line);
+}
+.store-card {
+  background: var(--oc-card);
+  transition: border-color var(--oc-dur-fast) var(--oc-ease-out),
+              box-shadow var(--oc-dur-fast) var(--oc-ease-out);
+}
+.store-card:hover {
+  border-color: var(--oc-line-strong);
+  box-shadow: var(--oc-shadow-sm);
+}
+.store-card .btn-secondary {
+  background: var(--oc-ink);
+  color: var(--oc-paper);
+  border-color: var(--oc-ink);
+  min-height: 42px;
+}
+.store-card .btn-secondary:hover {
+  background: var(--oc-ink-soft);
+  border-color: var(--oc-ink-soft);
+  color: var(--oc-paper);
+  transform: none;
+}
+.store-card .btn-primary {
+  background: var(--oc-clay);
+  border-color: var(--oc-clay);
+  color: #fff;
+  min-height: 42px;
+}
+.store-card .btn-primary:hover {
+  background: var(--oc-clay-deep);
+  border-color: var(--oc-clay-deep);
+  transform: none;
+}
+
+/* ─── Map popup: primary action ──────────────────────────────── */
+.popup-actions a.popup-primary {
+  background: var(--oc-clay) !important;
+  border-color: var(--oc-clay) !important;
+  color: #fff !important;
+}
+.popup-actions a.popup-primary:hover {
+  background: var(--oc-clay-deep) !important;
+  color: #fff !important;
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─── Mobile improvements ────────────────────────────────────── */
+@media (max-width: 860px) {
+  .hero-map-shell {
+    height: 46vh;
+    min-height: 290px;
+    max-height: 420px;
+  }
+  .dir-trust-strip { display: none; }
+}
+
+@media (max-width: 480px) {
+  .hero-map-shell { height: 42vh; min-height: 260px; }
+  .owner-checklist { flex-direction: column; align-items: flex-start; }
+  .dir-trust-strip { display: none; }
+}
