@@ -1,0 +1,815 @@
+/* ═══════════════════════════════════════════════════════════════════
+   OndeCortar.pt — Revista / Magazine CSS
+   Editorial styles for revista/index.html
+   Loaded in addition to commerce.css
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Tokens ──────────────────────────────────────────────────────── */
+:root {
+  --rev-ink:       #1A1510;
+  --rev-ink-soft:  #2C2520;
+  --rev-muted:     #4E4538;
+  --rev-pale:      #7A7068;
+  --rev-card:      #FEFCF8;
+  --rev-line:      rgba(170, 148, 116, 0.28);
+  --rev-line-str:  rgba(150, 128, 100, 0.46);
+  --rev-gold:      #B8945F;
+  --rev-gold-deep: #7A5E2E;
+  --rev-dark:      #1C1812;
+  --rev-dark-2:    #28221C;
+  --rev-serif:     'Playfair Display', Georgia, 'Times New Roman', serif;
+  --rev-sans:      'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* ── Shared helpers ─────────────────────────────────────────────── */
+.rev-eyebrow {
+  display: block;
+  font-family: var(--rev-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rev-gold-deep);
+  margin-bottom: 10px;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   1. HERO
+   ───────────────────────────────────────────────────────────────── */
+.rev-hero {
+  padding: 56px 0 44px;
+  position: relative;
+}
+
+.rev-hero-inner {
+  max-width: 700px;
+}
+
+.rev-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--rev-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rev-gold-deep);
+  background: rgba(184, 148, 95, 0.12);
+  border: 1px solid rgba(184, 148, 95, 0.35);
+  padding: 5px 12px;
+  border-radius: 100px;
+  margin-bottom: 22px;
+}
+
+.rev-hero-h1 {
+  font-family: var(--rev-serif);
+  font-size: clamp(38px, 6vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.0;
+  color: var(--rev-ink);
+  margin: 0 0 20px;
+}
+
+.rev-hero-sub {
+  font-family: var(--rev-sans);
+  font-size: clamp(0.95rem, 1.6vw, 1.08rem);
+  line-height: 1.7;
+  color: var(--rev-muted);
+  max-width: 62ch;
+  margin: 0 0 30px;
+}
+
+.rev-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.rev-hero-trust {
+  font-family: var(--rev-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--rev-pale);
+  text-transform: uppercase;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   2. CATEGORY CHIPS
+   ───────────────────────────────────────────────────────────────── */
+.rev-cats-section {
+  padding: 0 0 40px;
+}
+
+.rev-cats-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.rev-cats-scroll::-webkit-scrollbar { display: none; }
+
+.rev-cat-chip {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 100px;
+  border: 1px solid var(--rev-line-str);
+  background: var(--rev-card);
+  font-family: var(--rev-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--rev-ink-soft);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+  box-shadow: 0 1px 3px rgba(20,17,13,.06);
+}
+.rev-cat-chip:hover,
+.rev-cat-chip.is-active {
+  background: var(--rev-ink);
+  border-color: var(--rev-ink);
+  color: #FEFCF8;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   3. FEATURED ARTICLE — big editorial card
+   ───────────────────────────────────────────────────────────────── */
+.rev-feature-section {
+  padding: 0 0 52px;
+}
+
+.rev-section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.rev-section-h2 {
+  font-family: var(--rev-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--rev-ink);
+  margin: 0;
+}
+
+.rev-section-link {
+  font-family: var(--rev-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--rev-muted);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.rev-section-link::after { content: ' →'; }
+.rev-section-link:hover { color: var(--rev-ink); }
+
+/* The feature card itself: dark editorial */
+.rev-feature-card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  min-height: 380px;
+  background: var(--rev-dark);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(20,17,13,.18);
+}
+
+.rev-feature-img {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.rev-feature-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+.rev-feature-card:hover .rev-feature-img img {
+  transform: scale(1.04);
+}
+
+.rev-feature-body {
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  color: #F2EBE0;
+}
+
+.rev-feature-cat {
+  font-family: var(--rev-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rev-gold);
+}
+
+.rev-feature-title {
+  font-family: var(--rev-serif);
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: #FAF5ED;
+  margin: 0;
+}
+
+.rev-feature-desc {
+  font-family: var(--rev-sans);
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: rgba(242, 235, 224, 0.78);
+  margin: 0;
+  max-width: 40ch;
+}
+
+.rev-feature-meta {
+  font-family: var(--rev-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(242, 235, 224, 0.50);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   4. ARTICLE CARDS — redesigned
+   ───────────────────────────────────────────────────────────────── */
+.rev-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.rev-grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.rev-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.rev-article-card {
+  background: var(--rev-card);
+  border: 1px solid var(--rev-line);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--rev-ink);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  box-shadow: 0 1px 4px rgba(20,17,13,.06), 0 3px 12px rgba(20,17,13,.04);
+}
+.rev-article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px -6px rgba(20,17,13,.16);
+  border-color: var(--rev-line-str);
+}
+
+/* Image area */
+.rev-article-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: linear-gradient(160deg, #F0E8D8, #E0D4BE);
+  flex-shrink: 0;
+}
+.rev-article-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+.rev-article-card:hover .rev-article-thumb img {
+  transform: scale(1.05);
+}
+/* Fallback pattern for missing images */
+.rev-article-thumb--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    repeating-linear-gradient(135deg, rgba(20,17,13,.045) 0 1px, transparent 1px 12px),
+    linear-gradient(160deg, #EDE4D2, #DDD0BA);
+}
+
+/* Card body */
+.rev-article-body {
+  padding: 18px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.rev-article-cat {
+  font-family: var(--rev-sans);
+  font-size: 0.70rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rev-gold-deep);
+}
+
+.rev-article-title {
+  font-family: var(--rev-serif);
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: var(--rev-ink);
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.rev-article-excerpt {
+  font-family: var(--rev-sans);
+  font-size: 0.87rem;
+  line-height: 1.62;
+  color: var(--rev-muted);
+  margin: 0;
+  flex: 1;
+}
+
+.rev-article-footer {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rev-line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.rev-read-link {
+  font-family: var(--rev-sans);
+  font-size: 0.80rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--rev-ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: gap .15s ease;
+}
+.rev-read-link::after { content: '→'; }
+.rev-article-card:hover .rev-read-link { gap: 8px; }
+
+.rev-read-sub {
+  font-family: var(--rev-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--rev-pale);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   5. TOPIC SECTIONS (Barba, Máquinas, Cultura…)
+   ───────────────────────────────────────────────────────────────── */
+.rev-topic-section {
+  padding: 56px 0;
+  border-top: 1px solid var(--rev-line);
+}
+
+.rev-topic-inner {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.rev-topic-intro { display: flex; flex-direction: column; gap: 14px; }
+
+.rev-topic-label {
+  display: block;
+  font-family: var(--rev-sans);
+  font-size: 0.70rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rev-gold-deep);
+}
+
+.rev-topic-h2 {
+  font-family: var(--rev-serif);
+  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+  color: var(--rev-ink);
+  margin: 0;
+}
+
+.rev-topic-desc {
+  font-family: var(--rev-sans);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--rev-muted);
+  margin: 0;
+}
+
+/* Dark topic variant */
+.rev-topic-section--dark {
+  background: var(--rev-dark);
+  border-top-color: transparent;
+  padding: 60px 0;
+}
+.rev-topic-section--dark .rev-topic-h2 { color: #FAF5ED; }
+.rev-topic-section--dark .rev-topic-label { color: var(--rev-gold); }
+.rev-topic-section--dark .rev-topic-desc { color: rgba(242,235,224,.72); }
+.rev-topic-section--dark .rev-article-card {
+  background: var(--rev-dark-2);
+  border-color: rgba(255,255,255,.10);
+  color: #F2EBE0;
+}
+.rev-topic-section--dark .rev-article-card:hover {
+  background: #322A22;
+  border-color: rgba(255,255,255,.18);
+}
+.rev-topic-section--dark .rev-article-thumb {
+  background: linear-gradient(160deg, #2E2820, #24201A);
+}
+.rev-topic-section--dark .rev-article-cat { color: var(--rev-gold); }
+.rev-topic-section--dark .rev-article-title { color: #FAF5ED; }
+.rev-topic-section--dark .rev-article-excerpt { color: rgba(242,235,224,.65); }
+.rev-topic-section--dark .rev-article-footer { border-top-color: rgba(255,255,255,.10); }
+.rev-topic-section--dark .rev-read-link { color: #FAF5ED; }
+.rev-topic-section--dark .rev-read-sub { color: rgba(242,235,224,.45); }
+
+/* ─────────────────────────────────────────────────────────────────
+   6. SHOP CROSSLINK SECTION
+   ───────────────────────────────────────────────────────────────── */
+.rev-shop-section {
+  padding: 60px 0;
+  background: var(--rev-dark);
+  border-top: 0;
+}
+
+.rev-shop-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.rev-shop-text { display: flex; flex-direction: column; gap: 16px; }
+
+.rev-shop-h2 {
+  font-family: var(--rev-serif);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: #FAF5ED;
+  margin: 0;
+}
+
+.rev-shop-desc {
+  font-family: var(--rev-sans);
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: rgba(242,235,224,.72);
+  margin: 0;
+  max-width: 42ch;
+}
+
+.rev-shop-cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rev-shop-cat {
+  display: inline-flex;
+  align-items: center;
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.07);
+  font-family: var(--rev-sans);
+  font-size: 0.80rem;
+  font-weight: 600;
+  color: rgba(242,235,224,.85);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+.rev-shop-cat:hover {
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.30);
+  color: #FAF5ED;
+}
+
+/* Grid of mini category cards (right side) */
+.rev-shop-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.rev-shop-card {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  padding: 18px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  transition: background .15s ease, border-color .15s ease;
+}
+.rev-shop-card:hover {
+  background: rgba(255,255,255,.11);
+  border-color: rgba(255,255,255,.22);
+}
+
+.rev-shop-card-label {
+  font-family: var(--rev-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rev-gold);
+}
+
+.rev-shop-card-name {
+  font-family: var(--rev-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #FAF5ED;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.rev-shop-card-desc {
+  font-family: var(--rev-sans);
+  font-size: 0.80rem;
+  line-height: 1.5;
+  color: rgba(242,235,224,.60);
+  margin: 0;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   7. TRUST SECTION
+   ───────────────────────────────────────────────────────────────── */
+.rev-trust-section {
+  padding: 52px 0;
+  border-top: 1px solid var(--rev-line);
+}
+
+.rev-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.rev-trust-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+  background: var(--rev-card);
+  border: 1px solid var(--rev-line);
+  border-radius: 18px;
+  box-shadow: 0 1px 4px rgba(20,17,13,.05);
+}
+
+.rev-trust-label {
+  font-family: var(--rev-sans);
+  font-size: 0.70rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rev-gold-deep);
+}
+
+.rev-trust-title {
+  font-family: var(--rev-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--rev-ink);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.rev-trust-desc {
+  font-family: var(--rev-sans);
+  font-size: 0.86rem;
+  line-height: 1.62;
+  color: var(--rev-muted);
+  margin: 0;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   8. THEMES / HUB NAVIGATION
+   ───────────────────────────────────────────────────────────────── */
+.rev-themes-section {
+  padding: 52px 0;
+  border-top: 1px solid var(--rev-line);
+}
+
+.rev-themes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.rev-theme-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 22px 20px;
+  background: var(--rev-card);
+  border: 1px solid var(--rev-line);
+  border-radius: 18px;
+  text-decoration: none;
+  color: var(--rev-ink);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  box-shadow: 0 1px 4px rgba(20,17,13,.05);
+}
+.rev-theme-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 22px -6px rgba(20,17,13,.14);
+  border-color: var(--rev-line-str);
+}
+
+.rev-theme-count {
+  font-family: var(--rev-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--rev-gold-deep);
+}
+
+.rev-theme-name {
+  font-family: var(--rev-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--rev-ink);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.rev-theme-desc {
+  font-family: var(--rev-sans);
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--rev-muted);
+  margin: 0;
+  flex: 1;
+}
+
+.rev-theme-cta {
+  margin-top: 4px;
+  font-family: var(--rev-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--rev-ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.rev-theme-cta::after { content: '→'; }
+
+/* ─────────────────────────────────────────────────────────────────
+   9. BARBERSHOP FINDER CTA
+   ───────────────────────────────────────────────────────────────── */
+.rev-finder-section {
+  padding: 64px 0;
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(184,148,95,.12), transparent 44%),
+    linear-gradient(160deg, #EFE8D8 0%, #E4D9C6 100%);
+  border-top: 1px solid var(--rev-line);
+}
+
+.rev-finder-inner {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.rev-finder-h2 {
+  font-family: var(--rev-serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--rev-ink);
+  margin: 0;
+}
+
+.rev-finder-desc {
+  font-family: var(--rev-sans);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--rev-muted);
+  margin: 0;
+  max-width: 44ch;
+}
+
+.rev-finder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────────────────────────── */
+
+/* ── 1280px: feature card slightly compressed ── */
+@media (max-width: 1280px) {
+  .rev-grid--4 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ── 1100px: shift layouts ── */
+@media (max-width: 1100px) {
+  .rev-grid { grid-template-columns: repeat(2, 1fr); }
+  .rev-grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .rev-topic-inner { grid-template-columns: 240px 1fr; gap: 32px; }
+  .rev-shop-inner { grid-template-columns: 1fr; gap: 32px; }
+  .rev-shop-grid { grid-template-columns: repeat(2, 1fr); }
+  .rev-trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .rev-themes-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── 900px: feature card stacks ── */
+@media (max-width: 900px) {
+  .rev-feature-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 260px 1fr;
+  }
+  .rev-feature-img { height: 100%; }
+  .rev-feature-body { padding: 28px 28px 32px; }
+  .rev-feature-desc { max-width: 100%; }
+}
+
+/* ── 768px: tablet ── */
+@media (max-width: 768px) {
+  .rev-hero { padding: 40px 0 32px; }
+  .rev-topic-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .rev-trust-grid { grid-template-columns: 1fr; }
+  .rev-themes-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── 560px: mobile ── */
+@media (max-width: 560px) {
+  .rev-hero-h1 { font-size: clamp(32px, 9vw, 42px); }
+  .rev-hero-actions { flex-direction: column; align-items: stretch; }
+  .rev-hero-actions .btn { width: 100%; text-align: center; justify-content: center; }
+  .rev-grid { grid-template-columns: 1fr; }
+  .rev-grid--2 { grid-template-columns: 1fr; }
+  .rev-grid--4 { grid-template-columns: 1fr; }
+  .rev-feature-card { grid-template-rows: 220px 1fr; }
+  .rev-feature-body { padding: 22px 20px 28px; gap: 12px; }
+  .rev-feature-title { font-size: 1.35rem; }
+  .rev-trust-grid { grid-template-columns: 1fr; }
+  .rev-themes-grid { grid-template-columns: 1fr; }
+  .rev-shop-grid { grid-template-columns: 1fr; }
+  .rev-topic-section { padding: 44px 0; }
+  .rev-shop-section { padding: 44px 0; }
+  .rev-finder-section { padding: 48px 0; }
+  .rev-finder-actions { flex-direction: column; align-items: stretch; width: 100%; }
+  .rev-finder-actions .btn { width: 100%; text-align: center; justify-content: center; }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .rev-article-card,
+  .rev-article-thumb img,
+  .rev-feature-img img,
+  .rev-read-link {
+    transition: none;
+  }
+}
