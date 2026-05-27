@@ -64,14 +64,15 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--oc-font-body);
-  background: var(--oc-paper);
+  background:
+    radial-gradient(ellipse at top left, rgba(181,70,46,.07), transparent 40%),
+    radial-gradient(ellipse at bottom right, rgba(184,175,155,.12), transparent 44%),
+    linear-gradient(180deg, #FAF5EE 0%, #F4EFE3 45%, #EDE4D3 100%);
   color: var(--oc-ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   overflow-x: clip;
-  /* Reset old gradient background */
-  background-image: none !important;
 }
 
 img { max-width: 100%; display: block; }
