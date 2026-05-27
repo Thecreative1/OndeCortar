@@ -90,7 +90,8 @@
       "Bash(chmod +x /tmp/count_words.sh)",
       "Bash(/tmp/count_words.sh)",
       "Read(//tmp/**)",
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "mcp__Claude_in_Chrome__tabs_context_mcp"
     ]
   }
 }
