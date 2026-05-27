@@ -1,20 +1,27 @@
-/* OndeCortar.pt — Profile page design system
-   Bodoni Moda + Geist + Geist Mono */
+/* OndeCortar.pt — Profile page design system v3
+   Bodoni Moda + Geist + Geist Mono
+   v3 (2026-05-27): stronger contrast, richer background, clearer cards,
+   better hierarchy, improved readability — same structure, stronger execution */
 
 :root {
-  --paper:           #F2ECDF;
-  --paper-2:         #ECE4D2;
-  --card:            #FBF7EC;
-  --ink:             #14110D;
-  --ink-2:           #1E1A14;
-  --ink-soft:        #2A241C;
-  --subtext:         #6B6358;
-  --hairline:        #DCD2BD;
-  --hairline-strong: #C4B89E;
+  /* ── Colours ─────────────────────────────────────────────
+     Key change: --paper is now a mid warm parchment so cards (near-white)
+     stand out clearly. --subtext darkened to maintain WCAG AA on new bg.
+     Hairlines strengthened so card borders are always visible.           */
+  --paper:           #DDD3BC;   /* was #F2ECDF — deeper warm parchment    */
+  --paper-2:         #D3C8AE;   /* was #ECE4D2 — used for footer, photo   */
+  --card:            #FEFCF8;   /* was #FBF7EC — near-white, clear vs bg  */
+  --ink:             #0E0C08;   /* was #14110D — deeper near-black        */
+  --ink-2:           #181410;
+  --ink-soft:        #221C14;   /* was #2A241C                            */
+  --subtext:         #4A4238;   /* was #6B6358 — 6.7:1 on --paper, AA ✓  */
+  --hairline:        #BDB09A;   /* was #DCD2BD — clearly visible borders  */
+  --hairline-strong: #A29080;   /* was #C4B89E — stronger action borders  */
   --gold:            #B8945F;
   --gold-soft:       #D4B687;
-  --gold-deep:       #8C6E42;
-  --ok:              #5C7A4A;
+  --gold-deep:       #7A5E2E;   /* was #8C6E42 — deeper for pill text     */
+  --ok:              #4A6A38;   /* was #5C7A4A                            */
+  /* ── Type ───────────────────────────────────────────────── */
   --serif: 'Bodoni Moda', 'Playfair Display', Georgia, serif;
   --sans:  'Geist', 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
   --mono:  'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
@@ -28,10 +35,15 @@ body {
   margin: 0;
   font-family: var(--sans);
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--ink);
-  background: var(--paper);
+  /* Gradient adds depth: warm gold hint top-right, dark grounding bottom-left */
+  background:
+    radial-gradient(ellipse at 96% 4%,  rgba(184,148,95,.10), transparent 38%),
+    radial-gradient(ellipse at 5%  85%, rgba(14,12,8,.05),    transparent 32%),
+    linear-gradient(160deg, #EAE0CA 0%, #DDD3BC 45%, #D3C8AE 100%);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4 { margin: 0; font-weight: 400; }
@@ -53,14 +65,15 @@ button { cursor: pointer; font-family: var(--sans); }
 /* ── Type primitives ────────────────────────────────────── */
 .oc-eyebrow {
   font-family: var(--mono);
-  font-size: 11px; font-weight: 500;
-  letter-spacing: 0.12em; text-transform: uppercase;
+  font-size: 11px; font-weight: 600;       /* was 500 */
+  letter-spacing: 0.10em; text-transform: uppercase;
   color: var(--subtext);
 }
 .oc-meta {
   font-family: var(--mono);
   font-size: 10px; letter-spacing: 0.08em;
   text-transform: uppercase; color: var(--subtext);
+  font-weight: 500;                         /* was no weight */
 }
 .oc-mono { font-family: var(--mono); }
 
@@ -72,18 +85,38 @@ button { cursor: pointer; font-family: var(--sans); }
   border-radius: 14px; border: 1px solid transparent;
   font-family: var(--sans); font-weight: 500;
   font-size: 15px; letter-spacing: -0.01em;
-  transition: background .18s ease, transform .12s ease;
+  transition: background .18s ease, transform .12s ease, box-shadow .18s ease;
   white-space: nowrap;
 }
-.oc-btn--primary { background: var(--ink); color: var(--paper); }
-.oc-btn--primary:hover { background: #000; }
-.oc-btn--ghost {
-  background: transparent; color: var(--ink);
-  border-color: var(--hairline-strong);
+.oc-btn--primary {
+  background: var(--ink);
+  color: #FEFCF8;
+  box-shadow: 0 4px 16px rgba(14,12,8,.22), 0 1px 4px rgba(14,12,8,.12);
 }
-.oc-btn--ghost:hover { background: rgba(20,17,13,.04); }
-.oc-btn--gold { background: var(--gold); color: var(--ink); }
-.oc-btn--gold:hover { background: var(--gold-soft); }
+.oc-btn--primary:hover {
+  background: #000;
+  box-shadow: 0 6px 22px rgba(14,12,8,.30), 0 1px 4px rgba(14,12,8,.15);
+}
+/* Ghost: card background so it stands out on dark-ish page bg */
+.oc-btn--ghost {
+  background: var(--card);
+  color: var(--ink);
+  border-color: var(--hairline-strong);
+  box-shadow: 0 1px 4px rgba(14,12,8,.07);
+}
+.oc-btn--ghost:hover {
+  background: #F5EFE3;
+  border-color: var(--ink);
+}
+.oc-btn--gold {
+  background: var(--gold);
+  color: var(--ink);
+  box-shadow: 0 4px 14px rgba(184,148,95,.32);
+}
+.oc-btn--gold:hover {
+  background: var(--gold-soft);
+  box-shadow: 0 6px 18px rgba(184,148,95,.38);
+}
 .oc-btn--link {
   background: transparent; height: auto;
   padding: 6px 0; border-radius: 0;
@@ -91,30 +124,36 @@ button { cursor: pointer; font-family: var(--sans); }
   border-bottom: 1px solid var(--hairline-strong);
   font-size: 14px;
 }
+/* Keyboard focus ring — all buttons */
+.oc-btn:focus-visible {
+  outline: 3px solid rgba(184,148,95,.55);
+  outline-offset: 2px;
+}
 
-/* ── Pills ──────────────────────────────────────────────── */
+/* ── Pills / badges ─────────────────────────────────────── */
 .oc-pill {
   display: inline-flex; align-items: center; gap: 6px;
-  height: 26px; padding: 0 10px; border-radius: 100px;
+  height: 28px; padding: 0 11px; border-radius: 100px;
   border: 1px solid var(--hairline-strong);
   background: var(--card);
-  font-family: var(--mono); font-size: 10.5px;
+  font-family: var(--mono); font-size: 10.5px; font-weight: 600;
   letter-spacing: 0.06em; text-transform: uppercase;
   color: var(--ink); white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(14,12,8,.07);
 }
 .oc-pill .dot {
   width: 6px; height: 6px; border-radius: 100px;
   background: var(--ok);
-  box-shadow: 0 0 0 3px rgba(92,122,74,.18);
+  box-shadow: 0 0 0 3px rgba(74,106,56,.22);
 }
 .oc-pill--gold {
-  background: rgba(184,148,95,.12);
-  border-color: rgba(184,148,95,.45);
+  background: rgba(184,148,95,.16);
+  border-color: rgba(184,148,95,.52);
   color: var(--gold-deep);
 }
 .oc-pill--warn {
-  background: rgba(140,110,66,.1);
-  border-color: rgba(140,110,66,.4);
+  background: rgba(140,110,66,.13);
+  border-color: rgba(140,110,66,.46);
   color: var(--gold-deep);
 }
 
@@ -123,35 +162,42 @@ button { cursor: pointer; font-family: var(--sans); }
   background: var(--card);
   border: 1px solid var(--hairline);
   border-radius: 22px;
+  /* Shadow lifts cards clearly off the parchment background */
+  box-shadow:
+    0 1px 3px  rgba(14,12,8,.07),
+    0 4px 14px rgba(14,12,8,.05);
 }
 .oc-card--ink {
-  background: var(--ink); color: var(--paper);
+  background: var(--ink); color: #FEFCF8;
   border-color: var(--ink);
+  box-shadow:
+    0 4px 20px rgba(14,12,8,.28),
+    0 1px 5px  rgba(14,12,8,.18);
 }
 
 /* ── Photo placeholder ──────────────────────────────────── */
 .oc-photo {
   position: relative;
   background:
-    repeating-linear-gradient(135deg, rgba(20,17,13,.06) 0 1px, transparent 1px 14px),
+    repeating-linear-gradient(135deg, rgba(14,12,8,.055) 0 1px, transparent 1px 14px),
     var(--paper-2);
   border: 1px solid var(--hairline); border-radius: 18px; overflow: hidden;
 }
 .oc-photo__label {
   position: absolute; left: 14px; bottom: 14px;
-  font-family: var(--mono); font-size: 10px;
-  letter-spacing: 0.1em; text-transform: uppercase;
+  font-family: var(--mono); font-size: 10px; font-weight: 600;
+  letter-spacing: 0.10em; text-transform: uppercase;
   color: var(--subtext);
-  background: rgba(251,247,236,.85);
+  background: rgba(254,252,248,.92);
   padding: 4px 8px; border-radius: 6px;
   backdrop-filter: blur(4px);
 }
 .oc-photo__add {
   position: absolute; top: 14px; right: 14px;
   display: inline-flex; gap: 6px; align-items: center;
-  background: rgba(20,17,13,.78); color: var(--paper);
+  background: rgba(14,12,8,.82); color: #FEFCF8;
   padding: 6px 10px; border-radius: 100px;
-  font-family: var(--mono); font-size: 10px;
+  font-family: var(--mono); font-size: 10px; font-weight: 500;
   letter-spacing: 0.08em; text-transform: uppercase;
 }
 
@@ -160,6 +206,7 @@ button { cursor: pointer; font-family: var(--sans); }
   border-radius: 18px; overflow: hidden;
   border: 1px solid var(--hairline);
   min-height: 220px;
+  box-shadow: 0 2px 8px rgba(14,12,8,.08);
 }
 .oc-map-wrap .leaflet-container {
   border-radius: 18px;
@@ -167,14 +214,15 @@ button { cursor: pointer; font-family: var(--sans); }
 
 /* ── Barber pole ────────────────────────────────────────── */
 .oc-pole {
-  height: 6px; border-radius: 100px;
+  height: 4px; border-radius: 100px;   /* was 6px — less visually noisy */
   background:
     repeating-linear-gradient(135deg,
-      var(--ink) 0 8px,
-      var(--paper) 8px 14px,
-      var(--gold) 14px 20px,
-      var(--paper) 20px 26px);
+      var(--ink) 0 7px,
+      rgba(255,255,255,.55) 7px 12px,
+      var(--gold) 12px 18px,
+      rgba(255,255,255,.55) 18px 23px);
   border: 1px solid var(--hairline);
+  opacity: .65;                          /* subtle ornament, not dominant  */
 }
 
 /* ── Hairline ───────────────────────────────────────────── */
@@ -184,11 +232,16 @@ button { cursor: pointer; font-family: var(--sans); }
 .oc-crumb {
   display: flex; flex-wrap: wrap;
   align-items: center; gap: 6px;
-  font-family: var(--mono); font-size: 10.5px;
+  font-family: var(--mono); font-size: 10.5px; font-weight: 500;
   letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--subtext);
 }
+.oc-crumb a { color: var(--subtext); }
 .oc-crumb a:hover { color: var(--ink); }
+.oc-crumb a:focus-visible {
+  outline: 2px solid rgba(184,148,95,.5);
+  outline-offset: 2px; border-radius: 2px;
+}
 .oc-crumb__sep { opacity: .5; }
 
 /* ── Contact row ────────────────────────────────────────── */
@@ -201,24 +254,36 @@ button { cursor: pointer; font-family: var(--sans); }
 }
 .oc-contact-row:last-child { border-bottom: 0; }
 .oc-contact-row__label {
-  font-family: var(--mono); font-size: 10px;
-  letter-spacing: 0.1em; text-transform: uppercase;
+  font-family: var(--mono); font-size: 10px; font-weight: 600;
+  letter-spacing: 0.10em; text-transform: uppercase;
   color: var(--subtext); margin-bottom: 2px;
 }
 .oc-contact-row__value {
   font-size: 14.5px; font-weight: 500;
   letter-spacing: -0.005em;
+  color: var(--ink);
+  /* On desktop: keep single line; on mobile: allow wrap (see mobile MQ) */
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
+/* Action buttons in contact rows — clearly readable, tapable */
 .oc-contact-row__action {
-  font-family: var(--mono); font-size: 11px;
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
   letter-spacing: 0.06em; text-transform: uppercase;
-  color: var(--ink); padding: 6px 10px;
+  color: var(--ink); padding: 7px 12px;
   border: 1px solid var(--hairline-strong);
-  border-radius: 100px; background: transparent;
+  border-radius: 100px;
+  background: var(--card);               /* was transparent */
   white-space: nowrap;
+  transition: background .15s ease, border-color .15s ease;
 }
-.oc-contact-row__action:hover { background: rgba(20,17,13,.04); }
+.oc-contact-row__action:hover {
+  background: #EEE8DA;
+  border-color: var(--ink);
+}
+.oc-contact-row__action:focus-visible {
+  outline: 2px solid rgba(184,148,95,.5);
+  outline-offset: 2px;
+}
 
 /* ── Hours row ──────────────────────────────────────────── */
 .oc-hours-row {
@@ -247,12 +312,21 @@ button { cursor: pointer; font-family: var(--sans); }
 .oc-section-head__title {
   font-family: var(--serif); font-size: 26px;
   letter-spacing: -0.02em; line-height: 1;
+  color: var(--ink);
 }
 
 /* ── Hero name ──────────────────────────────────────────── */
 .oc-hero-name {
   font-family: var(--serif); font-weight: 700;
   letter-spacing: -0.035em; line-height: 0.94;
+  color: var(--ink);
+}
+
+/* ── Hero blurb ─────────────────────────────────────────── */
+/* Build script sets inline styles; !important overrides where needed */
+.oc-hero__blurb {
+  line-height: 1.68 !important;
+  color: var(--ink-soft) !important;
 }
 
 /* ── Owner block ────────────────────────────────────────── */
@@ -263,7 +337,7 @@ button { cursor: pointer; font-family: var(--sans); }
   content: '';
   position: absolute; top: -40%; right: -10%;
   width: 380px; height: 380px; border-radius: 50%;
-  background: radial-gradient(closest-side, rgba(184,148,95,.25), transparent 70%);
+  background: radial-gradient(closest-side, rgba(184,148,95,.30), transparent 70%);
   pointer-events: none;
 }
 .oc-owner::after {
@@ -271,7 +345,7 @@ button { cursor: pointer; font-family: var(--sans); }
   position: absolute; bottom: 0; left: 0;
   height: 1px; width: 100%;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  opacity: .4;
+  opacity: .45;
 }
 
 /* ── Related card ───────────────────────────────────────── */
@@ -282,10 +356,15 @@ button { cursor: pointer; font-family: var(--sans); }
   border: 1px solid var(--hairline); border-radius: 20px;
   transition: transform .2s ease, box-shadow .2s ease;
   text-decoration: none; color: inherit;
+  box-shadow:
+    0 1px 3px rgba(14,12,8,.07),
+    0 4px 12px rgba(14,12,8,.04);
 }
 .oc-related:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 30px -16px rgba(20,17,13,.18);
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 28px -8px rgba(14,12,8,.18),
+    0 2px 8px  rgba(14,12,8,.08);
 }
 .oc-related__photo {
   width: 100%; border-radius: 14px;
@@ -298,12 +377,14 @@ button { cursor: pointer; font-family: var(--sans); }
   justify-content: space-between;
   padding: 14px 20px;
   position: sticky; top: 0; z-index: 50;
-  background: var(--paper);
+  background: rgba(220,210,190,.95);      /* translucent parchment */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--hairline);
 }
 .oc-topnav__brand {
   font-family: var(--serif); font-size: 18px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.01em; color: var(--ink);
 }
 .oc-topnav__brand sup {
   font-family: var(--mono); font-size: 9px;
@@ -313,19 +394,20 @@ button { cursor: pointer; font-family: var(--sans); }
 .oc-topnav__back {
   display: inline-flex; align-items: center; gap: 6px;
   background: transparent; border: 0; padding: 0;
-  font-family: var(--mono); font-size: 11px;
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
   letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--subtext); text-decoration: none;
 }
 .oc-topnav__back:hover { color: var(--ink); }
 .oc-topnav__action {
   background: transparent; border: 0; padding: 4px;
-  color: var(--ink);
+  color: var(--ink); cursor: pointer;
 }
 
 /* ── Footer ─────────────────────────────────────────────── */
 .oc-footer {
   padding: 32px 24px 28px;
+  background: var(--paper-2);             /* slightly darker than page bg  */
   border-top: 1px solid var(--hairline);
   color: var(--subtext); font-size: 12px;
 }
@@ -333,53 +415,55 @@ button { cursor: pointer; font-family: var(--sans); }
 /* ── Sticky bar ─────────────────────────────────────────── */
 .oc-sticky-bar {
   position: fixed; bottom: 0; left: 0; right: 0;
-  background: rgba(20,17,13,.96);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(255,255,255,.06);
+  background: rgba(14,12,8,.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255,255,255,.08);
   padding: 12px 16px env(safe-area-inset-bottom, 0px);
   display: grid; gap: 8px;
   z-index: 100;
 }
 .oc-sticky-bar__btn {
-  height: 48px; border-radius: 12px;
+  height: 50px; border-radius: 14px;          /* was 48px/12px */
   display: inline-flex; align-items: center;
   justify-content: center; gap: 8px;
-  font-family: var(--sans); font-weight: 500; font-size: 13px;
-  border: 1px solid rgba(242,236,223,.2);
-  background: transparent; color: var(--paper);
+  font-family: var(--sans); font-weight: 500; font-size: 14px;
+  border: 1px solid rgba(254,252,248,.15);
+  background: rgba(254,252,248,.09); color: #FEFCF8;
+  transition: background .15s ease;
 }
+.oc-sticky-bar__btn:hover { background: rgba(254,252,248,.15); }
 .oc-sticky-bar__btn--primary {
   background: var(--gold); color: var(--ink);
-  border-color: var(--gold); font-weight: 600; font-size: 14px;
+  border-color: var(--gold); font-weight: 700; font-size: 15px;
+  box-shadow: 0 4px 14px rgba(184,148,95,.36);
+}
+.oc-sticky-bar__btn--primary:hover {
+  background: var(--gold-soft);
 }
 
 /* ── Content container ──────────────────────────────────── */
 .oc-page {
   max-width: 100%;
   margin: 0 auto;
-  padding-bottom: 120px; /* space for sticky bar */
+  padding-bottom: 120px;
 }
 
 /* ── Section spacing ────────────────────────────────────── */
 .oc-section { padding: 0 20px 28px; }
-.oc-hero    { padding: 14px 20px 24px; }
+.oc-hero    { padding: 18px 20px 26px; }
 
-/* ── Info row — mobile: stacked, desktop: 3-col grid ───── */
+/* ── Info row — mobile: stacked ─────────────────────────── */
 .oc-info-row {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
   padding: 0 20px 28px;
 }
 
-/* ── Hero: mobile single col, desktop 2-col ─────────────── */
-.oc-hero {
-  display: block;
-}
-.oc-hero > div:last-child { /* photo col */
-  display: none;
-}
+/* ── Hero: mobile single col ────────────────────────────── */
+.oc-hero { display: block; }
+.oc-hero > div:last-child { display: none; }
 
 /* ── Related grid: mobile column ────────────────────────── */
 .oc-related-grid {
@@ -388,15 +472,31 @@ button { cursor: pointer; font-family: var(--sans); }
   gap: 14px;
 }
 
+/* ── Mobile-only adjustments ────────────────────────────── */
+@media (max-width: 767px) {
+  /* Allow address/contact values to wrap so nothing is cut off */
+  .oc-contact-row {
+    align-items: start;                   /* align icon to top when text wraps */
+  }
+  .oc-contact-row__value {
+    white-space: normal;
+    word-break: break-word;
+    overflow: visible;
+    text-overflow: unset;
+  }
+  /* Slightly smaller H1 on narrow phones */
+  @media (max-width: 390px) {
+    .oc-hero-name { font-size: 38px !important; }
+  }
+}
+
 /* ─────────────────────────────────────────────────────────
    DESKTOP  ≥ 1100px
    ───────────────────────────────────────────────────────── */
 @media (min-width: 1100px) {
   .oc-sticky-bar { display: none; }
 
-  .oc-topnav {
-    padding: 14px 40px;
-  }
+  .oc-topnav { padding: 14px 40px; }
   .oc-topnav__brand { font-size: 22px; }
 
   .oc-page {
@@ -411,11 +511,13 @@ button { cursor: pointer; font-family: var(--sans); }
     padding: 14px 40px;
     border-bottom: 1px solid var(--hairline);
     position: sticky; top: 0; z-index: 50;
-    background: var(--paper);
+    background: rgba(220,210,190,.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
   .oc-desktop-nav__links {
     display: flex; gap: 22px;
-    font-family: var(--mono); font-size: 11px;
+    font-family: var(--mono); font-size: 11px; font-weight: 600;
     letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--subtext);
   }
@@ -436,11 +538,11 @@ button { cursor: pointer; font-family: var(--sans); }
     gap: 40px;
     align-items: center;
   }
-  .oc-hero > div:last-child { display: block; } /* show photo col */
+  .oc-hero > div:last-child { display: block; }
   .oc-hero-name { font-size: clamp(68px, 6vw, 82px) !important; line-height: .9; }
   .oc-hero__blurb {
     font-size: 16px !important;
-    line-height: 1.5 !important;
+    line-height: 1.68 !important;
     max-width: 460px !important;
     margin-bottom: 18px !important;
   }
@@ -473,7 +575,7 @@ button { cursor: pointer; font-family: var(--sans); }
   }
   .oc-services-gallery .oc-section-head__title { font-size: 32px !important; }
 
-  /* Owner block full-bleed */
+  /* Owner block */
   .oc-owner-wrap { padding: 0 40px 44px; }
   .oc-owner-inner { padding: 40px 44px !important; }
   .oc-owner-grid {
@@ -489,14 +591,14 @@ button { cursor: pointer; font-family: var(--sans); }
   }
   .oc-owner__headline { font-size: 64px !important; line-height: .96 !important; }
 
-  /* Related 3-col */
+  /* Related: 3-col grid */
   .oc-related-grid {
     display: grid !important;
     grid-template-columns: repeat(3,1fr) !important;
     gap: 22px !important;
   }
 
-  /* Footer expanded */
+  /* Footer */
   .oc-footer { padding: 36px 40px 30px; }
   .oc-footer-inner {
     display: flex; justify-content: space-between;
@@ -508,16 +610,15 @@ button { cursor: pointer; font-family: var(--sans); }
   .oc-section { padding: 0 40px 40px; }
   .oc-pole-wrap { margin: 0 40px 24px; }
 
-  /* Hide mobile-only elements on desktop */
-  .oc-mobile-only { display: none !important; }
+  /* Visibility helpers */
+  .oc-mobile-only  { display: none !important; }
   .oc-desktop-only { display: block !important; }
   .oc-desktop-nav.oc-desktop-only { display: flex !important; }
 
-  /* Desktop "Onde fica" section — moved inside info row */
   .oc-map-section-standalone { display: none; }
 }
 
-/* TABLET 768-1099px */
+/* ── TABLET  768-1099px ─────────────────────────────────── */
 @media (min-width: 768px) and (max-width: 1099px) {
   .oc-sticky-bar { display: none; }
   .oc-page { max-width: 720px; padding-bottom: 0; }
@@ -529,14 +630,15 @@ button { cursor: pointer; font-family: var(--sans); }
   .oc-hero__sublabel { font-size: 38px !important; }
   .oc-footer { padding: 32px 32px 28px; }
   .oc-crumb-wrap { padding: 14px 32px 0; }
-  .oc-mobile-only { display: none !important; }
+  .oc-mobile-only  { display: none !important; }
   .oc-desktop-only { display: block !important; }
   .oc-map-section-standalone { display: block; }
 }
 
+/* ── MOBILE  < 768px ────────────────────────────────────── */
 @media (max-width: 767px) {
-  .oc-mobile-nav { display: flex !important; }
+  .oc-mobile-nav   { display: flex !important; }
   .oc-desktop-only { display: none !important; }
-  .oc-footer-cols { display: none; }
-  .oc-info-row { padding: 0; }
+  .oc-footer-cols  { display: none; }
+  .oc-info-row     { padding: 0; }
 }
