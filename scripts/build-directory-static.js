@@ -1036,11 +1036,11 @@ function renderProfilePage(barber, citiesMap) {
 
   // ── SEO
   const title = barber.city
-    ? barber.name + " " + locativeLabel(barber.city) + " | Contactos, morada e mapa | OndeCortar.pt"
-    : barber.name + " | Contactos, morada e mapa | OndeCortar.pt";
+    ? barber.name + " " + locativeLabel(barber.city) + " | Morada e horário | OndeCortar.pt"
+    : barber.name + " | Morada e horário | OndeCortar.pt";
   const description = barber.city
-    ? "Vê morada, telefone, mapa e contactos de " + barber.name + " " + locativeLabel(barber.city) + ". Diretório de barbearias em Portugal."
-    : "Vê morada, telefone, mapa e contactos de " + barber.name + ". Diretório de barbearias em Portugal.";
+    ? barber.name + " " + locativeLabel(barber.city) + ": morada, horário, telefone e como chegar. Perfil com mapa e barbearias próximas no OndeCortar.pt."
+    : barber.name + ": morada, horário, telefone e como chegar. Perfil com mapa e barbearias próximas no OndeCortar.pt.";
 
   const structuredData = [
     {
@@ -1338,8 +1338,8 @@ function renderCityPage(city) {
   const cityLocative = locativeLabel(city.name);
   const cityHierarchyEntries = buildCityHierarchyEntries(city);
   const cityHierarchyText = renderHierarchyText(cityHierarchyEntries, prefix);
-  const title = cityBarbersLabel + " | Mapa, contactos e perfis | OndeCortar.pt";
-  const description = "Encontra barbearias " + cityLocative + " com morada, contactos, mapa e links úteis. Compara opções e escolhe melhor no OndeCortar.pt.";
+  const title = cityBarbersLabel + " | Onde cortar o cabelo | OndeCortar.pt";
+  const description = cityBarbersLabel + " com morada, horário e mapa. Encontra o barbeiro certo, vê como chegar e escolhe onde cortar o cabelo no OndeCortar.pt.";
   const structuredData = [
     {
       "@context": "https://schema.org",
