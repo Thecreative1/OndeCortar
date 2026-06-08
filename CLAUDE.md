@@ -27,6 +27,17 @@ Diretório de barbearias em Portugal. Site estático (HTML/CSS/JS puro), sem fra
 2. Cada entrada deve ter pelo menos: `nome`, `slug` (único, kebab-case), `mostrar_no_mapa: true`
 3. **Se a cidade for nova** (não existia antes no directório), verificar se está no mapa de regiões — ver secção abaixo
 4. Correr o build:
+
+### ⚠️ Regra obrigatória ao corrigir coordenadas ou city
+
+**Nunca alterar `coords` ou `city` sem primeiro confirmar a morada online.** O código postal é a fonte de verdade — verificar sempre no Fresha, Google Maps ou CTT antes de tocar nesses campos.
+
+Procedimento quando as coords parecem erradas:
+1. Pesquisar o nome da barbearia + cidade online (Fresha, Google Maps, Facebook)
+2. Confirmar o código postal → determina o município real
+3. Só depois corrigir `city` e/ou `coords`
+
+> **Caso real:** Costa Barbershop tinha `city: "Carapeços"` e coords `[41.58, -8.63]`. As coords pareciam erradas (zona Norte) mas ao verificar online o CP era 4750 = Barcelos (Norte) — as coords estavam correctas, o `city` é que estava errado. Corrigir coords sem verificar teria colocado a barbearia no sítio errado.
    ```bash
    node scripts/build-directory-static.js
    ```
