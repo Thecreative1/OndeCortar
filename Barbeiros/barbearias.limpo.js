@@ -14107,6 +14107,245 @@ const barbearias = [
     "ultima_validacao": "2026-04-21",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
+  },
+  {
+    "nome": "Barbearia Pardal",
+    "slug": "barbearia-pardal-almeirim",
+    "city": "Almeirim",
+    "morada": "Av. Dom João I 40 r/c esq, 2080-014 Almeirim",
+    "telefone": "+351 967 825 465",
+    "instagram": "https://instagram.com/barbearia_pardal_almeirim",
+    "coords": [39.2132, -8.6204],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Latinos Barbearia",
+    "slug": "latinos-barbearia-almeirim",
+    "city": "Almeirim",
+    "morada": "Rua de Coruche 173, 2080-001 Almeirim",
+    "telefone": "+351 965 653 887",
+    "coords": [39.2037, -8.6286],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "LisbonStyle BarberShop",
+    "slug": "lisbonstyle-barbershop-almeirim",
+    "city": "Almeirim",
+    "morada": "R. 5 de Outubro 77, 2080-086 Almeirim",
+    "telefone": "+351 919 282 069",
+    "coords": [39.2086, -8.6303],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Dantas BarberShop",
+    "slug": "dantas-barbershop-almeirim",
+    "city": "Almeirim",
+    "morada": "Zona Industrial, Rua A 14, 2080-221 Almeirim",
+    "coords": [39.1919, -8.6202],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Barbearia Carlos Rato",
+    "slug": "barbearia-carlos-rato-cartaxo",
+    "city": "Cartaxo",
+    "morada": "Rua Batalhoz 70, 2070-071 Cartaxo",
+    "telefone": "+351 927 102 310",
+    "coords": [39.1609, -8.7880],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Barbearia Sr Alex Barber",
+    "slug": "barbearia-sr-alex-barber-cartaxo",
+    "city": "Cartaxo",
+    "morada": "R. José Ribeiro da Costa 166A, 2070-099 Cartaxo",
+    "telefone": "+351 243 790 352",
+    "coords": [39.1608, -8.7872],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Barbearia Beerbarbershop",
+    "slug": "barbearia-beerbarbershop-cartaxo",
+    "city": "Cartaxo",
+    "morada": "R. Serpa Pinto 33, 2070-116 Cartaxo",
+    "telefone": "+351 243 153 546",
+    "coords": [39.1605, -8.7868],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Barbearia Freitas",
+    "slug": "barbearia-freitas-cartaxo",
+    "city": "Cartaxo",
+    "morada": "Rua José Ribeiro da Costa 164, 2070-099 Cartaxo",
+    "telefone": "+351 912 885 452",
+    "instagram": "https://instagram.com/barbeariadefreitas",
+    "coords": [39.1608, -8.7873],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Antiga Barbearia da Vila",
+    "slug": "antiga-barbearia-da-vila-benavente",
+    "city": "Benavente",
+    "morada": "Rua Morais Lote B, 2130-042 Benavente",
+    "telefone": "+351 918 024 828",
+    "coords": [38.9832, -8.8118],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Next Level Barbeiro",
+    "slug": "next-level-barbeiro-benavente",
+    "city": "Benavente",
+    "morada": "R. Luis de Camões 70, 2130-062 Benavente",
+    "coords": [38.9825, -8.8132],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Urso Barber Shop",
+    "slug": "urso-barber-shop-benavente",
+    "city": "Benavente",
+    "morada": "Av. Dr. Manuel Lopes de Almeida, 2130-016 Benavente",
+    "telefone": "+351 937 447 713",
+    "coords": [38.9840, -8.8108],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Barbearia Marcos Mello",
+    "slug": "barbearia-marcos-mello-alverca",
+    "city": "Alverca do Ribatejo",
+    "morada": "R. Brg. Fernando Alberto de Oliveira 51, 2615-080 Alverca do Ribatejo",
+    "coords": [38.8936, -9.0298],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "GS Barber",
+    "slug": "gs-barber-alverca",
+    "city": "Alverca do Ribatejo",
+    "morada": "R. dos Bombeiros Voluntários 12, 2615-052 Alverca do Ribatejo",
+    "coords": [38.8942, -9.0315],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Barbearia 3 de Maio",
+    "slug": "barbearia-3-de-maio-alverca",
+    "city": "Alverca do Ribatejo",
+    "morada": "R. Brejo 4 C, 2615-339 Alverca do Ribatejo",
+    "coords": [38.8907, -9.0457],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "For Gentlemen's Barbershop",
+    "slug": "for-gentlemens-barbershop-alverca",
+    "city": "Alverca do Ribatejo",
+    "morada": "R. Brg. Fernando Alberto de Oliveira s/n, 2615-077 Alverca do Ribatejo",
+    "coords": [38.8930, -9.0301],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Barbearia Navalha Dourada",
+    "slug": "barbearia-navalha-dourada-alenquer",
+    "city": "Alenquer",
+    "morada": "R. Sacadura Cabral 46B, 2580-371 Alenquer",
+    "telefone": "+351 917 700 907",
+    "instagram": "https://instagram.com/navalha_dourada_alenquer",
+    "coords": [39.0600, -9.0135],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "The Old Fellas Barber",
+    "slug": "the-old-fellas-barber-alenquer",
+    "city": "Alenquer",
+    "morada": "Av. Dr. Teófilo Carvalho dos Santos 8A, 2580-355 Alenquer",
+    "telefone": "+351 910 698 339",
+    "coords": [39.0584, -9.0085],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Check In Barbearia",
+    "slug": "check-in-barbearia-carregado",
+    "city": "Carregado",
+    "morada": "R. Pinto Barreiro 54, 2580-491 Carregado",
+    "telefone": "+351 263 855 233",
+    "coords": [39.0245, -8.9738],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Dimas Barbearia",
+    "slug": "dimas-barbearia-carregado",
+    "city": "Carregado",
+    "morada": "Av. Cabo da Boa Esperança, 2580-269 Carregado",
+    "telefone": "+351 911 562 572",
+    "coords": [39.0234, -9.0001],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Barbearia Régis Barbershop",
+    "slug": "barbearia-regis-barbershop-carregado",
+    "city": "Carregado",
+    "morada": "R. Cap. Ten. Oliveira e Carmo 33A, 2580-493 Carregado",
+    "telefone": "+351 911 557 094",
+    "coords": [39.0228, -8.9742],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Barbearia à Benfica",
+    "slug": "barbearia-a-benfica-santarem",
+    "city": "Santarém",
+    "morada": "Av. do Brasil 51, 2005-136 Santarém",
+    "telefone": "+351 933 478 635",
+    "instagram": "https://instagram.com/barbeariaabenficasantarem",
+    "coords": [39.2310, -8.6844],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
+  },
+  {
+    "nome": "Casablanca Barbearia",
+    "slug": "casablanca-barbearia-santarem",
+    "city": "Santarém",
+    "morada": "R. João Afonso 62, 2000-055 Santarém",
+    "coords": [39.2365, -8.6880],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-06-09",
+    "status": "confirmado"
   }
 ];
 
