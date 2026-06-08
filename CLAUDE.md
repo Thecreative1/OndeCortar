@@ -25,11 +25,12 @@ Diretório de barbearias em Portugal. Site estático (HTML/CSS/JS puro), sem fra
 
 1. Editar `Barbeiros/barbearias.limpo.js` — adicionar/modificar entradas no array `barbearias`
 2. Cada entrada deve ter pelo menos: `nome`, `slug` (único, kebab-case), `mostrar_no_mapa: true`
-3. Correr o build:
+3. **Se a cidade for nova** (não existia antes no directório), verificar se está no mapa de regiões — ver secção abaixo
+4. Correr o build:
    ```bash
    node scripts/build-directory-static.js
    ```
-4. O script atualiza automaticamente:
+5. O script atualiza automaticamente:
    - Perfis individuais em `barbearias/`
    - Páginas de cidade em `cidades/`
    - `cidades/index.html`
@@ -38,6 +39,43 @@ Diretório de barbearias em Portugal. Site estático (HTML/CSS/JS puro), sem fra
    - JSON-LD `ItemList` no `<head>` de `index.html`
 
 **Nunca editar manualmente** os ficheiros em `barbearias/` ou `cidades/` — são sobrescritos pelo build.
+
+## Mapa de regiões (filtros da homepage)
+
+Os filtros **Norte / Centro / Lisboa / Alentejo / Algarve / Ilhas** da homepage são controlados pelo objecto `REGIOES_PT` em `index.html` (linha ~4493). Este objecto **não é gerado pelo build** — é manual e tem de ser mantido à mão.
+
+### Regra obrigatória ao adicionar barbearias com cidade nova
+
+Sempre que se adiciona uma barbearia com um campo `city` que ainda não existe no directório, verificar se essa cidade consta em `REGIOES_PT`. Se não constar, **o filtro de região não vai mostrar essa barbearia**.
+
+Forma rápida de verificar após editar os dados:
+
+```bash
+node -e "
+const fs = require('fs');
+eval(fs.readFileSync('Barbeiros/barbearias.limpo.js','utf8').replace('const barbearias','global.barbearias'));
+const REGIOES = /* colar o objecto REGIOES_PT aqui */;
+function norm(s){return(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ').trim();}
+const mapped = new Set(Object.values(REGIOES).flat());
+const missing = [...new Set(barbearias.filter(b=>b.mostrar_no_mapa!==false&&b.city).map(b=>norm(b.city)).filter(c=>!mapped.has(c)))];
+if(missing.length) console.log('SEM REGIÃO:', missing.join(', '));
+else console.log('Todas mapeadas.');
+"
+```
+
+### Atribuição de regiões (referência geográfica)
+
+| Região | Critério |
+|---|---|
+| **Norte** | Distritos de Viana do Castelo, Braga, Porto, Vila Real, Bragança |
+| **Centro** | Distritos de Aveiro, Coimbra, Leiria, Viseu, Guarda, Castelo Branco |
+| **Lisboa** | Distritos de Lisboa e Setúbal + Ribatejo (Santarém, Cartaxo, Almeirim, Benavente, Alenquer, Carregado, Alverca) |
+| **Alentejo** | Distritos de Évora, Portalegre, Beja + Alentejo Litoral |
+| **Algarve** | Distrito de Faro (incluindo Santa Luzia/Tavira) |
+| **Ilhas** | Madeira e Açores |
+
+> **Atenção:** Alenquer e Santarém pertencem ao distrito de Lisboa / Ribatejo → região **Lisboa**, não Alentejo.
+> Alijo (Vila Real) e Vila Praia de Âncora (Viana do Castelo) são **Norte**, não Centro.
 
 ## Progressive enhancement / SSR na homepage
 
