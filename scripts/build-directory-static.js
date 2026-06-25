@@ -1044,11 +1044,13 @@ function renderBarberCard(barber, prefix, options) {
   const utilityTags = [
     barber.horario ? '<span class="tag">Horário disponível</span>' : ""
   ].filter(Boolean).join("");
+  const metaHtml = [
+    locationSummary,
+    utilityTags ? '<div class="tag-row">' + utilityTags + "</div>" : ""
+  ].filter(Boolean).map((line) => "    " + line).join("\n");
   return `
   <article class="card">
-    ${locationSummary}
-    ${utilityTags ? '<div class="tag-row">' + utilityTags + "</div>" : ""}
-    <h3><a href="${escapeHtml(prefix + barber.profileUrl)}">${escapeHtml(barber.name)}</a></h3>
+${metaHtml ? metaHtml + "\n" : ""}    <h3><a href="${escapeHtml(prefix + barber.profileUrl)}">${escapeHtml(barber.name)}</a></h3>
     <p>${escapeHtml(options && options.longCopy ? barber.editorial : barber.cardSummary)}</p>
     ${barber.morada ? '<p><strong>Morada:</strong> ' + escapeHtml(barber.morada) + "</p>" : ""}
     <div class="card-actions">
@@ -1439,7 +1441,7 @@ ${renderHeader(prefix, "cidades")}
         </div>
       </div>
       <div class="barber-grid">
-        ${city.barbearias.map((barber) => renderBarberCard(barber, prefix, { showZone: true, longCopy: false })).join("")}
+${city.barbearias.map((barber) => renderBarberCard(barber, prefix, { showZone: true, longCopy: false })).join("")}
       </div>
     </div>
   </section>
