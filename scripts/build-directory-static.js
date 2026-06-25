@@ -434,6 +434,42 @@ function buildCardSummary(barber) {
     : "Consulta a morada e a localização confirmada desta barbearia.";
 }
 
+function buildProfileSeo(barber) {
+  const placeLabel = barber.city ? " " + locativeLabel(barber.city) : "";
+  const contactChannels = [];
+
+  if (barber.telefone) contactChannels.push("telefone");
+  if (barber.booking) contactChannels.push("marcação online");
+  if (barber.website) contactChannels.push("website");
+  if (barber.instagram) contactChannels.push("Instagram");
+  if (barber.facebook) contactChannels.push("Facebook");
+  if (barber.email) contactChannels.push("email");
+
+  const hasLocation = Boolean(barber.morada || Array.isArray(barber.coords));
+  const titleFocus = barber.horario
+    ? (barber.telefone ? "Telefone, morada e horário" : "Morada, mapa e horário")
+    : (contactChannels.length ? "Contacto, morada e mapa" : "Morada e mapa");
+  const descriptionParts = [];
+
+  descriptionParts.push.apply(descriptionParts, contactChannels);
+  if (barber.horario) {
+    descriptionParts.push("horário");
+  }
+  if (hasLocation) {
+    descriptionParts.push("localização no mapa");
+  }
+
+  const descriptionFocus = descriptionParts.length
+    ? joinNatural(descriptionParts)
+    : "localização e dados públicos disponíveis";
+  const subject = barber.name + placeLabel;
+
+  return {
+    title: subject + " | " + titleFocus + " | OndeCortar.pt",
+    description: subject + ": " + descriptionFocus + ". Consulta morada, contactos úteis e barbearias próximas no OndeCortar.pt."
+  };
+}
+
 function buildCityIntro(cityName, cityBarbers, hierarchy) {
   const cityContext = buildCityContext(cityName, hierarchy);
   const withPhone = cityBarbers.filter((barber) => barber.telefone).length;
@@ -1035,12 +1071,9 @@ function renderProfilePage(barber, citiesMap) {
   const isMinimal = !barber.horario && !barber.email && !barber.website;
 
   // ── SEO
-  const title = barber.city
-    ? barber.name + " " + locativeLabel(barber.city) + " | Morada e horário | OndeCortar.pt"
-    : barber.name + " | Morada e horário | OndeCortar.pt";
-  const description = barber.city
-    ? barber.name + " " + locativeLabel(barber.city) + ": morada, horário, telefone e como chegar. Perfil com mapa e barbearias próximas no OndeCortar.pt."
-    : barber.name + ": morada, horário, telefone e como chegar. Perfil com mapa e barbearias próximas no OndeCortar.pt.";
+  const seo = buildProfileSeo(barber);
+  const title = seo.title;
+  const description = seo.description;
 
   const structuredData = [
     {
@@ -1148,10 +1181,6 @@ function renderProfilePage(barber, citiesMap) {
     "<\/div>";
   }
 
-  // ── Hero
-  const nameParts = barber.name.replace(/\s*[Bb]arbearia\s*/g, "").trim();
-  const showNameSplit = nameParts && nameParts !== barber.name;
-
   const phoneHrefVal = barber.telefone ? "tel:" + barber.telefone.replace(/\s/g, "") : "";
   const mapsUrl = barber.morada
     ? "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(barber.morada)
@@ -1176,9 +1205,7 @@ function renderProfilePage(barber, citiesMap) {
     "<div>" +
       '<div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;flex-wrap:wrap">' + cityPill + distPill + barbPill + "<\/div>" +
       '<h1 class="oc-hero-name" style="font-size:46px;margin-bottom:18px" itemprop="name">' +
-        (showNameSplit
-          ? H(nameParts) + '<span style="display:block;font-family:var(--serif);font-style:italic;font-weight:400;font-size:26px;color:var(--gold-deep);letter-spacing:-0.01em;margin-top:4px" class="oc-hero__sublabel">Barbearia<\/span>'
-          : H(barber.name)) +
+        H(barber.name) +
       "<\/h1>" +
       (barber.editorial ? '<p class="oc-hero__blurb" style="font-size:15.5px;line-height:1.55;color:var(--ink);margin-bottom:22px;max-width:340px" itemprop="description">' + H(barber.editorial) + "<\/p>" : "") +
       '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px">' + pubPill + updPill + "<\/div>" +

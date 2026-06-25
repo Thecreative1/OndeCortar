@@ -25,11 +25,13 @@ Diretório de barbearias em Portugal. Site estático (HTML/CSS/JS puro), sem fra
 
 1. Editar `Barbeiros/barbearias.limpo.js` — adicionar/modificar entradas no array `barbearias`
 2. Cada entrada deve ter pelo menos: `nome`, `slug` (único, kebab-case), `mostrar_no_mapa: true`
-3. Correr o build:
+3. Se a cidade for nova, confirmar que está mapeada em `REGIOES_PT` no `index.html`
+4. Se alterar `city`, `morada` ou `coords`, confirmar a morada/código postal online antes de mexer
+5. Correr o build:
    ```bash
    node scripts/build-directory-static.js
    ```
-4. O script atualiza automaticamente:
+6. O script atualiza automaticamente:
    - Perfis individuais em `barbearias/`
    - Páginas de cidade em `cidades/`
    - `cidades/index.html`
@@ -38,6 +40,48 @@ Diretório de barbearias em Portugal. Site estático (HTML/CSS/JS puro), sem fra
    - JSON-LD `ItemList` no `<head>` de `index.html`
 
 **Nunca editar manualmente** os ficheiros em `barbearias/` ou `cidades/` — são sobrescritos pelo build.
+
+## Regras críticas para não estragar o site
+
+- **Não editar páginas geradas à mão:** qualquer alteração em perfis (`barbearias/{slug}/`) ou cidades (`cidades/{slug}/`) deve ser feita em `Barbeiros/barbearias.limpo.js` ou em `scripts/build-directory-static.js`, seguida de build.
+- **Não inventar dados:** `title`, descriptions, CTAs e schema não devem prometer horário, telefone, website ou redes sociais se esses campos não existirem no objeto da barbearia.
+- **Não alterar nomes comerciais por estética:** o `h1`, JSON-LD e links devem preservar `barber.name`. Não remover palavras como "Barbearia", "Barber Shop" ou nomes de cidade do nome oficial.
+- **Não mexer em `city`/`coords` sem validação externa:** confirmar primeiro por código postal, Google Maps, Fresha, CTT ou fonte equivalente.
+- **Não remover os markers de build** em `index.html`; sem eles a homepage perde SSR/schema gerado.
+- **Não assumir que desktop basta:** alterações no mapa/homepage têm de ser vistas também em mobile.
+
+## Mapa e regiões da homepage
+
+O mapa usa Leaflet em `script.js` e os dados de `Barbeiros/barbearias.limpo.js`. Para aparecer no mapa público, uma entrada precisa de `mostrar_no_mapa !== false` e `coords` válidas.
+
+Os filtros **Norte / Centro / Lisboa / Alentejo / Algarve / Ilhas** são controlados manualmente pelo objeto `REGIOES_PT` dentro de `index.html`. O build não atualiza este objeto.
+
+Sempre que entra uma cidade nova:
+- confirmar que a cidade existe em `REGIOES_PT`;
+- escolher a região pelo distrito/município real, não por intuição;
+- testar o filtro correspondente na homepage.
+
+Referência rápida:
+
+| Região | Critério |
+|---|---|
+| Norte | Viana do Castelo, Braga, Porto, Vila Real, Bragança |
+| Centro | Aveiro, Coimbra, Leiria, Viseu, Guarda, Castelo Branco |
+| Lisboa | Lisboa, Setúbal e Ribatejo operacional usado pelo site (Santarém, Cartaxo, Almeirim, Benavente, Alenquer, Carregado, Alverca) |
+| Alentejo | Évora, Portalegre, Beja e Alentejo Litoral |
+| Algarve | Distrito de Faro |
+| Ilhas | Madeira e Açores |
+
+## Mapa mobile — cuidado especial
+
+O mapa da homepage depende de dimensões CSS estáveis. Em mobile, garantir que `.hero-map-shell`, `.hero-map` e `#map` continuam com altura positiva (`min-height`/`height`) antes de concluir alterações.
+
+Checklist mínimo para alterações que tocam `index.html`, `oc-style.css` ou `script.js`:
+- abrir a homepage em desktop e mobile;
+- confirmar que o mapa não fica com `height: 0`;
+- confirmar que os markers carregam;
+- confirmar que não há erros de consola;
+- testar pesquisa/filtros se a alteração tocar dados, regiões ou renderização.
 
 ## Progressive enhancement / SSR na homepage
 
@@ -99,11 +143,48 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
 
 ## SEO e schema markup
 
-- Páginas de perfil (`barbearias/{slug}/`) têm JSON-LD `LocalBusiness` + `BreadcrumbList`
+- Páginas de perfil (`barbearias/{slug}/`) têm JSON-LD `HairSalon` + `BreadcrumbList`
 - Páginas de cidade (`cidades/{slug}/`) têm JSON-LD `CollectionPage` + `ItemList` + `BreadcrumbList`
 - Homepage tem JSON-LD `WebSite` + `Organization` (estático) + `ItemList` de todas as barbearias (gerado pelo build)
 - Cada item na lista estática da homepage tem JSON-LD `LocalBusiness` inline
 - Sitemaps: `sitemap.xml` (índice) → `sitemap-barbearias.xml`, `sitemap-cidades.xml`, `sitemap-pages.xml`, `sitemap-loja.xml`, `sitemap-revista.xml`
+
+### SEO dos perfis
+
+O SEO dos perfis é gerado em `scripts/build-directory-static.js`, na função `buildProfileSeo(barber)`.
+
+Ao mexer nesta área:
+- manter `title` e `meta description` alinhados com os campos reais da barbearia;
+- incluir cidade quando existe (`locativeLabel`);
+- referir canais de contacto apenas quando existem (`telefone`, `booking`, `website`, `instagram`, `facebook`, `email`);
+- referir horário apenas quando `barber.horario` existe;
+- preservar `barber.name` no `h1`, `title`, schema e links;
+- depois correr o build e verificar pelo menos um perfil com poucos dados e um perfil com vários contactos.
+
+## Testes antes de fechar alterações
+
+Para alterações em dados ou template gerado:
+
+```bash
+node scripts/build-directory-static.js
+node scripts/smoke-missing-barbearias.js
+node scripts/audit-site-links.js
+```
+
+Para alterações de mapa/localização:
+
+```bash
+node scripts/audit-barber-locations.js
+```
+
+Nota: `audit-barber-locations.js` atualiza `Barbeiros/relatorio-localizacao.json` com timestamp. Não incluir esse ficheiro no diff se a única alteração for `generated_at`.
+
+Para alterações visuais/homepage:
+- abrir localmente com servidor estático (`python -m http.server 8123 --bind 127.0.0.1`);
+- verificar homepage e pelo menos um perfil em browser;
+- em mobile, confirmar que o mapa tem altura visível e sem erros de consola.
+
+`npm test` inclui `validar-barbearias.js`; se falhar por erros de completude já existentes nos dados, reportar isso separadamente e não misturar com a alteração atual.
 
 ## Secções que NÃO são geridas pelo build principal
 
