@@ -101,7 +101,12 @@
       "PowerShell($r = Invoke-WebRequest -Uri \"https://ondecortar.pt/\" -UseBasicParsing; $html = $r.Content; $patterns = 'googletagmanager','gtag\\\\\\(','G-[A-Z0-9]{8,12}','GTM-[A-Z0-9]+','plausible','cloudflareinsights','clarity\\\\.ms','umami','matomo','hotjar','beacon\\\\.min\\\\.js','analytics'; foreach \\($p in $patterns\\) { $m = [regex]::Matches\\($html, $p, 'IgnoreCase'\\); if \\($m.Count\\) { \"$p -> $\\($m.Count\\)x : $\\($m[0].Value\\)\" } }; \"---\"; \"Server: $\\($r.Headers['Server']\\)\"; \"cf-ray: $\\($r.Headers['cf-ray']\\)\")",
       "Bash(node -e ' *)",
       "Bash(node scripts/smoke-missing-barbearias.js)",
-      "Bash(node scripts/audit-site-links.js)"
+      "Bash(node scripts/audit-site-links.js)",
+      "WebFetch(domain:nominatim.openstreetmap.org)",
+      "Bash(node scripts/audit-barber-locations.js)",
+      "Bash(node validar-barbearias.js)",
+      "Bash(sed -i 's/\"slug\": \"mans-house-barbearia\"/\"slug\": \"mans-house-portimao\"/' Barbeiros/barbearias.limpo.js)",
+      "Bash(rm -rf barbearias/mans-house-barbearia)"
     ]
   }
 }

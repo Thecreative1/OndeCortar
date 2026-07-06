@@ -14455,6 +14455,445 @@ const barbearias = [
     "status": "confirmado",
     "data_confidence": "high",
     "fontes": ["https://www.fabiusbarbershop.pt/en/contacts", "https://www.fresha.com/a/fabius-barbershop-cascais-cascais-rua-de-alvide-lote-10-vpbcoczv"]
+  },
+  {
+    "nome": "Luciffer's",
+    "slug": "luciffers-porto",
+    "distrito": "Porto",
+    "concelho": "Porto",
+    "freguesia": null,
+    "city": "Porto",
+    "morada": "Praça da Alegria 60, 4000-029 Porto",
+    "codigo_postal": "4000-029",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.1442,
+      -8.5995
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-06",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/lp/en/bt/barbershops/in/pt-porto"
+    ]
+  },
+  {
+    "nome": "Barbearia Dom Cortês",
+    "slug": "barbearia-dom-cortes",
+    "distrito": "Porto",
+    "concelho": "Porto",
+    "freguesia": null,
+    "city": "Porto",
+    "morada": "Rua de João Pedro Ribeiro 806, 4000-207 Porto",
+    "codigo_postal": "4000-207",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.1609,
+      -8.6067
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-06",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/lp/en/bt/barbershops/in/pt-porto"
+    ]
+  },
+  {
+    "nome": "Thiago Nipe | Premium Barber",
+    "slug": "thiago-nipe-premium-barber",
+    "distrito": "Porto",
+    "concelho": "Porto",
+    "freguesia": null,
+    "city": "Porto",
+    "zone": "Cedofeita",
+    "morada": "Rua de Cedofeita 170, 4050-179 Porto",
+    "codigo_postal": "4050-179",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.1502,
+      -8.6169
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-06",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/lp/en/bt/barbershops/in/pt-porto"
+    ]
+  },
+  {
+    "nome": "Barbearia Magina",
+    "slug": "barbearia-magina",
+    "distrito": "Porto",
+    "concelho": "Vila Nova de Gaia",
+    "freguesia": null,
+    "city": "Vila Nova de Gaia",
+    "morada": "Rua do Paniceiro 358, 4400-536 Vila Nova de Gaia",
+    "codigo_postal": "4400-536",
+    "telefone": null,
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-magina-rua-do-paniceiro-vila-nova-de-gaia-85rwZ5",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.1234,
+      -8.6469
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-06",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-magina-rua-do-paniceiro-vila-nova-de-gaia-85rwZ5"
+    ]
+  },
+  {
+    "nome": "Barbearia Espaço Novo",
+    "slug": "barbearia-espaco-novo",
+    "distrito": "Porto",
+    "concelho": "Vila Nova de Gaia",
+    "freguesia": null,
+    "city": "Vila Nova de Gaia",
+    "morada": "Avenida dos Aliados 177, 4400-011 Vila Nova de Gaia",
+    "codigo_postal": "4400-011",
+    "telefone": null,
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-espaco-novo-avenida-aliados-vila-nova-de-gaia-oo5q9x",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-13h e 15h-20h, Sáb 8h-13h",
+    "observacoes": null,
+    "coords": [
+      41.1248,
+      -8.6327
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-espaco-novo-avenida-aliados-vila-nova-de-gaia-oo5q9x"
+    ]
+  },
+  {
+    "nome": "Capivara Barbearia",
+    "slug": "capivara-barbearia",
+    "distrito": "Braga",
+    "concelho": "Braga",
+    "freguesia": null,
+    "city": "Braga",
+    "morada": "Avenida Central 33, 4710-228 Braga",
+    "codigo_postal": "4710-228",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.5527,
+      -8.4226
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-06",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/lp/en/bt/barbershops/in/pt-braga"
+    ]
+  },
+  {
+    "nome": "Barbearia Resenha",
+    "slug": "barbearia-resenha",
+    "distrito": "Braga",
+    "concelho": "Braga",
+    "freguesia": null,
+    "city": "Braga",
+    "morada": "Rua Nova de Santa Cruz 260, 4710-409 Braga",
+    "codigo_postal": "4710-409",
+    "telefone": null,
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-resenha-rua-nova-de-santa-cruz-braga-7xvRZX",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.5552,
+      -8.4039
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-06",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-resenha-rua-nova-de-santa-cruz-braga-7xvRZX"
+    ]
+  },
+  {
+    "nome": "A Barbearia de Portimão",
+    "slug": "a-barbearia-de-portimao",
+    "distrito": "Faro",
+    "concelho": "Portimão",
+    "freguesia": null,
+    "city": "Portimão",
+    "morada": "Rua Damião Luís Faria de Castro 11, 8500-802 Portimão",
+    "codigo_postal": "8500-802",
+    "telefone": null,
+    "email": null,
+    "website": "https://www.fresha.com/lvp/a-barbearia-de-portimao-rua-damiao-luis-faria-de-castro-portimao-qLXlqy",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.1215,
+      -8.5378
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-06",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/lvp/a-barbearia-de-portimao-rua-damiao-luis-faria-de-castro-portimao-qLXlqy"
+    ]
+  },
+  {
+    "nome": "Man's House Barbearia",
+    "slug": "mans-house-portimao",
+    "distrito": "Faro",
+    "concelho": "Portimão",
+    "freguesia": null,
+    "city": "Portimão",
+    "morada": "Rua do Oceano Atlântico 28, Loja 2B, 8500-823 Portimão",
+    "codigo_postal": "8500-823",
+    "telefone": null,
+    "email": null,
+    "website": "https://www.fresha.com/lvp/mans-house-barbearia-rua-do-oceano-atlantico-portimao-k9PPro",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.1268,
+      -8.5368
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-06",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/lvp/mans-house-barbearia-rua-do-oceano-atlantico-portimao-k9PPro"
+    ]
+  },
+  {
+    "nome": "Man'sclass Barbershop",
+    "slug": "mansclass-barbershop",
+    "distrito": "Faro",
+    "concelho": "Loulé",
+    "freguesia": null,
+    "city": "Loulé",
+    "morada": "Rua Serpa Pinto 39, 8100-714 Loulé",
+    "codigo_postal": "8100-714",
+    "telefone": null,
+    "email": null,
+    "website": "https://www.fresha.com/lvp/mansclass-barbershop-rua-serpa-pinto-loule-Kk5q8R",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h, Sáb 9h-16h",
+    "observacoes": null,
+    "coords": [
+      37.1394,
+      -8.027
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/mansclass-barbershop-rua-serpa-pinto-loule-Kk5q8R"
+    ]
+  },
+  {
+    "nome": "Barbearia Corte Real - Matosinhos",
+    "slug": "barbearia-corte-real-matosinhos",
+    "distrito": "Porto",
+    "concelho": "Matosinhos",
+    "freguesia": null,
+    "city": "Matosinhos",
+    "morada": "Avenida Menéres 611, 4450-189 Matosinhos",
+    "codigo_postal": "4450-189",
+    "telefone": null,
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-corte-real-r-matosinhos-avenida-meneres-matosinhos-k9Porw",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h, Sáb 8h30-17h",
+    "observacoes": null,
+    "coords": [
+      41.1787,
+      -8.6855
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-corte-real-r-matosinhos-avenida-meneres-matosinhos-k9Porw"
+    ]
+  },
+  {
+    "nome": "Barbearia Passos",
+    "slug": "barbearia-passos",
+    "distrito": "Viana do Castelo",
+    "concelho": "Viana do Castelo",
+    "freguesia": null,
+    "city": "Viana do Castelo",
+    "morada": "Rua Ramalho Ortigão 196, 4900-422 Viana do Castelo",
+    "codigo_postal": "4900-422",
+    "telefone": "+351 963 891 152",
+    "email": null,
+    "website": "https://www.barbeariapassos.com/",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 10h-19h",
+    "observacoes": null,
+    "coords": [
+      41.7037,
+      -8.8231
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.barbeariapassos.com/",
+      "https://noona.app/barbpassos1"
+    ]
+  },
+  {
+    "nome": "2675 Barber Shop",
+    "slug": "2675-barber-shop",
+    "distrito": "Lisboa",
+    "concelho": "Odivelas",
+    "freguesia": null,
+    "city": "Odivelas",
+    "zone": "Colinas do Cruzeiro",
+    "morada": "Avenida Miguel Torga 14, 2675-663 Odivelas",
+    "codigo_postal": "2675-663",
+    "telefone": null,
+    "email": null,
+    "website": "https://www.fresha.com/lvp/2675-barber-shop-avenida-miguel-torga-odivelas-l18vB8",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7834,
+      -9.1929
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-06",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/lvp/2675-barber-shop-avenida-miguel-torga-odivelas-l18vB8"
+    ]
+  },
+  {
+    "nome": "Atelier do Barbeiro",
+    "slug": "atelier-do-barbeiro-barreiro",
+    "distrito": "Setúbal",
+    "concelho": "Barreiro",
+    "freguesia": null,
+    "city": "Barreiro",
+    "morada": "Rua Dom Afonso de Albuquerque 11B, 2830-177 Barreiro",
+    "codigo_postal": "2830-177",
+    "telefone": null,
+    "email": null,
+    "website": "https://www.fresha.com/lvp/atelier-do-barbeiro-rua-dom-afonso-de-albuquerque-barreiro-zXDRn4",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.6452,
+      -9.054
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-06",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/lvp/atelier-do-barbeiro-rua-dom-afonso-de-albuquerque-barreiro-zXDRn4"
+    ]
+  },
+  {
+    "nome": "Don Juan Barbearia",
+    "slug": "don-juan-barbearia",
+    "distrito": "Coimbra",
+    "concelho": "Figueira da Foz",
+    "freguesia": null,
+    "city": "Figueira da Foz",
+    "zone": "Buarcos",
+    "morada": "Foz Plaza Shopping Center, Rua dos Condados 254, Buarcos, 3080-216 Figueira da Foz",
+    "codigo_postal": "3080-216",
+    "telefone": null,
+    "email": null,
+    "website": "https://www.fresha.com/lvp/don-juan-barbearia-figueira-da-foz-7xv0yX",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.1663,
+      -8.861
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-06",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/lvp/don-juan-barbearia-figueira-da-foz-7xv0yX"
+    ]
   }
 ];
 
