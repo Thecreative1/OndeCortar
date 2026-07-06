@@ -4985,6 +4985,11 @@
           return true;
         }
 
+        if (savedState.mode === "region" && REGIOES_PT[savedState.regiao]) {
+          filterByRegiao(savedState.regiao);
+          return true;
+        }
+
         if (savedState.mode === "location" && Array.isArray(savedState.coords) && savedState.coords.length === 2) {
           restoreLocationSearch(savedState);
           return true;
@@ -5323,6 +5328,16 @@
         return null;
       }
 
+      function getRegiaoForTerm(term) {
+        var cleanTerm = normCity(term);
+        if (!cleanTerm) return null;
+        var keys = Object.keys(REGIOES_PT);
+        for (var i = 0; i < keys.length; i++) {
+          if (normCity(keys[i]) === cleanTerm) return keys[i];
+        }
+        return null;
+      }
+
       function filterByRegiao(regiao) {
         var cidades = REGIOES_PT[regiao] || [];
         var filtered = sortBarbers(allBarbers.filter(function(b) {
@@ -5339,6 +5354,10 @@
         renderResults(filtered);
         updateSummary(filtered, regiao);
         renderMarkers(filtered);
+        saveSearchState({
+          mode: "region",
+          regiao: regiao
+        });
         // Mark active chip
         const chips = directoryCities ? directoryCities.querySelectorAll("[data-region-search]") : [];
         chips.forEach(function(c) { c.classList.toggle("is-active", c.getAttribute("data-region-search") === regiao); });
@@ -5437,6 +5456,13 @@
       }
 
       function updateDirectory(term) {
+        // Nomes de região ("Algarve", "Norte", …) não existem como cidade/nome,
+        // por isso searchBarbers devolveria 0 — delegar no filtro de região.
+        const regiaoMatch = getRegiaoForTerm(term);
+        if (regiaoMatch) {
+          filterByRegiao(regiaoMatch);
+          return;
+        }
         state.locateRequestId += 1;
         clearUserLocation();
         setLocateButtonState(false);
@@ -5624,6 +5650,10 @@
           state.markersBySlug.set(barber.slug, marker);
           visiblePoints.push(marker.getLatLng());
         });
+
+        if (heroMapCount) {
+          heroMapCount.textContent = state.markers.length + (state.markers.length === 1 ? " barbearia no mapa" : " barbearias no mapa");
+        }
 
         if (state.userCoords) {
           state.userMarker = L.circleMarker(state.userCoords, {

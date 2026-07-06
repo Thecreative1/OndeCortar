@@ -91,7 +91,17 @@
       "Bash(/tmp/count_words.sh)",
       "Read(//tmp/**)",
       "mcp__Claude_Preview__preview_start",
-      "mcp__Claude_in_Chrome__tabs_context_mcp"
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "PowerShell(node -e \"eval\\(require\\('fs'\\).readFileSync\\('Barbeiros/barbearias.limpo.js','utf8'\\).replace\\('const barbearias','global.barbearias'\\)\\); const b=barbearias; const vis=b.filter\\(x=>x.mostrar_no_mapa!==false\\); console.log\\('total:',b.length,'visiveis:',vis.length\\); const cities={}; vis.forEach\\(x=>cities[x.city]=\\(cities[x.city]||0\\)+1\\); console.log\\('cidades:',Object.keys\\(cities\\).length\\); const top=Object.entries\\(cities\\).sort\\(\\(a,b\\)=>b[1]-a[1]\\).slice\\(0,10\\); console.log\\(top.map\\(t=>t.join\\(':'\\)\\).join\\(', '\\)\\); const withPhone=vis.filter\\(x=>x.telefone\\).length, withSite=vis.filter\\(x=>x.website\\).length, withIg=vis.filter\\(x=>x.instagram\\).length, withHor=vis.filter\\(x=>x.horario\\).length, withCoords=vis.filter\\(x=>x.coords\\).length, withBooking=vis.filter\\(x=>x.booking\\).length; console.log\\({withPhone,withSite,withIg,withHor,withCoords,withBooking}\\)\")",
+      "PowerShell(Test-Path CNAME; if \\(Test-Path CNAME\\) { Get-Content CNAME }; \\(Get-ChildItem barbearias -Directory\\).Count; \\(Get-ChildItem cidades -Directory\\).Count)",
+      "PowerShell($f = \"barbearias\\\\110-barbershop\\\\index.html\"; $c = Get-Content $f -Raw; $c.Length; \\($c -split \"`n\"\\).Count)",
+      "PowerShell($c = Get-Content \"cidades\\\\porto\\\\index.html\" -Raw; $c.Length; $body = \\($c -split '<body'\\)[1]; \\($body -replace '<[^>]+>',' ' -replace '\\\\s+',' '\\).Substring\\(0,1800\\))",
+      "PowerShell(node -e \"eval\\(require\\('fs'\\).readFileSync\\('Barbeiros/barbearias.limpo.js','utf8'\\).replace\\('const barbearias','global.barbearias'\\)\\); const fields={}; barbearias.forEach\\(b=>Object.keys\\(b\\).forEach\\(k=>fields[k]=\\(fields[k]||0\\)+1\\)\\); console.log\\(fields\\)\")",
+      "PowerShell(node -e \"eval\\(require\\('fs'\\).readFileSync\\('Barbeiros/barbearias.limpo.js','utf8'\\).replace\\('const barbearias','global.barbearias'\\)\\); const vis=barbearias.filter\\(x=>x.mostrar_no_mapa!==false\\); const ne=f=>vis.filter\\(x=>x[f]&&String\\(x[f]\\).trim\\(\\)\\).length; console.log\\('email:',ne\\('email'\\),'horario:',ne\\('horario'\\),'facebook:',ne\\('facebook'\\),'google_maps:',ne\\('google_maps'\\),'fotos: n/a'\\)\")",
+      "PowerShell($r = Invoke-WebRequest -Uri \"https://ondecortar.pt/\" -UseBasicParsing; $html = $r.Content; $patterns = 'googletagmanager','gtag\\\\\\(','G-[A-Z0-9]{8,12}','GTM-[A-Z0-9]+','plausible','cloudflareinsights','clarity\\\\.ms','umami','matomo','hotjar','beacon\\\\.min\\\\.js','analytics'; foreach \\($p in $patterns\\) { $m = [regex]::Matches\\($html, $p, 'IgnoreCase'\\); if \\($m.Count\\) { \"$p -> $\\($m.Count\\)x : $\\($m[0].Value\\)\" } }; \"---\"; \"Server: $\\($r.Headers['Server']\\)\"; \"cf-ray: $\\($r.Headers['cf-ray']\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(node scripts/smoke-missing-barbearias.js)",
+      "Bash(node scripts/audit-site-links.js)"
     ]
   }
 }

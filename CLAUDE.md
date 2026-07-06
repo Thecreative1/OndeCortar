@@ -53,7 +53,7 @@ Procedimento quando as coords parecem erradas:
 
 ## Mapa de regiões (filtros da homepage)
 
-Os filtros **Norte / Centro / Lisboa / Alentejo / Algarve / Ilhas** da homepage são controlados pelo objecto `REGIOES_PT` em `index.html` (linha ~4493). Este objecto **não é gerado pelo build** — é manual e tem de ser mantido à mão.
+Os filtros **Norte / Centro / Lisboa / Alentejo / Algarve / Ilhas** da homepage são controlados pelo objecto `REGIOES_PT` em `index.html` (linha ~4571). Este objecto **não é gerado pelo build** — é manual e tem de ser mantido à mão.
 
 ### Regra obrigatória ao adicionar barbearias com cidade nova
 
@@ -65,14 +65,18 @@ Forma rápida de verificar após editar os dados:
 node -e "
 const fs = require('fs');
 eval(fs.readFileSync('Barbeiros/barbearias.limpo.js','utf8').replace('const barbearias','global.barbearias'));
-const REGIOES = /* colar o objecto REGIOES_PT aqui */;
-function norm(s){return(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ').trim();}
-const mapped = new Set(Object.values(REGIOES).flat());
+const html = fs.readFileSync('index.html','utf8');
+const REGIOES = eval('('+html.match(/REGIOES_PT\s*=\s*(\{[\s\S]*?\});/)[1]+')');
+// tem de espelhar o normCity de index.html (remove acentos E parênteses)
+function norm(s){return(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[()]/g,'').replace(/\s+/g,' ').trim();}
+const mapped = new Set(Object.values(REGIOES).flat().map(norm));
 const missing = [...new Set(barbearias.filter(b=>b.mostrar_no_mapa!==false&&b.city).map(b=>norm(b.city)).filter(c=>!mapped.has(c)))];
 if(missing.length) console.log('SEM REGIÃO:', missing.join(', '));
 else console.log('Todas mapeadas.');
 "
 ```
+
+> **Atenção:** a normalização tem de espelhar exactamente a função `normCity` de `index.html` (que remove parênteses, ex.: `"Horta (Angústias)"` → `"horta angustias"`). Uma versão sem `.replace(/[()]/g,'')` dá falsos positivos.
 
 ### Atribuição de regiões (referência geográfica)
 
