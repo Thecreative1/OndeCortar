@@ -174,6 +174,7 @@ Ao mexer nesta área:
 
 - **Não editar páginas geradas à mão:** qualquer alteração em perfis (`barbearias/{slug}/`) ou cidades (`cidades/{slug}/`) deve ser feita em `Barbeiros/barbearias.limpo.js` ou em `scripts/build-directory-static.js`, seguida de build.
 - **Não inventar dados:** `title`, descriptions, CTAs e schema não devem prometer horário, telefone, website ou redes sociais se esses campos não existirem no objeto da barbearia.
+- **Não mostrar preços de produtos da loja:** os `priceRange` em `commerce-products-a/b.js` são estimativas não verificadas (em 2026-07-13 confirmou-se que vários estavam errados — ex.: Philips BT3238 dizia €25–35, real €42,68) e foram removidos de todas as páginas. As regras da Amazon Associates só permitem mostrar preços obtidos via PA-API com timestamp. Só reintroduzir preços quando a conta tiver acesso à PA-API (3 vendas qualificadas).
 - **Não alterar nomes comerciais por estética:** o `h1`, JSON-LD e links devem preservar `barber.name`. Não remover palavras como "Barbearia", "Barber Shop" ou nomes de cidade do nome oficial.
 - **Não alterar `city`/`coords` sem validação externa:** confirmar primeiro por código postal, Google Maps, Fresha, CTT ou fonte equivalente.
 - **Não remover os markers de build** em `index.html`; sem eles a homepage perde SSR/schema gerado.

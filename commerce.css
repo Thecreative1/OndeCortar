@@ -639,9 +639,9 @@ p {
 
 .category-card,
 .product-card {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
-  align-content: start;
 }
 
 .product-card {
@@ -650,9 +650,15 @@ p {
 
 .product-card .product-copy,
 .category-card .product-copy {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
-  align-content: start;
+  flex: 1;
+}
+
+.product-card .product-copy .card-actions,
+.category-card .product-copy .card-actions {
+  margin-top: auto;
 }
 
 .product-card--dense {
@@ -712,14 +718,25 @@ p {
 }
 
 .article-card {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 16px;
   overflow: hidden;
 }
 
 .article-card .article-copy {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
+  flex: 1;
+}
+
+.article-card .article-copy .card-actions {
+  margin-top: auto;
+}
+
+.article-card .article-copy .card-actions .btn {
+  flex: 1 1 auto;
 }
 
 .article-thumb {
@@ -1061,6 +1078,7 @@ body[data-page="store"] .store-start-actions .btn {
 .shop-mini-card {
   display: grid;
   grid-template-columns: 84px minmax(0, 1fr);
+  grid-template-rows: 1fr;
   gap: 12px;
   padding: 14px;
   border-radius: 18px;
@@ -1082,6 +1100,16 @@ body[data-page="store"] .store-start-actions .btn {
   display: block;
   margin-bottom: 4px;
   font-size: 1rem;
+}
+
+.shop-mini-card > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-mini-card .card-actions {
+  margin-top: auto;
+  padding-top: 8px;
 }
 
 .store-metrics {
@@ -2114,7 +2142,7 @@ body[data-page="article"] .article-header p {
 }
 
 .article-inline-card .card-actions {
-  margin-top: 8px;
+  margin-top: auto;
 }
 
 .article-inline-card .btn {
@@ -2877,10 +2905,10 @@ body[data-page="article"] .article-header p {
 }
 
 .loja-feat-body {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
   padding: 16px 16px 18px;
-  align-content: start;
 }
 
 .loja-feat-badge {
@@ -2897,6 +2925,7 @@ body[data-page="article"] .article-header p {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   justify-self: start;
+  align-self: flex-start;
 }
 
 .loja-feat-name {
@@ -2918,7 +2947,8 @@ body[data-page="article"] .article-header p {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-top: 6px;
+  margin-top: auto;
+  padding-top: 6px;
 }
 
 .loja-feat-actions .btn-primary {
@@ -2952,7 +2982,8 @@ body[data-page="article"] .article-header p {
 }
 
 .loja-uso-card {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
   padding: 22px 20px 20px;
   border-radius: var(--radius-md);
@@ -2962,7 +2993,6 @@ body[data-page="article"] .article-header p {
     linear-gradient(180deg, rgba(251, 246, 238, 0.98), rgba(240, 231, 216, 0.96));
   box-shadow: 0 14px 30px rgba(31, 25, 19, 0.06);
   text-decoration: none;
-  align-content: start;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -2990,7 +3020,8 @@ body[data-page="article"] .article-header p {
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--accent);
-  margin-top: 4px;
+  margin-top: auto;
+  padding-top: 4px;
 }
 
 /* ── Quick picks comparison ── */
@@ -3001,7 +3032,8 @@ body[data-page="article"] .article-header p {
 }
 
 .loja-quick-card {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
   padding: 22px 20px;
   border-radius: var(--radius-md);
@@ -3010,7 +3042,6 @@ body[data-page="article"] .article-header p {
     radial-gradient(circle at top right, rgba(166, 119, 45, 0.16), transparent 40%),
     linear-gradient(180deg, rgba(251, 246, 238, 0.99), rgba(239, 229, 211, 0.96));
   box-shadow: 0 16px 34px rgba(31, 25, 19, 0.07);
-  align-content: start;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -3034,6 +3065,7 @@ body[data-page="article"] .article-header p {
   text-transform: uppercase;
   color: var(--gold-main);
   justify-self: start;
+  align-self: flex-start;
 }
 
 .loja-quick-name {
@@ -3139,9 +3171,9 @@ body[data-page="article"] .article-header p {
 
 .loja-cat-body {
   padding: 14px 16px 16px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 8px;
-  align-content: start;
   height: 100%;
 }
 
@@ -3158,6 +3190,7 @@ body[data-page="article"] .article-header p {
   letter-spacing: 0.02em;
   color: var(--gold-main);
   justify-self: start;
+  align-self: flex-start;
 }
 
 .loja-cat-name {

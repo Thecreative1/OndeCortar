@@ -7,8 +7,9 @@
 //
 // O que faz:
 //   1. CTA "Ver preço" -> "Ver preço na Amazon.es" nos botões de afiliado.
-//   2. Insere a faixa de preço (product.priceRange) junto ao título nos cartões de produto,
-//      no hero e na buy-box das páginas de produto.
+//   2. REMOVE as faixas de preço "Aprox. €X–Y" (decisão 2026-07-13: os valores nunca foram
+//      verificados e vários estavam errados — ex.: Philips BT3238 dizia €25–35, real €42,68.
+//      Reintroduzir só com preços reais via PA-API quando a conta tiver 3 vendas qualificadas).
 //   3. Acrescenta CTA direto para a Amazon nos cartões de produto dos artigos da revista
 //      que só tinham o link interno "Ver produto".
 //   4. Acrescenta ?tag=ondecortarp0c-21 a URLs amazon.es sem tag (ex.: JSON-LD offers.url).
@@ -80,32 +81,11 @@ function main() {
       (m, a, b) => { stats.cta++; return a + "Ver preço na Amazon.es" + b; }
     );
 
-    // 2. Faixa de preço junto aos títulos de cartões (só quando ainda não existe)
-    for (const product of products) {
-      if (!product.priceRange) continue;
-      const name = escapeHtml(product.name);
-      const span = '<span class="product-price-range">' + escapeHtml(product.priceRange) + "</span>";
-      for (const cls of ["product-card-title", "loja-feat-name", "loja-quick-name"]) {
-        const target = '<h3 class="' + cls + '">' + name + "</h3>";
-        const re = new RegExp(escapeRegExp(target) + '(?!<span class="product-price-range">)', "g");
-        html = html.replace(re, () => { stats.price++; return target + span; });
-      }
-    }
-
-    // 2b. Hero e buy-box das páginas de produto (slug vem do caminho)
-    const productMatch = rel.match(/^produto\/([^/]+)\/index\.html$/);
-    if (productMatch) {
-      const product = bySlug.get(decodeURIComponent(productMatch[1]));
-      if (product && product.priceRange) {
-        const span = '<span class="product-price-range">' + escapeHtml(product.priceRange) + "</span>";
-        const h1 = "<h1>" + escapeHtml(product.name) + "</h1>";
-        const h1Re = new RegExp(escapeRegExp(h1) + '(?!<span class="product-price-range">)');
-        html = html.replace(h1Re, () => { stats.price++; return h1 + span; });
-        const buyBox = "<h3>Confirmar preço e disponibilidade</h3>";
-        const buyBoxRe = new RegExp(escapeRegExp(buyBox) + '(?!<span class="product-price-range">)');
-        html = html.replace(buyBoxRe, () => { stats.price++; return buyBox + span; });
-      }
-    }
+    // 2. Remover faixas de preço não verificadas
+    html = html.replace(/<span class="product-price-range">[^<]*<\/span>/g, () => {
+      stats.price++;
+      return "";
+    });
 
     // 3. CTA Amazon nos cartões que só têm "Ver produto"
     html = html.replace(

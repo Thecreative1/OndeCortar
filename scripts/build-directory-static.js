@@ -53,9 +53,7 @@ function loadStorePicks() {
     const products = new Map((context.window.OndeCortarCommerce.products || []).map((item) => [item.slug, item]));
     return STORE_PICKS.map((pick) => {
       const product = products.get(pick.slug);
-      return product
-        ? { slug: pick.slug, label: pick.label, name: product.name, priceRange: product.priceRange || "" }
-        : null;
+      return product ? { slug: pick.slug, label: pick.label, name: product.name } : null;
     }).filter(Boolean);
   } catch (error) {
     return [];
@@ -69,7 +67,6 @@ function storeSection(prefix) {
   const rows = storePicks.map((pick) =>
     '<a href="' + escapeHtml(prefix + "produto/" + pick.slug + "/") + '" style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--hairline);text-decoration:none;color:var(--ink)">' +
       '<span style="min-width:0"><strong style="display:block;font-size:14.5px">' + escapeHtml(pick.name) + "</strong><span class=\"oc-meta\">" + escapeHtml(pick.label) + "</span></span>" +
-      (pick.priceRange ? '<span class="oc-mono" style="font-size:11.5px;white-space:nowrap;color:var(--subtext)">' + escapeHtml(pick.priceRange) + "</span>" : "") +
     "</a>"
   ).join("");
   return '<section class="oc-section" style="padding:0 20px 28px" aria-labelledby="loja-h">' +

@@ -113,7 +113,8 @@
       "Bash(node --check commerce-products-a.js)",
       "Bash(node --check commerce-products-b.js)",
       "Bash(node scripts/apply-affiliate-improvements.js)",
-      "Bash(node --check scripts/build-directory-static.js)"
+      "Bash(node --check scripts/build-directory-static.js)",
+      "Bash(node --check scripts/apply-affiliate-improvements.js)"
     ]
   }
 }
