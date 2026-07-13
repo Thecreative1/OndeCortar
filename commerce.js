@@ -780,7 +780,7 @@
                   '<strong>' + e(entry.product.name) + '</strong>' +
                   (entry.product.priceRange ? '<span class="product-price-range">' + e(entry.product.priceRange) + '</span>' : '') +
                   '<p>' + e(entry.blurb) + '</p>' +
-                  '<div class="card-actions"><a class="btn btn-secondary btn-small" href="' + productHref(entry.product.slug) + '">Ver produto</a></div>' +
+                  '<div class="card-actions"><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(entry.product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço na Amazon.es</a><a class="btn btn-secondary btn-small" href="' + productHref(entry.product.slug) + '">Ver produto</a></div>' +
                 '</div>' +
               '</article>'
             );
@@ -854,7 +854,7 @@
   function renderProductCard(product, options) {
     const opts = normalizeProductCardOptions(options);
     const primaryHref = opts.primaryHref || amazonPtUrl(product.amazon);
-    const primaryLabel = opts.primaryLabel || "Ver preço";
+    const primaryLabel = opts.primaryLabel || (opts.primaryHref ? "Ver preço" : "Ver preço na Amazon.es");
     const primaryAttrs = /^https?:/i.test(primaryHref)
       ? ' target="_blank" rel="sponsored nofollow noopener noreferrer"'
       : "";
@@ -869,6 +869,7 @@
         '<div class="product-copy">' +
           '<div class="meta-row"><span class="tag">' + e(opts.label || product.bestFor) + "</span></div>" +
           '<h3 class="product-card-title">' + e(product.name) + "</h3>" +
+          (product.priceRange ? '<span class="product-price-range">' + e(product.priceRange) + '</span>' : "") +
           '<p class="product-highlight-line">' + e(productHighlightLine(product, opts.highlight)) + "</p>" +
           ((opts.support || (!opts.dense && product.useCase)) ? '<p class="product-support-line">' + e(opts.support || product.useCase) + "</p>" : "") +
           '<div class="card-actions">' +
@@ -992,7 +993,7 @@
           '<h2>' + e(product.name) + '</h2>' +
           '<p>' + e(item.note) + '</p>' +
           '<p class="store-hero-note">Uma das escolhas mais sólidas desta categoria para começar sem hesitar.</p>' +
-          '<div class="card-actions"><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Comprar na Amazon.es</a><a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Ver recomendação</a></div>' +
+          '<div class="card-actions"><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço na Amazon.es</a><a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Ver recomendação</a></div>' +
         '</div>' +
       '</article>'
     );
@@ -1004,7 +1005,7 @@
     return (
       '<article class="shop-mini-card store-choice-card">' +
         '<img src="' + href(product.image) + '" alt="' + e(product.alt || product.name) + '" loading="lazy" />' +
-        '<div><span class="tag">' + e(item.label) + '</span><strong>' + e(product.name) + '</strong><p>' + e(item.note) + '</p><div class="card-actions"><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Comprar</a><a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Ver produto</a></div></div>' +
+        '<div><span class="tag">' + e(item.label) + '</span><strong>' + e(product.name) + '</strong><p>' + e(item.note) + '</p><div class="card-actions"><a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço na Amazon.es</a><a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Ver produto</a></div></div>' +
       '</article>'
     );
   }
@@ -1035,9 +1036,10 @@
         '<div>' +
           '<span class="tag">' + e(item.label) + '</span>' +
           '<strong>' + e(product.name) + '</strong>' +
+          (product.priceRange ? '<span class="product-price-range">' + e(product.priceRange) + '</span>' : "") +
           '<p>' + e(item.note || product.summary) + '</p>' +
           '<div class="card-actions">' +
-            '<a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a>' +
+            '<a class="btn btn-primary btn-small" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço na Amazon.es</a>' +
             '<a class="btn btn-secondary btn-small" href="' + productHref(product.slug) + '">Ver análise</a>' +
           '</div>' +
         '</div>' +
@@ -1218,7 +1220,7 @@
           "@type": "Offer",
           "priceCurrency": "EUR",
           "availability": "https://schema.org/InStock",
-          "url": product.amazon || canonical,
+          "url": product.amazon ? amazonPtUrl(product.amazon) : canonical,
           "seller": { "@type": "Organization", "name": "Amazon.es" }
         },
         "category": (product.categories || []).map(function(item) {
@@ -1247,7 +1249,7 @@
       renderHeader() +
       '<main>' +
         '<section class="section"><div class="container hero-card"><div class="hero-grid">' +
-          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja/") + '">Loja</a><span>/</span><span>' + e(product.name) + '</span></div><span class="section-flag">Recomendação OndeCortar</span><span class="eyebrow">' + e(product.bestFor) + '</span><h1>' + e(product.name) + '</h1><p>' + e(product.summary) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a><a class="btn btn-secondary" href="' + (product.categories && product.categories[0] ? categoryHref(product.categories[0]) : href("loja/")) + '">' + e(categoryActionLabel(product.categories && product.categories[0] ? categoryMap.get(product.categories[0]) : null)) + '</a></div><div class="product-hero-panel"><strong>Antes de comprar</strong><ul class="rich-list"><li>Melhor para: ' + e(product.bestFor) + '</li><li>Ponto forte: ' + e(leadStrength || product.summary) + '</li><li>Mais a favor:' + e(secondStrength || product.useCase) + '</li></ul><div class="card-actions"><a class="btn btn-secondary btn-small" href="#relacionados">Ver alternativas</a></div></div></div>' +
+          '<div class="hero-copy"><div class="breadcrumbs"><a href="' + href("loja/") + '">Loja</a><span>/</span><span>' + e(product.name) + '</span></div><span class="section-flag">Recomendação OndeCortar</span><span class="eyebrow">' + e(product.bestFor) + '</span><h1>' + e(product.name) + '</h1>' + (product.priceRange ? '<span class="product-price-range">' + e(product.priceRange) + '</span>' : '') + '<p>' + e(product.summary) + '</p><div class="hero-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço na Amazon.es</a><a class="btn btn-secondary" href="' + (product.categories && product.categories[0] ? categoryHref(product.categories[0]) : href("loja/")) + '">' + e(categoryActionLabel(product.categories && product.categories[0] ? categoryMap.get(product.categories[0]) : null)) + '</a></div><div class="product-hero-panel"><strong>Antes de comprar</strong><ul class="rich-list"><li>Melhor para: ' + e(product.bestFor) + '</li><li>Ponto forte: ' + e(leadStrength || product.summary) + '</li><li>Mais a favor:' + e(secondStrength || product.useCase) + '</li></ul><div class="card-actions"><a class="btn btn-secondary btn-small" href="#relacionados">Ver alternativas</a></div></div></div>' +
       '<div class="hero-side"><div class="product-stage"><img src="' + href(product.image) + '" alt="' + e(product.alt || product.name) + '" loading="lazy" /></div><div class="store-note"><strong>Porque recomendamos</strong><p>' + e(product.highlight || product.summary) + '</p></div></div>' +
         '</div></div></section>' +
         '<section class="section"><div class="container split-grid">' +
@@ -1258,7 +1260,7 @@
             '<div class="product-highlight"><h3>Limitações</h3><ul class="rich-list">' + (product.limits || []).map(function(item) { return "<li>" + e(item) + "</li>"; }).join("") + '</ul></div>' +
           '</div>' +
           '<div class="stack">' +
-            '<div class="buy-box"><span class="price-hint">Loja afiliada</span><h3>Confirmar preço e disponibilidade</h3><p>O preço e o stock mudam com frequência. Confirma diretamente na Amazon.es antes de decidir.</p><div class="card-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a><a class="btn btn-secondary" href="' + (product.categories && product.categories[0] ? categoryHref(product.categories[0]) : href("loja/")) + '">' + e(categoryActionLabel(product.categories && product.categories[0] ? categoryMap.get(product.categories[0]) : null, "return")) + '</a></div></div>' +
+            '<div class="buy-box"><span class="price-hint">Loja afiliada</span><h3>Confirmar preço e disponibilidade</h3>' + (product.priceRange ? '<span class="product-price-range">' + e(product.priceRange) + '</span>' : '') + '<p>O preço e o stock mudam com frequência. Confirma diretamente na Amazon.es antes de decidir.</p><div class="card-actions"><a class="btn btn-primary" href="' + e(amazonPtUrl(product.amazon)) + '" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço na Amazon.es</a><a class="btn btn-secondary" href="' + (product.categories && product.categories[0] ? categoryHref(product.categories[0]) : href("loja/")) + '">' + e(categoryActionLabel(product.categories && product.categories[0] ? categoryMap.get(product.categories[0]) : null, "return")) + '</a></div></div>' +
             renderDisclosure() +
           '</div>' +
         '</div></section>' +

@@ -106,7 +106,14 @@
       "Bash(node scripts/audit-barber-locations.js)",
       "Bash(node validar-barbearias.js)",
       "Bash(sed -i 's/\"slug\": \"mans-house-barbearia\"/\"slug\": \"mans-house-portimao\"/' Barbeiros/barbearias.limpo.js)",
-      "Bash(rm -rf barbearias/mans-house-barbearia)"
+      "Bash(rm -rf barbearias/mans-house-barbearia)",
+      "Bash(git restore *)",
+      "Bash(node -e \"require\\('vm'\\).runInContext\\(require\\('fs'\\).readFileSync\\('commerce.js','utf8'\\), require\\('vm'\\).createContext\\({window:{document:{body:{dataset:{}},addEventListener\\(\\){},getElementById\\(\\){return null}},addEventListener\\(\\){}},document:{body:{dataset:{}},addEventListener\\(\\){},getElementById\\(\\){return null},querySelector\\(\\){return null},querySelectorAll\\(\\){return []},documentElement:{},createElement\\(\\){return {setAttribute\\(\\){},attributes:{}}}},console}\\)\\); console.log\\('sintaxe OK'\\)\")",
+      "Bash(node --check commerce.js)",
+      "Bash(node --check commerce-products-a.js)",
+      "Bash(node --check commerce-products-b.js)",
+      "Bash(node scripts/apply-affiliate-improvements.js)",
+      "Bash(node --check scripts/build-directory-static.js)"
     ]
   }
 }

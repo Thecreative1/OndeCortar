@@ -35,6 +35,54 @@ function loadBarbers() {
   return utils.obterBarbeariasPublicas(context.data || []);
 }
 
+// Produtos da loja destacados nos perfis (cross-sell barbearia → loja).
+// Os slugs têm de existir em commerce-products-a/b.js; nome e faixa de preço vêm de lá.
+const STORE_PICKS = [
+  { slug: "braun-series-5-aio5545", label: "Máquina para cortar em casa" },
+  { slug: "philips-bt3238", label: "Aparador para a barba" },
+  { slug: "viking-sandalwood", label: "Kit de barba para oferecer" }
+];
+
+function loadStorePicks() {
+  try {
+    const context = { window: { OndeCortarCommerce: {} } };
+    vm.createContext(context);
+    ["commerce-products-a.js", "commerce-products-b.js"].forEach((file) => {
+      vm.runInContext(fs.readFileSync(path.join(ROOT, file), "utf8"), context, { filename: file });
+    });
+    const products = new Map((context.window.OndeCortarCommerce.products || []).map((item) => [item.slug, item]));
+    return STORE_PICKS.map((pick) => {
+      const product = products.get(pick.slug);
+      return product
+        ? { slug: pick.slug, label: pick.label, name: product.name, priceRange: product.priceRange || "" }
+        : null;
+    }).filter(Boolean);
+  } catch (error) {
+    return [];
+  }
+}
+
+const storePicks = loadStorePicks();
+
+function storeSection(prefix) {
+  if (!storePicks.length) return "";
+  const rows = storePicks.map((pick) =>
+    '<a href="' + escapeHtml(prefix + "produto/" + pick.slug + "/") + '" style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--hairline);text-decoration:none;color:var(--ink)">' +
+      '<span style="min-width:0"><strong style="display:block;font-size:14.5px">' + escapeHtml(pick.name) + "</strong><span class=\"oc-meta\">" + escapeHtml(pick.label) + "</span></span>" +
+      (pick.priceRange ? '<span class="oc-mono" style="font-size:11.5px;white-space:nowrap;color:var(--subtext)">' + escapeHtml(pick.priceRange) + "</span>" : "") +
+    "</a>"
+  ).join("");
+  return '<section class="oc-section" style="padding:0 20px 28px" aria-labelledby="loja-h">' +
+    '<div class="oc-card" style="padding:20px 18px">' +
+      '<div class="oc-eyebrow" style="margin-bottom:6px">Loja OndeCortar</div>' +
+      '<h2 id="loja-h" class="oc-section-head__title" style="margin-bottom:8px">Manter o corte entre visitas</h2>' +
+      '<p style="font-size:14px;line-height:1.55;color:var(--subtext);margin-bottom:6px">Máquinas, aparadores e kits escolhidos com critério para os retoques em casa entre idas à barbearia.</p>' +
+      rows +
+      '<a class="oc-btn oc-btn--ghost" href="' + escapeHtml(prefix + "loja/") + '" style="width:100%;margin-top:14px">Ver a loja completa</a>' +
+    "</div>" +
+  "</section>";
+}
+
 function latestLastmod(entries, fallback) {
   return (entries || []).reduce((latest, entry) => {
     const value = String((entry && entry.lastmod) || "").trim();
@@ -1352,6 +1400,7 @@ function renderProfilePage(barber, citiesMap) {
     infoRow + "\n" +
     (!isMinimal ? ownerSection(false) + "\n" : "") +
     relatedSection + "\n" +
+    storeSection(prefix) + "\n" +
     "      <\/article>\n    <\/main>\n\n" +
     footerSection + "\n" +
     "  <\/div>\n\n" +

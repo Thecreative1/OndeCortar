@@ -217,6 +217,6 @@ Para alterações visuais/homepage:
 
 ## Secções que NÃO são geridas pelo build principal
 
-- `loja/` — loja de produtos, gerida por `scripts/sync-commerce-static.js`
+- `loja/` — loja de produtos. **⚠️ NÃO correr `scripts/sync-commerce-static.js`**: várias páginas (`loja/index.html`, `loja/kits-de-barba/`, `revista/index.html` e a maioria dos artigos da revista) foram enriquecidas à mão depois do último sync, e o renderer (`commerce.js` + `commerce-articles.js`) está desatualizado em relação ao HTML publicado — correr o sync apaga esse conteúdo. Para alterações transversais de afiliados/preços usar `scripts/apply-affiliate-improvements.js` (idempotente) ou editar os HTML diretamente.
 - `revista/` — artigos editoriais, HTML manual
 - `index.html` (hero, nav, footer, CSS, secção de destaques) — HTML manual, só os markers são atualizados pelo build
