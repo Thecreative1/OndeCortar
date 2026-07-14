@@ -1,393 +1,410 @@
 [
-    {
-        "page":  "maquinas.html",
-        "title":  "Solati Aparador Masculino",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0D6YPGQ8D?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "maquinas.html",
-        "title":  "Hatteker 5-em-1",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0CJM6MWVR?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "maquinas.html",
-        "title":  "Hatteker Máquina Completa",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B093WGS7M3?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "maquinas.html",
-        "title":  "Wahl Super Taper",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B001D2CSYU?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "maquinas.html",
-        "title":  "Braun Series 5 AIO5545",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  false,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0DQWLT6HY?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "maquinas.html",
-        "title":  "Braun Series 3 AIO3565",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0DQWFPGX9?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "maquinas.html",
-        "title":  "Philips Beardtrimmer BT3238/15",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0CFY715NF?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "maquinas.html",
-        "title":  "Cecotec PrecisionCare Wet\u0026amp;Dry",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0BPZRQYH3?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "navalhas.html",
-        "title":  "Navalha Profissional ASIPRO",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B092FZVGZ7?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "navalhas.html",
-        "title":  "Kit de Navalha Clássica",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B075DFHSW6?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "navalhas.html",
-        "title":  "Lâminas Derby Professional",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B00DIW3VHG?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "navalhas.html",
-        "title":  "Lâminas de Reposição Pro",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B09QXCPZBB?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "navalhas.html",
-        "title":  "Sapiens Barbershop Navalha",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B07RF9MJSW?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "navalhas.html",
-        "title":  "King C. Gillette Máquina Dupla",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B08B92DD8P?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "navalhas.html",
-        "title":  "Derby Premium 100 Lâminas",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B072HJCFK6?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "navalhas.html",
-        "title":  "King C. Gillette Lâminas Duplas",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  false,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B08B94FM29?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "kits.html",
-        "title":  "Kit Completo de Barba XIKEZAN",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0D9787RDN?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "kits.html",
-        "title":  "Kit Viking Revolution Sandalwood",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B07NRR2T4J?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "kits.html",
-        "title":  "Kit Natural Completo para Barba",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B09BZCK9F9?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "kits.html",
-        "title":  "Viking Revolution Barba e Bigode",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B07K6WDR2Z?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "kits.html",
-        "title":  "King C. Gillette Rotina Clássica",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0FMQBG11X?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "kits.html",
-        "title":  "King C. Gillette Kit Perfeita PRO",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0FNKW47DS?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "kits.html",
-        "title":  "BarberBoss Kit 5 em 1",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0FKTRQ6FK?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "cremes.html",
-        "title":  "Creme de Barbear Proraso",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B00837ZOI0?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "cremes.html",
-        "title":  "Creme de Barbear Hidratante",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0082BYLS6?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "cremes.html",
-        "title":  "Proraso Pré-Barba Pele Sensível",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B003VS5O3Q?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "cremes.html",
-        "title":  "La Toja Espuma Pele Sensível",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B072R49RCH?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "cremes.html",
-        "title":  "Gillette Labs Gel de Barbear",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0BFRGVVDM?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "escovas.html",
-        "title":  "Viking Revolution - Kit de Escova e Pente",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B06X3ZL2CV?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "escovas.html",
-        "title":  "Pincel de Barbeiro com Cabo de Madeira",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B09MV3MCKT?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "escovas.html",
-        "title":  "ZilberHaar Escova de Javali",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B06XD86WNT?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "escovas.html",
-        "title":  "ZilberHaar Escova de Bolso",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B01AQO1MPG?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "escovas.html",
-        "title":  "Charlemagne Pente de Carbono",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B07KCDHX2J?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "escovas.html",
-        "title":  "Longivia Pente de Madeira",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0BPPMNBKF?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "acessorios.html",
-        "title":  "Organizador de Bancada Colcolo",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0C9QKL57C?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "acessorios.html",
-        "title":  "Capa Profissional URAQT",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0FP992GL1?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "acessorios.html",
-        "title":  "Spray Beardburys 5 em 1",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  false,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B08NXJ6X7H?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "acessorios.html",
-        "title":  "Luz de Anel LED com Tripé",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B0BZRC9CJK?tag=ondecortarp0c-21"
-    },
-    {
-        "page":  "acessorios.html",
-        "title":  "Rolos de Pescoço Eurostil",
-        "status":  "ok",
-        "add_to_cart":  true,
-        "buy_now":  true,
-        "no_featured_offer":  false,
-        "options_only":  false,
-        "url":  "https://www.amazon.es/dp/B07KPF6RX5?tag=ondecortarp0c-21"
-    }
+  {
+    "slug": "wahl-super-taper",
+    "title": "Wahl Super Taper",
+    "url": "https://www.amazon.es/dp/B001D2CSYU?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "braun-series-5-aio5545",
+    "title": "Braun Series 5 AIO5545",
+    "url": "https://www.amazon.es/dp/B0DQWLT6HY?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "braun-series-3-aio3565",
+    "title": "Braun Series 3 AIO3565",
+    "url": "https://www.amazon.es/dp/B0DQWFPGX9?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "philips-bt3238",
+    "title": "Philips Beardtrimmer BT3238/15",
+    "url": "https://www.amazon.es/dp/B0CFY715NF?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "fagaci-profissional",
+    "title": "Fagaci Professional Hair Clippers",
+    "url": "https://www.amazon.es/Fagaci-Profesional-Precisi%C3%B3n-Superior-Cuchillas/dp/B0DSCCCFKF?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "philips-bt5515",
+    "title": "Philips Beardtrimmer BT5515/15",
+    "url": "https://www.amazon.es/Philips-BT5515-15-Recortadora-barba/dp/B07PGWNKGN?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "braun-mgk5445",
+    "title": "Braun Series 5 MGK5445",
+    "url": "https://www.amazon.es/Braun-Recortadora-Cortapelos-Depilaci%C3%B3n-Masculina/dp/B0C7WFMQ3T?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "hiena-pro-shaver",
+    "title": "HIENA PRO Electric Foil Shaver",
+    "url": "https://www.amazon.es/-/en/HIENA-PRO-Advanced-Electric-Technology/dp/B0F9YJMZR1?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "solati-aparador",
+    "title": "Solati Aparador Masculino",
+    "url": "https://www.amazon.es/dp/B0D6YPGQ8D?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "hatteker-completa",
+    "title": "Hatteker Máquina Completa",
+    "url": "https://www.amazon.es/dp/B093WGS7M3?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "kit-xikezan",
+    "title": "Kit Completo de Barba XIKEZAN",
+    "url": "https://www.amazon.es/dp/B0D9787RDN?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "viking-sandalwood",
+    "title": "Viking Revolution Sandalwood",
+    "url": "https://www.amazon.es/dp/B07NRR2T4J?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "king-c-rotina",
+    "title": "King C. Gillette Rotina Clássica",
+    "url": "https://www.amazon.es/dp/B0FMQBG11X?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "proraso-creme",
+    "title": "Creme de Barbear Proraso",
+    "url": "https://www.amazon.es/dp/B00837ZOI0?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "gillette-labs-gel",
+    "title": "Gillette Labs Gel de Barbear",
+    "url": "https://www.amazon.es/dp/B0BFRGVVDM?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "proraso-pre-barba",
+    "title": "Proraso Pré-Barba Pele Sensível",
+    "url": "https://www.amazon.es/dp/B003VS5O3Q?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "asipro-navalha",
+    "title": "Navalha Profissional ASIPRO",
+    "url": "https://www.amazon.es/dp/B092FZVGZ7?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "king-c-dupla",
+    "title": "King C. Gillette Máquina Dupla",
+    "url": "https://www.amazon.es/dp/B08B92DD8P?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "parker-srx",
+    "title": "Parker SRX Straight Razor",
+    "url": "https://www.amazon.es/Parker-afeitar-profesional-barbero-Inoxidable/dp/B01MQIAAC1?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "derby-premium",
+    "title": "Derby Premium 100 Lâminas",
+    "url": "https://www.amazon.es/dp/B072HJCFK6?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "viking-escova-kit",
+    "title": "Viking Revolution Kit de Escova e Pente",
+    "url": "https://www.amazon.es/dp/B06X3ZL2CV?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "zilberhaar-escova",
+    "title": "ZilberHaar Escova de Javali",
+    "url": "https://www.amazon.es/dp/B06XD86WNT?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "charlemagne-pente",
+    "title": "Charlemagne Pente de Carbono",
+    "url": "https://www.amazon.es/dp/B07KCDHX2J?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "colcolo-organizador",
+    "title": "Organizador de Bancada Colcolo",
+    "url": "https://www.amazon.es/dp/B0C9QKL57C?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "uraqt-capa",
+    "title": "Capa Profissional URAQT",
+    "url": "https://www.amazon.es/dp/B0FP992GL1?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "ecence-capa-corte",
+    "title": "ECENCE Capa de Corte",
+    "url": "https://www.amazon.es/ECENCE-peluquer%C3%ADa-Adultos-Impermeable-42040303/dp/B07GS544JG?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "wilkinson-sword-pincel",
+    "title": "Wilkinson Sword Pincel Clássico",
+    "url": "https://www.amazon.es/Wilkinson-Sword-Cepillo-afeitar-cl%C3%A1sico/dp/B07J6ZG678?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "barbicide-desinfetante",
+    "title": "Barbicide Recipiente Desinfetante",
+    "url": "https://www.amazon.es/Barbicide-Desinfectante-utensilios-peluquer%C3%ADa-barber%C3%ADa/dp/B002V2L6YO?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "tru-barber-mat",
+    "title": "TRU BARBER Tapete Organizador",
+    "url": "https://www.amazon.es/TRU-BARBERTRUBARBER-Alfombrilla-organizadora-pulgadas/dp/B07PRW8SQH?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "beardburys-spray",
+    "title": "Spray Beardburys 5 em 1",
+    "url": "https://www.amazon.es/dp/B08NXJ6X7H?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "eurostil-rolos",
+    "title": "Rolos de Pescoço Eurostil",
+    "url": "https://www.amazon.es/dp/B07KPF6RX5?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "poste-barbeiro-classico",
+    "title": "Poste de Barbeiro Clássico Precious Harvest",
+    "url": "https://www.amazon.es/dp/B0BZRC9CJK?tag=ondecortarp0c-21&language=pt_PT",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "wdzd-poste-barbeiro-dourado",
+    "title": "WDZD Poste de Barbeiro Dourado",
+    "url": "https://www.amazon.es/WDZD-Dorado-Poste-Barbero-Barber/dp/B0DJVVV4LF?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "wdzd-poste-barbeiro-prateado",
+    "title": "WDZD Poste de Barbeiro Prateado",
+    "url": "https://www.amazon.es/WDZD-Barbero-Plateado-Giratorio-Montaje/dp/B0CK5RHFN3?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "poste-barbeiro-seta-luminosa",
+    "title": "Poste de Barbeiro com Seta Luminosa",
+    "url": "https://www.amazon.es/Barbero-flecha-luminoso-rotaci%C3%B3n-peluquer%C3%ADas/dp/B00SZEK986?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "wahl-color-pro-cordless-clipper-combo",
+    "title": "Wahl Color Pro Cordless Clipper Combo",
+    "url": "https://www.amazon.es/dp/B07MKT2BDF?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "philips-hc7650-15-series-7000",
+    "title": "Philips HC7650/15 Series 7000",
+    "url": "https://www.amazon.es/dp/B07TMP2TP5?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "babylisspro-chromfx-clipper",
+    "title": "BaBylissPRO ChromFX Clipper",
+    "url": "https://www.amazon.es/dp/B07KT7K8LF?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "braun-beardtrimmer-5-bt5500",
+    "title": "Braun BeardTrimmer 5 BT5500",
+    "url": "https://www.amazon.es/dp/B0FJ2JX957?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "philips-oneblade-pro-360",
+    "title": "Philips OneBlade Pro 360",
+    "url": "https://www.amazon.es/dp/B0DC72VG9Q?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "panasonic-er-gb43",
+    "title": "Panasonic ER-GB43",
+    "url": "https://www.amazon.es/dp/B07XYNLWC1?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "viking-revolution-beard-grooming-kit",
+    "title": "Viking Revolution Beard Grooming Kit",
+    "url": "https://www.amazon.es/dp/B07B53Q3BX?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "king-c-gillette-beard-trimmer-kit",
+    "title": "King C. Gillette Beard Trimmer Kit",
+    "url": "https://www.amazon.es/dp/B08B959QTP?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "king-c-gillette-beard-clipper",
+    "title": "King C. Gillette Beard Clipper",
+    "url": "https://www.amazon.es/dp/B0DWM37XCN?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "taylor-of-old-bond-street-sandalwood",
+    "title": "Taylor of Old Bond Street Sandalwood",
+    "url": "https://www.amazon.es/dp/B0821VZYZF?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "viking-revolution-beard-oil",
+    "title": "Viking Revolution Beard Oil",
+    "url": "https://www.amazon.es/dp/B078K36RQ1?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "honest-amish-beard-balm",
+    "title": "Honest Amish Beard Balm",
+    "url": "https://www.amazon.es/dp/B009NNFB0O?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "charlemagne-beard-balm",
+    "title": "Charlemagne Beard Balm",
+    "url": "https://www.amazon.es/dp/B075CQW383?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "wahl-clipper-oil",
+    "title": "Wahl Clipper Oil 118 ml",
+    "url": "https://www.amazon.es/dp/B077KD7KHY?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "syprin-lubrificante-maquinas",
+    "title": "Syprin Lubrificante para Máquinas",
+    "url": "https://www.amazon.es/dp/B077PGVGB7?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  },
+  {
+    "slug": "wahl-clipper-oil-pack",
+    "title": "Wahl Clipper Oil Pack 3",
+    "url": "https://www.amazon.es/dp/B00S6HOEGU?tag=ondecortarp0c-21",
+    "status": "ok-unverified",
+    "http_status": 200,
+    "checked_at": "2026-07-14"
+  }
 ]
-

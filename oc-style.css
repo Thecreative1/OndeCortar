@@ -465,6 +465,32 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   padding: 28px 0; text-align: center;
   font-size: 14px; color: var(--oc-muted); line-height: 1.6;
 }
+.empty-state .chips-row { margin-top: 12px; justify-content: center; }
+.empty-state-note { margin-top: 12px; font-size: 13px; }
+.empty-state-note a { color: var(--oc-clay); font-weight: 600; }
+
+/* ─── Bloco "Entre visitas" (homepage → Revista/Loja) ─────────── */
+.oc-home-commerce {
+  background: var(--oc-card);
+  border-top: 1px solid var(--oc-line);
+  border-bottom: 1px solid var(--oc-line);
+  padding: 26px 0;
+}
+.oc-home-commerce-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; flex-wrap: wrap;
+}
+.oc-home-commerce-copy h2 {
+  font-family: var(--oc-font-display); font-size: 1.25rem;
+  color: var(--oc-ink); margin: 4px 0 6px;
+}
+.oc-home-commerce-copy p { font-size: 14px; color: var(--oc-muted); max-width: 52ch; }
+.oc-home-commerce-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+@media (max-width: 760px) {
+  .oc-home-commerce-inner { flex-direction: column; align-items: flex-start; }
+  .oc-home-commerce-actions { width: 100%; }
+  .oc-home-commerce-actions .btn { flex: 1; text-align: center; }
+}
 
 /* SSR static list (no-JS) */
 #resultsList > ul {

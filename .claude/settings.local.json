@@ -114,7 +114,22 @@
       "Bash(node --check commerce-products-b.js)",
       "Bash(node scripts/apply-affiliate-improvements.js)",
       "Bash(node --check scripts/build-directory-static.js)",
-      "Bash(node --check scripts/apply-affiliate-improvements.js)"
+      "Bash(node --check scripts/apply-affiliate-improvements.js)",
+      "PowerShell(Get-ChildItem produto | Select-Object Name | Format-Table -HideTableHeaders; \\(Get-ChildItem loja -Recurse -Filter index.html | Measure-Object Length -Sum\\).Sum; \\(Get-Item \"loja/index.html\"\\).Length; \\(Get-Item \"produto/wahl-super-taper/index.html\"\\).Length; \\(Get-Item \"revista/melhores-maquinas-para-cortar-cabelo-em-casa/index.html\"\\).Length)",
+      "PowerShell($line = \\(Get-Content index.html -TotalCount 1935 | Select-Object -Skip 1925\\); $line[0].Substring\\(0, [Math]::Min\\(300, $line[0].Length\\)\\); \"\"; $line[3].Substring\\(0, [Math]::Min\\(600, $line[3].Length\\)\\))",
+      "PowerShell($c = Get-Content \"barbearias/arlem-barber/index.html\" -Raw; $i = $c.IndexOf\\('entre visitas'\\); $c.Substring\\($i-400, 900\\))",
+      "PowerShell($h = Get-Content amazon-product-health.json -Raw | ConvertFrom-Json; $h | Group-Object status | Select-Object Name, Count; $h | Where-Object { $_.status -ne 'ok' -or $_.no_featured_offer -or $_.options_only } | Select-Object title, status, no_featured_offer, options_only, add_to_cart | Format-Table -AutoSize)",
+      "PowerShell(Test-Path anunciar.html; Test-Path obrigado.html; \\(Select-String -Path commerce-products-b.js -Pattern 'slug: \"' -AllMatches\\).Matches.Count + \\(Select-String -Path commerce-products-a.js -Pattern 'slug: \"' -AllMatches\\).Matches.Count; \\(Get-ChildItem produto -Directory\\).Count; Select-String -Path sitemap-revista.xml -Pattern '<loc>' | Measure-Object | Select-Object -ExpandProperty Count; Select-String -Path sitemap-loja.xml -Pattern '<loc>' | Measure-Object | Select-Object -ExpandProperty Count)",
+      "PowerShell($c = Get-Content \"loja/maquinas-de-cortar/index.html\" -Raw; \"produto links: \" + \\([regex]::Matches\\($c, 'href=\"\\\\.\\\\./\\\\.\\\\./produto/\\([a-z0-9-]+\\)/\"'\\) | ForEach-Object { $_.Groups[1].Value } | Select-Object -Unique\\).Count; \\([regex]::Matches\\($c, 'href=\"\\\\.\\\\./\\\\.\\\\./produto/\\([a-z0-9-]+\\)/\"'\\) | ForEach-Object { $_.Groups[1].Value } | Select-Object -Unique\\) -join ', '; \"amazon links: \" + \\([regex]::Matches\\($c, 'amazon\\\\.es'\\)\\).Count)",
+      "PowerShell(\\(Get-ChildItem imagens/produtos -File\\).Name -join ', ')",
+      "PowerShell(node -e \"const w={window:{}};global.window=w.window;require\\('./commerce-articles.js'\\);const arts=window.OndeCortarCommerce.articles;console.log\\(arts.filter\\(a=>a.hub==='guias-de-compra'\\).map\\(a=>a.slug\\).join\\('\\\\n'\\)\\);console.log\\('---all---'\\);console.log\\(arts.map\\(a=>a.hub+' :: '+a.slug\\).join\\('\\\\n'\\)\\)\")",
+      "Bash(node \"C:/Users/Phoenix/AppData/Local/Temp/claude/E--Git-Projects-GIT-HUB-OndeCortar/22534e3d-596f-42de-a378-9b57ac1ea31b/scratchpad/remove-prices.js\")",
+      "Bash(node -e \"require\\('./commerce-products-a.js'\\)\")",
+      "Bash(node -e \"global.window={}; require\\('./commerce-products-a.js'\\); require\\('./commerce-products-b.js'\\); console.log\\('parse OK, produtos:', window.OndeCortarCommerce.products.length\\)\")",
+      "Bash(node scripts/apply-site-enhancements.js)",
+      "Bash(node scripts/check-amazon-links.js)",
+      "Bash(python -m http.server 8123 --bind 127.0.0.1)",
+      "Bash(node --check oc-analytics.js)"
     ]
   }
 }

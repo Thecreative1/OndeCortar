@@ -39,6 +39,78 @@
   box-sizing: border-box;
 }
 
+/* ─── CTA fixo mobile (páginas de produto) ─────────────────────── */
+.oc-sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 80;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: rgba(251, 245, 234, 0.97);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -8px 24px var(--shadow-soft-color);
+}
+.oc-sticky-cta-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+.oc-sticky-cta .btn { flex-shrink: 0; }
+@media (max-width: 760px) {
+  .oc-sticky-cta:not([hidden]) { display: flex; }
+}
+
+/* ─── "Escolhe em 30 segundos" (guias de compra) ───────────────── */
+.oc-decision-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.oc-decision-col {
+  background: var(--surface-solid);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.oc-decision-col h3 { font-size: 1.05rem; color: var(--text); }
+.oc-decision-col dl {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.oc-decision-col dt {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted-soft);
+  margin-bottom: 2px;
+}
+.oc-decision-col dd {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.oc-decision-col .card-actions { margin-top: auto; }
+@media (max-width: 900px) {
+  .oc-decision-grid { grid-template-columns: 1fr; }
+}
+
 html {
   scroll-behavior: smooth;
 }

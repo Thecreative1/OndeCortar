@@ -36,12 +36,35 @@ function loadBarbers() {
 }
 
 // Produtos da loja destacados nos perfis (cross-sell barbearia → loja).
-// Os slugs têm de existir em commerce-products-a/b.js; nome e faixa de preço vêm de lá.
-const STORE_PICKS = [
-  { slug: "braun-series-5-aio5545", label: "Máquina para cortar em casa" },
-  { slug: "philips-bt3238", label: "Aparador para a barba" },
-  { slug: "viking-sandalwood", label: "Kit de barba para oferecer" }
+// Os slugs têm de existir em commerce-products-a/b.js; nome vem de lá.
+// Três variantes rodadas de forma determinística por slug da barbearia,
+// para os perfis não mostrarem todos exatamente os mesmos produtos.
+const STORE_PICK_VARIANTS = [
+  [
+    { slug: "braun-series-5-aio5545", label: "Máquina para cortar em casa" },
+    { slug: "philips-bt3238", label: "Aparador para a barba" },
+    { slug: "viking-sandalwood", label: "Kit de barba para oferecer" }
+  ],
+  [
+    { slug: "hatteker-completa", label: "Conjunto para começar em casa" },
+    { slug: "philips-bt5515", label: "Aparador com mais ajuste" },
+    { slug: "proraso-creme", label: "Creme para barbear clássico" }
+  ],
+  [
+    { slug: "solati-aparador", label: "Retoques de contornos entre cortes" },
+    { slug: "beardburys-spray", label: "Manutenção da máquina" },
+    { slug: "kit-xikezan", label: "Kit de barba completo" }
+  ]
 ];
+
+function hashSlug(value) {
+  let hash = 0;
+  const text = String(value || "");
+  for (let i = 0; i < text.length; i += 1) {
+    hash = ((hash * 31) + text.charCodeAt(i)) | 0;
+  }
+  return Math.abs(hash);
+}
 
 function loadStorePicks() {
   try {
@@ -51,19 +74,20 @@ function loadStorePicks() {
       vm.runInContext(fs.readFileSync(path.join(ROOT, file), "utf8"), context, { filename: file });
     });
     const products = new Map((context.window.OndeCortarCommerce.products || []).map((item) => [item.slug, item]));
-    return STORE_PICKS.map((pick) => {
+    return STORE_PICK_VARIANTS.map((variant) => variant.map((pick) => {
       const product = products.get(pick.slug);
       return product ? { slug: pick.slug, label: pick.label, name: product.name } : null;
-    }).filter(Boolean);
+    }).filter(Boolean)).filter((variant) => variant.length);
   } catch (error) {
     return [];
   }
 }
 
-const storePicks = loadStorePicks();
+const storePickVariants = loadStorePicks();
 
-function storeSection(prefix) {
-  if (!storePicks.length) return "";
+function storeSection(prefix, barberSlug) {
+  if (!storePickVariants.length) return "";
+  const storePicks = storePickVariants[hashSlug(barberSlug) % storePickVariants.length];
   const rows = storePicks.map((pick) =>
     '<a href="' + escapeHtml(prefix + "produto/" + pick.slug + "/") + '" style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--hairline);text-decoration:none;color:var(--ink)">' +
       '<span style="min-width:0"><strong style="display:block;font-size:14.5px">' + escapeHtml(pick.name) + "</strong><span class=\"oc-meta\">" + escapeHtml(pick.label) + "</span></span>" +
@@ -551,15 +575,13 @@ function buildCityGuide(cityName, hierarchy) {
   ];
 }
 
-function pickStoreCategorySlug(cityBarbers) {
-  if (cityBarbers.some((barber) => barber.booking)) {
-    return "kits-de-barba";
-  }
-  if (cityBarbers.some((barber) => barber.telefone)) {
-    return "maquinas-de-cortar";
-  }
-  return "cremes-e-espumas";
-}
+// Pares categoria+artigo rodados por cidade (determinístico via hashSlug),
+// para o bloco "Loja e revista" não apontar sempre para o mesmo destino.
+const CITY_COMMERCE_VARIANTS = [
+  { category: "maquinas-de-cortar", article: "como-escolher-uma-maquina-de-cortar-cabelo-para-usar-em-casa" },
+  { category: "kits-de-barba", article: "como-montar-uma-rotina-simples-de-barba-em-casa" },
+  { category: "manutencao-de-maquinas", article: "como-limpar-uma-maquina-de-cortar-cabelo" }
+];
 
 function buildSlugData(rawBarbers) {
   const barbers = rawBarbers.map((item, index) => {
@@ -637,8 +659,9 @@ function buildSlugData(rawBarbers) {
     city.hasMixedDistricts = city.districtValues.length > 1;
     city.intro = buildCityIntro(city.name, city.barbearias, city);
     city.guide = buildCityGuide(city.name, city);
-    city.storeCategory = pickStoreCategorySlug(city.barbearias);
-    city.magazineArticle = "como-montar-uma-rotina-simples-de-barba-em-casa";
+    const cityCommerce = CITY_COMMERCE_VARIANTS[hashSlug(city.slug) % CITY_COMMERCE_VARIANTS.length];
+    city.storeCategory = cityCommerce.category;
+    city.magazineArticle = cityCommerce.article;
   });
 
   return {
@@ -1037,6 +1060,7 @@ function renderFooter(prefix) {
         <a href="${prefix}cidades/">Cidades</a>
         <a href="${prefix}loja/">Loja</a>
         <a href="${prefix}revista/">Revista</a>
+        <a href="${prefix}sobre/">Sobre</a>
         <a href="${prefix}faq.html">FAQ</a>
       </div>
     </div>
@@ -1072,6 +1096,7 @@ function renderDocument(options) {
   ${renderBaseStyles(options.extraStyles)}
   <link rel="stylesheet" href="${escapeHtml(options.prefix || "")}mobile-nav.css" />
   <script src="${escapeHtml(options.prefix || "")}mobile-nav.js" defer></script>
+  <script src="${escapeHtml(options.prefix || "")}oc-analytics.js" defer></script>
 ${structuredData ? "\n" + structuredData : ""}
 </head>
 <body>
@@ -1389,7 +1414,7 @@ function renderProfilePage(barber, citiesMap) {
     '<span class="oc-crumb__sep">\/<\/span><span style="color:var(--ink)">' + H(barber.name) + "<\/span>";
 
   // ── Full page
-  return "<!DOCTYPE html>\n<html lang=\"pt-PT\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <meta name=\"theme-color\" content=\"#14110D\" />\n  <title>" + H(title) + "<\/title>\n  <meta name=\"description\" content=\"" + H(description) + "\" />\n  <link rel=\"canonical\" href=\"" + H(canonical) + "\" />\n  <meta property=\"og:title\" content=\"" + H(title) + "\" />\n  <meta property=\"og:description\" content=\"" + H(description) + "\" />\n  <meta property=\"og:url\" content=\"" + H(canonical) + "\" />\n  <meta property=\"og:type\" content=\"website\" />\n  <meta property=\"og:image\" content=\"" + H(DEFAULT_OG_IMAGE) + "\" />\n  <link rel=\"icon\" href=\"" + H(prefix) + "favicon.ico\" type=\"image/x-icon\" />\n  <link rel=\"apple-touch-icon\" href=\"" + H(prefix) + "apple-touch-icon.png\" />\n  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n  <link href=\"https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap\" rel=\"stylesheet\" />" + leafletHead + "\n  <link rel=\"stylesheet\" href=\"" + H(prefix) + "barbearia-profile.css?v=20260527-contrast\" />\n" + jsonLd + "\n<\/head>\n<body>\n\n  <header class=\"oc-topnav oc-mobile-nav\">\n    <a class=\"oc-topnav__back\" href=\"" + H(prefix) + "\">" + iArrowL + " Barbearias<\/a>\n    <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n    <a href=\"" + H(canonical) + "\" class=\"oc-topnav__action\" aria-label=\"Partilhar\">" + iShare + "<\/a>\n  <\/header>\n\n  <header class=\"oc-desktop-nav oc-desktop-only\" style=\"display:none\">\n    <div style=\"display:flex;align-items:center;gap:32px\">\n      <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n      <nav class=\"oc-desktop-nav__links\" aria-label=\"Navegação principal\">\n        <a href=\"" + H(prefix) + "\">Barbearias<\/a>\n        <a href=\"" + H(prefix) + "cidades\/\">Cidades<\/a>\n        <a href=\"" + H(prefix) + "registar.html\">Adicionar barbearia<\/a>\n      <\/nav>\n    <\/div>\n    <div class=\"oc-desktop-nav__actions\">\n      <a href=\"" + H(prefix) + "registar.html\" class=\"oc-btn oc-btn--ghost\" style=\"height:38px;padding:0 16px;font-size:13px\">Reclamar esta barbearia<\/a>\n      <a href=\"" + H(prefix) + "registar.html\" class=\"oc-btn oc-btn--primary\" style=\"height:38px;padding:0 16px;font-size:13px\">Atualizar perfil " + iArrow + "<\/a>\n    <\/div>\n  <\/header>\n\n  <div class=\"oc-page\">\n    <nav class=\"oc-crumb-wrap oc-section\" style=\"padding:14px 20px 0\" aria-label=\"breadcrumb\">\n      <div class=\"oc-crumb\">" + crumbItems + "<\/div>\n    <\/nav>\n\n    <main>\n      <article itemscope itemtype=\"https://schema.org/HairSalon\">\n" +
+  return "<!DOCTYPE html>\n<html lang=\"pt-PT\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <meta name=\"theme-color\" content=\"#14110D\" />\n  <title>" + H(title) + "<\/title>\n  <meta name=\"description\" content=\"" + H(description) + "\" />\n  <link rel=\"canonical\" href=\"" + H(canonical) + "\" />\n  <meta property=\"og:title\" content=\"" + H(title) + "\" />\n  <meta property=\"og:description\" content=\"" + H(description) + "\" />\n  <meta property=\"og:url\" content=\"" + H(canonical) + "\" />\n  <meta property=\"og:type\" content=\"website\" />\n  <meta property=\"og:image\" content=\"" + H(DEFAULT_OG_IMAGE) + "\" />\n  <link rel=\"icon\" href=\"" + H(prefix) + "favicon.ico\" type=\"image/x-icon\" />\n  <link rel=\"apple-touch-icon\" href=\"" + H(prefix) + "apple-touch-icon.png\" />\n  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n  <link href=\"https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap\" rel=\"stylesheet\" />" + leafletHead + "\n  <link rel=\"stylesheet\" href=\"" + H(prefix) + "barbearia-profile.css?v=20260527-contrast\" />\n  <script defer src=\"" + H(prefix) + "oc-analytics.js\"><\/script>\n" + jsonLd + "\n<\/head>\n<body>\n\n  <header class=\"oc-topnav oc-mobile-nav\">\n    <a class=\"oc-topnav__back\" href=\"" + H(prefix) + "\">" + iArrowL + " Barbearias<\/a>\n    <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n    <a href=\"" + H(canonical) + "\" class=\"oc-topnav__action\" aria-label=\"Partilhar\">" + iShare + "<\/a>\n  <\/header>\n\n  <header class=\"oc-desktop-nav oc-desktop-only\" style=\"display:none\">\n    <div style=\"display:flex;align-items:center;gap:32px\">\n      <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n      <nav class=\"oc-desktop-nav__links\" aria-label=\"Navegação principal\">\n        <a href=\"" + H(prefix) + "\">Barbearias<\/a>\n        <a href=\"" + H(prefix) + "cidades\/\">Cidades<\/a>\n        <a href=\"" + H(prefix) + "registar.html\">Adicionar barbearia<\/a>\n      <\/nav>\n    <\/div>\n    <div class=\"oc-desktop-nav__actions\">\n      <a href=\"" + H(prefix) + "registar.html\" class=\"oc-btn oc-btn--ghost\" style=\"height:38px;padding:0 16px;font-size:13px\">Reclamar esta barbearia<\/a>\n      <a href=\"" + H(prefix) + "registar.html\" class=\"oc-btn oc-btn--primary\" style=\"height:38px;padding:0 16px;font-size:13px\">Atualizar perfil " + iArrow + "<\/a>\n    <\/div>\n  <\/header>\n\n  <div class=\"oc-page\">\n    <nav class=\"oc-crumb-wrap oc-section\" style=\"padding:14px 20px 0\" aria-label=\"breadcrumb\">\n      <div class=\"oc-crumb\">" + crumbItems + "<\/div>\n    <\/nav>\n\n    <main>\n      <article itemscope itemtype=\"https://schema.org/HairSalon\">\n" +
     heroSection + "\n" +
     '        <div class="oc-section oc-mobile-only" style="padding:0 20px 28px"><div class="oc-photo" style="height:200px"><div class="oc-photo__label">FACHADA · OPCIONAL<\/div><div class="oc-photo__add">' + iSpark + " Adicionar fotografia<\/div><\/div><\/div>\n" +
     '        <div class="oc-pole-wrap oc-section" style="padding:0 20px 28px"><div class="oc-pole"><\/div><\/div>\n' +
@@ -1397,7 +1422,7 @@ function renderProfilePage(barber, citiesMap) {
     infoRow + "\n" +
     (!isMinimal ? ownerSection(false) + "\n" : "") +
     relatedSection + "\n" +
-    storeSection(prefix) + "\n" +
+    storeSection(prefix, barber.slug) + "\n" +
     "      <\/article>\n    <\/main>\n\n" +
     footerSection + "\n" +
     "  <\/div>\n\n" +
@@ -1765,7 +1790,7 @@ function buildHomepageItemListJsonLd(barbers) {
   return '<script type="application/ld+json">' + JSON.stringify(schema) + "<\/script>";
 }
 
-function patchIndexHtml(staticListHtml, headJsonLd) {
+function patchIndexHtml(staticListHtml, headJsonLd, totals) {
   const indexPath = path.join(ROOT, "index.html");
   let html = fs.readFileSync(indexPath, "utf8");
 
@@ -1783,6 +1808,12 @@ function patchIndexHtml(staticListHtml, headJsonLd) {
     "<!-- STATIC-LIST-START -->\n" + staticListHtml + "\n  <!-- STATIC-LIST-END -->");
   html = html.replace(jsonLdRe,
     "<!-- JSON-LD-BARBEARIAS-START -->\n  " + headJsonLd + "\n  <!-- JSON-LD-BARBEARIAS-END -->");
+
+  // Mantém os totais do HTML estático (SSR) alinhados com os dados reais.
+  html = html.replace(/(<(?:span|strong)[^>]*data-barbearias-total[^>]*>)[^<]*(<\/(?:span|strong)>)/g,
+    "$1" + totals.barbers + "$2");
+  html = html.replace(/(<(?:span|strong)[^>]*data-cidades-total[^>]*>)[^<]*(<\/(?:span|strong)>)/g,
+    "$1" + totals.cities + "$2");
 
   fs.writeFileSync(indexPath, html, "utf8");
 }
@@ -1811,7 +1842,7 @@ function main() {
     { loc: SITE_URL + "cidades/", lastmod: data.siteLastmod },
     { loc: SITE_URL + "faq.html", lastmod: data.siteLastmod },
     { loc: SITE_URL + "registar.html", lastmod: data.siteLastmod },
-    { loc: SITE_URL + "anunciar.html", lastmod: data.siteLastmod },
+    { loc: SITE_URL + "sobre/", lastmod: data.siteLastmod },
     { loc: SITE_URL + "privacidade.html", lastmod: data.siteLastmod }
   ]));
 
@@ -1835,7 +1866,11 @@ function main() {
 
   patchIndexHtml(
     buildHomepageStaticList(data.barbers),
-    buildHomepageItemListJsonLd(data.barbers)
+    buildHomepageItemListJsonLd(data.barbers),
+    {
+      barbers: data.barbers.length,
+      cities: data.cities.length
+    }
   );
 
   console.log(JSON.stringify({

@@ -33,6 +33,7 @@
 <script defer src="Barbeiros/barbearias-utils.js"></script>
 <script defer src="Barbeiros/barbearias.limpo.js"></script>
 <script defer src="script.js"></script>
+<script defer src="oc-analytics.js"></script>
   <style>
     /* ─── OC Design Tokens ──────────────────────────────────────── */
     :root {
@@ -1907,12 +1908,7 @@
           "@id": "https://ondecortar.pt/#website",
           "url": "https://ondecortar.pt/",
           "name": "OndeCortar.pt",
-          "description": "Encontra barbearias em Portugal por cidade, zona ou nome, com mapa e contactos.",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://ondecortar.pt/#explorar",
-            "query-input": "required name=search_term_string"
-          }
+          "description": "Encontra barbearias em Portugal por cidade, zona ou nome, com mapa e contactos."
         },
         {
           "@type": "Organization",
@@ -1941,7 +1937,7 @@
       <div class="nav-links" id="siteNavLinks">
         <a class="nav-link-active" href="#mapa">Barbearias</a>
         <a href="#cidades">Cidades</a>
-        <a href="revista/">Magazine</a>
+        <a href="revista/">Revista</a>
         <a href="loja/">Loja</a>
         <a class="nav-mobile-link nav-menu-cta" href="registar.html">+ Adicionar barbearia</a>
         <a class="nav-mobile-link nav-menu-login" href="registar.html">Entrar</a>
@@ -1977,7 +1973,7 @@
           <p class="oc-eyebrow dir-eyebrow">BARBEARIAS EM PORTUGAL</p>
           <h1 class="dir-headline">Encontre uma barbearia <em>perto de si</em></h1>
           <p class="dir-subline">
-            <span data-barbearias-total>339</span>&thinsp;barbearias<span class="dir-sep" aria-hidden="true">·</span>67 cidades<span class="dir-sep" aria-hidden="true">·</span>Gratuito
+            <span data-barbearias-total>386</span>&thinsp;barbearias<span class="dir-sep" aria-hidden="true">·</span><span data-cidades-total>140</span> cidades<span class="dir-sep" aria-hidden="true">·</span>Gratuito
           </p>
 
           <!-- Search field -->
@@ -2004,8 +2000,8 @@
 
           <!-- Trust indicators -->
           <div class="dir-trust-strip" aria-label="Estatísticas do diretório">
-            <span class="trust-item"><strong data-barbearias-total>339</strong> barbearias</span>
-            <span class="trust-item"><strong>67</strong> cidades</span>
+            <span class="trust-item"><strong data-barbearias-total>386</strong> barbearias</span>
+            <span class="trust-item"><strong data-cidades-total>140</strong> cidades</span>
             <span class="trust-item">100% gratuito</span>
             <span class="trust-item">Atualizado regularmente</span>
           </div>
@@ -2025,7 +2021,7 @@
 
           <!-- Results status -->
           <div class="results-status-row">
-            <span id="searchCount" aria-live="polite">A mostrar 339 barbearias</span>
+            <span id="searchCount" aria-live="polite">A mostrar <span data-barbearias-total>386</span> barbearias</span>
             <p id="resultsMessage" role="status" aria-live="polite"></p>
           </div>
 
@@ -2036,6 +2032,15 @@
           <!-- Empty state -->
           <div class="empty-state" id="emptyState" hidden>
             <p>Não encontrámos resultados para esta pesquisa.<br>Experimente outra cidade, zona ou nome.</p>
+            <div class="chips-row" aria-label="Cidades com mais barbearias">
+              <button class="city-chip" type="button" data-city-search="Lisboa">Lisboa</button>
+              <button class="city-chip" type="button" data-city-search="Porto">Porto</button>
+              <button class="city-chip" type="button" data-city-search="Braga">Braga</button>
+              <button class="city-chip" type="button" data-city-search="Coimbra">Coimbra</button>
+              <button class="city-chip" type="button" data-city-search="Setúbal">Setúbal</button>
+              <button class="city-chip" type="button" data-city-search="Faro">Faro</button>
+            </div>
+            <p class="empty-state-note">Ainda sem barbearia perto? <a href="revista/melhores-maquinas-para-cortar-cabelo-em-casa/">Vê o guia para manter o corte em casa</a>.</p>
           </div>
 
           <!-- Results list -->
@@ -4369,7 +4374,7 @@
       <div class="hero-map-shell">
         <div id="map" class="hero-map" aria-label="Mapa de barbearias em Portugal"></div>
         <div class="hero-map-count">
-          <span data-barbearias-total>339</span>&nbsp;barbearias no mapa
+          <span data-barbearias-total>386</span>&nbsp;barbearias no mapa
         </div>
       </div>
 
@@ -4388,11 +4393,11 @@
       <div class="container">
         <div class="stat-strip-inner">
           <div class="stat-item">
-            <strong data-barbearias-total>339</strong>
+            <strong data-barbearias-total>386</strong>
             <span>Barbearias listadas</span>
           </div>
           <div class="stat-item">
-            <strong>67</strong>
+            <strong data-cidades-total>140</strong>
             <span>Cidades cobertas</span>
           </div>
           <div class="stat-item">
@@ -4403,6 +4408,21 @@
             <strong>Diário</strong>
             <span>Atualizado regularmente</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Entre visitas (ponte contextual para Revista/Loja) ────── -->
+    <section class="oc-home-commerce" id="oc-home-commerce" aria-label="Manter o corte entre visitas">
+      <div class="container oc-home-commerce-inner">
+        <div class="oc-home-commerce-copy">
+          <p class="oc-eyebrow">ENTRE VISITAS AO BARBEIRO</p>
+          <h2>Manter o corte e a barba em casa</h2>
+          <p>Guias práticos e uma seleção curta de máquinas e kits para os retoques entre idas à barbearia.</p>
+        </div>
+        <div class="oc-home-commerce-actions">
+          <a class="btn btn-primary" href="revista/melhores-maquinas-para-cortar-cabelo-em-casa/">Guia: cortar cabelo em casa</a>
+          <a class="btn btn-secondary" href="loja/para-casa/">Ver seleção para casa</a>
         </div>
       </div>
     </section>
@@ -4588,7 +4608,7 @@
             <div><a class="btn btn-secondary" href="loja/">Ver produtos</a></div>
           </div>
           <div class="store-card">
-            <p class="oc-eyebrow">MAGAZINE</p>
+            <p class="oc-eyebrow">REVISTA</p>
             <h3>Guias práticos para decidir com segurança</h3>
             <p>Guias de compra, comparações e conselhos editoriais com ligação direta ao produto certo.</p>
             <div><a class="btn btn-primary" href="revista/">Ler guias</a></div>
@@ -4616,7 +4636,8 @@
       <div class="footer-links-col">
         <strong>OndeCortar</strong>
         <a href="loja/">Loja</a>
-        <a href="revista/">Magazine</a>
+        <a href="revista/">Revista</a>
+        <a href="sobre/">Sobre</a>
         <a href="faq.html">FAQ</a>
       </div>
       <div class="footer-links-col">
@@ -5090,7 +5111,8 @@
       }
 
       function getDefaultMapFitOptions() {
-        if (!heroMapShell || !heroSearchCard || window.innerWidth <= 760) {
+        // 860px = breakpoint em que .directory-tool passa a coluna (mapa deixa de ter overlay)
+        if (!heroMapShell || !heroSearchCard || window.innerWidth <= 860) {
           return {
             paddingTopLeft: [24, 24],
             paddingBottomRight: [24, 24],
@@ -5135,7 +5157,7 @@
 
         heroMapShell.style.minHeight = "";
 
-        if (window.innerWidth <= 760 || !heroResults || heroResults.hidden || !heroSearchCard) {
+        if (window.innerWidth <= 860 || !heroResults || heroResults.hidden || !heroSearchCard) {
           return;
         }
 
@@ -5164,6 +5186,16 @@
 
         const shellRect = heroMapShell.getBoundingClientRect();
         const cardRect = heroSearchCard.getBoundingClientRect();
+
+        // Layout empilhado (mobile/tablet ≤860px): o cartão de pesquisa está ACIMA do mapa,
+        // não sobreposto. Sem este guard, o padding calculado excede a largura do mapa e o
+        // fitBounds cola o zoom ao maxZoom, deixando os marcadores fora do ecrã.
+        if (window.innerWidth <= 860 || cardRect.bottom <= shellRect.top + 1) {
+          return {
+            paddingTopLeft: [24, 24],
+            paddingBottomRight: [24, 48]
+          };
+        }
 
         // Two-column layout: search card is left of map shell, no overlay → minimal padding
         if (cardRect.right <= shellRect.left + 10) {
