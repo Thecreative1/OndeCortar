@@ -1076,6 +1076,42 @@ body[data-page="store"] .store-start-actions .btn {
   gap: 14px;
 }
 
+/* Sumário numerado nas páginas de tema da revista */
+.hub-editorial-grid .magazine-story-list {
+  counter-reset: sumario;
+}
+
+.hub-editorial-grid .magazine-story-item {
+  counter-increment: sumario;
+  position: relative;
+  padding-left: 48px;
+}
+
+.hub-editorial-grid .magazine-story-item::before {
+  content: counter(sumario, decimal-leading-zero);
+  position: absolute;
+  left: 2px;
+  top: 20px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--gold);
+}
+
+.hub-editorial-grid .magazine-story-item:first-child::before {
+  top: 4px;
+}
+
+/* Deck do guia principal com voz de revista */
+.magazine-feature-copy p.magazine-feature-standfirst {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+  line-height: 1.5;
+  color: var(--ink-strong);
+}
+
 .magazine-story-link {
   font-size: 0.9rem;
   font-weight: 700;

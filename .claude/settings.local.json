@@ -149,7 +149,13 @@
       "PowerShell(git -c core.quotepath=false status --short)",
       "PowerShell('---')",
       "PowerShell(git -c core.quotepath=false show 0e9ca06d --stat --format='%h %ad %s' --date=format:'%Y-%m-%d %H:%M')",
-      "PowerShell(git -c core.quotepath=false show 0e9ca06d -- revista/trimmer-vs-shaver-diferencas-reais/index.html)"
+      "PowerShell(git -c core.quotepath=false show 0e9ca06d -- revista/trimmer-vs-shaver-diferencas-reais/index.html)",
+      "Skill(impeccable)",
+      "Skill(impeccable:*)",
+      "Bash(node \"C:\\\\Users\\\\Phoenix\\\\.claude\\\\skills\\\\impeccable\\\\scripts\\\\load-context.mjs\")",
+      "PowerShell($html = Get-Content 'revista/cuidados-com-a-barba/index.html' -Raw; $start = $html.IndexOf\\('id=\"artigos-cluster\"'\\); $end = $html.IndexOf\\('<section', $start + 100\\); $html.Substring\\($start - 400, $end - $start + 400\\))",
+      "PowerShell(node \"C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-OndeCortar\\\\52c38669-aa69-49a0-b810-cc83867898a6\\\\scratchpad\\\\map-categorias.js\")",
+      "PowerShell(node \"C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-OndeCortar\\\\52c38669-aa69-49a0-b810-cc83867898a6\\\\scratchpad\\\\enrich-artigos-cluster.js\")"
     ]
   }
 }
