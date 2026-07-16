@@ -149,6 +149,8 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
 | `audit-barber-locations.js` | Auditoria de qualidade de localização |
 | `audit-site-links.js` | Verifica links internos e perfis gerados |
 | `smoke-missing-barbearias.js` | Smoke test: confirma que todos os slugs têm página gerada |
+| `apply-revista-seo.js` | Idempotente — metadados SEO da revista (twitter:card, og:image por artigo, image no JSON-LD, `<time>`) |
+| `apply-revista-internal-links.js` | Idempotente — ponte para o directório nos artigos + completa grelhas de relacionados até 3 |
 
 ## SEO e schema markup
 
@@ -219,5 +221,5 @@ Para alterações visuais/homepage:
 ## Secções que NÃO são geridas pelo build principal
 
 - `loja/` — loja de produtos. **⚠️ NÃO correr `scripts/sync-commerce-static.js`**: várias páginas (`loja/index.html`, `loja/kits-de-barba/`, `revista/index.html` e a maioria dos artigos da revista) foram enriquecidas à mão depois do último sync, e o renderer (`commerce.js` + `commerce-articles.js`) está desatualizado em relação ao HTML publicado — correr o sync apaga esse conteúdo. Para alterações transversais de afiliados/preços usar `scripts/apply-affiliate-improvements.js` (idempotente) ou editar os HTML diretamente.
-- `revista/` — artigos editoriais, HTML manual
+- `revista/` — artigos editoriais, HTML manual. **Ao criar um artigo novo é preciso ligar tudo à mão**: entrada em `sitemap-revista.xml` (o build NÃO gera este sitemap — só o sync proibido o faz), cartão no hub `revista/index.html` (+ ItemList JSON-LD do hub), entrada na página da categoria respetiva (+ contagem "N guias" no painel), e correr `apply-revista-seo.js` + `apply-revista-internal-links.js` no fim. Artigos sobre cortes/barbearias/preços vão para a categoria `estilo-e-tendencias` ("Cultura de barbearia") e os CTAs devem apontar para o directório (mapa/cidades), não para a loja.
 - `index.html` (hero, nav, footer, CSS, secção de destaques) — HTML manual, só os markers são atualizados pelo build

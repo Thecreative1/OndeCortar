@@ -2222,8 +2222,20 @@ body[data-page="article"] .article-header p {
 }
 
 .article-category-bridge h2,
+.article-directory-bridge h2,
 .article-final-cta h2 {
   max-width: 22ch;
+}
+
+.article-directory-cities {
+  margin-top: 12px;
+  font-size: 0.95rem;
+}
+
+.article-directory-cities a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 @media (max-width: 1280px) {

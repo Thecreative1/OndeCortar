@@ -699,6 +699,12 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 .store-card p { font-size: 14px; color: var(--oc-muted); line-height: 1.6; flex: 1; }
 .store-card > div { padding-top: 4px; }
+.store-card-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.store-card-links a {
+  font-size: 14px; color: var(--oc-ink); text-decoration: underline;
+  text-underline-offset: 3px; text-decoration-color: var(--oc-line-strong);
+}
+.store-card-links a:hover { text-decoration-color: var(--oc-ink); }
 
 /* ─── Footer ──────────────────────────────────────────────────── */
 .site-footer {

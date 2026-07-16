@@ -129,7 +129,23 @@
       "Bash(node scripts/apply-site-enhancements.js)",
       "Bash(node scripts/check-amazon-links.js)",
       "Bash(python -m http.server 8123 --bind 127.0.0.1)",
-      "Bash(node --check oc-analytics.js)"
+      "Bash(node --check oc-analytics.js)",
+      "PowerShell(git show 47cd10e1 --name-only --format='' | Where-Object { $_ -notmatch '^\\(barbearias|cidades\\)/' } ; '---'; git show cfe1ad6b --name-only --format='' | Where-Object { $_ -notmatch '^\\(barbearias|cidades\\)/' })",
+      "PowerShell(Get-ChildItem revista -Directory | Select-Object -ExpandProperty Name; '---'; \\(Get-Item revista/index.html\\).Length)",
+      "PowerShell(node \"C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-OndeCortar\\\\52c38669-aa69-49a0-b810-cc83867898a6\\\\scratchpad\\\\audit-revista-seo.js\")",
+      "PowerShell(Get-Item imagens/banner.jpg, imagens/logo-ondecortar-round.png | Select-Object Name, Length; '--- produtos maiores:'; Get-ChildItem imagens/produtos | Sort-Object Length -Descending | Select-Object -First 8 Name, @{n='KB';e={[math]::Round\\($_.Length/1KB\\)}})",
+      "PowerShell(Get-ChildItem imagens/produtos | Sort-Object Length -Descending | Select-Object -First 5 Name, Length; '--- mais pequenos:'; Get-ChildItem imagens/produtos | Sort-Object Length | Select-Object -First 5 Name, Length; '--- total:'; \\(Get-ChildItem imagens/produtos | Measure-Object\\).Count; '--- primeiro byte de um:'; Format-Hex imagens/produtos/philips-bt3238.jpg -Count 32)",
+      "PowerShell(\\(Get-Command magick -ErrorAction SilentlyContinue\\) ; \\(Get-Command cwebp -ErrorAction SilentlyContinue\\); 'checked')",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $src = [System.Drawing.Image]::FromFile\\('E:\\\\Git Projects\\\\GIT_HUB\\\\OndeCortar\\\\imagens\\\\logo-ondecortar-round.png'\\); $size = 192; $bmp = New-Object System.Drawing.Bitmap\\($size, $size\\); $g = [System.Drawing.Graphics]::FromImage\\($bmp\\); $g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic; $g.SmoothingMode = 'HighQuality'; $g.PixelOffsetMode = 'HighQuality'; $g.DrawImage\\($src, 0, 0, $size, $size\\); $g.Dispose\\(\\); $src.Dispose\\(\\); $out = 'E:\\\\Git Projects\\\\GIT_HUB\\\\OndeCortar\\\\imagens\\\\logo-ondecortar-round-new.png'; $bmp.Save\\($out, [System.Drawing.Imaging.ImageFormat]::Png\\); $bmp.Dispose\\(\\); \\(Get-Item $out\\).Length)",
+      "PowerShell(Move-Item -Force 'E:\\\\Git Projects\\\\GIT_HUB\\\\OndeCortar\\\\imagens\\\\logo-ondecortar-round-new.png' 'E:\\\\Git Projects\\\\GIT_HUB\\\\OndeCortar\\\\imagens\\\\logo-ondecortar-round.png')",
+      "PowerShell(node scripts/apply-revista-seo.js)",
+      "PowerShell(\\('lisboa','porto','braga','coimbra','faro','setubal','almada','guimaraes'\\) | ForEach-Object { \"$_ : $\\(Test-Path \\('cidades/'+$_\\)\\)\" })",
+      "PowerShell(node scripts/apply-revista-internal-links.js)",
+      "PowerShell(Get-ChildItem imagens -File | Select-Object Name, @{n='KB';e={[math]::Round\\($_.Length/1KB\\)}} | Format-Table -AutoSize)",
+      "PowerShell($html = Get-Content 'revista/estilo-e-tendencias/index.html' -Raw; $start = $html.IndexOf\\('<main'\\); $html.Substring\\($start, 5500\\))",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\('E:\\\\Git Projects\\\\GIT_HUB\\\\OndeCortar\\\\imagens\\\\banner.jpg'\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
+      "PowerShell($html = Get-Content 'revista/index.html' -Raw; $m = [regex]::Match\\($html, '\"@type\":\"ItemList\"[\\\\s\\\\S]{0,700}'\\); $m.Value)",
+      "PowerShell(node scripts/audit-site-links.js 2>&1)"
     ]
   }
 }
