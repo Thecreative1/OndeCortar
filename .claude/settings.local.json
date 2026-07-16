@@ -145,7 +145,11 @@
       "PowerShell($html = Get-Content 'revista/estilo-e-tendencias/index.html' -Raw; $start = $html.IndexOf\\('<main'\\); $html.Substring\\($start, 5500\\))",
       "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\('E:\\\\Git Projects\\\\GIT_HUB\\\\OndeCortar\\\\imagens\\\\banner.jpg'\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))",
       "PowerShell($html = Get-Content 'revista/index.html' -Raw; $m = [regex]::Match\\($html, '\"@type\":\"ItemList\"[\\\\s\\\\S]{0,700}'\\); $m.Value)",
-      "PowerShell(node scripts/audit-site-links.js 2>&1)"
+      "PowerShell(node scripts/audit-site-links.js 2>&1)",
+      "PowerShell(git -c core.quotepath=false status --short)",
+      "PowerShell('---')",
+      "PowerShell(git -c core.quotepath=false show 0e9ca06d --stat --format='%h %ad %s' --date=format:'%Y-%m-%d %H:%M')",
+      "PowerShell(git -c core.quotepath=false show 0e9ca06d -- revista/trimmer-vs-shaver-diferencas-reais/index.html)"
     ]
   }
 }
