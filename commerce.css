@@ -1084,6 +1084,75 @@ body[data-page="store"] .store-start-actions .btn {
   color: var(--text-main);
 }
 
+/* Cabeçalho de artigo com fotografia editorial */
+.article-header--media {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
+  gap: 34px;
+  align-items: stretch;
+}
+
+.article-hero-media {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(216, 205, 183, 0.9);
+}
+
+.article-hero-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .article-header--media {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .article-hero-media img {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* Ponte para o directório em tinta escura, a ecoar as secções escuras do hub */
+.callout-card.article-directory-bridge {
+  background: linear-gradient(165deg, #26201704, transparent), #241d15;
+  border: 1px solid rgba(31, 25, 19, 0.55);
+  color: #ede5d6;
+}
+
+.article-directory-bridge .eyebrow {
+  color: var(--gold-soft);
+}
+
+.article-directory-bridge h2 {
+  color: #f7f1e6;
+}
+
+.article-directory-bridge p {
+  color: rgba(237, 229, 214, 0.82);
+}
+
+.article-directory-bridge .btn-secondary {
+  background: transparent;
+  color: #f2ebe0;
+  border-color: rgba(242, 235, 224, 0.45);
+}
+
+.article-directory-bridge .btn-secondary:hover {
+  background: rgba(242, 235, 224, 0.12);
+  border-color: rgba(242, 235, 224, 0.7);
+}
+
+.article-directory-cities a {
+  color: #f2ebe0;
+}
+
 .magazine-story-link {
   font-size: 0.9rem;
   font-weight: 700;
