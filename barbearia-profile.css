@@ -117,6 +117,18 @@ button { cursor: pointer; font-family: var(--sans); }
   background: var(--gold-soft);
   box-shadow: 0 6px 18px rgba(184,148,95,.38);
 }
+/* Loja: verde da marca da loja (igual a commerce.css --green-primary) — CTA que leva à loja */
+.oc-btn--loja {
+  background: #425A47;
+  color: #FCF7EC;
+  border-color: #425A47;
+  box-shadow: 0 4px 14px rgba(66,90,71,.30);
+}
+.oc-btn--loja:hover {
+  background: #2F4535;
+  border-color: #2F4535;
+  box-shadow: 0 6px 18px rgba(66,90,71,.38);
+}
 .oc-btn--link {
   background: transparent; height: auto;
   padding: 6px 0; border-radius: 0;
