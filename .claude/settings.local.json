@@ -180,7 +180,9 @@
       "Bash(ls \"C:\\\\Users\\\\Phoenix\\\\.claude\\\\skills\\\\impeccable\\\\scripts\")",
       "Bash(awk '{print $5, $9}')",
       "Bash(IMPECCABLE_CRITIQUE_META='{\"target\":\"loja/index.html\",\"total_score\":28,\"p0_count\":0,\"p1_count\":3}' node \"C:\\\\Users\\\\Phoenix\\\\.claude\\\\skills\\\\impeccable\\\\scripts\\\\critique-storage.mjs\" write loja-index-html \"C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-OndeCortar\\\\b2c47e45-01ba-45af-8d76-b1e15519a498\\\\scratchpad\\\\critique-loja-body.md\")",
-      "Bash(node \"C:\\\\Users\\\\Phoenix\\\\.claude\\\\skills\\\\impeccable\\\\scripts\\\\critique-storage.mjs\" trend loja-index-html 5)"
+      "Bash(node \"C:\\\\Users\\\\Phoenix\\\\.claude\\\\skills\\\\impeccable\\\\scripts\\\\critique-storage.mjs\" trend loja-index-html 5)",
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget"
     ]
   }
 }
