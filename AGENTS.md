@@ -188,6 +188,8 @@ Para alterações visuais/homepage:
 
 ## Secções que NÃO são geridas pelo build principal
 
-- `loja/` — loja de produtos, gerida por `scripts/sync-commerce-static.js`
+- `loja/` — loja de produtos. **⚠️ NÃO correr `scripts/sync-commerce-static.js`** — várias páginas da loja e da revista foram enriquecidas à mão depois do último sync e o renderer está desatualizado; correr o sync apaga esse conteúdo. Editar os HTML diretamente ou usar `scripts/apply-affiliate-improvements.js` (idempotente).
+  - No bloco `<!-- OC-CATEGORY-ALL-START/END -->` das páginas de categoria, todos os `product-card` têm de ter `<img>` (grelha de 2 colunas estica os cartões da fila; um cartão sem imagem cria vazios enormes). Copiar imagem + `alt` de `produto/{slug}/index.html`.
+  - Identidade visual da loja: verde da marca (`--green-primary: #425a47`) + dourado; hero da loja em verde-floresta escuro (`body[data-page="store"] .loja-hero-card` em `commerce.css`), não voltar a castanho.
 - `revista/` — artigos editoriais, HTML manual
 - `index.html` (hero, nav, footer, CSS, secção de destaques) — HTML manual, só os markers são atualizados pelo build

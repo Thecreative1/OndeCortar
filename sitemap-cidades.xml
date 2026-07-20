@@ -2,7 +2,7 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ondecortar.pt/cidades/lisboa/</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/evora/</loc>
@@ -14,7 +14,15 @@
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/porto/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://ondecortar.pt/cidades/braga/</loc>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://ondecortar.pt/cidades/vila-nova-de-gaia/</loc>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/vila-real-de-santo-antonio/</loc>
@@ -25,8 +33,12 @@
     <lastmod>2026-04-05</lastmod>
   </url>
   <url>
-    <loc>https://ondecortar.pt/cidades/vila-nova-de-gaia/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://ondecortar.pt/cidades/funchal/</loc>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://ondecortar.pt/cidades/guimaraes/</loc>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/vila-real/</loc>
@@ -35,18 +47,6 @@
   <url>
     <loc>https://ondecortar.pt/cidades/viseu/</loc>
     <lastmod>2026-04-18</lastmod>
-  </url>
-  <url>
-    <loc>https://ondecortar.pt/cidades/braga/</loc>
-    <lastmod>2026-07-06</lastmod>
-  </url>
-  <url>
-    <loc>https://ondecortar.pt/cidades/funchal/</loc>
-    <lastmod>2026-04-05</lastmod>
-  </url>
-  <url>
-    <loc>https://ondecortar.pt/cidades/guimaraes/</loc>
-    <lastmod>2026-04-05</lastmod>
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/moncao/</loc>
@@ -59,6 +59,10 @@
   <url>
     <loc>https://ondecortar.pt/cidades/ponta-delgada/</loc>
     <lastmod>2026-04-05</lastmod>
+  </url>
+  <url>
+    <loc>https://ondecortar.pt/cidades/setubal/</loc>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/tavira/</loc>
@@ -75,10 +79,6 @@
   <url>
     <loc>https://ondecortar.pt/cidades/serta/</loc>
     <lastmod>2026-04-19</lastmod>
-  </url>
-  <url>
-    <loc>https://ondecortar.pt/cidades/setubal/</loc>
-    <lastmod>2026-04-05</lastmod>
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/vila-nova-de-famalicao/</loc>
@@ -101,12 +101,20 @@
     <lastmod>2026-06-09</lastmod>
   </url>
   <url>
+    <loc>https://ondecortar.pt/cidades/amadora/</loc>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
     <loc>https://ondecortar.pt/cidades/aveiro/</loc>
     <lastmod>2026-04-21</lastmod>
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/beja/</loc>
     <lastmod>2026-04-18</lastmod>
+  </url>
+  <url>
+    <loc>https://ondecortar.pt/cidades/braganca/</loc>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/cartaxo/</loc>
@@ -141,16 +149,12 @@
     <lastmod>2026-06-25</lastmod>
   </url>
   <url>
-    <loc>https://ondecortar.pt/cidades/amadora/</loc>
-    <lastmod>2026-04-21</lastmod>
+    <loc>https://ondecortar.pt/cidades/barreiro/</loc>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/benavente/</loc>
     <lastmod>2026-06-09</lastmod>
-  </url>
-  <url>
-    <loc>https://ondecortar.pt/cidades/braganca/</loc>
-    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/caminha/</loc>
@@ -159,6 +163,10 @@
   <url>
     <loc>https://ondecortar.pt/cidades/carregado/</loc>
     <lastmod>2026-06-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ondecortar.pt/cidades/gondomar/</loc>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/loures/</loc>
@@ -171,6 +179,10 @@
   <url>
     <loc>https://ondecortar.pt/cidades/montijo/</loc>
     <lastmod>2026-04-05</lastmod>
+  </url>
+  <url>
+    <loc>https://ondecortar.pt/cidades/odivelas/</loc>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/ourique/</loc>
@@ -229,10 +241,6 @@
     <lastmod>2026-04-05</lastmod>
   </url>
   <url>
-    <loc>https://ondecortar.pt/cidades/barreiro/</loc>
-    <lastmod>2026-07-06</lastmod>
-  </url>
-  <url>
     <loc>https://ondecortar.pt/cidades/belas/</loc>
     <lastmod>2026-06-25</lastmod>
   </url>
@@ -285,12 +293,12 @@
     <lastmod>2026-04-05</lastmod>
   </url>
   <url>
-    <loc>https://ondecortar.pt/cidades/odivelas/</loc>
-    <lastmod>2026-07-06</lastmod>
-  </url>
-  <url>
     <loc>https://ondecortar.pt/cidades/proenca-a-nova/</loc>
     <lastmod>2026-04-19</lastmod>
+  </url>
+  <url>
+    <loc>https://ondecortar.pt/cidades/rio-tinto/</loc>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/samora-correia/</loc>
@@ -311,6 +319,10 @@
   <url>
     <loc>https://ondecortar.pt/cidades/vendas-novas/</loc>
     <lastmod>2026-04-05</lastmod>
+  </url>
+  <url>
+    <loc>https://ondecortar.pt/cidades/agualva-cacem/</loc>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/agueda/</loc>
@@ -399,10 +411,6 @@
   <url>
     <loc>https://ondecortar.pt/cidades/figueira-de-castelo-rodrigo/</loc>
     <lastmod>2026-04-18</lastmod>
-  </url>
-  <url>
-    <loc>https://ondecortar.pt/cidades/gondomar/</loc>
-    <lastmod>2026-04-21</lastmod>
   </url>
   <url>
     <loc>https://ondecortar.pt/cidades/grandola/</loc>

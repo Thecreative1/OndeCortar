@@ -14894,6 +14894,606 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/lvp/don-juan-barbearia-figueira-da-foz-7xv0yX"
     ]
+  },
+  {
+    "nome": "Barbearia do Nuno",
+    "slug": "barbearia-do-nuno",
+    "distrito": "Porto",
+    "concelho": "Gondomar",
+    "freguesia": null,
+    "city": "Rio Tinto",
+    "zone": null,
+    "morada": "Largo Venda Nova 23, 4435-468 Rio Tinto",
+    "codigo_postal": "4435-468",
+    "telefone": "+351 960 370 630",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-do-nuno-largo-venda-nova-rio-tinto-VqWxl2",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-20h, Sáb 8h30-19h30",
+    "observacoes": null,
+    "coords": [
+      41.1745,
+      -8.5459
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-do-nuno-largo-venda-nova-rio-tinto-VqWxl2"
+    ]
+  },
+  {
+    "nome": "Quaresma Barber",
+    "slug": "quaresma-barber",
+    "distrito": "Porto",
+    "concelho": "Gondomar",
+    "freguesia": null,
+    "city": "Rio Tinto",
+    "zone": null,
+    "morada": "Rua da Restauração 163, 4435-056 Rio Tinto",
+    "codigo_postal": "4435-056",
+    "telefone": "+351 918 255 383",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/quaresma-barber-rua-da-restauracao-rio-tinto-LkByWJ",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Ter-Sáb 9h-13h",
+    "observacoes": null,
+    "coords": [
+      41.1946,
+      -8.5755
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/quaresma-barber-rua-da-restauracao-rio-tinto-LkByWJ"
+    ]
+  },
+  {
+    "nome": "Barbearia Miro Queiroz",
+    "slug": "barbearia-miro-queiroz",
+    "distrito": "Porto",
+    "concelho": "Gondomar",
+    "freguesia": null,
+    "city": "Gondomar",
+    "zone": null,
+    "morada": "Rua D. João de França 1051, 4420-110 Gondomar",
+    "codigo_postal": "4420-110",
+    "telefone": "+351 933 556 988",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-miro-queiroz-rua-dom-joao-de-franca-gondomar-r6zw95",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Qui-Sáb 8h-13h",
+    "observacoes": null,
+    "coords": [
+      41.136,
+      -8.5299
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-miro-queiroz-rua-dom-joao-de-franca-gondomar-r6zw95"
+    ]
+  },
+  {
+    "nome": "THE BARBER ART",
+    "slug": "the-barber-art",
+    "distrito": "Porto",
+    "concelho": "Gondomar",
+    "freguesia": null,
+    "city": "Gondomar",
+    "zone": null,
+    "morada": "Avenida 25 de Abril 78, 4420-355 Gondomar",
+    "codigo_postal": "4420-355",
+    "telefone": "+351 913 731 137",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/the-barber-art-avenida-25-de-abril-gondomar-85r4kL",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Ter-Sex 9h-19h, Sáb 8h-16h",
+    "observacoes": null,
+    "coords": [
+      41.1366,
+      -8.5334
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/the-barber-art-avenida-25-de-abril-gondomar-85r4kL"
+    ]
+  },
+  {
+    "nome": "Barbearia Invicta",
+    "slug": "barbearia-invicta",
+    "distrito": "Porto",
+    "concelho": "Porto",
+    "freguesia": null,
+    "city": "Porto",
+    "zone": null,
+    "morada": "Praça de Carlos Alberto 123, Sala 11, 4050-190 Porto",
+    "codigo_postal": "4050-190",
+    "telefone": null,
+    "email": null,
+    "website": "https://www.fresha.com/a/barbearia-invicta-porto-praca-de-carlos-alberto-123-xwfvu71b",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h, Sáb 8h30-13h",
+    "observacoes": null,
+    "coords": [
+      41.1476,
+      -8.6159
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/a/barbearia-invicta-porto-praca-de-carlos-alberto-123-xwfvu71b"
+    ]
+  },
+  {
+    "nome": "Barbearia Tinoco 1929",
+    "slug": "barbearia-tinoco-1929",
+    "distrito": "Porto",
+    "concelho": "Porto",
+    "freguesia": null,
+    "city": "Porto",
+    "zone": null,
+    "morada": "Rua de Sá da Bandeira 13, 4000-433 Porto",
+    "codigo_postal": "4000-433",
+    "telefone": null,
+    "email": null,
+    "website": "https://www.fresha.com/a/barbearia-tinoco-1929-porto-rua-de-sa-da-bandeira-13-l1xqr1vy",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 10h-19h",
+    "observacoes": null,
+    "coords": [
+      41.1463,
+      -8.6103
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/a/barbearia-tinoco-1929-porto-rua-de-sa-da-bandeira-13-l1xqr1vy"
+    ]
+  },
+  {
+    "nome": "Porto Barber",
+    "slug": "porto-barber",
+    "distrito": "Porto",
+    "concelho": "Porto",
+    "freguesia": null,
+    "city": "Porto",
+    "zone": null,
+    "morada": "Rua da Natária 21, 4250-326 Porto",
+    "codigo_postal": "4250-326",
+    "telefone": null,
+    "email": null,
+    "website": "https://www.fresha.com/a/porto-barber-porto-rua-da-nataria-21-zyd7kyuw",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 10h-19h",
+    "observacoes": null,
+    "coords": [
+      41.1672,
+      -8.6249
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/a/porto-barber-porto-rua-da-nataria-21-zyd7kyuw"
+    ]
+  },
+  {
+    "nome": "Tagus Barber Shop Amadora",
+    "slug": "tagus-barber-shop-amadora",
+    "distrito": "Lisboa",
+    "concelho": "Amadora",
+    "freguesia": null,
+    "city": "Amadora",
+    "zone": null,
+    "morada": "Rua Maria Alda Barbosa Nogueira 4B, 2700-709 Amadora",
+    "codigo_postal": "2700-709",
+    "telefone": "+351 938 396 961",
+    "email": null,
+    "website": "http://www.tagusbarbershop.pt/",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h, Sáb 9h-13h",
+    "observacoes": null,
+    "coords": [
+      38.7562,
+      -9.2232
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/tagus-barber-shop-amadora-rua-maria-alda-barbosa-nogueira-amadora-85rjJ5"
+    ]
+  },
+  {
+    "nome": "Xano Costa Premium Barbershop",
+    "slug": "xano-costa-premium-barbershop",
+    "distrito": "Lisboa",
+    "concelho": "Odivelas",
+    "freguesia": null,
+    "city": "Odivelas",
+    "zone": null,
+    "morada": "Rua Pulido Valente 16C, Loja 4, 2675-670 Odivelas",
+    "codigo_postal": "2675-670",
+    "telefone": "+351 916 765 067",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/xano-costa-premium-barbershop-rua-pulido-valente-odivelas-oo5xyW",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-20h, Sáb 8h-16h",
+    "observacoes": null,
+    "coords": [
+      38.7909,
+      -9.1906
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/xano-costa-premium-barbershop-rua-pulido-valente-odivelas-oo5xyW"
+    ]
+  },
+  {
+    "nome": "Barbearia El Hombre",
+    "slug": "barbearia-el-hombre",
+    "distrito": "Setúbal",
+    "concelho": "Barreiro",
+    "freguesia": null,
+    "city": "Barreiro",
+    "zone": null,
+    "morada": "Rua Nuno Tristão 10A, 2830-095 Barreiro",
+    "codigo_postal": "2830-095",
+    "telefone": "+351 912 093 579",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-el-hombre-rua-nuno-tristao-barreiro-2MRW1X",
+    "instagram": null,
+    "facebook": "https://www.facebook.com/profile.php?id=100010605810614",
+    "google_maps": null,
+    "horario": "Ter-Sáb 9h-19h",
+    "observacoes": null,
+    "coords": [
+      38.6553,
+      -9.0608
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-el-hombre-rua-nuno-tristao-barreiro-2MRW1X"
+    ]
+  },
+  {
+    "nome": "Fagundes Barbearia - Praça do Bocage",
+    "slug": "fagundes-barbearia-praca-do-bocage",
+    "distrito": "Setúbal",
+    "concelho": "Setúbal",
+    "freguesia": null,
+    "city": "Setúbal",
+    "zone": null,
+    "morada": "Praça de Bocage 119, 2900-213 Setúbal",
+    "codigo_postal": "2900-213",
+    "telefone": "+351 935 732 429",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/fagundes-barbearia-fbsetubal-praca-de-bocage-setubal-RrNJAY",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h, Sáb 9h-17h",
+    "observacoes": null,
+    "coords": [
+      38.5244,
+      -8.8923
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/fagundes-barbearia-fbsetubal-praca-de-bocage-setubal-RrNJAY"
+    ]
+  },
+  {
+    "nome": "MIL128 Barbearia",
+    "slug": "mil128-barbearia",
+    "distrito": "Braga",
+    "concelho": "Guimarães",
+    "freguesia": null,
+    "city": "Guimarães",
+    "zone": null,
+    "morada": "Rua da Liberdade 77A, 4835-065 Guimarães",
+    "codigo_postal": "4835-065",
+    "telefone": "+351 926 840 244",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/mil128-barbearia-rua-da-liberdade-guimaraes-jwoWol",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.4383,
+      -8.3012
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/mil128-barbearia-rua-da-liberdade-guimaraes-jwoWol"
+    ]
+  },
+  {
+    "nome": "Barbearia Braguista",
+    "slug": "barbearia-braguista",
+    "distrito": "Braga",
+    "concelho": "Braga",
+    "freguesia": null,
+    "city": "Braga",
+    "zone": null,
+    "morada": "Rua dos Barbosas 133, 4715-213 Braga",
+    "codigo_postal": "4715-213",
+    "telefone": "+351 936 204 765",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-braguista-rua-dos-barbosas-braga-85rZgj",
+    "instagram": "https://www.instagram.com/barbeariabraguista",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.5443,
+      -8.4147
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-braguista-rua-dos-barbosas-braga-85rZgj"
+    ]
+  },
+  {
+    "nome": "Barbearia 1001 Cortes",
+    "slug": "barbearia-1001-cortes",
+    "distrito": "Braga",
+    "concelho": "Braga",
+    "freguesia": null,
+    "city": "Braga",
+    "zone": null,
+    "morada": "Rua Conselheiro Lobato 473, 4705-089 Braga",
+    "codigo_postal": "4705-089",
+    "telefone": "+351 960 311 840",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-1001-cortes-rua-conselheiro-lobato-braga-ylD3GD",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-20h",
+    "observacoes": null,
+    "coords": [
+      41.5425,
+      -8.4233
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-1001-cortes-rua-conselheiro-lobato-braga-ylD3GD"
+    ]
+  },
+  {
+    "nome": "Barbearia Lisboeta - Lumiar",
+    "slug": "barbearia-lisboeta-lumiar",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": null,
+    "city": "Lisboa",
+    "zone": "Lumiar",
+    "morada": "Alameda das Linhas de Torres 251, 1750-145 Lisboa",
+    "codigo_postal": "1750-145",
+    "telefone": "+351 217 582 580",
+    "email": null,
+    "website": "https://linktr.ee/barbearialisboeta",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 8h-19h30, Sáb 8h-18h",
+    "observacoes": null,
+    "coords": [
+      38.7723,
+      -9.1612
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-lisboeta-lumiar-alameda-das-linhas-de-torres-lisboa-LkBel9"
+    ]
+  },
+  {
+    "nome": "Barbearia do Colombiano",
+    "slug": "barbearia-do-colombiano",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": null,
+    "city": "Lisboa",
+    "zone": null,
+    "morada": "Rua Prof. Francisco Gentil 24B, 1600-625 Lisboa",
+    "codigo_postal": "1600-625",
+    "telefone": "+351 924 013 128",
+    "email": null,
+    "website": "https://www.barbeariadocolombiano.pt/",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 10h-20h, Dom 10h-19h",
+    "observacoes": null,
+    "coords": [
+      38.7607,
+      -9.1677
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-do-colombiano-barbershop-lisboa-lisbon-rua-abel-salazar-lisboa-znXP6e"
+    ]
+  },
+  {
+    "nome": "Barbearia Vieira",
+    "slug": "barbearia-vieira",
+    "distrito": "Porto",
+    "concelho": "Vila Nova de Gaia",
+    "freguesia": null,
+    "city": "Vila Nova de Gaia",
+    "zone": null,
+    "morada": "Rua Alto das Torres 662, 4430-009 Vila Nova de Gaia",
+    "codigo_postal": "4430-009",
+    "telefone": "+351 918 316 878",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-vieira-rua-alto-das-torres-vila-nova-de-gaia-MV7qKx",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Ter-Sáb 9h30-12h30, 14h30-19h30",
+    "observacoes": null,
+    "coords": [
+      41.0998,
+      -8.6004
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-vieira-rua-alto-das-torres-vila-nova-de-gaia-MV7qKx"
+    ]
+  },
+  {
+    "nome": "Barbearia Mena",
+    "slug": "barbearia-mena",
+    "distrito": "Bragança",
+    "concelho": "Bragança",
+    "freguesia": null,
+    "city": "Bragança",
+    "zone": null,
+    "morada": "Praça Camões 54, 5300-265 Bragança",
+    "codigo_postal": "5300-265",
+    "telefone": "+351 914 917 074",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-mena-praca-camoes-braganca-LkBlXn",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 8h-19h30, Sáb 7h30-13h",
+    "observacoes": null,
+    "coords": [
+      41.8056,
+      -6.7563
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-mena-praca-camoes-braganca-LkBlXn"
+    ]
+  },
+  {
+    "nome": "Barbearia Gilmar Barber Shop",
+    "slug": "barbearia-gilmar-barber-shop",
+    "distrito": "Madeira",
+    "concelho": "Funchal",
+    "freguesia": null,
+    "city": "Funchal",
+    "zone": null,
+    "morada": "Rua do Mercado da Penteada 12, Loja 21, 9020-396 Funchal",
+    "codigo_postal": "9020-396",
+    "telefone": "+351 923 509 021",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-gilmar-barber-shop-funchal-BK8M7Y",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Ter-Sáb 9h-19h, Dom 9h-12h30",
+    "observacoes": null,
+    "coords": [
+      32.6633,
+      -16.9286
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-gilmar-barber-shop-funchal-BK8M7Y"
+    ]
+  },
+  {
+    "nome": "Barbearia Velha Guarda",
+    "slug": "barbearia-velha-guarda",
+    "distrito": "Lisboa",
+    "concelho": "Sintra",
+    "freguesia": null,
+    "city": "Agualva-Cacém",
+    "zone": null,
+    "morada": "Rua da Esperança 15A, 2735-473 Agualva-Cacém",
+    "codigo_postal": "2735-473",
+    "telefone": "+351 962 116 644",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-velha-guarda-rua-da-esperanca-agualva-cacem-D1rb1r",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h, Sáb 9h-17h",
+    "observacoes": null,
+    "coords": [
+      38.7727,
+      -9.3137
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-20",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-velha-guarda-rua-da-esperanca-agualva-cacem-D1rb1r"
+    ]
   }
 ];
 
