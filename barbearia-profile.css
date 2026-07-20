@@ -71,8 +71,8 @@ button { cursor: pointer; font-family: var(--sans); }
 }
 .oc-meta {
   font-family: var(--mono);
-  font-size: 10px; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--subtext);
+  font-size: 11px; letter-spacing: 0.06em;  /* was 10px/0.08em — larger, tighter reads crisper */
+  text-transform: uppercase; color: var(--ink-soft);  /* was --subtext — near-black, not washed out */
   font-weight: 500;                         /* was no weight */
 }
 .oc-mono { font-family: var(--mono); }
