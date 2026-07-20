@@ -3114,6 +3114,27 @@ body[data-page="article"] .article-header p {
   flex: 1;
 }
 
+.loja-feat-avoid {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(166, 119, 45, 0.07);
+  border: 1px solid rgba(176, 139, 83, 0.28);
+}
+
+.loja-feat-avoid strong {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8b6020;
+  margin-bottom: 3px;
+}
+
 .loja-feat-actions {
   display: flex;
   flex-direction: column;
@@ -3195,157 +3216,55 @@ body[data-page="article"] .article-header p {
   padding-top: 4px;
 }
 
-/* ── Quick picks comparison ── */
-.loja-quick-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.loja-quick-card {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 22px 20px;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(176, 139, 83, 0.78);
-  background:
-    radial-gradient(circle at top right, rgba(166, 119, 45, 0.16), transparent 40%),
-    linear-gradient(180deg, rgba(251, 246, 238, 0.99), rgba(239, 229, 211, 0.96));
-  box-shadow: 0 16px 34px rgba(31, 25, 19, 0.07);
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.loja-quick-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(176, 138, 74, 0.88);
-  box-shadow: 0 22px 46px rgba(34, 32, 28, 0.1);
-}
-
-.loja-quick-label {
-  display: inline-flex;
-  align-items: center;
-  min-height: 26px;
-  padding: 3px 10px;
-  border-radius: 999px;
-  background: rgba(166, 119, 45, 0.13);
-  border: 1px solid rgba(176, 139, 83, 0.72);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--gold-main);
-  justify-self: start;
-  align-self: flex-start;
-}
-
-.loja-quick-name {
-  margin: 0;
-  font-size: 1.04rem;
-  font-weight: 700;
-  color: var(--ink-strong);
-  line-height: 1.2;
-}
-
-.loja-quick-why {
-  margin: 0;
-  font-size: 0.91rem;
-  line-height: 1.54;
-  color: var(--text-secondary);
-}
-
-.loja-quick-avoid {
-  margin: 0;
-  font-size: 0.84rem;
-  line-height: 1.48;
-  color: var(--muted-soft);
-  padding: 9px 12px;
-  border-radius: 10px;
-  background: rgba(31, 25, 19, 0.04);
-  border-left: 2px solid rgba(176, 139, 83, 0.5);
-}
-
-.loja-quick-avoid strong {
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  margin-bottom: 3px;
-}
-
-.loja-quick-actions {
-  margin-top: auto;
-  padding-top: 2px;
-}
-
-.loja-quick-actions .btn {
-  width: 100%;
-  min-height: 42px;
-  font-size: 0.92rem;
-}
-
-.loja-quick-actions .btn-primary {
-  background: linear-gradient(135deg, var(--gold-main), #8b6020);
-  border-color: transparent;
-  color: #fff;
-  box-shadow: 0 10px 22px rgba(166, 119, 45, 0.24);
-}
-
-.loja-quick-actions .btn-primary:hover {
-  background: linear-gradient(135deg, #8b6020, var(--gold-main));
-}
-
-/* ── Category grid ── */
+/* ── Category list (compacta) ── */
 .loja-cat-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .loja-cat-card {
-  display: grid;
-  grid-template-rows: auto 1fr;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(176, 139, 83, 0.72);
-  background: linear-gradient(180deg, rgba(250, 244, 233, 0.99), rgba(237, 226, 208, 0.96));
-  box-shadow: 0 14px 32px rgba(31, 25, 19, 0.08);
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.loja-cat-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--gold-main), rgba(166, 119, 45, 0.14));
-  z-index: 1;
+  border: 1px solid rgba(200, 185, 160, 0.5);
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(31, 25, 19, 0.05);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
 .loja-cat-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(176, 138, 74, 0.58);
-  box-shadow: 0 22px 48px rgba(34, 32, 28, 0.12);
+  border-color: rgba(176, 138, 74, 0.55);
+  box-shadow: 0 12px 26px rgba(31, 25, 19, 0.1);
 }
 
-.loja-cat-thumb {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: contain;
-  background: linear-gradient(180deg, #fcf8ef, #e8dcc4);
-  padding: 14px;
-  display: block;
-}
-
-.loja-cat-body {
-  padding: 14px 16px 16px;
+.loja-cat-link {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
   height: 100%;
+  text-decoration: none;
+}
+
+.loja-cat-text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.loja-cat-name {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--ink-strong);
+  line-height: 1.2;
+}
+
+.loja-cat-bestfor {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0;
 }
 
 .loja-cat-count {
@@ -3359,53 +3278,9 @@ body[data-page="article"] .article-header p {
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.02em;
-  color: var(--gold-main);
-  justify-self: start;
-  align-self: flex-start;
-}
-
-.loja-cat-name {
-  margin: 0;
-  font-size: 1.04rem;
-  color: var(--ink-strong);
-  line-height: 1.18;
-}
-
-.loja-cat-desc {
-  margin: 0;
-  font-size: 0.88rem;
-  line-height: 1.52;
-  color: var(--text-secondary);
-}
-
-.loja-cat-bestfor {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--gold-main);
-  margin: 0;
-  padding-top: 6px;
-  border-top: 1px solid rgba(207, 191, 162, 0.62);
-}
-
-.loja-cat-actions {
-  margin-top: auto;
-  padding-top: 6px;
-}
-
-.loja-cat-actions .btn {
-  width: 100%;
-  min-height: 40px;
-  font-size: 0.88rem;
-  background: var(--ink-strong);
-  color: #f8f2e8;
-  border-color: rgba(214, 193, 155, 0.32);
-  box-shadow: 0 10px 22px rgba(34, 32, 28, 0.13);
-}
-
-.loja-cat-actions .btn:hover {
-  background: rgba(31, 25, 19, 0.86);
-  transform: translateY(-1px);
-  box-shadow: 0 14px 28px rgba(34, 32, 28, 0.17);
+  color: #8b6020;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* ── Disclosure ── */
@@ -3451,15 +3326,10 @@ body[data-page="article"] .article-header p {
 }
 
 /* ── Responsive ── */
-@media (max-width: 1280px) {
-  .loja-cat-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
-
 @media (max-width: 1100px) {
   .loja-hero-card { padding: 36px 28px; }
   .loja-feat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .loja-uso-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .loja-quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .loja-cat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .loja-hero-actions { flex-direction: column; align-items: stretch; }
   .loja-hero-actions .btn { width: 100%; }
@@ -3470,8 +3340,8 @@ body[data-page="article"] .article-header p {
   .loja-hero-tagline { font-size: clamp(2.2rem, 10vw, 3rem); }
   .loja-feat-grid,
   .loja-uso-grid,
-  .loja-quick-grid,
   .loja-cat-grid { grid-template-columns: 1fr; }
+  .loja-cat-link { padding: 12px 14px; }
 }
 
 
@@ -3595,7 +3465,7 @@ body[data-page="store"] .loja-hero-sub {
 }
 
 body[data-page="store"] .loja-hero-trust {
-  color: rgba(242, 235, 224, 0.4);
+  color: rgba(242, 235, 224, 0.58);
 }
 
 /* Gold CTA on dark hero */
@@ -3702,7 +3572,7 @@ body[data-page="store"] .loja-uso-title {
 }
 
 body[data-page="store"] .loja-uso-desc {
-  color: rgba(220, 210, 195, 0.62);
+  color: rgba(220, 210, 195, 0.78);
 }
 
 body[data-page="store"] .loja-uso-cta {
@@ -3711,80 +3581,13 @@ body[data-page="store"] .loja-uso-cta {
 }
 
 
-/* ─── STORE HOME: White quick-pick cards ────────────────────────── */
+/* ─── STORE HOME: "Quando não escolher" nos destaques ───────────── */
 
-body[data-page="store"] .loja-quick-card {
-  background: #ffffff;
-  border-color: rgba(200, 185, 160, 0.4);
-  box-shadow: 0 6px 24px rgba(31, 25, 19, 0.08);
+body[data-page="store"] .loja-feat-avoid {
+  background: rgba(66, 90, 71, 0.06);
+  border-color: rgba(66, 90, 71, 0.18);
 }
 
-body[data-page="store"] .loja-quick-card:hover {
-  box-shadow: 0 20px 46px rgba(31, 25, 19, 0.13);
-  border-color: rgba(176, 138, 74, 0.5);
-  transform: translateY(-3px);
-}
-
-/* Green label instead of gold */
-body[data-page="store"] .loja-quick-label {
-  background: rgba(66, 90, 71, 0.1);
-  border-color: rgba(66, 90, 71, 0.28);
+body[data-page="store"] .loja-feat-avoid strong {
   color: var(--green-primary);
-}
-
-body[data-page="store"] .loja-quick-avoid {
-  background: rgba(31, 25, 19, 0.03);
-  border-left-color: rgba(176, 139, 83, 0.38);
-}
-
-/* Green "Ver preço" button */
-body[data-page="store"] .loja-quick-actions .btn-primary {
-  background: linear-gradient(135deg, #425a47, #2f4535);
-  border: none;
-  color: #ffffff;
-  font-weight: 800;
-  font-size: 0.98rem;
-  min-height: 50px;
-  box-shadow: 0 10px 26px rgba(42, 64, 47, 0.26);
-}
-
-body[data-page="store"] .loja-quick-actions .btn-primary:hover {
-  background: linear-gradient(135deg, #4e6b54, #38523e);
-  box-shadow: 0 16px 36px rgba(42, 64, 47, 0.36);
-}
-
-
-/* ─── STORE HOME: White category grid cards ─────────────────────── */
-
-body[data-page="store"] .loja-cat-card {
-  background: #ffffff;
-  border-color: rgba(200, 185, 160, 0.4);
-  box-shadow: 0 6px 24px rgba(31, 25, 19, 0.08);
-}
-
-body[data-page="store"] .loja-cat-card:hover {
-  box-shadow: 0 20px 46px rgba(31, 25, 19, 0.13);
-  border-color: rgba(176, 138, 74, 0.5);
-  transform: translateY(-3px);
-}
-
-/* Clean image background on white card */
-body[data-page="store"] .loja-cat-thumb {
-  background: linear-gradient(180deg, #fdfcf9, #f3ecdf);
-}
-
-/* Green "Ver recomendações" button */
-body[data-page="store"] .loja-cat-actions .btn {
-  background: linear-gradient(135deg, #425a47, #2f4535);
-  border: none;
-  color: #ffffff;
-  font-weight: 700;
-  min-height: 42px;
-  box-shadow: 0 8px 20px rgba(42, 64, 47, 0.24);
-  width: 100%;
-}
-
-body[data-page="store"] .loja-cat-actions .btn:hover {
-  background: linear-gradient(135deg, #4e6b54, #38523e);
-  box-shadow: 0 12px 28px rgba(42, 64, 47, 0.32);
 }

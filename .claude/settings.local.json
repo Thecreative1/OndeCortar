@@ -173,7 +173,14 @@
       "PowerShell($html = Get-Content 'revista/index.html' -Raw; $i = $html.IndexOf\\('rev-feature'\\); $html.Substring\\($i - 200, 1400\\))",
       "PowerShell($raw = Get-Content 'C:\\\\Users\\\\Phoenix\\\\.claude\\\\projects\\\\E--Git-Projects-GIT-HUB-OndeCortar\\\\52c38669-aa69-49a0-b810-cc83867898a6\\\\tool-results\\\\mcp-Claude_Browser-javascript_tool-1784284946672.txt' -Raw; $inner = \\(\\(\\($raw | ConvertFrom-Json\\)[0].text\\) | ConvertFrom-Json\\) | ConvertFrom-Json; \"feat: $\\($inner.featSrc\\) | box: $\\($inner.featBox\\) | partidas: $\\($inner.partidas\\)\"; [IO.File]::WriteAllBytes\\('C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-OndeCortar\\\\52c38669-aa69-49a0-b810-cc83867898a6\\\\scratchpad\\\\feature-final.jpg', [Convert]::FromBase64String\\(\\($inner.dataUrl -replace '^data:image/jpeg;base64,',''\\)\\)\\))",
       "PowerShell(git -c core.quotepath=false show afc4fe17 --stat --format='%h %s' | Select-Object -First 8; '...'; git -c core.quotepath=false show 2db58975 --stat --format='%h %s' | Select-Object -Last 3; git -c core.quotepath=false show afc4fe17 --name-only --format='' | Where-Object { $_ -notmatch '^revista/' -and $_ -notmatch '^imagens/' } ; '--- fora de revista/imagens no 2db58975:'; git -c core.quotepath=false show 2db58975 --name-only --format='' | Where-Object { $_ -notmatch '^revista/' -and $_ -notmatch '^imagens/' })",
-      "PowerShell(node \"C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-OndeCortar\\\\52c38669-aa69-49a0-b810-cc83867898a6\\\\scratchpad\\\\hero-fotos-artigos.js\")"
+      "PowerShell(node \"C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-OndeCortar\\\\52c38669-aa69-49a0-b810-cc83867898a6\\\\scratchpad\\\\hero-fotos-artigos.js\")",
+      "Bash(node \"C:\\\\Users\\\\Phoenix\\\\.claude\\\\skills\\\\impeccable\\\\scripts\\\\critique-storage.mjs\" slug \"loja/index.html\")",
+      "Bash(node \"C:\\\\Users\\\\Phoenix\\\\.claude\\\\skills\\\\impeccable\\\\scripts\\\\detect.mjs\" --json loja/index.html)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(ls \"C:\\\\Users\\\\Phoenix\\\\.claude\\\\skills\\\\impeccable\\\\scripts\")",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(IMPECCABLE_CRITIQUE_META='{\"target\":\"loja/index.html\",\"total_score\":28,\"p0_count\":0,\"p1_count\":3}' node \"C:\\\\Users\\\\Phoenix\\\\.claude\\\\skills\\\\impeccable\\\\scripts\\\\critique-storage.mjs\" write loja-index-html \"C:\\\\Users\\\\Phoenix\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\E--Git-Projects-GIT-HUB-OndeCortar\\\\b2c47e45-01ba-45af-8d76-b1e15519a498\\\\scratchpad\\\\critique-loja-body.md\")",
+      "Bash(node \"C:\\\\Users\\\\Phoenix\\\\.claude\\\\skills\\\\impeccable\\\\scripts\\\\critique-storage.mjs\" trend loja-index-html 5)"
     ]
   }
 }
