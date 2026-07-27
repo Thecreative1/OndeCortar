@@ -14370,6 +14370,22 @@ const barbearias = [
     "fontes": ["https://www.fresha.com/lp/pt/bt/barbearias/pt-lisboa/mem-martins"]
   },
   {
+    "nome": "Carmona Men's Studio",
+    "slug": "carmona-mens-studio",
+    "city": "Sintra",
+    "zone": "Algueirão-Mem Martins",
+    "morada": "Rua dos Cravos 16, 2725-279 Algueirão-Mem Martins",
+    "telefone": "+351 965 244 720",
+    "instagram": "https://www.instagram.com/carmonamenstudio/",
+    "horario": "Seg-Sáb 10h-20h",
+    "coords": [38.788627, -9.346043],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-07-27",
+    "status": "confirmado",
+    "data_confidence": "medium",
+    "fontes": ["https://www.instagram.com/carmonamenstudio/", "https://www.codigo-postal.pt/sintra/rua-dos-cravos-algueirao-mem-martins/"]
+  },
+  {
     "nome": "Barbearia & Tattoo 249",
     "slug": "barbearia-tattoo-249",
     "city": "Sintra",

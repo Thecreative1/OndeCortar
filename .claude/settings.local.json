@@ -187,7 +187,12 @@
       "Bash(node \"C:/Users/Phoenix/AppData/Local/Temp/claude/E--Git-Projects-GIT-HUB-OndeCortar/36c1142a-12ef-42f5-9c01-4bd3688eafc3/scratchpad/fix-catalog-images.js\" --apply)",
       "Bash(node \"C:/Users/Phoenix/AppData/Local/Temp/claude/E--Git-Projects-GIT-HUB-OndeCortar/36c1142a-12ef-42f5-9c01-4bd3688eafc3/scratchpad/add-20-barbearias.js\")",
       "mcp__claude-in-chrome__read_console_messages",
-      "mcp__claude-in-chrome__find"
+      "mcp__claude-in-chrome__find",
+      "WebFetch(domain:www.codigo-postal.pt)",
+      "WebFetch(domain:www.instagram.com)",
+      "Bash(git diff *)",
+      "Bash(git --no-pager diff barbearias/just-men-cabeleireiro-de-homens/index.html)",
+      "Bash(git --no-pager diff .claude/settings.local.json)"
     ]
   }
 }
