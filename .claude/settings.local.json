@@ -192,7 +192,9 @@
       "WebFetch(domain:www.instagram.com)",
       "Bash(git diff *)",
       "Bash(git --no-pager diff barbearias/just-men-cabeleireiro-de-homens/index.html)",
-      "Bash(git --no-pager diff .claude/settings.local.json)"
+      "Bash(git --no-pager diff .claude/settings.local.json)",
+      "Bash(node \"/c/Users/Phoenix/AppData/Local/Temp/claude/E--Git-Projects-GIT-HUB-OndeCortar/bd15b719-68d8-407d-b99c-eb07055d2bf6/scratchpad/repro2.js\")",
+      "Bash(node \"/c/Users/Phoenix/AppData/Local/Temp/claude/E--Git-Projects-GIT-HUB-OndeCortar/bd15b719-68d8-407d-b99c-eb07055d2bf6/scratchpad/verify.js\")"
     ]
   }
 }

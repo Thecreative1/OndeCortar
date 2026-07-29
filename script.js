@@ -67,6 +67,10 @@
     return String(texto || "")
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
+      // Remove e unifica variantes de apostrofo/plica na pesquisa: U+0027 U+0060
+      // U+00B4 (acento agudo, teclado PT) U+02BC U+2018 U+2019 (aspas curvas) U+2032 (plica),
+      // para que os diferentes apostrofos usados nos nomes deem todos match.
+      .replace(/['`\u00b4\u02bc\u2018\u2019\u2032]/g, "")
       .toLowerCase();
   }
 
