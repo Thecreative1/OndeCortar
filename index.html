@@ -5858,7 +5858,7 @@
 
         const rel = barber.primaryLink.external ? ' rel="noopener noreferrer nofollow"' : "";
         const target = barber.primaryLink.external ? ' target="_blank"' : "";
-        return '<a class="' + className + '" href="' + barber.primaryLink.href + '"' + target + rel + '>' + directory.escapeHtml(barber.primaryLink.actionLabel || barber.primaryLink.label) + '</a>';
+        return '<a class="' + className + '" href="' + directory.escapeHtml(barber.primaryLink.href) + '"' + target + rel + '>' + directory.escapeHtml(barber.primaryLink.actionLabel || barber.primaryLink.label) + '</a>';
       }
 
       function renderMarkers(list) {
@@ -5948,7 +5948,7 @@
         if (barber.primaryLink) {
           const rel = barber.primaryLink.external ? ' rel="noopener noreferrer nofollow"' : "";
           const target = barber.primaryLink.external ? ' target="_blank"' : "";
-          actions.push('<a href="' + barber.primaryLink.href + '"' + target + rel + ">" + directory.escapeHtml(barber.primaryLink.actionLabel || barber.primaryLink.label) + "</a>");
+          actions.push('<a href="' + directory.escapeHtml(barber.primaryLink.href) + '"' + target + rel + ">" + directory.escapeHtml(barber.primaryLink.actionLabel || barber.primaryLink.label) + "</a>");
         }
 
         return (

@@ -194,7 +194,12 @@
       "Bash(git --no-pager diff barbearias/just-men-cabeleireiro-de-homens/index.html)",
       "Bash(git --no-pager diff .claude/settings.local.json)",
       "Bash(node \"/c/Users/Phoenix/AppData/Local/Temp/claude/E--Git-Projects-GIT-HUB-OndeCortar/bd15b719-68d8-407d-b99c-eb07055d2bf6/scratchpad/repro2.js\")",
-      "Bash(node \"/c/Users/Phoenix/AppData/Local/Temp/claude/E--Git-Projects-GIT-HUB-OndeCortar/bd15b719-68d8-407d-b99c-eb07055d2bf6/scratchpad/verify.js\")"
+      "Bash(node \"/c/Users/Phoenix/AppData/Local/Temp/claude/E--Git-Projects-GIT-HUB-OndeCortar/bd15b719-68d8-407d-b99c-eb07055d2bf6/scratchpad/verify.js\")",
+      "Bash(git check-ignore *)",
+      "Bash(python -c ' *)",
+      "Bash(curl -sI --max-time 15 \"https://www.tagusbarbershop.pt/\" -o /dev/null -w \"HTTPS: %{http_code}\\\\n\")",
+      "Bash(curl -sI --max-time 15 -L \"https://instagram.com/micaelrua_barbeiro\" -o /dev/null -w \"Instagram HTTPS: %{http_code}\\\\n\")",
+      "Bash(curl -sI --max-time 15 -L \"https://www.tagusbarbershop.pt/\" -o /dev/null -w \"final: %{http_code} → %{url_effective}\\\\n\")"
     ]
   }
 }

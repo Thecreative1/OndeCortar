@@ -1210,7 +1210,7 @@ function renderProfilePage(barber, citiesMap) {
     const disp = H(value.length > 42 ? value.substring(0, 40) + "…" : value);
     const act = actionHref
       ? '<a href="' + H(actionHref) + '" class="oc-contact-row__action"' + (actionHref.startsWith("http") ? ' target="_blank" rel="noopener noreferrer"' : "") + ">" + H(actionLabel) + "<\/a>"
-      : '<button class="oc-contact-row__action" onclick="navigator.clipboard&&navigator.clipboard.writeText(' + JSON.stringify(value) + ')">' + H(actionLabel) + "<\/button>";
+      : '<button class="oc-contact-row__action" onclick="' + H("navigator.clipboard&&navigator.clipboard.writeText(" + JSON.stringify(value) + ")") + '">' + H(actionLabel) + "<\/button>";
     return '<div class="oc-contact-row"><span style="color:var(--subtext)">' + icon + "<\/span><div style=\"min-width:0\"><div class=\"oc-contact-row__label\">" + H(label) + "<\/div><div class=\"oc-contact-row__value\">" + disp + "<\/div><\/div>" + act + "<\/div>";
   }
 
