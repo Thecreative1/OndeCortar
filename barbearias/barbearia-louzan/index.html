@@ -74,7 +74,7 @@
     if(!window.L||!document.getElementById("detailMap"))return;
     var c=[40.110931,-8.2537743];
     var m=L.map("detailMap",{scrollWheelZoom:false}).setView(c,15);
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",{attribution:"&copy; OpenStreetMap &copy; CARTO"}).addTo(m);
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",{attribution:"&copy; Esri &copy; OpenStreetMap",maxZoom:16}).addTo(m);
     var gi=L.divIcon({className:"",html:'<div style="width:32px;height:32px;background:#14110D;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(20,17,13,.3)"><div style="width:8px;height:8px;border-radius:50%;background:#B8945F;transform:rotate(45deg)"></div></div>',iconSize:[32,32],iconAnchor:[16,32],popupAnchor:[0,-36]});
     L.marker(c,{icon:gi}).addTo(m).bindPopup("Barbearia Louzan").openPopup();
   }

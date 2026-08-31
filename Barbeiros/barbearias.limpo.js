@@ -15510,6 +15510,1366 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/lvp/barbearia-velha-guarda-rua-da-esperanca-agualva-cacem-D1rb1r"
     ]
+  },
+  {
+    "nome": "Gentleman Salon",
+    "slug": "gentleman-salon-cabeceiras-de-basto",
+    "distrito": "Braga",
+    "concelho": "Cabeceiras de Basto",
+    "freguesia": null,
+    "city": "Cabeceiras de Basto",
+    "zone": null,
+    "morada": "R. Antunes Basto, 4860-363 Cabeceiras de Basto",
+    "codigo_postal": "4860-363",
+    "telefone": "+351 966 515 224",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/gentleman-salon-rua-antunes-basto-cabeceiras-de-basto-W4WqgL",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Ter-Sex 9h30-19h, Sáb 8h30-13h",
+    "observacoes": null,
+    "coords": [
+      41.5152323,
+      -7.9885612
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/gentleman-salon-rua-antunes-basto-cabeceiras-de-basto-W4WqgL"
+    ]
+  },
+  {
+    "nome": "Barbearia Valdemar",
+    "slug": "barbearia-valdemar-mondim-de-basto",
+    "distrito": "Vila Real",
+    "concelho": "Mondim de Basto",
+    "freguesia": null,
+    "city": "Mondim de Basto",
+    "zone": null,
+    "morada": "Av. da Igreja 15, 4880-231 Mondim de Basto",
+    "codigo_postal": "4880-231",
+    "telefone": "+351 918 419 314",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/valdemar-barbearia-avenida-da-igreja-mondim-de-basto-P2yArA",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 8h30-19h",
+    "observacoes": null,
+    "coords": [
+      41.4098869,
+      -7.9530729
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/valdemar-barbearia-avenida-da-igreja-mondim-de-basto-P2yArA"
+    ]
+  },
+  {
+    "nome": "Barbearia CJ Studio",
+    "slug": "barbearia-cj-studio-terras-de-bouro",
+    "distrito": "Braga",
+    "concelho": "Terras de Bouro",
+    "freguesia": null,
+    "city": "Terras de Bouro",
+    "zone": null,
+    "morada": "Av. dos Bombeiros Voluntários 132, 4840-100 Terras de Bouro",
+    "codigo_postal": "4840-100",
+    "telefone": null,
+    "email": null,
+    "website": "https://www.fresha.com/a/barbearia-cj-studio-terras-de-bouro-av-dos-bombeiros-voluntarios-avenida-dos-bombeiros-voluntarios-igr5oma7",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 10h-20h",
+    "observacoes": null,
+    "coords": [
+      41.717392,
+      -8.3105097
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/a/barbearia-cj-studio-terras-de-bouro-av-dos-bombeiros-voluntarios-avenida-dos-bombeiros-voluntarios-igr5oma7"
+    ]
+  },
+  {
+    "nome": "Barbearia Hugo Sousa",
+    "slug": "barbearia-hugo-sousa-arcos-de-valdevez",
+    "distrito": "Viana do Castelo",
+    "concelho": "Arcos de Valdevez",
+    "freguesia": null,
+    "city": "Arcos de Valdevez",
+    "zone": null,
+    "morada": "R. Plácido Abreu, 4970-464 Arcos de Valdevez",
+    "codigo_postal": "4970-464",
+    "telefone": "+351 937 031 676",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-hugo-sousa-rua-placido-abreu-arcos-de-valdevez-BK8KXk",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h, Sáb 9h-13h",
+    "observacoes": null,
+    "coords": [
+      41.8451895,
+      -8.4189941
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-hugo-sousa-rua-placido-abreu-arcos-de-valdevez-BK8KXk"
+    ]
+  },
+  {
+    "nome": "Barbershop Village",
+    "slug": "barbershop-village-arcos-de-valdevez",
+    "distrito": "Viana do Castelo",
+    "concelho": "Arcos de Valdevez",
+    "freguesia": null,
+    "city": "Arcos de Valdevez",
+    "zone": null,
+    "morada": "R. Dr. Joaquim Carlos da Cunha Cerqueira, 4970-457 Arcos de Valdevez",
+    "codigo_postal": "4970-457",
+    "telefone": "+351 939 049 494",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbershop-village-rua-doutor-joaquim-carlos-da-cunha-cerqueira-arcos-de-BK8Wo2",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 8h30-19h30, Sáb 8h30-13h",
+    "observacoes": null,
+    "coords": [
+      41.8489161,
+      -8.423005
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbershop-village-rua-doutor-joaquim-carlos-da-cunha-cerqueira-arcos-de-BK8Wo2"
+    ]
+  },
+  {
+    "nome": "Barbearia Queirós",
+    "slug": "barbearia-queiros-amarante",
+    "distrito": "Porto",
+    "concelho": "Amarante",
+    "freguesia": null,
+    "city": "Amarante",
+    "zone": null,
+    "morada": "R. 31 de Janeiro 21, 4600-043 Amarante",
+    "codigo_postal": "4600-043",
+    "telefone": "+351 968 672 468",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-queiros-rua-31-de-janeiro-amarante-0agy5g",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 8h-19h",
+    "observacoes": null,
+    "coords": [
+      41.2684721,
+      -8.0757203
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-queiros-rua-31-de-janeiro-amarante-0agy5g"
+    ]
+  },
+  {
+    "nome": "Barbershop Amarante",
+    "slug": "barbershop-amarante",
+    "distrito": "Porto",
+    "concelho": "Amarante",
+    "freguesia": null,
+    "city": "Amarante",
+    "zone": null,
+    "morada": "Av. 25 de Abril 137, 4600-014 Amarante",
+    "codigo_postal": "4600-014",
+    "telefone": "+351 916 245 993",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbershop-amarante-avenida-25-de-abril-amarante-D1rkbY",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h, Sáb 9h-17h",
+    "observacoes": null,
+    "coords": [
+      41.268612,
+      -8.0716037
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbershop-amarante-avenida-25-de-abril-amarante-D1rkbY"
+    ]
+  },
+  {
+    "nome": "Barbearia Nunes",
+    "slug": "barbearia-nunes-penela",
+    "distrito": "Coimbra",
+    "concelho": "Penela",
+    "freguesia": null,
+    "city": "Penela",
+    "zone": null,
+    "morada": "R. Mercado, 3230-284 Penela",
+    "codigo_postal": "3230-284",
+    "telefone": "+351 967 956 258",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-nunes-rua-mercado-penela-oo55ZM",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.0291517,
+      -8.3921097
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-nunes-rua-mercado-penela-oo55ZM"
+    ]
+  },
+  {
+    "nome": "Barbearia Moderna de Oliveira do Hospital",
+    "slug": "barbearia-moderna-oliveira-do-hospital",
+    "distrito": "Coimbra",
+    "concelho": "Oliveira do Hospital",
+    "freguesia": null,
+    "city": "Oliveira do Hospital",
+    "zone": null,
+    "morada": "R. Colégio 14C, 3400-105 Oliveira do Hospital",
+    "codigo_postal": "3400-105",
+    "telefone": "+351 962 990 320",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-moderna-rua-colegio-oliveira-do-hospital-1Y4wGQ",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.3598337,
+      -7.8591617
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-moderna-rua-colegio-oliveira-do-hospital-1Y4wGQ"
+    ]
+  },
+  {
+    "nome": "Barbearia Moderna de Tábua",
+    "slug": "barbearia-moderna-de-tabua",
+    "distrito": "Coimbra",
+    "concelho": "Tábua",
+    "freguesia": null,
+    "city": "Tábua",
+    "zone": null,
+    "morada": "R. Bombeiros Voluntários 9A, 3420-325 Tábua",
+    "codigo_postal": "3420-325",
+    "telefone": "+351 936 729 118",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-moderna-de-tabua-rua-bombeiros-voluntarios-tabua-Jyre0X",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.3602005,
+      -8.0289473
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-moderna-de-tabua-rua-bombeiros-voluntarios-tabua-Jyre0X"
+    ]
+  },
+  {
+    "nome": "TBaiaoBarber",
+    "slug": "tbaiaobarber-figueiro-dos-vinhos",
+    "distrito": "Leiria",
+    "concelho": "Figueiró dos Vinhos",
+    "freguesia": null,
+    "city": "Figueiró dos Vinhos",
+    "zone": null,
+    "morada": "R. Dr. José Martinho Simões 36, 3260-421 Figueiró dos Vinhos",
+    "codigo_postal": "3260-421",
+    "telefone": "+351 968 691 508",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/xicharos-barbershop-rua-doutor-jose-martinho-simoes-figueiro-dos-vinhos-oo527M",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Ter-Sex 9h-20h, Sáb 9h-15h",
+    "observacoes": null,
+    "coords": [
+      39.9021585,
+      -8.2760705
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/xicharos-barbershop-rua-doutor-jose-martinho-simoes-figueiro-dos-vinhos-oo527M"
+    ]
+  },
+  {
+    "nome": "Barbearia Dina Estanqueiro",
+    "slug": "barbearia-dina-estanqueiro-figueiro-dos-vinhos",
+    "distrito": "Leiria",
+    "concelho": "Figueiró dos Vinhos",
+    "freguesia": null,
+    "city": "Figueiró dos Vinhos",
+    "zone": null,
+    "morada": "Praça Simões de Almeida 7, 3260-429 Figueiró dos Vinhos",
+    "codigo_postal": "3260-429",
+    "telefone": "+351 917 225 464",
+    "email": null,
+    "website": "https://www.fresha.com/pt-PT/lvp/barbearia-dina-estanqueiro-praca-simoes-de-almeida-figueiro-dos-vinhos-Kk5QNx",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-19h",
+    "observacoes": null,
+    "coords": [
+      39.9015804,
+      -8.2744139
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/pt-PT/lvp/barbearia-dina-estanqueiro-praca-simoes-de-almeida-figueiro-dos-vinhos-Kk5QNx"
+    ]
+  },
+  {
+    "nome": "Barbearia Salomão",
+    "slug": "barbearia-salomao-ferreira-do-zezere",
+    "distrito": "Santarém",
+    "concelho": "Ferreira do Zêzere",
+    "freguesia": null,
+    "city": "Ferreira do Zêzere",
+    "zone": null,
+    "morada": "Praça Dias Ferreira 17, 2240-341 Ferreira do Zêzere",
+    "codigo_postal": "2240-341",
+    "telefone": "+351 937 598 862",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-salomao-praca-dias-ferreira-ferreira-do-zezere-D1ryXW",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.6935542,
+      -8.2907833
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-salomao-praca-dias-ferreira-ferreira-do-zezere-D1ryXW"
+    ]
+  },
+  {
+    "nome": "Barbearia Toca do Careca",
+    "slug": "barbearia-toca-do-careca-lourinha",
+    "distrito": "Lisboa",
+    "concelho": "Lourinhã",
+    "freguesia": null,
+    "city": "Lourinhã",
+    "zone": null,
+    "morada": "R. Miguel Bombarda 21, 2530-161 Lourinhã",
+    "codigo_postal": "2530-161",
+    "telefone": "+351 911 068 581",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-toca-do-careca-rua-miguel-bombarda-lourinha-Nyno57",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-20h, Dom 9h-14h",
+    "observacoes": null,
+    "coords": [
+      39.2415979,
+      -9.3114596
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-toca-do-careca-rua-miguel-bombarda-lourinha-Nyno57"
+    ]
+  },
+  {
+    "nome": "Penareiabarber",
+    "slug": "penareiabarber-peniche",
+    "distrito": "Leiria",
+    "concelho": "Peniche",
+    "freguesia": null,
+    "city": "Peniche",
+    "zone": null,
+    "morada": "Rua Ramiro de Matos Bilhau 3, 2520-408 Peniche",
+    "codigo_postal": "2520-408",
+    "telefone": null,
+    "email": null,
+    "website": "https://www.fresha.com/a/penareiabarber-peniche-rua-ramiro-de-matos-bilhau-3-z4hg0qlm",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-20h, Sáb 10h-20h",
+    "observacoes": null,
+    "coords": [
+      39.3606949,
+      -9.3791332
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/a/penareiabarber-peniche-rua-ramiro-de-matos-bilhau-3-z4hg0qlm"
+    ]
+  },
+  {
+    "nome": "Barbearia Almirante",
+    "slug": "barbearia-almirante-olhao",
+    "distrito": "Faro",
+    "concelho": "Olhão",
+    "freguesia": null,
+    "city": "Olhão",
+    "zone": null,
+    "morada": "R. Almirante Reis 84, 8700-364 Olhão",
+    "codigo_postal": "8700-364",
+    "telefone": "+351 969 530 135",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-almirante-rua-almirante-reis-olhao-Jyrneg",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 10h-19h, Sáb 10h-13h30",
+    "observacoes": null,
+    "coords": [
+      37.0271261,
+      -7.8437531
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-almirante-rua-almirante-reis-olhao-Jyrneg"
+    ]
+  },
+  {
+    "nome": "Old Sailor Barbershop",
+    "slug": "old-sailor-barbershop-olhao",
+    "distrito": "Faro",
+    "concelho": "Olhão",
+    "freguesia": null,
+    "city": "Olhão",
+    "zone": null,
+    "morada": "Av. 5 de Outubro 52, 8700-302 Olhão",
+    "codigo_postal": "8700-302",
+    "telefone": "+351 911 789 107",
+    "email": null,
+    "website": "https://oldsailor.pt/",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h30-20h",
+    "observacoes": null,
+    "coords": [
+      37.0240643,
+      -7.8401948
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/old-sailor-barbershop-avenida-5-de-outubro-olhao-r6zlZD"
+    ]
+  },
+  {
+    "nome": "D. Sancho Barbearia",
+    "slug": "d-sancho-barbearia-silves",
+    "distrito": "Faro",
+    "concelho": "Silves",
+    "freguesia": null,
+    "city": "Silves",
+    "zone": null,
+    "morada": "R. Serpa Pinto 30, 8300-183 Silves",
+    "codigo_postal": "8300-183",
+    "telefone": "+351 961 474 622",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/d-sancho-barbearia-rua-serpa-pinto-silves-85rxR3",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.1891476,
+      -8.4448497
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/d-sancho-barbearia-rua-serpa-pinto-silves-85rxR3"
+    ]
+  },
+  {
+    "nome": "Xilb Barber Lounge Bar",
+    "slug": "xilb-barber-lounge-bar-silves",
+    "distrito": "Faro",
+    "concelho": "Silves",
+    "freguesia": null,
+    "city": "Silves",
+    "zone": null,
+    "morada": "Largo Cel. Figueiredo 10-12, 8300-172 Silves",
+    "codigo_postal": "8300-172",
+    "telefone": "+351 961 150 234",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.1871719,
+      -8.4388551
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/lvp/xilb-barber-lounge-bar-largo-coronel-figueiredo-silves-9R5kY6"
+    ]
+  },
+  {
+    "nome": "Barbearia Central Cut",
+    "slug": "barbearia-central-cut-lagoa",
+    "distrito": "Faro",
+    "concelho": "Lagoa",
+    "freguesia": null,
+    "city": "Lagoa",
+    "zone": null,
+    "morada": "Urbanização dos Vales, R. do Viveiro 8, 8400-418 Lagoa",
+    "codigo_postal": "8400-418",
+    "telefone": "+351 969 220 830",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.1372249,
+      -8.4572588
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-central-cut-rua-do-viveiro-lagoa-LkBkaJ"
+    ]
+  },
+  {
+    "nome": "Lion Barber Barbearia",
+    "slug": "lion-barber-barbearia-quarteira",
+    "distrito": "Faro",
+    "concelho": "Loulé",
+    "freguesia": null,
+    "city": "Quarteira",
+    "zone": null,
+    "morada": "Largo do Mercado 13, 8125-168 Quarteira",
+    "codigo_postal": "8125-168",
+    "telefone": "+351 927 536 902",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/lion-barber-barbearia-largo-do-mercado-quarteira-MV7x71",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-19h, Dom 9h-13h",
+    "observacoes": null,
+    "coords": [
+      37.0690781,
+      -8.1072127
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/lion-barber-barbearia-largo-do-mercado-quarteira-MV7x71"
+    ]
+  },
+  {
+    "nome": "GoodFellas Gentlemen's Barbers",
+    "slug": "goodfellas-gentlemens-barbers-almancil",
+    "distrito": "Faro",
+    "concelho": "Loulé",
+    "freguesia": null,
+    "city": "Almancil",
+    "zone": null,
+    "morada": "R. do Emigrante Lote 127 Loja 1A, 8135-128 Almancil",
+    "codigo_postal": "8135-128",
+    "telefone": "+351 289 032 633",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/goodfellas-gentlemens-barbers-rua-do-emigrante-almancil-oo5rWg",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.0864848,
+      -8.0345569
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/goodfellas-gentlemens-barbers-rua-do-emigrante-almancil-oo5rWg"
+    ]
+  },
+  {
+    "nome": "Man Cave Barbershop",
+    "slug": "man-cave-barbershop-almancil",
+    "distrito": "Faro",
+    "concelho": "Loulé",
+    "freguesia": null,
+    "city": "Almancil",
+    "zone": null,
+    "morada": "Buganvília Plaza 24, Quinta do Lago, 8135-024 Almancil",
+    "codigo_postal": "8135-024",
+    "telefone": "+351 289 394 392",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/man-cave-barbershop-quinta-do-lago-quinta-do-lago-almancil-l18lQ0",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 10h-19h",
+    "observacoes": null,
+    "coords": [
+      37.0610903,
+      -8.0299532
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/man-cave-barbershop-quinta-do-lago-quinta-do-lago-almancil-l18lQ0"
+    ]
+  },
+  {
+    "nome": "Barber Garage Barbershop",
+    "slug": "barber-garage-barbershop-aljezur",
+    "distrito": "Faro",
+    "concelho": "Aljezur",
+    "freguesia": null,
+    "city": "Aljezur",
+    "zone": null,
+    "morada": "R. do Cemitério, 8670-077 Aljezur",
+    "codigo_postal": "8670-077",
+    "telefone": "+351 964 927 929",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barber-garage-barbershop-rua-do-cemiterio-aljezur-r6zRQv",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg 11h-19h, Ter-Sex 10h-19h, Sáb 10h-14h",
+    "observacoes": null,
+    "coords": [
+      37.3165467,
+      -8.7930928
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barber-garage-barbershop-rua-do-cemiterio-aljezur-r6zRQv"
+    ]
+  },
+  {
+    "nome": "GS Barber Shop",
+    "slug": "gs-barber-shop-sao-bartolomeu-de-messines",
+    "distrito": "Faro",
+    "concelho": "Silves",
+    "freguesia": null,
+    "city": "São Bartolomeu de Messines",
+    "zone": null,
+    "morada": "R. Sacadura Cabral 29, 8375-131 São Bartolomeu de Messines",
+    "codigo_postal": "8375-131",
+    "telefone": "+351 965 897 767",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/gs-barber-shop-rua-sacadura-cabral-sao-bartolomeu-de-messines-l188WY",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 8h-19h30",
+    "observacoes": null,
+    "coords": [
+      37.2567541,
+      -8.2871305
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/gs-barber-shop-rua-sacadura-cabral-sao-bartolomeu-de-messines-l188WY"
+    ]
+  },
+  {
+    "nome": "Barbearia Felgueiras",
+    "slug": "barbearia-felgueiras",
+    "distrito": "Porto",
+    "concelho": "Felgueiras",
+    "freguesia": null,
+    "city": "Felgueiras",
+    "zone": null,
+    "morada": "Rua Agostinho Couto, Felgueiras",
+    "codigo_postal": null,
+    "telefone": "+351 915 093 437",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/profile.php?id=100036276502562",
+    "google_maps": null,
+    "horario": "Ter-Sáb 10h-12h30 e 14h-19h30",
+    "observacoes": null,
+    "coords": [
+      41.3593728,
+      -8.1900121
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.openstreetmap.org/node/2824800540",
+      "https://www.facebook.com/profile.php?id=100036276502562"
+    ]
+  },
+  {
+    "nome": "Barbearia Ramiro",
+    "slug": "barbearia-ramiro-braga",
+    "distrito": "Braga",
+    "concelho": "Braga",
+    "freguesia": null,
+    "city": "Braga",
+    "zone": "Gualtar",
+    "morada": "Rua da Estrada Nova 115, 4710-090 Braga",
+    "codigo_postal": "4710-090",
+    "telefone": "+351 253 036 790",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.5615324,
+      -8.3900314
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.openstreetmap.org/node/2177834947"
+    ]
+  },
+  {
+    "nome": "Villains Barbershop",
+    "slug": "villains-barbershop-baguim-do-monte",
+    "distrito": "Porto",
+    "concelho": "Gondomar",
+    "freguesia": null,
+    "city": "Baguim do Monte (Rio Tinto)",
+    "zone": null,
+    "morada": "Rua dos Afonsos 68, 4435-610 Baguim do Monte",
+    "codigo_postal": "4435-610",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Ter-Sáb 10h-19h",
+    "observacoes": null,
+    "coords": [
+      41.1874166,
+      -8.5404335
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.openstreetmap.org/node/13186331901"
+    ]
+  },
+  {
+    "nome": "Couto Barber",
+    "slug": "couto-barber-argoncilhe",
+    "distrito": "Aveiro",
+    "concelho": "Santa Maria da Feira",
+    "freguesia": null,
+    "city": "Argoncilhe",
+    "zone": null,
+    "morada": "Rua de Argoncilhe 163, 4505-074 Argoncilhe",
+    "codigo_postal": "4505-074",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/couto.barber/",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.0321525,
+      -8.5406873
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.openstreetmap.org/node/9334574551",
+      "https://www.instagram.com/couto.barber/"
+    ]
+  },
+  {
+    "nome": "Romeu Barber",
+    "slug": "romeu-barber-albergaria-a-velha",
+    "distrito": "Aveiro",
+    "concelho": "Albergaria-a-Velha",
+    "freguesia": null,
+    "city": "Albergaria-a-Velha",
+    "zone": null,
+    "morada": "Rua do Corgo, 3850-362 Albergaria-a-Velha",
+    "codigo_postal": "3850-362",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-20h",
+    "observacoes": null,
+    "coords": [
+      40.616441,
+      -8.5188664
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.openstreetmap.org/node/12728758501"
+    ]
+  },
+  {
+    "nome": "Shuffle - Barber & Tattoo",
+    "slug": "shuffle-barber-tattoo-gafanha-da-nazare",
+    "distrito": "Aveiro",
+    "concelho": "Ílhavo",
+    "freguesia": null,
+    "city": "Gafanha da Nazaré",
+    "zone": null,
+    "morada": "Rua Dom Manuel Trindade Salgueiro 34, 3830-655 Gafanha da Nazaré",
+    "codigo_postal": "3830-655",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/shuffle.estudio/",
+    "google_maps": null,
+    "horario": "Seg-Sáb 10h-19h",
+    "observacoes": null,
+    "coords": [
+      40.6347873,
+      -8.6963218
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.openstreetmap.org/node/7914348985",
+      "https://www.facebook.com/shuffle.estudio/"
+    ]
+  },
+  {
+    "nome": "The Royal Barber Shop",
+    "slug": "the-royal-barber-shop-aveiro",
+    "distrito": "Aveiro",
+    "concelho": "Aveiro",
+    "freguesia": null,
+    "city": "Aveiro",
+    "zone": "Aradas",
+    "morada": "Rua do Engenheiro Carlos Bóia 46, Aradas, Aveiro",
+    "codigo_postal": null,
+    "telefone": "+351 918 733 275",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/theroyalbarbershopaveiro/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.6249889,
+      -8.6458651
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.openstreetmap.org/node/13159870304",
+      "https://www.facebook.com/theroyalbarbershopaveiro/"
+    ]
+  },
+  {
+    "nome": "Corte Clássico Barbearia",
+    "slug": "corte-classico-barbearia-caldas-da-rainha",
+    "distrito": "Leiria",
+    "concelho": "Caldas da Rainha",
+    "freguesia": null,
+    "city": "Caldas da Rainha",
+    "zone": null,
+    "morada": "Rua Doutor Leonel Sotto Mayor, Caldas da Rainha",
+    "codigo_postal": null,
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/barbeariacorteclassico/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.4049019,
+      -9.1319782
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.openstreetmap.org/node/5107230353",
+      "https://www.facebook.com/barbeariacorteclassico/"
+    ]
+  },
+  {
+    "nome": "Mustache Barba Shop",
+    "slug": "mustache-barba-shop-montijo",
+    "distrito": "Setúbal",
+    "concelho": "Montijo",
+    "freguesia": null,
+    "city": "Montijo",
+    "zone": null,
+    "morada": "Rua do Hospital 93, 2870-304 Montijo",
+    "codigo_postal": "2870-304",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Ter-Sáb 9h-20h",
+    "observacoes": null,
+    "coords": [
+      38.7062564,
+      -8.9727465
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.openstreetmap.org/node/5058589140"
+    ]
+  },
+  {
+    "nome": "Barbearia Magalhães",
+    "slug": "barbearia-magalhaes-carcavelos",
+    "distrito": "Lisboa",
+    "concelho": "Cascais",
+    "freguesia": null,
+    "city": "Carcavelos",
+    "zone": null,
+    "morada": "Praça da República 4, Carcavelos",
+    "codigo_postal": null,
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.6904684,
+      -9.3353112
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.openstreetmap.org/node/5608278753"
+    ]
+  },
+  {
+    "nome": "Make it Happen Barbershop",
+    "slug": "make-it-happen-barbershop-carcavelos",
+    "distrito": "Lisboa",
+    "concelho": "Cascais",
+    "freguesia": null,
+    "city": "Carcavelos",
+    "zone": null,
+    "morada": "Estrada da Torre 1554, 2775-687 Carcavelos",
+    "codigo_postal": "2775-687",
+    "telefone": "+351 214 575 412",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/makeithappencarcavelos/",
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 10h-19h",
+    "observacoes": null,
+    "coords": [
+      38.6901873,
+      -9.3338767
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.openstreetmap.org/node/13860621779",
+      "https://www.instagram.com/makeithappencarcavelos/"
+    ]
+  },
+  {
+    "nome": "Barbearia Guilherme Goulart",
+    "slug": "barbearia-guilherme-goulart-lisboa",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": null,
+    "city": "Lisboa",
+    "zone": "Parque das Nações",
+    "morada": "Rua da Ilha dos Amores 32A, 1990-118 Lisboa",
+    "codigo_postal": "1990-118",
+    "telefone": "+351 930 553 288",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/p/Goulart-Barber-100083148289629/",
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h30-20h",
+    "observacoes": null,
+    "coords": [
+      38.7772805,
+      -9.0934564
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.openstreetmap.org/node/11891015031",
+      "https://www.facebook.com/p/Goulart-Barber-100083148289629/"
+    ]
+  },
+  {
+    "nome": "Olá Barbearia",
+    "slug": "ola-barbearia-lisboa",
+    "distrito": "Lisboa",
+    "concelho": "Lisboa",
+    "freguesia": null,
+    "city": "Lisboa",
+    "zone": "Olivais",
+    "morada": "Praça Cidade do Luso 206A, 1800-204 Lisboa",
+    "codigo_postal": "1800-204",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.7655069,
+      -9.1166072
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.openstreetmap.org/node/11872420270"
+    ]
+  },
+  {
+    "nome": "Top Style Barbeiro",
+    "slug": "top-style-barbeiro-almada",
+    "distrito": "Setúbal",
+    "concelho": "Almada",
+    "freguesia": null,
+    "city": "Almada",
+    "zone": null,
+    "morada": "Rua Bernardo Francisco da Costa 1C, 2800-031 Almada",
+    "codigo_postal": "2800-031",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-20h",
+    "observacoes": null,
+    "coords": [
+      38.6823227,
+      -9.1531799
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.openstreetmap.org/node/3441172474"
+    ]
+  },
+  {
+    "nome": "Barbearia Sinaleiro",
+    "slug": "barbearia-sinaleiro-vila-real",
+    "distrito": "Vila Real",
+    "concelho": "Vila Real",
+    "freguesia": null,
+    "city": "Vila Real",
+    "zone": null,
+    "morada": "Rua Miguel Bombarda 85, 5000-625 Vila Real",
+    "codigo_postal": "5000-625",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.2978733,
+      -7.7412503
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.openstreetmap.org/node/13416129741",
+      "https://noticiasdevilareal.sapo.pt/quim-barbeiro-e-um-colecionador-apaixonado-pelas-corridas/"
+    ]
+  },
+  {
+    "nome": "Barbearia das Boxes",
+    "slug": "barbearia-das-boxes-vila-real",
+    "distrito": "Vila Real",
+    "concelho": "Vila Real",
+    "freguesia": null,
+    "city": "Vila Real",
+    "zone": null,
+    "morada": "Avenida Aureliano Barrigas 41, 5000-413 Vila Real",
+    "codigo_postal": "5000-413",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.3019327,
+      -7.7410716
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.openstreetmap.org/node/14070681882"
+    ]
+  },
+  {
+    "nome": "Barbearia Real Cortes",
+    "slug": "barbearia-real-cortes-vila-real",
+    "distrito": "Vila Real",
+    "concelho": "Vila Real",
+    "freguesia": null,
+    "city": "Vila Real",
+    "zone": null,
+    "morada": "Rua Marechal Teixeira Rebelo 69A, 5000-525 Vila Real",
+    "codigo_postal": "5000-525",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.2967896,
+      -7.747567
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.openstreetmap.org/node/11496002426"
+    ]
+  },
+  {
+    "nome": "Barbearia Paulino",
+    "slug": "barbearia-paulino-beja",
+    "distrito": "Beja",
+    "concelho": "Beja",
+    "freguesia": null,
+    "city": "Beja",
+    "zone": null,
+    "morada": "Rua Sousa Porto 39A, 7800-071 Beja",
+    "codigo_postal": "7800-071",
+    "telefone": "+351 967 312 258",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbearia.paulino/",
+    "facebook": "https://www.facebook.com/p/Barbearia-Paulino-100063756151530/",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.009341,
+      -7.8535007
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.openstreetmap.org/node/8694269869",
+      "https://www.instagram.com/barbearia.paulino/"
+    ]
+  },
+  {
+    "nome": "Barbearia Lopes",
+    "slug": "barbearia-lopes-evora",
+    "distrito": "Évora",
+    "concelho": "Évora",
+    "freguesia": null,
+    "city": "Évora",
+    "zone": null,
+    "morada": "Rua de Serpa Pinto 145A, 7000-537 Évora",
+    "codigo_postal": "7000-537",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.5704622,
+      -7.9135056
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.openstreetmap.org/node/6138804644"
+    ]
+  },
+  {
+    "nome": "Barbearia Gentleman",
+    "slug": "barbearia-gentleman-costa-da-caparica",
+    "distrito": "Setúbal",
+    "concelho": "Almada",
+    "freguesia": null,
+    "city": "Costa da Caparica",
+    "zone": null,
+    "morada": "Avenida General Humberto Delgado 35, Loja 43, 2825-280 Costa da Caparica",
+    "codigo_postal": "2825-280",
+    "telefone": "+351 963 873 309",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Ter-Sáb 10h-19h, Dom 10h-15h",
+    "observacoes": null,
+    "coords": [
+      38.6428793,
+      -9.2373188
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-08-31",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.openstreetmap.org/node/6432743118",
+      "https://www.pai.pt/paginas/338025-barbearia-gentleman"
+    ]
   }
 ];
 
