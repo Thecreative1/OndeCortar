@@ -204,14 +204,6 @@ button { cursor: pointer; font-family: var(--sans); }
   padding: 4px 8px; border-radius: 6px;
   backdrop-filter: blur(4px);
 }
-.oc-photo__add {
-  position: absolute; top: 14px; right: 14px;
-  display: inline-flex; gap: 6px; align-items: center;
-  background: rgba(14,12,8,.82); color: #FEFCF8;
-  padding: 6px 10px; border-radius: 100px;
-  font-family: var(--mono); font-size: 10px; font-weight: 500;
-  letter-spacing: 0.08em; text-transform: uppercase;
-}
 
 /* ── Map ────────────────────────────────────────────────── */
 .oc-map-wrap {
@@ -475,7 +467,6 @@ button { cursor: pointer; font-family: var(--sans); }
 
 /* ── Hero: mobile single col ────────────────────────────── */
 .oc-hero { display: block; }
-.oc-hero > div:last-child { display: none; }
 
 /* ── Related grid: mobile column ────────────────────────── */
 .oc-related-grid {
@@ -542,15 +533,12 @@ button { cursor: pointer; font-family: var(--sans); }
   /* Breadcrumb */
   .oc-crumb-wrap { padding: 14px 40px 0; }
 
-  /* Hero: 2-column */
+  /* Hero: coluna única (o espaço de fotografia saiu — futura oferta premium) */
   .oc-hero {
     padding: 22px 40px 34px !important;
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) minmax(360px, .82fr) !important;
-    gap: 40px;
-    align-items: center;
+    display: block !important;
+    max-width: 780px;
   }
-  .oc-hero > div:last-child { display: block; }
   .oc-hero-name { font-size: clamp(68px, 6vw, 82px) !important; line-height: .9; }
   .oc-hero__blurb {
     font-size: 16px !important;
@@ -560,7 +548,6 @@ button { cursor: pointer; font-family: var(--sans); }
   }
   .oc-hero__ctas { flex-direction: row !important; flex-wrap: wrap; gap: 12px !important; }
   .oc-hero__ctas .oc-btn--primary { width: min(100%, 420px) !important; }
-  .oc-hero__photo { height: 340px !important; }
   .oc-hero__sublabel { font-size: 42px !important; }
 
   /* Pole inside hero */
