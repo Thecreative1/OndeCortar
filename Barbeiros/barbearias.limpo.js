@@ -10464,13 +10464,13 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 911 541 306",
     "email": null,
     "website": "https://www.fresha.com/pt/lvp/american-barber-salon-tavira-zXD9V2",
     "instagram": null,
-    "facebook": null,
+    "facebook": "https://www.facebook.com/Americanbarbercdt/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-17h",
     "observacoes": null,
     "coords": [
       37.1358834,
@@ -10478,9 +10478,10 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [
-      "https://www.fresha.com/pt/lvp/american-barber-salon-tavira-zXD9V2"
+      "https://www.fresha.com/pt/lvp/american-barber-salon-tavira-zXD9V2",
+      "https://www.facebook.com/Americanbarbercdt/"
     ],
-    "ultima_validacao": "2026-04-17",
+    "ultima_validacao": "2026-09-21",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
