@@ -33,10 +33,27 @@
   gtag("js", new Date());
   gtag("config", GA_ID, DEBUG ? { debug_mode: true } : {});
 
-  var loader = document.createElement("script");
-  loader.async = true;
-  loader.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
-  document.head.appendChild(loader);
+  // O gtag.js (~175 KB) só é pedido depois de a página carregar (ou à primeira interação),
+  // para não competir com o conteúdo na primeira pintura. Os eventos anteriores ficam na
+  // fila do dataLayer e são enviados quando o script chega — não se perde nada.
+  var gtagRequested = false;
+  function loadGtag() {
+    if (gtagRequested) return;
+    gtagRequested = true;
+    var loader = document.createElement("script");
+    loader.async = true;
+    loader.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(loader);
+  }
+  function loadWhenIdle() {
+    if ("requestIdleCallback" in window) window.requestIdleCallback(loadGtag, { timeout: 2500 });
+    else window.setTimeout(loadGtag, 1200);
+  }
+  if (document.readyState === "complete") loadWhenIdle();
+  else window.addEventListener("load", loadWhenIdle, { once: true });
+  ["pointerdown", "keydown", "scroll"].forEach(function (type) {
+    window.addEventListener(type, loadGtag, { once: true, passive: true });
+  });
 
   // ── Contexto da página ─────────────────────────────────────────
   function pageContext() {
