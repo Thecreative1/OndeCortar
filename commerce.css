@@ -3657,3 +3657,76 @@ body[data-page="store"] .loja-feat-avoid {
 body[data-page="store"] .loja-feat-avoid strong {
   color: var(--green-primary);
 }
+
+/* ═══ Telemóvel: cartões compactos (foto à esquerda) + foto do produto no topo — 2026-09-29 ═══
+   Com a foto em largura total, cada cartão ocupava um ecrã inteiro (~740px) e o primeiro
+   botão da Amazon só aparecia no 2.º ecrã. display:contents deixa os filhos do corpo do cartão
+   entrarem na grelha do próprio cartão, sem mudar o HTML. */
+@media (max-width: 560px) {
+  .loja-feat-card {
+    grid-template-columns: 88px minmax(0, 1fr);
+    grid-template-rows: none;
+    align-items: start;
+    column-gap: 12px;
+    row-gap: 6px;
+    padding: 14px;
+  }
+  .loja-feat-body { display: contents; }
+  .loja-feat-img {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    width: 88px;
+    height: 88px;
+    aspect-ratio: auto;
+    padding: 8px;
+    border-radius: 12px;
+  }
+  .loja-feat-badge,
+  .loja-feat-name,
+  .loja-feat-why { grid-column: 2; }
+  .loja-feat-badge { min-height: 22px; font-size: 0.64rem; padding: 2px 8px; }
+  .loja-feat-why { font-size: 0.86rem; line-height: 1.45; }
+  .loja-feat-avoid,
+  .loja-feat-actions { grid-column: 1 / -1; }
+  .loja-feat-avoid { font-size: 0.8rem; padding: 8px 10px; }
+  .loja-feat-actions { flex-direction: row; padding-top: 4px; }
+  .loja-feat-actions .btn { min-height: 42px; padding: 0 10px; font-size: 0.86rem; }
+  .loja-feat-actions .btn-primary { flex: 1.7; }
+  .loja-feat-actions .btn-secondary { flex: 1; }
+
+  .product-card--dense {
+    display: grid;
+    grid-template-columns: 80px minmax(0, 1fr);
+    align-items: start;
+    column-gap: 12px;
+    row-gap: 6px;
+    padding: 14px;
+  }
+  .product-card--dense > img {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    width: 80px;
+    height: 80px;
+    aspect-ratio: auto;
+    padding: 6px;
+    border-radius: 12px;
+  }
+  .product-card--dense .product-copy { display: contents; }
+  .product-card--dense .meta-row,
+  .product-card--dense .product-card-title,
+  .product-card--dense .product-highlight-line { grid-column: 2; }
+  .product-card--dense .product-highlight-line { white-space: normal; font-size: 0.86rem; }
+  .product-card--dense .card-actions {
+    grid-column: 1 / -1;
+    flex-direction: row-reverse;
+    margin-top: 4px;
+  }
+  .product-card--dense .card-actions .btn { width: auto; min-height: 42px; padding: 0 10px; font-size: 0.86rem; }
+  .product-card--dense .card-actions .btn-primary { flex: 1.7; }
+  .product-card--dense .card-actions .btn-secondary { flex: 1; }
+
+  body[data-page="product"] .hero-side { display: contents; }
+  body[data-page="product"] .product-stage { order: -1; padding: 10px; }
+  body[data-page="product"] .product-stage img { max-height: 180px; padding: 8px; }
+  body[data-page="product"] .hero-copy .section-flag { display: none; }
+}
