@@ -153,6 +153,7 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
 | `apply-revista-internal-links.js` | Idempotente — ponte para o directório nos artigos + completa grelhas de relacionados até 3 |
 | `add-store-products.js` | Idempotente — `node scripts/add-store-products.js ficheiro.js` cria páginas `produto/{slug}/` a partir do modelo, junta cartões às categorias (bloco OC-CATEGORY-ALL), `sitemap-loja.xml` e `commerce-products-b.js`. Forma segura de adicionar produtos sem o sync |
 | `apply-store-comparison.js` | Idempotente — `node scripts/apply-store-comparison.js scripts/data/comparacao-maquinas.js` insere a tabela "Comparar num relance" (markers OC-COMPARE-START/END). Só factos publicados pelo fabricante na Amazon.es; "—" quando não indicado |
+| `build-black-friday-page.js` | Gera `loja/black-friday/` (página sazonal) a partir do modelo de `loja/para-oferecer/` + entrada no sitemap. Para o ano seguinte: atualizar `EVENT` (datas confirmadas pela Amazon) e `WATCH` |
 
 ## SEO e schema markup
 
