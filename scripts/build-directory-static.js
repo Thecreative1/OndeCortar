@@ -1679,7 +1679,7 @@ function buildLegacyBarberRedirect() {
 function buildSitemap(entries) {
   const lines = [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">'
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
   ];
   entries.forEach((entry) => {
     lines.push("  <url>");
@@ -1694,7 +1694,7 @@ function buildSitemap(entries) {
 function buildSitemapIndex(entries) {
   const lines = [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<sitemapindex xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">'
+    '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
   ];
   entries.forEach((entry) => {
     lines.push("  <sitemap>");
