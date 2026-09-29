@@ -107,6 +107,63 @@
   color: var(--muted);
 }
 .oc-decision-col .card-actions { margin-top: auto; }
+
+/* Escolha rápida numerada (guias "melhores X") */
+.oc-top-picks-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.oc-top-pick {
+  display: grid;
+  grid-template-columns: 36px 96px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  background: var(--surface-solid);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+}
+.oc-top-pick--first {
+  border-color: var(--gold-border);
+  box-shadow: var(--shadow-soft);
+}
+.oc-top-pick-rank {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-align: center;
+}
+.oc-top-pick img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: var(--radius-sm);
+  padding: 6px;
+}
+.oc-top-pick-copy { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.oc-top-pick-copy .tag { align-self: flex-start; }
+.oc-top-pick-copy h3 { font-size: 1.08rem; margin: 2px 0 0; }
+.oc-top-pick-copy h3 a { color: var(--text); text-decoration: none; }
+.oc-top-pick-copy h3 a:hover { color: var(--accent); }
+.oc-top-pick-copy p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
+.oc-top-pick-actions { display: flex; flex-direction: column; gap: 8px; }
+@media (max-width: 760px) {
+  .oc-top-pick {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 12px 14px;
+    padding: 14px;
+  }
+  .oc-top-pick-rank { display: none; }
+  .oc-top-pick img { width: 72px; height: 72px; }
+  .oc-top-pick-actions { grid-column: 1 / -1; }
+  .oc-top-pick-actions .btn { width: 100%; }
+}
 @media (max-width: 900px) {
   .oc-decision-grid { grid-template-columns: 1fr; }
 }

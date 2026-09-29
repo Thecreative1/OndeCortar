@@ -1,6 +1,6 @@
 (function() {
   window.OndeCortarCommerce = window.OndeCortarCommerce || {};
-  window.OndeCortarCommerce.affiliateNotice = "Alguns links da loja são afiliados. Se comprares através deles, o OndeCortar.pt pode receber uma comissão por compras elegíveis.";
+  window.OndeCortarCommerce.affiliateNotice = "Alguns links da loja são afiliados. Como Afiliado da Amazon, o OndeCortar.pt obtém rendimentos com as compras elegíveis feitas através deles, sem custo extra para ti.";
   window.OndeCortarCommerce.needs = [
     { slug: "para-casa", title: "Para casa", copy: "Para manutenção em casa sem comprar três aparelhos para fazer o mesmo." },
     { slug: "para-barbeiros", title: "Para barbeiros", copy: "Ferramentas e apoio para ritmo de posto, manutenção e bancada mais funcional." },

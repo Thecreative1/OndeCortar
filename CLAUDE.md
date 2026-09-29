@@ -151,6 +151,7 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
 | `smoke-missing-barbearias.js` | Smoke test: confirma que todos os slugs têm página gerada |
 | `apply-revista-seo.js` | Idempotente — metadados SEO da revista (twitter:card, og:image por artigo, image no JSON-LD, `<time>`) |
 | `apply-revista-internal-links.js` | Idempotente — ponte para o directório nos artigos + completa grelhas de relacionados até 3 |
+| `add-store-products.js` | Idempotente — `node scripts/add-store-products.js ficheiro.js` cria páginas `produto/{slug}/` a partir do modelo, junta cartões às categorias (bloco OC-CATEGORY-ALL), `sitemap-loja.xml` e `commerce-products-b.js`. Forma segura de adicionar produtos sem o sync |
 
 ## SEO e schema markup
 

@@ -41,19 +41,19 @@ function loadBarbers() {
 // para os perfis não mostrarem todos exatamente os mesmos produtos.
 const STORE_PICK_VARIANTS = [
   [
-    { slug: "braun-series-5-aio5545", label: "Máquina para cortar em casa" },
-    { slug: "philips-bt3238", label: "Aparador para a barba" },
+    { slug: "philips-hc5630-series-5000", label: "Máquina mais procurada para cortar em casa" },
+    { slug: "philips-oneblade-360-qp2724", label: "Aparar e fazer contornos na barba" },
     { slug: "viking-sandalwood", label: "Kit de barba para oferecer" }
   ],
   [
-    { slug: "hatteker-completa", label: "Conjunto para começar em casa" },
-    { slug: "philips-bt5515", label: "Aparador com mais ajuste" },
-    { slug: "proraso-creme", label: "Creme para barbear clássico" }
+    { slug: "remington-colourcut-hc5035", label: "Primeira máquina para cortar em casa" },
+    { slug: "philips-bt3238", label: "Aparador para a barba" },
+    { slug: "braun-series-5-aio5545", label: "Cabelo, barba e corpo num só aparelho" }
   ],
   [
-    { slug: "solati-aparador", label: "Retoques de contornos entre cortes" },
-    { slug: "beardburys-spray", label: "Manutenção da máquina" },
-    { slug: "kit-xikezan", label: "Kit de barba completo" }
+    { slug: "wahl-rapid-clip", label: "Máquina sem fios para retoques entre cortes" },
+    { slug: "remington-mb320c", label: "Aparador de barba simples" },
+    { slug: "beardburys-spray", label: "Manutenção da máquina" }
   ]
 ];
 

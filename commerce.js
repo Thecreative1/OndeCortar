@@ -105,7 +105,7 @@
       }
 
       if (!targetUrl.searchParams.get("tag")) {
-        targetUrl.searchParams.set("tag", "ondecortarp0c-21");
+        targetUrl.searchParams.set("tag", "ondecortar27-21");
       }
 
       targetUrl.searchParams.set("language", "pt_PT");
@@ -736,7 +736,7 @@
         (updatedDate ? '<li>Revisto em' + e(formatDatePt(updatedDate)) + '.</li>' : "") +
         '<li>Leitura estimada: ' + e(readingTime) + ' min.</li>' +
         '<li>Critérios: uso real, manutenção, conforto e relação qualidade-preço.</li>' +
-        '<li>Links afiliados são assinalados sem alterar a recomendação editorial.</li>' +
+        '<li>Links afiliados são assinalados sem alterar a recomendação editorial. Como Afiliado da Amazon, o OndeCortar.pt obtém rendimentos com as compras elegíveis.</li>' +
       '</ul></article>'
     );
 

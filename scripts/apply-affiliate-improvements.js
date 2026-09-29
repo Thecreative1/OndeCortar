@@ -12,14 +12,14 @@
 //      Reintroduzir só com preços reais via PA-API quando a conta tiver 3 vendas qualificadas).
 //   3. Acrescenta CTA direto para a Amazon nos cartões de produto dos artigos da revista
 //      que só tinham o link interno "Ver produto".
-//   4. Acrescenta ?tag=ondecortarp0c-21 a URLs amazon.es sem tag (ex.: JSON-LD offers.url).
+//   4. Acrescenta ?tag=ondecortar27-21 a URLs amazon.es sem tag (ex.: JSON-LD offers.url).
 
 const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
 
 const ROOT = path.resolve(__dirname, "..");
-const TAG = "ondecortarp0c-21";
+const TAG = "ondecortar27-21";
 
 function escapeHtml(value) {
   return String(value || "")
