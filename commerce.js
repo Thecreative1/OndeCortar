@@ -735,7 +735,7 @@
         (publishedDate ? '<li>Publicado em ' + e(formatDatePt(publishedDate)) + '.</li>' : "") +
         (updatedDate ? '<li>Revisto em' + e(formatDatePt(updatedDate)) + '.</li>' : "") +
         '<li>Leitura estimada: ' + e(readingTime) + ' min.</li>' +
-        '<li>Critérios: uso real, manutenção, conforto e relação qualidade-preço.</li>' +
+        '<li>Critérios: tipo de uso, características publicadas, manutenção e relação qualidade-preço (<a href="../../loja/como-escolhemos/">como escolhemos</a>).</li>' +
         '<li>Links afiliados são assinalados sem alterar a recomendação editorial. Como Afiliado da Amazon, o OndeCortar.pt obtém rendimentos com as compras elegíveis.</li>' +
       '</ul></article>'
     );
@@ -820,7 +820,7 @@
       '<section class="section"><div class="container">' +
         '<div class="author-box"><div class="author-box-inner">' +
           '<strong>Equipa OndeCortar.pt</strong>' +
-          '<p>Conteúdo baseado em critérios de uso real, manutenção e relação qualidade-preço. Os links para produtos são afiliados — as recomendações editoriais não são afetadas por isso.</p>' +
+          '<p>Conteúdo baseado em critérios de tipo de uso, manutenção e relação qualidade-preço. Os links para produtos são afiliados — as recomendações editoriais não são afetadas por isso.</p>' +
         '</div></div>' +
       '</div></section>'
     );

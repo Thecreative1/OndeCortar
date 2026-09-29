@@ -142,7 +142,7 @@ function pageMain(p, cats) {
     '<p>O preço e o stock mudam com frequência. Confirma diretamente na Amazon.es antes de decidir.</p>' +
     '<div class="card-actions"><a class="btn btn-primary" href="' + href + '" ' + LINK_ATTRS + '>Ver preço na Amazon.es</a>' +
     '<a class="btn btn-secondary" href="../../loja/' + cat.slug + '/">Voltar a ' + esc(cat.name.toLowerCase()) + '</a></div></div>' +
-    '<div class="disclosure"><strong>Transparência:</strong> Alguns links da loja são afiliados. Como Afiliado da Amazon, o OndeCortar.pt obtém rendimentos com as compras elegíveis feitas através deles, sem custo extra para ti.</div></div></div></section>' +
+    '<div class="disclosure"><strong>Transparência:</strong> Alguns links da loja são afiliados. Como Afiliado da Amazon, o OndeCortar.pt obtém rendimentos com as compras elegíveis feitas através deles, sem custo extra para ti. <a href="../../loja/como-escolhemos/">Como escolhemos os produtos</a>.</div></div></div></section>' +
     '<section class="section"><div class="container"><div class="store-guide-panel"><div class="store-guide-header"><div><span class="eyebrow">Revista OndeCortar</span><h2>Artigos relacionados</h2>' +
     '<p>Leituras sobre o mesmo tema para quem quer perceber mais antes de seguir em frente.</p></div><a class="btn btn-secondary btn-small" href="../../revista/">Ver revista</a></div>' +
     '<div class="store-guide-row">' + guides + '</div></div></div></section>' +
