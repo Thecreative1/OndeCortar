@@ -36,10 +36,11 @@
       position: relative;
       overflow: hidden;
       background:
-        radial-gradient(ellipse at 72% 0%,   rgba(166, 119, 45, 0.22), transparent 52%),
-        radial-gradient(ellipse at 0%  110%,  rgba(66, 90, 71, 0.18),  transparent 42%),
-        linear-gradient(158deg, #1D1913 0%, #2B2118 52%, #1D1913 100%);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+        radial-gradient(ellipse at 72% 0%,   rgba(199, 152, 83, 0.24), transparent 52%),
+        radial-gradient(ellipse at 0%  110%,  rgba(166, 119, 45, 0.10), transparent 46%),
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.018) 0 2px, transparent 2px 14px),
+        linear-gradient(155deg, #121a15 0%, #1f3025 55%, #121a15 100%);
+      border: 1px solid rgba(199, 152, 83, 0.28);
       box-shadow: 0 40px 100px rgba(0, 0, 0, 0.32), 0 4px 16px rgba(0, 0, 0, 0.2);
     }
 
@@ -48,6 +49,7 @@
       position: absolute;
       inset: 0;
       background:
+        linear-gradient(90deg, transparent, #c79853 20%, #a6772d 80%, transparent) top / 100% 3px no-repeat,
         radial-gradient(circle at 85% -10%, rgba(166, 119, 45, 0.13), transparent 50%);
       pointer-events: none;
     }
@@ -445,6 +447,85 @@
         width: 100%;
         justify-content: center;
       }
+    }
+    /* ── Cartões no painel escuro de "Melhores opções" (commerce.css) ── */
+    body[data-slug="kits-de-barba"] .kits-hero-breadcrumbs a { color: #c79853; }
+    body[data-slug="kits-de-barba"] .kits-hero-title::after {
+      content: "";
+      display: block;
+      width: 64px;
+      height: 3px;
+      margin-top: 20px;
+      border-radius: 2px;
+      background: #c79853;
+    }
+    body[data-slug="kits-de-barba"] .kits-hero-sub { color: rgba(242, 235, 224, 0.72); }
+    body[data-slug="kits-de-barba"] .kits-hero-actions .btn-primary {
+      background: linear-gradient(135deg, #d1a45e, #a6772d);
+      color: #15110c;
+      box-shadow: 0 14px 32px rgba(166, 119, 45, 0.3);
+    }
+    body[data-slug="kits-de-barba"] .kits-hero-actions .btn-primary:hover {
+      background: linear-gradient(135deg, #dcb06a, #b3843a);
+    }
+    body[data-slug="kits-de-barba"] .kits-hero-actions .btn-soft {
+      background: transparent;
+      border-color: rgba(242, 235, 224, 0.3);
+      color: #f2ebe0;
+    }
+    body[data-slug="kits-de-barba"] .kits-hero-actions .btn-soft:hover {
+      background: transparent;
+      border-color: #c79853;
+      color: #c79853;
+    }
+
+    body[data-slug="kits-de-barba"] .kit-card--feature,
+    body[data-slug="kits-de-barba"] .kit-card--secondary {
+      background: rgba(255, 255, 255, 0.045);
+      border-color: rgba(242, 235, 224, 0.1);
+      box-shadow: none;
+    }
+    body[data-slug="kits-de-barba"] .kit-card--feature:hover,
+    body[data-slug="kits-de-barba"] .kit-card--secondary:hover {
+      background: rgba(255, 255, 255, 0.075);
+      border-color: rgba(199, 152, 83, 0.55);
+      box-shadow: 0 20px 44px rgba(0, 0, 0, 0.3);
+    }
+    body[data-slug="kits-de-barba"] .kit-card--feature .kit-feat-img,
+    body[data-slug="kits-de-barba"] .kit-card--secondary .kit-sec-img {
+      background: #f6efe3;
+    }
+    body[data-slug="kits-de-barba"] .kit-badge {
+      background: rgba(199, 152, 83, 0.1);
+      border-color: rgba(199, 152, 83, 0.4);
+      color: #c79853;
+    }
+    body[data-slug="kits-de-barba"] .kit-card--feature .kit-feat-title,
+    body[data-slug="kits-de-barba"] .kit-card--secondary .kit-sec-title {
+      color: #f6efe3;
+    }
+    body[data-slug="kits-de-barba"] .kit-card--feature .kit-feat-highlight,
+    body[data-slug="kits-de-barba"] .kit-card--secondary .kit-sec-highlight {
+      color: rgba(242, 235, 224, 0.66);
+      font-weight: 600;
+    }
+    body[data-slug="kits-de-barba"] .kit-cta-price {
+      background: linear-gradient(135deg, #d1a45e, #a6772d);
+      color: #15110c;
+      box-shadow: 0 10px 26px rgba(166, 119, 45, 0.28);
+    }
+    body[data-slug="kits-de-barba"] .kit-cta-price:hover {
+      background: linear-gradient(135deg, #dcb06a, #b3843a);
+      box-shadow: 0 14px 32px rgba(166, 119, 45, 0.38);
+    }
+    body[data-slug="kits-de-barba"] .kit-cta-detail {
+      border-color: rgba(242, 235, 224, 0.26);
+      color: rgba(242, 235, 224, 0.85);
+    }
+    body[data-slug="kits-de-barba"] .kit-cta-detail:hover {
+      background: transparent;
+      border-color: #c79853;
+      color: #c79853;
     }
   </style>
   <script defer src="../../oc-analytics.js"></script>
