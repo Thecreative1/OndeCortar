@@ -104,6 +104,18 @@ function validateItem(item, index) {
     }
   });
 
+  // Opcional: origem do horário quando veio de fonte externa ({ nome, url, data }).
+  if ("horario_fonte" in item && item.horario_fonte !== null) {
+    const fonte = item.horario_fonte;
+    if (!fonte || typeof fonte !== "object" || ["OpenStreetMap", "Booksy", "Fresha"].indexOf(fonte.nome) === -1) {
+      errors.push(label + ": `horario_fonte.nome` deve ser OpenStreetMap, Booksy ou Fresha.");
+    } else if (!isIsoDate(fonte.data)) {
+      errors.push(label + ": `horario_fonte.data` deve estar em formato YYYY-MM-DD.");
+    } else if (!item.horario) {
+      errors.push(label + ": `horario_fonte` sem `horario`.");
+    }
+  }
+
   if (!(item.coords === null || utils.coordsSaoValidas(item.coords))) {
     errors.push(label + ": `coords` invalido ou fora de Portugal.");
   }

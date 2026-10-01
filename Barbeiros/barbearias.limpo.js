@@ -25,7 +25,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-20h; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/13432177701",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.6168647,
@@ -68,7 +73,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h30; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/12158670001",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.0188615,
@@ -111,7 +121,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-15h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/12437006530",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.716721,
@@ -155,7 +170,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/p/Barbearia-Dom-Oliveira-100076079050145/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg 14h-19h; Ter-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/12192902022",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.717871,
@@ -200,7 +220,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/10117726069",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.2113421,
@@ -243,7 +268,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h30 e 15h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/2364568842",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.208747,
@@ -286,7 +316,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://facebook.com/BARBEARIATRADICAOLISBOA/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 10h-20h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/5764327731",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7273501,
@@ -331,7 +366,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 9h30-20h; Sáb 9h30-18h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/10158250217",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.1570918,
@@ -374,7 +414,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/budabarber.oeiras/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 10h-13h e 15h-20h30",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/6532624727",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.6948743,
@@ -420,7 +465,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Qui 9h-22h; Sex-Sáb 9h-23h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/12613153141",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.6273083,
@@ -465,7 +515,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/barberstylerfd",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-13h e 14h-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/12193271269",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7193053,
@@ -598,7 +653,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 9h30-12h30 e 14h-19h30; Sáb 9h-12h30 e 14h-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/8948366097",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.6970467,
@@ -641,7 +701,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 9h-12h30 e 14h30-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/13278091001",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.0938254,
@@ -687,7 +752,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-21h; Sáb 9h-20h; Dom 10h-14h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/6436781024",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.6718998,
@@ -730,7 +800,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Dom 9h-20h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/12386710301",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.768576,
@@ -892,7 +967,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Ter 10h-19h; Qui 8h-18h; Sex-Sáb 10h-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/11378229463",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.2182473,
@@ -930,7 +1010,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/12060205984",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.2185157,
@@ -1006,7 +1091,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/cortesediscos.barbershop/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg 9h-13h e 14h30-20h; Qua-Sáb 9h-13h e 14h30-20h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/13510128717",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.5198003,
@@ -1046,7 +1136,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 9h30-19h30; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1294934935",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.1812109,
@@ -1084,7 +1179,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/barbeariadogui2022/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/9567397213",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.9025121,
@@ -1246,7 +1346,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/BarbeariaBarbaNegraEsposende/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg 14h-22h30; Ter 9h-19h30; Qua-Sex 9h-22h30; Sáb 9h-14h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/10117710793",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.5319827,
@@ -1460,7 +1565,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/cabeleireirocarlosvaz/timeline",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-12h45 e 15h-20h; Sáb 8h-14h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/3509894001",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7907065,
@@ -1504,7 +1614,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 10h-20h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/12068845622",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.6974257,
@@ -1542,7 +1657,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 9h-20h; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/13482087970",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.8717021,
@@ -1739,7 +1859,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-20h; Sáb 7h30-13h30",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/13520636686",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.9203755,
@@ -1858,7 +1983,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 9h30-13h e 14h30-19h30",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/13325967790",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.341859,
@@ -1898,7 +2028,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 9h30-13h e 14h30-20h; Sáb 9h-15h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/13383150619",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.3237485,
@@ -2019,7 +2154,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 9h30-19h; Dom 9h30-13h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/13173328368",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.3166346,
@@ -2059,7 +2199,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/betovespabarbershop/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Ter 14h30-22h; Qui 14h30-22h; Sex 14h30-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1467269802",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.3073628,
@@ -2180,7 +2325,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/pontohoficial/?next=%2F",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-12h e 13h-20h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/12604017654",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.6399701,
@@ -2897,10 +3047,15 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://booksy.com/pt-pt/6306_bmbarbeariamonte_barbearia_82575_braga",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/Bmbarbeariamonte_/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg 9h30-19h; Ter-Qui 9h30-12h e 15h-19h; Sex 9h30-12h e 14h-19h; Sáb 10h-13h e 14h-17h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/6306_bmbarbeariamonte_barbearia_82575_braga",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.5445782,
@@ -2940,7 +3095,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/fgoncalvesbarber/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 10h-13h e 14h30-20h; Sáb 10h-13h e 14h30-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/10893197102",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.5626481,
@@ -2978,10 +3138,15 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://booksy.com/pt-pt/s/barbearia/82575_braga",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/m2_barbearia/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-19h; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/5705_m2-barbearia_barbearia_82575_braga",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.5440142,
@@ -3448,7 +3613,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Ter 8h30-13h e 14h-20h; Qui-Sex 8h30-13h e 14h-20h; Sáb 8h-13h e 14h-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/13285340856",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.4053563,
@@ -3486,7 +3656,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/lordjackandfriends/?locale=pt_PT",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-13h e 14h30-19h; Sáb 10h-13h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/13272573624",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.4088078,
@@ -3526,7 +3701,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/pluma_barbershop",
     "facebook": "https://www.facebook.com/TattooeBarberShop/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Ter 9h-13h e 15h-19h; Qui-Sáb 9h-13h e 15h-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/13278054770",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.4086238,
@@ -3734,7 +3914,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/11993162247",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.2712116,
@@ -3848,7 +4033,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/barbeariabagaca/",
     "facebook": "https://www.facebook.com/barbeariabagaca",
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 9h-19h30",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/10617174786",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.2173348,
@@ -3889,7 +4079,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/barbeariacandeias/",
     "facebook": "https://www.facebook.com/barbeariacandeias",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/10158873821",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.1986338,
@@ -3930,7 +4125,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/barbeariacoliseu.pt/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 10h-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/2295669968",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.2010348,
@@ -3970,7 +4170,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 9h30-13h e 14h30-19h30; Sáb 9h30-13h e 14h-18h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/7333828160",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.2130288,
@@ -4050,7 +4255,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/Barbearia.Number.One",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h30-13h e 14h30-20h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/8875900891",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.2047465,
@@ -4091,7 +4301,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/10909799437",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.2007659,
@@ -4209,7 +4424,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/bb.newlook/",
     "facebook": "https://www.facebook.com/barbnewlook",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-19h; Sáb 10h-13h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/10910523937",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.2038294,
@@ -4250,7 +4470,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/WingsBarbershop",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-13h e 14h30-21h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/10156178476",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.1928816,
@@ -4492,7 +4717,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/20agecuts/",
     "facebook": "https://www.facebook.com/20agecutsevora/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 10h-19h; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/6172914986",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.5737,
@@ -4534,7 +4764,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h e 15h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/6161991816",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.5691164,
@@ -4764,7 +4999,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/nunoperdigaobarber/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h20; Sáb 9h-14h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/4754786431",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.5725,
@@ -5277,7 +5517,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 10h-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-pinto-rua-bartolomeu-dias-vendas-novas-LkBoK9",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.6803,
@@ -5609,7 +5854,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/s.barbaearia/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1366791540",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       37.1038645,
@@ -6174,10 +6424,15 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://booksy.com/pt-pt/3362_barba-negra-leiria_barbearia_141679_leiria",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/barbanegraleiria/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 10h-20h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/3362_barba-negra-leiria_barbearia_141679_leiria",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       39.7440009,
@@ -6254,10 +6509,15 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://booksy.com/pt-pt/1973_bruno-cesar-barbeiro_barbearia_141679_leiria",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/bruno86b3/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Ter 10h-13h e 14h-19h; Qua 10h-14h; Qui 10h-13h e 14h-20h; Sex 10h-12h e 14h-20h; Sáb 8h30-13h e 14h-16h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/1973_bruno-cesar-barbeiro_barbearia_141679_leiria",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       39.7585654,
@@ -6300,7 +6560,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 9h-13h e 14h30-19h30; Sáb 9h-13h e 14h30-18h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/1173_evolution-mens-salon_barbearia_141679_leiria",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       39.7501205,
@@ -6383,7 +6648,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h30-13h e 15h-20h; Sáb 9h30-13h e 15h-19h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/2560_barbearia-brasileira_barbearia_145107_famalicao-nazare",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       39.5348917,
@@ -6420,10 +6690,15 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://booksy.com/pt-pt/s/barbearia/172271_ramada",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/mr.barber.lisboa/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-14h e 15h30-20h; Sáb 9h-13h30 e 15h-18h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/1325_mr-barber-lisboa_barbearia_150290_amadora",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7366476,
@@ -6541,10 +6816,15 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://booksy.com/pt-pt/3412_aneel-barbershop_salao-de-cabeleireiro_157422_lisboa",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/aneel_barbershop/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Qua 10h30-20h; Sex-Sáb 10h30-20h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/3412_aneel-barbershop_salao-de-cabeleireiro_157422_lisboa",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7365237,
@@ -6584,7 +6864,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/barbearia1025ro",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-19h30; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/13230723865",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7169886,
@@ -6627,7 +6912,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://facebook.com/hairmechanic47/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 11h-22h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/4824120226",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7318836,
@@ -6706,7 +6996,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-14h e 16h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/10799677329",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.754471,
@@ -6744,7 +7039,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Qui 10h-19h; Sáb-Dom 10h-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/5383068021",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7425749,
@@ -6782,7 +7082,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-20h; Sáb 10h-15h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/8664721315",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7454083,
@@ -6863,7 +7168,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/BarbeariaZeNunesalcantara/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h30-19h30; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/4959910330",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7055686,
@@ -6945,7 +7255,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://facebook.com/bentobarbearias/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-20h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/4773880694",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7316702,
@@ -7023,7 +7338,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-19h; Sáb 10h-17h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/12307102132",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7276497,
@@ -7064,7 +7384,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 10h-13h e 14h-20h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/2059_casimiro-barbershop_barbearia_157422_lisboa",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7454417,
@@ -7226,10 +7551,15 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://booksy.com/pt-pt/s/barbearia/157422_lisboa",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/exodo.barbearia/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h30-13h e 14h30-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/5114_exodo-barbearia_barbearia_157422_lisboa",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7415411,
@@ -7269,7 +7599,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-22h; Sáb 10h-17h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/12309767445",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.722831,
@@ -7307,10 +7642,15 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://booksy.com/pt-pt/s/barbearia/157422_lisboa",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/ranzullabarbershop/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 10h-20h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/3549_ranzulla-barbershop_barbearia_157422_lisboa",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7518765,
@@ -7350,7 +7690,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-14h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/8694195638",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7033602,
@@ -7391,7 +7736,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Dom 9h-20h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/11887681399",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7554684,
@@ -7429,10 +7779,15 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://booksy.com/pt-pt/s/barbearia/167553_vale-de-figueira",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/2685.FINEST_BARBEARIA/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-20h; Sáb 8h-18h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/1257_2685-finest-barbearia_barbearia_166404_sacavem",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7911203,
@@ -7515,10 +7870,15 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://booksy.com/pt-pt/s/barbearia/167922_santo-antonio-dos-cavaleiros",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/jd_barbeariaeesteticafeminina/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h30-19h30; Sáb 8h30-17h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/5962_jd-barbearia-e-estetica-feminina_barbearia_165300_camarate",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.8034669,
@@ -7684,7 +8044,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-19h; Sáb 10h-17h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/2014_barbercrew-matosinhos_barbearia_203185_matosinhos",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.181217,
@@ -7721,10 +8086,15 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://booksy.com/pt-pt/5068_montes-barber-mlsg_barbearia_203185_matosinhos",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/montesbarber/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h e 14h-19h30; Sáb 9h-13h e 14h-19h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/5068_montes-barber-mlsg_barbearia_203185_matosinhos",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.181918,
@@ -7764,7 +8134,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-20h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1408179600",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.1581758,
@@ -7802,7 +8177,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h e 15h-19h30; Sáb 9h-13h e 15h-17h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/8261781459",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.16413,
@@ -7880,7 +8260,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-19h45",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/3976_black-studio-bs_barbearia_208915_porto",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.1642121,
@@ -8000,7 +8385,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/studiogenese.pt",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 8h30-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/13512370727",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.1186404,
@@ -8037,10 +8427,15 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://booksy.com/pt-pt/s/barbearia/221774_vila-nova-de-gaia",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/studio_maodeouro01/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg 9h-18h e 19h55-20h; Ter-Sex 9h-20h; Sáb 9h-19h; Dom 10h-14h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/5788_studio-mao-de-ouro_barbearia_221774_vila-nova-de-gaia",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.1072728,
@@ -8329,7 +8724,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h30",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/6432737064",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.678375,
@@ -8364,10 +8764,15 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://booksy.com/pt-pt/s/barbearia/154702_junqueiro",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/barber.garcias/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-12h e 13h-20h; Dom 9h-13h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/5221_garcias-barber-charneca-da-caparica_barbearia_240803_charneca-de-caparica",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.6033985,
@@ -8499,7 +8904,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h e 14h-22h; Sáb 9h-13h30",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/881035022",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7069771,
@@ -8583,7 +8993,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h30-20h; Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/pt/lvp/cannon-barber-rua-cidade-de-ponta-delgada-montijo-vwyvnY",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7103134,
@@ -8623,7 +9038,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/barbeariacamposss/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 8h-13h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/11285121146",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.0189342,
@@ -8958,10 +9378,15 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://booksy.com/pt-pt/1187_studio-fama-by-fabiano-the-barber_barbearia_252809_setubal",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/studiofama.pt/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter 12h-19h; Qua 11h-13h e 15h-20h; Qui 12h-19h; Sex 11h-13h e 15h-20h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/1187_studio-fama-by-fabiano-the-barber_barbearia_252809_setubal",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.5342602,
@@ -9216,7 +9641,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h e 14h30-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/11498940866",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.3060621,
@@ -9416,10 +9846,15 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://booksy.com/pt-pt/5769_balder_barbearia_279940_viseu",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/balderbarbearia_/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 10h-21h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/5769_balder_barbearia_279940_viseu",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.64316391752402,
@@ -9500,7 +9935,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Dom 9h-20h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/12514065383",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.6805922,
@@ -9541,7 +9981,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-21h; Sáb 9h45-21h; Dom 10h-19h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/3467_ebenezer-barber-shop_barbearia_279940_viseu",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.6602702,
@@ -9625,7 +10070,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 10h-14h15 e 15h45-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/2186_barbearia-faialense_barberaria_53709_horta?do=invite&_branch_match_id=1333857990378834596&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FV9y2tMHb1c3HJc08CAN0VSV0iAAAA",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.5326252,
@@ -10061,7 +10511,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 10h-19h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/6264_pro-style-barber-shop_barbearia_185116_funchal",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       32.6601652,
@@ -10345,7 +10800,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/a-barbearia-do-jota-rua-da-liberdade-tavira-vwyMlo",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       37.1251024,
@@ -10551,7 +11011,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h30-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/uk/lvp/igors-barbershop-rua-terra-estreita-santa-luzia-NynKaX",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       37.103598,
@@ -10592,7 +11057,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/barbearia_cacela/",
     "facebook": "https://www.facebook.com/1241961895864898/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 10h-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-cacela-rua-doutor-jose-colaco-fernandes-vila-nova-de-cacela-vwyxVK",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       37.1742873,
@@ -10633,7 +11103,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-20h; Sáb 8h30-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbers-tattoo-mg-rua-da-praia-monte-gordo-7xvAlX",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       37.1793943,
@@ -10674,7 +11149,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/ruireismenstudio/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-18h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/pt/lvp/rui-reis-mens-studio-rua-sao-goncalo-de-lagos-vila-real-de-santo-antonio-MV7qyz",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       37.1907539,
@@ -10715,7 +11195,12 @@ const barbearias = [
     "instagram": "https://instagram.com/rocktattooartista",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 10h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barber-shop-the-rock-rua-da-princesa-vila-real-de-santo-antonio-r6z3Ny",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       37.1931078,
@@ -11479,7 +11964,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Dom 9h-19h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/6037739112",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.5714192,
@@ -14989,7 +15479,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h30; Sáb 8h-18h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-magina-rua-do-paniceiro-vila-nova-de-gaia-85rwZ5",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.1234,
@@ -15076,7 +15571,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-20h; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-resenha-rua-nova-de-santa-cruz-braga-7xvRZX",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.5552,
@@ -15105,7 +15605,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h30-19h30; Sáb 9h-15h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/a-barbearia-de-portimao-rua-damiao-luis-faria-de-castro-portimao-qLXlqy",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       37.1215,
@@ -15252,7 +15757,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-20h; Sáb 9h-19h; Dom 9h-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/2675-barber-shop-avenida-miguel-torga-odivelas-l18vB8",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7834,
@@ -15281,7 +15791,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/atelier-do-barbeiro-rua-dom-afonso-de-albuquerque-barreiro-zXDRn4",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.6452,
@@ -15311,7 +15826,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Dom 10h-23h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/don-juan-barbearia-figueira-da-foz-7xv0yX",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.1663,
@@ -15671,7 +16191,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 9h-12h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/mil128-barbearia-rua-da-liberdade-guimaraes-jwoWol",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.4383,
@@ -15701,7 +16226,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/barbeariabraguista",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 10h-12h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-braguista-rua-dos-barbosas-braga-85rZgj",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       41.5443,
@@ -16151,7 +16681,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Qui 10h-19h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-nunes-rua-mercado-penela-oo55ZM",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.0291517,
@@ -16181,7 +16716,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h30-12h30; Sáb 8h-12h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-moderna-rua-colegio-oliveira-do-hospital-1Y4wGQ",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.3598337,
@@ -16211,7 +16751,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h30-13h; Sáb 8h-14h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-moderna-de-tabua-rua-bombeiros-voluntarios-tabua-Jyre0X",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       40.3602005,
@@ -16301,7 +16846,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Qua 9h-13h; Sex-Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-salomao-praca-dias-ferreira-ferreira-do-zezere-D1ryXW",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       39.6935542,
@@ -16571,7 +17121,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 10h-13h; Sáb 10h-13h30",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/goodfellas-gentlemens-barbers-rua-do-emigrante-almancil-oo5rWg",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       37.0864848,
@@ -17058,7 +17613,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-21h30",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/11872420270",
+      "data": "2026-10-01"
+    },
     "observacoes": null,
     "coords": [
       38.7655069,

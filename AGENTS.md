@@ -140,12 +140,19 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
   "instagram": "https://instagram.com/...",
   "facebook": "https://facebook.com/...",
   "coords": [38.7223, -9.1393],          // [lat, lng] — necessário para aparecer no mapa
-  "horario": "Seg-Sex 9h-19h",
+  "horario": "Seg-Sex 9h-19h",           // ver secção Horário abaixo; horario_fonte opcional
   "mostrar_no_mapa": true,               // false = excluído do site público
   "ultima_validacao": "2026-04-21",      // data ISO — usada no sitemap e nas páginas
   "status": "confirmado"
 }
 ```
+
+### Horário (`horario` e `horario_fonte`)
+
+- **Formato do `horario`:** texto PT no padrão `Seg-Sex 9h-13h e 15h-20h; Sáb 9h-13h` (grupos com `;`, turnos com ` e `, dias fechados omitidos). O build converte-o com `scripts/horario-utils.js` em `openingHoursSpecification` (JSON-LD) e `openingHours` (microdados). Se o texto não for inequívoco (ex.: `9h-19h` sem dias), o schema é omitido — o texto continua visível. Testar um horário novo: `node -e "const H=require('./scripts/horario-utils.js');console.log(H.toSchemaSpecs(H.parsePt('Seg-Sex 9h-19h')))"`.
+- **`horario_fonte` (opcional):** `{ "nome": "OpenStreetMap" | "Booksy" | "Fresha", "url": "...", "data": "YYYY-MM-DD" }` quando o horário veio de fonte externa. O perfil mostra "Segundo o … consultado a …. Confirma antes de ir." — no OpenStreetMap com crédito ODbL obrigatório. Não alterar `ultima_validacao` ao preencher só o horário.
+- **Prioridade das fontes:** página de marcações da própria barbearia (Booksy/Fresha) > OpenStreetMap. Confirmar sempre que o nome da página corresponde à barbearia — vários `website` do Booksy apontam para **listagens** (várias barbearias) e há páginas do Fresha que mudaram de dono (em 2026-10-01: `mans-house-portimao` mostra "Brell Studio").
+- **Mudar o `horario` muda o `<title>` e a description do perfil** (ex.: "Contacto, morada e mapa" → "Telefone, morada e horário") — ver a regra de risco de indexação.
 
 ## Outros scripts em scripts/
 

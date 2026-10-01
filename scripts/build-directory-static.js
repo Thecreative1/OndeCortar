@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
 const utils = require("../Barbeiros/barbearias-utils.js");
+const horarioUtils = require("./horario-utils.js");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE_URL = "https://ondecortar.pt/";
@@ -499,8 +500,27 @@ function buildCardSummary(barber) {
   else if (barber.website || barber.instagram || barber.facebook) bits.push("links úteis");
   if (barber.horario) bits.push("horário");
   return bits.length
-    ? "Ficha com " + joinNatural(bits) + " e morada para consultar rapidamente."
+    ? "Ficha com " + joinNatural(bits.concat("morada")) + " para consultar rapidamente."
     : "Consulta a morada e a localização confirmada desta barbearia.";
+}
+
+const MESES_CURTOS = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
+
+// Linha "Segundo …" por baixo do horário quando veio de uma fonte externa (horario_fonte).
+// No OpenStreetMap a atribuição é obrigatória pela licença ODbL.
+function buildHorarioFonteNote(fonte) {
+  if (!fonte || !fonte.nome) return "";
+  const H = escapeHtml;
+  const isOsm = /openstreetmap/i.test(fonte.nome);
+  const label = isOsm ? "OpenStreetMap" : fonte.nome;
+  const link = fonte.url
+    ? '<a href="' + H(fonte.url) + '" target="_blank" rel="noopener noreferrer nofollow" style="color:inherit">' + H(label) + "<\/a>"
+    : H(label);
+  const m = String(fonte.data || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  const when = m ? ", consultado a " + Number(m[3]) + " " + MESES_CURTOS[Number(m[2]) - 1] + " " + m[1] : "";
+  const licence = isOsm ? ' (© contribuidores do OpenStreetMap, <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer nofollow" style="color:inherit">ODbL<\/a>)' : "";
+  return '<p style="font-size:12.5px;line-height:1.5;color:var(--subtext);margin-top:8px">Segundo o ' + link + licence + when +
+    ". Confirma antes de ir.<\/p>";
 }
 
 function buildProfileSeo(barber) {
@@ -618,6 +638,7 @@ function buildSlugData(rawBarbers) {
       facebook: links.facebook,
       google: links.google,
       horario: String(item.horario || "").trim(),
+      horarioFonte: item.horario_fonte && item.horario_fonte.nome ? item.horario_fonte : null,
       observacoes: String(item.observacoes || "").trim(),
       coords: utils.normalizarCoords(item.coords),
       zone: location.zone || "",
@@ -1176,7 +1197,8 @@ function renderProfilePage(barber, citiesMap) {
         "addressRegion": barber.district || undefined,
         "addressCountry": "PT"
       } : undefined,
-      "openingHours": barber.horario || undefined,
+      // Só quando o texto PT se converte sem ambiguidade; o texto livre não é válido no schema.
+      "openingHoursSpecification": horarioUtils.toSchemaSpecs(horarioUtils.parsePt(barber.horario)) || undefined,
       "sameAs": barber.sameAs && barber.sameAs.length ? barber.sameAs : undefined,
       "geo": Array.isArray(barber.coords) ? {
         "@type": "GeoCoordinates",
@@ -1306,10 +1328,15 @@ function renderProfilePage(barber, citiesMap) {
     missingNote;
 
   // ── Hours
+  const hoursWeek = horarioUtils.parsePt(barber.horario);
+  const hoursMeta = (horarioUtils.toOpeningHoursStrings(hoursWeek) || [])
+    .map((value) => '<meta itemprop="openingHours" content="' + H(value) + '" />')
+    .join("");
+  const hoursSource = buildHorarioFonteNote(barber.horarioFonte);
   const hoursInner = barber.horario
     ? '<p style="font-size:14.5px;line-height:1.6;color:var(--ink-soft)">' + H(barber.horario) + "<\/p>" +
-      '<meta itemprop="openingHours" content="' + H(barber.horario) + '" />'
-    : '<p style="font-size:14px;color:var(--subtext);font-style:italic">O horário aparece aqui assim que a barbearia o adicionar.<\/p>';
+      hoursMeta + hoursSource
+    :'<p style="font-size:14px;color:var(--subtext);font-style:italic">O horário aparece aqui assim que a barbearia o adicionar.<\/p>';
 
   // ── Map
   const hasMap = Array.isArray(barber.coords) || barber.morada;
@@ -1799,7 +1826,7 @@ function patchIndexHtml(staticListHtml, headJsonLd, totals) {
 // index.html) nunca lê — ficam só em barbearias.limpo.js.
 const CLIENT_OMIT_FIELDS = new Set([
   "complemento", "country", "data_confidence", "needs_review", "location_flags",
-  "fontes", "ultima_validacao", "qualidade_ficha", "valor_original"
+  "fontes", "ultima_validacao", "qualidade_ficha", "valor_original", "horario_fonte"
 ]);
 
 // Gera Barbeiros/barbearias.mapa.js para a homepage: só barbearias públicas, sem os
