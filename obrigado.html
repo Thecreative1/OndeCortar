@@ -3,99 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#516255" />
+  <meta name="theme-color" content="#141614" />
   <title>Obrigado | OndeCortar.pt</title>
   <meta name="description" content="Obrigado. Recebemos o teu pedido e vamos responder assim que possível." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
+    /* Tema escuro "preto mate & verde-garrafa" — igual ao diretório (2026-10-01) */
     :root {
-      --bg: #efe4d1;
-      --surface: rgba(251, 246, 238, 0.96);
-      --text: #181410;
-      --muted: #4e473d;
-      --border: #cfbfa2;
-      --accent: #425a47;
-      --accent-strong: #2f4535;
+      --text: #ECE7DD;
+      --muted: #A49D90;
+      --surface: #1E221F;
+      --border: #2F3530;
+      --border-strong: #4B544D;
+      --gold: #C8873A;
+      --gold-soft: #E3A863;
     }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(166, 119, 45, 0.14), transparent 25%),
-        radial-gradient(circle at top right, rgba(66, 90, 71, 0.12), transparent 28%),
-        linear-gradient(180deg, #f5ecde 0%, var(--bg) 38%, #e5d6be 100%);
-      color: var(--text);
       min-height: 100vh;
       display: grid;
       place-items: center;
-      padding: 24px;
+      padding: 24px 16px;
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 90% 0%, rgba(31, 77, 58, 0.45), transparent 45%),
+        linear-gradient(160deg, #161916 0%, #111311 100%);
     }
-
     .box {
-      width: min(680px, 100%);
-      padding: 34px;
-      border-radius: 26px;
+      width: min(640px, 100%);
+      padding: 34px 30px;
+      border-radius: 22px;
       border: 1px solid var(--border);
-      background: var(--surface);
-      box-shadow: 0 24px 60px rgba(31, 25, 19, 0.09);
+      background:
+        radial-gradient(circle at top right, rgba(31, 77, 58, 0.45), transparent 55%),
+        var(--surface);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
     }
-
+    .tick {
+      display: grid; place-items: center;
+      width: 52px; height: 52px; margin-bottom: 18px; border-radius: 50%;
+      background: var(--gold); color: #141614; font-size: 1.5rem; font-weight: 800;
+      box-shadow: 0 0 0 6px rgba(200, 135, 58, 0.18);
+    }
     h1 {
       margin: 0 0 14px;
-      font-size: clamp(2rem, 5vw, 3rem);
-      line-height: 1.08;
+      font-family: "Big Shoulders Display", "Arial Narrow", sans-serif;
+      font-weight: 800; text-transform: uppercase; letter-spacing: 0.01em; line-height: 0.95;
+      font-size: clamp(2.4rem, 7vw, 3.4rem);
     }
-
-    p {
-      color: var(--muted);
-      line-height: 1.7;
-      margin: 0 0 14px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 22px;
-    }
-
+    p { color: var(--muted); line-height: 1.7; margin: 0 0 12px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 13px 18px;
-      border-radius: 14px;
-      font-weight: 800;
-      text-decoration: none;
-      transition: transform 0.2s ease;
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 50px; padding: 0 20px; border-radius: 14px;
+      font-weight: 700; text-decoration: none; transition: transform 0.2s ease, background 0.2s ease;
     }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      color: #fff;
-    }
-
-    .btn-secondary {
-      background: rgba(244, 235, 220, 0.96);
-      border: 1px solid var(--border);
-      color: var(--text);
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--gold); color: #141614; }
+    .btn-primary:hover { background: var(--gold-soft); }
+    .btn-secondary { border: 1px solid var(--border-strong); color: var(--text); }
+    .btn-secondary:hover { border-color: var(--gold); }
+    @media (max-width: 480px) {
+      .box { padding: 26px 20px; }
+      .actions { flex-direction: column; }
+      .btn { width: 100%; }
     }
   </style>
   <script defer src="oc-analytics.js"></script>
 </head>
 <body>
   <div class="box">
+    <div class="tick" aria-hidden="true">✓</div>
     <h1>Obrigado.</h1>
     <p>Recebemos o teu pedido com sucesso.</p>
     <p>Vamos analisar a informação e responder o mais rapidamente possível.</p>
     <div class="actions">
       <a class="btn btn-primary" href="index.html">Voltar ao início</a>
+      <a class="btn btn-secondary" href="index.html#mapa">Ver o mapa</a>
     </div>
   </div>
 </body>

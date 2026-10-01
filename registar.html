@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#516255" />
+  <meta name="theme-color" content="#141614" />
   <title>Adicionar ou Atualizar Barbearia | OndeCortar.pt</title>
   <meta name="description" content="Adiciona ou atualiza o perfil da tua barbearia no OndeCortar.pt para ganhar mais visibilidade com morada, contactos, mapa, links úteis e presença na página da cidade." />
   <link rel="canonical" href="https://ondecortar.pt/registar.html" />
@@ -24,34 +24,37 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
+    /* Tema escuro "preto mate & verde-garrafa" — igual ao diretório (2026-10-01).
+       --text é a cor do TEXTO (clara); --accent é o fundo dos botões (verde-garrafa);
+       --link são os links em âmbar. */
     :root {
-      --bg: #efe4d1;
-      --surface: #fbf5ea;
-      --surface-soft: #e7dac3;
-      --surface-strong: #efe0c7;
-      --text: #181410;
-      --muted: #4e473d;
-      --border: #cfbfa2;
-      --border-strong: #b08b53;
-      --accent: #425a47;
-      --accent-strong: #2f4535;
-      --gold: #a6772d;
-      --gold-soft: #c79853;
-      --gold-border: #d7b882;
-      --shadow: 0 24px 60px rgba(31, 25, 19, 0.09);
-      --shadow-soft: 0 16px 36px rgba(31, 25, 19, 0.07);
+      --bg: #141614;
+      --surface: #1E221F;
+      --surface-2: #262B27;
+      --text: #ECE7DD;
+      --muted: #A49D90;
+      --border: #2F3530;
+      --border-strong: #4B544D;
+      --accent: #2C6A4E;
+      --accent-hover: #35805E;
+      --bottle: #1F4D3A;
+      --link: #E3A863;
+      --gold: #C8873A;
+      --gold-soft: #E3A863;
+      --danger: #E58B7A;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
       --container: min(1160px, calc(100% - 32px));
-      --radius-lg: 24px;
-      --radius-md: 18px;
-      --mobile-nav-panel: rgba(251, 246, 238, 0.98);
-      --mobile-nav-border: rgba(207, 191, 162, 0.94);
-      --mobile-nav-link-bg: rgba(244, 235, 220, 0.94);
-      --mobile-nav-toggle-border: rgba(176, 139, 83, 0.72);
-      --mobile-nav-toggle-bg: rgba(251, 246, 238, 0.9);
-      --mobile-nav-shadow: 0 22px 46px rgba(31, 25, 19, 0.14);
-      --mobile-nav-backdrop: rgba(24, 20, 16, 0.3);
+      --radius-lg: 22px;
+      --radius-md: 14px;
+      --mobile-nav-panel: rgba(20, 22, 20, 0.98);
+      --mobile-nav-border: #2F3530;
+      --mobile-nav-link-bg: #1E221F;
+      --mobile-nav-toggle-border: rgba(200, 135, 58, 0.6);
+      --mobile-nav-toggle-bg: rgba(30, 34, 31, 0.9);
+      --mobile-nav-shadow: 0 22px 46px rgba(0, 0, 0, 0.45);
+      --mobile-nav-backdrop: rgba(0, 0, 0, 0.55);
     }
 
     * { box-sizing: border-box; }
@@ -60,305 +63,177 @@
       font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(166, 119, 45, 0.16), transparent 30%),
-        radial-gradient(circle at top right, rgba(66, 90, 71, 0.1), transparent 24%),
-        linear-gradient(180deg, #f5ecde 0%, var(--bg) 34%, #e5d7bf 100%);
+        radial-gradient(ellipse at 90% 0%, rgba(31, 77, 58, 0.45), transparent 45%),
+        linear-gradient(160deg, #161916 0%, #111311 100%);
+      min-height: 100vh;
     }
-
-    a {
-      color: var(--accent-strong);
-      text-decoration-color: rgba(166, 119, 45, 0.52);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 0.18em;
-    }
-    .brand, .nav-links a, .btn, .footer-brand, .badge, .eyebrow { text-decoration: none; }
+    a { color: var(--link); text-underline-offset: 0.18em; }
+    .brand, .nav-links a, .btn, .footer-brand, .eyebrow { text-decoration: none; }
     button, input, select, textarea { font: inherit; }
-    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-      outline: 3px solid rgba(81, 98, 85, 0.32);
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+      outline: 3px solid rgba(227, 168, 99, 0.55);
       outline-offset: 3px;
     }
-
     .container { width: var(--container); margin: 0 auto; }
+
+    /* Navegação */
     .site-header { padding: 18px 0 0; }
     .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      padding: 14px 18px;
-      border: 1px solid rgba(207, 191, 162, 0.94);
-      border-radius: 999px;
-      background: rgba(250, 244, 233, 0.94);
-      box-shadow: 0 18px 40px rgba(31, 25, 19, 0.1);
-    }
-    .brand { display: inline-flex; align-items: center; gap: 14px; }
-    .brand img {
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      object-fit: contain;
-      background: rgba(255, 255, 255, 0.94);
-      box-shadow: var(--shadow-soft);
-    }
-    .brand-text { display: grid; gap: 3px; }
-    .brand-text strong { font-size: 1rem; }
-    .brand-text span { font-size: 0.82rem; color: var(--muted); }
-    .nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; justify-content: end; }
-    .nav-links a {
-      min-height: 42px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      color: var(--muted);
-      font-weight: 600;
-    }
-    .nav-links a:hover, .nav-links a.nav-link-active {
-      background: rgba(166, 119, 45, 0.14);
-      color: var(--text);
-    }
-    .nav-cta {
-      color: #fff !important;
-      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      box-shadow: 0 14px 32px rgba(81, 98, 85, 0.22);
-    }
-
-    main { padding: 30px 0 48px; }
-    .eyebrow, .badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 36px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(215, 184, 130, 0.94);
-      background: rgba(166, 119, 45, 0.14);
-      color: var(--gold);
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-    h1, h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; letter-spacing: -0.02em; margin: 0; }
-    h1 { font-size: clamp(2.8rem, 6vw, 4.4rem); margin-top: 16px; }
-    h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); }
-    h3 { margin: 0; font-size: 1.18rem; color: var(--text); }
-    p { color: var(--muted); line-height: 1.75; }
-
-    .hero, .form-card, .side-card, .footer-shell {
+      display: flex; justify-content: space-between; align-items: center; gap: 18px;
+      padding: 12px 16px;
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      background: rgba(251, 246, 238, 0.94);
+      border-radius: 20px;
+      background: rgba(16, 18, 16, 0.94);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    }
+    .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--text); }
+    .brand img { width: 44px; height: 44px; border-radius: 50%; object-fit: contain; background: rgba(255, 255, 255, 0.94); }
+    .brand-text { display: grid; gap: 2px; }
+    .brand-text strong { font-size: 1rem; }
+    .brand-text span { font-size: 0.8rem; color: var(--muted); }
+    .nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; justify-content: end; }
+    .nav-links a {
+      min-height: 40px; padding: 9px 14px; border-radius: 999px;
+      border: 1px solid var(--border); background: var(--surface);
+      color: var(--muted); font-weight: 600;
+    }
+    .nav-links a:hover, .nav-links a.nav-link-active { background: rgba(200, 135, 58, 0.14); border-color: rgba(200, 135, 58, 0.5); color: var(--text); }
+    .nav-cta { color: #F2EEE6 !important; background: var(--accent) !important; border-color: var(--accent) !important; }
+
+    /* Títulos */
+    h1, h2 {
+      font-family: "Big Shoulders Display", "Arial Narrow", sans-serif;
+      font-weight: 800; text-transform: uppercase; letter-spacing: 0.01em; line-height: 0.95; margin: 0;
+    }
+    h1 { font-size: clamp(2.3rem, 6vw, 3.6rem); margin-top: 14px; }
+    h2 { font-size: clamp(1.7rem, 4vw, 2.2rem); }
+    h3 { margin: 0; font-size: 1.12rem; color: var(--text); }
+    p { color: var(--muted); line-height: 1.7; }
+    .eyebrow {
+      display: inline-flex; align-items: center; min-height: 32px; padding: 6px 12px; border-radius: 999px;
+      border: 1px solid rgba(200, 135, 58, 0.45); background: rgba(200, 135, 58, 0.14);
+      color: var(--gold-soft); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+    }
+
+    main { padding: 26px 0 48px; }
+    .hero {
+      padding: 26px 26px 24px;
+      border: 1px solid var(--border); border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at top right, rgba(31, 77, 58, 0.45), transparent 50%),
+        linear-gradient(180deg, #1E221F, #191C1A);
       box-shadow: var(--shadow);
     }
+    .hero p { margin: 12px 0 0; max-width: 62ch; font-size: 0.98rem; }
+    .hero-points { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 16px 0 0; padding: 0; list-style: none; }
+    .hero-points li { display: inline-flex; align-items: center; gap: 8px; color: var(--text); font-size: 0.9rem; font-weight: 600; }
+    .hero-points li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px rgba(200, 135, 58, 0.18); }
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 20px 24px;
-      border-color: rgba(176, 139, 83, 0.78);
-      background:
-        radial-gradient(circle at top right, rgba(166, 119, 45, 0.2), transparent 34%),
-        radial-gradient(circle at bottom left, rgba(66, 90, 71, 0.08), transparent 28%),
-        linear-gradient(180deg, rgba(251, 246, 238, 0.99), rgba(238, 228, 211, 0.97));
-    }
+    .grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr); gap: 22px; margin-top: 22px; align-items: start; }
 
-    .hero h1 {
-      max-width: 22ch;
-      font-size: clamp(1.6rem, 3.2vw, 2.2rem);
-      margin-top: 10px;
-      color: var(--text);
+    /* Formulário */
+    .form-card, .side-card {
+      border: 1px solid var(--border); border-radius: var(--radius-lg);
+      background: var(--surface); box-shadow: var(--shadow); padding: 28px;
     }
-
-    .hero p {
-      margin: 10px 0 0;
-      max-width: 62ch;
-      color: var(--muted);
-      font-size: 0.94rem;
-      line-height: 1.65;
+    .form-card > p { margin: 10px 0 0; max-width: 60ch; }
+    form { display: grid; gap: 22px; margin-top: 20px; }
+    fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 16px; min-width: 0; }
+    legend {
+      display: flex; align-items: center; gap: 10px; padding: 0; margin-bottom: 14px;
+      font-weight: 800; font-size: 1rem; color: var(--text);
     }
-
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
-      gap: 22px;
-      margin-top: 20px;
-      align-items: start;
+    .step-num {
+      display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
+      background: var(--gold); color: #141614; font-size: 0.85rem; font-weight: 800;
     }
-
-    .form-card, .side-card { padding: 28px; }
-    .form-card {
-      border-color: rgba(176, 139, 83, 0.78);
-      background:
-        linear-gradient(180deg, rgba(251, 246, 238, 0.99), rgba(239, 229, 211, 0.97));
-      box-shadow: 0 22px 46px rgba(31, 25, 19, 0.09);
-    }
-    .form-card > p:first-of-type {
-      margin: 10px 0 0;
-      max-width: 60ch;
-    }
-
-    aside {
-      display: grid;
-      gap: 18px;
-      align-content: start;
-    }
-
-    .side-card {
-      border-color: rgba(207, 191, 162, 0.92);
-      background:
-        linear-gradient(180deg, rgba(251, 246, 238, 0.97), rgba(236, 225, 206, 0.94));
-      box-shadow: 0 16px 34px rgba(31, 25, 19, 0.07);
-    }
-    .side-card + .side-card { margin-top: 0; }
-    .side-card-highlight {
-      border-color: rgba(176, 139, 83, 0.82);
-      background:
-        radial-gradient(circle at top right, rgba(166, 119, 45, 0.16), transparent 36%),
-        linear-gradient(180deg, rgba(250, 244, 233, 0.99), rgba(235, 223, 203, 0.96));
-    }
-
-    form { display: grid; gap: 18px; margin-top: 18px; }
     .field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 0.94rem;
-      font-weight: 700;
-      color: var(--text);
+    label { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 8px; font-size: 0.92rem; font-weight: 700; color: var(--text); }
+    .req, .opt { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.02em; }
+    .req { color: var(--gold-soft); }
+    .opt { color: var(--muted); }
+    .hint { margin: 6px 0 0; font-size: 0.8rem; line-height: 1.5; color: var(--muted); }
+    .hint-private::before { content: "🔒 "; }
+    input:not([type="checkbox"]):not([type="radio"]), textarea {
+      width: 100%; min-height: 52px; padding: 0 16px;
+      border-radius: var(--radius-md); border: 1px solid var(--border-strong);
+      background: #171A18; color: var(--text);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
-    input:not([type="checkbox"]), select, textarea {
-      width: 100%;
-      min-height: 54px;
-      padding: 0 16px;
-      border-radius: 16px;
-      border: 1px solid rgba(176, 139, 83, 0.72);
-      background:
-        linear-gradient(180deg, rgba(252, 247, 239, 0.99), rgba(239, 229, 211, 0.94));
-      color: var(--text);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46);
-      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    textarea { min-height: 130px; padding: 14px 16px; resize: vertical; }
+    input::placeholder, textarea::placeholder { color: #8C8679; }
+    input:not([type="checkbox"]):not([type="radio"]):hover, textarea:hover { border-color: #6A746C; }
+    input:not([type="checkbox"]):not([type="radio"]):focus, textarea:focus {
+      outline: none; border-color: var(--gold); box-shadow: 0 0 0 4px rgba(200, 135, 58, 0.18);
     }
-    textarea {
-      min-height: 150px;
-      padding: 14px 16px;
-      resize: vertical;
+    input:not([type="checkbox"]):not([type="radio"]):not(:placeholder-shown):invalid { border-color: var(--danger); }
+
+    /* Tipo de pedido: cartões em vez de lista suspensa */
+    .choice-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .choice { position: relative; display: block; margin: 0; cursor: pointer; }
+    .choice input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+    .choice span {
+      display: grid; gap: 4px; height: 100%; padding: 14px; border-radius: var(--radius-md);
+      border: 1px solid var(--border-strong); background: #171A18; transition: border-color 0.2s ease, background 0.2s ease;
     }
-    input:not([type="checkbox"]):hover,
-    select:hover,
-    textarea:hover {
-      border-color: rgba(166, 119, 45, 0.82);
-      background:
-        linear-gradient(180deg, rgba(252, 249, 242, 1), rgba(238, 228, 211, 0.95));
-    }
-    input:not([type="checkbox"]):focus,
-    select:focus,
-    textarea:focus {
-      outline: none;
-      border-color: rgba(66, 90, 71, 0.9);
-      background: rgba(251, 247, 239, 0.98);
-      box-shadow:
-        0 0 0 4px rgba(66, 90, 71, 0.12),
-        0 14px 28px rgba(34, 32, 28, 0.06);
-    }
-    input:not([type="checkbox"])::placeholder,
-    textarea::placeholder {
-      color: #74685b;
-    }
-    .checkbox {
-      display: flex;
-      gap: 10px;
-      align-items: start;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-    .checkbox input {
-      width: auto;
-      min-height: auto;
-      margin-top: 4px;
-      accent-color: var(--accent);
-    }
-    .checkbox a {
-      color: var(--accent-strong);
-      font-weight: 600;
-    }
+    .choice strong { font-size: 0.95rem; color: var(--text); }
+    .choice small { font-size: 0.78rem; line-height: 1.45; color: var(--muted); font-weight: 500; }
+    .choice input:checked + span { border-color: var(--gold); background: rgba(200, 135, 58, 0.12); box-shadow: 0 0 0 1px var(--gold) inset; }
+    .choice input:focus-visible + span { outline: 3px solid rgba(227, 168, 99, 0.55); outline-offset: 2px; }
+
+    .checkbox { display: flex; gap: 12px; align-items: flex-start; color: var(--muted); line-height: 1.6; font-size: 0.92rem; font-weight: 500; margin: 0; }
+    .checkbox input { width: 20px; height: 20px; margin-top: 2px; flex: none; accent-color: var(--gold); }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 50px;
-      padding: 0 18px;
-      border-radius: 16px;
-      border: 1px solid transparent;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 52px; padding: 0 20px; border-radius: var(--radius-md); border: 1px solid transparent;
+      font-weight: 700; cursor: pointer; transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
     }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary {
-      color: #fff;
-      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      box-shadow: 0 16px 36px rgba(66, 90, 71, 0.2);
-    }
-    .btn-primary:hover { box-shadow: 0 18px 40px rgba(66, 90, 71, 0.24); }
-    .btn-secondary {
-      color: var(--text);
-      border-color: rgba(176, 139, 83, 0.78);
-      background: rgba(248, 239, 225, 0.96);
-      box-shadow: 0 12px 24px rgba(31, 25, 19, 0.06);
-    }
-    .btn-secondary:hover {
-      border-color: rgba(166, 119, 45, 0.82);
-      background: rgba(252, 247, 239, 0.98);
-    }
-    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { color: #141614; background: var(--gold); box-shadow: 0 10px 26px rgba(200, 135, 58, 0.25); }
+    .btn-primary:hover { background: var(--gold-soft); }
+    .btn-primary[disabled] { opacity: 0.7; cursor: progress; transform: none; }
+    .btn-secondary { color: var(--text); background: transparent; border-color: var(--border-strong); }
+    .btn-secondary:hover { border-color: var(--gold); }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .form-status { margin: 0; padding: 12px 14px; border-radius: var(--radius-md); font-size: 0.92rem; line-height: 1.5; }
+    .form-status[hidden] { display: none; }
+    .form-status.is-error { color: #F6D5CE; background: rgba(229, 139, 122, 0.12); border: 1px solid rgba(229, 139, 122, 0.45); }
 
-    .side-card h3 {
-      font-size: 1.22rem;
-      margin-bottom: 2px;
-    }
-    .side-card ul { margin: 16px 0 0; padding-left: 18px; color: var(--muted); line-height: 1.75; }
+    /* Coluna lateral */
+    aside { display: grid; gap: 18px; align-content: start; }
+    .side-card ul { margin: 14px 0 0; padding-left: 18px; color: var(--muted); line-height: 1.7; }
     .side-card li::marker { color: var(--gold); }
     .side-card p { margin: 12px 0 0; }
-    .badge {
-      min-height: 32px;
-      padding: 6px 12px;
-      background: rgba(166, 119, 45, 0.14);
-      border-color: rgba(215, 184, 130, 0.94);
-      color: var(--gold);
-    }
+    .side-card-highlight { background: linear-gradient(150deg, #1F4D3A, #143326); border-color: #1F4D3A; }
+    .side-card-highlight p, .side-card-highlight li { color: #D9D3C8; }
+    .side-card-highlight .eyebrow { margin-bottom: 12px; }
 
     footer { padding: 0 0 48px; }
     .footer-shell {
-      display: flex;
-      justify-content: space-between;
-      align-items: start;
-      gap: 18px;
-      flex-wrap: wrap;
-      padding: 24px 28px;
-      border-color: rgba(207, 191, 162, 0.92);
-      background: rgba(251, 246, 238, 0.94);
+      display: flex; justify-content: space-between; align-items: start; gap: 18px; flex-wrap: wrap;
+      padding: 24px 28px; border: 1px solid var(--border); border-radius: var(--radius-lg); background: #0C0E0C;
     }
-    .footer-intro { display: grid; gap: 14px; max-width: 48ch; }
-    .footer-brand { display: inline-flex; align-items: center; gap: 14px; }
-    .footer-brand img {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      object-fit: contain;
-      background: rgba(255, 255, 255, 0.82);
-    }
-    .footer-links { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-    .footer-links a { color: var(--accent-strong); font-weight: 700; text-decoration: none; }
+    .footer-intro { display: grid; gap: 12px; max-width: 48ch; }
+    .footer-intro p { margin: 0; }
+    .footer-brand { display: inline-flex; align-items: center; gap: 12px; color: var(--text); }
+    .footer-brand img { width: 40px; height: 40px; border-radius: 50%; object-fit: contain; background: rgba(255, 255, 255, 0.82); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+    .footer-links a { font-weight: 700; text-decoration: none; }
 
     @media (max-width: 920px) {
       .grid, .field-grid { grid-template-columns: 1fr; }
+      .choice-grid { grid-template-columns: 1fr; }
     }
-
     @media (max-width: 1100px) {
-      .nav { flex-direction: column; align-items: stretch; border-radius: 28px; }
-      .brand { justify-content: center; }
-      .nav-links, .cta-row, .footer-links { flex-direction: column; align-items: stretch; }
-      .nav-links a, .btn { width: 100%; }
-      .hero, .form-card, .side-card, .footer-shell { padding: 22px; }
+      .nav { flex-direction: column; align-items: stretch; }
+      .nav-links { flex-direction: column; align-items: stretch; }
+      .nav-links a { width: 100%; }
+    }
+    @media (max-width: 600px) {
+      .hero, .form-card, .side-card, .footer-shell { padding: 20px; }
+      .cta-row { flex-direction: column; align-items: stretch; }
+      .btn { width: 100%; }
     }
   </style>
   <link rel="stylesheet" href="mobile-nav.css" />
@@ -367,6 +242,21 @@
       event.preventDefault();
       const form = event.target;
       const dados = new FormData(form);
+      const botao = form.querySelector('[type="submit"]');
+      const estado = document.getElementById("formStatus");
+      const textoBotao = botao.textContent;
+
+      function mostrarErro() {
+        botao.disabled = false;
+        botao.textContent = textoBotao;
+        estado.hidden = false;
+        estado.className = "form-status is-error";
+        estado.textContent = "Não foi possível enviar o pedido agora. Verifica a ligação e tenta novamente dentro de alguns minutos.";
+      }
+
+      botao.disabled = true;
+      botao.textContent = "A enviar…";
+      estado.hidden = true;
 
       fetch(form.action, {
         method: form.method,
@@ -378,11 +268,9 @@
         if (resposta.ok) {
           window.location.href = "obrigado.html";
         } else {
-          alert("Não foi possível enviar o pedido agora. Tenta novamente dentro de alguns minutos.");
+          mostrarErro();
         }
-      }).catch(function() {
-        alert("Não foi possível enviar o pedido agora. Tenta novamente dentro de alguns minutos.");
-      });
+      }).catch(mostrarErro);
     }
   </script>
   <script src="mobile-nav.js" defer></script>
@@ -431,79 +319,99 @@
         <span class="eyebrow">Adicionar ao mapa</span>
         <h1>Adiciona ou atualiza a tua barbearia.</h1>
         <p>Envia os dados da tua barbearia para aparecer no mapa, na página da tua cidade e num perfil completo com morada, contactos, links úteis e informação atualizada.</p>
+        <ul class="hero-points">
+          <li>Gratuito, sem comissões</li>
+          <li>Demora poucos minutos</li>
+          <li>Podes pedir alteração ou remoção</li>
+        </ul>
       </section>
 
       <div class="grid">
         <section class="form-card">
           <h2>Dados da tua barbearia</h2>
-            <p>Quanto mais informação enviares, mais completo fica o perfil. Uma ficha completa ajuda a gerar mais contactos e a aparecer melhor no diretório local.</p>
+          <p>Quanto mais informação enviares, mais completo fica o perfil. Uma ficha completa ajuda a gerar mais contactos e a aparecer melhor no diretório local.</p>
 
           <form action="https://formspree.io/f/mkgjknvn" method="POST" onsubmit="redirecionarDepoisDeSubmeter(event)">
             <input type="hidden" name="_subject" value="Novo pedido de entrada no mapa do OndeCortar.pt" />
             <input type="hidden" name="origem" value="registar.html" />
 
-            <div class="field-grid">
-              <div>
-                <label for="nome">Nome da barbearia</label>
-                <input type="text" id="nome" name="nome" placeholder="Como queres que a barbearia apareça no perfil" required />
+            <fieldset>
+              <legend><span class="step-num" aria-hidden="true">1</span> O que queres fazer?</legend>
+              <div class="choice-grid">
+                <label class="choice">
+                  <input type="radio" name="tipo_pedido" value="adicionar-gratuitamente" checked />
+                  <span><strong>Adicionar</strong><small>A barbearia ainda não está no mapa.</small></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="tipo_pedido" value="atualizar-ficha" />
+                  <span><strong>Atualizar</strong><small>Já existe um perfil e queres completá-lo.</small></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="tipo_pedido" value="corrigir-dados" />
+                  <span><strong>Corrigir</strong><small>Há dados errados no perfil publicado.</small></span>
+                </label>
               </div>
-              <div>
-                <label for="responsavel">Nome do responsável</label>
-                <input type="text" id="responsavel" name="responsavel" placeholder="Opcional — ajuda a identificar o pedido" />
-              </div>
-            </div>
+            </fieldset>
 
-            <div class="field-grid">
+            <fieldset>
+              <legend><span class="step-num" aria-hidden="true">2</span> A barbearia</legend>
               <div>
-                <label for="email">Email de contacto</label>
-                <input type="email" id="email" name="email" placeholder="Email para validação e contacto" required />
+                <label for="nome">Nome da barbearia <span class="req">Obrigatório</span></label>
+                <input type="text" id="nome" name="nome" autocomplete="organization" placeholder="Como deve aparecer no perfil" required />
               </div>
-              <div>
-                <label for="telefone">Telefone principal</label>
-                <input type="text" id="telefone" name="telefone" placeholder="Número que deve ficar clicável no perfil" required />
+              <div class="field-grid">
+                <div>
+                  <label for="cidade">Cidade <span class="req">Obrigatório</span></label>
+                  <input type="text" id="cidade" name="cidade" autocomplete="address-level2" placeholder="Ex.: Lisboa, Porto, Braga…" required />
+                </div>
+                <div>
+                  <label for="morada">Morada completa <span class="req">Obrigatório</span></label>
+                  <input type="text" id="morada" name="morada" autocomplete="street-address" placeholder="Rua, número, código postal" required />
+                </div>
               </div>
-            </div>
+            </fieldset>
 
-            <div class="field-grid">
-              <div>
-                <label for="cidade">Cidade</label>
-                <input type="text" id="cidade" name="cidade" placeholder="Ex.: Lisboa, Porto, Braga..." required />
+            <fieldset>
+              <legend><span class="step-num" aria-hidden="true">3</span> Contactos e horário</legend>
+              <div class="field-grid">
+                <div>
+                  <label for="telefone">Telefone <span class="req">Obrigatório</span></label>
+                  <input type="tel" id="telefone" name="telefone" inputmode="tel" autocomplete="tel" placeholder="Ex.: 912 345 678" required />
+                  <p class="hint">Aparece no perfil com o botão "Ligar".</p>
+                </div>
+                <div>
+                  <label for="email">Email <span class="req">Obrigatório</span></label>
+                  <input type="email" id="email" name="email" inputmode="email" autocomplete="email" placeholder="Para validarmos o pedido" required />
+                  <p class="hint hint-private">Não é publicado — só para te contactarmos.</p>
+                </div>
+              </div>
+              <div class="field-grid">
+                <div>
+                  <label for="presenca_online">Instagram, site ou marcações <span class="opt">Opcional</span></label>
+                  <input type="text" id="presenca_online" name="presenca_online" inputmode="url" autocomplete="url" placeholder="Link ou @perfil" />
+                </div>
+                <div>
+                  <label for="horario">Horário <span class="opt">Opcional</span></label>
+                  <input type="text" id="horario" name="horario" placeholder="Ex.: Seg-Sex 9h-19h; Sáb 9h-13h" />
+                </div>
               </div>
               <div>
-                <label for="morada">Morada completa</label>
-                <input type="text" id="morada" name="morada" placeholder="Rua, número, código postal e localidade" required />
-              </div>
-            </div>
-
-            <div class="field-grid">
-              <div>
-                <label for="presenca_online">Instagram, site ou link de marcação</label>
-                <input type="text" id="presenca_online" name="presenca_online" placeholder="Cole o link do perfil, website ou sistema de reservas" />
+                <label for="responsavel">Nome do responsável <span class="opt">Opcional</span></label>
+                <input type="text" id="responsavel" name="responsavel" autocomplete="name" placeholder="Ajuda a identificar o pedido" />
+                <p class="hint hint-private">Não é publicado.</p>
               </div>
               <div>
-                <label for="horario">Horário de funcionamento</label>
-                <input type="text" id="horario" name="horario" placeholder="Ex.: Seg a Sáb, 09h às 20h" />
+                <label for="mensagem">Informação adicional <span class="opt">Opcional</span></label>
+                <textarea id="mensagem" name="mensagem" placeholder="Serviços, especialidades, preços, se aceita marcações… tudo o que ajude a publicar um perfil claro."></textarea>
               </div>
-            </div>
-
-            <div>
-              <label for="tipo_pedido">Tipo de pedido</label>
-              <select id="tipo_pedido" name="tipo_pedido">
-                <option value="adicionar-gratuitamente">Adicionar gratuitamente ao mapa</option>
-              <option value="atualizar-ficha">Atualizar um perfil já existente</option>
-                <option value="corrigir-dados">Corrigir dados da barbearia</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="mensagem">Informação adicional</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Inclui serviços, especialidades, preços, forma de atendimento ou detalhes úteis para publicar um perfil claro e preciso."></textarea>
-            </div>
+            </fieldset>
 
             <label class="checkbox">
               <input type="checkbox" name="consentimento" required />
-              <span>Autorizo o OndeCortar.pt a tratar estes dados para publicar ou atualizar o perfil da barbearia no diretório. Li a <a href="privacidade.html" style="text-decoration: underline;">política de privacidade</a>.</span>
+              <span>Autorizo o OndeCortar.pt a tratar estes dados para publicar ou atualizar o perfil da barbearia no diretório. Li a <a href="privacidade.html">política de privacidade</a>.</span>
             </label>
+
+            <p id="formStatus" class="form-status" role="alert" hidden></p>
 
             <div class="cta-row">
               <button class="btn btn-primary" type="submit">Enviar dados para publicar a ficha</button>
@@ -515,7 +423,7 @@
         <aside>
           <div class="side-card">
             <h3>O que convém enviar</h3>
-          <p>Estes dados ajudam a publicar uma ficha completa, útil para clientes e mais visível no Google.</p>
+            <p>Estes dados ajudam a publicar uma ficha completa, útil para clientes e mais visível no Google.</p>
             <ul>
               <li>Nome da barbearia, cidade e morada completa.</li>
               <li>Telefone, Instagram, website ou link de marcação.</li>
@@ -525,12 +433,12 @@
           </div>
 
           <div class="side-card side-card-highlight">
-            <span class="badge">Gratuito</span>
+            <span class="eyebrow">Gratuito</span>
             <h3>Envio e atualização simples</h3>
-          <p>Podes enviar ou atualizar os dados da tua barbearia sem custo. Um perfil completo pode incluir morada, telefone, mapa, horário, website, Instagram e entrada nas páginas locais.</p>
-          <div class="cta-row" style="margin-top: 14px;">
-            <a class="btn btn-secondary" href="barbearias/barbearia-couto/">Ver exemplo de perfil</a>
-          </div>
+            <p>Podes enviar ou atualizar os dados da tua barbearia sem custo. Um perfil completo pode incluir morada, telefone, mapa, horário, website, Instagram e entrada nas páginas locais.</p>
+            <div class="cta-row" style="margin-top: 16px;">
+              <a class="btn btn-secondary" href="barbearias/barbearia-couto/">Ver exemplo de perfil</a>
+            </div>
           </div>
         </aside>
       </div>
