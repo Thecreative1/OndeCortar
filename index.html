@@ -1467,6 +1467,33 @@
 
     /* Estilo dos marcadores individuais (.custom-marker): está em oc-style.css, carregado depois. */
 
+    /* Com o popup aberto, o contador "N barbearias no mapa" sai do caminho (em todos os layouts).
+       visibility e não opacity: oc-style.css força "opacity: 1 !important" no contador. */
+    .hero-map-shell.has-popup .hero-map-count {
+      visibility: hidden;
+    }
+
+    /* Mobile: o mapa tem ~260-290px; um popup completo (~210px) tapava-o e empurrava o marcador
+       para o fundo. Fica só o essencial — o telefone já está no botão "Ligar". */
+    @media (max-width: 860px) {
+      .hero-map-shell {
+        scroll-margin-top: 64px; /* cabeçalho fixo (52px) + folga, para "Ver no mapa" */
+      }
+
+      .popup-card .popup-loc,
+      .popup-card .popup-tel {
+        display: none;
+      }
+
+      .popup-card .popup-morada,
+      .popup-card .popup-horario {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+
     /* Lista estática gerada pelo build (só visível sem JS; o renderResults substitui-a) */
     .ssr-list {
       list-style: none;
@@ -5567,11 +5594,11 @@
         const entries = directory.getGeoHierarchy ? directory.getGeoHierarchy(barber) : [];
 
         if (!entries.length) {
-          return '<p><b>Localização:</b> Localização a confirmar</p>';
+          return '<p class="popup-loc"><b>Localização:</b> Localização a confirmar</p>';
         }
 
         return entries.map(function(entry) {
-          return "<p><b>" + directory.escapeHtml(entry.label) + ":</b> " + directory.escapeHtml(entry.value) + "</p>";
+          return '<p class="popup-loc"><b>' + directory.escapeHtml(entry.label) + ":</b> " + directory.escapeHtml(entry.value) + "</p>";
         }).join("");
       }
 
@@ -5870,9 +5897,9 @@
           '<div class="popup-card">' +
             "<strong>" + directory.escapeHtml(barber.name) + "</strong>" +
             buildPopupLocationRows(barber) +
-            (barber.morada ? "<p><b>Morada:</b> " + directory.escapeHtml(barber.morada) + "</p>" : "") +
-            (barber.telefone ? "<p><b>Telefone:</b> " + directory.escapeHtml(barber.telefone) + "</p>" : "") +
-            (barber.horario ? "<p><b>Horário:</b> " + directory.escapeHtml(barber.horario) + "</p>" : "") +
+            (barber.morada ? '<p class="popup-morada"><b>Morada:</b> ' + directory.escapeHtml(barber.morada) + "</p>" : "") +
+            (barber.telefone ? '<p class="popup-tel"><b>Telefone:</b> ' + directory.escapeHtml(barber.telefone) + "</p>" : "") +
+            (barber.horario ? '<p class="popup-horario"><b>Horário:</b> ' + directory.escapeHtml(barber.horario) + "</p>" : "") +
             '<div class="popup-actions">' + actions.join("") + "</div>" +
           "</div>"
         );
