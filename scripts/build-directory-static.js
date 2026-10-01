@@ -1161,7 +1161,6 @@ function renderProfilePage(barber, citiesMap) {
   const lastmodDate = barber.lastmod ? new Date(barber.lastmod) : null;
   const daysSinceUpdate = lastmodDate ? Math.floor((Date.now() - lastmodDate.getTime()) / 86400000) : 999;
   const isUpdatedRecent = daysSinceUpdate <= 90;
-  const isMinimal = !barber.horario && !barber.email && !barber.website;
 
   // ── SEO
   const seo = buildProfileSeo(barber);
@@ -1253,25 +1252,45 @@ function renderProfilePage(barber, citiesMap) {
     "<\/a>";
   }
 
-  function ownerBlock(isPromoted) {
-    const eyebrow  = isPromoted ? "ESTA FICHA ESTÁ INCOMPLETA" : "ÉS O DONO?";
-    const headline = isPromoted
-      ? 'Se és o dono, podes <em style="font-style:italic;color:var(--gold-soft)">melhorar</em> esta página.'
-      : 'És o dono desta<br><span style="font-style:italic;color:var(--gold-soft)">barbearia</span>?';
-    const body = isPromoted
-      ? "Adiciona horário, fotografias, serviços e website. Quanto mais completa a ficha, mais clientes vais receber."
-      : "Atualiza os teus dados, adiciona fotografias e serviços, e torna esta página mais atrativa para quem te procura.";
-    const bullets = isPromoted ? "" :
-      '<ul style="list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:10px;font-size:13.5px;color:rgba(242,236,223,.85)">' +
-      ["Adicionar fotografias e serviços","Definir horário e contactos certos","Aparecer destacado na cidade"].map(function(t) {
-        return '<li style="display:flex;align-items:center;gap:10px"><span style="color:var(--gold-soft)">' + iCheck + "<\/span>" + H(t) + "<\/li>";
-      }).join("") + "<\/ul>";
-    return '<div class="oc-card oc-card--ink oc-owner oc-owner-inner" style="padding:26px">' +
-      '<div class="oc-eyebrow" style="color:var(--gold-soft);margin-bottom:14px">' + H(eyebrow) + "<\/div>" +
-      '<h2 class="oc-owner__headline" style="font-family:var(--serif);font-weight:700;font-size:' + (isPromoted ? "28" : "36") + 'px;letter-spacing:-0.025em;line-height:1.02;margin-bottom:12px">' + headline + "<\/h2>" +
-      '<p style="font-size:14.5px;line-height:1.55;color:rgba(242,236,223,.78);margin-bottom:' + (isPromoted ? "18" : "22") + 'px">' + H(body) + "<\/p>" +
-      bullets +
-      '<a href="' + H(prefix) + 'registar.html" class="oc-btn oc-btn--gold" style="width:100%">' + (isPromoted ? "Reclamar e completar" : "Atualizar perfil") + " " + iArrow + "<\/a>" +
+  // Cartão "És o dono?" — igual em todas as fichas e sempre no mesmo sítio (depois de
+  // Contactos/Horário/Mapa). A lista mostra só factos: que dados a ficha tem e quais faltam.
+  function ownerBlock() {
+    const fields = [
+      ["Morada", barber.morada],
+      ["Telefone", barber.telefone],
+      ["Horário", barber.horario],
+      ["Website", barber.website],
+      ["Instagram", barber.instagram],
+      ["Email", barber.email]
+    ];
+    const missing = fields.filter(function(f) { return !f[1]; }).map(function(f) {
+      return f[0] === "Instagram" ? f[0] : f[0].toLowerCase();
+    });
+    const filled = fields.length - missing.length;
+    const complete = missing.length === 0;
+    const body = complete
+      ? "A ficha tem todos os dados principais. Se alguma coisa mudar — horário, contactos, morada — atualiza-a para quem te procura ver a informação certa."
+      : "Faltam " + joinNatural(missing) + ". Quanto mais completa a ficha, mais fácil é os clientes encontrarem-te e contactarem-te.";
+    const checklist = fields.map(function(f) {
+      return '<li class="oc-owner-check__item' + (f[1] ? " is-done" : "") + '">' +
+        '<span class="oc-owner-check__mark" aria-hidden="true">' + (f[1] ? iCheck : "") + "<\/span>" +
+        H(f[0]) + '<span class="oc-visually-hidden">' + (f[1] ? " (preenchido)" : " (em falta)") + "<\/span>" +
+      "<\/li>";
+    }).join("");
+    return '<div class="oc-card oc-card--ink oc-owner oc-owner-inner">' +
+      '<div class="oc-owner-grid">' +
+        '<div class="oc-owner__copy">' +
+          '<div class="oc-eyebrow oc-owner__eyebrow">És o dono desta barbearia?<\/div>' +
+          '<p class="oc-owner__headline">' + (complete ? "Mantém esta página <em>em dia</em>." : "Completa esta <em>página</em>.") + "<\/p>" +
+          '<p class="oc-owner__body">' + H(body) + "<\/p>" +
+        "<\/div>" +
+        '<div class="oc-owner__panel">' +
+          '<div class="oc-owner__progress-label"><span>Ficha<\/span><span class="oc-mono">' + filled + "\/" + fields.length + " completa<\/span><\/div>" +
+          '<div class="oc-owner__progress" aria-hidden="true"><span style="width:' + Math.round(100 * filled / fields.length) + '%"><\/span><\/div>' +
+          '<ul class="oc-owner-check">' + checklist + "<\/ul>" +
+          '<a href="' + H(prefix) + 'registar.html" class="oc-btn oc-btn--gold oc-owner__cta">' + (complete ? "Atualizar perfil" : "Reclamar e completar") + " " + iArrow + "<\/a>" +
+        "<\/div>" +
+      "<\/div>" +
     "<\/div>";
   }
 
@@ -1373,10 +1392,10 @@ function renderProfilePage(barber, citiesMap) {
     "<\/div>";
 
   // ── Owner section wrapper
-  function ownerSection(promoted) {
+  function ownerSection() {
     return '<section class="oc-owner-wrap oc-section" style="padding:8px 20px 28px" aria-labelledby="dono-h">' +
       '<h2 id="dono-h" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">És o dono desta barbearia?<\/h2>' +
-      ownerBlock(promoted) +
+      ownerBlock() +
     "<\/section>";
   }
 
@@ -1434,12 +1453,11 @@ function renderProfilePage(barber, citiesMap) {
     '<span class="oc-crumb__sep">\/<\/span><span style="color:var(--ink)">' + H(barber.name) + "<\/span>";
 
   // ── Full page
-  return "<!DOCTYPE html>\n<html lang=\"pt-PT\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <meta name=\"theme-color\" content=\"#14110D\" />\n  <title>" + H(title) + "<\/title>\n  <meta name=\"description\" content=\"" + H(description) + "\" />\n  <link rel=\"canonical\" href=\"" + H(canonical) + "\" />\n  <meta property=\"og:title\" content=\"" + H(title) + "\" />\n  <meta property=\"og:description\" content=\"" + H(description) + "\" />\n  <meta property=\"og:url\" content=\"" + H(canonical) + "\" />\n  <meta property=\"og:type\" content=\"website\" />\n  <meta property=\"og:image\" content=\"" + H(DEFAULT_OG_IMAGE) + "\" />\n  <link rel=\"icon\" href=\"" + H(prefix) + "favicon.ico\" type=\"image/x-icon\" />\n  <link rel=\"apple-touch-icon\" href=\"" + H(prefix) + "apple-touch-icon.png\" />\n  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n  <link href=\"https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap\" rel=\"stylesheet\" />" + leafletHead + "\n  <link rel=\"stylesheet\" href=\"" + H(prefix) + "barbearia-profile.css?v=20260720-loja\" />\n  <script defer src=\"" + H(prefix) + "oc-analytics.js\"><\/script>\n" + jsonLd + "\n<\/head>\n<body>\n\n  <header class=\"oc-topnav oc-mobile-nav\">\n    <a class=\"oc-topnav__back\" href=\"" + H(prefix) + "\">" + iArrowL + " Barbearias<\/a>\n    <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n    <a href=\"" + H(canonical) + "\" class=\"oc-topnav__action\" aria-label=\"Partilhar\">" + iShare + "<\/a>\n  <\/header>\n\n  <header class=\"oc-desktop-nav oc-desktop-only\" style=\"display:none\">\n    <div style=\"display:flex;align-items:center;gap:32px\">\n      <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n      <nav class=\"oc-desktop-nav__links\" aria-label=\"Navegação principal\">\n        <a href=\"" + H(prefix) + "\">Barbearias<\/a>\n        <a href=\"" + H(prefix) + "cidades\/\">Cidades<\/a>\n        <a href=\"" + H(prefix) + "registar.html\">Adicionar barbearia<\/a>\n      <\/nav>\n    <\/div>\n    <div class=\"oc-desktop-nav__actions\">\n      <a href=\"" + H(prefix) + "registar.html\" class=\"oc-btn oc-btn--ghost\" style=\"height:38px;padding:0 16px;font-size:13px\">Reclamar esta barbearia<\/a>\n      <a href=\"" + H(prefix) + "registar.html\" class=\"oc-btn oc-btn--primary\" style=\"height:38px;padding:0 16px;font-size:13px\">Atualizar perfil " + iArrow + "<\/a>\n    <\/div>\n  <\/header>\n\n  <div class=\"oc-page\">\n    <nav class=\"oc-crumb-wrap oc-section\" style=\"padding:14px 20px 0\" aria-label=\"breadcrumb\">\n      <div class=\"oc-crumb\">" + crumbItems + "<\/div>\n    <\/nav>\n\n    <main>\n      <article itemscope itemtype=\"https://schema.org/HairSalon\">\n" +
+  return "<!DOCTYPE html>\n<html lang=\"pt-PT\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <meta name=\"theme-color\" content=\"#14110D\" />\n  <title>" + H(title) + "<\/title>\n  <meta name=\"description\" content=\"" + H(description) + "\" />\n  <link rel=\"canonical\" href=\"" + H(canonical) + "\" />\n  <meta property=\"og:title\" content=\"" + H(title) + "\" />\n  <meta property=\"og:description\" content=\"" + H(description) + "\" />\n  <meta property=\"og:url\" content=\"" + H(canonical) + "\" />\n  <meta property=\"og:type\" content=\"website\" />\n  <meta property=\"og:image\" content=\"" + H(DEFAULT_OG_IMAGE) + "\" />\n  <link rel=\"icon\" href=\"" + H(prefix) + "favicon.ico\" type=\"image/x-icon\" />\n  <link rel=\"apple-touch-icon\" href=\"" + H(prefix) + "apple-touch-icon.png\" />\n  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n  <link href=\"https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap\" rel=\"stylesheet\" />" + leafletHead + "\n  <link rel=\"stylesheet\" href=\"" + H(prefix) + "barbearia-profile.css?v=20261001-dono\" />\n  <script defer src=\"" + H(prefix) + "oc-analytics.js\"><\/script>\n" + jsonLd + "\n<\/head>\n<body>\n\n  <header class=\"oc-topnav oc-mobile-nav\">\n    <a class=\"oc-topnav__back\" href=\"" + H(prefix) + "\">" + iArrowL + " Barbearias<\/a>\n    <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n    <a href=\"" + H(canonical) + "\" class=\"oc-topnav__action\" aria-label=\"Partilhar\">" + iShare + "<\/a>\n  <\/header>\n\n  <header class=\"oc-desktop-nav oc-desktop-only\" style=\"display:none\">\n    <div style=\"display:flex;align-items:center;gap:32px\">\n      <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n      <nav class=\"oc-desktop-nav__links\" aria-label=\"Navegação principal\">\n        <a href=\"" + H(prefix) + "\">Barbearias<\/a>\n        <a href=\"" + H(prefix) + "cidades\/\">Cidades<\/a>\n        <a href=\"" + H(prefix) + "registar.html\">Adicionar barbearia<\/a>\n      <\/nav>\n    <\/div>\n    <div class=\"oc-desktop-nav__actions\">\n      <a href=\"" + H(prefix) + "registar.html\" class=\"oc-btn oc-btn--ghost\" style=\"height:38px;padding:0 16px;font-size:13px\">Reclamar esta barbearia<\/a>\n      <a href=\"" + H(prefix) + "registar.html\" class=\"oc-btn oc-btn--primary\" style=\"height:38px;padding:0 16px;font-size:13px\">Atualizar perfil " + iArrow + "<\/a>\n    <\/div>\n  <\/header>\n\n  <div class=\"oc-page\">\n    <nav class=\"oc-crumb-wrap oc-section\" style=\"padding:14px 20px 0\" aria-label=\"breadcrumb\">\n      <div class=\"oc-crumb\">" + crumbItems + "<\/div>\n    <\/nav>\n\n    <main>\n      <article itemscope itemtype=\"https://schema.org/HairSalon\">\n" +
     heroSection + "\n" +
     '        <div class="oc-pole-wrap oc-section" style="padding:0 20px 28px"><div class="oc-pole"><\/div><\/div>\n' +
-    (isMinimal ? ownerSection(true) + "\n" : "") +
     infoRow + "\n" +
-    (!isMinimal ? ownerSection(false) + "\n" : "") +
+    ownerSection() + "\n" +
     relatedSection + "\n" +
     storeSection(prefix, barber.slug) + "\n" +
     "      <\/article>\n    <\/main>\n\n" +

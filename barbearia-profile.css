@@ -351,6 +351,66 @@ button { cursor: pointer; font-family: var(--sans); }
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
   opacity: .45;
 }
+/* Cartão único "És o dono?" (igual em todas as fichas): texto à esquerda, painel com o
+   estado da ficha à direita. Em mobile empilha. */
+.oc-owner-inner { padding: 28px 24px; }
+.oc-owner-grid {
+  position: relative; z-index: 1;
+  display: grid; gap: 24px;
+}
+.oc-owner__eyebrow { color: var(--gold-soft); margin-bottom: 14px; }
+.oc-owner__headline {
+  font-family: var(--serif); font-weight: 700;
+  font-size: 34px; line-height: 1.02; letter-spacing: -0.025em;
+  margin: 0 0 14px; color: #FEFCF8;
+}
+.oc-owner__headline em { font-style: italic; color: var(--gold-soft); }
+.oc-owner__body {
+  font-size: 15px; line-height: 1.6;
+  color: rgba(242, 236, 223, .8); margin: 0; max-width: 46ch;
+}
+.oc-owner__panel {
+  background: rgba(255, 255, 255, .045);
+  border: 1px solid rgba(212, 182, 135, .22);
+  border-radius: 18px;
+  padding: 20px;
+}
+.oc-owner__progress-label {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 13px; color: rgba(242, 236, 223, .78); margin-bottom: 8px;
+}
+.oc-owner__progress-label .oc-mono { font-size: 12px; letter-spacing: .04em; color: var(--gold-soft); }
+.oc-owner__progress {
+  height: 6px; border-radius: 999px; overflow: hidden;
+  background: rgba(255, 255, 255, .1); margin-bottom: 18px;
+}
+.oc-owner__progress span {
+  display: block; height: 100%; border-radius: inherit;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-soft));
+}
+.oc-owner-check {
+  list-style: none; margin: 0 0 20px; padding: 0;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 16px;
+}
+.oc-owner-check__item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; color: rgba(242, 236, 223, .5);
+}
+.oc-owner-check__item.is-done { color: #FEFCF8; }
+.oc-owner-check__mark {
+  flex: none; width: 20px; height: 20px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1.5px solid rgba(212, 182, 135, .45);
+}
+.oc-owner-check__item.is-done .oc-owner-check__mark {
+  background: var(--gold); border-color: var(--gold); color: var(--ink);
+}
+.oc-owner-check__mark .oc-icon { width: 12px; height: 12px; stroke-width: 3; }
+.oc-owner__cta { width: 100%; }
+.oc-visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
 
 /* ── Related card ───────────────────────────────────────── */
 .oc-related {
