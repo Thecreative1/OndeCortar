@@ -174,6 +174,10 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
 - A lista estática da homepage **não** tem JSON-LD por item — não reintroduzir (o schema de cada barbearia é o `HairSalon` do perfil)
 - Sitemaps: `sitemap.xml` (índice) → `sitemap-barbearias.xml`, `sitemap-cidades.xml`, `sitemap-pages.xml`, `sitemap-loja.xml`, `sitemap-revista.xml`
 
+### Identidade visual dos perfis
+
+Desde 2026-10-01 os perfis (`barbearia-profile.css`) usam o tema escuro **"preto mate & verde-garrafa"**: fundo #141614, cartões #1E221F, texto creme #ECE7DD, acento âmbar #C8873A, blocos de destaque em verde-garrafa #1F4D3A; títulos em **Big Shoulders Display** (maiúsculas), corpo em Geist. Escolhido entre 3 propostas (clássica, navy & latão, escuro) por ser o mais masculino. Atenção: `--ink` é a cor do **texto** (clara) — não usar como fundo. Contrastes verificados (WCAG AA). A loja e a revista mantêm a sua identidade. Próximo passo previsto: levar o tema às páginas de cidade e à homepage.
+
 ### SEO dos perfis
 
 O SEO dos perfis é gerado em `scripts/build-directory-static.js`, na função `buildProfileSeo(barber)`.

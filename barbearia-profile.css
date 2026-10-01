@@ -4,25 +4,27 @@
    better hierarchy, improved readability — same structure, stronger execution */
 
 :root {
-  /* ── Colours ─────────────────────────────────────────────
-     Key change: --paper is now a mid warm parchment so cards (near-white)
-     stand out clearly. --subtext darkened to maintain WCAG AA on new bg.
-     Hairlines strengthened so card borders are always visible.           */
-  --paper:           #DDD3BC;   /* was #F2ECDF — deeper warm parchment    */
-  --paper-2:         #D3C8AE;   /* was #ECE4D2 — used for footer, photo   */
-  --card:            #FEFCF8;   /* was #FBF7EC — near-white, clear vs bg  */
-  --ink:             #0E0C08;   /* was #14110D — deeper near-black        */
-  --ink-2:           #181410;
-  --ink-soft:        #221C14;   /* was #2A241C                            */
-  --subtext:         #4A4238;   /* was #6B6358 — 6.7:1 on --paper, AA ✓  */
-  --hairline:        #BDB09A;   /* was #DCD2BD — clearly visible borders  */
-  --hairline-strong: #A29080;   /* was #C4B89E — stronger action borders  */
-  --gold:            #B8945F;
-  --gold-soft:       #D4B687;
-  --gold-deep:       #7A5E2E;   /* was #8C6E42 — deeper for pill text     */
-  --ok:              #4A6A38;   /* was #5C7A4A                            */
+  /* ── Cores: tema escuro "preto mate & verde-garrafa" (2026-10-01) ─────────
+     Fundo quase preto, cartões grafite, texto creme, acento âmbar, verde-garrafa
+     nos blocos de destaque. --ink é a cor do TEXTO (clara); os fundos escuros
+     usam --paper/--card. Detalhes de componentes na secção "Tema escuro" no fim. */
+  --paper:           #141614;
+  --paper-2:         #1A1D1A;
+  --card:            #1E221F;
+  --ink:             #ECE7DD;
+  --ink-2:           #E2DCCF;
+  --ink-soft:        #D6CFC2;
+  --subtext:         #A49D90;
+  --hairline:        #2F3530;
+  --hairline-strong: #4B544D;
+  --gold:            #C8873A;
+  --gold-soft:       #E3A863;
+  --gold-deep:       #E3A863;
+  --bottle:          #1F4D3A;
+  --bottle-2:        #143326;
+  --ok:              #5FA77C;
   /* ── Type ───────────────────────────────────────────────── */
-  --serif: 'Bodoni Moda', 'Playfair Display', Georgia, serif;
+  --serif: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
   --sans:  'Geist', 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
   --mono:  'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
 }
@@ -37,11 +39,10 @@ body {
   font-size: 15px;
   line-height: 1.6;
   color: var(--ink);
-  /* Gradient adds depth: warm gold hint top-right, dark grounding bottom-left */
+  /* Brilho verde-garrafa no canto, sobre preto mate */
   background:
-    radial-gradient(ellipse at 96% 4%,  rgba(184,148,95,.10), transparent 38%),
-    radial-gradient(ellipse at 5%  85%, rgba(14,12,8,.05),    transparent 32%),
-    linear-gradient(160deg, #EAE0CA 0%, #DDD3BC 45%, #D3C8AE 100%);
+    radial-gradient(ellipse at 90% 0%, rgba(31,77,58,.45), transparent 45%),
+    linear-gradient(160deg, #161916 0%, #111311 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -749,4 +750,31 @@ button { cursor: pointer; font-family: var(--sans); }
   .oc-desktop-only { display: none !important; }
   .oc-footer-cols  { display: none; }
   .oc-info-row     { padding: 0; }
+}
+
+/* ══ Tema escuro: componentes ═════════════════════════════════════════
+   As variáveis estão no :root. Aqui ficam os elementos que tinham cores claras
+   fixas ou que precisam de outro tratamento no fundo escuro. */
+.oc-topnav, .oc-desktop-nav { background: rgba(12,14,12,.94) !important; border-color: #262B27 !important; }
+.oc-topnav__brand, .oc-topnav__back, .oc-topnav__action, .oc-desktop-nav__links a { color: var(--ink) !important; }
+.oc-topnav__brand sup { color: var(--gold-soft) !important; }
+.oc-hero-name { font-weight: 800; text-transform: uppercase; letter-spacing: .01em; line-height: .9; }
+.oc-section-head__title, .oc-owner__headline { font-weight: 800; text-transform: uppercase; }
+.oc-btn--primary { background: var(--bottle); color: #F2EEE6; }
+.oc-btn--primary:hover { background: #276148; }
+.oc-btn--ghost { background: var(--card); color: var(--ink); border-color: #3A423C; }
+.oc-btn--ghost:hover { background: #262B27; border-color: var(--gold); }
+.oc-btn--gold { color: #141614; }
+.oc-btn--loja { background: #2C6A4E; border-color: #2C6A4E; color: #F2EEE6; }
+.oc-btn--loja:hover { background: #35805E; border-color: #35805E; }
+.oc-card--ink { background: linear-gradient(150deg, var(--bottle), var(--bottle-2)); border-color: var(--bottle); color: #F2EEE6; }
+.oc-pill { background: var(--card); color: var(--ink); border-color: #3A423C; }
+.oc-pill--gold, .oc-pill--warn { background: rgba(200,135,58,.14); color: var(--gold-soft); border-color: rgba(200,135,58,.35); }
+.oc-card, .oc-related { box-shadow: 0 1px 0 rgba(255,255,255,.03) inset, 0 8px 24px rgba(0,0,0,.35); }
+.oc-contact-row__action:hover { background: #262B27; border-color: var(--gold); }
+.oc-photo__label { background: rgba(20,22,20,.9); }
+.oc-pole {
+  background: repeating-linear-gradient(135deg,
+    #2E7A5A 0 7px, transparent 7px 12px, var(--gold) 12px 18px, transparent 18px 23px);
+  border-color: var(--hairline); opacity: .8;
 }
