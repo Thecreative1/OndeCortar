@@ -24,6 +24,19 @@ function isIsoDate(value) {
   return /^\d{4}-\d{2}-\d{2}$/.test(String(value || ""));
 }
 
+// Slugs ja publicados (URLs indexadas, no sitemap) que nao seguem o padrao nome[-local].
+// O site e estatico e sem redirecionamentos: mudar o slug partia os links. Nao acrescentar
+// slugs novos aqui — entradas novas devem seguir o padrao.
+const SLUGS_PUBLICADOS = new Set([
+  "barbearia-marcos-mello-alverca",
+  "gs-barber-alverca",
+  "barbearia-3-de-maio-alverca",
+  "for-gentlemens-barbershop-alverca",
+  "lords-barbershop-mem-martins",
+  "barbearia-moderna-oliveira-do-hospital",
+  "villains-barbershop-baguim-do-monte"
+]);
+
 function allowedSlugs(item) {
   const sluggableName = String(item.nome || "")
     .replace(/['’´`]/g, "")
@@ -81,7 +94,7 @@ function validateItem(item, index) {
     }
   });
 
-  if (allowedSlugs(item).indexOf(item.slug) === -1) {
+  if (!SLUGS_PUBLICADOS.has(item.slug) && allowedSlugs(item).indexOf(item.slug) === -1) {
     errors.push(label + ": o slug nao corresponde ao nome.");
   }
 
