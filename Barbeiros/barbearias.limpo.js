@@ -6631,10 +6631,10 @@ const barbearias = [
     "freguesia": "",
     "city": "Nazaré",
     "zone": "",
-    "morada": "R. Heróis do Ultramar 75, 2450-027 Nazaré",
-    "address_raw": "R. Heróis do Ultramar 75, 2450-027 Nazaré",
-    "street": "R. Heróis do Ultramar",
-    "street_number": "75",
+    "morada": "R. Clube Estrela do Norte 34, 2450-027 Nazaré",
+    "address_raw": "R. Clube Estrela do Norte 34, 2450-027 Nazaré",
+    "street": "R. Clube Estrela do Norte",
+    "street_number": "34",
     "complemento": "",
     "localidade": "Nazaré",
     "codigo_postal": "2450-027",
@@ -6642,7 +6642,7 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 912 797 431",
     "email": null,
     "website": "https://booksy.com/pt-pt/2560_barbearia-brasileira_barbearia_145107_famalicao-nazare",
     "instagram": null,
@@ -6656,14 +6656,15 @@ const barbearias = [
     },
     "observacoes": null,
     "coords": [
-      39.5348917,
-      -9.0842112
+      39.5357673,
+      -9.0834909
     ],
     "status": "confirmado",
     "fontes": [
-      "https://booksy.com/pt-pt/s/corte-de-cabelo/149306_porto-de-mos"
+      "https://www.fresha.com/lvp/barbearia-brasileira-rua-herois-do-ultramar-nazare-eq9Qoj",
+      "https://booksy.com/pt-pt/2560_barbearia-brasileira_barbearia_145107_famalicao-nazare"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-01",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -15625,28 +15626,33 @@ const barbearias = [
     ]
   },
   {
-    "nome": "Man's House Barbearia",
+    "nome": "Brell Studio",
     "slug": "mans-house-portimao",
     "distrito": "Faro",
     "concelho": "Portimão",
     "freguesia": null,
     "city": "Portimão",
-    "morada": "Rua do Oceano Atlântico 28, Loja 2B, 8500-823 Portimão",
-    "codigo_postal": "8500-823",
-    "telefone": null,
+    "morada": "R. França Borges 4A, 8500-674 Portimão",
+    "codigo_postal": "8500-674",
+    "telefone": "+351 962 019 282",
     "email": null,
     "website": "https://www.fresha.com/lvp/mans-house-barbearia-rua-do-oceano-atlantico-portimao-k9PPro",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
-    "observacoes": null,
+    "horario": "Seg-Qui 10h-19h30; Sex 10h-18h; Sáb 10h-19h30",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/mans-house-barbearia-rua-do-oceano-atlantico-portimao-k9PPro",
+      "data": "2026-10-01"
+    },
+    "observacoes": "Antiga Man's House Barbearia: mudou de nome e passou para a Rua França Borges.",
     "coords": [
-      37.1268,
-      -8.5368
+      37.139856,
+      -8.5386102
     ],
     "mostrar_no_mapa": true,
-    "ultima_validacao": "2026-07-06",
+    "ultima_validacao": "2026-10-01",
     "status": "confirmado",
     "qualidade_ficha": "baixa",
     "fontes": [

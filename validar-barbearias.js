@@ -34,7 +34,8 @@ const SLUGS_PUBLICADOS = new Set([
   "for-gentlemens-barbershop-alverca",
   "lords-barbershop-mem-martins",
   "barbearia-moderna-oliveira-do-hospital",
-  "villains-barbershop-baguim-do-monte"
+  "villains-barbershop-baguim-do-monte",
+  "mans-house-portimao" // renomeada "Brell Studio" em 2026-10-01; URL mantido
 ]);
 
 function allowedSlugs(item) {
