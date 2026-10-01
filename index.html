@@ -4859,6 +4859,36 @@
         });
       });
 
+      // O contentor do mapa pode mudar de tamanho sem a janela mudar (página aberta escondida
+      // com 0x0, syncHeroShellHeight, fontes a carregar). Sem isto o Leaflet guarda o tamanho
+      // antigo: carrega só parte dos tiles e o enquadramento fica descentrado. Reenquadra só
+      // enquanto o utilizador não tiver mexido no mapa.
+      const mapElement = document.getElementById("map");
+      ["pointerdown", "wheel", "touchstart"].forEach(function(type) {
+        mapElement.addEventListener(type, function() {
+          state.userMovedMap = true;
+        }, { passive: true });
+      });
+      if ("ResizeObserver" in window) {
+        let lastMapSize = "";
+        let resizeTimer = 0;
+        new ResizeObserver(function(entries) {
+          const rect = entries[0].contentRect;
+          const size = Math.round(rect.width) + "x" + Math.round(rect.height);
+          if (!rect.width || !rect.height || size === lastMapSize) {
+            return;
+          }
+          lastMapSize = size;
+          window.clearTimeout(resizeTimer);
+          resizeTimer = window.setTimeout(function() {
+            map.invalidateSize({ pan: false });
+            if (state.mapFit && !state.userMovedMap) {
+              state.mapFit();
+            }
+          }, 60);
+        }).observe(mapElement);
+      }
+
       heroSearchForm.addEventListener("submit", function(event) {
         event.preventDefault();
         const value = heroSearchInput.value.trim();
@@ -5832,22 +5862,25 @@
           visiblePoints.push(L.latLng(state.userCoords[0], state.userCoords[1]));
         }
 
-        if (!visiblePoints.length || (!state.userCoords && list.length === allBarbers.length)) {
-          resetMapToDefault();
-          return;
-        }
+        // Guardado em state.mapFit para o ResizeObserver o poder reaplicar se o mapa mudar de tamanho.
+        state.mapFit = function() {
+          if (!visiblePoints.length || (!state.userCoords && list.length === allBarbers.length)) {
+            resetMapToDefault();
+            return;
+          }
 
-        if (visiblePoints.length === 1) {
-          const overlayPadding = getHeroOverlayPadding();
-          const singleResultZoom = state.userCoords ? 12 : (list.length > 1 ? 10 : 13);
-          map.setView(visiblePoints[0], singleResultZoom);
-          map.panInside(visiblePoints[0], overlayPadding);
-          return;
-        }
+          if (visiblePoints.length === 1) {
+            const overlayPadding = getHeroOverlayPadding();
+            const singleResultZoom = state.userCoords ? 12 : (list.length > 1 ? 10 : 13);
+            map.setView(visiblePoints[0], singleResultZoom);
+            map.panInside(visiblePoints[0], overlayPadding);
+            return;
+          }
 
-        const bounds = L.latLngBounds(visiblePoints);
-
-        map.fitBounds(bounds, getResultsMapFitOptions(list.length));
+          map.fitBounds(L.latLngBounds(visiblePoints), getResultsMapFitOptions(list.length));
+        };
+        state.userMovedMap = false;
+        state.mapFit();
       }
 
       function buildPopup(barber) {
@@ -5902,6 +5935,7 @@
           pan: false,
           debounceMoveend: true
         });
+        state.mapFit = null; // vista escolhida pelo utilizador: um resize não a deve desfazer
         const overlayPadding = getHeroOverlayPadding();
         // O marcador pode estar dentro de um grupo: só abre o popup depois de o mapa
         // parar e o marcador existir no DOM (a zoom 13 os grupos já estão desfeitos).
