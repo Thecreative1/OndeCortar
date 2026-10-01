@@ -1248,3 +1248,110 @@ body.nav-open { overflow: hidden; }
   .owner-checklist { flex-direction: column; align-items: flex-start; }
   .dir-trust-strip { display: none; }
 }
+
+/* ══ Tema escuro homepage "preto mate & verde-garrafa" (2026-10-01) ═══════════
+   Igual aos perfis e às cidades. Este ficheiro é carregado depois do CSS inline do
+   index.html, por isso aqui se redefinem as duas famílias de variáveis (index.html:
+   --bg/--text/--accent…; este ficheiro: --oc-*) e os elementos com cores fixas.
+   --text / --oc-ink são cores de TEXTO (claras), não de fundo. */
+:root {
+  --bg-main: #141614; --bg-surface: #1E221F; --bg-soft: #262B27;
+  --text-main: #ECE7DD; --text-secondary: #A49D90; --ink-strong: #ECE7DD;
+  --green-primary: #1F4D3A; --green-hover: #276148;
+  --gold-main: #E3A863; --gold-soft: #E3A863; --gold-border: rgba(200,135,58,.45);
+  --border-soft: #2F3530; --border-strong: #4B544D;
+  --surface-strong: #262B27; --muted-soft: #A49D90;
+  --shadow: 0 24px 60px rgba(0,0,0,.35); --shadow-soft: 0 16px 36px rgba(0,0,0,.28);
+
+  --oc-paper: #141614; --oc-paper-warm: #1A1D1A; --oc-card: #1E221F;
+  --oc-ink: #ECE7DD; --oc-ink-soft: #D6CFC2; --oc-muted: #A49D90; --oc-subtle: #A49D90;
+  --oc-line: #2F3530; --oc-line-strong: #4B544D; --oc-ink-line: #3A423C;
+  --oc-clay: #C8873A; --oc-clay-deep: #E3A863; --oc-clay-soft: rgba(200,135,58,.18); --oc-clay-tint: rgba(200,135,58,.08);
+  --oc-open: #5FA77C; --oc-closed: #D9735F;
+  --oc-shadow-sm: 0 1px 2px rgba(0,0,0,.3); --oc-shadow-md: 0 6px 18px rgba(0,0,0,.35);
+  --oc-shadow-lg: 0 24px 48px rgba(0,0,0,.45); --oc-shadow-clay: 0 0 0 4px rgba(200,135,58,.22);
+  --oc-font-title: "Big Shoulders Display", "Arial Narrow", sans-serif;
+}
+body {
+  background:
+    radial-gradient(ellipse at 90% 0%, rgba(31,77,58,.45), transparent 45%),
+    linear-gradient(160deg, #161916 0%, #111311 100%) !important;
+  color: var(--oc-ink);
+}
+
+/* Elementos que usavam a cor do texto (antes escura) como FUNDO: passam a verde-garrafa */
+.skip-link,
+.btn-primary,
+.chip.is-active,
+.nav-links .nav-menu-cta,
+.result-actions .btn-secondary,
+.feature-card .btn-secondary,
+.store-card .btn-secondary {
+  background: #2C6A4E !important; color: #F2EEE6 !important; border-color: #2C6A4E !important;
+}
+.btn-primary:hover,
+.result-actions .btn-secondary:hover,
+.feature-card .btn-secondary:hover,
+.store-card .btn-secondary:hover {
+  background: #35805E !important; border-color: #35805E !important; color: #F2EEE6 !important;
+}
+.btn-secondary, .oc-btn-ghost {
+  background: var(--oc-card) !important; color: var(--oc-ink) !important; border-color: var(--oc-line-strong) !important;
+}
+.btn-secondary:hover, .oc-btn-ghost:hover { border-color: var(--oc-clay) !important; }
+
+/* Secções que já eram escuras: faixa das cidades (verde-garrafa) e rodapé (mais escuro).
+   Lá dentro o texto usa --oc-paper como cor; redefine-se localmente para creme. */
+.cities-section, .site-footer { --oc-paper: #F2EEE6; --oc-ink-line: rgba(255,255,255,.08); }
+.cities-section { background: linear-gradient(150deg, #1F4D3A, #143326) !important; }
+.site-footer { background: #0C0E0C !important; border-top: 1px solid #262B27; }
+
+/* Quadrados de iniciais e ilustrações dos destaques: tons pastel → verde-garrafa escuro */
+.result-visual, .feature-visual { background: rgba(31,77,58,.38) !important; }
+.result-visual strong, .feature-visual strong { color: var(--gold-main) !important; }
+.result-visual span { color: var(--oc-muted) !important; }
+
+/* Mapa: fundo enquanto os tiles carregam e créditos */
+.hero-map-shell, .hero-map { background: #1A1D1A !important; }
+.leaflet-control-attribution { background: rgba(20,22,20,.82) !important; color: #A49D90 !important; }
+.leaflet-control-attribution a { color: var(--gold-main) !important; }
+
+/* Cartões e painéis com degradê creme (definidos no CSS inline do index.html) */
+.hero-copy, .hero-search, .hero-visual, .hero-promo-card,
+.result-card, .surface-card, .store-strip {
+  background: var(--oc-card) !important;
+  border-color: var(--oc-line) !important;
+}
+.result-card:hover { border-color: var(--oc-line-strong) !important; }
+.owner-shell { background: linear-gradient(150deg, #1F4D3A, #143326) !important; border-color: #1F4D3A !important; }
+.store-strip { background: linear-gradient(135deg, rgba(200,135,58,.12), var(--oc-card)) !important; }
+
+/* CTA da pesquisa em âmbar (como o botão dourado dos perfis): texto escuro para contraste */
+.search-actions-row .btn-primary { color: #141614 !important; }
+
+/* Elementos em âmbar (antes terracota com texto branco): texto escuro */
+.owner-bubble, .oc-btn-clay, .oc-btn-clay:hover, .how-step-num { color: #141614 !important; }
+
+/* Popup do mapa: escuro como os cartões */
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--oc-card) !important; color: var(--oc-ink) !important; border: 1px solid var(--oc-line-strong); box-shadow: 0 14px 34px rgba(0,0,0,.5) !important; }
+.leaflet-popup-content-wrapper .popup-card strong { color: var(--oc-ink) !important; }
+.leaflet-popup-content-wrapper .popup-card p { color: var(--oc-muted) !important; }
+.leaflet-popup-content-wrapper .popup-card b { color: var(--oc-ink-soft) !important; }
+.leaflet-popup-content-wrapper .popup-actions a.popup-primary, .leaflet-popup-content-wrapper .popup-actions a.popup-primary:hover { color: #141614 !important; }
+.leaflet-popup-content-wrapper .popup-actions a:not(.popup-primary) { background: var(--oc-paper-warm) !important; color: var(--oc-ink) !important; border-color: var(--oc-line-strong) !important; }
+.leaflet-container a.leaflet-popup-close-button { color: var(--oc-muted) !important; }
+.leaflet-bar a, .leaflet-bar a:hover { background: var(--oc-card) !important; color: var(--oc-ink) !important; border-color: var(--oc-line) !important; }
+
+/* Títulos: Big Shoulders Display em maiúsculas (como perfis e cidades); o destaque
+   em itálico serifado ("perto de si") passa a âmbar, no mesmo tipo de letra */
+h1, h2, .dir-headline, .cities-headline, .owner-cta-headline {
+  font-family: var(--oc-font-title) !important; font-weight: 800 !important;
+  text-transform: uppercase; letter-spacing: .01em !important; line-height: .95 !important;
+}
+h1 em, h2 em, .dir-headline em, .cities-headline em, .owner-cta-headline em, h1 .oc-serif-italic, h2 .oc-serif-italic {
+  font-family: inherit !important; font-style: normal !important; font-weight: 800 !important; color: var(--gold-main) !important;
+}
+
+/* O max-width do título estava em ch (calculado para a fonte antiga, mais larga) */
+.dir-headline { max-width: 480px !important; }
+@media (min-width: 861px) { .dir-headline { font-size: clamp(2.4rem, 3.4vw, 3.2rem) !important; } }
