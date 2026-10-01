@@ -696,25 +696,29 @@ function renderBaseStyles(extraStyles) {
   return `
   <style>
     :root {
-      --bg: #efe4d1;
-      --surface: rgba(251, 246, 238, 0.96);
-      --surface-soft: #e7dac3;
-      --text: #181410;
-      --muted: #4e473d;
-      --border: #cfbfa2;
-      --border-strong: #b08b53;
-      --accent: #425a47;
-      --accent-strong: #2f4535;
-      --gold: #a6772d;
-      --shadow: 0 24px 60px rgba(31, 25, 19, 0.1);
-      --shadow-soft: 0 16px 36px rgba(31, 25, 19, 0.08);
-      --mobile-nav-panel: rgba(251, 246, 238, 0.98);
-      --mobile-nav-border: rgba(207, 191, 162, 0.94);
-      --mobile-nav-link-bg: rgba(244, 235, 220, 0.94);
-      --mobile-nav-toggle-border: rgba(176, 139, 83, 0.72);
-      --mobile-nav-toggle-bg: rgba(251, 246, 238, 0.9);
-      --mobile-nav-shadow: 0 22px 46px rgba(31, 25, 19, 0.14);
-      --mobile-nav-backdrop: rgba(24, 20, 16, 0.28);
+      /* Tema escuro "preto mate & verde-garrafa" (igual aos perfis, 2026-10-01).
+         --text é a cor do TEXTO (clara); --accent/--accent-strong são fundos de botão
+         (verde-garrafa); --link é a cor dos links em texto (âmbar). */
+      --bg: #141614;
+      --surface: #1E221F;
+      --surface-soft: #262B27;
+      --text: #ECE7DD;
+      --muted: #A49D90;
+      --border: #2F3530;
+      --border-strong: #4B544D;
+      --accent: #1F4D3A;
+      --accent-strong: #143326;
+      --link: #E3A863;
+      --gold: #E3A863;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+      --shadow-soft: 0 16px 36px rgba(0, 0, 0, 0.28);
+      --mobile-nav-panel: rgba(20, 22, 20, 0.98);
+      --mobile-nav-border: #2F3530;
+      --mobile-nav-link-bg: #1E221F;
+      --mobile-nav-toggle-border: rgba(200, 135, 58, 0.6);
+      --mobile-nav-toggle-bg: rgba(30, 34, 31, 0.9);
+      --mobile-nav-shadow: 0 22px 46px rgba(0, 0, 0, 0.45);
+      --mobile-nav-backdrop: rgba(0, 0, 0, 0.55);
       --container: min(1160px, calc(100% - 32px));
       --radius-lg: 24px;
       --radius-md: 18px;
@@ -727,20 +731,19 @@ function renderBaseStyles(extraStyles) {
       font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(166, 119, 45, 0.14), transparent 30%),
-        radial-gradient(circle at top right, rgba(66, 90, 71, 0.12), transparent 26%),
-        linear-gradient(180deg, #f5ecde 0%, var(--bg) 32%, #e7d8c0 100%);
+        radial-gradient(ellipse at 90% 0%, rgba(31, 77, 58, 0.45), transparent 45%),
+        linear-gradient(160deg, #161916 0%, #111311 100%);
     }
 
     a {
-      color: var(--accent-strong);
+      color: var(--link);
       text-decoration-color: rgba(166, 119, 45, 0.52);
       text-decoration-thickness: 1px;
       text-underline-offset: 0.18em;
       transition: color 0.2s ease, text-decoration-color 0.2s ease;
     }
     a:hover {
-      color: var(--accent);
+      color: var(--text);
       text-decoration-color: rgba(166, 119, 45, 0.84);
     }
     img { display: block; max-width: 100%; }
@@ -757,10 +760,10 @@ function renderBaseStyles(extraStyles) {
       align-items: center;
       gap: 18px;
       padding: 14px 18px;
-      border: 1px solid rgba(207, 191, 162, 0.94);
+      border: 1px solid var(--border);
       border-radius: 999px;
-      background: rgba(250, 244, 233, 0.94);
-      box-shadow: 0 18px 40px rgba(31, 25, 19, 0.1);
+      background: rgba(16, 18, 16, 0.94);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
     }
     .brand, .footer-brand {
       display: inline-flex;
@@ -798,14 +801,14 @@ function renderBaseStyles(extraStyles) {
       min-height: 42px;
       padding: 10px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(207, 191, 162, 0.84);
-      background: rgba(250, 244, 233, 0.86);
+      border: 1px solid var(--border);
+      background: var(--surface);
       color: var(--muted);
       font-weight: 600;
     }
     .nav-links a:hover, .nav-links a.is-current {
-      background: rgba(166, 119, 45, 0.14);
-      border-color: rgba(176, 139, 83, 0.68);
+      background: rgba(200, 135, 58, 0.14);
+      border-color: rgba(200, 135, 58, 0.5);
       color: var(--text);
     }
     .nav-links a.nav-cta {
@@ -823,9 +826,11 @@ function renderBaseStyles(extraStyles) {
     main { padding: 30px 0 48px; }
     h1, h2, h3 { margin: 0; color: var(--text); line-height: 1.08; }
     h1, h2 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-family: "Big Shoulders Display", "Arial Narrow", sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      line-height: 0.95;
     }
     h1 { font-size: clamp(2.6rem, 6vw, 4.8rem); }
     h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
@@ -839,15 +844,15 @@ function renderBaseStyles(extraStyles) {
       min-height: 36px;
       padding: 8px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(215, 184, 130, 0.72);
-      background: rgba(166, 119, 45, 0.14);
+      border: 1px solid rgba(200, 135, 58, 0.45);
+      background: rgba(200, 135, 58, 0.14);
       color: var(--gold);
       font-size: 0.84rem;
       font-weight: 700;
     }
     .tag, .pill {
       background: var(--surface-soft);
-      border-color: rgba(176, 139, 83, 0.46);
+      border-color: var(--border-strong);
       color: var(--text);
     }
     .pill-link:hover {
@@ -858,7 +863,7 @@ function renderBaseStyles(extraStyles) {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      color: #5b6058;
+      color: var(--muted);
       font-size: 0.94rem;
     }
 
@@ -873,8 +878,8 @@ function renderBaseStyles(extraStyles) {
       display: grid;
       gap: 18px;
       background:
-        radial-gradient(circle at top left, rgba(166, 119, 45, 0.18), transparent 30%),
-        linear-gradient(180deg, rgba(252, 247, 239, 0.99), rgba(239, 229, 211, 0.95));
+        radial-gradient(circle at top right, rgba(31, 77, 58, 0.4), transparent 45%),
+        linear-gradient(180deg, #1E221F, #191C1A);
     }
     .hero-grid, .grid-2 {
       display: grid;
@@ -892,7 +897,7 @@ function renderBaseStyles(extraStyles) {
       display: flex;
       flex-wrap: wrap;
       gap: 8px 14px;
-      color: #475047;
+      color: var(--muted);
       font-size: 0.92rem;
       line-height: 1.6;
     }
@@ -904,8 +909,8 @@ function renderBaseStyles(extraStyles) {
       margin-right: 4px;
     }
     .location-compact a {
-      color: var(--accent-strong);
-      border-bottom: 1px solid rgba(176, 138, 74, 0.56);
+      color: var(--link);
+      border-bottom: 1px solid rgba(200, 135, 58, 0.5);
     }
     .location-compact a:hover {
       border-color: rgba(166, 119, 45, 0.82);
@@ -913,26 +918,27 @@ function renderBaseStyles(extraStyles) {
     .summary-panel {
       padding: 18px;
       border-radius: 20px;
-      background: rgba(66, 90, 71, 0.12);
-      border: 1px solid rgba(66, 90, 71, 0.24);
+      background: rgba(31, 77, 58, 0.28);
+      border: 1px solid rgba(46, 122, 90, 0.45);
       display: grid;
       gap: 14px;
     }
     .summary-row {
       padding: 14px 16px;
       border-radius: 16px;
-      background: rgba(252, 247, 239, 0.9);
-      border: 1px solid rgba(176, 139, 83, 0.36);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
     }
     .summary-row span {
       display: block;
       margin-bottom: 6px;
       font-size: 0.82rem;
       font-weight: 700;
-      color: var(--accent-strong);
+      color: var(--link);
     }
     .summary-row a {
-      color: var(--accent-strong);
+      color: var(--link);
       font-weight: 600;
       text-decoration: underline;
       text-decoration-color: rgba(166, 119, 45, 0.52);
@@ -951,20 +957,20 @@ function renderBaseStyles(extraStyles) {
     }
     .btn:hover { transform: translateY(-2px); }
     .btn-primary {
-      color: #fff;
-      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      box-shadow: 0 16px 36px rgba(66, 90, 71, 0.22);
+      color: #F2EEE6;
+      background: linear-gradient(135deg, #2C6A4E, var(--accent));
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
     }
     .btn-secondary {
       color: var(--text);
-      background: rgba(248, 239, 225, 0.96);
+      background: var(--surface);
       border-color: var(--border-strong);
-      box-shadow: 0 12px 24px rgba(31, 25, 19, 0.06);
+      box-shadow: none;
     }
     .btn-soft {
-      color: var(--accent-strong);
-      background: rgba(66, 90, 71, 0.12);
-      border-color: rgba(66, 90, 71, 0.24);
+      color: var(--link);
+      background: rgba(200, 135, 58, 0.1);
+      border-color: rgba(200, 135, 58, 0.3);
     }
     .section { padding-top: 24px; }
     .section-header {
@@ -993,12 +999,12 @@ function renderBaseStyles(extraStyles) {
       display: grid;
       gap: 4px;
       padding-bottom: 12px;
-      border-bottom: 1px solid rgba(171, 149, 103, 0.28);
+      border-bottom: 1px solid var(--border);
     }
     .meta-row:last-child { padding-bottom: 0; border-bottom: 0; }
     .meta-row strong { font-size: 0.9rem; color: var(--text); }
     .meta-row span { color: var(--muted); }
-    .meta-row a { color: var(--accent-strong); text-decoration: underline; text-decoration-color: rgba(166, 119, 45, 0.52); }
+    .meta-row a { color: var(--link); text-decoration: underline; text-decoration-color: rgba(166, 119, 45, 0.52); }
     footer { padding: 0 0 48px; }
     .footer-shell {
       display: flex;
@@ -1009,7 +1015,7 @@ function renderBaseStyles(extraStyles) {
       padding: 24px 28px;
     }
     .footer-intro { display: grid; gap: 12px; max-width: 54ch; }
-    .footer-links a { color: var(--accent-strong); font-weight: 700; text-decoration: none; }
+    .footer-links a { color: var(--link); font-weight: 700; text-decoration: none; }
 
     @media (max-width: 980px) {
       .hero-grid, .grid-2, .barber-grid, .city-grid { grid-template-columns: 1fr; }
@@ -1112,7 +1118,7 @@ function renderDocument(options) {
   <link rel="apple-touch-icon" href="${escapeHtml(options.prefix || "")}apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   ${options.extraHead || ""}
   ${renderBaseStyles(options.extraStyles)}
   <link rel="stylesheet" href="${escapeHtml(options.prefix || "")}mobile-nav.css" />
