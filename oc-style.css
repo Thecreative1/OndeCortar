@@ -1355,3 +1355,10 @@ h1 em, h2 em, .dir-headline em, .cities-headline em, .owner-cta-headline em, h1 
 /* O max-width do título estava em ch (calculado para a fonte antiga, mais larga) */
 .dir-headline { max-width: 480px !important; }
 @media (min-width: 861px) { .dir-headline { font-size: clamp(2.4rem, 3.4vw, 3.2rem) !important; } }
+
+/* Mapa noturno (2026-10-01): os mesmos tiles Esri topográficos invertidos — mar azul-escuro,
+   terra grafite. Só um filtro CSS, sem pedidos extra. Igual nos mapas dos perfis. */
+#map .leaflet-tile { filter: invert(1) hue-rotate(180deg) brightness(.92) contrast(.88) saturate(.55) !important; }
+/* Grupos: verde mais claro e aro âmbar forte para se destacarem da terra escura */
+.oc-cluster span { background: #2C6A4E !important; border-color: #E3A863 !important; box-shadow: 0 0 0 4px rgba(200,135,58,.18), 0 10px 20px rgba(0,0,0,.45) !important; }
+.oc-cluster:hover span { background: #35805E !important; }

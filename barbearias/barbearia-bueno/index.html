@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" crossorigin />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin defer></script>
-  <link rel="stylesheet" href="../../barbearia-profile.css?v=20261001-escuro" />
+  <link rel="stylesheet" href="../../barbearia-profile.css?v=20261001-noturno" />
   <script defer src="../../oc-analytics.js"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"OndeCortar.pt","item":"https://ondecortar.pt/"},{"@type":"ListItem","position":2,"name":"Cidades","item":"https://ondecortar.pt/cidades/"},{"@type":"ListItem","position":3,"name":"Setúbal","item":"https://ondecortar.pt/cidades/setubal/"},{"@type":"ListItem","position":4,"name":"Barbearia Bueno","item":"https://ondecortar.pt/barbearias/barbearia-bueno/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Barbearia Bueno","url":"https://ondecortar.pt/barbearias/barbearia-bueno/","telephone":"+351 938 389 799","address":{"@type":"PostalAddress","streetAddress":"Rua António José Batista Loja 35","postalCode":"2910-400","addressLocality":"Setúbal","addressRegion":"Setúbal","addressCountry":"PT"},"sameAs":["https://www.instagram.com/barbearia.bueno.pt/"],"geo":{"@type":"GeoCoordinates","latitude":38.531500005829365,"longitude":-8.879340000000013}}</script>
@@ -74,7 +74,7 @@
     var c=[38.531500005829365,-8.879340000000013];
     var m=L.map("detailMap",{scrollWheelZoom:false}).setView(c,15);
     L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",{attribution:"Tiles &copy; Esri &mdash; Esri, HERE, Garmin, USGS, OpenStreetMap contributors",maxZoom:16}).addTo(m);
-    var gi=L.divIcon({className:"",html:'<div style="width:32px;height:32px;background:#14110D;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(20,17,13,.3)"><div style="width:8px;height:8px;border-radius:50%;background:#B8945F;transform:rotate(45deg)"></div></div>',iconSize:[32,32],iconAnchor:[16,32],popupAnchor:[0,-36]});
+    var gi=L.divIcon({className:"",html:'<div style="width:32px;height:32px;background:#C8873A;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.5);border:2px solid #141614"><div style="width:8px;height:8px;border-radius:50%;background:#141614;transform:rotate(45deg)"></div></div>',iconSize:[32,32],iconAnchor:[16,32],popupAnchor:[0,-36]});
     L.marker(c,{icon:gi}).addTo(m).bindPopup("Barbearia Bueno").openPopup();
   }
   document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){setTimeout(init,120);}):setTimeout(init,120);

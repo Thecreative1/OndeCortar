@@ -778,3 +778,12 @@ button { cursor: pointer; font-family: var(--sans); }
     #2E7A5A 0 7px, transparent 7px 12px, var(--gold) 12px 18px, transparent 18px 23px);
   border-color: var(--hairline); opacity: .8;
 }
+
+/* Mapa noturno (igual à homepage) e popup escuro */
+.oc-map-wrap .leaflet-tile { filter: invert(1) hue-rotate(180deg) brightness(.92) contrast(.88) saturate(.55); }
+.oc-map-wrap .leaflet-container { background: #1A1D1A; }
+.oc-map-wrap .leaflet-popup-content-wrapper, .oc-map-wrap .leaflet-popup-tip { background: var(--card); color: var(--ink); border: 1px solid var(--hairline-strong); box-shadow: 0 10px 26px rgba(0,0,0,.5); }
+.oc-map-wrap .leaflet-container a.leaflet-popup-close-button { color: var(--subtext); }
+.oc-map-wrap .leaflet-bar a, .oc-map-wrap .leaflet-bar a:hover { background: var(--card); color: var(--ink); border-color: var(--hairline); }
+.oc-map-wrap .leaflet-control-attribution { background: rgba(20,22,20,.82); color: var(--subtext); }
+.oc-map-wrap .leaflet-control-attribution a { color: var(--gold-soft); }
