@@ -13,6 +13,7 @@ Diretório de barbearias em Portugal. Site estático (HTML/CSS/JS puro), sem fra
 | Ficheiro | Papel |
 |---|---|
 | `Barbeiros/barbearias.limpo.js` | **Fonte única de dados** — define `const barbearias = [...]` com todas as barbearias |
+| `Barbeiros/barbearias.mapa.js` | Versão reduzida dos dados que a homepage carrega (só públicas, sem campos que o browser não lê, sem vazios) — **gerada pelo build, não editar**. Se o cliente passar a ler um campo novo, tirá-lo de `CLIENT_OMIT_FIELDS` no build |
 | `Barbeiros/barbearias-utils.js` | Utilitários partilhados: normalização de texto, geocoding, slugify |
 | `scripts/build-directory-static.js` | **Script de build principal** — gera tudo a partir dos dados |
 | `index.html` | Homepage com mapa Leaflet + pesquisa dinâmica + lista estática SSR |
@@ -48,6 +49,7 @@ Procedimento quando as coords parecem erradas:
    - Sitemaps (5 ficheiros XML)
    - Lista estática SSR em `index.html` (entre os markers)
    - JSON-LD `ItemList` no `<head>` de `index.html`
+   - `Barbeiros/barbearias.mapa.js` (dados reduzidos para o browser)
 
 **Nunca editar manualmente** os ficheiros em `barbearias/` ou `cidades/` — são sobrescritos pelo build.
 

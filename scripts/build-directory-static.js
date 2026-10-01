@@ -1795,8 +1795,35 @@ function patchIndexHtml(staticListHtml, headJsonLd, totals) {
   fs.writeFileSync(indexPath, html, "utf8");
 }
 
+// Campos que o código do browser (script.js, barbearias-utils.js, script inline do
+// index.html) nunca lê — ficam só em barbearias.limpo.js.
+const CLIENT_OMIT_FIELDS = new Set([
+  "complemento", "country", "data_confidence", "needs_review", "location_flags",
+  "fontes", "ultima_validacao", "qualidade_ficha", "valor_original"
+]);
+
+// Gera Barbeiros/barbearias.mapa.js para a homepage: só barbearias públicas, sem os
+// campos acima e sem valores vazios (o cliente trata null e ausente da mesma forma).
+// Define o mesmo `const barbearias` que o ficheiro fonte.
+function buildClientDataFile(rawBarbers) {
+  const isEmpty = (value) => value === null || value === undefined || value === ""
+    || (Array.isArray(value) && value.length === 0);
+  const slim = rawBarbers.map((barber) => {
+    const out = {};
+    Object.keys(barber).forEach((key) => {
+      if (!CLIENT_OMIT_FIELDS.has(key) && !isEmpty(barber[key])) {
+        out[key] = barber[key];
+      }
+    });
+    return out;
+  });
+  return "// Gerado por scripts/build-directory-static.js a partir de barbearias.limpo.js — não editar.\n"
+    + "const barbearias = " + JSON.stringify(slim) + ";\n";
+}
+
 function main() {
   const rawBarbers = loadBarbers();
+  writeFile(path.join("Barbeiros", "barbearias.mapa.js"), buildClientDataFile(rawBarbers));
   const data = buildSlugData(rawBarbers);
   const citiesMap = new Map(data.cities.map((city) => [city.slug, city]));
 
