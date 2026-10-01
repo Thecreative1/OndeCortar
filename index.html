@@ -1957,7 +1957,7 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="oc-style.css?v=20261001-noturno" />
+  <link rel="stylesheet" href="oc-style.css?v=20261001-mobile" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -4814,7 +4814,9 @@
             // uma escondia a outra. Ao nível da rua o raio baixa, para as vizinhas distintas
             // aparecerem soltas; as do mesmo ponto ficam num grupo que abre em leque ao clicar.
             maxClusterRadius: function(zoom) {
-              return zoom >= 13 ? 20 : 48;
+              // Em mobile o mapa é pequeno: raio menor para não ficar só com 2-3 grupos gigantes.
+              if (zoom >= 13) return 20;
+              return window.innerWidth <= 860 ? 30 : 48;
             },
             // Leque para barbearias no mesmo ponto (ex.: vizinhas na mesma rua): linhas douradas
             // finas em vez das pretas por omissão, e mais afastadas por causa dos marcadores de 26px.
@@ -5808,6 +5810,28 @@
             "</article>"
           );
         }).join("");
+        updateResultsMore(list.length);
+      }
+
+      // Mobile: a lista mostra 12 cartões e um botão para ver o resto (o CSS esconde os
+      // restantes enquanto #resultsList não tiver .is-expanded). Em desktop o botão não aparece.
+      function updateResultsMore(total) {
+        const RESULTS_PREVIEW = 12; // dentro da função: renderResults corre antes desta zona do script
+        let more = document.getElementById("resultsMore");
+        if (!more) {
+          more = document.createElement("button");
+          more.type = "button";
+          more.id = "resultsMore";
+          more.className = "results-more";
+          more.addEventListener("click", function() {
+            resultsList.classList.add("is-expanded");
+            more.hidden = true;
+          });
+          resultsList.insertAdjacentElement("afterend", more);
+        }
+        resultsList.classList.remove("is-expanded");
+        more.hidden = total <= RESULTS_PREVIEW;
+        more.textContent = "Mostrar mais " + (total - RESULTS_PREVIEW) + (total - RESULTS_PREVIEW === 1 ? " barbearia" : " barbearias");
       }
 
       function renderContactAction(barber, className) {

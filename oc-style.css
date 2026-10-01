@@ -1362,3 +1362,34 @@ h1 em, h2 em, .dir-headline em, .cities-headline em, .owner-cta-headline em, h1 
 /* Grupos: verde mais claro e aro âmbar forte para se destacarem da terra escura */
 .oc-cluster span { background: #2C6A4E !important; border-color: #E3A863 !important; box-shadow: 0 0 0 4px rgba(200,135,58,.18), 0 10px 20px rgba(0,0,0,.45) !important; }
 .oc-cluster:hover span { background: #35805E !important; }
+
+/* Barra de navegação: sem a borda creme arredondada do CSS antigo (via-se "( )" nas pontas) */
+.nav { border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+.site-header { background: rgba(12,14,12,.94) !important; border-bottom: 1px solid #262B27 !important; }
+
+/* Botão "Mostrar mais" da lista (só aparece em mobile) */
+.results-more { display: none; }
+
+/* ══ Mobile (<=860px): pesquisa → mapa → lista, sem alturas fixas nem scroll interno ══
+   A coluna da esquerda tinha altura fixa (~530px) com scroll interno, e a lista ficava
+   com o que sobrava (às vezes ~100px, cortada). display:contents deixa reordenar os
+   filhos diretamente na secção. */
+@media (max-width: 860px) {
+  .directory-tool { display: flex !important; flex-direction: column !important; height: auto !important; min-height: 0 !important; }
+  .directory-left, .directory-left-inner { display: contents !important; }
+  .directory-tool > *, .directory-left-inner > * { order: 1; }
+  .dir-eyebrow, .dir-headline, .dir-subline, #heroSearchForm, .filter-row { margin-left: 16px !important; margin-right: 16px !important; }
+  .dir-eyebrow { margin-top: 18px !important; }
+  .hero-map-shell { order: 2 !important; height: 56vh !important; min-height: 320px !important; max-height: 480px !important; margin-top: 14px; }
+  .hero-map-shell .hero-map, .hero-map-shell #map { height: 100% !important; min-height: 320px !important; }
+  .results-status-row { order: 3 !important; margin: 16px 16px 0 !important; }
+  #resultsList { order: 4 !important; height: auto !important; max-height: none !important; overflow: visible !important; padding: 12px 16px 0 !important; }
+  #resultsList:not(.is-expanded) > .result-card:nth-child(n+13) { display: none !important; }
+  .results-more {
+    order: 5; display: block; margin: 6px 16px 24px; min-height: 48px; border-radius: 14px;
+    background: var(--oc-card); color: var(--oc-ink); border: 1px solid var(--oc-line-strong);
+    font: 600 15px/1 var(--oc-font-body); cursor: pointer;
+  }
+  .results-more[hidden] { display: none; }
+  .dir-headline { font-size: 2.2rem !important; }
+}
