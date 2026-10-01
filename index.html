@@ -1465,37 +1465,7 @@
       filter: contrast(1.14) brightness(0.94) saturate(0.9);
     }
 
-    .custom-marker-shell {
-      background: transparent;
-      border: 0;
-    }
-
-    .custom-marker {
-      width: 48px;
-      height: 48px;
-      display: block;
-      border-radius: 999px;
-      border: 2px solid rgba(255, 255, 255, 0.96);
-      box-shadow:
-        0 0 0 1px rgba(157, 122, 54, 0.42),
-        0 10px 20px rgba(44, 55, 44, 0.24);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-      will-change: transform;
-    }
-
-    .custom-marker:hover {
-      transform: scale(1.18);
-      box-shadow:
-        0 0 0 1px rgba(157, 122, 54, 0.6),
-        0 14px 28px rgba(44, 55, 44, 0.34);
-    }
-
-    .custom-marker--active {
-      transform: scale(1.28);
-      box-shadow:
-        0 0 0 2px rgba(157, 122, 54, 0.75),
-        0 16px 32px rgba(44, 55, 44, 0.38);
-    }
+    /* Estilo dos marcadores individuais (.custom-marker): está em oc-style.css, carregado depois. */
 
     /* Lista estática gerada pelo build (só visível sem JS; o renderResults substitui-a) */
     .ssr-list {
@@ -1960,7 +1930,7 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="oc-style.css?v=20260625-map-mobile" />
+  <link rel="stylesheet" href="oc-style.css?v=20261001-markers" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -5831,10 +5801,12 @@
             icon: L.divIcon({
               className: "custom-marker-shell",
               html: '<span class="custom-marker"></span>',
-              iconSize: [48, 48],
-              iconAnchor: [24, 48],
-              popupAnchor: [0, -46]
-          })
+              // Círculo centrado na coordenada (o antigo [48,48]/[24,48] era de um alfinete e
+              // desenhava o ponto ~43px acima e ~19px à esquerda do sítio real).
+              iconSize: [26, 26],
+              iconAnchor: [13, 13],
+              popupAnchor: [0, -14]
+            })
           })
             .bindPopup(buildPopup(barber), getPopupOptions());
           markerLayer.addLayer(marker);
@@ -5913,9 +5885,11 @@
             const prevSpan = prevEl.querySelector(".custom-marker");
             if (prevSpan) prevSpan.classList.remove("custom-marker--active");
           }
+          state.activeMarker.setZIndexOffset(0);
         }
         state.activeMarker = marker || null;
         if (marker) {
+          marker.setZIndexOffset(1000); // a selecionada fica por cima das vizinhas
           const el = marker.getElement();
           if (el) {
             const span = el.querySelector(".custom-marker");

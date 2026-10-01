@@ -772,16 +772,23 @@ footer > div > .footer-links { display: none; }
 
 /* Custom markers */
 .custom-marker-shell { background: none !important; border: none !important; }
+/* Barbearia individual: mesma família dos grupos (.oc-cluster, verde + dourado no index.html),
+   mais pequena do que o grupo mais pequeno (38px). O ícone tem 26px e está centrado na coordenada. */
 .custom-marker {
-  width: 10px; height: 10px; border-radius: 50%;
-  background: var(--oc-clay); border: 2px solid #fff;
-  box-shadow: 0 1px 4px rgba(0,0,0,.3);
-  transition: all var(--oc-dur-fast) var(--oc-ease-out);
   display: block;
+  width: 100%; height: 100%;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #d7b882 0 3.5px, #425a47 4.5px);
+  border: 2.5px solid #fbf5ea;
+  box-shadow: 0 0 0 1.5px rgba(166, 119, 45, 0.85), 0 4px 10px rgba(31, 48, 37, 0.35);
+  transition: transform var(--oc-dur-fast) var(--oc-ease-out), box-shadow var(--oc-dur-fast) var(--oc-ease-out);
 }
+.custom-marker:hover { transform: scale(1.15); }
 .custom-marker--active {
-  background: var(--oc-ink); border-color: var(--oc-paper);
-  width: 14px; height: 14px; box-shadow: 0 2px 8px rgba(0,0,0,.4);
+  background: radial-gradient(circle at center, #425a47 0 4px, #c79853 5px);
+  transform: scale(1.3);
+  box-shadow: 0 0 0 2px rgba(166, 119, 45, 0.95), 0 6px 14px rgba(31, 48, 37, 0.45);
 }
 
 /* Popup */
