@@ -16,7 +16,7 @@ Diretório de barbearias em Portugal. Site estático (HTML/CSS/JS puro), sem fra
 | `Barbeiros/barbearias-utils.js` | Utilitários partilhados: normalização de texto, geocoding, slugify |
 | `scripts/build-directory-static.js` | **Script de build principal** — gera tudo a partir dos dados |
 | `index.html` | Homepage com mapa Leaflet + pesquisa dinâmica + lista estática SSR |
-| `script.js` | Lógica client-side da homepage (mapa, pesquisa, filtros) |
+| `script.js` | Normalização client-side dos dados da homepage (cidades, links, descrições) — o mapa Leaflet, pesquisa e filtros estão em script inline no `index.html` |
 | `barbearias/{slug}/index.html` | Páginas de perfil individuais — **geradas pelo build, não editar manualmente** |
 | `cidades/{slug}/index.html` | Páginas por cidade — **geradas pelo build, não editar manualmente** |
 | `cidades/index.html` | Hub de cidades — **gerado pelo build, não editar manualmente** |
@@ -40,6 +40,20 @@ Diretório de barbearias em Portugal. Site estático (HTML/CSS/JS puro), sem fra
    - JSON-LD `ItemList` no `<head>` de `index.html`
 
 **Nunca editar manualmente** os ficheiros em `barbearias/` ou `cidades/` — são sobrescritos pelo build.
+
+## ⚠️ Regra de trabalho: mudanças com impacto na indexação
+
+**Antes de implementar** qualquer alteração que possa afetar a forma como o Google vê, rastreia ou indexa as páginas, **parar e explicar ao utilizador exatamente qual é o risco**, e só avançar depois de ele confirmar.
+
+Conta como impacto na indexação (lista não exaustiva):
+- URLs: mudar ou remover `slug`s, pastas, páginas; apagar perfis ou páginas de cidade (ex.: `mostrar_no_mapa: false`, mudar `city` ou preencher `codigo_postal`, que apaga páginas de cidade);
+- `<title>`, `meta description`, `h1`, `canonical`, `robots`/`noindex`, `hreflang`;
+- JSON-LD / schema (tipos, campos, remoção de blocos);
+- sitemaps e `robots.txt`;
+- links internos (navegação, breadcrumbs, listas de cidades, relacionados) e conteúdo SSR visível sem JS (ex.: a lista estática da homepage entre os markers);
+- conteúdo que passa a ser carregado só por JS, ou peso/velocidade que mexa nos Core Web Vitals de forma relevante.
+
+O aviso tem de dizer, em concreto: **que páginas/URLs são afetadas (e quantas)**, **o que muda para o Google**, **o pior cenário** (ex.: perda de posições, 404, páginas fora do índice) e **como reverter**. Se a alteração não tiver impacto na indexação, dizê-lo numa linha e avançar.
 
 ## Regras críticas para não estragar o site
 

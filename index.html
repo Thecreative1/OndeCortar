@@ -29,7 +29,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css" integrity="sha512-ENrTWqddXrLJsQS2A86QmvA17PkJ0GVm1bqj5aTgpeMAfDKN2+SIOLpKG8R/6KkimnhTb+VW5qqUHB/r1zaRgg==" crossorigin="anonymous" />
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==" crossorigin="anonymous"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js" integrity="sha512-TiMWaqipFi2Vqt4ugRzsF8oRoGFlFFuqIi30FFxEPNw58Ov9mOy6LgC05ysfkxwLE0xVeZtmr92wVg9siAFRWA==" crossorigin="anonymous"></script>
 <script defer src="Barbeiros/barbearias-utils.js"></script>
 <script defer src="Barbeiros/barbearias.limpo.js"></script>
 <script defer src="script.js"></script>
@@ -1495,6 +1497,38 @@
         0 0 0 2px rgba(157, 122, 54, 0.75),
         0 16px 32px rgba(44, 55, 44, 0.38);
     }
+
+    .oc-cluster {
+      background: transparent;
+      border: 0;
+    }
+
+    .oc-cluster span {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--green-primary);
+      color: #fbf5ea;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1;
+      border: 3px solid var(--gold-border);
+      box-shadow:
+        0 0 0 4px rgba(66, 90, 71, 0.22),
+        0 10px 20px rgba(44, 55, 44, 0.26);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .oc-cluster:hover span {
+      transform: scale(1.1);
+      background: var(--green-hover);
+    }
+
+    .oc-cluster--md span { font-size: 15px; }
+    .oc-cluster--lg span { font-size: 16px; }
 
     .popup-card {
       min-width: 240px;
@@ -5169,16 +5203,21 @@
       renderFeatured();
       renderCities();
 
+      // Vista inicial só com o continente: incluir Madeira e Açores encolhia o continente
+      // a uma mancha de marcadores. As ilhas continuam acessíveis pelo filtro "Ilhas".
+      function isMainlandCoords(coords) {
+        return coords[0] >= 36.8 && coords[0] <= 42.2 && coords[1] >= -9.6 && coords[1] <= -6.1;
+      }
       const defaultMapPoints = allBarbers
         .filter(function(barber) {
-          return Array.isArray(barber.coords) && barber.coords.length === 2;
+          return Array.isArray(barber.coords) && barber.coords.length === 2 && isMainlandCoords(barber.coords);
         })
         .map(function(barber) {
           return barber.coords;
         });
       const defaultMapBounds = defaultMapPoints.length
         ? L.latLngBounds(defaultMapPoints).pad(0.08)
-        : L.latLngBounds([[30.2, -31.9], [43.2, -5.4]]);
+        : L.latLngBounds([[36.9, -9.6], [42.2, -6.1]]);
       const map = L.map("map", {
         scrollWheelZoom: true,
         zoomControl: false
@@ -5192,6 +5231,27 @@
       L.control.zoom({
         position: "topright"
       }).addTo(map);
+
+      // Agrupa marcadores próximos; se o CDN do markercluster falhar, cai para uma layer simples.
+      const markerLayer = (typeof L.markerClusterGroup === "function")
+        ? L.markerClusterGroup({
+            showCoverageOnHover: false,
+            spiderfyOnMaxZoom: true,
+            maxClusterRadius: 48,
+            disableClusteringAtZoom: 13,
+            iconCreateFunction: function(cluster) {
+              const count = cluster.getChildCount();
+              const size = count < 10 ? 38 : (count < 50 ? 46 : 54);
+              const modifier = count < 10 ? "" : (count < 50 ? " oc-cluster--md" : " oc-cluster--lg");
+              return L.divIcon({
+                html: "<span>" + count + "</span>",
+                className: "oc-cluster" + modifier,
+                iconSize: [size, size]
+              });
+            }
+          })
+        : L.layerGroup();
+      markerLayer.addTo(map);
 
       map.on("popupopen", function() {
         if (heroMapShell) {
@@ -5523,7 +5583,7 @@
           return {
             paddingTopLeft: [24, 24],
             paddingBottomRight: [24, 24],
-            maxZoom: 5
+            maxZoom: 7
           };
         }
 
@@ -5545,7 +5605,7 @@
             36,
             Math.max(36, Math.round(bottomOverlayHeight + 16))
           ],
-          maxZoom: 5
+          maxZoom: 7
         };
       }
 
@@ -6145,9 +6205,7 @@
         });
         map.closePopup();
 
-        state.markers.forEach(function(marker) {
-          map.removeLayer(marker);
-        });
+        markerLayer.clearLayers();
 
         if (state.userMarker) {
           map.removeLayer(state.userMarker);
@@ -6172,8 +6230,8 @@
               popupAnchor: [0, -46]
           })
           })
-            .addTo(map)
             .bindPopup(buildPopup(barber), getPopupOptions());
+          markerLayer.addLayer(marker);
 
           state.markers.push(marker);
           state.markersBySlug.set(barber.slug, marker);
@@ -6264,15 +6322,26 @@
           return;
         }
 
-        setActiveMarker(marker);
         map.invalidateSize({
           pan: false,
           debounceMoveend: true
         });
         const overlayPadding = getHeroOverlayPadding();
+        // O marcador pode estar dentro de um grupo: só abre o popup depois de o mapa
+        // parar e o marcador existir no DOM (a zoom 13 os grupos já estão desfeitos).
+        map.once("moveend", function() {
+          const openPopup = function() {
+            setActiveMarker(marker);
+            marker.openPopup();
+          };
+          if (typeof markerLayer.zoomToShowLayer === "function") {
+            markerLayer.zoomToShowLayer(marker, openPopup);
+          } else {
+            openPopup();
+          }
+        });
         map.setView(marker.getLatLng(), 13, { animate: true });
         map.panInside(marker.getLatLng(), overlayPadding);
-        marker.openPopup();
 
         if (window.innerWidth <= 860 && heroMapShell) {
           heroMapShell.scrollIntoView({ behavior: "smooth", block: "start" });
