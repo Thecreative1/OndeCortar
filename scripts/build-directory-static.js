@@ -1325,11 +1325,61 @@ function renderProfilePage(barber, citiesMap) {
       '<div class="oc-hero__ctas" style="display:flex;flex-direction:column;gap:10px">' + phoneBtn + secondRow + claimLink + "<\/div>" +
     "<\/div>";
 
-  // Sem espaço de fotografia: fica para uma futura oferta premium.
+  // ── Resumo rápido (coluna direita do hero em desktop; por baixo dos botões em mobile).
+  // Só dados que a ficha tem. O estado "aberto/fechado" é calculado no browser (hora de
+  // Lisboa) a partir do horário publicado; sem JS fica o horário completo.
+  const summaryWeek = horarioUtils.parsePt(barber.horario);
+  const summaryStatus = barber.horario
+    ? '<div class="oc-summary__status" data-oc-week="' + H(summaryWeek ? JSON.stringify(summaryWeek) : "") + '">' +
+        '<span class="oc-summary__dot" aria-hidden="true"><\/span>' +
+        '<span class="oc-summary__status-text">' + H(barber.horario) + "<\/span>" +
+      "<\/div>" +
+      '<p class="oc-summary__today" hidden><\/p>' +
+      '<p class="oc-summary__note">Segundo o horário publicado; feriados podem variar.<\/p>'
+    : '<div class="oc-summary__status is-unknown"><span class="oc-summary__dot" aria-hidden="true"><\/span>' +
+        '<span class="oc-summary__status-text">Horário ainda por indicar<\/span><\/div>';
+  const summaryOnline = [
+    barber.website ? '<a href="' + H(barber.website) + '" target="_blank" rel="noopener noreferrer">' + iGlobe + " Website<\/a>" : "",
+    barber.instagram ? '<a href="' + H(barber.instagram) + '" target="_blank" rel="noopener noreferrer">' + iInsta + " Instagram<\/a>" : ""
+  ].filter(Boolean).join("");
+  const summaryRow = (label, value) => value
+    ? '<div class="oc-summary__row"><dt>' + H(label) + "<\/dt><dd>" + value + "<\/dd><\/div>"
+    : "";
+  const summaryCard =
+    '<aside class="oc-card oc-summary" aria-label="Resumo rápido">' +
+      '<div class="oc-eyebrow oc-summary__eyebrow">Resumo rápido<\/div>' +
+      summaryStatus +
+      '<dl class="oc-summary__list">' +
+        summaryRow("Morada", barber.morada
+          ? H(barber.morada) + (mapsUrl ? ' <a class="oc-summary__link" href="' + H(mapsUrl) + '" target="_blank" rel="noopener noreferrer">Como chegar ' + iArrowUR + "<\/a>" : "")
+          : "") +
+        summaryRow("Telefone", barber.telefone ? '<a href="' + H(phoneHrefVal) + '">' + H(barber.telefone) + "<\/a>" : "") +
+        summaryRow("Online", summaryOnline ? '<span class="oc-summary__online">' + summaryOnline + "<\/span>" : "") +
+        summaryRow("Atualizada", H(formatDate(barber.lastmod))) +
+      "<\/dl>" +
+    "<\/aside>";
+  const summaryScript = summaryWeek
+    ? "<script>(function(){var s=document.querySelector('.oc-summary__status[data-oc-week]');if(!s||!window.Intl)return;" +
+      "var w;try{w=JSON.parse(s.getAttribute('data-oc-week'));}catch(e){return;}" +
+      "var p={};new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Lisbon',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value;});" +
+      "var d={Mon:0,Tue:1,Wed:2,Thu:3,Fri:4,Sat:5,Sun:6}[p.weekday];if(d===undefined)return;var now=p.hour+':'+p.minute;" +
+      "var N=['segunda','terça','quarta','quinta','sexta','sábado','domingo'];" +
+      "function t(h){var a=h.split(':');return (+a[0])+'h'+(a[1]==='00'?'':a[1]);}" +
+      "var txt,open=false,today=w[d]||[];" +
+      "for(var i=0;i<today.length;i++){if(now>=today[i][0]&&now<today[i][1]){open=true;txt='Aberto agora · fecha às '+t(today[i][1]);break;}}" +
+      "if(!open){for(var j=0;j<today.length;j++){if(now<today[j][0]){txt='Fechado · abre hoje às '+t(today[j][0]);break;}}}" +
+      "if(!txt){for(var k=1;k<=7;k++){var nd=(d+k)%7;if(w[nd]&&w[nd].length){var m=nd>=5;txt='Fechado · abre '+(k===1?'amanhã':(k===7?(m?'no próximo ':'na próxima ')+N[nd]:(m?'no ':'na ')+N[nd]))+' às '+t(w[nd][0][0]);break;}}}" +
+      "if(!txt)return;s.classList.add(open?'is-open':'is-closed');s.querySelector('.oc-summary__status-text').textContent=txt;" +
+      "var td=s.parentNode.querySelector('.oc-summary__today');if(td){td.textContent='Hoje: '+(today.length?today.map(function(x){return t(x[0])+'–'+t(x[1]);}).join(' e '):'fechado');td.hidden=false;}" +
+      "})();<\/script>"
+    : "";
+
   const heroSection =
     '<section class="oc-hero" aria-label="Informação principal">' +
     heroLeft +
-    "<\/section>";
+    summaryCard +
+    "<\/section>" +
+    summaryScript;
 
   // ── Contacts
   const missingNote = (!barber.email && !barber.website)
@@ -1453,7 +1503,7 @@ function renderProfilePage(barber, citiesMap) {
     '<span class="oc-crumb__sep">\/<\/span><span style="color:var(--ink)">' + H(barber.name) + "<\/span>";
 
   // ── Full page
-  return "<!DOCTYPE html>\n<html lang=\"pt-PT\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <meta name=\"theme-color\" content=\"#14110D\" />\n  <title>" + H(title) + "<\/title>\n  <meta name=\"description\" content=\"" + H(description) + "\" />\n  <link rel=\"canonical\" href=\"" + H(canonical) + "\" />\n  <meta property=\"og:title\" content=\"" + H(title) + "\" />\n  <meta property=\"og:description\" content=\"" + H(description) + "\" />\n  <meta property=\"og:url\" content=\"" + H(canonical) + "\" />\n  <meta property=\"og:type\" content=\"website\" />\n  <meta property=\"og:image\" content=\"" + H(DEFAULT_OG_IMAGE) + "\" />\n  <link rel=\"icon\" href=\"" + H(prefix) + "favicon.ico\" type=\"image/x-icon\" />\n  <link rel=\"apple-touch-icon\" href=\"" + H(prefix) + "apple-touch-icon.png\" />\n  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n  <link href=\"https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap\" rel=\"stylesheet\" />" + leafletHead + "\n  <link rel=\"stylesheet\" href=\"" + H(prefix) + "barbearia-profile.css?v=20261001-dono\" />\n  <script defer src=\"" + H(prefix) + "oc-analytics.js\"><\/script>\n" + jsonLd + "\n<\/head>\n<body>\n\n  <header class=\"oc-topnav oc-mobile-nav\">\n    <a class=\"oc-topnav__back\" href=\"" + H(prefix) + "\">" + iArrowL + " Barbearias<\/a>\n    <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n    <a href=\"" + H(canonical) + "\" class=\"oc-topnav__action\" aria-label=\"Partilhar\">" + iShare + "<\/a>\n  <\/header>\n\n  <header class=\"oc-desktop-nav oc-desktop-only\" style=\"display:none\">\n    <div style=\"display:flex;align-items:center;gap:32px\">\n      <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n      <nav class=\"oc-desktop-nav__links\" aria-label=\"Navegação principal\">\n        <a href=\"" + H(prefix) + "\">Barbearias<\/a>\n        <a href=\"" + H(prefix) + "cidades\/\">Cidades<\/a>\n        <a href=\"" + H(prefix) + "registar.html\">Adicionar barbearia<\/a>\n      <\/nav>\n    <\/div>\n    <div class=\"oc-desktop-nav__actions\">\n      <a href=\"" + H(prefix) + "registar.html\" class=\"oc-btn oc-btn--ghost\" style=\"height:38px;padding:0 16px;font-size:13px\">Reclamar esta barbearia<\/a>\n      <a href=\"" + H(prefix) + "registar.html\" class=\"oc-btn oc-btn--primary\" style=\"height:38px;padding:0 16px;font-size:13px\">Atualizar perfil " + iArrow + "<\/a>\n    <\/div>\n  <\/header>\n\n  <div class=\"oc-page\">\n    <nav class=\"oc-crumb-wrap oc-section\" style=\"padding:14px 20px 0\" aria-label=\"breadcrumb\">\n      <div class=\"oc-crumb\">" + crumbItems + "<\/div>\n    <\/nav>\n\n    <main>\n      <article itemscope itemtype=\"https://schema.org/HairSalon\">\n" +
+  return "<!DOCTYPE html>\n<html lang=\"pt-PT\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <meta name=\"theme-color\" content=\"#14110D\" />\n  <title>" + H(title) + "<\/title>\n  <meta name=\"description\" content=\"" + H(description) + "\" />\n  <link rel=\"canonical\" href=\"" + H(canonical) + "\" />\n  <meta property=\"og:title\" content=\"" + H(title) + "\" />\n  <meta property=\"og:description\" content=\"" + H(description) + "\" />\n  <meta property=\"og:url\" content=\"" + H(canonical) + "\" />\n  <meta property=\"og:type\" content=\"website\" />\n  <meta property=\"og:image\" content=\"" + H(DEFAULT_OG_IMAGE) + "\" />\n  <link rel=\"icon\" href=\"" + H(prefix) + "favicon.ico\" type=\"image/x-icon\" />\n  <link rel=\"apple-touch-icon\" href=\"" + H(prefix) + "apple-touch-icon.png\" />\n  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n  <link href=\"https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap\" rel=\"stylesheet\" />" + leafletHead + "\n  <link rel=\"stylesheet\" href=\"" + H(prefix) + "barbearia-profile.css?v=20261001-resumo\" />\n  <script defer src=\"" + H(prefix) + "oc-analytics.js\"><\/script>\n" + jsonLd + "\n<\/head>\n<body>\n\n  <header class=\"oc-topnav oc-mobile-nav\">\n    <a class=\"oc-topnav__back\" href=\"" + H(prefix) + "\">" + iArrowL + " Barbearias<\/a>\n    <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n    <a href=\"" + H(canonical) + "\" class=\"oc-topnav__action\" aria-label=\"Partilhar\">" + iShare + "<\/a>\n  <\/header>\n\n  <header class=\"oc-desktop-nav oc-desktop-only\" style=\"display:none\">\n    <div style=\"display:flex;align-items:center;gap:32px\">\n      <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n      <nav class=\"oc-desktop-nav__links\" aria-label=\"Navegação principal\">\n        <a href=\"" + H(prefix) + "\">Barbearias<\/a>\n        <a href=\"" + H(prefix) + "cidades\/\">Cidades<\/a>\n        <a href=\"" + H(prefix) + "registar.html\">Adicionar barbearia<\/a>\n      <\/nav>\n    <\/div>\n    <div class=\"oc-desktop-nav__actions\">\n      <a href=\"" + H(prefix) + "registar.html\" class=\"oc-btn oc-btn--ghost\" style=\"height:38px;padding:0 16px;font-size:13px\">Reclamar esta barbearia<\/a>\n      <a href=\"" + H(prefix) + "registar.html\" class=\"oc-btn oc-btn--primary\" style=\"height:38px;padding:0 16px;font-size:13px\">Atualizar perfil " + iArrow + "<\/a>\n    <\/div>\n  <\/header>\n\n  <div class=\"oc-page\">\n    <nav class=\"oc-crumb-wrap oc-section\" style=\"padding:14px 20px 0\" aria-label=\"breadcrumb\">\n      <div class=\"oc-crumb\">" + crumbItems + "<\/div>\n    <\/nav>\n\n    <main>\n      <article itemscope itemtype=\"https://schema.org/HairSalon\">\n" +
     heroSection + "\n" +
     '        <div class="oc-pole-wrap oc-section" style="padding:0 20px 28px"><div class="oc-pole"><\/div><\/div>\n' +
     infoRow + "\n" +
