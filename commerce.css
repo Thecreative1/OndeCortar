@@ -3726,7 +3726,8 @@ body[data-page="store"] .loja-feat-avoid strong {
     row-gap: 6px;
     padding: 14px;
   }
-  .product-card--dense > img {
+  .product-card--dense > img,
+  .product-card--dense > picture > img {
     grid-column: 1;
     grid-row: 1 / span 3;
     width: 80px;

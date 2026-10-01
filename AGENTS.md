@@ -163,6 +163,8 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
 | `audit-barber-locations.js` | Auditoria de qualidade de localização |
 | `audit-site-links.js` | Verifica links internos e perfis gerados |
 | `smoke-missing-barbearias.js` | Smoke test: confirma que todos os slugs têm página gerada |
+| `gerar-webp.py` | `python scripts/gerar-webp.py` — gera `.webp` ao lado das fotos de `imagens/produtos/` e `imagens/revista/` (só quando poupa ≥10%; nunca altera os `.jpg`) |
+| `apply-webp-images.js` | Idempotente — envolve as `<img>` de `.jpg` com `.webp` ao lado em `<picture style="display:contents">` + `<source … style="display:none">`. O `src` continua a ser o `.jpg` (fallback, og:image, Google Imagens). **Correr os dois depois de acrescentar fotos novas** (ex.: depois de `add-store-products.js`). Seletores CSS `x > img` não apanham a `<img>` dentro do `<picture>` — acrescentar a variante `x > picture > img` |
 
 ## SEO e schema markup
 
