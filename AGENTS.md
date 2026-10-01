@@ -103,7 +103,7 @@ A `index.html` tem duas camadas:
 
 ### Para bots e utilizadores sem JS (gerado pelo build)
 - `#resultsList` contém um `<ul>` estático com todas as barbearias: nome linkado, cidade, morada
-- Cada `<li>` tem um `<script type="application/ld+json">` com schema `LocalBusiness` inline
+- Sem JSON-LD por `<li>` (removido em 2026-10-01: ~157 KB duplicados do `HairSalon` de cada perfil). Estilos via classes `.ssr-list` no CSS do `index.html`, não inline
 - O `<head>` tem um `<script type="application/ld+json">` com schema `ItemList` de todas as barbearias
 - O `<noscript>` avisa que o mapa precisa de JS mas a lista está disponível abaixo
 
@@ -160,7 +160,7 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
 - Páginas de perfil (`barbearias/{slug}/`) têm JSON-LD `HairSalon` + `BreadcrumbList`
 - Páginas de cidade (`cidades/{slug}/`) têm JSON-LD `CollectionPage` + `ItemList` + `BreadcrumbList`
 - Homepage tem JSON-LD `WebSite` + `Organization` (estático) + `ItemList` de todas as barbearias (gerado pelo build)
-- Cada item na lista estática da homepage tem JSON-LD `LocalBusiness` inline
+- A lista estática da homepage **não** tem JSON-LD por item — não reintroduzir (o schema de cada barbearia é o `HairSalon` do perfil)
 - Sitemaps: `sitemap.xml` (índice) → `sitemap-barbearias.xml`, `sitemap-cidades.xml`, `sitemap-pages.xml`, `sitemap-loja.xml`, `sitemap-revista.xml`
 
 ### SEO dos perfis

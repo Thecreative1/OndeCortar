@@ -1727,41 +1727,26 @@ function syncGeneratedSubdirectories(relativeDir, desiredSlugs) {
   });
 }
 
+// Os estilos da lista estática vivem em index.html (.ssr-list*): repetidos inline em
+// cada <li> pesavam ~150 KB na homepage.
+// Sem JSON-LD por item (removido em 2026-10-01, ~157 KB): o schema de cada barbearia é o
+// HairSalon do próprio perfil; a homepage só declara o ItemList no <head>.
 function buildHomepageStaticList(barbers) {
-  const LI_STYLE = "padding:16px;border:1px solid #cfbfa2;border-radius:14px;background:#fbf5ea;";
-  const H4_STYLE = "margin:0 0 6px;font-size:1rem;font-family:'Plus Jakarta Sans',sans-serif;";
-  const P_STYLE  = "margin:4px 0 0;font-size:0.875rem;color:#4e473d;line-height:1.5;";
-
   const items = barbers.map((barber) => {
     const name = escapeHtml(barber.name);
     const profileUrl = barber.profileUrl;
     const city = barber.city || "";
     const morada = trimText(barber.morada);
 
-    const address = morada
-      ? { "@type": "PostalAddress", "streetAddress": morada, "addressCountry": "PT",
-          ...(city ? { "addressLocality": city } : {}) }
-      : undefined;
+    const cityLine   = city   ? `\n      <p>${escapeHtml(city)}</p>` : "";
+    const moradaLine = morada ? `\n      <p>${escapeHtml(morada)}</p>` : "";
 
-    const jsonLd = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": barber.name,
-      "url": absoluteUrl(profileUrl),
-      ...(address ? { "address": address } : {})
-    });
-
-    const cityLine   = city   ? `\n      <p style="${P_STYLE}">${escapeHtml(city)}</p>` : "";
-    const moradaLine = morada ? `\n      <p style="${P_STYLE}">${escapeHtml(morada)}</p>` : "";
-
-    return `    <li style="${LI_STYLE}">
-      <script type="application/ld+json">${jsonLd}<\/script>
-      <h4 style="${H4_STYLE}"><a href="${escapeHtml(profileUrl)}">${name}</a></h4>${cityLine}${moradaLine}
+    return `    <li>
+      <h4><a href="${escapeHtml(profileUrl)}">${name}</a></h4>${cityLine}${moradaLine}
     </li>`;
   });
 
-  const UL_STYLE = "list-style:none;margin:0;padding:0;display:grid;gap:14px;";
-  return `  <ul style="${UL_STYLE}" aria-label="Lista de barbearias em Portugal">\n`
+  return `  <ul class="ssr-list" aria-label="Lista de barbearias em Portugal">\n`
     + items.join("\n") + "\n  </ul>";
 }
 
