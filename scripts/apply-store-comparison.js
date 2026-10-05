@@ -30,7 +30,7 @@ const rows = spec.rows.map((r) => {
     '<td data-label="Alimentação">' + esc(r.power) + '</td>' +
     '<td data-label="Autonomia">' + esc(r.runtime) + '</td>' +
     '<td data-label="Comprimentos">' + esc(r.lengths) + '</td>' +
-    '<td class="oc-compare-cta"><a class="btn btn-primary btn-small" href="https://www.amazon.es/dp/' + asin + '?tag=' + TAG + '&amp;language=pt_PT" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço</a></td>' +
+    '<td class="oc-compare-cta"><a class="btn btn-primary btn-small" href="https://www.amazon.es/dp/' + asin + '?tag=' + TAG + '&amp;language=pt_PT" target="_blank" rel="sponsored nofollow noopener noreferrer">Ver preço na Amazon</a></td>' +
     '</tr>';
 }).join("");
 

@@ -4556,3 +4556,77 @@ body[data-page="store"] #prendas .loja-feat-avoid strong {
     padding: 18px 14px;
   }
 }
+
+/* ── Conversão loja (2026-10): atalhos do hero, data de revisão e "decisão rápida" nos produtos ── */
+body[data-page="store"] .loja-hero-shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin: 0;
+}
+
+body[data-page="store"] .loja-hero-shortcuts-label {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: rgba(242, 235, 224, 0.58);
+}
+
+body[data-page="store"] .loja-hero-shortcut {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid rgba(199, 152, 83, 0.55);
+  border-radius: 999px;
+  background: rgba(199, 152, 83, 0.1);
+  color: var(--gold-soft);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+body[data-page="store"] .loja-hero-shortcut:hover,
+body[data-page="store"] .loja-hero-shortcut:focus-visible {
+  background: rgba(199, 152, 83, 0.2);
+  border-color: var(--gold-soft);
+}
+
+body[data-page="store"] .loja-hero-updated {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(242, 235, 224, 0.58);
+}
+
+body[data-page="product"] .oc-quick-decision {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+body[data-page="product"] .oc-quick-decision > div {
+  padding: 8px 12px;
+  border-left: 3px solid var(--gold-main);
+  border-radius: 0 10px 10px 0;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+body[data-page="product"] .oc-quick-decision > div.is-avoid {
+  border-left-color: rgba(242, 235, 224, 0.35);
+}
+
+body[data-page="product"] .oc-quick-decision dt {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+}
+
+body[data-page="product"] .oc-quick-decision dd {
+  margin: 2px 0 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: rgba(242, 235, 224, 0.78);
+}
