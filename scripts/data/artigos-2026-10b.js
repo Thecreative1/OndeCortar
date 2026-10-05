@@ -41,7 +41,7 @@ module.exports = [
     sections: [
       {
         h2: "Para que serve o óleo de barba",
-        html: "<p>Um óleo de barba é uma mistura de óleos vegetais — os mais comuns são o de argão, jojoba e amêndoa doce — muitas vezes com um aroma. Faz três coisas:</p><ul class=\"rich-list\"><li><strong>Hidrata a pele por baixo da barba.</strong> É aí que nasce a comichão e a descamação, sobretudo nas primeiras semanas de crescimento.</li><li><strong>Amacia o pelo.</strong> A barba fica menos áspera ao toque e mais fácil de pentear.</li><li><strong>Dá um aspeto mais cuidado</strong>, com algum brilho e sem pelos espetados.</li></ul><p>O que não faz: não muda a cor, não engrossa o pelo e não preenche falhas. Se é isso que te preocupa, vê o guia sobre <a href=\"../../revista/barba-falhada-o-que-fazer/\">barba falhada</a>.</p>"
+        html: "<p>Um óleo de barba é uma mistura de óleos vegetais — os mais comuns são o de argão, jojoba e amêndoa doce — muitas vezes com um aroma. Faz três coisas:</p><ul class=\"rich-list\"><li><strong>Hidrata a pele por baixo da barba.</strong> É aí que nasce a comichão e a descamação, sobretudo nas primeiras semanas de crescimento — vê também <a href=\"../../revista/caspa-na-barba-o-que-fazer/\">caspa na barba</a>.</li><li><strong>Amacia o pelo.</strong> A barba fica menos áspera ao toque e mais fácil de pentear.</li><li><strong>Dá um aspeto mais cuidado</strong>, com algum brilho e sem pelos espetados.</li></ul><p>O que não faz: não muda a cor, não engrossa o pelo e não preenche falhas. Se é isso que te preocupa, vê o guia sobre <a href=\"../../revista/barba-falhada-o-que-fazer/\">barba falhada</a>.</p>"
       },
       {
         id: "como-usar",
