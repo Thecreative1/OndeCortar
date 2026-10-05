@@ -286,7 +286,7 @@ const DECISION_TABLES = {
     ["braun-series-5-aio5545", "Tudo num só aparelho"]
   ],
   "melhor-kit-de-barba-para-comecar-sem-comprar-as-cegas": [
-    ["kit-xikezan", "Base mais completa"],
+    ["cusmay-kit-barba-11-em-1", "Base mais completa"],
     ["viking-sandalwood", "Qualidade de produto"],
     ["king-c-rotina", "Barbear clássico"]
   ],

@@ -4630,3 +4630,29 @@ body[data-page="product"] .oc-quick-decision dd {
   line-height: 1.45;
   color: rgba(242, 235, 224, 0.78);
 }
+
+/* Produto indisponível na Amazon.es (markers OC-UNAVAILABLE) */
+body[data-page="product"] .oc-unavailable-note {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border: 1px solid rgba(199, 152, 83, 0.55);
+  border-radius: 12px;
+  background: rgba(199, 152, 83, 0.12);
+}
+
+body[data-page="product"] .oc-unavailable-note strong {
+  color: var(--gold-soft);
+  font-size: 0.95rem;
+}
+
+body[data-page="product"] .oc-unavailable-note p {
+  margin: 0;
+  color: rgba(242, 235, 224, 0.82);
+  font-size: 0.92rem;
+}
+
+body[data-page="product"] .oc-unavailable-note a {
+  color: var(--gold-soft);
+  font-weight: 700;
+}

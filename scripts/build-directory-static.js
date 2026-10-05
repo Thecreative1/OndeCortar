@@ -54,7 +54,7 @@ const STORE_PICK_VARIANTS = [
   [
     { slug: "wahl-rapid-clip", label: "Máquina sem fios para retoques entre cortes" },
     { slug: "remington-mb320c", label: "Aparador de barba simples" },
-    { slug: "beardburys-spray", label: "Manutenção da máquina" }
+    { slug: "shave-factory-clippercare", label: "Manutenção da máquina" }
   ]
 ];
 
