@@ -5007,3 +5007,22 @@ body[data-page="category"] .loja-feat-panel .oc-top-strengths .rich-list {
 body[data-page="category"] .loja-feat-panel .oc-top-guide {
   color: var(--gold-soft);
 }
+
+/* Revista: tabela dos números da máquina (reutiliza oc-compare-table) */
+body[data-page="article"] .oc-numbers-table tbody th {
+  font-weight: 700;
+  color: var(--ink-strong);
+  white-space: nowrap;
+}
+
+body[data-page="article"] .oc-numbers-note {
+  margin-top: 8px;
+  font-size: 0.84rem;
+  color: var(--muted-soft);
+}
+
+@media (max-width: 760px) {
+  body[data-page="article"] .oc-numbers-table td[data-label="Como fica"] {
+    grid-column: 2 / -1;
+  }
+}

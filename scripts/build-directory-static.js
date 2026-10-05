@@ -105,6 +105,32 @@ function storeSection(prefix, barberSlug) {
   "</section>";
 }
 
+// Guias da revista nos perfis (barbearia → revista): os perfis têm ~70% do tráfego do site.
+// Só artigos úteis a quem vai a uma barbearia; ordem fixa, sem dados inventados.
+const PROFILE_GUIDES = [
+  { slug: "numeros-da-maquina-de-cortar-cabelo", title: "Que número pedir", label: "Tabela dos pentes da máquina em milímetros" },
+  { slug: "tipos-de-degrade-como-pedir-o-corte-certo", title: "Tipos de degradê", label: "Baixo, médio, alto ou à pele — como pedir" },
+  { slug: "quanto-custa-cortar-o-cabelo-numa-barbearia-em-portugal", title: "Quanto custa um corte", label: "Preços típicos em Portugal por serviço" },
+  { slug: "como-escolher-uma-barbearia-sinais-de-qualidade", title: "Como escolher uma barbearia", label: "7 sinais de qualidade antes de marcar" }
+].filter((guide) => fs.existsSync(path.join(ROOT, "revista", guide.slug, "index.html")));
+
+function guidesSection(prefix) {
+  if (!PROFILE_GUIDES.length) return "";
+  const rows = PROFILE_GUIDES.map((guide) =>
+    '<a href="' + escapeHtml(prefix + "revista/" + guide.slug + "/") + '" style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--hairline);text-decoration:none;color:var(--ink)">' +
+      '<span style="min-width:0"><strong style="display:block;font-size:14.5px">' + escapeHtml(guide.title) + "</strong><span class=\"oc-meta\">" + escapeHtml(guide.label) + "</span></span>" +
+    "</a>"
+  ).join("");
+  return '<section class="oc-section" style="padding:0 20px 28px" aria-labelledby="guias-h">' +
+    '<div class="oc-card" style="padding:20px 18px">' +
+      '<div class="oc-eyebrow" style="margin-bottom:6px">Revista OndeCortar</div>' +
+      '<h2 id="guias-h" class="oc-section-head__title" style="margin-bottom:8px">Antes de ires à barbearia</h2>' +
+      '<p style="font-size:14px;line-height:1.55;color:var(--subtext);margin-bottom:6px">Guias curtos para pedir o corte certo e saber o que esperar.</p>' +
+      rows +
+    "</div>" +
+  "</section>";
+}
+
 function latestLastmod(entries, fallback) {
   return (entries || []).reduce((latest, entry) => {
     const value = String((entry && entry.lastmod) || "").trim();
@@ -598,9 +624,9 @@ function buildCityGuide(cityName, hierarchy) {
 // Pares categoria+artigo rodados por cidade (determinístico via hashSlug),
 // para o bloco "Loja e revista" não apontar sempre para o mesmo destino.
 const CITY_COMMERCE_VARIANTS = [
-  { category: "maquinas-de-cortar", article: "como-escolher-uma-maquina-de-cortar-cabelo-para-usar-em-casa" },
-  { category: "kits-de-barba", article: "como-montar-uma-rotina-simples-de-barba-em-casa" },
-  { category: "manutencao-de-maquinas", article: "como-limpar-uma-maquina-de-cortar-cabelo" }
+  { category: "maquinas-de-cortar", article: "como-escolher-uma-barbearia-sinais-de-qualidade", articleLabel: "Como escolher uma barbearia" },
+  { category: "kits-de-barba", article: "quanto-custa-cortar-o-cabelo-numa-barbearia-em-portugal", articleLabel: "Quanto custa um corte" },
+  { category: "manutencao-de-maquinas", article: "tipos-de-degrade-como-pedir-o-corte-certo", articleLabel: "Tipos de degradê" }
 ];
 
 function buildSlugData(rawBarbers) {
@@ -683,6 +709,7 @@ function buildSlugData(rawBarbers) {
     const cityCommerce = CITY_COMMERCE_VARIANTS[hashSlug(city.slug) % CITY_COMMERCE_VARIANTS.length];
     city.storeCategory = cityCommerce.category;
     city.magazineArticle = cityCommerce.article;
+    city.magazineArticleLabel = cityCommerce.articleLabel;
   });
 
   return {
@@ -1515,6 +1542,7 @@ function renderProfilePage(barber, citiesMap) {
     infoRow + "\n" +
     ownerSection() + "\n" +
     relatedSection + "\n" +
+    guidesSection(prefix) + "\n" +
     storeSection(prefix, barber.slug) + "\n" +
     "      <\/article>\n    <\/main>\n\n" +
     footerSection + "\n" +
@@ -1626,7 +1654,7 @@ ${city.barbearias.map((barber) => renderBarberCard(barber, prefix, { showZone: t
           <p>Depois de encontrares uma barbearia nesta cidade, também podes abrir a loja ou a revista para comparar produtos e rotinas em casa.</p>
           <div class="card-actions">
             <a class="btn btn-primary" href="${prefix}loja/${escapeHtml(city.storeCategory)}/">Ver categoria da loja</a>
-            <a class="btn btn-secondary" href="${prefix}revista/${escapeHtml(city.magazineArticle)}/">Ler artigo relacionado</a>
+            <a class="btn btn-secondary" href="${prefix}revista/${escapeHtml(city.magazineArticle)}/">${escapeHtml(city.magazineArticleLabel || "Ler artigo relacionado")}</a>
           </div>
         </article>
         <article class="card">
