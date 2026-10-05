@@ -101,9 +101,9 @@ function pickBlock({ slug, why }) {
   return "<!-- OC-SINGLE-PICK-START -->" +
     '<section class="section oc-single-pick" id="se-so-um"><div class="container">' +
     '<div class="callout-card oc-single-pick-card">' +
-    '<img class="oc-single-pick-img" src="../../' + esc(p.image) + '" alt="' + esc(p.alt) + '" loading="lazy" />' +
+    '<a class="oc-card-media-link" href="../../produto/' + slug + '/" tabindex="-1" aria-hidden="true"><img class="oc-single-pick-img" src="../../' + esc(p.image) + '" alt="' + esc(p.alt) + '" loading="lazy" /></a>' +
     '<div class="oc-single-pick-copy"><span class="eyebrow">Se tivéssemos de escolher apenas um</span>' +
-    "<h2>" + esc(p.name) + "</h2><p>" + esc(why) + "</p>" +
+    "<h2><a class=\"oc-card-title-link\" href=\"../../produto/" + slug + "/\">" + esc(p.name) + "</a></h2><p>" + esc(why) + "</p>" +
     '<p class="oc-single-pick-note">Escolha editorial com base neste guia e nas características publicadas pelo fabricante.</p>' +
     '<div class="card-actions"><a class="btn btn-primary btn-small" href="' + amazonHref(p) + '" ' + LINK_ATTRS + ">Ver preço na Amazon.es</a>" +
     '<a class="btn btn-secondary btn-small" href="../../produto/' + slug + '/">Ver detalhes</a></div></div>' +

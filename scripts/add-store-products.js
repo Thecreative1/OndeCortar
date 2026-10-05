@@ -71,9 +71,9 @@ const imgSrc = (src) => (/^https?:\/\//.test(src) ? src : "../../" + src);
 function card(p) {
   const line = (p.strengths && p.strengths[0]) || p.summary;
   return '<article class="product-card product-card--dense">' +
-    '<img src="' + esc(imgSrc(p.image)) + '" alt="' + esc(p.alt) + '" loading="lazy" />' +
+    '<a class="oc-card-media-link" href="../../produto/' + esc(p.slug) + '/" tabindex="-1" aria-hidden="true"><img src="' + esc(imgSrc(p.image)) + '" alt="' + esc(p.alt) + '" loading="lazy" /></a>' +
     '<div class="product-copy"><div class="meta-row"><span class="tag">' + esc(p.bestFor) + '</span></div>' +
-    '<h3 class="product-card-title">' + esc(p.name) + '</h3>' +
+    '<h3 class="product-card-title"><a class="oc-card-title-link" href="../../produto/' + esc(p.slug) + '/">' + esc(p.name) + '</a></h3>' +
     '<p class="product-highlight-line">' + esc(line) + '</p>' +
     '<div class="card-actions"><a class="btn btn-secondary btn-small" href="../../produto/' + esc(p.slug) + '/">Ver produto</a>' +
     '<a class="btn btn-primary btn-small" href="' + hrefFor(p) + '" ' + LINK_ATTRS + '>Ver preço na Amazon.es</a></div></div></article>';

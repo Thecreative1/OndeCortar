@@ -164,6 +164,7 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
 | `apply-store-comparison.js` | Idempotente — `node scripts/apply-store-comparison.js scripts/data/comparacao-maquinas.js` insere a tabela "Comparar num relance" (markers OC-COMPARE-START/END). Só factos publicados pelo fabricante na Amazon.es; "—" quando não indicado |
 | `gerar-webp.py` | `python scripts/gerar-webp.py` — gera `.webp` ao lado das fotos de `imagens/produtos/` e `imagens/revista/` (só quando poupa ≥10%; nunca altera os `.jpg`) |
 | `apply-webp-images.js` | Idempotente — envolve as `<img>` de `.jpg` com `.webp` ao lado em `<picture style="display:contents">` + `<source … style="display:none">`. O `src` continua a ser o `.jpg` (fallback, og:image, Google Imagens). **Correr os dois depois de acrescentar fotos novas** (ex.: depois de `add-store-products.js`). Seletores CSS `x > img` não apanham a `<img>` dentro do `<picture>` — acrescentar a variante `x > picture > img` |
+| `apply-card-links.js` | Idempotente — imagem e nome de cada cartão de produto (loja, produto, revista) passam a ligar à página do produto (`oc-card-media-link` com `display:contents`, `oc-card-title-link`). Correr depois de gerar/regenerar páginas com cartões |
 | `build-black-friday-page.js` | Gera `loja/black-friday/` (página sazonal) a partir do modelo de `loja/para-oferecer/` + entrada no sitemap. Para o ano seguinte: atualizar `EVENT` (datas confirmadas pela Amazon) e `WATCH` |
 
 ## SEO e schema markup

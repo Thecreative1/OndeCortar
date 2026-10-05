@@ -72,8 +72,8 @@ function card([slug, badge, why]) {
   if (!p) throw new Error("Produto inexistente: " + slug);
   const asin = p.amazon.match(/\/dp\/([A-Z0-9]{10})/)[1];
   const img = /^https?:/.test(p.image) ? p.image : "../../" + p.image;
-  return '<article class="loja-feat-card"><img class="loja-feat-img" src="' + esc(img) + '" alt="' + esc(p.alt) + '" loading="lazy" />' +
-    '<div class="loja-feat-body"><span class="loja-feat-badge">' + esc(badge) + '</span><h3 class="loja-feat-name">' + esc(p.name) + '</h3>' +
+  return '<article class="loja-feat-card"><a class="oc-card-media-link" href="../../produto/' + slug + '/" tabindex="-1" aria-hidden="true"><img class="loja-feat-img" src="' + esc(img) + '" alt="' + esc(p.alt) + '" loading="lazy" /></a>' +
+    '<div class="loja-feat-body"><span class="loja-feat-badge">' + esc(badge) + '</span><h3 class="loja-feat-name"><a class="oc-card-title-link" href="../../produto/' + slug + '/">' + esc(p.name) + '</a></h3>' +
     '<p class="loja-feat-why">' + esc(why) + '</p><div class="loja-feat-actions">' +
     '<a class="btn btn-primary btn-small" href="' + amazon(asin) + '" ' + LINK + '>Ver preço na Amazon.es</a>' +
     '<a class="btn btn-secondary btn-small" href="../../produto/' + slug + '/">Ver detalhes</a></div></div></article>';

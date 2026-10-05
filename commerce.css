@@ -5026,3 +5026,19 @@ body[data-page="article"] .oc-numbers-note {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* ── Cartões de produto: imagem e nome levam à página do produto (scripts/apply-card-links.js) ── */
+.oc-card-media-link {
+  display: contents;
+}
+
+.oc-card-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.oc-card-title-link:hover,
+.oc-card-title-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

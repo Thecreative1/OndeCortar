@@ -66,10 +66,10 @@ function card([slug, bestUse, article]) {
   const img = /^https?:/.test(p.image) ? p.image : "../../" + p.image;
   const guide = article || (p.articles || [])[0];
   return '<article class="loja-feat-card oc-top-card">' +
-    '<img class="loja-feat-img" src="' + esc(img) + '" alt="' + esc(p.alt) + '" loading="lazy" />' +
+    '<a class="oc-card-media-link" href="../../produto/' + slug + '/" tabindex="-1" aria-hidden="true"><img class="loja-feat-img" src="' + esc(img) + '" alt="' + esc(p.alt) + '" loading="lazy" /></a>' +
     '<div class="loja-feat-body">' +
       '<span class="loja-feat-badge">' + esc(bestUse) + "</span>" +
-      '<h3 class="loja-feat-name">' + esc(p.name) + "</h3>" +
+      '<h3 class="loja-feat-name"><a class="oc-card-title-link" href="../../produto/' + slug + '/">' + esc(p.name) + "</a></h3>" +
       '<p class="loja-feat-why">' + esc(p.highlight) + "</p>" +
       '<div class="oc-top-strengths"><strong>Pontos fortes</strong><ul class="rich-list">' +
         p.strengths.slice(0, 3).map((s) => "<li>" + esc(cap(s)) + "</li>").join("") + "</ul></div>" +
