@@ -4656,3 +4656,61 @@ body[data-page="product"] .oc-unavailable-note a {
   color: var(--gold-soft);
   font-weight: 700;
 }
+
+/* ── Revista (2026-10): tabela compacta e "Se tivéssemos de escolher apenas um" ── */
+body[data-page="article"] .oc-article-compare .oc-compare-table td[data-label="Melhor para"] {
+  font-weight: 700;
+  color: var(--gold-main);
+}
+
+@media (max-width: 760px) {
+  body[data-page="article"] .oc-article-compare .oc-compare-table td[data-label="Destaque"] {
+    grid-column: 1 / -1;
+  }
+}
+
+body[data-page="article"] .oc-single-pick-card {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+  border-left: 4px solid var(--gold-main);
+}
+
+body[data-page="article"] .oc-single-pick-img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+body[data-page="article"] .oc-single-pick-copy {
+  display: grid;
+  gap: 8px;
+}
+
+body[data-page="article"] .oc-single-pick-copy h2 {
+  margin: 0;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+}
+
+body[data-page="article"] .oc-single-pick-copy p {
+  margin: 0;
+}
+
+body[data-page="article"] .oc-single-pick-note {
+  font-size: 0.82rem;
+  color: var(--muted-soft);
+}
+
+@media (max-width: 640px) {
+  body[data-page="article"] .oc-single-pick-card {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="article"] .oc-single-pick-img {
+    max-width: 180px;
+  }
+}
