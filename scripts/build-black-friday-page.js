@@ -84,7 +84,7 @@ const description = "A nossa lista para a Black Friday " + EVENT.year + " na Ama
 const bfUrl = "https://www.amazon.es/blackfriday?tag=" + TAG;
 
 const main = '<main>' +
-  '<section class="section"><div class="container hero-card"><div class="hero-grid"><div class="hero-copy">' +
+  '<section class="section"><div class="container hero-card category-hero-card"><div class="hero-grid"><div class="hero-copy">' +
   '<div class="breadcrumbs"><a href="../../loja/">Loja</a><span>/</span><span>Black Friday ' + EVENT.year + '</span></div>' +
   '<span class="eyebrow">Black Friday ' + EVENT.year + '</span><h1>Black Friday ' + EVENT.year + ' para cabelo e barba</h1>' +
   '<p>Uma lista curta do que vale a pena vigiar na Amazon.es — os mesmos produtos que recomendamos o ano todo, para comprares com calma quando o preço baixar.</p>' +
@@ -93,7 +93,7 @@ const main = '<main>' +
   '<div class="hero-side"><div class="store-note"><strong>Datas a apontar</strong><ul class="rich-list">' +
   '<li>Black Friday: ' + esc(EVENT.blackFriday) + '</li><li>Cyber Monday: ' + esc(EVENT.cyberMonday) + '</li>' +
   '<li>' + esc(EVENT.previous) + ' Confirma as datas deste ano na Amazon.es.</li></ul></div></div></div></div></section>' +
-  WATCH.map((g) => '<section class="section" id="' + g.id + '"><div class="container"><div class="section-header section-header--compact"><div>' +
+  WATCH.map((g, i) => '<section class="section' + (i % 2 === 0 ? ' loja-feat-panel' : '') + '" id="' + g.id + '"><div class="container"><div class="section-header section-header--compact"><div>' +
     '<span class="eyebrow">A vigiar</span><h2>' + esc(g.title) + '</h2><p>' + esc(g.intro) + '</p></div></div>' +
     '<div class="loja-feat-grid">' + g.items.map(card).join("") + '</div></div></section>').join("") +
   '<section class="section" id="dicas"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Antes de comprar</span>' +

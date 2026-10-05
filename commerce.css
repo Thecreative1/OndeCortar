@@ -3897,8 +3897,13 @@ body[data-page="category"] .category-hero-card .breadcrumbs a {
   color: var(--gold-soft);
 }
 
-body[data-page="category"] .category-hero-card .section-flag {
+body[data-page="category"] .category-hero-card .section-flag,
+body[data-page="category"] .category-hero-card .hero-copy > .eyebrow {
   justify-self: start;
+  width: fit-content;
+  border: 1px solid rgba(199, 152, 83, 0.45);
+  border-radius: 999px;
+  text-transform: uppercase;
   min-height: 0;
   padding: 6px 12px;
   border-color: rgba(199, 152, 83, 0.45);
@@ -4392,7 +4397,8 @@ body[data-page="product"] #relacionados .product-highlight-line {
 
 body[data-page="store"] .loja-hero-card,
 body[data-page="store"] #mais-procurados > .container,
-body[data-page="store"] #prendas > .container {
+body[data-page="store"] #prendas > .container,
+body[data-page="category"] .loja-feat-panel > .container {
   border: 1px solid rgba(199, 152, 83, 0.28);
   background:
     radial-gradient(ellipse at top right, rgba(199, 152, 83, 0.24), transparent 50%),
@@ -4427,7 +4433,8 @@ body[data-page="store"] .loja-hero-tagline {
 
 body[data-page="store"] .loja-hero-tagline::after,
 body[data-page="store"] #mais-procurados .section-header h2::after,
-body[data-page="store"] #prendas .section-header h2::after {
+body[data-page="store"] #prendas .section-header h2::after,
+body[data-page="category"] .loja-feat-panel .section-header h2::after {
   content: "";
   display: block;
   width: 64px;
@@ -4444,7 +4451,9 @@ body[data-page="store"] .loja-hero-sub {
 body[data-page="store"] .loja-hero-actions .btn-primary,
 body[data-page="store"] #mais-procurados .loja-feat-actions .btn-primary,
 body[data-page="store"] #prendas .loja-feat-actions .btn-primary,
-body[data-page="store"] #prendas .section-header .btn-primary {
+body[data-page="store"] #prendas .section-header .btn-primary,
+body[data-page="category"] .loja-feat-panel .loja-feat-actions .btn-primary,
+body[data-page="category"] .loja-feat-panel .section-header .btn-primary {
   background: linear-gradient(135deg, #d1a45e, var(--gold-main));
   color: #15110c;
   border-color: transparent;
@@ -4454,13 +4463,16 @@ body[data-page="store"] #prendas .section-header .btn-primary {
 body[data-page="store"] .loja-hero-actions .btn-primary:hover,
 body[data-page="store"] #mais-procurados .loja-feat-actions .btn-primary:hover,
 body[data-page="store"] #prendas .loja-feat-actions .btn-primary:hover,
-body[data-page="store"] #prendas .section-header .btn-primary:hover {
+body[data-page="store"] #prendas .section-header .btn-primary:hover,
+body[data-page="category"] .loja-feat-panel .loja-feat-actions .btn-primary:hover,
+body[data-page="category"] .loja-feat-panel .section-header .btn-primary:hover {
   background: linear-gradient(135deg, #dcb06a, #b3843a);
 }
 
 body[data-page="store"] .loja-hero-actions .btn-secondary,
 body[data-page="store"] #mais-procurados .btn-secondary,
-body[data-page="store"] #prendas .btn-secondary {
+body[data-page="store"] #prendas .btn-secondary,
+body[data-page="category"] .loja-feat-panel .btn-secondary {
   background: transparent;
   color: rgba(242, 235, 224, 0.9);
   border-color: rgba(242, 235, 224, 0.3);
@@ -4469,7 +4481,8 @@ body[data-page="store"] #prendas .btn-secondary {
 
 body[data-page="store"] .loja-hero-actions .btn-secondary:hover,
 body[data-page="store"] #mais-procurados .btn-secondary:hover,
-body[data-page="store"] #prendas .btn-secondary:hover {
+body[data-page="store"] #prendas .btn-secondary:hover,
+body[data-page="category"] .loja-feat-panel .btn-secondary:hover {
   background: transparent;
   border-color: var(--gold-soft);
   color: var(--gold-soft);
@@ -4478,13 +4491,15 @@ body[data-page="store"] #prendas .btn-secondary:hover {
 
 /* "Mais procurados" e "Prendas" em painel escuro */
 body[data-page="store"] #mais-procurados > .container,
-body[data-page="store"] #prendas > .container {
+body[data-page="store"] #prendas > .container,
+body[data-page="category"] .loja-feat-panel > .container {
   padding: clamp(22px, 3.4vw, 40px);
   border-radius: var(--radius-xl);
 }
 
 body[data-page="store"] #mais-procurados .eyebrow,
-body[data-page="store"] #prendas .eyebrow {
+body[data-page="store"] #prendas .eyebrow,
+body[data-page="category"] .loja-feat-panel .eyebrow {
   padding: 6px 12px;
   border: 1px solid rgba(199, 152, 83, 0.45);
   background: rgba(199, 152, 83, 0.08);
@@ -4497,62 +4512,73 @@ body[data-page="store"] #prendas .eyebrow {
 body[data-page="store"] #mais-procurados .section-header h2,
 body[data-page="store"] #prendas .section-header h2,
 body[data-page="store"] #mais-procurados .loja-feat-name,
-body[data-page="store"] #prendas .loja-feat-name {
+body[data-page="store"] #prendas .loja-feat-name,
+body[data-page="category"] .loja-feat-panel .section-header h2,
+body[data-page="category"] .loja-feat-panel .loja-feat-name {
   color: #f6efe3;
 }
 
 body[data-page="store"] #mais-procurados .section-header p,
-body[data-page="store"] #prendas .section-header p {
+body[data-page="store"] #prendas .section-header p,
+body[data-page="category"] .loja-feat-panel .section-header p {
   margin-top: 14px;
   color: rgba(242, 235, 224, 0.68);
 }
 
 body[data-page="store"] #mais-procurados .loja-feat-card,
-body[data-page="store"] #prendas .loja-feat-card {
+body[data-page="store"] #prendas .loja-feat-card,
+body[data-page="category"] .loja-feat-panel .loja-feat-card {
   border: 1px solid rgba(242, 235, 224, 0.1);
   background: rgba(255, 255, 255, 0.045);
   box-shadow: none;
 }
 
 body[data-page="store"] #mais-procurados .loja-feat-card:hover,
-body[data-page="store"] #prendas .loja-feat-card:hover {
+body[data-page="store"] #prendas .loja-feat-card:hover,
+body[data-page="category"] .loja-feat-panel .loja-feat-card:hover {
   border-color: rgba(199, 152, 83, 0.55);
   background: rgba(255, 255, 255, 0.075);
   box-shadow: 0 20px 44px rgba(0, 0, 0, 0.3);
 }
 
 body[data-page="store"] #mais-procurados .loja-feat-img,
-body[data-page="store"] #prendas .loja-feat-img {
+body[data-page="store"] #prendas .loja-feat-img,
+body[data-page="category"] .loja-feat-panel .loja-feat-img {
   background: #f6efe3;
 }
 
 body[data-page="store"] #mais-procurados .loja-feat-badge,
-body[data-page="store"] #prendas .loja-feat-badge {
+body[data-page="store"] #prendas .loja-feat-badge,
+body[data-page="category"] .loja-feat-panel .loja-feat-badge {
   border-color: rgba(199, 152, 83, 0.4);
   background: rgba(199, 152, 83, 0.1);
   color: var(--gold-soft);
 }
 
 body[data-page="store"] #mais-procurados .loja-feat-why,
-body[data-page="store"] #prendas .loja-feat-why {
+body[data-page="store"] #prendas .loja-feat-why,
+body[data-page="category"] .loja-feat-panel .loja-feat-why {
   color: rgba(242, 235, 224, 0.68);
 }
 
 body[data-page="store"] #mais-procurados .loja-feat-avoid,
-body[data-page="store"] #prendas .loja-feat-avoid {
+body[data-page="store"] #prendas .loja-feat-avoid,
+body[data-page="category"] .loja-feat-panel .loja-feat-avoid {
   border-color: rgba(242, 235, 224, 0.12);
   background: rgba(0, 0, 0, 0.18);
   color: rgba(242, 235, 224, 0.62);
 }
 
 body[data-page="store"] #mais-procurados .loja-feat-avoid strong,
-body[data-page="store"] #prendas .loja-feat-avoid strong {
+body[data-page="store"] #prendas .loja-feat-avoid strong,
+body[data-page="category"] .loja-feat-panel .loja-feat-avoid strong {
   color: var(--gold-soft);
 }
 
 @media (max-width: 760px) {
   body[data-page="store"] #mais-procurados > .container,
-  body[data-page="store"] #prendas > .container {
+  body[data-page="store"] #prendas > .container,
+body[data-page="category"] .loja-feat-panel > .container {
     padding: 18px 14px;
   }
 }
@@ -4952,4 +4978,32 @@ body[data-slug="top-escolhas"] main > .section:first-child h1 {
     width: auto;
     padding: 0 10px;
   }
+}
+
+/* ── Páginas da loja com hero/painéis verdes reaproveitados (black-friday, top-escolhas, como-escolhemos) ── */
+body[data-page="category"] .category-hero-card .store-note .rich-list,
+body[data-page="category"] .category-hero-card .panel-note .rich-list {
+  color: rgba(242, 235, 224, 0.72);
+}
+
+body[data-page="category"] .category-hero-card .store-note .rich-list li::marker,
+body[data-page="category"] .category-hero-card .panel-note .rich-list li::marker {
+  color: var(--gold-soft);
+}
+
+body[data-page="category"] .category-hero-card .store-note a,
+body[data-page="category"] .category-hero-card .panel-note a {
+  color: var(--gold-soft);
+}
+
+body[data-page="category"] .loja-feat-panel .oc-top-strengths strong {
+  color: var(--gold-soft);
+}
+
+body[data-page="category"] .loja-feat-panel .oc-top-strengths .rich-list {
+  color: rgba(242, 235, 224, 0.72);
+}
+
+body[data-page="category"] .loja-feat-panel .oc-top-guide {
+  color: var(--gold-soft);
 }

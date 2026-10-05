@@ -86,7 +86,7 @@ const description = "Os 8 produtos que mais recomendamos no OndeCortar.pt — pa
 const all = GROUPS.flatMap((g) => g.items);
 
 const main = "<main>" +
-  '<section class="section"><div class="container hero-card"><div class="hero-grid"><div class="hero-copy">' +
+  '<section class="section"><div class="container hero-card category-hero-card"><div class="hero-grid"><div class="hero-copy">' +
   '<div class="breadcrumbs"><a href="../../loja/">Loja</a><span>/</span><span>Principais escolhas</span></div>' +
   '<span class="eyebrow">Seleção revista em ' + REVIEWED + "</span><h1>As nossas principais escolhas</h1>" +
   "<p>Só os produtos que mais recomendamos no site, um por tipo de uso. Cada um com o motivo da escolha, os pontos fortes e a principal limitação, para decidires sem abrir dez separadores.</p>" +
@@ -95,7 +95,7 @@ const main = "<main>" +
   '<div class="hero-side"><div class="store-note"><strong>Nesta página</strong><ul class="rich-list">' +
   GROUPS.map((g) => '<li><a href="#' + g.id + '">' + esc(g.title) + "</a> (" + g.items.length + ")</li>").join("") +
   "<li>Preço e disponibilidade confirmam-se sempre na Amazon.es.</li></ul></div></div></div></div></section>" +
-  GROUPS.map((g) => '<section class="section" id="' + g.id + '"><div class="container"><div class="section-header section-header--compact"><div>' +
+  GROUPS.map((g, i) => '<section class="section' + (i % 2 === 0 ? ' loja-feat-panel' : '') + '" id="' + g.id + '"><div class="container"><div class="section-header section-header--compact"><div>' +
     '<span class="eyebrow">Principais escolhas</span><h2>' + esc(g.title) + "</h2><p>" + esc(g.intro) + "</p></div></div>" +
     '<div class="loja-feat-grid">' + g.items.map(card).join("") + "</div></div></section>").join("") +
   '<section class="section"><div class="container callout-card article-category-bridge"><span class="eyebrow">Queres comparar mais opções?</span>' +
