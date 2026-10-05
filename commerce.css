@@ -5022,7 +5022,7 @@ body[data-page="article"] .oc-numbers-note {
 }
 
 @media (max-width: 760px) {
-  body[data-page="article"] .oc-numbers-table td[data-label="Como fica"] {
-    grid-column: 2 / -1;
+  body[data-page="article"] .oc-numbers-table tr {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

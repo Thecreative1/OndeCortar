@@ -63,7 +63,7 @@ module.exports = [
       },
       {
         h2: "Que número pedir na barbearia",
-        html: "<p>Um pedido completo diz o número das laterais e o que fazer em cima. Alguns exemplos que os barbeiros entendem à primeira:</p><ul class=\"rich-list\"><li><strong>«Um 2 dos lados e tesoura em cima»</strong> — o corte curto clássico: laterais limpas e o topo com comprimento para pentear.</li><li><strong>«Um 1 em toda a cabeça»</strong> — rapado uniforme, sem diferença entre topo e laterais.</li><li><strong>«Degradê do 0 ao 2»</strong> — começa sem pente junto à orelha e sobe até ao 2. A altura da transição (baixa, média ou alta) também se pede; está explicada no guia dos <a href=\"../../revista/tipos-de-degrade-como-pedir-o-corte-certo/\">tipos de degradê</a>.</li><li><strong>«Um 3 dos lados e um 5 em cima»</strong> — curto mas sem se ver a pele, para quem não quer tesoura.</li></ul><p>Se nunca fizeste aquele corte, começa um número acima do que pensas querer. Ficar comprido demais corrige-se na hora; curto demais só se resolve com tempo.</p>"
+        html: "<p>Um pedido completo diz o número das laterais e o que fazer em cima. Alguns exemplos que os barbeiros entendem à primeira:</p><ul class=\"rich-list\"><li><strong>«Um 2 dos lados e tesoura em cima»</strong> — o corte curto clássico: laterais limpas e o topo com comprimento para pentear.</li><li><strong>«Um 1 em toda a cabeça»</strong> — rapado uniforme, sem diferença entre topo e laterais.</li><li><strong>«Degradê do 0 ao 2»</strong> — começa sem pente junto à orelha e sobe até ao 2. A altura da transição (baixa, média ou alta) também se pede; está explicada no guia dos <a href=\"../../revista/tipos-de-degrade-como-pedir-o-corte-certo/\">tipos de degradê</a>.</li><li><strong>«Um 3 dos lados e um 5 em cima»</strong> — curto mas sem se ver a pele, para quem não quer tesoura.</li></ul><p>Se nunca fizeste aquele corte, começa um número acima do que pensas querer. Ficar comprido demais corrige-se na hora; curto demais só se resolve com tempo. Para cortes feitos só à máquina, vê os números do <a href=\"../../revista/buzz-cut-corte-militar-que-numero-pedir/\">buzz cut e do corte militar</a>.</p>"
       },
       {
         h2: "Números nas máquinas para casa",
@@ -231,7 +231,7 @@ module.exports = [
       },
       {
         h2: "Passo 5: acabamento",
-        html: "<p>Penteia tudo de novo e revê a simetria ao espelho, de frente e de lado. Limpa os contornos com a cabeça de precisão do aparador, se a tiver. No fim, umas gotas de óleo ou um pouco de bálsamo amaciam os pelos e disciplinam a forma — a rotina completa está em <a href=\"../../revista/como-montar-uma-rotina-simples-de-barba-em-casa/\">como montar uma rotina simples de barba em casa</a>.</p>"
+        html: "<p>Penteia tudo de novo e revê a simetria ao espelho, de frente e de lado. Limpa os contornos com a cabeça de precisão do aparador, se a tiver. No fim, umas gotas de <a href=\"../../revista/oleo-de-barba-para-que-serve/\">óleo</a> ou um pouco de bálsamo amaciam os pelos e disciplinam a forma — a rotina completa está em <a href=\"../../revista/como-montar-uma-rotina-simples-de-barba-em-casa/\">como montar uma rotina simples de barba em casa</a>.</p>"
       },
       {
         h2: "Os erros mais comuns",

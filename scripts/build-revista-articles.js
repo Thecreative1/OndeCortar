@@ -27,7 +27,8 @@ const MONTHS = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "jul
 const HUB_TOPIC = {
   "maquinas-e-manutencao": { h2: "maquinas-h", label: "Máquinas · Guia prático" },
   "conteudo-pratico": { h2: "maquinas-h", label: "Cabelo · Passo a passo" },
-  "cuidados-com-a-barba": { h2: "barba-h", label: "Barba · Passo a passo" }
+  "cuidados-com-a-barba": { h2: "barba-h", label: "Barba · Passo a passo" },
+  "estilo-e-tendencias": { h2: "cultura-h", label: "Cortes · Estilo" }
 };
 
 const input = process.argv[2];
@@ -94,7 +95,7 @@ function buildMain(a) {
         a.summary.map((s) => "<li>" + esc(s) + "</li>").join("") + "</ul></article>" +
       '<article class="callout-card article-support-card article-trust-card"><span class="eyebrow">Critério editorial</span><h3>Como revemos este guia</h3><ul class="rich-list">' +
         "<li>Publicado em " + ptDate(pub) + ".</li><li>Leitura estimada: " + a.readMinutes + " min.</li>" +
-        "<li>Medidas e características conforme publicadas pelos fabricantes.</li>" +
+        "<li>" + esc(a.criteria || "Medidas e características conforme publicadas pelos fabricantes.") + "</li>" +
         "<li>Não recebemos comissões de barbearias — o directório é gratuito e independente.</li></ul></article>" +
       '<article class="callout-card article-support-card"><span class="eyebrow">' + esc(a.sideCard.eyebrow) + "</span><h3>" + esc(a.sideCard.title) + "</h3><p>" + esc(a.sideCard.text) + "</p>" +
         '<div class="card-actions">' + a.sideCard.actions.map(([href, label], i) =>
