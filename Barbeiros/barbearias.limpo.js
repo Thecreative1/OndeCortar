@@ -19030,6 +19030,323 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/lvp/barbearia-lima-canada-do-acougue-agualva-QkGky3"
     ]
+  },
+  {
+    "nome": "Vicentina Men Salon",
+    "slug": "vicentina-men-salon-odemira",
+    "distrito": "Beja",
+    "concelho": "Odemira",
+    "freguesia": null,
+    "city": "Odemira",
+    "zone": "São Teotónio",
+    "morada": "Estrada Nacional 120 Km 115 (junto ao Coviran), 7630-614 São Teotónio",
+    "codigo_postal": "7630-614",
+    "telefone": "+351 911 904 800",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Vicentina%20Men%20Salon%20S%C3%A3o%20Teot%C3%B3nio",
+    "horario": "Seg-Sex 9h-13h e 14h-19h; Sáb 9h-13h",
+    "observacoes": null,
+    "coords": [
+      37.5146875,
+      -8.7115625
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Vicentina%20Men%20Salon%20S%C3%A3o%20Teot%C3%B3nio"
+    ]
+  },
+  {
+    "nome": "Vicentina Men Salon Vila Nova de Milfontes",
+    "slug": "vicentina-men-salon-vila-nova-de-milfontes",
+    "distrito": "Beja",
+    "concelho": "Odemira",
+    "freguesia": null,
+    "city": "Odemira",
+    "zone": "Vila Nova de Milfontes",
+    "morada": "Rua Custódio Brás Pacheco 57, 7645-252 Vila Nova de Milfontes",
+    "codigo_postal": "7645-252",
+    "telefone": "+351 930 907 254",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Vicentina%20Men%20Salon%20Vila%20Nova%20de%20Milfontes",
+    "horario": "Seg-Sex 9h-13h e 14h-19h; Sáb 9h-13h",
+    "observacoes": null,
+    "coords": [
+      37.7278125,
+      -8.7784375
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Vicentina%20Men%20Salon%20Vila%20Nova%20de%20Milfontes"
+    ]
+  },
+  {
+    "nome": "Barbearia Clandestina",
+    "slug": "barbearia-clandestina-odemira",
+    "distrito": "Beja",
+    "concelho": "Odemira",
+    "freguesia": null,
+    "city": "Odemira",
+    "zone": null,
+    "morada": "Rua José António Gonçalves, 7630-174 Odemira",
+    "codigo_postal": "7630-174",
+    "telefone": "+351 925 356 203",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Clandestina%20Odemira",
+    "horario": "Seg-Sex 10h-12h e 14h-19h; Sáb 9h-13h",
+    "observacoes": null,
+    "coords": [
+      37.6605625,
+      -8.7741875
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Clandestina%20Odemira"
+    ]
+  },
+  {
+    "nome": "PDL Barbershop",
+    "slug": "pdl-barbershop-ponta-delgada",
+    "distrito": "Açores",
+    "concelho": "Ponta Delgada",
+    "freguesia": null,
+    "city": "Ponta Delgada",
+    "zone": null,
+    "morada": "Rua Dr. Aristides da Mota 19, 9500-054 Ponta Delgada",
+    "codigo_postal": "9500-054",
+    "telefone": "+351 910 838 427",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=PDL%20Barbershop%20Ponta%20Delgada",
+    "horario": "Seg-Sex 9h-13h e 14h30-18h30; Sáb 8h30-13h30",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/11970176856",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      37.7431875,
+      -25.6698125
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=PDL%20Barbershop%20Ponta%20Delgada",
+      "https://www.openstreetmap.org/node/11970176856"
+    ]
+  },
+  {
+    "nome": "Barbearia Porto",
+    "slug": "barbearia-porto-ponta-delgada",
+    "distrito": "Açores",
+    "concelho": "Ponta Delgada",
+    "freguesia": null,
+    "city": "Ponta Delgada",
+    "zone": null,
+    "morada": "Rua Carvalho Araújo 32, 9500-040 Ponta Delgada",
+    "codigo_postal": "9500-040",
+    "telefone": "+351 296 286 798",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Porto%20Ponta%20Delgada",
+    "horario": "Seg-Sex 9h30-13h e 15h-18h",
+    "horario_fonte": {
+      "nome": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/node/11970180240",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      37.7419375,
+      -25.6693125
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Porto%20Ponta%20Delgada",
+      "https://www.openstreetmap.org/node/11970180240"
+    ]
+  },
+  {
+    "nome": "BarbeariaCosta By Marlon Silva",
+    "slug": "barbeariacosta-by-marlon-silva-ponta-delgada",
+    "distrito": "Açores",
+    "concelho": "Ponta Delgada",
+    "freguesia": null,
+    "city": "Ponta Delgada",
+    "zone": null,
+    "morada": "Rua João de Melo Abreu 93, 9500-316 Ponta Delgada",
+    "codigo_postal": "9500-316",
+    "telefone": "+351 296 286 726",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=BarbeariaCosta%20By%20Marlon%20Silva%20Ponta%20Delgada",
+    "horario": "Seg-Sex 8h30-12h e 14h-19h; Sáb 10h-13h",
+    "observacoes": null,
+    "coords": [
+      37.7420625,
+      -25.6601875
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=BarbeariaCosta%20By%20Marlon%20Silva%20Ponta%20Delgada",
+      "https://byacores.com/empresas/sao-miguel/cabeleireiros/barbershop-marlon-silva/"
+    ]
+  },
+  {
+    "nome": "Black-Pearl Barber Shop",
+    "slug": "black-pearl-barber-shop-ponta-delgada",
+    "distrito": "Açores",
+    "concelho": "Ponta Delgada",
+    "freguesia": null,
+    "city": "Ponta Delgada",
+    "zone": null,
+    "morada": "Avenida Infante Dom Henrique 71 (Sol Mar Avenida Center), 9504-529 Ponta Delgada",
+    "codigo_postal": "9504-529",
+    "telefone": "+351 966 085 184",
+    "email": null,
+    "website": "https://blackpearlbarbershop.com/",
+    "instagram": "https://www.instagram.com/blackpearl_barbershop1",
+    "facebook": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Black-Pearl%20Barber%20Shop%20Ponta%20Delgada",
+    "horario": "Seg-Sáb 9h-20h",
+    "observacoes": null,
+    "coords": [
+      37.7400625,
+      -25.6649375
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Black-Pearl%20Barber%20Shop%20Ponta%20Delgada",
+      "https://blackpearlbarbershop.com/"
+    ]
+  },
+  {
+    "nome": "Paulo Jorge Barber Shop",
+    "slug": "paulo-jorge-barber-shop-ponta-delgada",
+    "distrito": "Açores",
+    "concelho": "Ponta Delgada",
+    "freguesia": null,
+    "city": "Ponta Delgada",
+    "zone": null,
+    "morada": "Ladeira do Águas Quentes 145, 9500-291 Ponta Delgada",
+    "codigo_postal": "9500-291",
+    "telefone": "+351 917 654 420",
+    "email": null,
+    "website": "https://paulojorgebarbershop.com/",
+    "instagram": "https://www.instagram.com/paulojorgebarbershop_",
+    "facebook": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Paulo%20Jorge%20Barber%20Shop%20Ponta%20Delgada",
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-17h",
+    "observacoes": null,
+    "coords": [
+      37.7425908,
+      -25.659339
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Paulo%20Jorge%20Barber%20Shop%20Ponta%20Delgada",
+      "https://paulojorgebarbershop.com/"
+    ]
+  },
+  {
+    "nome": "Gold Studio Barbershop",
+    "slug": "gold-studio-barbershop-ponta-delgada",
+    "distrito": "Açores",
+    "concelho": "Ponta Delgada",
+    "freguesia": null,
+    "city": "Ponta Delgada",
+    "zone": null,
+    "morada": "Rua Dr. João Francisco de Sousa 29, 9500-244 Ponta Delgada",
+    "codigo_postal": "9500-244",
+    "telefone": "+351 914 028 052",
+    "email": null,
+    "website": "https://www.goldstudiobarbershop.pt/",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Gold%20Studio%20Barbershop%20Ponta%20Delgada",
+    "horario": "Seg-Sex 9h-12h e 14h-19h; Sáb 8h-13h",
+    "observacoes": null,
+    "coords": [
+      37.7418125,
+      -25.6739375
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Gold%20Studio%20Barbershop%20Ponta%20Delgada",
+      "https://www.goldstudiobarbershop.pt/"
+    ]
+  },
+  {
+    "nome": "Barbearia Jesus",
+    "slug": "barbearia-jesus-ponta-delgada",
+    "distrito": "Açores",
+    "concelho": "Ponta Delgada",
+    "freguesia": null,
+    "city": "Ponta Delgada",
+    "zone": null,
+    "morada": "Rua de Santa Luzia 22, 9500-115 Ponta Delgada",
+    "codigo_postal": "9500-115",
+    "telefone": "+351 966 525 821",
+    "email": null,
+    "website": "https://barbeariajesus.com/",
+    "instagram": "https://www.instagram.com/barbeariajesus",
+    "facebook": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Jesus%20Ponta%20Delgada",
+    "horario": "Seg-Sex 9h30-19h; Sáb 9h-13h",
+    "observacoes": null,
+    "coords": [
+      37.7386875,
+      -25.6696875
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Jesus%20Ponta%20Delgada",
+      "https://barbeariajesus.com/"
+    ]
   }
 ];
 
