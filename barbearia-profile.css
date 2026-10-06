@@ -481,6 +481,28 @@ button { cursor: pointer; font-family: var(--sans); }
   width: 100%; border-radius: 14px;
   aspect-ratio: 16/9;
 }
+/* Pré-visualização do mapa (imagem estática Esri) nos cartões "Outras barbearias por perto" */
+.oc-related__photo--map { background: #1A1D1A; }
+.oc-related__map {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: invert(1) hue-rotate(180deg) brightness(.92) contrast(.88) saturate(.55); /* = mapa noturno do perfil */
+  transition: transform .4s ease;
+}
+.oc-related:hover .oc-related__map { transform: scale(1.04); }
+.oc-related__pin {
+  position: absolute; left: 50%; top: 50%; width: 26px; height: 26px; margin: -26px 0 0 -13px;
+  background: #C8873A; border: 2px solid #141614; border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg); box-shadow: 0 6px 16px rgba(0,0,0,.5);
+}
+.oc-related__pin::after {
+  content: ""; position: absolute; left: 50%; top: 50%; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px;
+  border-radius: 50%; background: #141614;
+}
+.oc-related__credit {
+  position: absolute; right: 8px; bottom: 6px;
+  font-size: 9px; line-height: 1; color: #D6CFC2; background: rgba(20,22,20,.78);
+  padding: 3px 5px; border-radius: 4px;
+}
 
 /* ── Top nav ────────────────────────────────────────────── */
 .oc-topnav {
@@ -765,6 +787,11 @@ button { cursor: pointer; font-family: var(--sans); }
 .oc-btn--ghost { background: var(--card); color: var(--ink); border-color: #3A423C; }
 .oc-btn--ghost:hover { background: #262B27; border-color: var(--gold); }
 .oc-btn--gold { color: #141614; }
+/* Mais elementos em âmbar que usavam var(--ink) (agora creme) como texto */
+.oc-sticky-bar__btn--primary, .oc-owner-check__item.is-done .oc-owner-check__mark { color: #141614; }
+/* Painel do dono (verde-garrafa): itens por fazer e contagem com contraste AA */
+.oc-owner-check__item { color: rgba(242, 236, 223, .78); }
+.oc-owner__progress-label .oc-mono { color: #F0B978; }
 .oc-btn--loja { background: #2C6A4E; border-color: #2C6A4E; color: #F2EEE6; }
 .oc-btn--loja:hover { background: #35805E; border-color: #35805E; }
 .oc-card--ink { background: linear-gradient(150deg, var(--bottle), var(--bottle-2)); border-color: var(--bottle); color: #F2EEE6; }

@@ -1304,6 +1304,10 @@ body {
    Lá dentro o texto usa --oc-paper como cor; redefine-se localmente para creme. */
 .cities-section, .site-footer { --oc-paper: #F2EEE6; --oc-ink-line: rgba(255,255,255,.08); }
 .cities-section { background: linear-gradient(150deg, #1F4D3A, #143326) !important; }
+/* Âmbar e texto suave sobre o verde: versões mais claras para contraste AA */
+.cities-section .oc-eyebrow, .city-card strong { color: #F0B978 !important; }
+.city-card p { color: rgba(244,239,227,.78) !important; }
+.footer-bottom { color: rgba(244,239,227,.62) !important; }
 .site-footer { background: #0C0E0C !important; border-top: 1px solid #262B27; }
 
 /* Quadrados de iniciais e ilustrações dos destaques: tons pastel → verde-garrafa escuro */
