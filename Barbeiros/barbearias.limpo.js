@@ -17850,6 +17850,851 @@ const barbearias = [
       "https://www.openstreetmap.org/node/6432743118",
       "https://www.pai.pt/paginas/338025-barbearia-gentleman"
     ]
+  },
+  {
+    "nome": "DOPE Barber Shop",
+    "slug": "dope-barber-shop-caldas-da-rainha",
+    "distrito": "Leiria",
+    "concelho": "Caldas da Rainha",
+    "freguesia": null,
+    "city": "Caldas da Rainha",
+    "zone": null,
+    "morada": "Praça 5 de Outubro 42, 2500-277 Caldas da Rainha",
+    "codigo_postal": "2500-277",
+    "telefone": "+351 262 148 538",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/dope-barber-shop-praca-5-de-outubro-caldas-da-rainha-BK81b8",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.4036597,
+      -9.1365091
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/dope-barber-shop-praca-5-de-outubro-caldas-da-rainha-BK81b8"
+    ]
+  },
+  {
+    "nome": "Barber Shop Mocho",
+    "slug": "barber-shop-mocho-caldas-da-rainha",
+    "distrito": "Leiria",
+    "concelho": "Caldas da Rainha",
+    "freguesia": null,
+    "city": "Caldas da Rainha",
+    "zone": null,
+    "morada": "Rua Professor Manuel José António n5, 2500-242 Caldas da Rainha",
+    "codigo_postal": "2500-242",
+    "telefone": "+351 910 726 740",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barber-shop-mocho-rua-professor-manuel-jose-antonio-caldas-da-rainha-oo5r5W",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-20h30",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barber-shop-mocho-rua-professor-manuel-jose-antonio-caldas-da-rainha-oo5r5W",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      39.4092288,
+      -9.1422837
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barber-shop-mocho-rua-professor-manuel-jose-antonio-caldas-da-rainha-oo5r5W"
+    ]
+  },
+  {
+    "nome": "Dom Barbeiro Barbershop",
+    "slug": "dom-barbeiro-barbershop-caldas-da-rainha",
+    "distrito": "Leiria",
+    "concelho": "Caldas da Rainha",
+    "freguesia": null,
+    "city": "Caldas da Rainha",
+    "zone": null,
+    "morada": "R. Manuel Mafra 16 r/c, 2500-825 Caldas da Rainha",
+    "codigo_postal": "2500-825",
+    "telefone": "+351 915 212 197",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/dom-barbeiro-barbershop-rua-manuel-mafra-caldas-da-rainha-ylDnr0",
+    "instagram": "https://www.instagram.com/dombarbeirobarbershop",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.4054465,
+      -9.141583
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/dom-barbeiro-barbershop-rua-manuel-mafra-caldas-da-rainha-ylDnr0"
+    ]
+  },
+  {
+    "nome": "LADS CAVE BARBERS",
+    "slug": "lads-cave-barbers-caldas-da-rainha",
+    "distrito": "Leiria",
+    "concelho": "Caldas da Rainha",
+    "freguesia": null,
+    "city": "Caldas da Rainha",
+    "zone": null,
+    "morada": "R dos Herois da Grande Guerra 23, 2500-215 Caldas da Rainha",
+    "codigo_postal": "2500-215",
+    "telefone": "+351 920 416 370",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/lads-cave-barbers-rua-dos-herois-da-grande-guerra-caldas-da-rainha-wXDkq6",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-20h; Dom 10h-18h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/lads-cave-barbers-rua-dos-herois-da-grande-guerra-caldas-da-rainha-wXDkq6",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      39.403214,
+      -9.135603
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/lads-cave-barbers-rua-dos-herois-da-grande-guerra-caldas-da-rainha-wXDkq6"
+    ]
+  },
+  {
+    "nome": "RAJ BARBEARIA",
+    "slug": "raj-barbearia-caldas-da-rainha",
+    "distrito": "Leiria",
+    "concelho": "Caldas da Rainha",
+    "freguesia": null,
+    "city": "Caldas da Rainha",
+    "zone": null,
+    "morada": "R dos Herois da Grande Guerra 92, 2500-216 Caldas da Rainha",
+    "codigo_postal": "2500-216",
+    "telefone": "+351 920 318 624",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/raj-barbearia-rua-dos-herois-da-grande-guerra-caldas-da-rainha-Kk51xZ",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Dom 9h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/raj-barbearia-rua-dos-herois-da-grande-guerra-caldas-da-rainha-Kk51xZ",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      39.4053963,
+      -9.1349848
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/raj-barbearia-rua-dos-herois-da-grande-guerra-caldas-da-rainha-Kk51xZ"
+    ]
+  },
+  {
+    "nome": "Barba Ruiva",
+    "slug": "barba-ruiva-nazare",
+    "distrito": "Leiria",
+    "concelho": "Nazaré",
+    "freguesia": null,
+    "city": "Nazaré",
+    "zone": null,
+    "morada": "Av. do Município 28B, 2450-108 Nazaré",
+    "codigo_postal": "2450-108",
+    "telefone": "+351 917 990 632",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barba-ruiva-avenida-do-municipio-nazare-LkBM0Q",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Ter-Sáb 10h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barba-ruiva-avenida-do-municipio-nazare-LkBM0Q",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      39.5965672,
+      -9.0687268
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barba-ruiva-avenida-do-municipio-nazare-LkBM0Q"
+    ]
+  },
+  {
+    "nome": "Ricky's Barber Shop",
+    "slug": "ricky-s-barber-shop-nazare",
+    "distrito": "Leiria",
+    "concelho": "Nazaré",
+    "freguesia": null,
+    "city": "Nazaré",
+    "zone": null,
+    "morada": "R. Sub-Vila 16, 2450-267 Nazaré",
+    "codigo_postal": "2450-267",
+    "telefone": "+351 968 456 537",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/rickys-barber-shop-rua-sub-vila-nazare-7xvAyD",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg 9h-18h; Ter 9h-19h; Qua 9h-18h; Qui 9h-19h; Sex 9h-18h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/rickys-barber-shop-rua-sub-vila-nazare-7xvAyD",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      39.6008476,
+      -9.0711754
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/rickys-barber-shop-rua-sub-vila-nazare-7xvAyD"
+    ]
+  },
+  {
+    "nome": "Barbearia 2460",
+    "slug": "barbearia-2460-alcobaca",
+    "distrito": "Leiria",
+    "concelho": "Alcobaça",
+    "freguesia": null,
+    "city": "Alcobaça",
+    "zone": null,
+    "morada": "Praça 25 de Abril 30, 2460-018 Alcobaça",
+    "codigo_postal": "2460-018",
+    "telefone": "+351 933 229 065",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-2460-praca-25-de-abril-alcobaca-W4WK8Z",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Ter-Sex 10h-20h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-2460-praca-25-de-abril-alcobaca-W4WK8Z",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      39.5485149,
+      -8.9811894
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-2460-praca-25-de-abril-alcobaca-W4WK8Z"
+    ]
+  },
+  {
+    "nome": "Barbearia Don Barbudo",
+    "slug": "barbearia-don-barbudo-peniche",
+    "distrito": "Leiria",
+    "concelho": "Peniche",
+    "freguesia": null,
+    "city": "Peniche",
+    "zone": "Atouguia da Baleia",
+    "morada": "R. Padre Faria Lopes n° 49, 2525-075 Atouguia da Baleia",
+    "codigo_postal": "2525-075",
+    "telefone": "+351 964 715 676",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-don-barbudo-rua-padre-faria-lopes-atouguia-da-baleia-85rBa2",
+    "instagram": "https://www.instagram.com/donbarbudobarbeariabytiagovala",
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-20h; Sáb 9h-14h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-don-barbudo-rua-padre-faria-lopes-atouguia-da-baleia-85rBa2",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      39.3376739,
+      -9.3273463
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-don-barbudo-rua-padre-faria-lopes-atouguia-da-baleia-85rBa2"
+    ]
+  },
+  {
+    "nome": "Billy Boys BarberShop",
+    "slug": "billy-boys-barbershop-leiria",
+    "distrito": "Leiria",
+    "concelho": "Leiria",
+    "freguesia": null,
+    "city": "Leiria",
+    "zone": null,
+    "morada": "Av. 25 de Abril 210 Lj E, 2400-265 Leiria",
+    "codigo_postal": "2400-265",
+    "telefone": "+351 244 882 367",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/billy-boys-barbershop-avenida-25-de-abril-leiria-4PowRe",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.7474149,
+      -8.8134892
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/billy-boys-barbershop-avenida-25-de-abril-leiria-4PowRe"
+    ]
+  },
+  {
+    "nome": "BlackRazor - Barber Shop",
+    "slug": "blackrazor-barber-shop-leiria",
+    "distrito": "Leiria",
+    "concelho": "Leiria",
+    "freguesia": null,
+    "city": "Leiria",
+    "zone": null,
+    "morada": "Praça Nova, Av. 22 de Maio 26 1ºC, 2415-396 Leiria",
+    "codigo_postal": "2415-396",
+    "telefone": "+351 244 062 279",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/black-razor-barber-shop-avenida-22-de-maio-leiria-4Po6PM",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 10h-20h; Sáb 9h30-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/black-razor-barber-shop-avenida-22-de-maio-leiria-4Po6PM",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      39.7530252,
+      -8.8121389
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/black-razor-barber-shop-avenida-22-de-maio-leiria-4Po6PM"
+    ]
+  },
+  {
+    "nome": "Fred's - Barbearia Clássica",
+    "slug": "fred-s-barbearia-classica-leiria",
+    "distrito": "Leiria",
+    "concelho": "Leiria",
+    "freguesia": null,
+    "city": "Leiria",
+    "zone": null,
+    "morada": "R. da Vitória 17, 2400-268 Leiria",
+    "codigo_postal": "2400-268",
+    "telefone": "+351 915 806 285",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/freds-barbearia-classica-rua-da-vitoria-leiria-3oLw0v",
+    "instagram": "https://www.instagram.com/freds.pt",
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h30-20h30",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/freds-barbearia-classica-rua-da-vitoria-leiria-3oLw0v",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      39.7455268,
+      -8.807144
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/freds-barbearia-classica-rua-da-vitoria-leiria-3oLw0v"
+    ]
+  },
+  {
+    "nome": "Noorie'z Barbearia",
+    "slug": "noorie-z-barbearia-leiria",
+    "distrito": "Leiria",
+    "concelho": "Leiria",
+    "freguesia": null,
+    "city": "Leiria",
+    "zone": null,
+    "morada": "R. Venceslau de Morais 10 RC C, 2400-258 Leiria",
+    "codigo_postal": "2400-258",
+    "telefone": "+351 920 476 231",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/nooriez-barbearia-rua-venceslau-de-morais-leiria-3oLGEv",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Dom 9h-20h30",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/nooriez-barbearia-rua-venceslau-de-morais-leiria-3oLGEv",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      39.7475706,
+      -8.803367
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/nooriez-barbearia-rua-venceslau-de-morais-leiria-3oLGEv"
+    ]
+  },
+  {
+    "nome": "Titanium Barbearia",
+    "slug": "titanium-barbearia-leiria",
+    "distrito": "Leiria",
+    "concelho": "Leiria",
+    "freguesia": null,
+    "city": "Leiria",
+    "zone": null,
+    "morada": "R. 25 de Abril 106, 2415-601 Leiria",
+    "codigo_postal": "2415-601",
+    "telefone": "+351 244 097 413",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/titanium-barbearia-rua-25-de-abril-leiria-Z62yGz",
+    "instagram": "https://www.instagram.com/titaniumbarberleiria",
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Ter-Sáb 9h30-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/titanium-barbearia-rua-25-de-abril-leiria-Z62yGz",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      39.7692318,
+      -8.8252362
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/titanium-barbearia-rua-25-de-abril-leiria-Z62yGz"
+    ]
+  },
+  {
+    "nome": "Barbearia Dom Corleone - Caniço",
+    "slug": "barbearia-dom-corleone-canico",
+    "distrito": "Madeira",
+    "concelho": "Santa Cruz",
+    "freguesia": null,
+    "city": "Caniço",
+    "zone": null,
+    "morada": "bloco A, Estrada João Gonçalves Zarco 9125, 9125-019 Caniço",
+    "codigo_postal": "9125-019",
+    "telefone": "+351 291 604 020",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-dom-corleone-canico-estrada-joao-goncalves-zarco-canico-GyPP00",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 10h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-dom-corleone-canico-estrada-joao-goncalves-zarco-canico-GyPP00",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      32.6526809,
+      -16.8414305
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-dom-corleone-canico-estrada-joao-goncalves-zarco-canico-GyPP00"
+    ]
+  },
+  {
+    "nome": "Andre Barber",
+    "slug": "andre-barber-canico",
+    "distrito": "Madeira",
+    "concelho": "Santa Cruz",
+    "freguesia": null,
+    "city": "Caniço",
+    "zone": null,
+    "morada": "Entreposto da cancela, Caminho da Cancela 1, 9125-067 Caniço",
+    "codigo_postal": "9125-067",
+    "telefone": "+351 934 423 196",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/andre-barber-rua-do-mercado-da-penteada-funchal-W4WYPG",
+    "instagram": "https://www.instagram.com/andregoncalvesbarber",
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 10h-19h; Sáb 10h-17h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/andre-barber-rua-do-mercado-da-penteada-funchal-W4WYPG",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      32.6481906,
+      -16.8589789
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/andre-barber-rua-do-mercado-da-penteada-funchal-W4WYPG"
+    ]
+  },
+  {
+    "nome": "Barbearia do Miguel - Caniço",
+    "slug": "barbearia-do-miguel-canico",
+    "distrito": "Madeira",
+    "concelho": "Santa Cruz",
+    "freguesia": null,
+    "city": "Caniço",
+    "zone": null,
+    "morada": "R. César Pedro Duarte 16a, 9125-003 Caniço",
+    "codigo_postal": "9125-003",
+    "telefone": "+351 930 504 214",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-do-miguel-canico-rua-cesar-pedro-duarte-canico-P2y3NJ",
+    "instagram": "https://www.instagram.com/pt.barbearia.do.miguel",
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Ter 10h-19h; Qui-Sex 10h-19h; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-do-miguel-canico-rua-cesar-pedro-duarte-canico-P2y3NJ",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      32.6559719,
+      -16.8385247
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-do-miguel-canico-rua-cesar-pedro-duarte-canico-P2y3NJ"
+    ]
+  },
+  {
+    "nome": "Barbershop 351",
+    "slug": "barbershop-351-machico",
+    "distrito": "Madeira",
+    "concelho": "Machico",
+    "freguesia": null,
+    "city": "Machico",
+    "zone": null,
+    "morada": "R. do Infante Dom Henrique 43, 9200-130 Machico",
+    "codigo_postal": "9200-130",
+    "telefone": "+351 935 188 654",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-351-rua-do-infante-dom-henrique-machico-9R5ajD",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-20h; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-351-rua-do-infante-dom-henrique-machico-9R5ajD",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      32.7190559,
+      -16.7687237
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-351-rua-do-infante-dom-henrique-machico-9R5ajD"
+    ]
+  },
+  {
+    "nome": "014Barbershop",
+    "slug": "014barbershop-funchal",
+    "distrito": "Madeira",
+    "concelho": "Funchal",
+    "freguesia": null,
+    "city": "Funchal",
+    "zone": null,
+    "morada": "Caminho de, Tv. de Santa Quiteria 29A, 9020-119 Funchal",
+    "codigo_postal": "9020-119",
+    "telefone": "+351 930 476 140",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/014barbershop-caminho-santa-quiteria-caminho-santa-quiteria-funchal-Ek5kAL",
+    "instagram": "https://www.instagram.com/014barbershop",
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 10h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/014barbershop-caminho-santa-quiteria-caminho-santa-quiteria-funchal-Ek5kAL",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      32.6593252,
+      -16.9486777
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/014barbershop-caminho-santa-quiteria-caminho-santa-quiteria-funchal-Ek5kAL"
+    ]
+  },
+  {
+    "nome": "Barbearia J Camacha",
+    "slug": "barbearia-j-camacha",
+    "distrito": "Madeira",
+    "concelho": "Santa Cruz",
+    "freguesia": null,
+    "city": "Camacha",
+    "zone": null,
+    "morada": "Camacha Shopping, Estrada Engenheiro Abel Vieira Piso 0 Loja 6, 9135-413 Camacha",
+    "codigo_postal": "9135-413",
+    "telefone": "+351 291 618 236",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-j-camacha-camacha-LkBLrl",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 10h-19h; Sáb-Dom 10h-17h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-j-camacha-camacha-LkBLrl",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      32.6752501,
+      -16.852562
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-j-camacha-camacha-LkBLrl"
+    ]
+  },
+  {
+    "nome": "Zuka Private Master Barber",
+    "slug": "zuka-private-master-barber-braga",
+    "distrito": "Braga",
+    "concelho": "Braga",
+    "freguesia": null,
+    "city": "Braga",
+    "zone": null,
+    "morada": "R. Nova de Santa Cruz 53, 4710-409 Braga",
+    "codigo_postal": "4710-409",
+    "telefone": "+351 939 385 111",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-universitaria-braga-cabeleireiro-rua-nova-de-santa-cruz-braga-4Pow7b",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.5571558,
+      -8.3994635
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-universitaria-braga-cabeleireiro-rua-nova-de-santa-cruz-braga-4Pow7b"
+    ]
+  },
+  {
+    "nome": "Lima's Barbershop",
+    "slug": "lima-s-barbershop-braga",
+    "distrito": "Braga",
+    "concelho": "Braga",
+    "freguesia": null,
+    "city": "Braga",
+    "zone": null,
+    "morada": "Largo de Santiago 15, 4700-039 Braga",
+    "codigo_postal": "4700-039",
+    "telefone": "+351 962 686 187",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/limas-barbershop-largo-de-santiago-braga-bLzzqQ",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.5478892,
+      -8.4261133
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/limas-barbershop-largo-de-santiago-braga-bLzzqQ"
+    ]
+  },
+  {
+    "nome": "Barbearia Kazz",
+    "slug": "barbearia-kazz-braga",
+    "distrito": "Braga",
+    "concelho": "Braga",
+    "freguesia": null,
+    "city": "Braga",
+    "zone": null,
+    "morada": "R. de Caires 328 Loja 24A, 4700-207 Braga",
+    "codigo_postal": "4700-207",
+    "telefone": "+351 917 051 490",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-kazz-rua-de-caires-braga-JyrW2Q",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Ter-Sex 10h-20h; Sáb 9h-14h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-kazz-rua-de-caires-braga-JyrW2Q",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      41.5482377,
+      -8.4332291
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-kazz-rua-de-caires-braga-JyrW2Q"
+    ]
+  },
+  {
+    "nome": "Cartel351",
+    "slug": "cartel351-braga",
+    "distrito": "Braga",
+    "concelho": "Braga",
+    "freguesia": null,
+    "city": "Braga",
+    "zone": null,
+    "morada": "R. do Sardoal N16, 4710-442 Braga",
+    "codigo_postal": "4710-442",
+    "telefone": "+351 253 717 331",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/cartel351-rua-do-sardoal-braga-GWAyP",
+    "instagram": "https://www.instagram.com/cartel351barbearia",
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.5518376,
+      -8.4182893
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/cartel351-rua-do-sardoal-braga-GWAyP"
+    ]
+  },
+  {
+    "nome": "Barber Shop Joca Brasil",
+    "slug": "barber-shop-joca-brasil-ilha-terceira",
+    "distrito": "Açores",
+    "concelho": "Praia da Vitória",
+    "freguesia": null,
+    "city": "Ilha Terceira",
+    "zone": "Praia da Vitória",
+    "morada": "Estr. 25 de Abril, 9760-403 Praia da Vitória",
+    "codigo_postal": "9760-403",
+    "telefone": "+351 915 954 577",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barber-shop-joca-brasil-estrada-25-de-abril-praia-da-vitoria-k9P8nG",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 8h-15h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barber-shop-joca-brasil-estrada-25-de-abril-praia-da-vitoria-k9P8nG",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      38.742264,
+      -27.0777872
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barber-shop-joca-brasil-estrada-25-de-abril-praia-da-vitoria-k9P8nG"
+    ]
   }
 ];
 
