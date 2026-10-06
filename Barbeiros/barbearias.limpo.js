@@ -18695,6 +18695,341 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/lvp/barber-shop-joca-brasil-estrada-25-de-abril-praia-da-vitoria-k9P8nG"
     ]
+  },
+  {
+    "nome": "Artem Barber Shop",
+    "slug": "artem-barber-shop-santana",
+    "distrito": "Madeira",
+    "concelho": "Santana",
+    "freguesia": null,
+    "city": "Santana",
+    "zone": null,
+    "morada": "R. Dr. João Abel de Freitas 27, 9230-123 Santana",
+    "codigo_postal": "9230-123",
+    "telefone": "+351 926 958 484",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/artem-barber-shop-rua-doutor-joao-abel-de-freitas-santana-LkBoQQ",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg 7h-19h; Ter-Qua 9h-19h; Qui 9h-17h; Sex 9h-19h; Sáb 10h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/artem-barber-shop-rua-doutor-joao-abel-de-freitas-santana-LkBoQQ",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      32.8050243,
+      -16.8801295
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/artem-barber-shop-rua-doutor-joao-abel-de-freitas-santana-LkBoQQ"
+    ]
+  },
+  {
+    "nome": "Barbearia Adónis",
+    "slug": "barbearia-adonis-ribeira-brava",
+    "distrito": "Madeira",
+    "concelho": "Ribeira Brava",
+    "freguesia": null,
+    "city": "Ribeira Brava",
+    "zone": "Campanário",
+    "morada": "R. Cmte. Camacho de Freitas 473 A, 9350-075 Campanario",
+    "codigo_postal": "9350-075",
+    "telefone": "+351 967 810 948",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-adonis-rua-comandante-camacho-de-freitas-campanario-eq9KVa",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Ter-Sáb 10h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-adonis-rua-comandante-camacho-de-freitas-campanario-eq9KVa",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      32.6713258,
+      -17.0299761
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-adonis-rua-comandante-camacho-de-freitas-campanario-eq9KVa"
+    ]
+  },
+  {
+    "nome": "Barbearia Duarte Santos",
+    "slug": "barbearia-duarte-santos-machico",
+    "distrito": "Madeira",
+    "concelho": "Machico",
+    "freguesia": null,
+    "city": "Machico",
+    "zone": "Caniçal",
+    "morada": "R. de São Sebastião n°36, 9200-045 Caniçal",
+    "codigo_postal": "9200-045",
+    "telefone": "+351 910 268 288",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-duarte-santos-rua-de-sao-sebastiao-canical-7xvRlX",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      32.738576,
+      -16.7398686
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-duarte-santos-rua-de-sao-sebastiao-canical-7xvRlX"
+    ]
+  },
+  {
+    "nome": "Dom Pedro Barbearia",
+    "slug": "dom-pedro-barbearia-machico",
+    "distrito": "Madeira",
+    "concelho": "Machico",
+    "freguesia": null,
+    "city": "Machico",
+    "zone": null,
+    "morada": "Engenho Shopping, Caminho do Engenho 13 Piso 1, 9200-403 Machico",
+    "codigo_postal": "9200-403",
+    "telefone": "+351 935 416 628",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/dom-pedro-barbearia-rua-do-engenho-machico-jwoo7y",
+    "instagram": "https://www.instagram.com/dompedro_barbershop.oficial",
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sáb 10h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/dom-pedro-barbearia-rua-do-engenho-machico-jwoo7y",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      32.7205491,
+      -16.7688445
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/dom-pedro-barbearia-rua-do-engenho-machico-jwoo7y"
+    ]
+  },
+  {
+    "nome": "aBarbearia",
+    "slug": "abarbearia-ilha-do-faial",
+    "distrito": "Açores",
+    "concelho": "Horta",
+    "freguesia": null,
+    "city": "Ilha do Faial",
+    "zone": "Horta",
+    "morada": "R. Serpa Pinto 13, 9900-095 Horta",
+    "codigo_postal": "9900-095",
+    "telefone": "+351 968 794 355",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/abarbearia-rua-serpa-pinto-horta-1Y4VXz",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.5382334,
+      -28.6254127
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/abarbearia-rua-serpa-pinto-horta-1Y4VXz"
+    ]
+  },
+  {
+    "nome": "Argentino Barbeiro Cabeleireiro",
+    "slug": "argentino-barbeiro-cabeleireiro-ilha-terceira",
+    "distrito": "Açores",
+    "concelho": "Angra do Heroísmo",
+    "freguesia": null,
+    "city": "Ilha Terceira",
+    "zone": "Angra do Heroísmo",
+    "morada": "R. da Sé 51, 9700-144 Angra do Heroísmo",
+    "codigo_postal": "9700-144",
+    "telefone": "+351 295 217 054",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/argentino-cabeleireiro-rua-da-se-angra-do-heroismo-Z62ylk",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/argentino-cabeleireiro-rua-da-se-angra-do-heroismo-Z62ylk",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      38.6557564,
+      -27.2198895
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/argentino-cabeleireiro-rua-da-se-angra-do-heroismo-Z62ylk"
+    ]
+  },
+  {
+    "nome": "Barbearia Rua da Palha",
+    "slug": "barbearia-rua-da-palha-ilha-terceira",
+    "distrito": "Açores",
+    "concelho": "Angra do Heroísmo",
+    "freguesia": null,
+    "city": "Ilha Terceira",
+    "zone": "Angra do Heroísmo",
+    "morada": "Rua da Palha 60, 9700-172 Angra do Heroísmo",
+    "codigo_postal": "9700-172",
+    "telefone": "+351 968 598 829",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-rua-da-palha-rua-da-palha-angra-do-heroismo-k9Poyv",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 10h-18h30; Sáb 10h-16h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-rua-da-palha-rua-da-palha-angra-do-heroismo-k9Poyv",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      38.6553439,
+      -27.2199459
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-rua-da-palha-rua-da-palha-angra-do-heroismo-k9Poyv"
+    ]
+  },
+  {
+    "nome": "Cristian Barbearia",
+    "slug": "cristian-barbearia-ilha-terceira",
+    "distrito": "Açores",
+    "concelho": "Angra do Heroísmo",
+    "freguesia": null,
+    "city": "Ilha Terceira",
+    "zone": "Angra do Heroísmo",
+    "morada": "R. do Galo 126, 9700-091 Angra do Heroísmo",
+    "codigo_postal": "9700-091",
+    "telefone": "+351 967 502 521",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/cristian-barbearia-rua-do-galo-angra-do-heroismo-7xvLBo",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 8h30-19h; Sáb 8h-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/cristian-barbearia-rua-do-galo-angra-do-heroismo-7xvLBo",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      38.6561103,
+      -27.2158859
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/cristian-barbearia-rua-do-galo-angra-do-heroismo-7xvLBo"
+    ]
+  },
+  {
+    "nome": "Bullman Barber",
+    "slug": "bullman-barber-ilha-terceira",
+    "distrito": "Açores",
+    "concelho": "Praia da Vitória",
+    "freguesia": null,
+    "city": "Ilha Terceira",
+    "zone": "Praia da Vitória",
+    "morada": "R. Alexandre Ramos, 9760-448 Praia da Vitória",
+    "codigo_postal": "9760-448",
+    "telefone": "+351 962 031 595",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/bullman-barber-rua-alexandre-ramos-praia-da-vitoria-9R5gY6",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-13h30",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/bullman-barber-rua-alexandre-ramos-praia-da-vitoria-9R5gY6",
+      "data": "2026-10-06"
+    },
+    "observacoes": null,
+    "coords": [
+      38.730343,
+      -27.0614619
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/bullman-barber-rua-alexandre-ramos-praia-da-vitoria-9R5gY6"
+    ]
+  },
+  {
+    "nome": "Barbearia Lima",
+    "slug": "barbearia-lima-ilha-terceira",
+    "distrito": "Açores",
+    "concelho": "Praia da Vitória",
+    "freguesia": null,
+    "city": "Ilha Terceira",
+    "zone": "Agualva",
+    "morada": "Canada do Açougue 5, 9760-020 Agualva",
+    "codigo_postal": "9760-020",
+    "telefone": "+351 965 219 896",
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-lima-canada-do-acougue-agualva-QkGky3",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.771853,
+      -27.1736256
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-06",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-lima-canada-do-acougue-agualva-QkGky3"
+    ]
   }
 ];
 
