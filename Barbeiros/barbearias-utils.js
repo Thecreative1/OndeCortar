@@ -67,7 +67,17 @@
     "guia (albufeira)": { locative: "na Guia (Albufeira)" },
     "chamusca": { locative: "na Chamusca" },
     "crato": { locative: "no Crato" },
-    "marco de canaveses": { locative: "no Marco de Canaveses" }
+    "marco de canaveses": { locative: "no Marco de Canaveses" },
+    "ribeira grande": { locative: "na Ribeira Grande" },
+    "porto santo": { locative: "no Porto Santo" },
+    "sabugal": { locative: "no Sabugal" },
+    "mêda": { locative: "na Mêda" },
+    "meda": { locative: "na Mêda" },
+    "vidigueira": { locative: "na Vidigueira" },
+    "amareleja": { locative: "na Amareleja" },
+    "sobreira": { locative: "na Sobreira" },
+    "pampilhosa do botão": { locative: "na Pampilhosa do Botão" },
+    "pampilhosa do botao": { locative: "na Pampilhosa do Botão" }
   };
   const PLACEHOLDER_PHONE_DIGITS = new Set([
     "351253000000",
