@@ -14,7 +14,9 @@ Diretório de barbearias em Portugal. Site estático (HTML/CSS/JS puro), sem fra
 |---|---|
 | `Barbeiros/barbearias.limpo.js` | **Fonte única de dados** — define `const barbearias = [...]` com todas as barbearias |
 | `Barbeiros/barbearias.mapa.js` | Versão reduzida dos dados que a homepage carrega (só públicas, sem campos que o browser não lê, sem vazios) — **gerada pelo build, não editar**. Se o cliente passar a ler um campo novo, tirá-lo de `CLIENT_OMIT_FIELDS` no build |
-| `Barbeiros/barbearias-utils.js` | Utilitários partilhados: normalização de texto, geocoding, slugify |
+| `Barbeiros/barbearias-utils.js` | Utilitários partilhados: normalização de texto, geocoding, slugify. Contém `LOCALITY_FRONTEND_FORMS` — **localidades que levam artigo** ("no Porto", "na Póvoa de Varzim", "nas Velas"); acrescentar aqui cada cidade nova que não diga "em X", senão o `<title>`/`h1` fica "Barbearias em Póvoa de Varzim" |
+| `llms.txt` | Resumo do site para assistentes de IA (llmstxt.org) com todas as páginas de cidade — **gerado pelo build** (`buildLlmsTxt`), não editar |
+| `oc-analytics.js` | Toda a medição do site: GA4 em modo sem cookies (consentimento negado) + **GoatCounter** (`ondecortar.goatcounter.com`, sem cookies). Eventos `barber_contact_click` (Marcar/Ligar por perfil: `clique-booking/<slug>`, `clique-phone/<slug>`), cliques de afiliado (`amazon/<tipo>/<página>/<ASIN>`) e artigo/diretório → loja (`para-loja/…`). Os números para mostrar às barbearias vêm do GoatCounter (o GA4 sem consentimento quase não reporta) |
 | `scripts/build-directory-static.js` | **Script de build principal** — gera tudo a partir dos dados |
 | `index.html` | Homepage com mapa Leaflet + pesquisa dinâmica + lista estática SSR |
 | `script.js` | Normalização client-side dos dados da homepage (cidades, links, descrições) — o mapa Leaflet, pesquisa e filtros estão em script inline no `index.html` |
@@ -52,6 +54,19 @@ Procedimento quando as coords parecem erradas:
    - `Barbeiros/barbearias.mapa.js` (dados reduzidos para o browser)
 
 **Nunca editar manualmente** os ficheiros em `barbearias/` ou `cidades/` — são sobrescritos pelo build.
+
+## Encontrar barbearias em zonas sem cobertura
+
+Estado em 2026-10-07: **802 barbearias, 315 cidades**. O `<title>` da homepage diz "600+" — atualizar para "800+" ficou por decidir (pedir OK: muda title/description da homepage).
+
+**Lista de lacunas:** artifact [Vilas sem barbearia](https://claude.ai/artifact/DgEHSWmsP3bXNVdT2FNTjQ) (db, coleção `vilas`, doc `{estado: por-ver|encontrei|sem, nota}`). Calculada com Overpass (`place=city|town` em PT) + distância à barbearia mais próxima > 10 km; concelho/distrito por Nominatim reverse. Em 2026-10-07 ficaram **111 de 171** tratadas; faltam ~60, quase todas aldeias pequenas (rendimento baixo). Ler com `ArtifactData list collection=vilas`; o utilizador também pode escrever notas lá.
+
+**Fontes, por ordem de rendimento:**
+1. **Google Maps no browser integrado** (o Claude pesquisa ele mesmo; o aviso de cookies foi "Rejeitar tudo" com autorização). Pesquisa `barbearia {vila} {distrito}`; ler os resultados (`a[href*="/maps/place/"]`, coordenadas em `!3d!4d`, place_id em `!19s`), ficar com categoria "Barb…" a < 8 km da vila, e abrir cada ficha (`maps/place/?q=place_id:…`) para morada com CP, telefone, site e horário completo (`table tr`). Scripts guardados em `localStorage` de google.com com fila — ver memória `fontes-descoberta-barbearias`. Vista limitada (sem sessão): só os primeiros resultados.
+2. **Fresha** — páginas de distrito `lp/en/bt/barbershops/in/pt-rural-{distrito}-district` (e `tt/men's-haircuts`, `bt/hair-salons`) dão links `/lvp/…` com JSON-LD (morada, geo, telefone, `sameAs` com Instagram/Facebook). Muitas páginas só trazem o 1.º turno no HTML → `horario: null`.
+3. **Booksy** (JSON-LD com geo e horário), listas de "Comércio e Serviços" das câmaras, OpenStreetMap.
+
+**Regras ao criar fichas em massa:** excluir fichas sem rua (só vila ou só CP), categorias que não são barbearia (bar, salão de senhora), horários incoerentes ("Aberto 24 horas", 7h–22h, cada dia diferente) → `horario: null`; não alterar nomes comerciais (só tirar emojis); cruzar com o diretório por distância (<150 m) e telefone antes de inserir; corrigir localidades abreviadas ou erradas na morada ("Pte. de Lima", "3350-153 Coimbra" em Poiares), porque **com `codigo_postal: null` o build lê a cidade da morada**. Nomes de localidade repetidos (Guia de Pombal vs Albufeira) → `city: "Guia (Pombal)"` + `codigo_postal` preenchido. No fim: regiões em `REGIOES_PT`, artigos em `LOCALITY_FRONTEND_FORMS`, build, smoke, audit de links e de localização, filtros da homepage a somar o total.
 
 ## Mapa de regiões (filtros da homepage)
 
@@ -91,6 +106,7 @@ else console.log('Todas mapeadas.');
 | **Algarve** | Distrito de Faro (incluindo Santa Luzia/Tavira) |
 | **Ilhas** | Madeira e Açores |
 
+> **Médio Tejo** (Abrantes, Entroncamento, Torres Novas, Tomar, Ourém, Mação, Sardoal, Alcanena…) está em **Centro**; Ribatejo/Lezíria (Santarém, Rio Maior, Coruche, Chamusca, Almeirim…) em **Lisboa**.
 > **Atenção:** Alenquer e Santarém pertencem ao distrito de Lisboa / Ribatejo → região **Lisboa**, não Alentejo.
 > Alijo (Vila Real) e Vila Praia de Âncora (Viana do Castelo) são **Norte**, não Centro.
 
@@ -134,6 +150,7 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
   "website": "https://...",
   "instagram": "https://instagram.com/...",
   "facebook": "https://facebook.com/...",
+  "booking": "https://noona.pt/...",     // opcional — link de marcação (Noona, Booksy, buk.pt…); conta como "marcação online" seja qual for o domínio
   "coords": [38.7223, -9.1393],          // [lat, lng] — necessário para aparecer no mapa
   "horario": "Seg-Sex 9h-19h",           // ver secção Horário abaixo; horario_fonte opcional
   "mostrar_no_mapa": true,               // false = excluído do site público
@@ -142,10 +159,16 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
 }
 ```
 
+### Marcação online (`booking`)
+
+- O build trata como marcação: o campo explícito `booking`, ou um `website`/`google_maps` de Fresha, Treatwell, Ongenda ou buk.pt (`classifyLink`). **Noona e Booksy só contam pelo campo `booking`** — não acrescentar `noona` ao `classifyLink` sem avisar: o Zela e o Pluma têm Noona no `website` e mudaria a description desses perfis.
+- O perfil mostra a linha "Marcação online · <plataforma> · Marcar" nos contactos (`rel="nofollow noopener"`, **sem `noreferrer`** de propósito, para a barbearia ver o OndeCortar como origem; `data-oc-click="booking"` para a medição). Plataformas reconhecidas pelo nome: Fresha, Noona, Buk, Ongenda, Treatwell, Booksy.
+- Decisão de negócio (2026-10-07): a linha de marcação é **gratuita**; uma versão paga futura seria destaque (botão grande no topo, posição na cidade, fotos, estatísticas) — não esconder dados públicos para os vender.
+
 ### Horário (`horario` e `horario_fonte`)
 
 - **Formato do `horario`:** texto PT no padrão `Seg-Sex 9h-13h e 15h-20h; Sáb 9h-13h` (grupos com `;`, turnos com ` e `, dias fechados omitidos). O build converte-o com `scripts/horario-utils.js` em `openingHoursSpecification` (JSON-LD) e `openingHours` (microdados). Se o texto não for inequívoco (ex.: `9h-19h` sem dias), o schema é omitido — o texto continua visível. Testar um horário novo: `node -e "const H=require('./scripts/horario-utils.js');console.log(H.toSchemaSpecs(H.parsePt('Seg-Sex 9h-19h')))"`.
-- **`horario_fonte` (opcional):** `{ "nome": "OpenStreetMap" | "Booksy" | "Fresha", "url": "...", "data": "YYYY-MM-DD" }` quando o horário veio de fonte externa. O perfil mostra "Segundo o … consultado a …. Confirma antes de ir." — no OpenStreetMap com crédito ODbL obrigatório. Não alterar `ultima_validacao` ao preencher só o horário.
+- **`horario_fonte` (opcional):** `{ "nome": "OpenStreetMap" | "Booksy" | "Fresha" | "Google Maps", "url": "...", "data": "YYYY-MM-DD" }` quando o horário veio de fonte externa. O perfil mostra "Segundo o … consultado a …. Confirma antes de ir." — no OpenStreetMap com crédito ODbL obrigatório. Não alterar `ultima_validacao` ao preencher só o horário.
 - **Prioridade das fontes:** página de marcações da própria barbearia (Booksy/Fresha) > OpenStreetMap. Confirmar sempre que o nome da página corresponde à barbearia — vários `website` do Booksy apontam para **listagens** (várias barbearias) e há páginas do Fresha que mudaram de dono (em 2026-10-01: `mans-house-portimao` mostra "Brell Studio").
 - **Mudar o `horario` muda o `<title>` e a description do perfil** (ex.: "Contacto, morada e mapa" → "Telefone, morada e horário") — ver a regra de risco de indexação.
 
@@ -177,7 +200,12 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
 
 ### Identidade visual dos perfis
 
-Desde 2026-10-01 os perfis (`barbearia-profile.css`) usam o tema escuro **"preto mate & verde-garrafa"**: fundo #141614, cartões #1E221F, texto creme #ECE7DD, acento âmbar #C8873A, blocos de destaque em verde-garrafa #1F4D3A; títulos em **Big Shoulders Display** (maiúsculas), corpo em Geist. Escolhido entre 3 propostas (clássica, navy & latão, escuro) por ser o mais masculino. Atenção: `--ink` é a cor do **texto** (clara) — não usar como fundo. Contrastes verificados (WCAG AA). As **páginas de cidade e o índice `cidades/`** usam o mesmo tema desde 2026-10-01 (CSS inline em `renderBaseStyles` no build; aí `--text` é o texto, `--accent` o fundo dos botões e `--link` os links em âmbar). A **homepage** também, desde 2026-10-01: bloco "Tema escuro homepage" no **fim de `oc-style.css`** (carregado depois do CSS inline do `index.html`), que redefine as duas famílias de variáveis (`--bg/--text/--accent…` e `--oc-*`) e os componentes com cores fixas. Armadilhas: vários elementos usavam a cor do texto como fundo (botões, faixa das cidades, rodapé) — nessas secções `--oc-paper` é redefinido localmente para creme; e há cartões com fundo em `background-image` (degradês creme) que não aparecem a quem só verifica `background-color`. Para verificar alterações: procurar fundos claros (cor e degradê) e texto < 4,5:1, também com pesquisa feita, popup do mapa aberto e menu mobile. A loja e a revista mantêm a sua identidade.
+Desde 2026-10-01 os perfis (`barbearia-profile.css`) usam o tema escuro **"preto mate & verde-garrafa"**: fundo #141614, cartões #1E221F, texto creme #ECE7DD, acento âmbar #C8873A, blocos de destaque em verde-garrafa #1F4D3A; títulos em **Big Shoulders Display** (maiúsculas), corpo em Geist. Escolhido entre 3 propostas (clássica, navy & latão, escuro) por ser o mais masculino. Atenção: `--ink` é a cor do **texto** (clara) — não usar como fundo. Contrastes verificados (WCAG AA). As **páginas de cidade e o índice `cidades/`** usam o mesmo tema desde 2026-10-01 (CSS inline em `renderBaseStyles` no build; aí `--text` é o texto, `--accent` o fundo dos botões e `--link` os links em âmbar). A **homepage** também, desde 2026-10-01: bloco "Tema escuro homepage" no **fim de `oc-style.css`** (carregado depois do CSS inline do `index.html`), que redefine as duas famílias de variáveis (`--bg/--text/--accent…` e `--oc-*`) e os componentes com cores fixas. Armadilhas: vários elementos usavam a cor do texto como fundo (botões, faixa das cidades, rodapé) — nessas secções `--oc-paper` é redefinido localmente para creme; e há cartões com fundo em `background-image` (degradês creme) que não aparecem a quem só verifica `background-color`. Para verificar alterações: procurar fundos claros (cor e degradê) e texto < 4,5:1, também com pesquisa feita, popup do mapa aberto e menu mobile. A loja e a revista mantêm a sua identidade. Desde 2026-10-07 as páginas **Sobre, FAQ, Privacidade e Registar** também usam este tema (CSS inline em cada página; hero com riscas e linha dourada, títulos Big Shoulders, Geist). Nas páginas que carregam `mobile-nav.css` (FAQ, Privacidade, Registar), esse ficheiro vem depois e força texto branco no `.nav-cta` — o botão âmbar precisa de `color: #17130D !important`.
+
+### Páginas para assistentes de IA
+
+- `llms.txt` (gerado pelo build) e o FAQ com perguntas no formato em que as pessoas perguntam às IAs (cidades cobertas, como marcar, como escolher, atualização). O `FAQPage` tem de ter **as mesmas perguntas da página**, pela mesma ordem. `robots.txt` deixa entrar todos os robôs (incluindo os de IA) — não bloquear.
+- O formulário de registo diz que o email é privado; quem quer email público no perfil escreve-o em «Informação adicional».
 
 ### SEO dos perfis
 
