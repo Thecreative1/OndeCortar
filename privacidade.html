@@ -61,7 +61,9 @@
     main, .container { counter-reset: priv; }
     .card { max-width: 920px; margin: 0 auto 16px; padding: 26px 30px; border: 1px solid var(--line); border-radius: 22px; background: var(--card); }
     .card + .card { counter-increment: priv; display: grid; grid-template-columns: 64px minmax(0, 1fr); column-gap: 8px; }
-    .card + .card::before { content: counter(priv, decimal-leading-zero); grid-row: 1 / span 2;
+    .card + .card > * { grid-column: 2; }
+    .card p + p { margin-top: 12px; }
+    .card + .card::before { content: counter(priv, decimal-leading-zero); grid-column: 1; grid-row: 1 / span 9;
       font-family: var(--display); font-weight: 800; font-size: 2.2rem; line-height: 1; color: var(--gold); }
     .site-header + .card { position: relative; overflow: hidden; padding: 44px 40px 40px; border-radius: 28px; margin-bottom: 22px;
       background:
@@ -89,6 +91,7 @@
     @media (max-width: 640px) {
       .card { padding: 22px; }
       .card + .card { grid-template-columns: 1fr; }
+      .card + .card > * { grid-column: 1; }
       .card + .card::before { grid-row: auto; margin-bottom: 8px; }
       .site-header + .card { padding: 32px 22px 30px; border-radius: 22px; }
     }
@@ -161,6 +164,7 @@
     <section class="card">
       <h2>Medição de audiência</h2>
       <p>Usamos o Google Analytics 4 para perceber, de forma agregada, que páginas são visitadas e que ligações são utilizadas (por exemplo, cliques em produtos recomendados). A medição está configurada em modo de consentimento restrito: por omissão não são criados cookies de análise nem identificadores persistentes, e não recolhemos dados pessoais como nome, email ou localização precisa. Os dados servem apenas para melhorar o diretório, a revista e a loja.</p>
+      <p>Usamos também o GoatCounter, um serviço de estatísticas sem cookies, para contar visitas às páginas e cliques nos contactos das barbearias (por exemplo, "Marcar" ou "Ligar"). O GoatCounter não guarda endereços IP nem cria identificadores persistentes.</p>
     </section>
 
     <section class="card">
