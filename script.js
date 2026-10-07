@@ -291,7 +291,7 @@
       website: "",
       instagram: "",
       facebook: "",
-      booking: ""
+      booking: String(raw.booking || "").trim()
     };
 
     ["website", "instagram", "facebook"].forEach(function(field) {

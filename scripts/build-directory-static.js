@@ -422,6 +422,9 @@ function classifyLink(url) {
 
 function normalizeLinks(item) {
   const result = { website: "", instagram: "", facebook: "", booking: "", google: "" };
+  // campo explícito de marcação (ex.: Noona) — conta como booking seja qual for o domínio
+  const booking = String(item.booking || "").trim();
+  if (booking) result.booking = booking;
   ["website", "instagram", "facebook", "google_maps", "google"].forEach((field) => {
     const value = String(item[field] || "").trim();
     if (!value) return;

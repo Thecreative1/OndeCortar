@@ -1130,7 +1130,7 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 915 226 218",
+    "telefone": "+351 928 162 803",
     "email": null,
     "website": null,
     "instagram": null,
@@ -19346,6 +19346,38 @@ const barbearias = [
     "fontes": [
       "https://www.google.com/maps/search/?api=1&query=Barbearia%20Jesus%20Ponta%20Delgada",
       "https://barbeariajesus.com/"
+    ]
+  },
+  {
+    "nome": "Fernando Simão Barber Shop",
+    "slug": "fernando-simao-barber-shop",
+    "distrito": "Porto",
+    "concelho": "Porto",
+    "freguesia": "Cedofeita",
+    "city": "Porto",
+    "zone": "Carvalhido",
+    "morada": "Rua da Constituição 2300, 4250-164 Porto",
+    "codigo_postal": "4250-164",
+    "telefone": "+351 932 617 750",
+    "email": null,
+    "website": "https://www.fernandosimaobarbershop.pt/",
+    "instagram": "https://www.instagram.com/fernandosimaobarbershop/",
+    "booking": "https://noona.pt/fernandosimaobarbershop/book",
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Seg-Sex 9h30-20h; Sáb 9h30-16h30",
+    "observacoes": null,
+    "coords": [
+      41.1644962,
+      -8.6254989
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fernandosimaobarbershop.pt/",
+      "https://noona.pt/fernandosimaobarbershop/book"
     ]
   }
 ];
