@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#516255" />
+  <meta name="theme-color" content="#141614" />
   <title>Privacidade | OndeCortar.pt</title>
   <meta name="description" content="Informação de privacidade do OndeCortar.pt sobre formulários de adesão, contactos e links de afiliado." />
   <link rel="canonical" href="https://ondecortar.pt/privacidade.html" />
@@ -11,194 +11,86 @@
   <link rel="alternate" hreflang="x-default" href="https://ondecortar.pt/privacidade.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
+    /* Privacidade — tema escuro do diretório ("preto mate & verde-garrafa"), igual a Sobre e FAQ */
     :root {
-      --bg: #efe4d1;
-      --surface: rgba(251, 246, 238, 0.94);
-      --text: #181410;
-      --muted: #4e473d;
-      --border: #cfbfa2;
-      --accent: #425a47;
-      --accent-strong: #2f4535;
-      --gold: #a6772d;
-      --mobile-nav-panel: rgba(251, 246, 238, 0.98);
-      --mobile-nav-border: rgba(207, 191, 162, 0.94);
-      --mobile-nav-link-bg: rgba(244, 235, 220, 0.94);
-      --mobile-nav-toggle-border: rgba(176, 139, 83, 0.72);
-      --mobile-nav-toggle-bg: rgba(251, 246, 238, 0.9);
-      --mobile-nav-shadow: 0 24px 60px rgba(31, 25, 19, 0.16);
-      --mobile-nav-backdrop: rgba(0, 0, 0, 0.56);
+      --bg: #141614; --card: #1E221F; --card-2: #1A1D1A; --text: #ECE7DD; --soft: #D6CFC2; --muted: #A49D90;
+      --line: #2F3530; --line-2: #4B544D; --gold: #C8873A; --gold-soft: #E3A863; --bottle: #1F4D3A; --bottle-2: #143326;
+      --display: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+      --sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mobile-nav-panel: #1A1D1A;
+      --mobile-nav-border: #2F3530;
+      --mobile-nav-link-bg: #1E221F;
+      --mobile-nav-toggle-border: #4B544D;
+      --mobile-nav-toggle-bg: #1A1D1A;
+      --mobile-nav-shadow: 0 28px 60px rgba(0, 0, 0, 0.5);
+      --mobile-nav-backdrop: rgba(0, 0, 0, 0.55);
     }
 
-    body {
-      margin: 0;
-      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(166, 119, 45, 0.14), transparent 24%),
-        radial-gradient(circle at top right, rgba(66, 90, 71, 0.1), transparent 26%),
-        linear-gradient(180deg, #f5ecde 0%, var(--bg) 36%, #e7d8c0 100%);
-      color: var(--text);
-    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--sans); background: var(--bg); color: var(--text); }
 
-    a {
-      color: var(--accent-strong);
-      text-decoration-color: rgba(166, 119, 45, 0.52);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 0.18em;
-    }
+    a { color: var(--gold-soft); text-decoration-color: rgba(227, 168, 99, 0.5); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+    a:hover { color: #F0C38C; }
+    .card a[style] { color: var(--gold-soft) !important; } /* o mailto tem cor inline antiga */
     .brand, .nav-links a, .nav-cta { text-decoration: none; }
+    a:focus-visible { outline: 3px solid rgba(227, 168, 99, 0.55); outline-offset: 3px; }
 
-    .container {
-      width: min(1080px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 28px 0 60px;
-    }
+    .container { width: min(1080px, calc(100% - 32px)); margin: 0 auto; padding: 18px 0 60px; }
 
-    .card {
-      border: 1px solid var(--border);
-      background: var(--surface);
-      border-radius: 24px;
-      box-shadow: 0 24px 60px rgba(31, 25, 19, 0.09);
-    }
+    /* Navegação */
+    .site-header { padding-bottom: 24px; }
+    .nav { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 14px 18px;
+      border: 1px solid var(--line); border-radius: 999px; background: rgba(30, 34, 31, 0.92); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35); }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; color: var(--text); }
+    .brand-logo { width: 46px; height: 46px; border-radius: 50%; display: block; object-fit: contain; background: #F6EFE3; }
+    .brand-text { display: grid; gap: 3px; }
+    .brand-text strong { font-size: 1rem; color: var(--text); }
+    .brand-text span { font-size: 0.82rem; color: var(--muted); }
+    .nav-toggle { color: var(--text); }
+    .nav-links { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; font-size: 0.95rem; }
+    .nav-links a { min-height: 42px; padding: 10px 14px; border-radius: 999px; font-weight: 600; color: var(--soft); }
+    .nav-links a:hover, .nav-links a.nav-link-active { background: rgba(200, 135, 58, 0.16); color: var(--text); }
+    .nav-links a.nav-cta, .nav-cta { display: inline-flex; align-items: center; justify-content: center; padding: 10px 16px;
+      border-radius: 999px; background: var(--gold); color: #17130D; font-weight: 700; }
+    .nav-links a.nav-cta:hover { background: var(--gold-soft); color: #17130D; }
+    .nav[data-mobile-nav] .nav-links .nav-cta { color: #17130D !important; } /* mobile-nav.css (carregado depois) força #fff */
 
-    .site-header {
-      padding-bottom: 24px;
-    }
+    /* Conteúdo: o 1.º cartão é o hero; os restantes são numerados por CSS */
+    main, .container { counter-reset: priv; }
+    .card { max-width: 920px; margin: 0 auto 16px; padding: 26px 30px; border: 1px solid var(--line); border-radius: 22px; background: var(--card); }
+    .card + .card { counter-increment: priv; display: grid; grid-template-columns: 64px minmax(0, 1fr); column-gap: 8px; }
+    .card + .card::before { content: counter(priv, decimal-leading-zero); grid-row: 1 / span 2;
+      font-family: var(--display); font-weight: 800; font-size: 2.2rem; line-height: 1; color: var(--gold); }
+    .site-header + .card { position: relative; overflow: hidden; padding: 44px 40px 40px; border-radius: 28px; margin-bottom: 22px;
+      background:
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.018) 0 2px, transparent 2px 14px),
+        radial-gradient(circle at 85% 15%, rgba(200, 135, 58, 0.16), transparent 42%),
+        linear-gradient(160deg, #1B2A21 0%, #141614 70%); }
+    .site-header + .card::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: linear-gradient(90deg, var(--gold), transparent 70%); }
+    .site-header + .card::after { content: none; }
 
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      padding: 14px 18px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: rgba(250, 244, 233, 0.94);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 24px 60px rgba(31, 25, 19, 0.1);
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
-    }
-
-    .brand-logo {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      display: block;
-      object-fit: cover;
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
-    }
-
-    .brand-text {
-      display: grid;
-      gap: 3px;
-    }
-
-    .brand-text strong {
-      font-size: 1rem;
-    }
-
-    .brand-text span {
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: center;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .nav-links a {
-      min-height: 42px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-weight: 600;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.nav-link-active {
-      background: rgba(166, 119, 45, 0.14);
-      color: var(--text);
-    }
-
-    .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      color: #fff;
-      font-weight: 800;
-      box-shadow: 0 10px 24px rgba(66, 90, 71, 0.22);
-    }
-
-    .card {
-      padding: 28px;
-      max-width: 920px;
-      margin: 0 auto 18px;
-    }
-
-    h1, h2 {
-      margin: 0 0 14px;
-      line-height: 1.08;
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 5vw, 3.4rem);
-    }
-
-    p {
-      color: var(--muted);
-      line-height: 1.75;
-      margin: 0 0 14px;
-    }
+    h1, h2 { font-family: var(--display); font-weight: 800; text-transform: uppercase; color: var(--text); margin: 0 0 12px; }
+    h1 { font-size: clamp(2.6rem, 7vw, 5.2rem); line-height: 0.92; letter-spacing: 0.01em; }
+    h1::after { content: ""; display: block; width: 72px; height: 4px; margin-top: 20px; background: var(--gold); border-radius: 2px; }
+    h2 { font-size: 1.55rem; line-height: 1.02; letter-spacing: 0.02em; }
+    p { color: var(--soft); line-height: 1.75; margin: 0; }
+    .site-header + .card p { margin-top: 22px; max-width: 64ch; font-size: 1.08rem; }
 
     @media (max-width: 1100px) {
-      .nav {
-        flex-direction: column;
-        align-items: stretch;
-        border-radius: 28px;
-        padding: 16px;
-      }
-
-      .brand {
-        justify-content: center;
-      }
-
-      .nav-links {
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-      }
-
-      .nav-links a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 48px;
-        padding: 12px 14px;
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        background: rgba(244, 235, 220, 0.94);
-        text-align: center;
-      }
-
-      .nav-cta,
-      .nav-links a.nav-cta {
-        width: 100%;
-      }
+      .nav { flex-direction: column; align-items: stretch; border-radius: 28px; padding: 16px; }
+      .brand { justify-content: center; }
+      .nav-links { width: 100%; flex-direction: column; align-items: stretch; gap: 10px; }
+      .nav-links a { display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 14px;
+        border: 1px solid var(--line); border-radius: 14px; background: var(--card); text-align: center; }
+      .nav-cta, .nav-links a.nav-cta { width: 100%; background: var(--gold); border-color: var(--gold); }
+    }
+    @media (max-width: 640px) {
+      .card { padding: 22px; }
+      .card + .card { grid-template-columns: 1fr; }
+      .card + .card::before { grid-row: auto; margin-bottom: 8px; }
+      .site-header + .card { padding: 32px 22px 30px; border-radius: 22px; }
     }
   </style>
   <link rel="stylesheet" href="mobile-nav.css" />
