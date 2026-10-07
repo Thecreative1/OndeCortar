@@ -314,15 +314,36 @@
     if (!event) return;
     ev.__ocTracked = true;
     send(event.name, event.params);
-    // GoatCounter: um "evento" por tipo de contacto e perfil, ex.: clique-booking/fernando-simao-barber-shop
-    if (event.name === "barber_contact_click" && window.goatcounter && window.goatcounter.count) {
-      window.goatcounter.count({
-        path: "clique-" + event.params.contact_type + "/" + event.params.barber_slug,
-        title: event.params.contact_type + " · " + event.params.barber_slug,
-        event: true
-      });
-    }
+    countGoat(event);
   }, true);
+
+  // GoatCounter: um "evento" por clique, com o caminho a dizer de onde veio e para onde foi.
+  //   clique-booking/fernando-simao-barber-shop       (contacto num perfil)
+  //   amazon/article/caspa-na-barba-o-que-fazer/B0XXXXXXX   (clique de afiliado, por página de origem e produto)
+  //   para-loja/article/caspa-na-barba-o-que-fazer/produto/philips-bt3238   (artigo/diretório → loja)
+  function countGoat(event) {
+    if (!window.goatcounter || !window.goatcounter.count) return;
+    var p = event.params;
+    var source = PAGE.type + "/" + (PAGE.slug || "inicio");
+    var path = "";
+    var title = "";
+    if (event.name === "barber_contact_click") {
+      path = "clique-" + p.contact_type + "/" + p.barber_slug;
+      title = p.contact_type + " · " + p.barber_slug;
+    } else if (event.name === "affiliate_click") {
+      path = "amazon/" + source + "/" + (p.product_id || "sem-asin");
+      title = "Amazon · " + (p.product_name || p.product_id || "") + " · " + p.placement;
+    } else if (event.name === "article_to_product_click" || event.name === "article_to_category_click") {
+      path = "para-loja/" + source + "/" + (p.product_id ? "produto/" + p.product_id : "loja/" + p.category_slug);
+      title = "Artigo → loja · " + PAGE.slug;
+    } else if (event.name === "directory_to_shop_click") {
+      path = "para-loja/" + source + "/" + p.destination;
+      title = "Diretório → loja · " + p.placement;
+    } else {
+      return;
+    }
+    window.goatcounter.count({ path: path, title: title.slice(0, 120), event: true });
+  }
 
   // ── Homepage: pesquisa, localização, sem resultados ────────────
   function initHomeTracking() {
