@@ -1258,6 +1258,7 @@ function renderProfilePage(barber, citiesMap) {
   const iBadge   = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="m12 3 2 2.5L17 5l.5 3L20 9l-1 3 1 3-2.5 1L17 19l-3-.5L12 21l-2-2.5L7 19l-.5-3L4 15l1-3-1-3 2.5-1L7 5l3 .5z"/><path d="m9 12 2 2 4-4"/><\/svg>';
   const iSpark   = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/><\/svg>';
   const iInsta   = '<svg class="oc-icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/><\/svg>';
+  const iCal     = '<svg class="oc-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><\/svg>';
 
   // ── Helpers
   function H(s) { return escapeHtml(String(s || "")); }
@@ -1446,9 +1447,23 @@ function renderProfilePage(barber, citiesMap) {
   const instaHandle = barber.instagram
     ? "@" + (barber.instagram.replace(/\/$/, "").split("/").pop() || "")
     : "";
+  // Marcação online (Fresha, Noona, …): linha simples nos contactos. Sem "noreferrer" para a
+  // barbearia ver o OndeCortar como origem; data-oc-click permite contar os cliques.
+  const bookingPlatform = (() => {
+    const host = (barber.booking || "").replace(/^https?:\/\//, "").split("/")[0].replace(/^www\./, "");
+    const known = [[/(^|\.)fresha\.com$/, "Fresha"], [/(^|\.)noona\.(pt|app)$/, "Noona"], [/(^|\.)buk\.pt$/, "Buk"],
+      [/(^|\.)ongenda\.com$/, "Ongenda"], [/(^|\.)treatwell\./, "Treatwell"]];
+    const match = known.find(([re]) => re.test(host));
+    return match ? match[1] : host;
+  })();
+  const bookingRow = barber.booking
+    ? '<div class="oc-contact-row"><span style="color:var(--subtext)">' + iCal + "<\/span><div style=\"min-width:0\"><div class=\"oc-contact-row__label\">Marcação online<\/div><div class=\"oc-contact-row__value\">" + H(bookingPlatform) + "<\/div><\/div>"
+      + '<a href="' + H(barber.booking) + '" class="oc-contact-row__action" target="_blank" rel="nofollow noopener" data-oc-click="booking">Marcar<\/a><\/div>'
+    : "";
   const contactsInner =
     contactRow(iPin,   "Morada",    barber.morada,   "Copiar", null) +
     contactRow(iPhone, "Telefone",  barber.telefone, "Ligar",  phoneHrefVal) +
+    bookingRow +
     contactRow(iMail,  "Email",     barber.email,    "Enviar", barber.email ? "mailto:" + barber.email : "") +
     contactRow(iGlobe, "Website",   barber.website ? barber.website.replace(/^https?:\/\//, "") : "", "Abrir", barber.website) +
     contactRow(iInsta, "Instagram", instaHandle,     "Ver",    barber.instagram) +
