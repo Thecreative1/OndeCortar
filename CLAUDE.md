@@ -57,7 +57,7 @@ Procedimento quando as coords parecem erradas:
 
 ## Encontrar barbearias em zonas sem cobertura
 
-Estado em 2026-10-07: **802 barbearias, 315 cidades**. O `<title>` da homepage diz "600+" — atualizar para "800+" ficou por decidir (pedir OK: muda title/description da homepage).
+Estado em 2026-10-07: **802 barbearias, 315 cidades**. O `<title>` da homepage diz "800+" (atualizado 2026-10-07); quando passar de 900 ou 1000, atualizar title, og/twitter e description (pedir OK).
 
 **Lista de lacunas:** artifact [Vilas sem barbearia](https://claude.ai/artifact/DgEHSWmsP3bXNVdT2FNTjQ) (db, coleção `vilas`, doc `{estado: por-ver|encontrei|sem, nota}`). Calculada com Overpass (`place=city|town` em PT) + distância à barbearia mais próxima > 10 km; concelho/distrito por Nominatim reverse. Em 2026-10-07 ficaram **111 de 171** tratadas; faltam ~60, quase todas aldeias pequenas (rendimento baixo). Ler com `ArtifactData list collection=vilas`; o utilizador também pode escrever notas lá.
 
