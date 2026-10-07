@@ -15,7 +15,7 @@
   // GoatCounter (sem cookies): conta visitas e cliques de contacto nos perfis. Com o GA4 em
   // consentimento negado, os pings sem cookies quase não aparecem nos relatórios — por isso os
   // números para mostrar às barbearias vêm daqui. Vazio = desligado.
-  var GOATCOUNTER_CODE = "";
+  var GOATCOUNTER_CODE = "ondecortar";
 
   if (window.__ocAnalyticsLoaded) return; // proteção contra inclusão dupla
   window.__ocAnalyticsLoaded = true;
