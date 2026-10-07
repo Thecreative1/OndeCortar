@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#516255" />
+  <meta name="theme-color" content="#141614" />
   <meta http-equiv="content-language" content="pt-PT" />
   <meta name="google" content="notranslate" />
   <title>Sobre o OndeCortar.pt | Projeto, critérios e transparência</title>
@@ -18,12 +18,98 @@
   <meta property="og:image" content="https://ondecortar.pt/imagens/banner.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../commerce.css" />
+  <style>
+    /* Sobre — tema escuro do diretório ("preto mate & verde-garrafa"), só nesta página */
+    .about-page {
+      --a-bg: #141614; --a-card: #1E221F; --a-card-2: #1A1D1A; --a-text: #ECE7DD; --a-soft: #D6CFC2;
+      --a-sub: #A49D90; --a-line: #2F3530; --a-line-2: #4B544D; --a-gold: #C8873A; --a-gold-soft: #E3A863;
+      --a-bottle: #1F4D3A; --a-bottle-2: #143326; --a-ok: #5FA77C;
+      --a-display: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+      --a-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--a-bg); color: var(--a-text); font-family: var(--a-sans);
+    }
+    .about-page a { color: var(--a-gold-soft); }
+    .about-page a:hover { color: #F0C38C; }
+
+    /* Navegação */
+    .about-page .nav { background: rgba(30, 34, 31, 0.92); border-color: var(--a-line); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35); }
+    .about-page .brand, .about-page .brand-text strong { color: var(--a-text); }
+    .about-page .brand-text span { color: var(--a-sub); }
+    .about-page .brand-logo { background: #F6EFE3; }
+    .about-page .nav-links a { color: var(--a-soft); }
+    .about-page .nav-links a:hover { color: var(--a-text); background: rgba(200, 135, 58, 0.16); }
+    .about-page .nav-links .nav-cta { color: #17130D; background: var(--a-gold); box-shadow: none; }
+    .about-page .nav-links .nav-cta:hover { color: #17130D; background: var(--a-gold-soft); }
+    .about-page .nav-toggle { background: var(--a-card-2); border-color: var(--a-line-2); color: var(--a-text); }
+    @media (max-width: 1100px) {
+      .about-page .nav-links { background: #1A1D1A; border-color: var(--a-line); box-shadow: 0 28px 60px rgba(0, 0, 0, 0.5); }
+      .about-page .nav-links a { background: var(--a-card); border-color: var(--a-line); }
+      .about-page .nav-links .nav-cta { background: var(--a-gold); border-color: var(--a-gold); }
+      .about-page .nav-backdrop { background: rgba(0, 0, 0, 0.55); }
+    }
+
+    /* Hero */
+    .about-hero { position: relative; overflow: hidden; padding: 44px 40px 40px; border: 1px solid var(--a-line); border-radius: 28px;
+      background:
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.018) 0 2px, transparent 2px 14px),
+        radial-gradient(circle at 85% 15%, rgba(200, 135, 58, 0.16), transparent 42%),
+        linear-gradient(160deg, #1B2A21 0%, #141614 70%); }
+    .about-hero::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: linear-gradient(90deg, var(--a-gold), transparent 70%); }
+    .about-hero .breadcrumbs { display: flex; gap: 8px; flex-wrap: wrap; font-size: 0.85rem; color: var(--a-sub); margin-bottom: 22px; }
+    .about-hero .breadcrumbs a { color: var(--a-soft); text-decoration: none; }
+    .about-hero .breadcrumbs a:hover { color: var(--a-gold-soft); }
+    .about-flag { display: inline-block; padding: 6px 12px; border: 1px solid rgba(200, 135, 58, 0.55); border-radius: 999px;
+      color: var(--a-gold-soft); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+    .about-hero h1 { margin: 18px 0 0; font-family: var(--a-display); font-weight: 800; text-transform: uppercase;
+      font-size: clamp(2.6rem, 7vw, 5.2rem); line-height: 0.92; letter-spacing: 0.01em; color: var(--a-text); max-width: 14ch; }
+    .about-hero h1::after { content: ""; display: block; width: 72px; height: 4px; margin-top: 20px; background: var(--a-gold); border-radius: 2px; }
+    .about-hero p { max-width: 62ch; margin: 22px 0 0; font-size: 1.08rem; line-height: 1.7; color: var(--a-soft); }
+
+    /* Pilares */
+    .about-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .about-card { position: relative; padding: 28px 28px 26px; border: 1px solid var(--a-line); border-radius: 22px; background: var(--a-card); }
+    .about-card__num { display: block; font-family: var(--a-display); font-weight: 800; font-size: 2.6rem; line-height: 1; color: var(--a-gold); opacity: 0.9; }
+    .about-card h3 { margin: 12px 0 10px; font-family: var(--a-display); font-weight: 800; text-transform: uppercase;
+      font-size: 1.7rem; line-height: 1; letter-spacing: 0.02em; color: var(--a-text); }
+    .about-card p { margin: 0; line-height: 1.7; color: var(--a-soft); }
+    .about-checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+    .about-checks li { position: relative; padding-left: 32px; line-height: 1.6; color: var(--a-soft); }
+    .about-checks li::before { content: ""; position: absolute; left: 0; top: 2px; width: 20px; height: 20px; border-radius: 50%;
+      background: var(--a-bottle) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ECE7DD' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 6l12 12M18 6L6 18'/%3E%3C/svg%3E") center / 10px no-repeat;
+      border: 1px solid rgba(95, 167, 124, 0.45); }
+
+    /* Transparência (verde-garrafa) */
+    .about-trust { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 18px; }
+    .about-trust__main { position: relative; padding: 32px; border-radius: 22px; border: 1px solid rgba(95, 167, 124, 0.3);
+      background: radial-gradient(circle at 100% 0%, rgba(200, 135, 58, 0.14), transparent 45%), linear-gradient(160deg, var(--a-bottle) 0%, var(--a-bottle-2) 100%); }
+    .about-trust__main h3 { margin: 12px 0 12px; font-family: var(--a-display); font-weight: 800; text-transform: uppercase; font-size: 2rem; line-height: 1; color: var(--a-text); }
+    .about-trust__main p { margin: 0; line-height: 1.75; color: #E2DCCF; }
+    .about-side { display: grid; gap: 18px; align-content: start; }
+    .about-note { padding: 22px 24px; border-radius: 22px; border: 1px dashed var(--a-line-2); background: var(--a-card-2); color: var(--a-soft); line-height: 1.65; }
+    .about-note strong { color: var(--a-text); }
+    .about-contact { padding: 24px; border-radius: 22px; border: 1px solid var(--a-line); background: var(--a-card); }
+    .about-contact h3 { margin: 0 0 10px; font-family: var(--a-display); font-weight: 800; text-transform: uppercase; font-size: 1.6rem; line-height: 1; color: var(--a-text); }
+    .about-contact p { margin: 0; line-height: 1.7; color: var(--a-soft); }
+
+    /* Rodapé */
+    .about-page footer .footer-shell { background: var(--a-card-2); border-color: var(--a-line); box-shadow: none; color: var(--a-soft); }
+    .about-page .footer-brand strong { color: var(--a-text); }
+    .about-page footer p { color: var(--a-sub); }
+    .about-page .footer-brand img { background: #F6EFE3; }
+    .about-page .footer-links a { color: var(--a-gold-soft); }
+
+    @media (max-width: 860px) {
+      .about-grid, .about-trust { grid-template-columns: 1fr; }
+      .about-hero { padding: 32px 22px 30px; border-radius: 22px; }
+      .about-card, .about-trust__main { padding: 24px 22px; }
+    }
+  </style>
   <script defer src="../oc-analytics.js"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"Sobre o OndeCortar.pt","description":"O que é o OndeCortar.pt, como escolhemos os produtos que recomendamos e como funcionam os links afiliados.","url":"https://ondecortar.pt/sobre/"}</script>
 </head>
-<body data-page="page" data-root="../">
+<body data-page="page" data-root="../" class="about-page">
   <div id="app" class="page-shell">
 
     <header class="site-header">
@@ -64,48 +150,57 @@
 
     <main>
       <section class="section">
-        <div class="container hero-card">
-          <div class="breadcrumbs"><a href="../index.html">Homepage</a><span>/</span><span>Sobre</span></div>
-          <span class="section-flag">Sobre o projeto</span>
-          <h1>O que é o OndeCortar.pt</h1>
-          <p>O OndeCortar.pt é um diretório independente de barbearias em Portugal, complementado por uma revista de guias práticos e uma loja de recomendações de produtos de barbearia. O objetivo é simples: ajudar a encontrar onde cortar o cabelo e a cuidar do corte e da barba entre visitas ao barbeiro.</p>
+        <div class="container">
+          <div class="about-hero">
+            <div class="breadcrumbs"><a href="../index.html">Homepage</a><span>/</span><span>Sobre</span></div>
+            <span class="about-flag">Sobre o projeto</span>
+            <h1>O que é o OndeCortar.pt</h1>
+            <p>O OndeCortar.pt é um diretório independente de barbearias em Portugal, complementado por uma revista de guias práticos e uma loja de recomendações de produtos de barbearia. O objetivo é simples: ajudar a encontrar onde cortar o cabelo e a cuidar do corte e da barba entre visitas ao barbeiro.</p>
+          </div>
         </div>
       </section>
 
       <section class="section">
-        <div class="container split-grid">
-          <div class="stack">
-            <div class="product-highlight">
-              <h3>O diretório</h3>
-              <p>As fichas de barbearias são criadas a partir de informação pública (moradas, contactos, horários) e revistas manualmente. O serviço é gratuito para as barbearias e para quem pesquisa — sem comissões nem mensalidades. Donos de barbearias podem <a href="../registar.html">adicionar ou corrigir o seu perfil</a> em qualquer altura.</p>
-            </div>
-            <div class="product-highlight">
-              <h3>Como escolhemos os produtos</h3>
-              <p>As recomendações da Loja e da Revista são seleções editoriais feitas com base nas características de cada produto, no posicionamento face às alternativas e na adequação ao tipo de utilização (casa, barba, barbear clássico ou trabalho de barbearia). Não fazemos testes laboratoriais nem afirmamos ter usado cada produto — quando existir experiência direta, será dito explicitamente no artigo.</p>
-            </div>
-            <div class="product-highlight">
-              <h3>O que nunca fazemos</h3>
-              <ul class="rich-list">
-                <li>Não inventamos avaliações, estrelas nem classificações.</li>
-                <li>Não mostramos preços que não possamos garantir — o preço e a disponibilidade confirmam-se sempre na loja de destino.</li>
-                <li>Não alteramos uma recomendação por causa do valor da comissão.</li>
-              </ul>
-            </div>
-            <div class="product-highlight">
-              <h3>Política de atualização</h3>
-              <p>Cada artigo mostra a data de publicação e de revisão. O diretório é atualizado regularmente; cada ficha regista a data da última validação. Quando um produto deixa de estar disponível ou deixa de fazer sentido na seleção, é substituído ou removido.</p>
-            </div>
+        <div class="container about-grid">
+          <div class="about-card">
+            <span class="about-card__num" aria-hidden="true">01</span>
+            <h3>O diretório</h3>
+            <p>As fichas de barbearias são criadas a partir de informação pública (moradas, contactos, horários) e revistas manualmente. O serviço é gratuito para as barbearias e para quem pesquisa — sem comissões nem mensalidades. Donos de barbearias podem <a href="../registar.html">adicionar ou corrigir o seu perfil</a> em qualquer altura.</p>
           </div>
-          <div class="stack">
-            <div class="buy-box">
-              <span class="price-hint">Transparência</span>
-              <h3>Links afiliados</h3>
-              <p>Alguns links da Loja e da Revista são afiliados da Amazon. Como Afiliado da Amazon, o OndeCortar.pt obtém rendimentos com as compras elegíveis feitas através deles, sem custo extra para ti. É isto que financia o diretório gratuito. Os links afiliados são sempre assinalados e abrem na Amazon.es, onde confirmas o preço e a disponibilidade atuais.</p>
-            </div>
-            <div class="disclosure">
+          <div class="about-card">
+            <span class="about-card__num" aria-hidden="true">02</span>
+            <h3>Como escolhemos os produtos</h3>
+            <p>As recomendações da Loja e da Revista são seleções editoriais feitas com base nas características de cada produto, no posicionamento face às alternativas e na adequação ao tipo de utilização (casa, barba, barbear clássico ou trabalho de barbearia). Não fazemos testes laboratoriais nem afirmamos ter usado cada produto — quando existir experiência direta, será dito explicitamente no artigo.</p>
+          </div>
+          <div class="about-card">
+            <span class="about-card__num" aria-hidden="true">03</span>
+            <h3>O que nunca fazemos</h3>
+            <ul class="about-checks">
+              <li>Não inventamos avaliações, estrelas nem classificações.</li>
+              <li>Não mostramos preços que não possamos garantir — o preço e a disponibilidade confirmam-se sempre na loja de destino.</li>
+              <li>Não alteramos uma recomendação por causa do valor da comissão.</li>
+            </ul>
+          </div>
+          <div class="about-card">
+            <span class="about-card__num" aria-hidden="true">04</span>
+            <h3>Política de atualização</h3>
+            <p>Cada artigo mostra a data de publicação e de revisão. O diretório é atualizado regularmente; cada ficha regista a data da última validação. Quando um produto deixa de estar disponível ou deixa de fazer sentido na seleção, é substituído ou removido.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container about-trust">
+          <div class="about-trust__main">
+            <span class="about-flag">Transparência</span>
+            <h3>Links afiliados</h3>
+            <p>Alguns links da Loja e da Revista são afiliados da Amazon. Como Afiliado da Amazon, o OndeCortar.pt obtém rendimentos com as compras elegíveis feitas através deles, sem custo extra para ti. É isto que financia o diretório gratuito. Os links afiliados são sempre assinalados e abrem na Amazon.es, onde confirmas o preço e a disponibilidade atuais.</p>
+          </div>
+          <div class="about-side">
+            <div class="about-note">
               <strong>Quem escreve:</strong> os conteúdos são preparados e revistos pela equipa editorial do OndeCortar.pt.
             </div>
-            <div class="product-highlight">
+            <div class="about-contact">
               <h3>Contacto</h3>
               <p>Para correções, sugestões ou pedidos de remoção de dados: <a href="mailto:contacto@ondecortar.pt">contacto@ondecortar.pt</a> ou o <a href="../registar.html">formulário de contacto</a>. Mais detalhes na <a href="../privacidade.html">política de privacidade</a> e no <a href="../faq.html">FAQ</a>.</p>
             </div>
