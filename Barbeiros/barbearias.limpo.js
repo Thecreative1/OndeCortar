@@ -25804,6 +25804,2702 @@ const barbearias = [
     "fontes": [
       "https://www.google.com/maps/search/?api=1&query=Carlos%20%7C%20Barber%20Studio%20Porto%20de%20M%C3%B3s"
     ]
+  },
+  {
+    "nome": "Barbearia - Salão Teixeira",
+    "slug": "barbearia-salao-teixeira",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Paço de Sousa",
+    "zone": null,
+    "morada": "Largo Costeira 68, 4560-391 Paço de Sousa",
+    "codigo_postal": null,
+    "telefone": "+351 963 036 113",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://buk.pt/salao-teixeira-cabeleireiro",
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20-%20Sal%C3%A3o%20Teixeira%20Pa%C3%A7o%20de%20Sousa",
+    "horario": "Ter-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20-%20Sal%C3%A3o%20Teixeira%20Pa%C3%A7o%20de%20Sousa",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.166443,
+      -8.346012
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20-%20Sal%C3%A3o%20Teixeira%20Pa%C3%A7o%20de%20Sousa"
+    ]
+  },
+  {
+    "nome": "Barbearia Da Vila",
+    "slug": "barbearia-da-vila-paco-de-sousa",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Paço de Sousa",
+    "zone": null,
+    "morada": "Avenida da Liberdade 212, Edifício Egas Moniz, 4560-383 Paço de Sousa",
+    "codigo_postal": null,
+    "telefone": "+351 910 750 025",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Da%20Vila%20Pa%C3%A7o%20de%20Sousa",
+    "horario": "Ter-Sáb 9h-12h30 e 14h30-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Da%20Vila%20Pa%C3%A7o%20de%20Sousa",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.17144,
+      -8.332287
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Da%20Vila%20Pa%C3%A7o%20de%20Sousa"
+    ]
+  },
+  {
+    "nome": "Fade Studio",
+    "slug": "fade-studio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Penafiel",
+    "zone": null,
+    "morada": "R. Saudade 383, 4560-531 Penafiel",
+    "codigo_postal": null,
+    "telefone": "+351 910 254 597",
+    "email": null,
+    "website": "https://linktr.ee/FadeStudio777",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Fade%20Studio%20Penafiel",
+    "horario": "Ter-Qui 9h-19h; Sex 8h-19h; Sáb 8h-16h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Fade%20Studio%20Penafiel",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.19666,
+      -8.294421
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Fade%20Studio%20Penafiel"
+    ]
+  },
+  {
+    "nome": "Miro Barber",
+    "slug": "miro-barber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mouriz",
+    "zone": null,
+    "morada": "N15 892, 4580 Mouriz",
+    "codigo_postal": null,
+    "telefone": "+351 919 916 066",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Miro%20Barber%20Mouriz",
+    "horario": "Seg-Sex 9h-12h30 e 14h-21h; Sáb 8h30-12h30 e 13h30-19h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Miro%20Barber%20Mouriz",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.199046,
+      -8.359935
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Miro%20Barber%20Mouriz"
+    ]
+  },
+  {
+    "nome": "Barbearia Neto",
+    "slug": "barbearia-neto",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Palhaça",
+    "zone": null,
+    "morada": "Praça São Pedro 104, 3770-355 Palhaça",
+    "codigo_postal": null,
+    "telefone": "+351 913 144 793",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Neto%20Palha%C3%A7a",
+    "horario": "Ter-Qui 10h-19h; Sex 10h-19h30; Sáb 9h-17h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Neto%20Palha%C3%A7a",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.5251,
+      -8.598662
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Neto%20Palha%C3%A7a"
+    ]
+  },
+  {
+    "nome": "Barbearia D’ Improviso",
+    "slug": "barbearia-d-improviso",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mamarrosa",
+    "zone": null,
+    "morada": "R. Prof. Jaime Oliveira 8, 3770-034 Mamarrosa",
+    "codigo_postal": null,
+    "telefone": "+351 915 208 053",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20D%E2%80%99%20Improviso%20Mamarrosa",
+    "horario": "Ter-Sex 10h-20h; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20D%E2%80%99%20Improviso%20Mamarrosa",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.48286,
+      -8.578032
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20D%E2%80%99%20Improviso%20Mamarrosa"
+    ]
+  },
+  {
+    "nome": "Penedo Barber shop",
+    "slug": "penedo-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Pias",
+    "zone": null,
+    "morada": "R. do Jogo dos Paus 16, 7830-263 Pias",
+    "codigo_postal": null,
+    "telefone": null,
+    "email": null,
+    "website": "http://penedobarber.lovable.app/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Penedo%20Barber%20shop%20Pias",
+    "horario": "Ter-Sáb 10h-13h e 15h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Penedo%20Barber%20shop%20Pias",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.022757,
+      -7.47701
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Penedo%20Barber%20shop%20Pias"
+    ]
+  },
+  {
+    "nome": "Rafa’S Barbershop - Ribeira de Pena",
+    "slug": "rafa-s-barbershop-ribeira-de-pena",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ribeira de Pena",
+    "zone": null,
+    "morada": "Variante 9A, 4870-163 Ribeira de Pena",
+    "codigo_postal": null,
+    "telefone": "+351 911 503 374",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Rafa%E2%80%99S%20Barbershop%20-%20Ribeira%20de%20Pena%20Ribeira%20de%20Pena",
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Rafa%E2%80%99S%20Barbershop%20-%20Ribeira%20de%20Pena%20Ribeira%20de%20Pena",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.519991,
+      -7.792152
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Rafa%E2%80%99S%20Barbershop%20-%20Ribeira%20de%20Pena%20Ribeira%20de%20Pena"
+    ]
+  },
+  {
+    "nome": "Barber Shop",
+    "slug": "barber-shop-ribeira-de-pena",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ribeira de Pena",
+    "zone": null,
+    "morada": "R. Dom Afonso IV 9A, 4870-161 Ribeira de Pena",
+    "codigo_postal": null,
+    "telefone": "+351 961 309 583",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barber%20Shop%20Ribeira%20de%20Pena",
+    "horario": "Seg-Sex 9h-12h30 e 14h-18h; Sáb 9h-12h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barber%20Shop%20Ribeira%20de%20Pena",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.520583,
+      -7.794051
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barber%20Shop%20Ribeira%20de%20Pena"
+    ]
+  },
+  {
+    "nome": "Nogbarber",
+    "slug": "nogbarber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Cerva",
+    "zone": null,
+    "morada": "N312 3, 4870-042 Cerva",
+    "codigo_postal": null,
+    "telefone": "+351 963 506 398",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Nogbarber%20Cerva",
+    "horario": "Ter-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Nogbarber%20Cerva",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.471609,
+      -7.848795
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Nogbarber%20Cerva"
+    ]
+  },
+  {
+    "nome": "Barbearia Monteiro",
+    "slug": "barbearia-monteiro",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mões",
+    "zone": null,
+    "morada": "Av. Principal 32, 3600-430 Mões",
+    "codigo_postal": null,
+    "telefone": "+351 932 325 864",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Monteiro%20M%C3%B5es",
+    "horario": "Ter-Sex 9h-12h30 e 14h-19h; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Monteiro%20M%C3%B5es",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.868787,
+      -7.885448
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Monteiro%20M%C3%B5es"
+    ]
+  },
+  {
+    "nome": "Brave Barbearias - Castro Daire",
+    "slug": "brave-barbearias-castro-daire",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Castro Daire",
+    "zone": null,
+    "morada": "Av. António Serrado 22, 3600-136 Castro Daire",
+    "codigo_postal": null,
+    "telefone": "+351 967 711 037",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/bravebarbeariascastrodaire/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Brave%20Barbearias%20-%20Castro%20Daire%20Castro%20Daire",
+    "horario": "Seg-Sex 10h-13h e 14h-19h; Sáb 10h-15h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Brave%20Barbearias%20-%20Castro%20Daire%20Castro%20Daire",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.900217,
+      -7.933371
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Brave%20Barbearias%20-%20Castro%20Daire%20Castro%20Daire"
+    ]
+  },
+  {
+    "nome": "Barbearia Don Miguel",
+    "slug": "barbearia-don-miguel",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Castro Daire",
+    "zone": null,
+    "morada": "R. Cândido Reis 98, 3600-147 Castro Daire",
+    "codigo_postal": null,
+    "telefone": "+351 938 340 708",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Don%20Miguel%20Castro%20Daire",
+    "horario": "Ter-Sex 10h-13h e 14h-20h; Sáb 10h-13h e 14h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Don%20Miguel%20Castro%20Daire",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.898264,
+      -7.931092
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Don%20Miguel%20Castro%20Daire"
+    ]
+  },
+  {
+    "nome": "Pedro's Barber Shop",
+    "slug": "pedro-s-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Castro Daire",
+    "zone": null,
+    "morada": "Praça Dom José Aguilar 10, 3600-209 Castro Daire",
+    "codigo_postal": null,
+    "telefone": "+351 925 715 300",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Pedro's%20Barber%20Shop%20Castro%20Daire",
+    "horario": "Ter-Sáb 9h-12h e 14h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Pedro's%20Barber%20Shop%20Castro%20Daire",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.897475,
+      -7.934349
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Pedro's%20Barber%20Shop%20Castro%20Daire"
+    ]
+  },
+  {
+    "nome": "Barbearia Perfumaria Barroso",
+    "slug": "barbearia-perfumaria-barroso",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Carrazedo de Montenegro",
+    "zone": null,
+    "morada": "Av. Dom Dinis 37B, 5445-110 Carrazedo de Montenegro",
+    "codigo_postal": null,
+    "telefone": "+351 278 781 325",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Perfumaria%20Barroso%20Carrazedo%20de%20Montenegro",
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Perfumaria%20Barroso%20Carrazedo%20de%20Montenegro",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.564764,
+      -7.42763
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Perfumaria%20Barroso%20Carrazedo%20de%20Montenegro"
+    ]
+  },
+  {
+    "nome": "Carneiro Studio Barber",
+    "slug": "carneiro-studio-barber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Carregal do Sal",
+    "zone": null,
+    "morada": "EN 234 km 77, Lugar de Calvário, Oliveirinha, 3430-399 Carregal do Sal",
+    "codigo_postal": null,
+    "telefone": "+351 912 709 015",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Carneiro%20Studio%20Barber%20Carregal%20do%20Sal",
+    "horario": "Ter-Sáb 9h-12h e 14h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Carneiro%20Studio%20Barber%20Carregal%20do%20Sal",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.447242,
+      -7.968375
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Carneiro%20Studio%20Barber%20Carregal%20do%20Sal"
+    ]
+  },
+  {
+    "nome": "Studio Barber Figueiredo",
+    "slug": "studio-barber-figueiredo",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Carregal do Sal",
+    "zone": null,
+    "morada": "R. São João de Deus 44, 3430-055 Carregal do Sal",
+    "codigo_postal": null,
+    "telefone": "+351 924 055 095",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Studio%20Barber%20Figueiredo%20Carregal%20do%20Sal",
+    "horario": "Ter-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Studio%20Barber%20Figueiredo%20Carregal%20do%20Sal",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.433525,
+      -8.002446
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Studio%20Barber%20Figueiredo%20Carregal%20do%20Sal"
+    ]
+  },
+  {
+    "nome": "KelvinBarber",
+    "slug": "kelvinbarber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Carregal do Sal",
+    "zone": null,
+    "morada": "R. Prof. Delfim Pina 14 Loja A, 3430-121 Carregal do Sal",
+    "codigo_postal": null,
+    "telefone": "+351 917 315 254",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/kb_kelvinbarber/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=KelvinBarber%20Carregal%20do%20Sal",
+    "horario": "Seg 10h-12h30 e 14h-19h30; Qua-Sáb 10h-12h30 e 14h-19h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=KelvinBarber%20Carregal%20do%20Sal",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.431677,
+      -8.003715
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=KelvinBarber%20Carregal%20do%20Sal"
+    ]
+  },
+  {
+    "nome": "Barata Barbershop",
+    "slug": "barata-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Oleiros",
+    "zone": null,
+    "morada": "R. Padre António de Andrade 31, 6160-427 Oleiros",
+    "codigo_postal": null,
+    "telefone": "+351 910 344 681",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barata%20Barbershop%20Oleiros",
+    "horario": "Ter-Sáb 9h-12h e 14h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barata%20Barbershop%20Oleiros",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.917735,
+      -7.914136
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barata%20Barbershop%20Oleiros"
+    ]
+  },
+  {
+    "nome": "Barbearia Miguel",
+    "slug": "barbearia-miguel",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vidago",
+    "zone": null,
+    "morada": "Largo da Praça 6, 5425-328 Vidago",
+    "codigo_postal": null,
+    "telefone": "+351 938 348 559",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Miguel%20Vidago",
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Miguel%20Vidago",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.640473,
+      -7.573317
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Miguel%20Vidago"
+    ]
+  },
+  {
+    "nome": "KF Barber",
+    "slug": "kf-barber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vidago",
+    "zone": null,
+    "morada": "N2, 5425-323 Vidago",
+    "codigo_postal": null,
+    "telefone": "+351 933 318 769",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=KF%20Barber%20Vidago",
+    "horario": "Ter-Sex 9h30-12h30 e 15h-19h; Sáb 9h30-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=KF%20Barber%20Vidago",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.639555,
+      -7.571707
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=KF%20Barber%20Vidago"
+    ]
+  },
+  {
+    "nome": "Mig.Calado’s Barber House",
+    "slug": "mig-calado-s-barber-house",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Gavião",
+    "zone": null,
+    "morada": "R. Dr. Eusébio Leão 43, 6040-100 Gavião",
+    "codigo_postal": null,
+    "telefone": "+351 925 117 949",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/mig.calado/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Mig.Calado%E2%80%99s%20Barber%20House%20Gavi%C3%A3o",
+    "horario": "Seg-Ter 10h-13h e 14h-19h; Qui-Sáb 10h-13h e 14h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Mig.Calado%E2%80%99s%20Barber%20House%20Gavi%C3%A3o",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.465168,
+      -7.935104
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Mig.Calado%E2%80%99s%20Barber%20House%20Gavi%C3%A3o"
+    ]
+  },
+  {
+    "nome": "Barbearia \"Da Praça\"",
+    "slug": "barbearia-da-praca-torre-de-dona-chama",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Torre de Dona Chama",
+    "zone": null,
+    "morada": "R. Ten. Morais Sarmento, 5385-086 Torre de Dona Chama",
+    "codigo_postal": null,
+    "telefone": "+351 933 699 278",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/dapraca26",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20%22Da%20Pra%C3%A7a%22%20Torre%20de%20Dona%20Chama",
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.654598,
+      -7.12569
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20%22Da%20Pra%C3%A7a%22%20Torre%20de%20Dona%20Chama"
+    ]
+  },
+  {
+    "nome": "VIKTORY BARBER SHOP",
+    "slug": "viktory-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Torre de Dona Chama",
+    "zone": null,
+    "morada": "Rua Santo 11, 5385-108 Torre de Dona Chama",
+    "codigo_postal": null,
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=VIKTORY%20BARBER%20SHOP%20Torre%20de%20Dona%20Chama",
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.654301,
+      -7.128155
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=VIKTORY%20BARBER%20SHOP%20Torre%20de%20Dona%20Chama"
+    ]
+  },
+  {
+    "nome": "Silvestre Barber",
+    "slug": "silvestre-barber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Couço",
+    "zone": null,
+    "morada": "Rua Maria Lamas 6, 2100-340 Couço",
+    "codigo_postal": null,
+    "telefone": "+351 936 538 920",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://buk.pt/silvestrebarber",
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Silvestre%20Barber%20Cou%C3%A7o",
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Silvestre%20Barber%20Cou%C3%A7o",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.98318,
+      -8.286198
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Silvestre%20Barber%20Cou%C3%A7o"
+    ]
+  },
+  {
+    "nome": "Rota do corte Biel barbearia",
+    "slug": "rota-do-corte-biel-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Paião",
+    "zone": null,
+    "morada": "R. Direita 75, 3090-495 Paião",
+    "codigo_postal": null,
+    "telefone": "+351 935 190 491",
+    "email": null,
+    "website": "https://www.rotadocorte.com/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Rota%20do%20corte%20Biel%20barbearia%20Pai%C3%A3o",
+    "horario": "Seg 13h-22h; Ter-Sex 10h-22h; Sáb 10h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Rota%20do%20corte%20Biel%20barbearia%20Pai%C3%A3o",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.070414,
+      -8.805476
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Rota%20do%20corte%20Biel%20barbearia%20Pai%C3%A3o"
+    ]
+  },
+  {
+    "nome": "Studio Xana tattoo e barbearia",
+    "slug": "studio-xana-tattoo-e-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Paião",
+    "zone": null,
+    "morada": "R. Figueira da Foz, 3090-495 Paião",
+    "codigo_postal": null,
+    "telefone": "+351 910 656 015",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Studio%20Xana%20tattoo%20e%20barbearia%20Pai%C3%A3o",
+    "horario": "Seg-Sáb 10h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Studio%20Xana%20tattoo%20e%20barbearia%20Pai%C3%A3o",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.069783,
+      -8.80813
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Studio%20Xana%20tattoo%20e%20barbearia%20Pai%C3%A3o"
+    ]
+  },
+  {
+    "nome": "Nielson Barber Studio",
+    "slug": "nielson-barber-studio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Castanheira de Pêra",
+    "zone": null,
+    "morada": "R. João Bebiano 58, 3280-041 Castanheira de Pêra",
+    "codigo_postal": null,
+    "telefone": "+351 913 673 900",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://noona.app/nielsonbarber",
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Nielson%20Barber%20Studio%20Castanheira%20de%20P%C3%AAra",
+    "horario": "Seg-Sáb 9h-13h e 14h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Nielson%20Barber%20Studio%20Castanheira%20de%20P%C3%AAra",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.003634,
+      -8.209527
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Nielson%20Barber%20Studio%20Castanheira%20de%20P%C3%AAra"
+    ]
+  },
+  {
+    "nome": "Barbearia Joel Machado",
+    "slug": "barbearia-joel-machado",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Pampilhosa da Serra",
+    "zone": null,
+    "morada": "Centro Comercial, R. São Sebastião Loja 12, 3320-232 Pampilhosa da Serra",
+    "codigo_postal": null,
+    "telefone": "+351 937 234 107",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/barbeariajoelmachado/",
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Joel%20Machado%20Pampilhosa%20da%20Serra",
+    "horario": "Seg-Ter 9h-13h e 15h-19h; Qui-Sex 9h-13h e 15h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Joel%20Machado%20Pampilhosa%20da%20Serra",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.046141,
+      -7.949761
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Joel%20Machado%20Pampilhosa%20da%20Serra"
+    ]
+  },
+  {
+    "nome": "Ricky’Studio",
+    "slug": "ricky-studio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Belmonte",
+    "zone": null,
+    "morada": "Largo Catarina Eufémia, 6250-027 Belmonte",
+    "codigo_postal": null,
+    "telefone": "+351 967 996 185",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Ricky%E2%80%99Studio%20Belmonte",
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Ricky%E2%80%99Studio%20Belmonte",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.357428,
+      -7.351683
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Ricky%E2%80%99Studio%20Belmonte"
+    ]
+  },
+  {
+    "nome": "Barbearia Braddock",
+    "slug": "barbearia-braddock",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Belmonte",
+    "zone": null,
+    "morada": "Tv. Jogo da Bola 12, 6250-070 Belmonte",
+    "codigo_postal": null,
+    "telefone": "+351 915 917 539",
+    "email": null,
+    "website": "http://braddock.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Braddock%20Belmonte",
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Braddock%20Belmonte",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.357145,
+      -7.351033
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Braddock%20Belmonte"
+    ]
+  },
+  {
+    "nome": "Barbearia Azevedo",
+    "slug": "barbearia-azevedo",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Belmonte",
+    "zone": null,
+    "morada": "Rua dos Bombeiros Voluntários 1, 6250-056 Belmonte",
+    "codigo_postal": null,
+    "telefone": "+351 967 501 108",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Azevedo%20Belmonte",
+    "horario": "Seg-Sex 9h-13h e 15h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Azevedo%20Belmonte",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.360145,
+      -7.349841
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Azevedo%20Belmonte"
+    ]
+  },
+  {
+    "nome": "Barbearia Ribeiro",
+    "slug": "barbearia-ribeiro",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Barcouço",
+    "zone": null,
+    "morada": "R. Central 61, 3050-089 Barcouço",
+    "codigo_postal": null,
+    "telefone": "+351 969 903 931",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Ribeiro%20Barcou%C3%A7o",
+    "horario": "Ter-Sex 9h-19h; Sáb 9h30-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Ribeiro%20Barcou%C3%A7o",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.303387,
+      -8.475245
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Ribeiro%20Barcou%C3%A7o"
+    ]
+  },
+  {
+    "nome": "barbearia Sr cut",
+    "slug": "barbearia-sr-cut",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mealhada",
+    "zone": null,
+    "morada": "Lugar das Pedrinhas, 3050-343 Mealhada",
+    "codigo_postal": null,
+    "telefone": "+351 912 808 637",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=barbearia%20Sr%20cut%20Mealhada",
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.371108,
+      -8.452564
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=barbearia%20Sr%20cut%20Mealhada"
+    ]
+  },
+  {
+    "nome": "Barbearia Ericeira",
+    "slug": "barbearia-ericeira",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ericeira",
+    "zone": null,
+    "morada": "R. de São Félix 12D, 2655-210 Ericeira",
+    "codigo_postal": null,
+    "telefone": "+351 962 056 962",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Ericeira%20Ericeira",
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Ericeira%20Ericeira",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.967625,
+      -9.417669
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Ericeira%20Ericeira"
+    ]
+  },
+  {
+    "nome": "Barbearia Cruz",
+    "slug": "barbearia-cruz",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ericeira",
+    "zone": null,
+    "morada": "Estr. de Mafra 20B, 2655-302 Ericeira",
+    "codigo_postal": null,
+    "telefone": "+351 935 107 097",
+    "email": null,
+    "website": "https://barbeariacruz.com/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Cruz%20Ericeira",
+    "horario": "Seg-Sáb 9h-13h e 14h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Cruz%20Ericeira",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.965068,
+      -9.414335
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Cruz%20Ericeira"
+    ]
+  },
+  {
+    "nome": "Barbearia O Gama",
+    "slug": "barbearia-o-gama",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ericeira",
+    "zone": null,
+    "morada": "Praça da República 2 Loja 8, 2655-347 Ericeira",
+    "codigo_postal": null,
+    "telefone": "+351 910 096 285",
+    "email": null,
+    "website": "http://gamabarbearia.com/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20O%20Gama%20Ericeira",
+    "horario": "Seg-Sáb 9h-20h; Dom 10h-15h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20O%20Gama%20Ericeira",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.963229,
+      -9.417083
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20O%20Gama%20Ericeira"
+    ]
+  },
+  {
+    "nome": "Barbearia THE BARBAS",
+    "slug": "barbearia-the-barbas",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mafra",
+    "zone": null,
+    "morada": "R. Maj. João Gomes Lote 32, 2640-491 Mafra",
+    "codigo_postal": null,
+    "telefone": "+351 960 271 804",
+    "email": null,
+    "website": "http://thebarbas.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20THE%20BARBAS%20Mafra",
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20THE%20BARBAS%20Mafra",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.934701,
+      -9.328459
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20THE%20BARBAS%20Mafra"
+    ]
+  },
+  {
+    "nome": "Barbearia Serra",
+    "slug": "barbearia-serra",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mafra",
+    "zone": null,
+    "morada": "R. José Maria da Costa 45, 2640-496 Mafra",
+    "codigo_postal": null,
+    "telefone": "+351 915 364 326",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Serra%20Mafra",
+    "horario": "Seg-Sex 10h-20h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Serra%20Mafra",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.937561,
+      -9.32884
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Serra%20Mafra"
+    ]
+  },
+  {
+    "nome": "O Gama Barbearia - Mafra",
+    "slug": "o-gama-barbearia-mafra",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mafra",
+    "zone": null,
+    "morada": "Av. Dr. Francisco Sá Carneiro 5, Pavilhão 23 (Ginásio Chakra), 2640-438 Mafra",
+    "codigo_postal": null,
+    "telefone": "+351 926 782 402",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=O%20Gama%20Barbearia%20-%20Mafra%20Mafra",
+    "horario": "Ter-Sex 10h-12h30 e 14h-20h; Sáb 9h-12h e 14h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=O%20Gama%20Barbearia%20-%20Mafra%20Mafra",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.944342,
+      -9.340171
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=O%20Gama%20Barbearia%20-%20Mafra%20Mafra"
+    ]
+  },
+  {
+    "nome": "Ramo's Barber",
+    "slug": "ramo-s-barber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Malveira",
+    "zone": null,
+    "morada": "R. José Franco Canas, 2665-184 Malveira",
+    "codigo_postal": null,
+    "telefone": "+351 926 890 875",
+    "email": null,
+    "website": "https://ramosbarber.com/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Ramo's%20Barber%20Malveira",
+    "horario": "Seg 15h-20h; Ter-Sex 9h-20h; Sáb 8h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Ramo's%20Barber%20Malveira",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.92928,
+      -9.257186
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Ramo's%20Barber%20Malveira"
+    ]
+  },
+  {
+    "nome": "Dreys Barbearia",
+    "slug": "dreys-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Malveira",
+    "zone": null,
+    "morada": "R. Movimento das Forças Armadas 8, 2665-256 Malveira",
+    "codigo_postal": null,
+    "telefone": "+351 920 414 349",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Dreys%20Barbearia%20Malveira",
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.930264,
+      -9.257949
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Dreys%20Barbearia%20Malveira"
+    ]
+  },
+  {
+    "nome": "Barbearia do Wilson",
+    "slug": "barbearia-do-wilson",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Malveira",
+    "zone": null,
+    "morada": "Largo da Feira 24, 2665-228 Malveira",
+    "codigo_postal": null,
+    "telefone": "+351 914 103 428",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20do%20Wilson%20Malveira",
+    "horario": "Seg-Sex 8h-13h e 15h-19h; Sáb 8h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20do%20Wilson%20Malveira",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.932648,
+      -9.256916
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20do%20Wilson%20Malveira"
+    ]
+  },
+  {
+    "nome": "Barbearia Cazu",
+    "slug": "barbearia-cazu",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Malveira",
+    "zone": null,
+    "morada": "Largo da Feira 6D, 2665-228 Malveira",
+    "codigo_postal": null,
+    "telefone": "+351 964 946 084",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "http://www.noona.pt/barbeariacazu",
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Cazu%20Malveira",
+    "horario": "Seg 10h-20h; Ter-Sex 9h30-20h; Sáb 9h30-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Cazu%20Malveira",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.931348,
+      -9.257761
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Cazu%20Malveira"
+    ]
+  },
+  {
+    "nome": "Los Gued`s Barbearia",
+    "slug": "los-gued-s-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Malveira",
+    "zone": null,
+    "morada": "R. da Lagoa 27, 2665-243 Malveira",
+    "codigo_postal": null,
+    "telefone": "+351 219 660 817",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Los%20Gued%60s%20Barbearia%20Malveira",
+    "horario": "Seg-Dom 9h-21h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Los%20Gued%60s%20Barbearia%20Malveira",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.940413,
+      -9.251934
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Los%20Gued%60s%20Barbearia%20Malveira"
+    ]
+  },
+  {
+    "nome": "LF Barbershop",
+    "slug": "lf-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Malveira",
+    "zone": null,
+    "morada": "Largo da Feira de Revenda 4, 2665-248 Malveira",
+    "codigo_postal": null,
+    "telefone": "+351 961 160 675",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=LF%20Barbershop%20Malveira",
+    "horario": "Seg 15h-20h; Ter-Sex 10h-20h; Sáb 10h-14h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=LF%20Barbershop%20Malveira",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.932394,
+      -9.258477
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=LF%20Barbershop%20Malveira"
+    ]
+  },
+  {
+    "nome": "BarbeariaLucasOldSchoolpt",
+    "slug": "barbearialucasoldschoolpt",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Malveira",
+    "zone": null,
+    "morada": "Av. José Batista Antunes 18D, 2665-237 Malveira",
+    "codigo_postal": null,
+    "telefone": "+351 936 704 732",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=BarbeariaLucasOldSchoolpt%20Malveira",
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.93043,
+      -9.257287
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=BarbeariaLucasOldSchoolpt%20Malveira"
+    ]
+  },
+  {
+    "nome": "Barbearia Mestre André",
+    "slug": "barbearia-mestre-andre-venda-do-pinheiro",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Venda do Pinheiro",
+    "zone": null,
+    "morada": "Av. 9 de Julho 74B, 2665-521 Venda do Pinheiro",
+    "codigo_postal": null,
+    "telefone": "+351 912 692 250",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Mestre%20Andr%C3%A9%20Venda%20do%20Pinheiro",
+    "horario": "Seg-Sex 9h-13h e 15h-19h; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Mestre%20Andr%C3%A9%20Venda%20do%20Pinheiro",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.924564,
+      -9.232803
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Mestre%20Andr%C3%A9%20Venda%20do%20Pinheiro"
+    ]
+  },
+  {
+    "nome": "Barbearia Navalha Dourada",
+    "slug": "barbearia-navalha-dourada",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Azambuja",
+    "zone": null,
+    "morada": "Rua João Paulo II Lote B, 2050-275 Azambuja",
+    "codigo_postal": null,
+    "telefone": "+351 910 587 951",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://buk.pt/navalhadourada",
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Navalha%20Dourada%20Azambuja",
+    "horario": "Seg-Qui 9h-20h; Sex 9h-21h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Navalha%20Dourada%20Azambuja",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.069303,
+      -8.865918
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Navalha%20Dourada%20Azambuja"
+    ]
+  },
+  {
+    "nome": "Barbearia do Kelson",
+    "slug": "barbearia-do-kelson",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Azambuja",
+    "zone": null,
+    "morada": "R. Vitor Cordon 107, 2050-336 Azambuja",
+    "codigo_postal": null,
+    "telefone": "+351 911 098 766",
+    "email": null,
+    "website": "http://linktr.ee/barbeariadokelsonazambuja",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20do%20Kelson%20Azambuja",
+    "horario": "Seg-Sáb 9h-12h e 13h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20do%20Kelson%20Azambuja",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.069045,
+      -8.867836
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20do%20Kelson%20Azambuja"
+    ]
+  },
+  {
+    "nome": "MP Cabeleireiro de Homens",
+    "slug": "mp-cabeleireiro-de-homens",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Azambuja",
+    "zone": null,
+    "morada": "R. Dr. Jaime Abreu da Mota 34, 2050-328 Azambuja",
+    "codigo_postal": null,
+    "telefone": "+351 963 815 262",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=MP%20Cabeleireiro%20de%20Homens%20Azambuja",
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.069729,
+      -8.872114
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=MP%20Cabeleireiro%20de%20Homens%20Azambuja"
+    ]
+  },
+  {
+    "nome": "Barbearia Bruno Star",
+    "slug": "barbearia-bruno-star",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Lanhoso",
+    "zone": null,
+    "morada": "R. Maria da Fonte 18 Loja 24, 4830-548 Póvoa de Lanhoso",
+    "codigo_postal": null,
+    "telefone": "+351 910 744 537",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbeariabrunostar/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Bruno%20Star%20P%C3%B3voa%20de%20Lanhoso",
+    "horario": "Seg-Sex 9h-12h30 e 14h30-19h30; Sáb 9h-12h30 e 14h30-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Bruno%20Star%20P%C3%B3voa%20de%20Lanhoso",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.576321,
+      -8.269417
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Bruno%20Star%20P%C3%B3voa%20de%20Lanhoso"
+    ]
+  },
+  {
+    "nome": "Eazy Cuts Barbershop",
+    "slug": "eazy-cuts-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Lanhoso",
+    "zone": null,
+    "morada": "R. Teixeira Ribeiro 164, 4830-576 Póvoa de Lanhoso",
+    "codigo_postal": null,
+    "telefone": "+351 912 033 292",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://buk.pt/eazycuts",
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Eazy%20Cuts%20Barbershop%20P%C3%B3voa%20de%20Lanhoso",
+    "horario": "Seg-Sex 9h-12h30 e 14h30-19h; Sáb 9h-12h30 e 14h-18h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Eazy%20Cuts%20Barbershop%20P%C3%B3voa%20de%20Lanhoso",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.572356,
+      -8.269774
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Eazy%20Cuts%20Barbershop%20P%C3%B3voa%20de%20Lanhoso"
+    ]
+  },
+  {
+    "nome": "Velhote Barbershop",
+    "slug": "velhote-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Lanhoso",
+    "zone": null,
+    "morada": "R. Neuves Maisons 195, 4830-550 Póvoa de Lanhoso",
+    "codigo_postal": null,
+    "telefone": "+351 962 890 521",
+    "email": null,
+    "website": "https://www.kade.pt/velhote",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Velhote%20Barbershop%20P%C3%B3voa%20de%20Lanhoso",
+    "horario": "Seg-Sex 9h30-19h; Sáb 9h30-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Velhote%20Barbershop%20P%C3%B3voa%20de%20Lanhoso",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.573121,
+      -8.266472
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Velhote%20Barbershop%20P%C3%B3voa%20de%20Lanhoso"
+    ]
+  },
+  {
+    "nome": "Rodrigo Barbearia Póvoa de lanhoso",
+    "slug": "rodrigo-barbearia-povoa-de-lanhoso",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Lanhoso",
+    "zone": null,
+    "morada": "Largo Barbosa e Castro 116, 4830-517 Póvoa de Lanhoso",
+    "codigo_postal": null,
+    "telefone": "+351 964 969 212",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/rodrigobarbeariaa/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Rodrigo%20Barbearia%20P%C3%B3voa%20de%20lanhoso%20P%C3%B3voa%20de%20Lanhoso",
+    "horario": "Seg-Sex 9h-19h; Sáb 8h30-13h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Rodrigo%20Barbearia%20P%C3%B3voa%20de%20lanhoso%20P%C3%B3voa%20de%20Lanhoso",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.576594,
+      -8.271212
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Rodrigo%20Barbearia%20P%C3%B3voa%20de%20lanhoso%20P%C3%B3voa%20de%20Lanhoso"
+    ]
+  },
+  {
+    "nome": "Barbearia Bruno",
+    "slug": "barbearia-bruno",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Lanhoso",
+    "zone": null,
+    "morada": "Largo António F. Lopes 34, 4830-516 Póvoa de Lanhoso",
+    "codigo_postal": null,
+    "telefone": "+351 969 976 797",
+    "email": null,
+    "website": null,
+    "instagram": "https://instagram.com/__barbearia__bruno__",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Bruno%20P%C3%B3voa%20de%20Lanhoso",
+    "horario": "Seg-Sex 8h-19h; Sáb 7h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Bruno%20P%C3%B3voa%20de%20Lanhoso",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.575075,
+      -8.268313
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Bruno%20P%C3%B3voa%20de%20Lanhoso"
+    ]
+  },
+  {
+    "nome": "ARS CAPILLORUM Barber Shop & Tattoo & Gin Bar",
+    "slug": "ars-capillorum-barber-shop-e-tattoo-e-gin-bar",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Lanhoso",
+    "zone": null,
+    "morada": "Av. dos Bombeiros Voluntários 158-160, 4830-514 Póvoa de Lanhoso",
+    "codigo_postal": null,
+    "telefone": "+351 965 103 314",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=ARS%20CAPILLORUM%20Barber%20Shop%20%26%20Tattoo%20%26%20Gin%20Bar%20P%C3%B3voa%20de%20Lanhoso",
+    "horario": "Seg-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=ARS%20CAPILLORUM%20Barber%20Shop%20%26%20Tattoo%20%26%20Gin%20Bar%20P%C3%B3voa%20de%20Lanhoso",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.573564,
+      -8.266226
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=ARS%20CAPILLORUM%20Barber%20Shop%20%26%20Tattoo%20%26%20Gin%20Bar%20P%C3%B3voa%20de%20Lanhoso"
+    ]
+  },
+  {
+    "nome": "Barbearia São Paulo",
+    "slug": "barbearia-sao-paulo",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Lanhoso",
+    "zone": null,
+    "morada": "R. Neuves Maisons 149, Póvoa de Lanhoso",
+    "codigo_postal": null,
+    "telefone": "+351 967 692 510",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20S%C3%A3o%20Paulo%20P%C3%B3voa%20de%20Lanhoso",
+    "horario": "Seg 9h-19h30; Qua-Sáb 9h-19h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20S%C3%A3o%20Paulo%20P%C3%B3voa%20de%20Lanhoso",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.573254,
+      -8.266968
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20S%C3%A3o%20Paulo%20P%C3%B3voa%20de%20Lanhoso"
+    ]
+  },
+  {
+    "nome": "Barbearia da praça",
+    "slug": "barbearia-da-praca-povoa-de-lanhoso",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Lanhoso",
+    "zone": null,
+    "morada": "Largo da Alegria 60, 4830-518 Póvoa de Lanhoso",
+    "codigo_postal": null,
+    "telefone": "+351 961 352 161",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20da%20pra%C3%A7a%20P%C3%B3voa%20de%20Lanhoso",
+    "horario": "Seg 9h-19h; Qua-Sex 9h-19h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20da%20pra%C3%A7a%20P%C3%B3voa%20de%20Lanhoso",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.575889,
+      -8.270945
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20da%20pra%C3%A7a%20P%C3%B3voa%20de%20Lanhoso"
+    ]
+  },
+  {
+    "nome": "Barbearia Corte D´Ouro",
+    "slug": "barbearia-corte-d-ouro",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Lanhoso",
+    "zone": null,
+    "morada": "R. Amândio Oliveira 30, 4830-528 Póvoa de Lanhoso",
+    "codigo_postal": null,
+    "telefone": "+351 923 191 507",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/cortedouro1_",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Corte%20D%C2%B4Ouro%20P%C3%B3voa%20de%20Lanhoso",
+    "horario": "Seg-Ter 9h-13h e 15h-19h; Qui-Sex 9h-13h e 15h-19h; Sáb 9h-13h e 14h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Corte%20D%C2%B4Ouro%20P%C3%B3voa%20de%20Lanhoso",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.576072,
+      -8.276563
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Corte%20D%C2%B4Ouro%20P%C3%B3voa%20de%20Lanhoso"
+    ]
+  },
+  {
+    "nome": "HR Cabeleireiro",
+    "slug": "hr-cabeleireiro",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Lanhoso",
+    "zone": null,
+    "morada": "R. Dona Elvira Câmara Lopes 23, 4830-520 Póvoa de Lanhoso",
+    "codigo_postal": null,
+    "telefone": "+351 936 953 608",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/hr_cabeleireiro/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=HR%20Cabeleireiro%20P%C3%B3voa%20de%20Lanhoso",
+    "horario": "Ter-Sex 9h-19h; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=HR%20Cabeleireiro%20P%C3%B3voa%20de%20Lanhoso",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.576254,
+      -8.269189
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=HR%20Cabeleireiro%20P%C3%B3voa%20de%20Lanhoso"
+    ]
+  },
+  {
+    "nome": "NOVA barbearia",
+    "slug": "nova-barbearia-condeixa-a-nova",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Condeixa-a-Nova",
+    "zone": null,
+    "morada": "R. Dr. Fernando Namora 9, 3150-136 Condeixa-a-Nova",
+    "codigo_postal": null,
+    "telefone": "+351 967 347 484",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://buk.pt/novabarbearia",
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=NOVA%20barbearia%20Condeixa-a-Nova",
+    "horario": "Seg-Sex 9h-19h30; Sáb 8h30-17h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=NOVA%20barbearia%20Condeixa-a-Nova",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.111241,
+      -8.500006
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=NOVA%20barbearia%20Condeixa-a-Nova"
+    ]
+  },
+  {
+    "nome": "Barbearia Cotrim Condeixa-a-Nova",
+    "slug": "barbearia-cotrim-condeixa-a-nova",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Condeixa-a-Nova",
+    "zone": null,
+    "morada": "R. da Quinta São Tomé 1 Loja A, 3150-109 Condeixa-a-Nova",
+    "codigo_postal": null,
+    "telefone": "+351 913 518 118",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbearia_cotrim/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Cotrim%20Condeixa-a-Nova%20Condeixa-a-Nova",
+    "horario": "Seg 14h30-19h30; Ter 9h-20h; Qua 9h-13h30 e 14h30-20h; Qui 9h-14h e 15h-20h30; Sex 9h-20h30; Sáb 8h30-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Cotrim%20Condeixa-a-Nova%20Condeixa-a-Nova",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.113289,
+      -8.492067
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Cotrim%20Condeixa-a-Nova%20Condeixa-a-Nova"
+    ]
+  },
+  {
+    "nome": "Barbearia do Professor Vitó",
+    "slug": "barbearia-do-professor-vito",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Condeixa-a-Nova",
+    "zone": null,
+    "morada": "Urbanização Nova de Conímbriga, Lote B26 Loja 2, 3150-230 Condeixa-a-Nova",
+    "codigo_postal": null,
+    "telefone": "+351 913 251 714",
+    "email": null,
+    "website": "https://barbeariadoprofessorvito.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20do%20Professor%20Vit%C3%B3%20Condeixa-a-Nova",
+    "horario": "Ter-Sex 9h-13h e 14h30-19h; Sáb 8h-13h e 14h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20do%20Professor%20Vit%C3%B3%20Condeixa-a-Nova",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.107218,
+      -8.506979
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20do%20Professor%20Vit%C3%B3%20Condeixa-a-Nova"
+    ]
+  },
+  {
+    "nome": "Barbearia João",
+    "slug": "barbearia-joao",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Montemor-o-Velho",
+    "zone": null,
+    "morada": "Largo António Correia de Andrade, 3140-273 Montemor-o-Velho",
+    "codigo_postal": null,
+    "telefone": "+351 967 744 813",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Jo%C3%A3o%20Montemor-o-Velho",
+    "horario": "Ter-Sáb 9h-13h e 15h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Jo%C3%A3o%20Montemor-o-Velho",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.176947,
+      -8.680566
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Jo%C3%A3o%20Montemor-o-Velho"
+    ]
+  },
+  {
+    "nome": "Cunha Men’s Studio",
+    "slug": "cunha-men-s-studio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Montemor-o-Velho",
+    "zone": null,
+    "morada": "R. Dr. José Galvão 28, 3140-272 Montemor-o-Velho",
+    "codigo_postal": null,
+    "telefone": "+351 937 429 437",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Cunha%20Men%E2%80%99s%20Studio%20Montemor-o-Velho",
+    "horario": "Ter-Sáb 10h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Cunha%20Men%E2%80%99s%20Studio%20Montemor-o-Velho",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.175561,
+      -8.681092
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Cunha%20Men%E2%80%99s%20Studio%20Montemor-o-Velho"
+    ]
+  },
+  {
+    "nome": "LS barber",
+    "slug": "ls-barber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Nelas",
+    "zone": null,
+    "morada": "R. Luís de Camões, 3520-062 Nelas",
+    "codigo_postal": null,
+    "telefone": "+351 926 173 722",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=LS%20barber%20Nelas",
+    "horario": "Ter-Sex 10h-19h; Sáb 10h-14h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=LS%20barber%20Nelas",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.530837,
+      -7.852801
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=LS%20barber%20Nelas"
+    ]
+  },
+  {
+    "nome": "Barbearia 3520",
+    "slug": "barbearia-3520",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Nelas",
+    "zone": null,
+    "morada": "R. Eng. Alberto Cardoso de Vilhena, 3520-076 Nelas",
+    "codigo_postal": null,
+    "telefone": "+351 967 340 131",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%203520%20Nelas",
+    "horario": "Ter-Sex 10h30-19h; Sáb 10h30-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%203520%20Nelas",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.529031,
+      -7.854241
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%203520%20Nelas"
+    ]
+  },
+  {
+    "nome": "Cris Barbershop",
+    "slug": "cris-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Nelas",
+    "zone": null,
+    "morada": "R. Gago Coutinho 37, 3520-057 Nelas",
+    "codigo_postal": null,
+    "telefone": "+351 961 101 922",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbearia_cris_3520",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Cris%20Barbershop%20Nelas",
+    "horario": "Seg-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Cris%20Barbershop%20Nelas",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.533067,
+      -7.851503
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Cris%20Barbershop%20Nelas"
+    ]
+  },
+  {
+    "nome": "Barbearia Villa",
+    "slug": "barbearia-villa",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Penacova",
+    "zone": null,
+    "morada": "R. São João 2, Piso -1, Loja I, 3360-340 Penacova",
+    "codigo_postal": null,
+    "telefone": "+351 239 474 547",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Villa%20Penacova",
+    "horario": "Seg-Sex 9h30-20h; Sáb 10h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Villa%20Penacova",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.271205,
+      -8.282241
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Villa%20Penacova"
+    ]
+  },
+  {
+    "nome": "Barbearia Ink & Beauty",
+    "slug": "barbearia-ink-e-beauty",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Penacova",
+    "zone": null,
+    "morada": "R. Conselheiro Barjona de Freitas 4, 3360-191 Penacova",
+    "codigo_postal": null,
+    "telefone": "+351 969 218 785",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Ink%20%26%20Beauty%20Penacova",
+    "horario": "Ter-Sex 9h-13h e 14h-19h; Sáb 9h-13h e 14h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Ink%20%26%20Beauty%20Penacova",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.270737,
+      -8.281352
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Ink%20%26%20Beauty%20Penacova"
+    ]
+  },
+  {
+    "nome": "Studio203",
+    "slug": "studio203",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vieira do Minho",
+    "zone": null,
+    "morada": "R. Padre Casimiro José Vieira, 4850-504 Vieira do Minho",
+    "codigo_postal": null,
+    "telefone": "+351 930 516 796",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Studio203%20Vieira%20do%20Minho",
+    "horario": "Ter-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Studio203%20Vieira%20do%20Minho",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.635827,
+      -8.139793
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Studio203%20Vieira%20do%20Minho"
+    ]
+  },
+  {
+    "nome": "SENA BARBERSHOP",
+    "slug": "sena-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Idanha-a-Nova",
+    "zone": null,
+    "morada": "R. António Navarra, 6060-151 Idanha-a-Nova",
+    "codigo_postal": null,
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=SENA%20BARBERSHOP%20Idanha-a-Nova",
+    "horario": "Seg-Sex 11h30-13h e 15h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=SENA%20BARBERSHOP%20Idanha-a-Nova",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.922086,
+      -7.241794
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=SENA%20BARBERSHOP%20Idanha-a-Nova"
+    ]
+  },
+  {
+    "nome": "Barbearia lisky",
+    "slug": "barbearia-lisky",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila Franca do Campo",
+    "zone": null,
+    "morada": "R. de Santa Catarina, Vila Franca do Campo",
+    "codigo_postal": null,
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barbearia%20lisky%20Vila%20Franca%20do%20Campo",
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.714672,
+      -25.434941
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20lisky%20Vila%20Franca%20do%20Campo"
+    ]
+  },
+  {
+    "nome": "Barber Shop Nuno Raposo - Barbearia",
+    "slug": "barber-shop-nuno-raposo-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila Franca do Campo",
+    "zone": null,
+    "morada": "Rua Padre Manuel Ernesto Ferreira 6, 9680-170 Vila Franca do Campo",
+    "codigo_postal": null,
+    "telefone": "+351 967 788 337",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Barber%20Shop%20Nuno%20Raposo%20-%20Barbearia%20Vila%20Franca%20do%20Campo",
+    "horario": "Seg-Sex 9h-12h30 e 14h-20h; Sáb 9h-19h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barber%20Shop%20Nuno%20Raposo%20-%20Barbearia%20Vila%20Franca%20do%20Campo",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      37.715716,
+      -25.434713
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barber%20Shop%20Nuno%20Raposo%20-%20Barbearia%20Vila%20Franca%20do%20Campo"
+    ]
+  },
+  {
+    "nome": "Monami’s Barber Shop",
+    "slug": "monami-s-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila Franca do Campo",
+    "zone": null,
+    "morada": "R. Império dos Aflitos, 9680 Vila Franca do Campo",
+    "codigo_postal": null,
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/search/?api=1&query=Monami%E2%80%99s%20Barber%20Shop%20Vila%20Franca%20do%20Campo",
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.714654,
+      -25.441197
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Monami%E2%80%99s%20Barber%20Shop%20Vila%20Franca%20do%20Campo"
+    ]
   }
 ];
 
