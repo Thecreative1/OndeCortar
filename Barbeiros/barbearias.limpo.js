@@ -19379,6 +19379,163 @@ const barbearias = [
       "https://www.fernandosimaobarbershop.pt/",
       "https://noona.pt/fernandosimaobarbershop/book"
     ]
+  },
+  {
+    "distrito": "Santarém",
+    "concelho": "Chamusca",
+    "freguesia": null,
+    "zone": null,
+    "codigo_postal": null,
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/librabarbershop19/",
+    "facebook": null,
+    "google_maps": null,
+    "horario": "Ter-Sex 10h-13h e 14h-19h; Sáb 9h-13h e 14h-18h",
+    "observacoes": null,
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "nome": "LibraBarbershop",
+    "slug": "librabarbershop",
+    "city": "Chamusca",
+    "morada": "Rua Visconde de Santa Margarida 1, 2140-102 Chamusca",
+    "telefone": null,
+    "booking": "https://booksy.com/pt-pt/4435_librabarbershop_barbearia_228596_chamusca",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/4435_librabarbershop_barbearia_228596_chamusca",
+      "data": "2026-10-07"
+    },
+    "coords": [
+      39.3546767,
+      -8.4826576
+    ],
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://booksy.com/pt-pt/4435_librabarbershop_barbearia_228596_chamusca",
+      "https://www.openstreetmap.org/?mlat=39.35404&mlon=-8.48290"
+    ]
+  },
+  {
+    "distrito": "Santarém",
+    "concelho": "Alpiarça",
+    "freguesia": null,
+    "zone": null,
+    "codigo_postal": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/santossilva.barbershop.5",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "nome": "Santos & Silva Barber Shop",
+    "slug": "santos-silva-barber-shop",
+    "city": "Alpiarça",
+    "morada": "Rua José Relvas 66 e 68, 2090-102 Alpiarça",
+    "telefone": "+351 939 489 985",
+    "coords": [
+      39.2580081,
+      -8.5859236
+    ],
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.cm-alpiarca.pt/conhecer-alpiarca/comercio-e-servicos"
+    ]
+  },
+  {
+    "distrito": "Santarém",
+    "concelho": "Salvaterra de Magos",
+    "freguesia": null,
+    "zone": null,
+    "codigo_postal": null,
+    "email": null,
+    "website": "https://www.fresha.com/lvp/barbearia-karcovias-rua-joao-pinto-figueiredo-marinhais-bLz18A",
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "nome": "Barbearia Karcóvias",
+    "slug": "barbearia-karcovias",
+    "city": "Marinhais",
+    "morada": "Rua João Pinto Figueiredo, 2125-181 Marinhais",
+    "telefone": "+351 964 949 601",
+    "coords": [
+      39.0485669,
+      -8.7018652
+    ],
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-karcovias-rua-joao-pinto-figueiredo-marinhais-bLz18A"
+    ]
+  },
+  {
+    "distrito": "Portalegre",
+    "concelho": "Ponte de Sor",
+    "freguesia": null,
+    "zone": null,
+    "codigo_postal": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "nome": "Cabelereiro José Barbeiro",
+    "slug": "cabelereiro-jose-barbeiro",
+    "city": "Montargil",
+    "morada": "Rua Heróis do Ultramar 35, 7425-125 Montargil",
+    "telefone": null,
+    "coords": [
+      39.08047,
+      -8.17566
+    ],
+    "qualidade_ficha": "baixa",
+    "fontes": [
+      "https://www.openstreetmap.org/?mlat=39.08047&mlon=-8.17566"
+    ]
+  },
+  {
+    "distrito": "Portalegre",
+    "concelho": "Sousel",
+    "freguesia": null,
+    "zone": null,
+    "codigo_postal": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/BarbeariaCavar79",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "nome": "Barbearia Cavar79",
+    "slug": "barbearia-cavar79",
+    "city": "Sousel",
+    "morada": "Rua Direita 4, Sousel",
+    "telefone": "+351 962 606 835",
+    "coords": [
+      38.9518464,
+      -7.6763239
+    ],
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.facebook.com/BarbeariaCavar79"
+    ]
   }
 ];
 

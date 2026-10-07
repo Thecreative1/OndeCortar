@@ -1452,7 +1452,7 @@ function renderProfilePage(barber, citiesMap) {
   const bookingPlatform = (() => {
     const host = (barber.booking || "").replace(/^https?:\/\//, "").split("/")[0].replace(/^www\./, "");
     const known = [[/(^|\.)fresha\.com$/, "Fresha"], [/(^|\.)noona\.(pt|app)$/, "Noona"], [/(^|\.)buk\.pt$/, "Buk"],
-      [/(^|\.)ongenda\.com$/, "Ongenda"], [/(^|\.)treatwell\./, "Treatwell"]];
+      [/(^|\.)ongenda\.com$/, "Ongenda"], [/(^|\.)treatwell\./, "Treatwell"], [/(^|\.)booksy\.com$/, "Booksy"]];
     const match = known.find(([re]) => re.test(host));
     return match ? match[1] : host;
   })();
