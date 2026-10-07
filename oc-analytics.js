@@ -12,6 +12,10 @@
 
   var GA_ID = "G-WQ6F9E5Q7D";
   var OC_ANALYTICS_CONSENT = "denied"; // "granted" quando houver banner de consentimento
+  // GoatCounter (sem cookies): conta visitas e cliques de contacto nos perfis. Com o GA4 em
+  // consentimento negado, os pings sem cookies quase não aparecem nos relatórios — por isso os
+  // números para mostrar às barbearias vêm daqui. Vazio = desligado.
+  var GOATCOUNTER_CODE = "";
 
   if (window.__ocAnalyticsLoaded) return; // proteção contra inclusão dupla
   window.__ocAnalyticsLoaded = true;
@@ -51,6 +55,14 @@
   }
   if (document.readyState === "complete") loadWhenIdle();
   else window.addEventListener("load", loadWhenIdle, { once: true });
+
+  if (GOATCOUNTER_CODE && !DEBUG) {
+    var gc = document.createElement("script");
+    gc.async = true;
+    gc.src = "https://gc.zgo.at/count.js";
+    gc.setAttribute("data-goatcounter", "https://" + GOATCOUNTER_CODE + ".goatcounter.com/count");
+    document.head.appendChild(gc);
+  }
   ["pointerdown", "keydown", "scroll"].forEach(function (type) {
     window.addEventListener(type, loadGtag, { once: true, passive: true });
   });
@@ -274,6 +286,16 @@
       }
     }
 
+    // Contactos da barbearia no perfil: data-oc-click="booking" (Marcar) e links tel:
+    var contactType = link.getAttribute("data-oc-click") || (/^tel:/i.test(href) ? "phone" : "");
+    if (contactType && PAGE.type === "profile") {
+      return { name: "barber_contact_click", params: {
+        contact_type: contactType,
+        barber_slug: PAGE.slug,
+        placement: findPlacement(link)
+      } };
+    }
+
     if (isProduto) {
       return { name: "internal_product_click", params: {
         product_id: slugFromPath(href, "produto"),
@@ -292,6 +314,14 @@
     if (!event) return;
     ev.__ocTracked = true;
     send(event.name, event.params);
+    // GoatCounter: um "evento" por tipo de contacto e perfil, ex.: clique-booking/fernando-simao-barber-shop
+    if (event.name === "barber_contact_click" && window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({
+        path: "clique-" + event.params.contact_type + "/" + event.params.barber_slug,
+        title: event.params.contact_type + " · " + event.params.barber_slug,
+        event: true
+      });
+    }
   }, true);
 
   // ── Homepage: pesquisa, localização, sem resultados ────────────
