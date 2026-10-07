@@ -19536,6 +19536,3628 @@ const barbearias = [
     "fontes": [
       "https://www.facebook.com/BarbeariaCavar79"
     ]
+  },
+  {
+    "nome": "A Nossa Barbearia- Alcanena",
+    "slug": "a-nossa-barbearia-alcanena",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Alcanena",
+    "zone": null,
+    "morada": "Rua Prof. Margarida Adelaide Gonçalves Louro, R. da Saudade 208, 2380-191 Alcanena",
+    "codigo_postal": null,
+    "telefone": "+351 249 158 307",
+    "email": null,
+    "website": "https://www.anossabarbearia.pt/",
+    "instagram": "https://www.instagram.com/anossabarbearia/",
+    "facebook": "https://www.facebook.com/A-Nossa-Barbearia-985691354776606",
+    "booking": "https://www.fresha.com/lvp/a-nossa-barbearia-alcanena-rua-da-saudade-alcanena-vwyyKo",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.4556809,
+      -8.6678397
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/a-nossa-barbearia-alcanena-rua-da-saudade-alcanena-vwyyKo"
+    ]
+  },
+  {
+    "nome": "A Nossa Barbearia- Torres Novas",
+    "slug": "a-nossa-barbearia-torres-novas",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Torres Novas",
+    "zone": null,
+    "morada": "Av. dos Negréus 4 Loja C, 2350-523 Torres Novas",
+    "codigo_postal": null,
+    "telefone": "+351 249 099 464",
+    "email": null,
+    "website": "http://www.anossabarbearia.pt/",
+    "instagram": "https://www.instagram.com/anossabarbearia/",
+    "facebook": "https://www.facebook.com/A-Nossa-Barbearia-985691354776606",
+    "booking": "https://www.fresha.com/lvp/a-nossa-barbearia-torres-novas-avenida-dos-negreus-torres-novas-jwoE24",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.4764051,
+      -8.5518039
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/a-nossa-barbearia-torres-novas-avenida-dos-negreus-torres-novas-jwoE24"
+    ]
+  },
+  {
+    "nome": "AB BAR'BEARIA",
+    "slug": "ab-bar-bearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Pombal",
+    "zone": null,
+    "morada": "R. Carlos Alberto de Mota Pinto 55, 3100-565 Pombal",
+    "codigo_postal": null,
+    "telefone": "+351 910 400 266",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/ab-barbearia-rua-carlos-alberto-de-mota-pinto-pombal-6N84le",
+    "google_maps": null,
+    "horario": "Seg-Sáb 10h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/ab-barbearia-rua-carlos-alberto-de-mota-pinto-pombal-6N84le",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.919031,
+      -8.628819
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/ab-barbearia-rua-carlos-alberto-de-mota-pinto-pombal-6N84le"
+    ]
+  },
+  {
+    "nome": "Amnésia barbearia",
+    "slug": "amnesia-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ponte de Lima",
+    "zone": null,
+    "morada": "R. Beato Francisco Pacheco, 4990-075 Ponte de Lima",
+    "codigo_postal": null,
+    "telefone": "+351 911 808 158",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/amnesia-barbearia-rua-beato-francisco-pacheco-ponte-de-lima-W4W2r5",
+    "google_maps": null,
+    "horario": "Ter-Sex 9h30-19h; Sáb 9h30-17h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/amnesia-barbearia-rua-beato-francisco-pacheco-ponte-de-lima-W4W2r5",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.7686401,
+      -8.5836134
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/amnesia-barbearia-rua-beato-francisco-pacheco-ponte-de-lima-W4W2r5"
+    ]
+  },
+  {
+    "nome": "Barba Negra Pombal",
+    "slug": "barba-negra-pombal",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Pombal",
+    "zone": null,
+    "morada": "Tv. da Fábrica Velha, 3100-427 Pombal",
+    "codigo_postal": null,
+    "telefone": "+351 236 031 574",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barba-negra-pombal-travessa-da-fabrica-velha-pombal-RrNAYJ",
+    "google_maps": null,
+    "horario": "Seg-Sáb 10h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barba-negra-pombal-travessa-da-fabrica-velha-pombal-RrNAYJ",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.914735,
+      -8.6302974
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barba-negra-pombal-travessa-da-fabrica-velha-pombal-RrNAYJ"
+    ]
+  },
+  {
+    "nome": "BarbarianBarbershop",
+    "slug": "barbarianbarbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ponte de Lima",
+    "zone": null,
+    "morada": "Rua de Santiago de Brandara n° 1051 Brandara, 4990-560 Ponte de Lima",
+    "codigo_postal": null,
+    "telefone": "+351 966 466 654",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/Barbarian-Barbershop-109730014119684",
+    "booking": "https://www.fresha.com/lvp/barbarianbarbershop-ponte-de-lima-ylD786",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.7928765,
+      -8.5700927
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbarianbarbershop-ponte-de-lima-ylD786"
+    ]
+  },
+  {
+    "nome": "BARBART",
+    "slug": "barbart",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Sever do Vouga",
+    "zone": null,
+    "morada": "3740-251 Sever do Vouga",
+    "codigo_postal": null,
+    "telefone": "+351 912 813 093",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbart-sever-do-vouga-wXDRYD",
+    "google_maps": null,
+    "horario": "Seg-Qui 9h-20h; Sex 9h30-20h; Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbart-sever-do-vouga-wXDRYD",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.7346191,
+      -8.3694389
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbart-sever-do-vouga-wXDRYD"
+    ]
+  },
+  {
+    "nome": "Barbearia 2R",
+    "slug": "barbearia-2r",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mirandela",
+    "zone": null,
+    "morada": "Av. Bombeiros Voluntários de loja 71, 5370-206 Mirandela",
+    "codigo_postal": null,
+    "telefone": "+351 939 551 215",
+    "email": null,
+    "website": "https://barbearia2r.buk.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-2r-avenida-bombeiros-voluntarios-mirandela-wXDEMG",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.4837925,
+      -7.1768497
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-2r-avenida-bombeiros-voluntarios-mirandela-wXDEMG"
+    ]
+  },
+  {
+    "nome": "Barbearia 3 ponto A",
+    "slug": "barbearia-3-ponto-a",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Guia (Pombal)",
+    "zone": null,
+    "morada": "R. Fundadores do Colégio n°42 loja 7, 3105-075 Guia",
+    "codigo_postal": "3105-075",
+    "telefone": "+351 913 961 507",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-3-ponto-a-rua-fundadores-do-colegio-guia-6N8DKP",
+    "google_maps": null,
+    "horario": "Seg-Ter 9h30-19h; Qui-Sáb 9h30-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-3-ponto-a-rua-fundadores-do-colegio-guia-6N8DKP",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.9508505,
+      -8.7854422
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-3-ponto-a-rua-fundadores-do-colegio-guia-6N8DKP"
+    ]
+  },
+  {
+    "nome": "Barbearia alphaville",
+    "slug": "barbearia-alphaville",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Varzim",
+    "zone": null,
+    "morada": "R. Flávio Gonçalves 117, 4490-614 Póvoa de Varzim",
+    "codigo_postal": null,
+    "telefone": "+351 925 650 113",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-alphaville-rua-dos-bombeiros-voluntarios-povoa-de-varzim-9R5MK7",
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h30-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-alphaville-rua-dos-bombeiros-voluntarios-povoa-de-varzim-9R5MK7",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.3789003,
+      -8.7548812
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-alphaville-rua-dos-bombeiros-voluntarios-povoa-de-varzim-9R5MK7"
+    ]
+  },
+  {
+    "nome": "Barbearia Boston barbershop",
+    "slug": "barbearia-boston-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila do Conde",
+    "zone": null,
+    "morada": "R. 5 de Outubro 2033, 4480-745 Vila do Conde",
+    "codigo_postal": null,
+    "telefone": "+351 22 093 3276",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-boston-barbershop-rua-5-de-outubro-vila-do-conde-Kk59W8",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.3694088,
+      -8.7522899
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-boston-barbershop-rua-5-de-outubro-vila-do-conde-Kk59W8"
+    ]
+  },
+  {
+    "nome": "Barbearia Bruno Ferreira",
+    "slug": "barbearia-bruno-ferreira-abrantes",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Abrantes",
+    "zone": null,
+    "morada": "Junto a rotunda do quartel, Av. Dom João I, 2200-001 Abrantes",
+    "codigo_postal": null,
+    "telefone": "+351 961 118 412",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbearia.brunoferreira",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-bruno-ferreira-avenida-dom-joao-i-abrantes-Ek5KZM",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.4652769,
+      -8.2133878
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-bruno-ferreira-avenida-dom-joao-i-abrantes-Ek5KZM"
+    ]
+  },
+  {
+    "nome": "Barbearia Camiña",
+    "slug": "barbearia-camina",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Varzim",
+    "zone": null,
+    "morada": "R. Eng. Duarte Pacheco 5A r/c, 4490-631 Póvoa de Varzim",
+    "codigo_postal": null,
+    "telefone": "+351 939 023 311",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-camina-praceta-do-orfeao-poveiro-povoa-de-varzim-9R5kXe",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.3782321,
+      -8.7611915
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-camina-praceta-do-orfeao-poveiro-povoa-de-varzim-9R5kXe"
+    ]
+  },
+  {
+    "nome": "Barbearia Camões",
+    "slug": "barbearia-camoes",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Cantanhede",
+    "zone": null,
+    "morada": "R. Luís de Camões 22, 3060-183 Cantanhede",
+    "codigo_postal": null,
+    "telefone": "+351 917 534 164",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/Barbearia-Cam%C3%B5es-1658231134249394/",
+    "booking": "https://www.fresha.com/lvp/barbearia-camoes-rua-luis-de-camoes-cantanhede-W4W9yG",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.3432753,
+      -8.5855764
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-camoes-rua-luis-de-camoes-cantanhede-W4W9yG"
+    ]
+  },
+  {
+    "nome": "Barbearia Caravela",
+    "slug": "barbearia-caravela",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Varzim",
+    "zone": null,
+    "morada": "R. de Viriato Barbosa 805, 4490-683 Póvoa de Varzim",
+    "codigo_postal": null,
+    "telefone": "+351 934 394 910",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-caravela-rua-de-viriato-barbosa-povoa-de-varzim-LkBkVG",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.3758905,
+      -8.7498971
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-caravela-rua-de-viriato-barbosa-povoa-de-varzim-LkBkVG"
+    ]
+  },
+  {
+    "nome": "Barbearia Central",
+    "slug": "barbearia-central-bombarral",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Bombarral",
+    "zone": null,
+    "morada": "R. do Comércio 44, 2540-003 Bombarral",
+    "codigo_postal": null,
+    "telefone": "+351 262 604 691",
+    "email": null,
+    "website": "https://www.municipiosefreguesias.pt/entidade/76452/barbearia-central-bombarral",
+    "instagram": null,
+    "facebook": "https://www.facebook.com/MunicipioseFreguesiasdePortugal/",
+    "booking": "https://www.fresha.com/lvp/barbearia-central-rua-do-comercio-bombarral-5zPPDX",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.2688143,
+      -9.1571116
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-central-rua-do-comercio-bombarral-5zPPDX"
+    ]
+  },
+  {
+    "nome": "Barbearia Clandestina",
+    "slug": "barbearia-clandestina",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Abrantes",
+    "zone": null,
+    "morada": "R. do Montepio Abrantino 16 RC E, 2200-429 Abrantes",
+    "codigo_postal": null,
+    "telefone": "+351 966 072 727",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/abarbeariaclandestina?utm_source=qr",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-clandestina-rua-do-montepio-abrantino-abrantes-QkG5eW",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.4613767,
+      -8.1991395
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-clandestina-rua-do-montepio-abrantino-abrantes-QkG5eW"
+    ]
+  },
+  {
+    "nome": "Barbearia Confiança",
+    "slug": "barbearia-confianca",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Anadia",
+    "zone": null,
+    "morada": "N235 12-22, 3780-202 Anadia",
+    "codigo_postal": null,
+    "telefone": "+351 911 871 026",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-confianca-anadia-Y0Wor9",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.4416396,
+      -8.4359616
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-confianca-anadia-Y0Wor9"
+    ]
+  },
+  {
+    "nome": "Barbearia da Cidade",
+    "slug": "barbearia-da-cidade",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Entroncamento",
+    "zone": null,
+    "morada": "R. da Junta de Freguesia 44, 2330-114 Entroncamento",
+    "codigo_postal": null,
+    "telefone": "+351 913 165 308",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbearia.da.cidade",
+    "facebook": "https://www.facebook.com/Barbearia-Da-Cidade-2161657100721330/",
+    "booking": "https://www.fresha.com/lvp/barbearia-da-cidade-praca-marechal-carmona-entroncamento-JyrKng",
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-da-cidade-praca-marechal-carmona-entroncamento-JyrKng",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.4648664,
+      -8.4669647
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-da-cidade-praca-marechal-carmona-entroncamento-JyrKng"
+    ]
+  },
+  {
+    "nome": "Barbearia da Praça",
+    "slug": "barbearia-da-praca-povoa-de-varzim",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Varzim",
+    "zone": null,
+    "morada": "Praça do Almada 3, 4490-438 Póvoa de Varzim",
+    "codigo_postal": null,
+    "telefone": "+351 968 078 107",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-da-praca-praca-do-almada-povoa-de-varzim-RrNARM",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.3787883,
+      -8.7609197
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-da-praca-praca-do-almada-povoa-de-varzim-RrNARM"
+    ]
+  },
+  {
+    "nome": "Barbearia do Largo",
+    "slug": "barbearia-do-largo",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Torres Novas",
+    "zone": null,
+    "morada": "R. 1º de Dezembro 32, 2350-758 Torres Novas",
+    "codigo_postal": null,
+    "telefone": "+351 249 144 693",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbeariadolargo?igsh=MTIxd25zeHJ1Y2traA==",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-do-largo-rua-1o-de-dezembro-torres-novas-GyPPWa",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.4799076,
+      -8.5415952
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-do-largo-rua-1o-de-dezembro-torres-novas-GyPPWa"
+    ]
+  },
+  {
+    "nome": "Barbearia do Vasco",
+    "slug": "barbearia-do-vasco",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Praia de Mira",
+    "zone": null,
+    "morada": "Av. Infante Dom Henrique 24 Lj 2, 3070-794 Praia de Mira",
+    "codigo_postal": null,
+    "telefone": "+351 934 455 892",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-do-vasco-avenida-infante-dom-henrique-praia-de-mira-2MR1DX",
+    "google_maps": null,
+    "horario": "Seg 9h-18h30; Ter 9h-12h30; Qui-Sáb 9h-12h30",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-do-vasco-avenida-infante-dom-henrique-praia-de-mira-2MR1DX",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.4557736,
+      -8.7999808
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-do-vasco-avenida-infante-dom-henrique-praia-de-mira-2MR1DX"
+    ]
+  },
+  {
+    "nome": "Barbearia DRM Barber Shop",
+    "slug": "barbearia-drm-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Oliveira de Azeméis",
+    "zone": null,
+    "morada": "R. José Bento Pereira, 3720-190",
+    "codigo_postal": null,
+    "telefone": "+351 916 503 512",
+    "email": null,
+    "website": "http://www.noona.pt/barbeariadrm",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-drm-barber-shop-rua-jose-bento-pereira-xXDDP7",
+    "google_maps": null,
+    "horario": "Ter-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-drm-barber-shop-rua-jose-bento-pereira-xXDDP7",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.8366729,
+      -8.4299662
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-drm-barber-shop-rua-jose-bento-pereira-xXDDP7"
+    ]
+  },
+  {
+    "nome": "Barbearia É DE HOMEM",
+    "slug": "barbearia-e-de-homem",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Guia (Albufeira)",
+    "zone": null,
+    "morada": "R. 25 de Abril 17, 8200-433 Guia",
+    "codigo_postal": "8200-433",
+    "telefone": "+351 962 924 675",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-e-de-homem-rua-25-de-abril-guia-alza1E",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      37.1264676,
+      -8.2988346
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-e-de-homem-rua-25-de-abril-guia-alza1E"
+    ]
+  },
+  {
+    "nome": "Barbearia Estação Século XXI",
+    "slug": "barbearia-estacao-seculo-xxi",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ponte de Lima",
+    "zone": null,
+    "morada": "Av. António Feijó 52 Loja 8, 4990-029 Ponte de Lima",
+    "codigo_postal": null,
+    "telefone": "+351 913 218 400",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-estacao-seculo-xxi-avenida-antonio-feijo-ponte-de-lima-Kk51wG",
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-estacao-seculo-xxi-avenida-antonio-feijo-ponte-de-lima-Kk51wG",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.7651411,
+      -8.5797962
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-estacao-seculo-xxi-avenida-antonio-feijo-ponte-de-lima-Kk51wG"
+    ]
+  },
+  {
+    "nome": "Gabbones Barbearia",
+    "slug": "gabbones-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Varzim",
+    "zone": null,
+    "morada": "R. do Padre João José da Cruz n73, 4490-165 Póvoa de Varzim",
+    "codigo_postal": null,
+    "telefone": "+351 910 581 704",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-garage-vintage-rua-do-padre-joao-jose-da-cruz-povoa-de-varzim-zXDwqo",
+    "google_maps": null,
+    "horario": "Ter-Sex 9h-20h; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-garage-vintage-rua-do-padre-joao-jose-da-cruz-povoa-de-varzim-zXDwqo",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.382347,
+      -8.7540906
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-garage-vintage-rua-do-padre-joao-jose-da-cruz-povoa-de-varzim-zXDwqo"
+    ]
+  },
+  {
+    "nome": "Barbearia Jaime",
+    "slug": "barbearia-jaime",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Cantanhede",
+    "zone": null,
+    "morada": "R. 5 de Outubro 1, 3060-126 Cantanhede",
+    "codigo_postal": null,
+    "telefone": "+351 914 000 159",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-jaime-rua-5-de-outubro-cantanhede-6N8qKE",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.3472527,
+      -8.5933304
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-jaime-rua-5-de-outubro-cantanhede-6N8qKE"
+    ]
+  },
+  {
+    "nome": "Barbearia KnockOut",
+    "slug": "barbearia-knockout",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Lustosa",
+    "zone": null,
+    "morada": "R. do Pombal 72, 4620-261 Lustosa",
+    "codigo_postal": null,
+    "telefone": "+351 912 859 129",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-knockout-rua-do-pombal-lustosa-BK8ybK",
+    "google_maps": null,
+    "horario": "Ter-Sáb 9h-20h30",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-knockout-rua-do-pombal-lustosa-BK8ybK",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.3227951,
+      -8.3171785
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-knockout-rua-do-pombal-lustosa-BK8ybK"
+    ]
+  },
+  {
+    "nome": "Barbearia Mãos de Tesoura",
+    "slug": "barbearia-maos-de-tesoura",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Pombal",
+    "zone": null,
+    "morada": "R. de Santa Lúzia, 3100-483 Pombal",
+    "codigo_postal": null,
+    "telefone": "+351 964 851 532",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/p/C3HxvyKqQiB/?igsh=MWt1ZmhxZDVpcmNteg==",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-maos-de-tesoura-rua-de-santa-luzia-pombal-QkGvn8",
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-maos-de-tesoura-rua-de-santa-luzia-pombal-QkGvn8",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.916638,
+      -8.627501
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-maos-de-tesoura-rua-de-santa-luzia-pombal-QkGvn8"
+    ]
+  },
+  {
+    "nome": "Barbearia Mário Barbeiro",
+    "slug": "barbearia-mario-barbeiro",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Bombarral",
+    "zone": null,
+    "morada": "R. do Comércio 95 B, 2540-076 Bombarral",
+    "codigo_postal": null,
+    "telefone": "+351 919 701 997",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-mario-barbeiro-rua-do-comercio-bombarral-85rk9Y",
+    "google_maps": null,
+    "horario": "Seg-Sex 8h30-18h; Sáb 8h-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-mario-barbeiro-rua-do-comercio-bombarral-85rk9Y",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.2685789,
+      -9.1574194
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-mario-barbeiro-rua-do-comercio-bombarral-85rk9Y"
+    ]
+  },
+  {
+    "nome": "Barbearia Martins",
+    "slug": "barbearia-martins",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Pardilhó",
+    "zone": null,
+    "morada": "Av. António Joaquim de Resende, 3860-464 Pardilhó",
+    "codigo_postal": null,
+    "telefone": "+351 915 774 208",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/josepedro.martins.16",
+    "booking": "https://www.fresha.com/lvp/barbearia-martins-avenida-antonio-joaquim-de-resende-pardilho-85rqRY",
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-martins-avenida-antonio-joaquim-de-resende-pardilho-85rqRY",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.7942936,
+      -8.625469
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-martins-avenida-antonio-joaquim-de-resende-pardilho-85rqRY"
+    ]
+  },
+  {
+    "nome": "Barbearia Neves",
+    "slug": "barbearia-neves",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Praia de Mira",
+    "zone": null,
+    "morada": "Av. Cidade de Coimbra 159, 3070-761 Praia de Mira",
+    "codigo_postal": null,
+    "telefone": "+351 918 107 063",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-neves-avenida-cidade-de-coimbra-praia-de-mira-qLX1BR",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.4556012,
+      -8.7965298
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-neves-avenida-cidade-de-coimbra-praia-de-mira-qLX1BR"
+    ]
+  },
+  {
+    "nome": "Bar_bearia OLD SCHOOL Bar & Lounge",
+    "slug": "bar-bearia-old-school-bar-e-lounge",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Anadia",
+    "zone": null,
+    "morada": "Av. 25 de Abril no. 85, 3780-205 Anadia",
+    "codigo_postal": null,
+    "telefone": "+351 912 652 395",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-old-school-anadia-l18oV1",
+    "google_maps": null,
+    "horario": "Seg-Ter 11h-23h30; Qua-Qui 11h-23h; Sex 10h30-23h30; Sáb 9h-23h30",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-old-school-anadia-l18oV1",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.4384007,
+      -8.4489697
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-old-school-anadia-l18oV1"
+    ]
+  },
+  {
+    "nome": "Barbearia Pata Negra - Metro Póvoa de Varzim",
+    "slug": "barbearia-pata-negra-metro-povoa-de-varzim",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Varzim",
+    "zone": null,
+    "morada": "Alameda Linha da Póvoa 161, 4490-269 Póvoa de Varzim",
+    "codigo_postal": null,
+    "telefone": "+351 928 468 102",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-pata-negra-metro-povoa-de-varzim-alameda-linha-da-povoa-povoa-de-QkGywR",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.3772039,
+      -8.7574261
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-pata-negra-metro-povoa-de-varzim-alameda-linha-da-povoa-povoa-de-QkGywR"
+    ]
+  },
+  {
+    "nome": "Barbearia Pedra D'Ouro",
+    "slug": "barbearia-pedra-d-ouro",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Alpendurada e Matos",
+    "zone": null,
+    "morada": "R. Conde de Leiria 33 Lj 51, 4575-010 Alpendurada e Matos",
+    "codigo_postal": null,
+    "telefone": "+351 919 148 725",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbeariapedradouro/",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-pedra-douro-rua-conde-de-leiria-alpendurada-e-matos-Kk5xAq",
+    "google_maps": null,
+    "horario": "Ter-Sáb 9h-19h30",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-pedra-douro-rua-conde-de-leiria-alpendurada-e-matos-Kk5xAq",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.0866297,
+      -8.2507633
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-pedra-douro-rua-conde-de-leiria-alpendurada-e-matos-Kk5xAq"
+    ]
+  },
+  {
+    "nome": "Barbearia Ricardo Macieira",
+    "slug": "barbearia-ricardo-macieira",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila do Conde",
+    "zone": null,
+    "morada": "Praça Dr. José Maria de Sousa Pereira 67, 4480-660 Vila do Conde",
+    "codigo_postal": null,
+    "telefone": "+351 914 812 484",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-ricardo-macieira-praca-doutor-jose-maria-de-sousa-pereira-vila-do-Kk5AKJ",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.361561,
+      -8.7546804
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-ricardo-macieira-praca-doutor-jose-maria-de-sousa-pereira-vila-do-Kk5AKJ"
+    ]
+  },
+  {
+    "nome": "Barbearia Schulz",
+    "slug": "barbearia-schulz",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Bombarral",
+    "zone": null,
+    "morada": "Largo António Bruno Patuleira, 2540-101 Bombarral",
+    "codigo_postal": null,
+    "telefone": "+351 968 490 112",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-schulz-largo-antonio-bruno-patuleira-bombarral-Ek5Dvq",
+    "google_maps": null,
+    "horario": "Seg-Qua 9h30-20h; Qui 9h30-19h; Sex 9h30-20h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-schulz-largo-antonio-bruno-patuleira-bombarral-Ek5Dvq",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.2667075,
+      -9.1586309
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-schulz-largo-antonio-bruno-patuleira-bombarral-Ek5Dvq"
+    ]
+  },
+  {
+    "nome": "Barbearia Vagner Barbershop",
+    "slug": "barbearia-vagner-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Entroncamento",
+    "zone": null,
+    "morada": "Centro Comercial Avenida, Av. José Eduardo Vitor das Neves, 2330-066 Entroncamento",
+    "codigo_postal": null,
+    "telefone": "+351 937 509 631",
+    "email": null,
+    "website": "https://noona.pt/vagnerbarbershop",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-vagner-barbershop-avenida-jose-eduardo-vitor-das-neves-entroncamento-xXD5Ew",
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-vagner-barbershop-avenida-jose-eduardo-vitor-das-neves-entroncamento-xXD5Ew",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.4612079,
+      -8.4697212
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-vagner-barbershop-avenida-jose-eduardo-vitor-das-neves-entroncamento-xXD5Ew"
+    ]
+  },
+  {
+    "nome": "Barbearia Vera Cruz",
+    "slug": "barbearia-vera-cruz",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Entroncamento",
+    "zone": null,
+    "morada": "Rua Dom João de Castro 77 Entroncamento 1° andar Código P:, 2330-138 Entroncamento",
+    "codigo_postal": null,
+    "telefone": "+351 916 036 148",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/veracruz_studio",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-vera-cruz-entroncamento-0agE5Y",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.4617678,
+      -8.4691688
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-vera-cruz-entroncamento-0agE5Y"
+    ]
+  },
+  {
+    "nome": "Barbearia Vitor",
+    "slug": "barbearia-vitor-povoa-de-varzim",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Varzim",
+    "zone": null,
+    "morada": "R. Sacra Família 6, 4490-548 Póvoa de Varzim",
+    "codigo_postal": null,
+    "telefone": "+351 910 041 931",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-vitor-rua-sacra-familia-povoa-de-varzim-P2ykv4",
+    "google_maps": null,
+    "horario": "Seg-Sex 8h30-20h; Sáb 8h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-vitor-rua-sacra-familia-povoa-de-varzim-P2ykv4",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.3808613,
+      -8.7551827
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-vitor-rua-sacra-familia-povoa-de-varzim-P2ykv4"
+    ]
+  },
+  {
+    "nome": "BARBER DERCIO",
+    "slug": "barber-dercio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Arouca",
+    "zone": null,
+    "morada": "R. Comunidades 11A, 4540-112 Arouca",
+    "codigo_postal": null,
+    "telefone": "+351 914 809 091",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barber-dercio-rua-comunidades-arouca-0ag6gR",
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barber-dercio-rua-comunidades-arouca-0ag6gR",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.9297349,
+      -8.2470444
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barber-dercio-rua-comunidades-arouca-0ag6gR"
+    ]
+  },
+  {
+    "nome": "Barber Derm",
+    "slug": "barber-derm",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Alcanena",
+    "zone": null,
+    "morada": "Av. Marquês de Pombal 367, Alcanena",
+    "codigo_postal": null,
+    "telefone": "+351 965 702 683",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/profile.php?id=100057033897171",
+    "booking": "https://www.fresha.com/lvp/barber-derm-avenida-marques-de-pombal-alcanena-VqWjyr",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.4604379,
+      -8.6627861
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barber-derm-avenida-marques-de-pombal-alcanena-VqWjyr"
+    ]
+  },
+  {
+    "nome": "Barber Shop S.D.S",
+    "slug": "barber-shop-s-d-s",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila Flor",
+    "zone": null,
+    "morada": "R. Cel. Salvador Teixeira, 5360-303 Vila Flor",
+    "codigo_postal": null,
+    "telefone": "+351 935 845 931",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barber-shop-s-d-s-rua-coronel-salvador-teixeira-vila-flor-D1rWG0",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.3081795,
+      -7.1531091
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barber-shop-s-d-s-rua-coronel-salvador-teixeira-vila-flor-D1rWG0"
+    ]
+  },
+  {
+    "nome": "BarberOss (Unidade Nova Sintra)",
+    "slug": "barbeross-unidade-nova-sintra",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Varzim",
+    "zone": null,
+    "morada": "R. do Sr. do Bonfim 31, 4490-583 Póvoa de Varzim",
+    "codigo_postal": null,
+    "telefone": "+351 252 022 038",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbeross-rua-do-senhor-do-bonfim-povoa-de-varzim-Kk5WJx",
+    "google_maps": null,
+    "horario": "Seg-Sex 9h30-19h; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbeross-rua-do-senhor-do-bonfim-povoa-de-varzim-Kk5WJx",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.3794799,
+      -8.7546394
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbeross-rua-do-senhor-do-bonfim-povoa-de-varzim-Kk5WJx"
+    ]
+  },
+  {
+    "nome": "Barbershop Lourinho",
+    "slug": "barbershop-lourinho",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Reguengos de Monsaraz",
+    "zone": null,
+    "morada": "R. 1 de Maio 65, 7200-357 Reguengos de Monsaraz",
+    "codigo_postal": null,
+    "telefone": "+351 966 855 879",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbershop-lourinho-rua-1-de-maio-reguengos-de-monsaraz-85rwaL",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.4256366,
+      -7.5368473
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbershop-lourinho-rua-1-de-maio-reguengos-de-monsaraz-85rwaL"
+    ]
+  },
+  {
+    "nome": "Barbu's Barbearia",
+    "slug": "barbu-s-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Anadia",
+    "zone": null,
+    "morada": "Av. das Laranjeiras, 3780-202 Anadia",
+    "codigo_postal": null,
+    "telefone": "+351 914 421 489",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/barbusBarbearia2017/",
+    "booking": "https://www.fresha.com/lvp/barbus-barbearia-avenida-das-laranjeiras-anadia-BK8ooY",
+    "google_maps": null,
+    "horario": "Ter-Sex 9h-19h; Sáb 8h-18h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbus-barbearia-avenida-das-laranjeiras-anadia-BK8ooY",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.4424666,
+      -8.433589
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbus-barbearia-avenida-das-laranjeiras-anadia-BK8ooY"
+    ]
+  },
+  {
+    "nome": "Barbz Barbershop",
+    "slug": "barbz-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mogadouro",
+    "zone": null,
+    "morada": "R. da República 27, 5200-233 Mogadouro",
+    "codigo_postal": null,
+    "telefone": "+351 914 387 690",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbzbarbershop/",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbz-barbershop-rua-da-republica-mogadouro-NynZ7v",
+    "google_maps": null,
+    "horario": "Ter-Sáb 10h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbz-barbershop-rua-da-republica-mogadouro-NynZ7v",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.340271,
+      -6.7170721
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbz-barbershop-rua-da-republica-mogadouro-NynZ7v"
+    ]
+  },
+  {
+    "nome": "Bibikas Barbershop",
+    "slug": "bibikas-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Torre de Moncorvo",
+    "zone": null,
+    "morada": "R. Tomás Ribeiro 13, 5160-297 Torre de Moncorvo",
+    "codigo_postal": null,
+    "telefone": "+351 969 225 337",
+    "email": null,
+    "website": "https://bibikas-barbershop.buk.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/bibikas-barbershop-rua-tomas-ribeiro-torre-de-moncorvo-Ek5ByL",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.1752086,
+      -7.0528032
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/bibikas-barbershop-rua-tomas-ribeiro-torre-de-moncorvo-Ek5ByL"
+    ]
+  },
+  {
+    "nome": "Black Helmet BarberShop",
+    "slug": "black-helmet-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Santa Maria de Sardoura",
+    "zone": null,
+    "morada": "Rua do Ferreiro, 4550-764 Santa Maria de Sardoura",
+    "codigo_postal": null,
+    "telefone": "+351 910 522 666",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/blackhelmet_barbershop/",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/black-helmet-barbershop-rua-do-ferreiro-santa-maria-de-sardoura-alz82J",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.0370971,
+      -8.3137086
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/black-helmet-barbershop-rua-do-ferreiro-santa-maria-de-sardoura-alz82J"
+    ]
+  },
+  {
+    "nome": "Black Sheep Barbershop",
+    "slug": "black-sheep-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Torres Novas",
+    "zone": null,
+    "morada": "R. Alexandre Herculano 74, 2350-439 Torres Novas",
+    "codigo_postal": null,
+    "telefone": "+351 937 642 178",
+    "email": null,
+    "website": null,
+    "instagram": "https://instagram.com/blacksheep_barbershop?igshid=h411kuoc6fpc",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/black-sheep-barbershop-rua-alexandre-herculano-torres-novas-9R5zzD",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.4788231,
+      -8.5377812
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/black-sheep-barbershop-rua-alexandre-herculano-torres-novas-9R5zzD"
+    ]
+  },
+  {
+    "nome": "Blackbeard Barbershop",
+    "slug": "blackbeard-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Abrantes",
+    "zone": null,
+    "morada": "R. Alexandre Herculano 23 1, 2200-362 Abrantes",
+    "codigo_postal": null,
+    "telefone": "+351 911 908 139",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/blackbeard-barbershop-rua-alexandre-herculano-abrantes-gW9nQj",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.4623889,
+      -8.1975526
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/blackbeard-barbershop-rua-alexandre-herculano-abrantes-gW9nQj"
+    ]
+  },
+  {
+    "nome": "Ca-te-espero Barbershop",
+    "slug": "ca-te-espero-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Castelo de Paiva",
+    "zone": null,
+    "morada": "Rua do Palácio da Justiça, 4550-119 Castelo de Paiva",
+    "codigo_postal": null,
+    "telefone": "+351 917 057 623",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/ca-te-espero-barbershop-rua-direita-castelo-de-paiva-oo5ajW",
+    "google_maps": null,
+    "horario": "Ter-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/ca-te-espero-barbershop-rua-direita-castelo-de-paiva-oo5ajW",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.0410452,
+      -8.2699902
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/ca-te-espero-barbershop-rua-direita-castelo-de-paiva-oo5ajW"
+    ]
+  },
+  {
+    "nome": "CABARÉ BARBER SHOP",
+    "slug": "cabare-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Rio Maior",
+    "zone": null,
+    "morada": "R. Mariano de Carvalho 30, 2040-243 Rio Maior",
+    "codigo_postal": null,
+    "telefone": "+351 966 586 339",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/cabare-barber-shop-rua-mariano-de-carvalho-rio-maior-5zP8Qv",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.3391881,
+      -8.9362839
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/cabare-barber-shop-rua-mariano-de-carvalho-rio-maior-5zP8Qv"
+    ]
+  },
+  {
+    "nome": "Barbosa Barbearia",
+    "slug": "barbosa-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ancede",
+    "zone": null,
+    "morada": "RuaDr. Alexandre Cabral Nr 897, 4640-005 Ancede",
+    "codigo_postal": null,
+    "telefone": "+351 912 732 168",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/cabeleireiros-barbosa-ruadr-alexandre-cabral-ancede-jwobJY",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.0988777,
+      -8.0473032
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/cabeleireiros-barbosa-ruadr-alexandre-cabral-ancede-jwobJY"
+    ]
+  },
+  {
+    "nome": "Casa do barbeiro",
+    "slug": "casa-do-barbeiro",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mira de Aire",
+    "zone": null,
+    "morada": "R. Gen. Trindade N° 1717, 2485-135 Mira de Aire",
+    "codigo_postal": null,
+    "telefone": "+351 919 137 838",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/casa-do-barbeiro-rua-general-trindade-mira-de-aire-85rrZM",
+    "google_maps": null,
+    "horario": "Ter-Sex 9h30-19h30; Sáb 9h30-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/casa-do-barbeiro-rua-general-trindade-mira-de-aire-85rrZM",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.5423802,
+      -8.7132925
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/casa-do-barbeiro-rua-general-trindade-mira-de-aire-85rrZM"
+    ]
+  },
+  {
+    "nome": "Casa Murdock Mirandela - Barbearia & Serviços de Beleza e Estética",
+    "slug": "casa-murdock-mirandela-barbearia-e-servicos-de-beleza-e-estetica",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mirandela",
+    "zone": null,
+    "morada": "Av. Francisco Sá Carneiro 157, 5370-209 Mirandela",
+    "codigo_postal": null,
+    "telefone": "+351 915 087 711",
+    "email": null,
+    "website": "https://noona.pt/casamurdock",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/casa-murdock-avenida-francisco-sa-carneiro-mirandela-6N8jE1",
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/casa-murdock-avenida-francisco-sa-carneiro-mirandela-6N8jE1",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.4829169,
+      -7.1910841
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/casa-murdock-avenida-francisco-sa-carneiro-mirandela-6N8jE1"
+    ]
+  },
+  {
+    "nome": "Clube dos Cavalheiros Vila do Conde",
+    "slug": "clube-dos-cavalheiros-vila-do-conde",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila do Conde",
+    "zone": null,
+    "morada": "R. do Bombeiro 26, 4480-788 Vila do Conde",
+    "codigo_postal": null,
+    "telefone": "+351 252 029 486",
+    "email": null,
+    "website": "https://www.clubedoscavalheiros.pt/",
+    "instagram": "https://www.instagram.com/clubedoscavalheirosbarbearia/",
+    "facebook": "https://www.facebook.com/profile.php?id=100064063718446",
+    "booking": "https://www.fresha.com/lvp/clube-dos-cavalheiros-barbearia-rua-do-bombeiro-vila-do-conde-6N86oP",
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h30-19h30",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/clube-dos-cavalheiros-barbearia-rua-do-bombeiro-vila-do-conde-6N86oP",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.3487637,
+      -8.7452636
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/clube-dos-cavalheiros-barbearia-rua-do-bombeiro-vila-do-conde-6N86oP"
+    ]
+  },
+  {
+    "nome": "Cordeiro Barber Studio",
+    "slug": "cordeiro-barber-studio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Guia (Pombal)",
+    "zone": null,
+    "morada": "Av. Nossa Sra. da Guia 86, 3105-093 Guia",
+    "codigo_postal": "3105-093",
+    "telefone": "+351 928 166 657",
+    "email": null,
+    "website": "https://cordeirobarbershop.com/",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/cordeiro-barber-shop-avenida-nossa-senhora-da-guia-guia-VqWKw8",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.947143,
+      -8.7847494
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/cordeiro-barber-shop-avenida-nossa-senhora-da-guia-guia-VqWKw8"
+    ]
+  },
+  {
+    "nome": "Corte Vadio Barber Shop",
+    "slug": "corte-vadio-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Alcanena",
+    "zone": null,
+    "morada": "Av. Marquês de Pombal 605, 2380-091 Alcanena",
+    "codigo_postal": null,
+    "telefone": "+351 934 829 727",
+    "email": null,
+    "website": "https://www.cortevadiobarbershop.com/",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/corte-vadio-barber-shop-avenida-marques-de-pombal-alcanena-r6zZYv",
+    "google_maps": null,
+    "horario": "Seg-Sex 10h-20h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/corte-vadio-barber-shop-avenida-marques-de-pombal-alcanena-r6zZYv",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.4621468,
+      -8.6602842
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/corte-vadio-barber-shop-avenida-marques-de-pombal-alcanena-r6zZYv"
+    ]
+  },
+  {
+    "nome": "Barbearia Don Cort’s",
+    "slug": "barbearia-don-cort-s",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Abrantes",
+    "zone": null,
+    "morada": "R. da Gonçalinha 1239 Lj c, Abrantes",
+    "codigo_postal": null,
+    "telefone": "+351 964 680 511",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/don.cort_s?igsh=YXppbjN2aXU0c244&amp;utm_source=qr",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/don-corts-barbearia-rua-da-goncalinha-abrantes-Ek52We",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.4857889,
+      -8.1962279
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/don-corts-barbearia-rua-da-goncalinha-abrantes-Ek52We"
+    ]
+  },
+  {
+    "nome": "Duarte's Barbershop",
+    "slug": "duarte-s-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Benedita",
+    "zone": null,
+    "morada": "R. Rei da Memória, 2475-149 Benedita",
+    "codigo_postal": null,
+    "telefone": "+351 918 411 600",
+    "email": null,
+    "website": "https://buk.pt/duartesbarbershop",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/duartes-barbershop-rua-rei-da-memoria-benedita-X0EBV5",
+    "google_maps": null,
+    "horario": "Seg-Sex 10h-20h; Sáb 8h30-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/duartes-barbershop-rua-rei-da-memoria-benedita-X0EBV5",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.425224,
+      -8.9801538
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/duartes-barbershop-rua-rei-da-memoria-benedita-X0EBV5"
+    ]
+  },
+  {
+    "nome": "EMPIRE BY PLÁCIDO",
+    "slug": "empire-by-placido",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Torres Novas",
+    "zone": null,
+    "morada": "R. 25 de Abril 14, 2350-774 Torres Novas",
+    "codigo_postal": null,
+    "telefone": "+351 911 955 744",
+    "email": null,
+    "website": null,
+    "instagram": "https://instagram.com/empirebyplacido?igshid=YmMyMTA2M2Y=",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/empire-by-placido-rua-25-de-abril-torres-novas-jwo3Py",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.4832591,
+      -8.5392235
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/empire-by-placido-rua-25-de-abril-torres-novas-jwo3Py"
+    ]
+  },
+  {
+    "nome": "Ezequiel Souza Barbearia",
+    "slug": "ezequiel-souza-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mira",
+    "zone": null,
+    "morada": "Pç da República, 3070-304 Mira",
+    "codigo_postal": null,
+    "telefone": "+351 914 061 630",
+    "email": null,
+    "website": null,
+    "instagram": "https://instagram.com/ezequielsouzabarbearia?igshid=MTA2NDdkNWE=",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/ezequiel-souza-barbearia-praca-da-republica-mira-alzylb",
+    "google_maps": null,
+    "horario": "Seg-Sex 10h-20h; Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/ezequiel-souza-barbearia-praca-da-republica-mira-alzylb",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.4283925,
+      -8.7360796
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/ezequiel-souza-barbearia-praca-da-republica-mira-alzylb"
+    ]
+  },
+  {
+    "nome": "Flatout Barber House & Tattoo Studio",
+    "slug": "flatout-barber-house-e-tattoo-studio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mogadouro",
+    "zone": null,
+    "morada": "Av. de Espanha 25, 5200-203 Mogadouro",
+    "codigo_postal": null,
+    "telefone": "+351 916 508 442",
+    "email": null,
+    "website": "https://noona.pt/flatoutbarbertattoo",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/flatout-barber-house-tattoo-studio-avenida-de-espanha-mogadouro-MV7M94",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.3394833,
+      -6.7113739
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/flatout-barber-house-tattoo-studio-avenida-de-espanha-mogadouro-MV7M94"
+    ]
+  },
+  {
+    "nome": "FrankBarber",
+    "slug": "frankbarber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Tramagal",
+    "zone": null,
+    "morada": "N118 1006, 2205-698 Tramagal",
+    "codigo_postal": null,
+    "telefone": "+351 928 046 898",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/FrankBarber-300596967220337/",
+    "booking": "https://www.fresha.com/lvp/frankbarber-n118-tramagal-Ek5249",
+    "google_maps": null,
+    "horario": "Seg-Qua 9h-19h; Sex 9h-19h; Sáb 9h-14h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/frankbarber-n118-tramagal-Ek5249",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.4500673,
+      -8.247497
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/frankbarber-n118-tramagal-Ek5249"
+    ]
+  },
+  {
+    "nome": "Galeria 191 - Tattoo & Barbershop",
+    "slug": "galeria-191-tattoo-e-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Praia de Mira",
+    "zone": null,
+    "morada": "Av. Cidade de Coimbra 191, 3070-761 Praia de Mira",
+    "codigo_postal": null,
+    "telefone": "+351 967 048 398",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/galeria-191-tattoo-barbershop-avenida-cidade-de-coimbra-praia-de-mira-xXDjz6",
+    "google_maps": null,
+    "horario": "Seg-Sáb 10h-21h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/galeria-191-tattoo-barbershop-avenida-cidade-de-coimbra-praia-de-mira-xXDjz6",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.4556517,
+      -8.7976296
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/galeria-191-tattoo-barbershop-avenida-cidade-de-coimbra-praia-de-mira-xXDjz6"
+    ]
+  },
+  {
+    "nome": "Gi Viana Cabeleireiros e Barbearia",
+    "slug": "gi-viana-cabeleireiros-e-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Varzim",
+    "zone": null,
+    "morada": "R. Alberto Oliveira 397, 4490-460 Póvoa de Varzim",
+    "codigo_postal": null,
+    "telefone": "+351 916 231 544",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/gi-viana-cabeleireiros-e-barbearia-rua-alberto-oliveira-povoa-de-varzim-BK8Lnq",
+    "google_maps": null,
+    "horario": "Ter-Sáb 9h30-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/gi-viana-cabeleireiros-e-barbearia-rua-alberto-oliveira-povoa-de-varzim-BK8Lnq",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.3921071,
+      -8.7559985
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/gi-viana-cabeleireiros-e-barbearia-rua-alberto-oliveira-povoa-de-varzim-BK8Lnq"
+    ]
+  },
+  {
+    "nome": "Golden Kutz Barbershop",
+    "slug": "golden-kutz-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Entroncamento",
+    "zone": null,
+    "morada": "Estrada do, Viaduto Eugénio Dias Poitout nr 3, 2330-070 Entroncamento",
+    "codigo_postal": null,
+    "telefone": "+351 912 527 920",
+    "email": null,
+    "website": null,
+    "instagram": "https://instagram.com/goldenkutzbarbershop?utm_medium=copy_link",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/golden-kutz-barbershop-viaduto-eugenio-dias-poitout-entroncamento-jworMa",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.4652585,
+      -8.47232
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/golden-kutz-barbershop-viaduto-eugenio-dias-poitout-entroncamento-jworMa"
+    ]
+  },
+  {
+    "nome": "Good look barbar shop",
+    "slug": "good-look-barbar-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ponte de Lima",
+    "zone": null,
+    "morada": "R. Dr. Luís Gonzaga 152, 4990-144 Ponte de Lima",
+    "codigo_postal": null,
+    "telefone": "+351 962 641 768",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/good-look-barbar-shop-rua-doutor-luis-gonzaga-ponte-de-lima-4PoqLq",
+    "google_maps": null,
+    "horario": "Seg-Dom 8h-21h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/good-look-barbar-shop-rua-doutor-luis-gonzaga-ponte-de-lima-4PoqLq",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.765459,
+      -8.580994
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/good-look-barbar-shop-rua-doutor-luis-gonzaga-ponte-de-lima-4PoqLq"
+    ]
+  },
+  {
+    "nome": "Grantorino Barbershop",
+    "slug": "grantorino-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Cantanhede",
+    "zone": null,
+    "morada": "Largo Conselheiro Ferreira Freire 6A, 3060-201 Cantanhede",
+    "codigo_postal": null,
+    "telefone": "+351 933 473 888",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/grantorino-barbershop-largo-conselheiro-ferreira-freire-cantanhede-A7NGQy",
+    "google_maps": null,
+    "horario": "Ter-Sex 9h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/grantorino-barbershop-largo-conselheiro-ferreira-freire-cantanhede-A7NGQy",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.3471109,
+      -8.5935876
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/grantorino-barbershop-largo-conselheiro-ferreira-freire-cantanhede-A7NGQy"
+    ]
+  },
+  {
+    "nome": "Hacker Style barberia",
+    "slug": "hacker-style-barberia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Pombal",
+    "zone": null,
+    "morada": "Largo do Cardal 4, 3100-443 Pombal",
+    "codigo_postal": null,
+    "telefone": "+351 920 123 036",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/hacker-style-barberia-largo-do-cardal-pombal-bLzy1D",
+    "google_maps": null,
+    "horario": "Seg-Dom 9h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/hacker-style-barberia-largo-do-cardal-pombal-bLzy1D",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.9145349,
+      -8.6293101
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/hacker-style-barberia-largo-do-cardal-pombal-bLzy1D"
+    ]
+  },
+  {
+    "nome": "HAIRSTOP KIKO BARBERSHOP",
+    "slug": "hairstop-kiko-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Guia (Albufeira)",
+    "zone": null,
+    "morada": "R. da Liberdade loja26, 8200-410 Guia",
+    "codigo_postal": "8200-410",
+    "telefone": "+351 966 089 890",
+    "email": null,
+    "website": "https://hairstopkikobarbershop.buk.pt/",
+    "instagram": "https://www.instagram.com/hairstop_2020",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/hairstop-kiko-barbershop-rua-da-liberdade-guia-5zPJPR",
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/hairstop-kiko-barbershop-rua-da-liberdade-guia-5zPJPR",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      37.1265367,
+      -8.3010135
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/hairstop-kiko-barbershop-rua-da-liberdade-guia-5zPJPR"
+    ]
+  },
+  {
+    "nome": "Henry's Barbershop",
+    "slug": "henry-s-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila Nova da Barquinha",
+    "zone": null,
+    "morada": "R. Benvinda da Conceição Pereira 60B, 2260-417 Vila Nova da Barquinha",
+    "codigo_postal": null,
+    "telefone": "+351 962 923 860",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/henrys-barbershop-rua-benvinda-da-conceicao-pereira-vila-nova-da-barquinha-r6zl2y",
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/henrys-barbershop-rua-benvinda-da-conceicao-pereira-vila-nova-da-barquinha-r6zl2y",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.4607962,
+      -8.4382024
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/henrys-barbershop-rua-benvinda-da-conceicao-pereira-vila-nova-da-barquinha-r6zl2y"
+    ]
+  },
+  {
+    "nome": "IGOR BARBEARIA 2004",
+    "slug": "igor-barbearia-2004",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila Flor",
+    "zone": null,
+    "morada": "Av. Mal. Carmona 83, 5360-303 Vila Flor",
+    "codigo_postal": null,
+    "telefone": "+351 917 248 230",
+    "email": null,
+    "website": "http://pt.zappysoftware.com/igorigorbarbearia2004",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/igor-barbearia-2004-avenida-marechal-carmona-vila-flor-P2yeyA",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.3088108,
+      -7.1526885
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/igor-barbearia-2004-avenida-marechal-carmona-vila-flor-P2yeyA"
+    ]
+  },
+  {
+    "nome": "Invictus Gentlemen's Saloon",
+    "slug": "invictus-gentlemen-s-saloon",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Reguengos de Monsaraz",
+    "zone": null,
+    "morada": "R. Gen. Humberto Delgado 15 7200, 7200-370 Reguengos de Monsaraz",
+    "codigo_postal": null,
+    "telefone": "+351 964 386 143",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/invictus-gentlemens-saloon-rua-general-humberto-delgado-reguengos-de-monsaraz-5zPLkR",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.4240804,
+      -7.5344863
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/invictus-gentlemens-saloon-rua-general-humberto-delgado-reguengos-de-monsaraz-5zPLkR"
+    ]
+  },
+  {
+    "nome": "JeffBarbershop",
+    "slug": "jeffbarbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Tremês",
+    "zone": null,
+    "morada": "Beco dos carvalho, R. de Santiago, 2025-562 Tremês",
+    "codigo_postal": null,
+    "telefone": "+351 935 711 061",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/jeffbarbershop-rua-de-santiago-tremes-xXDoov",
+    "google_maps": null,
+    "horario": "Seg-Sex 9h30-20h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/jeffbarbershop-rua-de-santiago-tremes-xXDoov",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.3575667,
+      -8.7610161
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/jeffbarbershop-rua-de-santiago-tremes-xXDoov"
+    ]
+  },
+  {
+    "nome": "Johnny's Barber Shop",
+    "slug": "johnny-s-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ponte de Lima",
+    "zone": null,
+    "morada": "Centro Comercial Rio Lima, Praceta Dr. Vieira de Araújo 2 Lj 21, 4990-064 Ponte de Lima",
+    "codigo_postal": null,
+    "telefone": "+351 919 323 108",
+    "email": null,
+    "website": "http://www.johnnysbarbershop.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/johnnys-barber-shop-praceta-doutor-vieira-de-araujo-ponte-de-lima-r6zRkG",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.7646363,
+      -8.5827747
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/johnnys-barber-shop-praceta-doutor-vieira-de-araujo-ponte-de-lima-r6zRkG"
+    ]
+  },
+  {
+    "nome": "JS BARBERSHOP",
+    "slug": "js-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Varzim",
+    "zone": null,
+    "morada": "Rua Coronel Oudinott 28, 4490-568 Póvoa de Varzim",
+    "codigo_postal": null,
+    "telefone": "+351 912 077 658",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/js-barbershop-rua-coronel-oudinott-povoa-de-varzim-zXD3q6",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.3740008,
+      -8.7596112
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/js-barbershop-rua-coronel-oudinott-povoa-de-varzim-zXD3q6"
+    ]
+  },
+  {
+    "nome": "L'Apérot Barbershop",
+    "slug": "l-aperot-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Torres Novas",
+    "zone": null,
+    "morada": "R. Carlos Reis 13, 2350-420 Torres Novas",
+    "codigo_postal": null,
+    "telefone": "+351 913 683 921",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/laperot_barbershoop/?igshid=MzNlNGNkZWQ4Mg%3D%3D",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/laperot-barbershop-rua-carlos-reis-torres-novas-Y0WQA2",
+    "google_maps": null,
+    "horario": "Seg-Sex 10h-19h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/laperot-barbershop-rua-carlos-reis-torres-novas-Y0WQA2",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.4786711,
+      -8.5402125
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/laperot-barbershop-rua-carlos-reis-torres-novas-Y0WQA2"
+    ]
+  },
+  {
+    "nome": "Leonel Barbearia",
+    "slug": "leonel-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Varzim",
+    "zone": null,
+    "morada": "R. Pereira Azurar 1, 4490-543 Póvoa de Varzim",
+    "codigo_postal": null,
+    "telefone": "+351 252 130 593",
+    "email": null,
+    "website": "https://pt.zappysoftware.com/m/leonelbarbearia",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/leonel-barbearia-rua-pereira-azurar-povoa-de-varzim-oo5wR8",
+    "google_maps": null,
+    "horario": "Seg-Sex 10h-19h30; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/leonel-barbearia-rua-pereira-azurar-povoa-de-varzim-oo5wR8",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.3749331,
+      -8.7567337
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/leonel-barbearia-rua-pereira-azurar-povoa-de-varzim-oo5wR8"
+    ]
+  },
+  {
+    "nome": "Luxury men's salon",
+    "slug": "luxury-men-s-salon",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Estarreja",
+    "zone": null,
+    "morada": "Praça de Francisco Barbosa 143, 3860-253 Estarreja",
+    "codigo_postal": null,
+    "telefone": "+351 938 364 768",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/luxury-mens-salon-praca-de-francisco-barbosa-estarreja-1Y40aa",
+    "google_maps": null,
+    "horario": "Ter-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/luxury-mens-salon-praca-de-francisco-barbosa-estarreja-1Y40aa",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.7518022,
+      -8.5699779
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/luxury-mens-salon-praca-de-francisco-barbosa-estarreja-1Y40aa"
+    ]
+  },
+  {
+    "nome": "Marine Barber Shop",
+    "slug": "marine-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mação",
+    "zone": null,
+    "morada": "Largo de Santo António.°, 6120-731 Mação",
+    "codigo_postal": null,
+    "telefone": "+351 968 598 219",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/marine-barber-shop-macao-Y0W1bB",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.554294,
+      -7.9980489
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/marine-barber-shop-macao-Y0W1bB"
+    ]
+  },
+  {
+    "nome": "Medieval Barbershop",
+    "slug": "medieval-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mirandela",
+    "zone": null,
+    "morada": "R. República 114, 5370-347 Mirandela",
+    "codigo_postal": null,
+    "telefone": "+351 278 997 963",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/MEDIEVALBARBERSHOP/",
+    "booking": "https://www.fresha.com/lvp/medieval-barbershop-rua-republica-mirandela-QkGWKA",
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/medieval-barbershop-rua-republica-mirandela-QkGWKA",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.4875778,
+      -7.1798255
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/medieval-barbershop-rua-republica-mirandela-QkGWKA"
+    ]
+  },
+  {
+    "nome": "Men`s Corvo",
+    "slug": "men-s-corvo",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Torre de Moncorvo",
+    "zone": null,
+    "morada": "Rua Flores, 5160-271 Torre de Moncorvo",
+    "codigo_postal": null,
+    "telefone": "+351 279 243 056",
+    "email": null,
+    "website": "https://menscorvo.buk.pt/",
+    "instagram": "https://www.instagram.com/mens_corvo/",
+    "facebook": "https://www.facebook.com/menscorvo",
+    "booking": "https://www.fresha.com/lvp/mens-corvo-rua-flores-torre-de-moncorvo-alzyjv",
+    "google_maps": null,
+    "horario": "Ter-Sex 9h-20h; Sáb 9h-19h15",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/mens-corvo-rua-flores-torre-de-moncorvo-alzyjv",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.1743729,
+      -7.0520837
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/mens-corvo-rua-flores-torre-de-moncorvo-alzyjv"
+    ]
+  },
+  {
+    "nome": "SARDINHA’S BARBERSHOP",
+    "slug": "sardinha-s-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Rio Maior",
+    "zone": null,
+    "morada": "Praceta Alexandre Laureano Santos, 2040-400 Rio Maior",
+    "codigo_postal": null,
+    "telefone": "+351 966 154 330",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/mens-salon-by-sardinha-praceta-alexandre-laureano-santos-rio-maior-zXD346",
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/mens-salon-by-sardinha-praceta-alexandre-laureano-santos-rio-maior-zXD346",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.33929,
+      -8.9341024
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/mens-salon-by-sardinha-praceta-alexandre-laureano-santos-rio-maior-zXD346"
+    ]
+  },
+  {
+    "nome": "Mr. Mortágua - Barbershop",
+    "slug": "mr-mortagua-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Oliveira de Azeméis",
+    "zone": null,
+    "morada": "R. Conde Santiago de Lobão 155, 3720-282 Oliveira de Azeméis",
+    "codigo_postal": null,
+    "telefone": "+351 912 065 258",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/mortaguabarbeiro/",
+    "booking": "https://www.fresha.com/lvp/mr-mortagua-barbershop-rua-conde-santiago-de-lobao-oliveira-de-azemeis-Kk5zqZ",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.8411251,
+      -8.4756691
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/mr-mortagua-barbershop-rua-conde-santiago-de-lobao-oliveira-de-azemeis-Kk5zqZ"
+    ]
+  },
+  {
+    "nome": "Navalha Negra - Barbearia",
+    "slug": "navalha-negra-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila do Conde",
+    "zone": null,
+    "morada": "Centro Comercial Alameda, Av. Dr. João Canavarro 106, 4480-951 Vila do Conde",
+    "codigo_postal": null,
+    "telefone": "+351 932 185 780",
+    "email": null,
+    "website": "https://noona.pt/navalhanegra/book",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/navalha-negra-barbearia-avenida-doutor-joao-canavarro-vila-do-conde-9R5M4n",
+    "google_maps": null,
+    "horario": "Seg-Qui 9h-19h30; Sex-Sáb 9h-20h30",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/navalha-negra-barbearia-avenida-doutor-joao-canavarro-vila-do-conde-9R5M4n",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.3510982,
+      -8.746295
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/navalha-negra-barbearia-avenida-doutor-joao-canavarro-vila-do-conde-9R5M4n"
+    ]
+  },
+  {
+    "nome": "Ned Barbearias Vila do Conde",
+    "slug": "ned-barbearias-vila-do-conde",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila do Conde",
+    "zone": null,
+    "morada": "Praça José Régio 129, 4480-718 Vila do Conde",
+    "codigo_postal": null,
+    "telefone": "+351 252 048 754",
+    "email": null,
+    "website": "https://appbarber.com.br/download/prime?cod=4630255",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/ned-barbearias-vila-do-conde-praca-jose-regio-vila-do-conde-6N88jB",
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h30; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/ned-barbearias-vila-do-conde-praca-jose-regio-vila-do-conde-6N88jB",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.3530911,
+      -8.7418207
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/ned-barbearias-vila-do-conde-praca-jose-regio-vila-do-conde-6N88jB"
+    ]
+  },
+  {
+    "nome": "NELSON COUTINHO BARBER SHOP",
+    "slug": "nelson-coutinho-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Varzim",
+    "zone": null,
+    "morada": "N206 228, 4570-029 Póvoa de Varzim",
+    "codigo_postal": null,
+    "telefone": "+351 916 253 737",
+    "email": null,
+    "website": "https://noona.pt/nelsoncoutinhobarbershop",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/nelson-coutinho-barber-shop-n206-povoa-de-varzim-alzjaZ",
+    "google_maps": null,
+    "horario": "Ter-Sex 9h30-19h30; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/nelson-coutinho-barber-shop-n206-povoa-de-varzim-alzjaZ",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.4153411,
+      -8.6476893
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/nelson-coutinho-barber-shop-n206-povoa-de-varzim-alzjaZ"
+    ]
+  },
+  {
+    "nome": "North Side Barber",
+    "slug": "north-side-barber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila do Conde",
+    "zone": null,
+    "morada": "R. 5 de Outubro 123, 4480-671 Vila do Conde",
+    "codigo_postal": null,
+    "telefone": "+351 935 880 923",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/north-side-barber-rua-5-de-outubro-vila-do-conde-BK8xvy",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.3532394,
+      -8.7409524
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/north-side-barber-rua-5-de-outubro-vila-do-conde-BK8xvy"
+    ]
+  },
+  {
+    "nome": "O Barbeiro",
+    "slug": "o-barbeiro-carrazeda-de-ansiaes",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Carrazeda de Ansiães",
+    "zone": null,
+    "morada": "R. Mal. Gomes da Costa nº 271 1.º Direito, 5140-083 Carrazeda de Ansiães",
+    "codigo_postal": null,
+    "telefone": "+351 919 223 266",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/o-barbeiro-rua-marechal-gomes-da-costa-carrazeda-de-ansiaes-RrNxny",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.2411098,
+      -7.3055153
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/o-barbeiro-rua-marechal-gomes-da-costa-carrazeda-de-ansiaes-RrNxny"
+    ]
+  },
+  {
+    "nome": "O Bigodes - Barber Shop",
+    "slug": "o-bigodes-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Estarreja",
+    "zone": null,
+    "morada": "Rua doutor tomás, R. Dr. José Oliveira e Silva, 3860-250 Estarreja",
+    "codigo_postal": null,
+    "telefone": "+351 914 086 570",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/o-bigodes-barber-shop-estarreja-Ek59jq",
+    "google_maps": null,
+    "horario": "Ter-Sex 8h-19h; Sáb 8h-12h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/o-bigodes-barber-shop-estarreja-Ek59jq",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      40.7536632,
+      -8.5669451
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/o-bigodes-barber-shop-estarreja-Ek59jq"
+    ]
+  },
+  {
+    "nome": "Old Club Barbearia Bar",
+    "slug": "old-club-barbearia-bar",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Sardoal",
+    "zone": null,
+    "morada": "Praça Manuel Branco Vasco nº5, 2230-101 Sardoal",
+    "codigo_postal": null,
+    "telefone": "+351 915 453 949",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "http://www.facebook.com/OldClubBarbearia",
+    "booking": "https://www.fresha.com/lvp/old-club-barbearia-bar-praca-manuel-branco-vasco-sardoal-l18VK1",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.5571512,
+      -8.1679595
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/old-club-barbearia-bar-praca-manuel-branco-vasco-sardoal-l18VK1"
+    ]
+  },
+  {
+    "nome": "Porta 26 Barber Shop",
+    "slug": "porta-26-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Pombal",
+    "zone": null,
+    "morada": "R. Dr. António Fortunato da Rocha Quaresma 26, 3100-452 Pombal",
+    "codigo_postal": null,
+    "telefone": "+351 917 550 200",
+    "email": null,
+    "website": "https://porta26.pt/",
+    "instagram": "https://www.instagram.com/porta.26/",
+    "facebook": "https://www.facebook.com/barbershopporta26",
+    "booking": "https://www.fresha.com/lvp/porta-26-barber-shop-rua-doutor-antonio-fortunato-da-rocha-quaresma-pombal-nNrG9V",
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/porta-26-barber-shop-rua-doutor-antonio-fortunato-da-rocha-quaresma-pombal-nNrG9V",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.9177276,
+      -8.6269232
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/porta-26-barber-shop-rua-doutor-antonio-fortunato-da-rocha-quaresma-pombal-nNrG9V"
+    ]
+  },
+  {
+    "nome": "Porta degradé",
+    "slug": "porta-degrade",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Torres Novas",
+    "zone": null,
+    "morada": "Edifício galinha entrada, R. Nogueiral 2 loja 01, 2350-413 Torres Novas",
+    "codigo_postal": null,
+    "telefone": "+351 920 515 643",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/porta-degrade-rua-nogueiral-torres-novas-LkB2bL",
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-20h; Sáb 9h-20h30",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/porta-degrade-rua-nogueiral-torres-novas-LkB2bL",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.4783965,
+      -8.5363901
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/porta-degrade-rua-nogueiral-torres-novas-LkB2bL"
+    ]
+  },
+  {
+    "nome": "Ragazzi BarberShop",
+    "slug": "ragazzi-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ponte de Lima",
+    "zone": null,
+    "morada": "R. do Sobral 138, 4990-150 Ponte de Lima",
+    "codigo_postal": null,
+    "telefone": "+351 914 776 765",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/Ragazzi-BarberShop-1096980783649731/",
+    "booking": "https://www.fresha.com/lvp/ragazzi-barbershop-rua-do-sobral-ponte-de-lima-D1rJgP",
+    "google_maps": null,
+    "horario": "Ter-Sex 10h-19h; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/ragazzi-barbershop-rua-do-sobral-ponte-de-lima-D1rJgP",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.7627193,
+      -8.5806254
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/ragazzi-barbershop-rua-do-sobral-ponte-de-lima-D1rJgP"
+    ]
+  },
+  {
+    "nome": "Raju - Indian Barber Shop the fade culture",
+    "slug": "raju-indian-barber-shop-the-fade-culture",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Rio Maior",
+    "zone": null,
+    "morada": "Praça da República 64, 2040-321 Rio Maior",
+    "codigo_postal": null,
+    "telefone": "+351 920 231 964",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/raju-indian-barber-shop-praca-da-republica-rio-maior-D1r52W",
+    "google_maps": null,
+    "horario": "Seg 9h-20h; Ter 10h30-17h; Qua-Qui 9h-20h; Sex-Sáb 9h-20h30; Dom 9h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/raju-indian-barber-shop-praca-da-republica-rio-maior-D1r52W",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.3367122,
+      -8.936927
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/raju-indian-barber-shop-praca-da-republica-rio-maior-D1r52W"
+    ]
+  },
+  {
+    "nome": "Ring Barber Boxing",
+    "slug": "ring-barber-boxing",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Pombal",
+    "zone": null,
+    "morada": "R. Dr. António Fortunato da Rocha Quaresma R/CH Direito, 3100-484 Pombal",
+    "codigo_postal": null,
+    "telefone": "+351 916 305 170",
+    "email": null,
+    "website": "https://ringbarberboxing.com/",
+    "instagram": "https://www.instagram.com/ringbarberboxing",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/ring-barber-boxing-rua-doutor-antonio-fortunato-da-rocha-quaresma-pombal-7xvN15",
+    "google_maps": null,
+    "horario": "Ter-Sex 10h-20h; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/ring-barber-boxing-rua-doutor-antonio-fortunato-da-rocha-quaresma-pombal-7xvN15",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.9184298,
+      -8.6238818
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/ring-barber-boxing-rua-doutor-antonio-fortunato-da-rocha-quaresma-pombal-7xvN15"
+    ]
+  },
+  {
+    "nome": "Santos & Braga BARBERSHOP",
+    "slug": "santos-e-braga-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Torres Novas",
+    "zone": null,
+    "morada": "R. Joaquim Rodrigues Bicho 110 LT, LOJA 2, 2350-087 Torres Novas",
+    "codigo_postal": null,
+    "telefone": "+351 911 126 123",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/sb_barbearia_e_sobrancelhas?igsh=MTFiMWIzMjUxYXY3Nw==",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/santos-braga-barbershop-rua-joaquim-rodrigues-bicho-torres-novas-4PoZ9a",
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/santos-braga-barbershop-rua-joaquim-rodrigues-bicho-torres-novas-4PoZ9a",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.4902164,
+      -8.5486479
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/santos-braga-barbershop-rua-joaquim-rodrigues-bicho-torres-novas-4PoZ9a"
+    ]
+  },
+  {
+    "nome": "Silver hair cuts",
+    "slug": "silver-hair-cuts",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Cantanhede",
+    "zone": null,
+    "morada": "R. Parreiras, 3060-154 Cantanhede",
+    "codigo_postal": null,
+    "telefone": "+351 916 420 632",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/profile.php?id=100093487870455",
+    "booking": "https://www.fresha.com/lvp/silver-hair-cuts-rua-parreiras-cantanhede-GyPwMG",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.3491785,
+      -8.5937881
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/silver-hair-cuts-rua-parreiras-cantanhede-GyPwMG"
+    ]
+  },
+  {
+    "nome": "The Canvas barber shop",
+    "slug": "the-canvas-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Abrantes",
+    "zone": null,
+    "morada": "Praça Barão da Batalha 26, 2200-365 Abrantes",
+    "codigo_postal": null,
+    "telefone": "+351 964 774 044",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/the-canvas-barber-shop-praca-barao-da-batalha-abrantes-zXDVje",
+    "google_maps": null,
+    "horario": "Seg-Dom 9h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/the-canvas-barber-shop-praca-barao-da-batalha-abrantes-zXDVje",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.4615948,
+      -8.1981176
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/the-canvas-barber-shop-praca-barao-da-batalha-abrantes-zXDVje"
+    ]
+  },
+  {
+    "nome": "Tiger Studio - Barbearia Entroncamento",
+    "slug": "tiger-studio-barbearia-entroncamento",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Entroncamento",
+    "zone": null,
+    "morada": "R. Elias Garcia 10, 2330-151 Entroncamento",
+    "codigo_postal": null,
+    "telefone": "+351 931 441 004",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/profile.php?id=100064758844406",
+    "booking": "https://www.fresha.com/lvp/tiger-studio-barbearia-rua-elias-garcia-entroncamento-A7N75G",
+    "google_maps": null,
+    "horario": "Seg-Sáb 10h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/tiger-studio-barbearia-rua-elias-garcia-entroncamento-A7N75G",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.4651531,
+      -8.4734969
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/tiger-studio-barbearia-rua-elias-garcia-entroncamento-A7N75G"
+    ]
+  },
+  {
+    "nome": "Tua Barbearia",
+    "slug": "tua-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mirandela",
+    "zone": null,
+    "morada": "Av. 25 de Abril 264, 5370-202 Mirandela",
+    "codigo_postal": null,
+    "telefone": "+351 920 324 023",
+    "email": null,
+    "website": "http://noona.pt/tuabarbearia",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/tua-barbearia-2-avenida-25-de-abril-mirandela-BK8nwq",
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/tua-barbearia-2-avenida-25-de-abril-mirandela-BK8nwq",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.477636,
+      -7.1768727
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/tua-barbearia-2-avenida-25-de-abril-mirandela-BK8nwq"
+    ]
+  },
+  {
+    "nome": "TwentyOne Barbershop",
+    "slug": "twentyone-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Póvoa de Varzim",
+    "zone": null,
+    "morada": "R. Dr. Leonardo Coimbra 12A, 4490-621 Póvoa de Varzim",
+    "codigo_postal": null,
+    "telefone": "+351 938 177 317",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/pedrenato/",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/twentyone-barbershop-praca-dos-combatentes-povoa-de-varzim-Ek5lGL",
+    "google_maps": null,
+    "horario": "Qui-Sex 9h-19h; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/twentyone-barbershop-praca-dos-combatentes-povoa-de-varzim-Ek5lGL",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.3835548,
+      -8.7610378
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/twentyone-barbershop-praca-dos-combatentes-povoa-de-varzim-Ek5lGL"
+    ]
+  },
+  {
+    "nome": "Vangard Barbershop",
+    "slug": "vangard-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Cantanhede",
+    "zone": null,
+    "morada": "R. 5 de Outubro 130 r/c, 3060-136 Cantanhede",
+    "codigo_postal": null,
+    "telefone": "+351 964 161 830",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://m.facebook.com/vangardbarbershop",
+    "booking": "https://www.fresha.com/lvp/vangard-barbershop-rua-5-de-outubro-cantanhede-1Y4qQb",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.3512266,
+      -8.5911505
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/vangard-barbershop-rua-5-de-outubro-cantanhede-1Y4qQb"
+    ]
+  },
+  {
+    "nome": "Sweeney Todd - Barber & Academy",
+    "slug": "sweeney-todd-barber-e-academy",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Febres",
+    "zone": null,
+    "morada": "Praça Florindo José Frota 35a, 3060-318 Febres",
+    "codigo_postal": null,
+    "telefone": "+351 913 219 162",
+    "email": null,
+    "website": "https://vascobarber.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/vasco-barber-barbershop-beauty-salon-praca-florindo-jose-frota-febres-A7NDDR",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.3997124,
+      -8.6301444
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/vasco-barber-barbershop-beauty-salon-praca-florindo-jose-frota-febres-A7NDDR"
+    ]
+  },
+  {
+    "nome": "Zorba Barbeiro",
+    "slug": "zorba-barbeiro",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mação",
+    "zone": null,
+    "morada": "Largo dos Bombeiros Voluntarios 20a, 6120-732 Mação",
+    "codigo_postal": null,
+    "telefone": "+351 966 476 258",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/zorba-barbeiro-largo-dos-bombeiros-voluntarios-macao-k9PA4n",
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/zorba-barbeiro-largo-dos-bombeiros-voluntarios-macao-k9PA4n",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.557463,
+      -7.9955003
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/zorba-barbeiro-largo-dos-bombeiros-voluntarios-macao-k9PA4n"
+    ]
   }
 ];
 

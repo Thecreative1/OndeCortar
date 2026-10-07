@@ -54,7 +54,18 @@
     "horta (angustias)": { locative: "na Horta (Angústias)" },
     "horta (angústias)": { locative: "na Horta (Angústias)" },
     "falagueira-venda nova amadora": { locative: "na Falagueira-Venda Nova Amadora" },
-    "parede - jardins da parede": { locative: "na Parede - Jardins da Parede" }
+    "parede - jardins da parede": { locative: "na Parede - Jardins da Parede" },
+    "povoa de varzim": { locative: "na Póvoa de Varzim" },
+    "póvoa de varzim": { locative: "na Póvoa de Varzim" },
+    "entroncamento": { locative: "no Entroncamento" },
+    "bombarral": { locative: "no Bombarral" },
+    "tramagal": { locative: "no Tramagal" },
+    "sardoal": { locative: "no Sardoal" },
+    "benedita": { locative: "na Benedita" },
+    "praia de mira": { locative: "na Praia de Mira" },
+    "guia (pombal)": { locative: "na Guia (Pombal)" },
+    "guia (albufeira)": { locative: "na Guia (Albufeira)" },
+    "chamusca": { locative: "na Chamusca" }
   };
   const PLACEHOLDER_PHONE_DIGITS = new Set([
     "351253000000",
