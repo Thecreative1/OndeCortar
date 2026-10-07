@@ -1990,6 +1990,53 @@ function buildClientDataFile(rawBarbers) {
     + "const barbearias = " + JSON.stringify(slim) + ";\n";
 }
 
+// llms.txt (https://llmstxt.org): resumo em Markdown para assistentes de IA (ChatGPT, Claude,
+// Perplexity…) perceberem o site e citarem as páginas certas. Gerado aqui para os números e a
+// lista de cidades acompanharem os dados.
+function buildLlmsTxt(data) {
+  const cities = data.cities.slice().sort((a, b) =>
+    b.barbearias.length - a.barbearias.length || a.name.localeCompare(b.name, "pt"));
+  const plural = (n) => n + (n === 1 ? " barbearia" : " barbearias");
+  return [
+    "# OndeCortar.pt",
+    "",
+    "> Diretório independente de barbearias em Portugal (continente, Madeira e Açores): " + data.barbers.length +
+      " barbearias em " + data.cities.length + " cidades e localidades, com morada, contactos públicos, horário quando conhecido" +
+      " e localização no mapa. Gratuito para quem pesquisa e para as barbearias. Inclui também uma revista de guias de barba" +
+      " e cabelo e uma loja de recomendações de produtos (links afiliados da Amazon.es, assinalados).",
+    "",
+    "Notas para quem cita este site:",
+    "",
+    "- Cada barbearia tem uma página própria em https://ondecortar.pt/barbearias/{slug}/ com dados estruturados schema.org HairSalon.",
+    "- Os dados vêm de informação pública (site, redes sociais e páginas de marcação da própria barbearia, OpenStreetMap) e são revistos manualmente;" +
+      " cada perfil mostra a data da última validação. Horários e preços devem ser confirmados com a barbearia.",
+    "- O OndeCortar.pt não mostra avaliações nem estrelas e não faz rankings pagos.",
+    "- Dados atualizados a " + data.siteLastmod + ".",
+    "",
+    "## Diretório",
+    "",
+    "- [Mapa e pesquisa de barbearias](" + SITE_URL + "): pesquisa por cidade, nome ou morada, com filtros por região",
+    "- [Todas as cidades](" + SITE_URL + "cidades/): índice das páginas por cidade",
+    "- [Adicionar ou corrigir uma barbearia](" + SITE_URL + "registar.html): formulário gratuito para donos de barbearias",
+    "",
+    "## Barbearias por cidade",
+    "",
+    ...cities.map((city) => "- [Barbearias " + locativeLabel(city.name) + "](" + absoluteUrl(city.url) + "): " + plural(city.barbearias.length)),
+    "",
+    "## Sobre o projeto",
+    "",
+    "- [Sobre o OndeCortar.pt](" + SITE_URL + "sobre/): critérios editoriais e transparência de afiliados",
+    "- [Perguntas frequentes](" + SITE_URL + "faq.html)",
+    "- [Como escolhemos os produtos](" + SITE_URL + "loja/como-escolhemos/)",
+    "",
+    "## Optional",
+    "",
+    "- [Revista](" + SITE_URL + "revista/): guias práticos sobre barba, cortes, máquinas e cultura de barbearia",
+    "- [Loja](" + SITE_URL + "loja/): seleção de produtos de barbearia com links afiliados para a Amazon.es",
+    ""
+  ].join("\n");
+}
+
 function main() {
   const rawBarbers = loadBarbers();
   writeFile(path.join("Barbeiros", "barbearias.mapa.js"), buildClientDataFile(rawBarbers));
@@ -2036,6 +2083,8 @@ function main() {
     { loc: SITE_URL + "sitemap-loja.xml", lastmod: data.siteLastmod },
     { loc: SITE_URL + "sitemap-revista.xml", lastmod: data.siteLastmod }
   ]));
+
+  writeFile("llms.txt", buildLlmsTxt(data));
 
   patchIndexHtml(
     buildHomepageStaticList(data.barbers),
