@@ -65,7 +65,9 @@
     "praia de mira": { locative: "na Praia de Mira" },
     "guia (pombal)": { locative: "na Guia (Pombal)" },
     "guia (albufeira)": { locative: "na Guia (Albufeira)" },
-    "chamusca": { locative: "na Chamusca" }
+    "chamusca": { locative: "na Chamusca" },
+    "crato": { locative: "no Crato" },
+    "marco de canaveses": { locative: "no Marco de Canaveses" }
   };
   const PLACEHOLDER_PHONE_DIGITS = new Set([
     "351253000000",

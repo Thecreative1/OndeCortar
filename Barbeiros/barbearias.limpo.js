@@ -23158,6 +23158,547 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/lvp/zorba-barbeiro-largo-dos-bombeiros-voluntarios-macao-k9PA4n"
     ]
+  },
+  {
+    "nome": "Amber barbearia",
+    "slug": "amber-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Tondela",
+    "zone": null,
+    "morada": "R. Comendador Alberto Cardoso Matos 21 R/c, 3460-552 Tondela",
+    "codigo_postal": null,
+    "telefone": "+351 920 017 063",
+    "email": null,
+    "website": "https://website-2-barbershop.business.site/",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/amber-barber-shop-rua-comendador-alberto-cardoso-matos-tondela-Kk5ozP",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.5186521,
+      -8.0819758
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/amber-barber-shop-rua-comendador-alberto-cardoso-matos-tondela-Kk5ozP"
+    ]
+  },
+  {
+    "nome": "Barbearia do Sam",
+    "slug": "barbearia-do-sam",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Pataias",
+    "zone": null,
+    "morada": "Av. Raínha Santa Isabel 145, Pataias",
+    "codigo_postal": null,
+    "telefone": "+351 913 794 891",
+    "email": null,
+    "website": null,
+    "instagram": "https://instagram.com/barbeariadosam_pt",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-do-sam-avenida-rainha-santa-isabel-pataias-MV7gkQ",
+    "google_maps": null,
+    "horario": "Ter-Sáb 10h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-do-sam-avenida-rainha-santa-isabel-pataias-MV7gkQ",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      39.6702648,
+      -8.9948302
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-do-sam-avenida-rainha-santa-isabel-pataias-MV7gkQ"
+    ]
+  },
+  {
+    "nome": "Barbearia escovinha",
+    "slug": "barbearia-escovinha",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Avis",
+    "zone": null,
+    "morada": "R. Machado dos Santos, 7480-148 Avis",
+    "codigo_postal": null,
+    "telefone": "+351 964 038 756",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-escovinha-rua-machado-dos-santos-avis-85rj9j",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.0546899,
+      -7.8899893
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-escovinha-rua-machado-dos-santos-avis-85rj9j"
+    ]
+  },
+  {
+    "nome": "Barbearia Joao Teodoro",
+    "slug": "barbearia-joao-teodoro",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Crato",
+    "zone": null,
+    "morada": "Av. Dom Manuel I, 7430-169 Crato",
+    "codigo_postal": null,
+    "telefone": "+351 969 848 733",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-joao-teodoro-avenida-dom-manuel-i-crato-qLX9nG",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.2905962,
+      -7.6460117
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-joao-teodoro-avenida-dom-manuel-i-crato-qLX9nG"
+    ]
+  },
+  {
+    "nome": "BARBEARIA MARTINS",
+    "slug": "barbearia-martins-vila-pouca-de-aguiar",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila Pouca de Aguiar",
+    "zone": null,
+    "morada": "Rua 25 de Abril 33, 5450-015 Vila Pouca de Aguiar",
+    "codigo_postal": null,
+    "telefone": "+351 961 944 685",
+    "email": null,
+    "website": "https://barbearia-martins.buk.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-martins-praca-25-de-abril-vila-pouca-de-aguiar-wXDqoW",
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-19h30; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barbearia-martins-praca-25-de-abril-vila-pouca-de-aguiar-wXDqoW",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.5004414,
+      -7.6454206
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-martins-praca-25-de-abril-vila-pouca-de-aguiar-wXDqoW"
+    ]
+  },
+  {
+    "nome": "Barbearia Patrícios alameda",
+    "slug": "barbearia-patricios-alameda",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Marco de Canaveses",
+    "zone": null,
+    "morada": "Alameda Dr. Miranda da Rocha 249, 4630-200 Marco de Canaveses",
+    "codigo_postal": null,
+    "telefone": "+351 932 543 315",
+    "email": null,
+    "website": null,
+    "instagram": "http://www.instagram.com/patricios.barbearia",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-patricios-alameda-alameda-doutor-miranda-da-rocha-marco-de-canaveses-Ek5qQq",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.1864281,
+      -8.1490725
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-patricios-alameda-alameda-doutor-miranda-da-rocha-marco-de-canaveses-Ek5qQq"
+    ]
+  },
+  {
+    "nome": "Barbearia Pura",
+    "slug": "barbearia-pura",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Valpaços",
+    "zone": null,
+    "morada": "R. Cidade de Bettenbourg, 5430-426 Valpaços",
+    "codigo_postal": null,
+    "telefone": "+351 937 132 774",
+    "email": null,
+    "website": null,
+    "instagram": "http://instagram.com/barbeariapura",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-pura-rua-cidade-de-bettenbourg-valpacos-Y0WoEK",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.6035497,
+      -7.3110899
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-pura-rua-cidade-de-bettenbourg-valpacos-Y0WoEK"
+    ]
+  },
+  {
+    "nome": "Barbearia Tavares",
+    "slug": "barbearia-tavares-vieira-de-leiria",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vieira de Leiria",
+    "zone": null,
+    "morada": "Largo da República, 2430-795 Vieira de Leiria",
+    "codigo_postal": null,
+    "telefone": "+351 916 015 396",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbearia-tavares-largo-da-republica-vieira-de-leiria-Ek5qNe",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      39.8691004,
+      -8.9347711
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbearia-tavares-largo-da-republica-vieira-de-leiria-Ek5qNe"
+    ]
+  },
+  {
+    "nome": "Barber Space 4630",
+    "slug": "barber-space-4630",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Marco de Canaveses",
+    "zone": null,
+    "morada": "Av. Dr. Artur Melo e Castro 23, 4630-204 Marco de Canaveses",
+    "codigo_postal": null,
+    "telefone": "+351 916 745 557",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/people/Barber-Space-4630/100056384630604/",
+    "booking": "https://www.fresha.com/lvp/barber-space-4630-avenida-doutor-artur-melo-e-castro-marco-de-canaveses-eq9wEx",
+    "google_maps": null,
+    "horario": "Ter-Qui 9h30-19h; Sex 9h30-21h; Sáb 7h-16h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/barber-space-4630-avenida-doutor-artur-melo-e-castro-marco-de-canaveses-eq9wEx",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.1907793,
+      -8.1451542
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/barber-space-4630-avenida-doutor-artur-melo-e-castro-marco-de-canaveses-eq9wEx"
+    ]
+  },
+  {
+    "nome": "Barbershop Bernardo Fernandes",
+    "slug": "barbershop-bernardo-fernandes",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Tondela",
+    "zone": null,
+    "morada": "R. Tomaz Ribeiro 80, 3460-616 Tondela",
+    "codigo_postal": null,
+    "telefone": "+351 962 251 716",
+    "email": null,
+    "website": "https://barbershopbernardofernandes.buk.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/barbershop-bernardo-fernandes-rua-tomaz-ribeiro-tondela-D1rW0Y",
+    "google_maps": null,
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.5169827,
+      -8.0798022
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.fresha.com/lvp/barbershop-bernardo-fernandes-rua-tomaz-ribeiro-tondela-D1rW0Y"
+    ]
+  },
+  {
+    "nome": "Casa do barbeiro- SESIMBRA",
+    "slug": "casa-do-barbeiro-sesimbra",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Sesimbra",
+    "zone": null,
+    "morada": "Av. Sérgio Vieira de Mello 14, 2970-187 Sesimbra",
+    "codigo_postal": null,
+    "telefone": "+351 936 763 836",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/casa-do-barbeiro-sesimbra-avenida-sergio-vieira-de-mello-eq9772",
+    "google_maps": null,
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/casa-do-barbeiro-sesimbra-avenida-sergio-vieira-de-mello-eq9772",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.464157,
+      -9.0985603
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/casa-do-barbeiro-sesimbra-avenida-sergio-vieira-de-mello-eq9772"
+    ]
+  },
+  {
+    "nome": "O APARADINHO",
+    "slug": "o-aparadinho",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Marco de Canaveses",
+    "zone": null,
+    "morada": "Av. Dr. Francisco Sá Carneiro, Rua Central de Ribaçais, 4630-205 Marco de Canaveses",
+    "codigo_postal": null,
+    "telefone": "+351 964 064 523",
+    "email": null,
+    "website": "http://oaparadinho.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/o-aparadinho-avenida-doutor-francisco-sa-carneiro-marco-de-canaveses-ylD3Bo",
+    "google_maps": null,
+    "horario": "Ter-Qua 9h-18h; Qui 9h-21h; Sex 9h-18h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/o-aparadinho-avenida-doutor-francisco-sa-carneiro-marco-de-canaveses-ylD3Bo",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.1858146,
+      -8.1481359
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/o-aparadinho-avenida-doutor-francisco-sa-carneiro-marco-de-canaveses-ylD3Bo"
+    ]
+  },
+  {
+    "nome": "Picão Barber Shop",
+    "slug": "picao-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Marco de Canaveses",
+    "zone": null,
+    "morada": "Edifício Central da Livração, Praceta da Livração 14 Bloco B, 4635-518 Marco de Canaveses",
+    "codigo_postal": null,
+    "telefone": "+351 910 848 501",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/picao.barbershop/",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/picao-barber-shop-praceta-da-livracao-marco-de-canaveses-k9PVQn",
+    "google_maps": null,
+    "horario": "Ter-Qua 9h30-20h; Qui-Sex 9h-20h; Sáb 8h-16h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/picao-barber-shop-praceta-da-livracao-marco-de-canaveses-k9PVQn",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.2217966,
+      -8.1457314
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/picao-barber-shop-praceta-da-livracao-marco-de-canaveses-k9PVQn"
+    ]
+  },
+  {
+    "nome": "Rafa's BarberShop - Vila Pouca de Aguiar",
+    "slug": "rafa-s-barbershop-vila-pouca-de-aguiar",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila Pouca de Aguiar",
+    "zone": null,
+    "morada": "R. Dr. António Gil 69, 5450-017 Vila Pouca de Aguiar",
+    "codigo_postal": null,
+    "telefone": "+351 912 816 251",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/rafas_barbershop/",
+    "facebook": "https://www.facebook.com/RafaSbarber/",
+    "booking": "https://www.fresha.com/lvp/rafas-barbershop-rua-doutor-antonio-gil-vila-pouca-de-aguiar-KoQxR",
+    "google_maps": null,
+    "horario": "Seg-Sex 9h-12h30; Sáb 8h-15h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/rafas-barbershop-rua-doutor-antonio-gil-vila-pouca-de-aguiar-KoQxR",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.4995378,
+      -7.6453101
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/rafas-barbershop-rua-doutor-antonio-gil-vila-pouca-de-aguiar-KoQxR"
+    ]
+  },
+  {
+    "nome": "Tesoura Mágica",
+    "slug": "tesoura-magica",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Montalegre",
+    "zone": null,
+    "morada": "R. Padre Domingos Barroso 2a, 5470-246 Montalegre",
+    "codigo_postal": null,
+    "telefone": "+351 933 361 183",
+    "email": null,
+    "website": null,
+    "instagram": "https://instagram.com/tesoura_magica_",
+    "facebook": null,
+    "booking": "https://www.fresha.com/lvp/tesoura-magica-rua-padre-domingos-barroso-montalegre-85r6eM",
+    "google_maps": null,
+    "horario": "Ter-Sex 9h-12h30; Sáb 9h-15h",
+    "horario_fonte": {
+      "nome": "Fresha",
+      "url": "https://www.fresha.com/lvp/tesoura-magica-rua-padre-domingos-barroso-montalegre-85r6eM",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      41.8347327,
+      -7.7765222
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.fresha.com/lvp/tesoura-magica-rua-padre-domingos-barroso-montalegre-85r6eM"
+    ]
+  },
+  {
+    "nome": "Barbearia Carvalho",
+    "slug": "barbearia-carvalho-sesimbra",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Sesimbra",
+    "zone": null,
+    "morada": "Avenida dos Náufragos 17B, 2970-637 Sesimbra",
+    "codigo_postal": null,
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbeariacarvalho_2023/",
+    "facebook": null,
+    "booking": "https://booksy.com/pt-pt/4554_barbearia-carvalho_barbearia_251932_sesimbra",
+    "google_maps": null,
+    "horario": "Seg 14h-20h; Ter-Sáb 10h-13h e 14h-20h; Dom 10h-15h",
+    "horario_fonte": {
+      "nome": "Booksy",
+      "url": "https://booksy.com/pt-pt/4554_barbearia-carvalho_barbearia_251932_sesimbra",
+      "data": "2026-10-07"
+    },
+    "observacoes": null,
+    "coords": [
+      38.44321,
+      -9.103569
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-07",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://booksy.com/pt-pt/4554_barbearia-carvalho_barbearia_251932_sesimbra"
+    ]
   }
 ];
 
