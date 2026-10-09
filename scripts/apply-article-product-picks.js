@@ -133,6 +133,14 @@ const PICKS = {
       ["uraqt-capa", "Capa", "Para proteger o cliente durante o corte e manter o serviço limpo."]
     ]
   },
+  "pelos-nas-orelhas-porque-crescem-e-como-tirar": {
+    title: "O que usar nas orelhas",
+    items: [
+      ["panasonic-er-gn30", "A nossa escolha", "Nariz e orelhas com a mesma cabeça: lâmina protegida de fio duplo, lavável."],
+      ["philips-mg3930-series-3000", "Tudo num só", "7 acessórios para barba, cabelo, nariz e orelhas, para quem ainda não tem aparador."],
+      ["braun-aio7545-series-7", "Kit completo", "12 em 1 para barba, cabelo, orelhas, nariz e corpo."]
+    ]
+  },
   "after-shave-para-que-serve": {
     title: "Preparar a pele antes da lâmina",
     items: [
@@ -152,6 +160,11 @@ const STICKY = {
   "como-cortar-cabelo-masculino-com-tesoura-em-casa": {
     product: "candure-tesoura-cabeleireiro",
     label: "A tesoura que recomendamos",
+    after: "produtos-recomendados"
+  },
+  "pelos-nas-orelhas-porque-crescem-e-como-tirar": {
+    product: "panasonic-er-gn30",
+    label: "A nossa escolha",
     after: "produtos-recomendados"
   },
   "borrifador-para-barbearia-qual-escolher": {
