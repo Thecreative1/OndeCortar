@@ -128,7 +128,7 @@ module.exports = [
     sections: [
       {
         h2: "O que precisas antes de começar",
-        html: "<ul class=\"rich-list\"><li><strong>Máquina com pentes</strong> — com os comprimentos bem marcados (em mm ou por número). Ver a <a href=\"../../revista/numeros-da-maquina-de-cortar-cabelo/\">tabela dos números da máquina</a>.</li><li><strong>Dois espelhos</strong> (um à frente e outro de mão para ver a nuca) ou alguém que ajude na parte de trás.</li><li><strong>Capa ou toalha</strong> e um sítio fácil de varrer.</li><li><strong>Pente e, se quiseres trabalhar o topo, tesoura.</strong></li><li><strong>Aparador ou máquina sem pente</strong> para os contornos à volta das orelhas e na nuca.</li></ul><p>O cabelo deve estar <strong>limpo e completamente seco</strong>. Molhado parece mais comprido do que é e a máquina prende.</p>"
+        html: "<ul class=\"rich-list\"><li><strong>Máquina com pentes</strong> — com os comprimentos bem marcados (em mm ou por número). Ver a <a href=\"../../revista/numeros-da-maquina-de-cortar-cabelo/\">tabela dos números da máquina</a>.</li><li><strong>Dois espelhos</strong> (um à frente e outro de mão para ver a nuca) ou alguém que ajude na parte de trás.</li><li><strong>Capa ou toalha</strong> e um sítio fácil de varrer.</li><li><strong>Pente e, se quiseres trabalhar o topo, tesoura</strong> — vê <a href=\"../../revista/como-cortar-cabelo-masculino-com-tesoura-em-casa/\">como cortar o topo à tesoura</a>.</li><li><strong>Aparador ou máquina sem pente</strong> para os contornos à volta das orelhas e na nuca.</li></ul><p>O cabelo deve estar <strong>limpo e completamente seco</strong>. Molhado parece mais comprido do que é e a máquina prende.</p>"
       },
       {
         id: "passo-a-passo",

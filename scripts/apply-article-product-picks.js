@@ -107,6 +107,15 @@ const PICKS = {
       ["cecotec-bamba-precisioncare-pro-5em1", "À prova de água", "5 em 1 para cabelo, barba, nariz/orelhas e corpo, à prova de água (IPX7)."]
     ]
   },
+  "como-cortar-cabelo-masculino-com-tesoura-em-casa": {
+    title: "O que precisas para cortar à tesoura",
+    items: [
+      ["candure-tesoura-cabeleireiro", "A tesoura", "6,5 polegadas em aço inoxidável, fio convexo e anéis ajustáveis aos dedos."],
+      ["grifema-pulverizador-agua", "O pulverizador", "Névoa fina para manter o cabelo húmido enquanto cortas, sem o encharcar."],
+      ["charlemagne-pente", "O pente", "Carbono antiestático e leve, para a tesoura sobre o pente."],
+      ["ecence-capa-corte", "A capa", "Impermeável e fácil de limpar depois de cada corte."]
+    ]
+  },
   "after-shave-para-que-serve": {
     title: "Preparar a pele antes da lâmina",
     items: [
@@ -122,6 +131,11 @@ const STICKY = {
     product: "philips-hc5630-series-5000",
     label: "Melhor no geral",
     after: "melhores-maquinas"
+  },
+  "como-cortar-cabelo-masculino-com-tesoura-em-casa": {
+    product: "candure-tesoura-cabeleireiro",
+    label: "A tesoura que recomendamos",
+    after: "produtos-recomendados"
   },
   "aparador-de-pelos-do-nariz-qual-escolher": {
     product: "panasonic-er-gn30",

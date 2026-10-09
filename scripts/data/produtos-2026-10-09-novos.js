@@ -43,7 +43,7 @@ module.exports = [
     strengths: ["aço inoxidável, com fio convexo para um corte suave", "anéis amovíveis para ajustar aos dedos", "serve para cabelo húmido ou seco"],
     limits: ["vendida por um vendedor externo, não pela Amazon", "cortar à tesoura pede mais prática do que a máquina"],
     categories: ["acessorios-de-barbeiro", "para-casa"],
-    articles: ["como-cortar-o-cabelo-em-casa-com-maquina", "o-que-um-barbeiro-precisa-no-posto-de-trabalho"],
+    articles: ["como-cortar-cabelo-masculino-com-tesoura-em-casa", "como-cortar-o-cabelo-em-casa-com-maquina"],
     related: ["remington-colourcut-hc5035", "ecence-capa-corte", "charlemagne-pente"]
   },
   {
@@ -56,7 +56,7 @@ module.exports = [
     strengths: ["névoa fina e uniforme", "abertura larga para encher sem derramar", "reutilizável, leve e fácil de lavar"],
     limits: ["200 ml: é para borrifar, não para grandes volumes", "o fabricante recomenda água filtrada para a névoa se manter uniforme"],
     categories: ["acessorios-de-barbeiro", "para-barbeiros"],
-    articles: ["o-que-um-barbeiro-precisa-no-posto-de-trabalho", "o-essencial-para-manter-uma-bancada-de-barbeiro-organizada"],
+    articles: ["como-cortar-cabelo-masculino-com-tesoura-em-casa", "o-que-um-barbeiro-precisa-no-posto-de-trabalho"],
     related: ["uraqt-capa", "eurostil-rolos", "barbicide-desinfetante-pulverizador"]
   }
 ];
