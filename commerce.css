@@ -88,7 +88,13 @@
   white-space: nowrap;
   min-width: 0;
 }
-.oc-sticky-cta .btn { flex-shrink: 0; }
+.oc-sticky-cta-name small {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.oc-sticky-cta .btn { flex-shrink: 0; width: auto; } /* senão a regra mobile .btn{width:100%} esconde o nome */
 @media (max-width: 760px) {
   .oc-sticky-cta:not([hidden]) { display: flex; }
 }
@@ -177,7 +183,10 @@
 .oc-top-pick-copy h3 a:hover { color: var(--accent); }
 .oc-top-pick-copy p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
 .oc-top-pick-actions { display: flex; flex-direction: column; gap: 8px; }
+/* Sem número (blocos "Da nossa seleção" nos artigos práticos) */
+.oc-top-picks--unranked .oc-top-pick { grid-template-columns: 96px minmax(0, 1fr) auto; }
 @media (max-width: 760px) {
+  .oc-top-picks--unranked .oc-top-pick { grid-template-columns: 72px minmax(0, 1fr); }
   .oc-top-pick {
     grid-template-columns: 72px minmax(0, 1fr);
     gap: 12px 14px;
