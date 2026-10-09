@@ -29,7 +29,8 @@ const HUB_TOPIC = {
   "conteudo-pratico": { h2: "maquinas-h", label: "Cabelo · Passo a passo" },
   "cuidados-com-a-barba": { h2: "barba-h", label: "Barba · Passo a passo" },
   "estilo-e-tendencias": { h2: "cultura-h", label: "Cortes · Estilo" },
-  "guias-de-compra": { h2: "guias-h", label: "Guia de compra" }
+  "guias-de-compra": { h2: "guias-h", label: "Guia de compra" },
+  "para-barbeiros": { h2: "guias-h", label: "Para barbeiros" }
 };
 
 const input = process.argv[2];

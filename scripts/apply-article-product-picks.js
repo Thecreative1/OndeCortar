@@ -124,6 +124,15 @@ const PICKS = {
       ["braun-series-5-aio5545", "Tudo em um", "Cabelo, barba e corpo com o mesmo aparelho, trocando de cabeça."]
     ]
   },
+  "borrifador-para-barbearia-qual-escolher": {
+    title: "Para o posto de trabalho",
+    items: [
+      ["grifema-pulverizador-300ml", "A nossa escolha", "Névoa contínua, uso a 360° e bocal de 0,3 mm, em 300 ml para o dia todo."],
+      ["grifema-pulverizador-agua", "Compacto", "200 ml com névoa fina, para levar ou para cortes ao domicílio."],
+      ["barbicide-desinfetante-pulverizador", "Desinfeção", "O pulverizador do desinfetante, separado do da água."],
+      ["uraqt-capa", "Capa", "Para proteger o cliente durante o corte e manter o serviço limpo."]
+    ]
+  },
   "after-shave-para-que-serve": {
     title: "Preparar a pele antes da lâmina",
     items: [
@@ -143,6 +152,11 @@ const STICKY = {
   "como-cortar-cabelo-masculino-com-tesoura-em-casa": {
     product: "candure-tesoura-cabeleireiro",
     label: "A tesoura que recomendamos",
+    after: "produtos-recomendados"
+  },
+  "borrifador-para-barbearia-qual-escolher": {
+    product: "grifema-pulverizador-300ml",
+    label: "A nossa escolha",
     after: "produtos-recomendados"
   },
   "aparador-corporal-masculino-qual-escolher": {
