@@ -17,7 +17,7 @@ module.exports = [
     strengths: ["lâmina curva de fio duplo que corta dos lados e de cima", "lâminas hipoalergénicas em aço inoxidável", "à prova de água, lava-se sem tirar a cabeça (sistema Vortex)"],
     limits: ["funciona com uma pilha AA, não é recarregável", "só para pelos pequenos: não apara barba nem cabelo"],
     categories: ["trimmers-e-shavers", "para-casa"],
-    articles: ["como-aparar-as-sobrancelhas-homem", "o-essencial-para-tratar-da-barba-em-casa"],
+    articles: ["aparador-de-pelos-do-nariz-qual-escolher", "como-aparar-as-sobrancelhas-homem"],
     related: ["solati-aparador", "philips-oneblade-360-qp2724", "braun-aio7545-series-7"]
   },
   {

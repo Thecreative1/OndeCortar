@@ -99,6 +99,14 @@ const PICKS = {
       ["solati-aparador", "Pequeno e leve", "Formato leve e preciso para contornos e acabamentos."]
     ]
   },
+  "aparador-de-pelos-do-nariz-qual-escolher": {
+    title: "Os três que recomendamos",
+    items: [
+      ["panasonic-er-gn30", "A nossa escolha", "Dedicado ao nariz e às orelhas: lâmina curva de fio duplo, lava-se debaixo da torneira."],
+      ["philips-mg3930-series-3000", "Tudo num só", "7 acessórios para barba, cabelo, nariz e orelhas, para quem ainda não tem aparador."],
+      ["cecotec-bamba-precisioncare-pro-5em1", "À prova de água", "5 em 1 para cabelo, barba, nariz/orelhas e corpo, à prova de água (IPX7)."]
+    ]
+  },
   "after-shave-para-que-serve": {
     title: "Preparar a pele antes da lâmina",
     items: [
@@ -114,6 +122,11 @@ const STICKY = {
     product: "philips-hc5630-series-5000",
     label: "Melhor no geral",
     after: "melhores-maquinas"
+  },
+  "aparador-de-pelos-do-nariz-qual-escolher": {
+    product: "panasonic-er-gn30",
+    label: "A nossa escolha",
+    after: "produtos-recomendados"
   }
 };
 
