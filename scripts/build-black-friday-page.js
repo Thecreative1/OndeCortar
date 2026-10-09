@@ -44,7 +44,7 @@ const WATCH = [
   {
     id: "prendas", title: "Kits e prendas", intro: "Conjuntos fáceis de oferecer, para quem começa ou quer renovar a rotina de barba.",
     items: [
-      ["viking-sandalwood", "Kit de barba", "Óleo, bálsamo, creme e pente, com aroma a sândalo e boa apresentação."],
+      ["viking-sandalwood", "Kit de barba", "Champô, condicionador, óleo, bálsamo e pente, com aroma a sândalo e boa apresentação."],
       ["king-c-rotina", "Rotina clássica", "Kit King C. Gillette com máquina, pincel, creme e amaciador."],
       ["proraso-creme", "Barbear clássico", "Creme de barbear italiano, um clássico de barbearia."],
       ["braun-series-5-aio5545", "Cabelo, barba e corpo", "Um só aparelho com acessórios para cabeça, barba e corpo."]

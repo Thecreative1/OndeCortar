@@ -131,10 +131,13 @@ for (const file of files) {
     if (ownSlug === pair.old.slug) continue;
     // Página de um produto já substituído antes que apontava para o produto antigo
     // (cadeia: charlemagne → american-crew → proraso): o aviso passa a apontar para o novo
-    if (ownSlug && html.includes("OC-UNAVAILABLE-START") && html.includes("produto/" + pair.old.slug + "/")) {
-      html = html.split("produto/" + pair.old.slug + "/").join("produto/" + pair.fresh.slug + "/")
+    // Só o aviso e a frase da caixa de compra: os cartões da página seguem o caminho normal abaixo
+    if (ownSlug && html.includes("OC-UNAVAILABLE-START")) {
+      const swapIn = (text) => text.split("produto/" + pair.old.slug + "/").join("produto/" + pair.fresh.slug + "/")
         .split(esc(pair.old.name)).join(esc(pair.fresh.name));
-      report.chained = (report.chained || 0) + 1;
+      html = html.replace(/<!-- OC-UNAVAILABLE-START -->[\s\S]*?<!-- OC-UNAVAILABLE-END -->/, swapIn)
+        .replace(/(<p>[^<]*(?:alternativa que recomendamos|bálsamo que recomendamos)[^<]*: )([^<]*)(\.<\/p>)/, (m, a, name, b) =>
+          name === esc(pair.old.name) ? a + esc(pair.fresh.name) + b : m);
     }
     // ItemList JSON-LD (loja/index.html)
     html = html.replace(
