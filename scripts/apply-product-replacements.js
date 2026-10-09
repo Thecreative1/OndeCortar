@@ -129,6 +129,13 @@ for (const file of files) {
 
   for (const pair of pairs) {
     if (ownSlug === pair.old.slug) continue;
+    // Página de um produto já substituído antes que apontava para o produto antigo
+    // (cadeia: charlemagne → american-crew → proraso): o aviso passa a apontar para o novo
+    if (ownSlug && html.includes("OC-UNAVAILABLE-START") && html.includes("produto/" + pair.old.slug + "/")) {
+      html = html.split("produto/" + pair.old.slug + "/").join("produto/" + pair.fresh.slug + "/")
+        .split(esc(pair.old.name)).join(esc(pair.fresh.name));
+      report.chained = (report.chained || 0) + 1;
+    }
     // ItemList JSON-LD (loja/index.html)
     html = html.replace(
       new RegExp('"url":"https://ondecortar\\.pt/produto/' + pair.old.slug + '/","name":"' + escapeRe(pair.old.name) + '"', "g"),
@@ -168,19 +175,24 @@ for (const { old, oldAsin, fresh } of pairs) {
   const before = html;
   const oldHref = new RegExp('href="https://www\\.amazon\\.es/[^"]*dp/' + oldAsin + '[^"]*"([^>]*)>[^<]*</a>', "g");
   html = html.replace(oldHref, (m, attrs) => 'href="' + amazonHref(fresh.asin) + '"' + attrs + ">Ver alternativa na Amazon.es</a>");
+  // barra fixa mobile: o botão leva ao substituto, por isso é o nome dele que aparece
+  html = html.replace(/<span class="oc-sticky-cta-name">[\s\S]*?<\/span>(?=\s*<a)/,
+    '<span class="oc-sticky-cta-name"><small>Alternativa</small>' + esc(fresh.name) + "</span>");
   if (html.includes("<!-- OC-UNAVAILABLE-START -->")) {
     if (html !== before) fs.writeFileSync(file, html, "utf8");
     continue;
   }
+  // fresh.note (opcional) troca o texto quando o motivo não é indisponibilidade
+  const custom = fresh.note || {};
   const note = "<!-- OC-UNAVAILABLE-START -->" +
-    '<div class="oc-unavailable-note" role="note"><strong>Indisponível na Amazon.es</strong>' +
-    "<p>Este produto deixou de estar disponível na Amazon.es (confirmado a " + CHECKED_ON + "). " +
+    '<div class="oc-unavailable-note" role="note"><strong>' + esc(custom.title || "Indisponível na Amazon.es") + "</strong>" +
+    "<p>" + esc(custom.text || "Este produto deixou de estar disponível na Amazon.es (confirmado a " + CHECKED_ON + ").") + " " +
     'A alternativa que recomendamos é o <a href="../../produto/' + fresh.slug + '/">' + esc(fresh.name) + "</a>.</p></div>" +
     "<!-- OC-UNAVAILABLE-END -->";
   html = html.replace(/(<h1>[^<]*<\/h1><p>[^<]*<\/p>)/, (m) => m + note);
   html = html.replace(
     "<p>O preço e o stock mudam com frequência. Confirma diretamente na Amazon.es antes de decidir.</p>",
-    "<p>Este produto está indisponível na Amazon.es. O botão abaixo leva à alternativa que recomendamos: " + esc(fresh.name) + ".</p>"
+    "<p>" + esc(custom.buyBox || "Este produto está indisponível na Amazon.es. O botão abaixo leva à alternativa que recomendamos") + ": " + esc(fresh.name) + ".</p>"
   );
   if (!html.includes("OC-UNAVAILABLE-START")) throw new Error(old.slug + ": não encontrei onde pôr o aviso");
   fs.writeFileSync(file, html, "utf8");
