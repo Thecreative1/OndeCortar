@@ -30,7 +30,7 @@ module.exports = [
     strengths: ["sistema de proteção da pele, também para zonas íntimas", "100% à prova de água: usa-se a seco ou no duche", "até 80 minutos de bateria de lítio"],
     limits: ["carrega por USB-A e não traz adaptador de corrente", "pentes só de 2 e 3 mm"],
     categories: ["trimmers-e-shavers"],
-    articles: ["trimmer-vs-shaver-diferencas-reais", "como-reduzir-irritacao-ao-fazer-a-barba"],
+    articles: ["aparador-corporal-masculino-qual-escolher", "trimmer-vs-shaver-diferencas-reais"],
     related: ["philips-oneblade-360-qp2724", "philips-oneblade-pro-360", "braun-series-5-aio5545"]
   },
   {

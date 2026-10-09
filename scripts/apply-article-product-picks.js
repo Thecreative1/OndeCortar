@@ -116,6 +116,14 @@ const PICKS = {
       ["ecence-capa-corte", "A capa", "Impermeável e fácil de limpar depois de cada corte."]
     ]
   },
+  "aparador-corporal-masculino-qual-escolher": {
+    title: "Os três que recomendamos",
+    items: [
+      ["philips-bodygroom-bg3480", "A nossa escolha", "Só para o corpo: Triple Protect, pentes de 2 e 3 mm e 100% à prova de água."],
+      ["philips-oneblade-pro-360", "Rosto e corpo", "Uma só ferramenta para aparar, contornar e manter rosto e corpo."],
+      ["braun-series-5-aio5545", "Tudo em um", "Cabelo, barba e corpo com o mesmo aparelho, trocando de cabeça."]
+    ]
+  },
   "after-shave-para-que-serve": {
     title: "Preparar a pele antes da lâmina",
     items: [
@@ -135,6 +143,11 @@ const STICKY = {
   "como-cortar-cabelo-masculino-com-tesoura-em-casa": {
     product: "candure-tesoura-cabeleireiro",
     label: "A tesoura que recomendamos",
+    after: "produtos-recomendados"
+  },
+  "aparador-corporal-masculino-qual-escolher": {
+    product: "philips-bodygroom-bg3480",
+    label: "A nossa escolha",
     after: "produtos-recomendados"
   },
   "aparador-de-pelos-do-nariz-qual-escolher": {
