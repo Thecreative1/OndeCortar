@@ -30,6 +30,12 @@ const SHORTCUTS = [
 
 // [slug, etiqueta, porquê, quando não escolher, [artigo, texto do link]]
 const NOVIDADES = [
+  ["philips-s5465-series-5000", "Máquina de barbear", "Rotativa com 27 lâminas autoafiáveis, cabeças a 360° e aparador de encaixar para bigode e patilhas.", "Quem tem barba comprida — aí precisas de um aparador.", ["melhor-maquina-de-barbear-eletrica-qual-escolher", "Guia: que máquina de barbear escolher"]],
+  ["philips-hs7980-head-shaver", "Cabeça rapada", "Cabeça flexível a 360°, 36 lâminas ComfortCut e até 90 minutos de bateria, feito para o couro cabeludo.", "Quem quer sombra de cabelo — este rapa rente; usa uma máquina sem pente.", ["como-rapar-a-cabeca-em-casa-shaver-ou-maquina", "Guia: rapar a cabeça em casa"]],
+  ["braun-series5-51-b1000s", "Barbear com lâminas", "3 lâminas flexíveis e AutoSense, que ajusta a potência à densidade da barba. 100% à prova de água.", "Quem prefere cabeças rotativas — vê a Philips Série 5000.", ["melhor-maquina-de-barbear-eletrica-qual-escolher", "Guia: rotativa ou de lâminas"]],
+  ["philips-oneblade-laminas-360", "Lâminas OneBlade", "Pack de 3 lâminas originais 360, que encaixam em todos os OneBlade e OneBlade Pro.", "Quem não tem um OneBlade — só servem nele.", ["qual-oneblade-comprar", "Guia: quando trocar a lâmina"]],
+  ["philips-x3053-series-3000", "Primeira máquina de barbear", "Rotativa de entrada com SkinProtect e 27 lâminas PowerCut, a seco ou no duche, com aparador de patilhas.", "Quem quer mais funções — a Série 5000 tem mais.", ["melhor-maquina-de-barbear-eletrica-qual-escolher", "Guia: que máquina de barbear escolher"]],
+  ["skull-shaver-pitbull-sx5", "Cabeça e rosto", "Shaver com pega ergonómica que encaixa na palma da mão, resistente à água (IPX6).", "Quem prefere comprar à Amazon — é vendido por um distribuidor.", ["como-rapar-a-cabeca-em-casa-shaver-ou-maquina", "Guia: rapar a cabeça em casa"]],
   ["panasonic-er-gn30", "Nariz e orelhas", "Lâmina curva de fio duplo, protegida e lavável debaixo da torneira. Serve também para acertar as sobrancelhas.", "Quem quer um aparador recarregável — funciona com uma pilha AA.", ["aparador-de-pelos-do-nariz-qual-escolher", "Guia: aparador de pelos do nariz"]],
   ["philips-bodygroom-bg3480", "Pelos do corpo", "Sistema Triple Protect para pele sensível, pentes de 2 e 3 mm e 100% à prova de água.", "Quem quer deixar o pelo mais comprido — os pentes ficam pelos 3 mm.", ["aparador-corporal-masculino-qual-escolher", "Guia: aparador corporal"]],
   ["candure-tesoura-cabeleireiro", "Corte à tesoura", "6,5 polegadas em aço inoxidável, fio convexo e anéis ajustáveis aos dedos.", "Quem só corta à máquina — aí a tesoura não faz falta.", ["como-cortar-cabelo-masculino-com-tesoura-em-casa", "Guia: cortar à tesoura em casa"]],
@@ -93,7 +99,7 @@ function applySection(html) {
     '          <div class="section-header section-header--compact">\n            <div>\n' +
     '              <span class="eyebrow">Novidades · outubro de 2026</span>\n' +
     "              <h2>Novos na loja</h2>\n" +
-    "              <p>Seis produtos novos, escolhidos pelo que se procura: pelos do nariz e do corpo, corte à tesoura e o posto de barbeiro. Cada um com o guia que o explica e quando não o escolher.</p>\n" +
+    "              <p>Os produtos mais recentes da loja, escolhidos pelo que se procura: máquinas de barbear, cabeça rapada, pelos do nariz e do corpo, corte à tesoura e o posto de barbeiro. Cada um com o guia que o explica e quando não o escolher.</p>\n" +
     '            </div>\n            <div class="hero-actions"><a class="btn btn-secondary btn-small" href="acessorios-de-barbeiro/">Ver acessórios</a></div>\n' +
     '          </div>\n          <div class="loja-feat-grid">\n' +
     NOVIDADES.map(card).join("") +
