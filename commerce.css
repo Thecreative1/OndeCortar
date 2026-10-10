@@ -5199,3 +5199,16 @@ body[data-page="store"] #novidades .loja-feat-grid { grid-template-columns: repe
 .loja-feat-guide { grid-column: 1 / -1; justify-self: start; }
 body[data-page="store"] #novidades .loja-feat-guide { color: #e6c88f; }
 /* OC-NOVIDADES-CSS-END */
+
+/* Botão secundário nas caixas escuras dos artigos ("Precisas de um profissional?"): a regra geral
+   body[data-page="article"] .btn-secondary pinta-o de creme e o texto claro ficava a 1,2:1 */
+body[data-page] .article-directory-bridge .btn-secondary {
+  background: transparent;
+  color: #f2ebe0;
+  border-color: rgba(242, 235, 224, 0.55);
+}
+body[data-page] .article-directory-bridge .btn-secondary:hover {
+  background: rgba(242, 235, 224, 0.12);
+  border-color: rgba(242, 235, 224, 0.85);
+  color: #fffaf2;
+}
