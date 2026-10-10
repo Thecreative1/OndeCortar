@@ -152,6 +152,33 @@ const PICKS = {
       ["panasonic-er-gn30", "Presente pequeno", "Aparador de nariz e orelhas com lâmina protegida e lavável."]
     ]
   },
+  "como-rapar-a-cabeca-em-casa-shaver-ou-maquina": {
+    title: "Para a cabeça rapada",
+    items: [
+      ["philips-hs7980-head-shaver", "A nossa escolha", "Cabeça flexível a 360°, 36 lâminas ComfortCut e até 90 minutos de bateria."],
+      ["skull-shaver-pitbull-sx5", "Pega na palma da mão", "Shaver de cabeça e rosto, resistente à água (IPX6)."],
+      ["philips-hc5630-series-5000", "Para cabeça com sombra", "Máquina que desce aos 0,5 mm, com 90 minutos sem fio."],
+      ["braun-bt5525-series-5", "Para a barba", "40 comprimentos em intervalos de 0,5 mm, para a barba a condizer."]
+    ]
+  },
+  "melhor-maquina-de-barbear-eletrica-qual-escolher": {
+    title: "As máquinas que recomendamos",
+    items: [
+      ["philips-s5465-series-5000", "A nossa escolha", "Rotativa com 27 lâminas autoafiáveis, cabeças a 360° e aparador de encaixar."],
+      ["braun-series5-51-b1000s", "De lâminas", "3 lâminas flexíveis e AutoSense, que ajusta a potência à barba."],
+      ["philips-x3053-series-3000", "Primeira máquina", "Rotativa de entrada com SkinProtect, a seco ou no duche."],
+      ["philips-oneblade-360-qp2724", "Barba de poucos dias", "Apara, contorna e rapa com a lâmina 360."]
+    ]
+  },
+  "qual-oneblade-comprar": {
+    title: "OneBlade e lâminas",
+    items: [
+      ["philips-oneblade-360-qp2724", "A nossa escolha", "Lâmina 360 e duas lâminas incluídas, para barba curta e de poucos dias."],
+      ["philips-oneblade-pro-360", "Comprimentos variados", "Pente de 20 comprimentos, para rosto e corpo."],
+      ["philips-oneblade-laminas-360", "Lâminas originais", "Pack de 3, encaixam em todos os OneBlade e OneBlade Pro."],
+      ["philips-bodygroom-bg3480", "Para o corpo", "Proteção da pele própria para o corpo e zonas íntimas."]
+    ]
+  },
   "after-shave-para-que-serve": {
     title: "Preparar a pele antes da lâmina",
     items: [
@@ -171,6 +198,21 @@ const STICKY = {
   "como-cortar-cabelo-masculino-com-tesoura-em-casa": {
     product: "candure-tesoura-cabeleireiro",
     label: "A tesoura que recomendamos",
+    after: "produtos-recomendados"
+  },
+  "como-rapar-a-cabeca-em-casa-shaver-ou-maquina": {
+    product: "philips-hs7980-head-shaver",
+    label: "A nossa escolha",
+    after: "produtos-recomendados"
+  },
+  "melhor-maquina-de-barbear-eletrica-qual-escolher": {
+    product: "philips-s5465-series-5000",
+    label: "A nossa escolha",
+    after: "produtos-recomendados"
+  },
+  "qual-oneblade-comprar": {
+    product: "philips-oneblade-360-qp2724",
+    label: "A nossa escolha",
     after: "produtos-recomendados"
   },
   "presentes-para-namorado-ideias": {
