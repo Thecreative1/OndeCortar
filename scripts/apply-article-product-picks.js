@@ -208,6 +208,24 @@ const PICKS = {
       ["barbicide-desinfetante-pulverizador", "Desinfeção", "Desinfetante concentrado, com pulverizador para superfícies."]
     ]
   },
+  "barba-grisalha-assumir-ou-pintar": {
+    title: "Para a barba grisalha",
+    items: [
+      ["braun-bt5525-series-5", "Aparar curta", "40 comprimentos em intervalos de 0,5 mm, com bloqueio."],
+      ["proraso-balsamo-barba", "Amaciar", "Amacia e condiciona a barba, de uma marca de barbearia desde 1948."],
+      ["zilberhaar-escova", "Escovar", "Cerdas de javali que distribuem o óleo ou o bálsamo por igual."],
+      ["viking-revolution-beard-oil", "Hidratar", "Óleo com argão e jojoba para reduzir o aspeto seco e áspero."]
+    ]
+  },
+  "fazer-a-barba-antes-ou-depois-do-banho": {
+    title: "Para cada método",
+    items: [
+      ["proraso-pre-barba", "Lâmina", "Pré-barba para pele sensível: amolece os pelos antes da lâmina."],
+      ["proraso-creme", "Creme", "Boa cobertura e deslize para navalha ou máquina de segurança."],
+      ["philips-s5465-series-5000", "Máquina", "Rotativa 100% à prova de água: a seco antes do banho ou no duche."],
+      ["braun-bt5525-series-5", "Aparador", "40 comprimentos, para aparar a barba seca e penteada."]
+    ]
+  },
   "after-shave-para-que-serve": {
     title: "Preparar a pele antes da lâmina",
     items: [
@@ -227,6 +245,11 @@ const STICKY = {
   "como-cortar-cabelo-masculino-com-tesoura-em-casa": {
     product: "candure-tesoura-cabeleireiro",
     label: "A tesoura que recomendamos",
+    after: "produtos-recomendados"
+  },
+  "barba-grisalha-assumir-ou-pintar": {
+    product: "braun-bt5525-series-5",
+    label: "Para aparar curta",
     after: "produtos-recomendados"
   },
   "pelos-encravados-como-evitar": {
