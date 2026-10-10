@@ -199,6 +199,15 @@ const PICKS = {
       ["proraso-pre-barba", "Se rapas", "Pré-barba para pele sensível: amolece os pelos antes da lâmina."]
     ]
   },
+  "como-abrir-uma-barbearia-em-portugal": {
+    title: "Para equipar o primeiro posto",
+    items: [
+      ["wahl-super-taper", "Máquina de corte", "Motor estável para uso contínuo e corte previsível sessão após sessão."],
+      ["grifema-pulverizador-300ml", "Borrifador", "Névoa contínua, uso a 360° e bocal de 0,3 mm, em 300 ml."],
+      ["uraqt-capa", "Capa", "Para proteger o cliente durante o corte e manter o serviço limpo."],
+      ["barbicide-desinfetante-pulverizador", "Desinfeção", "Desinfetante concentrado, com pulverizador para superfícies."]
+    ]
+  },
   "after-shave-para-que-serve": {
     title: "Preparar a pele antes da lâmina",
     items: [
