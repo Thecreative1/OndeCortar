@@ -11,7 +11,7 @@ module.exports = [
     published: "2026-10-09",
     title: "Aparador corporal masculino: qual escolher e como aparar sem irritar",
     h1: "Aparador corporal masculino: qual escolher e como aparar sem irritar",
-    description: "A máquina do cabelo serve para o corpo? Aparar ou rapar, o que procurar num aparador corporal, a nossa escolha e como aparar peito, axilas e zona íntima.",
+    description: "Manscaping sem cortes nem irritação: a máquina do cabelo serve? Aparar ou rapar, que aparador corporal escolher e como aparar peito, axilas e zona íntima.",
     schemaDescription: "Porque não usar a máquina do cabelo no corpo, aparar ou rapar, o que procurar num aparador corporal e como o usar por zona.",
     image: "imagens/revista/toalha-peito-preto-branco.jpg",
     imageAlt: "Fotografia a preto e branco de um homem com uma toalha branca ao ombro",
@@ -42,6 +42,10 @@ module.exports = [
     },
     sections: [
       {
+        h2: "Manscaping: o que é, sem rodeios",
+        html: "<p><strong>Manscaping</strong> é a palavra inglesa — de <em>man</em> e <em>landscaping</em> — para aparar ou rapar os pelos do corpo: peito, barriga, axilas, costas e zona íntima. Não é moda nem vaidade: para muita gente é conforto, higiene e sentir-se mais arrumado.</p><p>O que interessa é a ferramenta. Um <strong>kit de manscaping</strong>, na prática, é um aparador corporal com proteção para a pele e pentes de comprimento — e é disso que trata este guia.</p>"
+      },
+      {
         h2: "Porque é que a máquina do cabelo não serve",
         html: "<p>É uma das dúvidas que mais aparecem nas pesquisas — e a resposta curta é: <strong>serve mal e não devia</strong>.</p><p>Uma máquina de cortar cabelo foi feita para uma superfície firme e redonda: a cabeça. No corpo há pele solta, dobras e zonas onde a pele é muito mais fina. As lâminas de uma máquina de cabelo não têm proteção para isso, e é aí que aparecem os beliscões e os cortes.</p><p>Depois há a questão óbvia: <strong>higiene</strong>. A máquina que passa na cabeça de toda a família não deve passar na zona íntima de ninguém. Um aparador corporal é pessoal, como a escova de dentes.</p><p>A lâmina de barbear também não é solução para quem quer só reduzir: rapa rente, irrita mais e o pelo volta a nascer com comichão.</p>"
       },
@@ -69,6 +73,8 @@ module.exports = [
       }
     ],
     faq: [
+      ["O que é manscaping?", "É aparar ou rapar os pelos do corpo masculino — peito, barriga, axilas, costas e zona íntima — com uma ferramenta própria, normalmente um aparador corporal com proteção da pele."],
+      ["Qual é o melhor aparador para manscaping?", "Um aparador corporal com proteção da pele, pentes de comprimento e corpo à prova de água. A nossa escolha é o Philips Body Groomer Série 3000 (BG3480/15)."],
       ["A máquina de cortar cabelo serve para aparar pelos do corpo?", "Não é recomendável. As lâminas não estão pensadas para pele solta e dobras, o que aumenta o risco de beliscões e cortes, e por higiene não se deve usar a mesma máquina na cabeça e nas zonas íntimas."],
       ["É melhor aparar ou rapar os pelos do corpo?", "Para a maioria, aparar com 2 a 3 mm: irrita muito menos do que rapar rente e reduz a comichão quando o pelo volta a crescer."],
       ["Qual é o melhor aparador corporal masculino?", "Um com proteção da pele na cabeça de corte, pentes de comprimento e corpo à prova de água. A nossa escolha é o Philips Body Groomer Série 3000 (BG3480/15), com sistema Triple Protect e pentes de 2 e 3 mm."],

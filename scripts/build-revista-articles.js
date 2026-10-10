@@ -30,7 +30,8 @@ const HUB_TOPIC = {
   "cuidados-com-a-barba": { h2: "barba-h", label: "Barba · Passo a passo" },
   "estilo-e-tendencias": { h2: "cultura-h", label: "Cortes · Estilo" },
   "guias-de-compra": { h2: "guias-h", label: "Guia de compra" },
-  "para-barbeiros": { h2: "guias-h", label: "Para barbeiros" }
+  "para-barbeiros": { h2: "guias-h", label: "Para barbeiros" },
+  "presentes-e-kits": { h2: "guias-h", label: "Presentes" }
 };
 
 const input = process.argv[2];

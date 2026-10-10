@@ -141,6 +141,17 @@ const PICKS = {
       ["braun-aio7545-series-7", "Kit completo", "12 em 1 para barba, cabelo, orelhas, nariz e corpo."]
     ]
   },
+  "presentes-para-namorado-ideias": {
+    title: "Os presentes por perfil",
+    items: [
+      ["viking-revolution-beard-grooming-kit", "Barba sem rotina", "Escova, pente, bálsamo, óleo e tesoura numa caixa de apresentação."],
+      ["braun-bt5525-series-5", "Barba já tratada", "40 comprimentos em intervalos de 0,5 mm com bloqueio, 100% à prova de água."],
+      ["philips-hc5630-series-5000", "Corta o cabelo em casa", "28 comprimentos numa roda, lâminas autoafiáveis e 90 minutos sem fio."],
+      ["king-c-rotina", "Gosta de rituais", "Máquina de segurança, pincel, creme e amaciador num conjunto clássico."],
+      ["braun-aio7545-series-7", "Prático", "12 em 1 para barba, cabelo, orelhas, nariz e corpo."],
+      ["panasonic-er-gn30", "Presente pequeno", "Aparador de nariz e orelhas com lâmina protegida e lavável."]
+    ]
+  },
   "after-shave-para-que-serve": {
     title: "Preparar a pele antes da lâmina",
     items: [
@@ -160,6 +171,11 @@ const STICKY = {
   "como-cortar-cabelo-masculino-com-tesoura-em-casa": {
     product: "candure-tesoura-cabeleireiro",
     label: "A tesoura que recomendamos",
+    after: "produtos-recomendados"
+  },
+  "presentes-para-namorado-ideias": {
+    product: "viking-revolution-beard-grooming-kit",
+    label: "O presente mais fácil",
     after: "produtos-recomendados"
   },
   "pelos-nas-orelhas-porque-crescem-e-como-tirar": {
