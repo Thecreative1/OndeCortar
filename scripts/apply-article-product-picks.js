@@ -179,6 +179,17 @@ const PICKS = {
       ["philips-bodygroom-bg3480", "Para o corpo", "Proteção da pele própria para o corpo e zonas íntimas."]
     ]
   },
+  // Atenção: este artigo é o MODELO de build-revista-articles.js — só blocos dentro do <main>,
+  // nunca barra fixa (ficaria fora do <main> e passaria para os artigos gerados)
+  "tipos-de-degrade-como-pedir-o-corte-certo": {
+    title: "Máquinas para degradê",
+    items: [
+      ["wahl-super-taper", "Clássica de barbearia", "Motor estável para uso contínuo e corte previsível sessão após sessão."],
+      ["fagaci-profissional", "Fade e taper", "Para mais precisão em fades, linhas e acabamentos."],
+      ["babylisspro-chromfx-clipper", "Sem fios", "Clipper sem fios com base de carga e lâminas de aço japonês."],
+      ["wahl-gold-travel-shaver", "Acabamento à pele", "Shaver de folha compacto para acabamentos e contornos rentes."]
+    ]
+  },
   "after-shave-para-que-serve": {
     title: "Preparar a pele antes da lâmina",
     items: [
