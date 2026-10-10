@@ -190,6 +190,15 @@ const PICKS = {
       ["wahl-gold-travel-shaver", "Acabamento à pele", "Shaver de folha compacto para acabamentos e contornos rentes."]
     ]
   },
+  "pelos-encravados-como-evitar": {
+    title: "Para cortar sem encravar",
+    items: [
+      ["philips-bodygroom-bg3480", "Corpo e virilha", "Pentes de 2 e 3 mm e proteção da pele, também para zonas íntimas."],
+      ["braun-bt5525-series-5", "Barba aparada", "40 comprimentos em intervalos de 0,5 mm, para deixar um ou dois milímetros."],
+      ["philips-oneblade-360-qp2724", "Barba de poucos dias", "Apara com pente curto e faz contornos sem rapar rente."],
+      ["proraso-pre-barba", "Se rapas", "Pré-barba para pele sensível: amolece os pelos antes da lâmina."]
+    ]
+  },
   "after-shave-para-que-serve": {
     title: "Preparar a pele antes da lâmina",
     items: [
@@ -209,6 +218,11 @@ const STICKY = {
   "como-cortar-cabelo-masculino-com-tesoura-em-casa": {
     product: "candure-tesoura-cabeleireiro",
     label: "A tesoura que recomendamos",
+    after: "produtos-recomendados"
+  },
+  "pelos-encravados-como-evitar": {
+    product: "philips-bodygroom-bg3480",
+    label: "Aparar em vez de rapar",
     after: "produtos-recomendados"
   },
   "como-rapar-a-cabeca-em-casa-shaver-ou-maquina": {
