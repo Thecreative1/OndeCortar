@@ -1397,3 +1397,13 @@ h1 em, h2 em, .dir-headline em, .cities-headline em, .owner-cta-headline em, h1 
   .results-more[hidden] { display: none; }
   .dir-headline { font-size: 2.2rem !important; }
 }
+
+/* Atalhos de cidades no mobile: scroll horizontal sem barra visível — o esbatido à direita mostra
+   que há mais (mesmo padrão da loja e da revista) */
+@media (max-width: 480px) {
+  .chips-row, #directoryCities {
+    -webkit-mask-image: linear-gradient(to right, #000 85%, transparent);
+    mask-image: linear-gradient(to right, #000 85%, transparent);
+    padding-right: 32px;
+  }
+}

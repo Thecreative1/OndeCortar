@@ -5212,3 +5212,13 @@ body[data-page] .article-directory-bridge .btn-secondary:hover {
   border-color: rgba(242, 235, 224, 0.85);
   color: #fffaf2;
 }
+
+/* Atalhos da loja no mobile: scroll horizontal sem barra visível — o esbatido à direita mostra
+   que há mais atalhos (como nos temas da revista) */
+@media (max-width: 760px) {
+  body[data-page="store"] .loja-quicknav {
+    -webkit-mask-image: linear-gradient(to right, #000 85%, transparent);
+    mask-image: linear-gradient(to right, #000 85%, transparent);
+    padding-right: 32px;
+  }
+}
