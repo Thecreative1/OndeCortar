@@ -242,6 +242,18 @@
   </style>
   <link rel="stylesheet" href="mobile-nav.css" />
   <script>
+    // Vindo de um perfil ("Atualizar perfil"): registar.html#atualizar=Nome da barbearia
+    document.addEventListener("DOMContentLoaded", function() {
+      var match = window.location.hash.match(/^#atualizar(?:=(.*))?$/);
+      if (!match) return;
+      var tipo = document.querySelector('input[name="tipo_pedido"][value="atualizar-ficha"]');
+      var nome = document.getElementById("nome");
+      if (tipo) tipo.checked = true;
+      if (nome && match[1] && !nome.value) {
+        try { nome.value = decodeURIComponent(match[1]); } catch (e) {}
+      }
+    });
+
     function redirecionarDepoisDeSubmeter(event) {
       event.preventDefault();
       const form = event.target;

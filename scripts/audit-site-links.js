@@ -173,7 +173,8 @@ function auditFile(filePath) {
       continue;
     }
 
-    if (target.hash) {
+    // "#atualizar=Nome" é estado lido por JS (registar.html), não uma âncora.
+    if (target.hash && !target.hash.includes("=")) {
       const anchors = getAnchors(target.filePath);
       if (!anchors.has(target.hash)) {
         ISSUES.push({
