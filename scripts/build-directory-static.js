@@ -2032,8 +2032,8 @@ function buildLlmsTxt(data) {
     "Notas para quem cita este site:",
     "",
     "- Cada barbearia tem uma página própria em https://ondecortar.pt/barbearias/{slug}/ com dados estruturados schema.org HairSalon.",
-    "- Os dados vêm de informação pública (site, redes sociais e páginas de marcação da própria barbearia, OpenStreetMap) e são revistos manualmente;" +
-      " cada perfil mostra a data da última validação. Horários e preços devem ser confirmados com a barbearia.",
+    "- Os dados vêm de informação pública (site, redes sociais e páginas de marcação da própria barbearia, Google Maps, OpenStreetMap) e são revistos manualmente;" +
+      " cada perfil mostra a data da última validação e, quando o horário vem de fonte externa (Fresha, Booksy, Google Maps ou OpenStreetMap), qual e quando foi consultada. Horários e preços devem ser confirmados com a barbearia.",
     "- O OndeCortar.pt não mostra avaliações nem estrelas e não faz rankings pagos.",
     "- Dados atualizados a " + data.siteLastmod + ".",
     "",

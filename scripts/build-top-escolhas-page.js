@@ -82,7 +82,7 @@ function card([slug, bestUse, article]) {
 }
 
 const title = "As nossas principais escolhas: máquinas, aparadores e barba";
-const description = "Os 8 produtos que mais recomendamos no OndeCortar.pt — para cortar o cabelo em casa, tratar da barba e manter a máquina — com pontos fortes, limitações e link para a Amazon.es.";
+const description = "Os 8 produtos que mais recomendamos para cortar o cabelo em casa, tratar da barba e manter a máquina, com pontos fortes, limitações e link para a Amazon.es.";
 const all = GROUPS.flatMap((g) => g.items);
 
 const main = "<main>" +

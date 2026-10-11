@@ -80,7 +80,7 @@ function card([slug, badge, why]) {
 }
 
 const title = "Black Friday " + EVENT.year + ": máquinas, aparadores e kits de barba a vigiar";
-const description = "A nossa lista para a Black Friday " + EVENT.year + " na Amazon.es: máquinas de cortar cabelo, aparadores de barba e kits para oferecer, com dicas para confirmar se o desconto é real.";
+const description = "A nossa lista para a Black Friday " + EVENT.year + " na Amazon.es: máquinas de cortar cabelo, aparadores de barba e kits, e como confirmar se o desconto é real."; // ≤ 160 caracteres
 const bfUrl = "https://www.amazon.es/blackfriday?tag=" + TAG;
 
 const main = '<main>' +

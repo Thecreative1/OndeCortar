@@ -301,7 +301,7 @@ module.exports = [
     category: "conteudo-pratico",
     title: "Como aparar as sobrancelhas (homem): passo a passo sem exageros",
     h1: "Como aparar as sobrancelhas masculinas sem exageros",
-    description: "Como aparar as sobrancelhas masculinas em casa: pentear e cortar o comprimento, tirar a monocelha e os pelos soltos, sem mudar a forma natural — e quando pedir ao barbeiro.",
+    description: "Como aparar as sobrancelhas de homem em casa: cortar o comprimento, tirar a monocelha e os pelos soltos sem mudar a forma — e quando pedir ao barbeiro.",
     schemaDescription: "Passo a passo para aparar as sobrancelhas masculinas em casa sem mudar a forma natural.",
     image: "imagens/revista/sobrancelha-olho-homem.jpg",
     imageAlt: "Grande plano do olho e da sobrancelha de um homem",

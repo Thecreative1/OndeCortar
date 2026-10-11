@@ -224,7 +224,7 @@ module.exports = [
     category: "estilo-e-tendencias",
     title: "Primeiro corte de cabelo na barbearia: guia para pais de bebés e crianças",
     h1: "Primeiro corte de cabelo na barbearia: guia para pais",
-    description: "Quando fazer o primeiro corte de cabelo do bebé ou da criança, como preparar a visita à barbearia, o que pedir ao barbeiro e como tornar a experiência tranquila.",
+    description: "Quando fazer o primeiro corte de cabelo do bebé ou da criança, como preparar a ida à barbearia, o que pedir ao barbeiro e como tornar a experiência tranquila.",
     schemaDescription: "Quando fazer o primeiro corte de cabelo, como preparar a criança e o que pedir na barbearia.",
     image: "imagens/revista/corte-menino-barbeiro.jpg",
     imageAlt: "Barbeiro a cortar o cabelo a um menino, a preto e branco",
