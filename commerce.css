@@ -5446,3 +5446,27 @@ body[data-page="article"] .article-body > .article-section:first-child > h2 + p:
   body[data-page="article"] .article-support-card { padding-top: 14px; }
 }
 /* OC-ARTICLE-MAGAZINE-END */
+
+/* OC-STAGE-LINK (2026-10-11) — foto do produto ligada à Amazon.es (scripts/apply-product-image-links.js).
+   Sem rótulo por cima da imagem: só o cursor de link e uma linha discreta por baixo. */
+body[data-page="product"] .oc-stage-link {
+  display: block;
+  cursor: pointer;
+}
+body[data-page="product"] .oc-stage-caption {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #6b5532;
+  text-decoration: none;
+}
+body[data-page="product"] .oc-stage-link:hover + .oc-stage-caption,
+body[data-page="product"] .oc-stage-caption:hover {
+  color: #3f321d;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+/* OC-STAGE-LINK-END */

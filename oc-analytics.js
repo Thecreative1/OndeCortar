@@ -241,6 +241,8 @@
         position: positionInPlacement(link),
         destination_domain: (function () { try { return new URL(href).hostname; } catch (e) { return ""; } })()
       };
+      // Foto do produto ligada à Amazon (apply-product-image-links.js): contada à parte do botão
+      if (link.getAttribute("data-oc-click") === "product-foto") params.placement = "product-foto";
       if (PAGE.type === "product") params.product_id = PAGE.slug || params.product_id;
       if (PAGE.type === "product") params.product_category = pageProductCategory();
       if (PAGE.type === "category") params.product_category = PAGE.slug;
@@ -332,7 +334,9 @@
       path = "clique-" + p.contact_type + "/" + p.barber_slug;
       title = p.contact_type + " · " + p.barber_slug;
     } else if (event.name === "affiliate_click") {
-      path = "amazon/" + source + "/" + (p.product_id || "sem-asin");
+      path = p.placement === "product-foto"
+        ? "amazon/product-foto/" + (PAGE.slug || p.product_id || "sem-asin")
+        : "amazon/" + source + "/" + (p.product_id || "sem-asin");
       title = "Amazon · " + (p.product_name || p.product_id || "") + " · " + p.placement;
     } else if (event.name === "article_to_product_click" || event.name === "article_to_category_click") {
       path = "para-loja/" + source + "/" + (p.product_id ? "produto/" + p.product_id : "loja/" + p.category_slug);

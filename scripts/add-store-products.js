@@ -212,3 +212,6 @@ if (entries) {
   write("commerce-products-b.js", data.slice(0, at).replace(/\s*$/, "") + ",\n" + entries.replace(/,\n$/, "\n") + "  " + data.slice(at));
 }
 console.log("sitemap +" + (urls.match(/<url>/g) || []).length + ", dados +" + (entries.match(/slug:/g) || []).length);
+
+// Foto do produto ligada à Amazon.es nas páginas geradas (idempotente, corre em todas)
+require("./apply-product-image-links.js");
