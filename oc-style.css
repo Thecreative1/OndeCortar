@@ -1407,3 +1407,30 @@ h1 em, h2 em, .dir-headline em, .cities-headline em, .owner-cta-headline em, h1 
     padding-right: 32px;
   }
 }
+
+/* ─── Mobile (revisão 2026-10-11) ──────────────────────────────── */
+@media (max-width: 760px) {
+  /* < 16px faz o iPhone ampliar a página ao tocar na pesquisa */
+  .hero-search-input,
+  .hero-map-search .hero-search-input { font-size: 16px !important; }
+
+  /* Cartões da lista: sem a coluna das iniciais (a cidade aparecia cortada em 9px
+     e repetida 3 vezes), sem a linha "Cidade: X" repetida e botões lado a lado. */
+  .result-card { display: block; }
+  .result-card .result-visual { display: none; }
+  .result-card .result-meta span:first-child { display: none; }
+  .result-card .tag-small { font-size: 11px; padding: 3px 7px; }
+  .result-card .result-meta span { font-size: 12px; }
+  .result-card .result-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+  }
+  .result-card .result-actions .btn {
+    flex: 1 1 0;
+    min-width: 0;
+    padding-inline: 6px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}

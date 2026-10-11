@@ -2239,6 +2239,17 @@ body[data-page="article"] .article-header h1 {
   max-width: 19ch;
 }
 
+/* O gap acima é de .article-header, mas título, autor e parágrafos estão dentro de
+   .article-header-copy (block, margens a 0): ficavam colados uns aos outros. */
+body[data-page="article"] .article-header-copy {
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+}
+body[data-page="article"] .article-header-copy > * { margin: 0; }
+body[data-page="article"] .article-header-copy > :not(.section-flag) { justify-self: stretch; }
+body[data-page="article"] .article-header-copy h1 { line-height: 1.12; }
+
 body[data-page="article"] .article-header p {
   max-width: 78ch;
 }

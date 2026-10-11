@@ -1957,7 +1957,7 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="oc-style.css?v=20261006-contraste" />
+  <link rel="stylesheet" href="oc-style.css?v=20261011-mobile" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -6563,8 +6563,9 @@
             // aparecerem soltas; as do mesmo ponto ficam num grupo que abre em leque ao clicar.
             maxClusterRadius: function(zoom) {
               // Em mobile o mapa é pequeno: raio menor para não ficar só com 2-3 grupos gigantes.
+              // Mas não menor do que os círculos (até 40px em mobile), senão tapam-se uns aos outros.
               if (zoom >= 13) return 20;
-              return window.innerWidth <= 860 ? 30 : 48;
+              return window.innerWidth <= 860 ? 44 : 48;
             },
             // Leque para barbearias no mesmo ponto (ex.: vizinhas na mesma rua): linhas douradas
             // finas em vez das pretas por omissão, e mais afastadas por causa dos marcadores de 26px.
@@ -6572,7 +6573,8 @@
             spiderLegPolylineOptions: { weight: 1.5, color: "#a6772d", opacity: 0.9 },
             iconCreateFunction: function(cluster) {
               const count = cluster.getChildCount();
-              const size = count < 10 ? 38 : (count < 50 ? 46 : 54);
+              const small = window.innerWidth <= 860;
+              const size = count < 10 ? (small ? 30 : 38) : (count < 50 ? (small ? 36 : 46) : (small ? 40 : 54));
               const modifier = count < 10 ? "" : (count < 50 ? " oc-cluster--md" : " oc-cluster--lg");
               return L.divIcon({
                 html: "<span>" + count + "</span>",
