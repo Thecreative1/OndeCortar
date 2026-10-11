@@ -49,6 +49,7 @@ const NEW_HEROES = {
   "historia-do-poste-de-barbeiro": ["poste-barbeiro-espiral.jpg", "Poste de barbeiro em espiral vermelho, branco e azul"],
   "creme-de-rosto-para-homem-como-escolher": ["homem-creme-rosto-espelho.jpg", "Homem de barba ao espelho da casa de banho a aplicar um produto no rosto"],
   "protetor-solar-para-homem-qual-escolher": ["homem-perfil-sol-forte.jpg", "Grande plano do rosto de um homem com sol forte na pele"],
+  "contorno-de-olhos-para-homem-olheiras-e-papos": ["homem-grisalho-maos-rosto.jpg", "Homem grisalho de barba a esfregar os olhos cansados com as mãos"],
 };
 
 const stats = { heroes: 0, data: 0, cards: 0, files: 0 };

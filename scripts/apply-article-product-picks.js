@@ -253,11 +253,25 @@ const PICKS = {
       ["isdin-scalp-hair-spray-spf50", "Cabeça rapada", "Spray SPF 50 para o couro cabeludo, transparente e não gorduroso."],
       ["heliocare-360-sport-stick", "Desporto e bolso", "Stick SPF 50+ resistente à água e ao suor, para reaplicar."]
     ]
+  },
+  "contorno-de-olhos-para-homem-olheiras-e-papos": {
+    title: "Um contorno para cada caso",
+    items: [
+      ["cerave-contorno-olhos", "A nossa escolha", "Creme simples para olheiras e papos ligeiros, com ácido hialurónico e ceramidas."],
+      ["the-ordinary-caffeine-solution", "Papos de manhã", "Sérum leve com cafeína a 5% para desinchar."],
+      ["loreal-men-expert-roll-on-olhos", "Noite curta", "Roll-on de efeito gelo, para aplicar sem dedos."],
+      ["nivea-men-hyaluron-contorno-olhos", "Rugas, a partir dos 40", "Contorno anti-idade com ácido hialurónico."]
+    ]
   }
 };
 
 // Barra fixa mobile nos guias de compra: produto + id da secção depois da qual aparece
 const STICKY = {
+  "contorno-de-olhos-para-homem-olheiras-e-papos": {
+    product: "cerave-contorno-olhos",
+    label: "A nossa escolha",
+    after: "o-que-tens"
+  },
   "protetor-solar-para-homem-qual-escolher": {
     product: "isdin-fusion-water-magic-spf50",
     label: "A nossa escolha",
