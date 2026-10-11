@@ -1050,3 +1050,70 @@ body[data-page="magazine"] .rev-hero .btn-secondary:hover {
 @media (prefers-reduced-motion: reduce) {
   .rev-cover-photo img { transition: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   v3 — Página mais curta (2026-10-11): cada secção mostra poucos cartões
+   com foto e os restantes artigos numa lista compacta (índice), com o
+   mesmo link e o mesmo título. Nenhum artigo perde o link desta página.
+   ═══════════════════════════════════════════════════════════════════ */
+.rev-topic-main { min-width: 0; }
+
+.rev-more-list {
+  list-style: none;
+  margin: clamp(26px, 3vw, 36px) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(24px, 3vw, 44px);
+  border-top: 1px solid var(--rev-line-str);
+}
+.rev-more-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 0 15px;
+  border-bottom: 1px solid var(--rev-line);
+}
+.rev-more-title {
+  font-family: var(--rev-serif);
+  font-size: 1.06rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--rev-ink);
+  text-decoration: none;
+}
+.rev-more-title::after {
+  content: " →";
+  font-family: var(--rev-sans);
+  color: var(--rev-gold-deep);
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+.rev-more-title:hover { text-decoration: underline; text-decoration-color: var(--rev-gold); text-underline-offset: 4px; }
+.rev-more-title:hover::after,
+.rev-more-title:focus-visible::after { opacity: 1; }
+.rev-more-cat {
+  font-family: var(--rev-sans);
+  font-size: 0.82rem;
+  color: var(--rev-pale);
+}
+
+/* Em fundo escuro */
+.rev-topic-section--dark .rev-more-list { border-top-color: rgba(255, 255, 255, 0.16); }
+.rev-topic-section--dark .rev-more-item { border-bottom-color: rgba(255, 255, 255, 0.09); }
+.rev-topic-section--dark .rev-more-title { color: #FAF5ED; }
+.rev-topic-section--dark .rev-more-title::after { color: var(--rev-gold); }
+.rev-topic-section--dark .rev-more-cat { color: rgba(242, 235, 224, 0.62); }
+
+/* Grelha a 2 colunas (561–1100 px): 3 cartões ficariam 2 + 1 sozinho,
+   por isso o primeiro ocupa a linha toda */
+@media (min-width: 561px) and (max-width: 1100px) {
+  .rev-topic-main .rev-grid > .rev-article-card:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 560px) {
+  .rev-more-list { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rev-more-title::after { transition: none; }
+}
