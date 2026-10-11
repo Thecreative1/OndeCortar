@@ -13,6 +13,8 @@
  *  - secção nova entre o cabeçalho e "Para quem é" (markers OC-PRODUCT-DETAILS-START/END):
  *    ficha rápida, "Qual versão é esta", como usar e perguntas frequentes;
  *  - JSON-LD FAQPage com as mesmas perguntas (script data-oc-faq="product").
+ * Links: {{slug|texto}} em porque/paraQuem/versao/comoUsar vira link para produto/{slug}/
+ *   (nas FAQ fica só o texto, para a página e o schema dizerem o mesmo).
  * Regras: só factos publicados pela marca (Amazon.es); sem preços, avaliações nem "testámos".
  * add-store-products.js regenera as páginas sem isto → correr este script depois dele.
  */
@@ -30,6 +32,16 @@ if (!files.length) {
 }
 const entries = files.flatMap((f) => require(path.resolve(f)));
 
+// {{slug|texto}} → link para outro produto da seleção (falha se a página não existir)
+const LINK_RE = /\{\{([a-z0-9-]+)\|([^}]+)\}\}/g;
+function rich(text) {
+  return esc(text).replace(LINK_RE, (m, slug, label) => {
+    if (!fs.existsSync(path.join(ROOT, "produto", slug, "index.html"))) throw new Error("Link para produto inexistente: " + slug);
+    return '<a href="../../produto/' + slug + '/">' + label + "</a>";
+  });
+}
+const plain = (text) => String(text).replace(LINK_RE, "$2");
+
 function swap(html, re, value, label, slug) {
   if (!re.test(html)) throw new Error(slug + ": não encontrei " + label);
   return html.replace(re, () => value);
@@ -40,10 +52,10 @@ function detailsSection(d) {
     d.ficha.map(([k, v]) => "<tr><th scope=\"row\">" + esc(k) + "</th><td>" + esc(v) + "</td></tr>").join("") +
     "</tbody></table>" +
     '<p class="oc-pd-note">' + esc(d.fonte) + "</p>";
-  const versao = d.versao ? "<h2>Qual versão é esta</h2><p>" + esc(d.versao) + "</p>" : "";
-  const uso = "<h2>Como usar</h2><ol class=\"rich-list\">" + d.comoUsar.map((s) => "<li>" + esc(s) + "</li>").join("") + "</ol>";
+  const versao = d.versao ? "<h2>Qual versão é esta</h2><p>" + rich(d.versao) + "</p>" : "";
+  const uso = "<h2>Como usar</h2><ol class=\"rich-list\">" + d.comoUsar.map((s) => "<li>" + rich(s) + "</li>").join("") + "</ol>";
   const faq = '<div class="faq-list-wrap oc-pd-faq"><h3>Perguntas frequentes</h3>' +
-    d.faq.map(([q, a]) => '<div class="faq-item"><strong>' + esc(q) + "</strong><p>" + esc(a) + "</p></div>").join("") + "</div>";
+    d.faq.map(([q, a]) => '<div class="faq-item"><strong>' + esc(plain(q)) + "</strong><p>" + esc(plain(a)) + "</p></div>").join("") + "</div>";
   return "<!-- OC-PRODUCT-DETAILS-START -->" +
     '<section class="section oc-product-details" id="detalhes"><div class="container">' +
     '<div class="oc-pd-grid"><div class="oc-pd-col"><h2>Ficha rápida</h2>' + ficha + "</div>" +
@@ -58,6 +70,8 @@ for (const d of entries) {
   if (!fs.existsSync(file)) throw new Error("Página inexistente: " + rel);
   let html = fs.readFileSync(file, "utf8");
   const before = html;
+  if (LINK_RE.test(d.title + d.description)) throw new Error(d.slug + ": marcação de link no título/description");
+  LINK_RE.lastIndex = 0;
   if (d.description.length > 160) throw new Error(d.slug + ": description com " + d.description.length + " caracteres (máx. 160)");
 
   const title = d.title + " | OndeCortar";
@@ -77,7 +91,7 @@ for (const d of entries) {
   // JSON-LD FAQPage (mesmas perguntas da página)
   const faqLd = '<script type="application/ld+json" data-oc-faq="product">' + JSON.stringify({
     "@context": "https://schema.org", "@type": "FAQPage",
-    mainEntity: d.faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } }))
+    mainEntity: d.faq.map(([q, a]) => ({ "@type": "Question", name: plain(q), acceptedAnswer: { "@type": "Answer", text: plain(a) } }))
   }) + "</script>";
   if (html.includes('data-oc-faq="product"')) {
     html = html.replace(/<script type="application\/ld\+json" data-oc-faq="product">[\s\S]*?<\/script>/, () => faqLd);
@@ -86,12 +100,12 @@ for (const d of entries) {
   }
 
   // "Porque recomendamos" ao lado da foto
-  const porque = d.porque.map((p) => "<p>" + esc(p) + "</p>").join("");
+  const porque = d.porque.map((p) => "<p>" + rich(p) + "</p>").join("");
   html = swap(html, /<div class="store-note"><strong>Porque recomendamos<\/strong>[\s\S]*?<\/div>/, '<div class="store-note"><strong>Porque recomendamos</strong>' + porque + "</div>", "Porque recomendamos", d.slug);
 
   // "Para quem é" sem repetir a frase do topo
   if (d.paraQuem) {
-    html = swap(html, /<div class="product-highlight"><h3>Para quem é<\/h3><p>[\s\S]*?<\/p>/, '<div class="product-highlight"><h3>Para quem é</h3><p>' + esc(d.paraQuem) + "</p>", "Para quem é", d.slug);
+    html = swap(html, /<div class="product-highlight"><h3>Para quem é<\/h3><p>[\s\S]*?<\/p>/, '<div class="product-highlight"><h3>Para quem é</h3><p>' + rich(d.paraQuem) + "</p>", "Para quem é", d.slug);
   }
 
   // Secção de detalhes

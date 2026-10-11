@@ -12,7 +12,7 @@ module.exports = [
     description: "Philips Série 5000 HC5630: 28 comprimentos de 0,5 a 28 mm, até 90 minutos sem fio, o que vem na caixa, como usar e para quem faz sentido.",
     porque: [
       "É a nossa escolha para quem corta o cabelo em casa: uma roda com 28 comprimentos (de 0,5 a 28 mm) permite descer meio número sem trocar de pente, que é o que mais complica um corte em casa.",
-      "Funciona sem fio até 90 minutos, segundo a Philips, e traz pente para a barba e dois pentes para o cabelo. Para um primeiro corte com menos dúvidas, a Remington ColourCut é mais simples; para uso diário de barbearia, a Wahl Super Taper aguenta mais horas seguidas."
+      "Funciona sem fio até 90 minutos, segundo a Philips, e traz pente para a barba e dois pentes para o cabelo. Para um primeiro corte com menos dúvidas, a {{remington-colourcut-hc5035|Remington ColourCut}} é mais simples; para uso diário de barbearia, a {{wahl-super-taper|Wahl Super Taper}} aguenta mais horas seguidas."
     ],
     paraQuem: "Para quem corta o próprio cabelo ou o da família algumas vezes por mês e quer controlar o comprimento ao milímetro, sem andar a trocar pentes.",
     ficha: [
@@ -44,7 +44,7 @@ module.exports = [
     description: "Philips OneBlade 360 QP2724: lâmina 360, pentes de 1, 3 e 5 mm, uso no duche, quanto dura a lâmina e a diferença para o OneBlade Pro 360.",
     porque: [
       "É a forma mais simples de manter uma barba curta e os contornos limpos com uma só máquina: apara, faz o contorno e rapa, sem lâminas de barbear.",
-      "A lâmina 360 inclina-se em todas as direções para seguir o maxilar, e a Philips diz que dura até 4 meses, com um aviso quando é hora de a trocar. Se queres também aparar o corpo ou ter mais comprimentos, o OneBlade Pro 360 traz pente de 20 posições e kit corporal."
+      "A lâmina 360 inclina-se em todas as direções para seguir o maxilar, e a Philips diz que dura até 4 meses, com um aviso quando é hora de a trocar. Se queres também aparar o corpo ou ter mais comprimentos, o {{philips-oneblade-pro-360|OneBlade Pro 360}} traz pente de 20 posições e kit corporal."
     ],
     paraQuem: "Para quem usa barba de poucos dias ou curta e quer aparar, contornar e rapar com o mesmo aparelho, em seco ou no duche.",
     ficha: [
@@ -56,7 +56,7 @@ module.exports = [
       ["Na caixa", "OneBlade 360, 2 lâminas 360, 3 pentes, tampa de proteção e bolsa (adaptador de corrente não incluído)"]
     ],
     fonte: FONTE,
-    versao: "QP2724/31 é o OneBlade 360 para o rosto, com 2 lâminas e 3 pentes de barba. O OneBlade Pro 360 Face + Body tem pente de 20 comprimentos (0,4 a 10 mm), kit corporal e até 120 minutos de bateria.",
+    versao: "QP2724/31 é o OneBlade 360 para o rosto, com 2 lâminas e 3 pentes de barba. O {{philips-oneblade-pro-360|OneBlade Pro 360 Face + Body}} tem pente de 20 comprimentos (0,4 a 10 mm), kit corporal e até 120 minutos de bateria.",
     comoUsar: [
       "Para aparar, encaixa o pente com o comprimento que queres e passa contra o sentido do pelo.",
       "Para contornar, tira o pente e usa a aresta da lâmina na linha do pescoço e das maçãs do rosto.",
@@ -76,7 +76,7 @@ module.exports = [
     description: "Philips OneBlade Pro 360 Face + Body: pente de 20 comprimentos (0,4 a 10 mm), kit corporal, 120 minutos de bateria e a diferença para o OneBlade 360.",
     porque: [
       "É o OneBlade para quem quer mais do que uma barba de poucos dias: o pente de precisão tem 20 comprimentos, de 0,4 a 10 mm, e o kit corporal permite aparar o corpo com um protetor de pele.",
-      "A Philips indica até 120 minutos de bateria e lâminas que duram até 4 meses. Se só precisas de manter a barba curta, o OneBlade 360 (QP2724) faz o essencial com menos acessórios."
+      "A Philips indica até 120 minutos de bateria e lâminas que duram até 4 meses. Se só precisas de manter a barba curta, o {{philips-oneblade-360-qp2724|OneBlade 360 (QP2724)}} faz o essencial com menos acessórios."
     ],
     paraQuem: "Para quem quer controlar o comprimento da barba ao pormenor e usar o mesmo aparelho no rosto e no corpo.",
     ficha: [
@@ -108,7 +108,7 @@ module.exports = [
     description: "Remington ColourCut HC5035: máquina com fio, 9 pentes coloridos de 1,5 a 25 mm, alavanca de 0,5 a 2 mm e acessórios para o primeiro corte em casa.",
     porque: [
       "É a máquina mais fácil para quem nunca cortou o cabelo em casa: cada um dos 9 pentes tem uma cor, de 1,5 a 25 mm, e assim não se confunde o 2 com o 3 a meio do corte.",
-      "Funciona com fio, por isso não fica sem bateria a meio, e traz tesoura, pente, escova de pescoço e pentes para a zona das orelhas. Quem quer descer meio número sem trocar de pente fica melhor com a Philips Série 5000."
+      "Funciona com fio, por isso não fica sem bateria a meio, e traz tesoura, pente, escova de pescoço e pentes para a zona das orelhas. Quem quer descer meio número sem trocar de pente fica melhor com a {{philips-hc5630-series-5000|Philips Série 5000}}."
     ],
     paraQuem: "Para quem vai fazer os primeiros cortes em casa e quer pentes fáceis de distinguir e tudo o que precisa na mesma caixa.",
     ficha: [
@@ -120,7 +120,7 @@ module.exports = [
       ["Na caixa", "Pentes para as orelhas, escova de limpeza, escova de pescoço, tesoura e pente"]
     ],
     fonte: FONTE,
-    versao: "A HC5035 é a versão com fio da ColourCut. Se procuras uma máquina sem fio, esta não é: vê a Wahl Rapid Clip ou a Philips Série 5000.",
+    versao: "A HC5035 é a versão com fio da ColourCut. Se procuras uma máquina sem fio, esta não é: vê a {{wahl-rapid-clip|Wahl Rapid Clip}} ou a {{philips-hc5630-series-5000|Philips Série 5000}}.",
     comoUsar: [
       "Escolhe o pente pela cor e começa pelo mais comprido.",
       "Usa a alavanca para afinar entre números (0,5 a 2 mm) sem trocar de pente.",
@@ -140,7 +140,7 @@ module.exports = [
     description: "Wahl Rapid Clip: máquina sem fio com até 120 minutos de autonomia, também com cabo, 10 pentes de 3 a 28 mm e lâminas que se tiram para limpar.",
     porque: [
       "Junta o melhor dos dois mundos para cortar em casa: até 120 minutos sem fio, segundo a Wahl, e a possibilidade de continuar com o cabo quando a bateria acaba.",
-      "Traz 10 pentes, de 3 a 28 mm, e as lâminas tiram-se para limpar, o que ajuda a manter a máquina higiénica. Para cortes muito curtos, a Philips Série 5000 desce até 0,5 mm."
+      "Traz 10 pentes, de 3 a 28 mm, e as lâminas tiram-se para limpar, o que ajuda a manter a máquina higiénica. Para cortes muito curtos, a {{philips-hc5630-series-5000|Philips Série 5000}} desce até 0,5 mm."
     ],
     paraQuem: "Para quem quer cortar em casa sem estar preso à tomada e não quer ficar sem máquina a meio do corte.",
     ficha: [
@@ -172,7 +172,7 @@ module.exports = [
     description: "Braun All-in-One Series 5 AIO5545: barba, cabelo, nariz, orelhas e corpo, 14 comprimentos de 3 a 21 mm, à prova de água e até 120 minutos de bateria.",
     porque: [
       "É a escolha para quem quer um só aparelho para tudo: apara a barba, corta o cabelo, trata do nariz e das orelhas e apara o corpo com a tecnologia SkinGuard, pensada para zonas sensíveis.",
-      "O pente da barba tem 14 comprimentos (3 a 21 mm), é 100% à prova de água e a bateria dura até 120 minutos, segundo a Braun. Para cortar o cabelo com frequência, uma máquina dedicada como a Philips Série 5000 dá mais controlo."
+      "O pente da barba tem 14 comprimentos (3 a 21 mm), é 100% à prova de água e a bateria dura até 120 minutos, segundo a Braun. Para cortar o cabelo com frequência, uma máquina dedicada como a {{philips-hc5630-series-5000|Philips Série 5000}} dá mais controlo."
     ],
     paraQuem: "Para quem quer resolver barba, cabelo, nariz, orelhas e corpo com o mesmo aparelho e sem encher a gaveta.",
     ficha: [
@@ -204,7 +204,7 @@ module.exports = [
     description: "Wahl Super Taper com fio: motor V5000 de 6000 rpm, alavanca de 1 a 3,5 mm, uso contínuo em barbearia e como lubrificar as lâminas.",
     porque: [
       "É uma máquina de barbearia: com fio, feita para uso contínuo, com o motor V5000 de 6000 rpm que a Wahl indica e lâminas cromadas de precisão.",
-      "A alavanca lateral ajusta o corte de 1 a 3,5 mm sem trocar de lâmina, o que dá rapidez nos degradês. Para cortar em casa de vez em quando, uma máquina sem fio como a Wahl Rapid Clip é mais prática."
+      "A alavanca lateral ajusta o corte de 1 a 3,5 mm sem trocar de lâmina, o que dá rapidez nos degradês. Para cortar em casa de vez em quando, uma máquina sem fio como a {{wahl-rapid-clip|Wahl Rapid Clip}} é mais prática."
     ],
     paraQuem: "Para barbeiros e para quem corta muitas vezes e precisa de uma máquina estável durante horas seguidas.",
     ficha: [
@@ -236,7 +236,7 @@ module.exports = [
     description: "CeraVe Loção Hidratante de Rosto SPF 50: para pele normal a seca, ceramidas e niacinamida, sem perfume. Para que serve, como usar e qual versão é.",
     porque: [
       "É a nossa escolha para quem quer um só produto de manhã: hidrata e protege do sol (SPF 50, UVA e UVB) no mesmo passo, o que torna mais fácil não falhar o protetor solar.",
-      "Tem 3 ceramidas, niacinamida e vitamina E, não tem perfume e a CeraVe indica-a como não comedogénica. É para pele normal a seca; com pele oleosa, um fluido como o ISDIN Fusion Water costuma ficar melhor."
+      "Tem 3 ceramidas, niacinamida e vitamina E, não tem perfume e a CeraVe indica-a como não comedogénica. É para pele normal a seca; com pele oleosa, um fluido como o {{isdin-fusion-water-magic-spf50|ISDIN Fusion Water}} costuma ficar melhor."
     ],
     paraQuem: "Para quem quer simplificar a manhã num só passo e tem pele normal ou seca.",
     ficha: [
@@ -268,7 +268,7 @@ module.exports = [
     description: "CeraVe Blemish Control gel de limpeza: ácido salicílico, argila e niacinamida para borbulhas, pontos negros e poros. Como usar e cuidados com o sol.",
     porque: [
       "É um dos géis de limpeza mais bem colocados no ranking de Beleza da Amazon.es (n.º 26 a 11 de outubro de 2026) para pele com borbulhas e pontos negros: junta ácido salicílico, que esfolia dentro dos poros, com argila e niacinamida, e mantém as ceramidas da CeraVe para não deixar a pele a repuxar.",
-      "Não tem perfume e a marca indica-o como não comedogénico e hipoalergénico. Como pode aumentar a sensibilidade ao sol, pede protetor solar de manhã. Para pele oleosa sem borbulhas, o gel espumante da CeraVe chega."
+      "Não tem perfume e a marca indica-o como não comedogénico e hipoalergénico. Como pode aumentar a sensibilidade ao sol, pede protetor solar de manhã. Para pele oleosa sem borbulhas, o {{cerave-gel-limpeza-espumante|gel espumante da CeraVe}} chega."
     ],
     paraQuem: "Para quem tem pele oleosa com borbulhas, pontos negros ou poros entupidos e quer tratar isso logo na limpeza.",
     ficha: [
@@ -300,7 +300,7 @@ module.exports = [
     description: "Garnier Sérum Antimanchas com vitamina C, niacinamida e ácido salicílico: para que serve, como usar, de manhã ou à noite e porque pede protetor solar.",
     porque: [
       "Está entre os produtos mais bem colocados no ranking de Beleza da Amazon.es (n.º 28 a 11 de outubro de 2026) e é fácil de começar: textura leve, absorve depressa e serve todos os tipos de pele, segundo a Garnier.",
-      "Junta um derivado de vitamina C, niacinamida e ácido salicílico para manchas e pele baça, e é vegano. Se preferes uma marca de homem com vitamina C pura a 10%, vê o sérum L'Oréal Men Expert Hydra Energetic."
+      "Junta um derivado de vitamina C, niacinamida e ácido salicílico para manchas e pele baça, e é vegano. Se preferes uma marca de homem com vitamina C pura a 10%, vê o {{loreal-men-expert-serum-vitamina-c|sérum L'Oréal Men Expert Hydra Energetic}}."
     ],
     paraQuem: "Para quem tem manchas do sol ou marcas de borbulhas e quer uma pele com tom mais uniforme.",
     ficha: [
@@ -332,7 +332,7 @@ module.exports = [
     description: "CeraVe Gel de Limpeza Espumante para pele normal a oleosa, rosto e corpo, com ceramidas e niacinamida. Como usar e qual a diferença para o hidratante.",
     porque: [
       "É a nossa escolha para lavar a cara se tens pele normal, mista ou oleosa: tira o excesso de oleosidade sem deixar a pele a repuxar, com ceramidas, ácido hialurónico e niacinamida.",
-      "Não tem perfume, a CeraVe indica-o como não comedogénico e serve para rosto e corpo, por isso um frasco simplifica o duche. Com pele seca, o gel de limpeza hidratante da mesma marca é melhor; com borbulhas, o Blemish Control."
+      "Não tem perfume, a CeraVe indica-o como não comedogénico e serve para rosto e corpo, por isso um frasco simplifica o duche. Com pele seca, o {{cerave-gel-limpeza-hidratante|gel de limpeza hidratante da mesma marca}} é melhor; com borbulhas, o {{cerave-blemish-control|Blemish Control}}."
     ],
     paraQuem: "Para quem tem pele normal a oleosa e quer um gel simples para a cara e o corpo.",
     ficha: [
@@ -344,7 +344,7 @@ module.exports = [
       ["Perfume", "Sem perfume; não comedogénico"]
     ],
     fonte: FONTE,
-    versao: "Este é o espumante (foaming), para pele normal a oleosa. O CeraVe Gel de Limpeza Hidratante é para pele normal a seca, e o Blemish Control para acne. Há vários tamanhos; confirma o volume na Amazon.",
+    versao: "Este é o espumante (foaming), para pele normal a oleosa. O {{cerave-gel-limpeza-hidratante|CeraVe Gel de Limpeza Hidratante}} é para pele normal a seca, e o {{cerave-blemish-control|Blemish Control}} para acne. Há vários tamanhos; confirma o volume na Amazon.",
     comoUsar: [
       "Molha a pele com água morna.",
       "Massaja o gel com movimentos circulares.",
@@ -364,7 +364,7 @@ module.exports = [
     description: "L'Oréal Men Expert Hydra Energetic, creme hidratante anti-fadiga de 50 ml: guaraná e vitamina C, depois da barba, de manhã e à noite. Sem protetor solar.",
     porque: [
       "É um bom primeiro creme de uma marca de homem: textura gel-creme que absorve depressa, para usar de manhã e à noite.",
-      "Tem extrato de guaraná e vitamina C e a L'Oréal indica-o também depois da barba, para aliviar o ardor e a vermelhidão. Não tem protetor solar: de dia, junta um FPS ou escolhe a CeraVe SPF 50."
+      "Tem extrato de guaraná e vitamina C e a L'Oréal indica-o também depois da barba, para aliviar o ardor e a vermelhidão. Não tem protetor solar: de dia, junta um FPS ou escolhe a {{cerave-hidratante-rosto-spf50|CeraVe SPF 50}}."
     ],
     paraQuem: "Para quem quer começar a usar creme com uma textura leve e de marca de homem, também a seguir à barba.",
     ficha: [
@@ -376,7 +376,7 @@ module.exports = [
       ["Tipo de pele", "Normal, segundo a ficha"]
     ],
     fonte: FONTE,
-    versao: "Hydra Energetic é uma linha inteira (gel de limpeza, sérum de vitamina C, roll-on de olhos). Este é o creme hidratante anti-fadiga de 50 ml.",
+    versao: "Hydra Energetic é uma linha inteira (gel de limpeza, {{loreal-men-expert-serum-vitamina-c|sérum de vitamina C}}, {{loreal-men-expert-roll-on-olhos|roll-on de olhos}}). Este é o creme hidratante anti-fadiga de 50 ml.",
     comoUsar: [
       "Aplica na pele limpa do rosto, de manhã e à noite.",
       "Depois da barba, espera que a pele seque e aplica uma camada fina.",
@@ -396,7 +396,7 @@ module.exports = [
     description: "CeraVe Creme Reparador Contorno de Olhos (14 ml): olheiras e papos, ácido hialurónico, niacinamida e ceramidas. Como aplicar e para que pele é.",
     porque: [
       "É a nossa escolha para quem quer um contorno de olhos simples: a CeraVe indica-o para reduzir olheiras e papos, reparar a pele e dar luminosidade, com ácido hialurónico, niacinamida e ceramidas.",
-      "Serve todos os tipos de pele e usa-se de manhã, à noite ou nas duas. Para quem acorda sobretudo com os olhos inchados, o sérum de cafeína da The Ordinary é mais direto."
+      "Serve todos os tipos de pele e usa-se de manhã, à noite ou nas duas. Para quem acorda sobretudo com os olhos inchados, o {{the-ordinary-caffeine-solution|sérum de cafeína da The Ordinary}} é mais direto."
     ],
     paraQuem: "Para quem tem a pele seca à volta dos olhos, olheiras de cansaço ou papos ligeiros e quer um gesto simples.",
     ficha: [
@@ -428,7 +428,7 @@ module.exports = [
     description: "The Ordinary Hyaluronic Acid 2% + B5 com ceramidas: para que serve, como usar na pele húmida antes do creme e porque é o sérum mais fácil para começar.",
     porque: [
       "É o sérum que recomendamos para começar: hidrata, é dos que menos irritam e nota-se depressa numa pele que repuxa, sobretudo depois do banho ou da barba.",
-      "Tem vários tipos de ácido hialurónico, provitamina B5 e ceramidas, não tem fragrância e é vegano, segundo a The Ordinary. Para poros e brilho, o sérum de niacinamida da Neutrogena é mais indicado."
+      "Tem vários tipos de ácido hialurónico, provitamina B5 e ceramidas, não tem fragrância e é vegano, segundo a The Ordinary. Para poros e brilho, o {{neutrogena-hydro-boost-niacinamida|sérum de niacinamida da Neutrogena}} é mais indicado."
     ],
     paraQuem: "Para quem quer o primeiro sérum e tem a pele desidratada ou a repuxar.",
     ficha: [
@@ -460,7 +460,7 @@ module.exports = [
     description: "ISDIN Fusion Water Magic SPF 50: protetor solar facial leve, mate e para pele oleosa, que não irrita os olhos. Como usar e diferença para Color e Repair.",
     porque: [
       "É a nossa escolha de protetor solar para o rosto no dia a dia: fase aquosa, absorção imediata e acabamento mate, segundo a ISDIN, que o indica para pele oleosa. Como não brilha, é o que tem mais hipóteses de passar a fazer parte da manhã.",
-      "Protege de UVB, UVA, luz azul e IR-A, tem ácido hialurónico e a tecnologia Safe Eye Tech, que a marca diz evitar a irritação dos olhos. Com pele seca, a CeraVe SPF 50 hidrata mais."
+      "Protege de UVB, UVA, luz azul e IR-A, tem ácido hialurónico e a tecnologia Safe Eye Tech, que a marca diz evitar a irritação dos olhos. Com pele seca, a {{cerave-hidratante-rosto-spf50|CeraVe SPF 50}} hidrata mais."
     ],
     paraQuem: "Para quem desistiu do protetor solar por causa do brilho ou de arder nos olhos e quer um que se sinta pouco.",
     ficha: [

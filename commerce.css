@@ -5518,4 +5518,21 @@ body[data-page="product"] .oc-pd-col .rich-list { margin: 0; }
   body[data-page="product"] .oc-pd-grid { grid-template-columns: 1fr; }
   body[data-page="product"] .oc-pd-table th { width: 42%; }
 }
+/* Links para outros produtos dentro do texto (apply-product-details.js) */
+body[data-page="product"] .hero-card .store-note p a,
+body[data-page="product"] .product-highlight p a {
+  color: #e6c88f;
+  text-decoration: underline;
+  text-decoration-color: rgba(230, 200, 143, 0.5);
+  text-underline-offset: 3px;
+}
+body[data-page="product"] .hero-card .store-note p a:hover { text-decoration-color: #e6c88f; }
+body[data-page="product"] .oc-pd-col p a,
+body[data-page="product"] .oc-pd-col li a {
+  color: #6b4f22;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(154, 114, 50, 0.55);
+  text-underline-offset: 3px;
+}
 /* OC-PRODUCT-DETAILS-END */
