@@ -465,6 +465,7 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
+    "booking": "https://championsbarbershop.pt/marcacao/",
     "horario": "Seg-Qui 9h-22h; Sex-Sáb 9h-23h",
     "horario_fonte": {
       "nome": "OpenStreetMap",
@@ -3183,13 +3184,18 @@ const barbearias = [
     "data_confidence": "medium",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 910 422 912",
     "email": null,
-    "website": null,
+    "website": "https://www.barbeariafafense.com/",
     "instagram": "https://www.instagram.com/barbearia_fafense/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Fafense%20Fafe",
+      "data": "2026-10-11"
+    },
+    "horario": "Ter-Sáb 9h-13h e 15h-20h",
     "observacoes": null,
     "coords": [
       41.4515,
@@ -3819,34 +3825,36 @@ const barbearias = [
     "freguesia": "",
     "city": "Macedo de Cavaleiros",
     "zone": "",
-    "morada": "Rua Eng. Moura Pegado 2, 5340-211 Macedo de Cavaleiros",
-    "address_raw": "Rua Eng. Moura Pegado 2, 5340-211 Macedo de Cavaleiros",
-    "street": "Rua Eng. Moura Pegado",
-    "street_number": "2",
+    "morada": "Rua Clara Vaz 8 R/C, 5340-240 Macedo de Cavaleiros",
+    "address_raw": "Rua Clara Vaz 8 R/C, 5340-240 Macedo de Cavaleiros",
+    "street": "Rua Clara Vaz",
+    "street_number": "8",
     "complemento": "",
     "localidade": "Macedo de Cavaleiros",
-    "codigo_postal": "5340-211",
+    "codigo_postal": "5340-240",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 278 422 123",
+    "telefone": "+351 917 474 318",
     "email": "geral@barbeariavaladar.com",
     "website": "https://barbeariavaladar.com/",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Valadar%20Macedo%20de%20Cavaleiros",
+      "data": "2026-10-11"
+    },
+    "horario": "Seg-Sex 9h-12h30 e 14h30-19h; Sáb 9h-13h",
     "observacoes": null,
-    "coords": [
-      41.5382,
-      -6.9614
-    ],
+    "coords": [41.5372833, -6.9602316],
     "status": "confirmado",
     "fontes": [
       "https://barbeariavaladar.com/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-11",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5125,12 +5133,14 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Cortes%20de%20Lisboa%20%C3%89vora%20Plaza",
+      "data": "2026-10-11"
+    },
+    "horario": "Seg-Dom 10h-22h",
     "observacoes": null,
-    "coords": [
-      38.5803,
-      -7.9148
-    ],
+    "coords": [38.5491859, -7.9072066],
     "status": "confirmado",
     "fontes": [
       "https://cortesdelisboa.pt/"
@@ -5679,13 +5689,18 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 937 155 768",
     "email": null,
     "website": "https://www.treatwell.pt/estabelecimentos/na-barbearia-1/em-albufeira-portugal-2/",
-    "instagram": null,
+    "instagram": "https://www.instagram.com/patrickbarbershopmfa/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Patrick%20Barbershop%20MFA%20Albufeira",
+      "data": "2026-10-11"
+    },
+    "horario": "Seg-Sáb 9h-21h; Dom 9h-14h",
     "observacoes": null,
     "coords": [
       37.088,
@@ -6147,12 +6162,14 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=The%20Barbers%20Mar%20Shopping%20Algarve",
+      "data": "2026-10-11"
+    },
+    "horario": "Seg-Dom 10h-23h",
     "observacoes": null,
-    "coords": [
-      37.07,
-      -8.03
-    ],
+    "coords": [37.0980693, -7.9975335],
     "status": "confirmado",
     "fontes": [
       "https://thebarbers.pt/"
@@ -7252,15 +7269,15 @@ const barbearias = [
     "location_flags": [],
     "telefone": "+351 213 147 930",
     "email": null,
-    "website": null,
+    "website": "https://bentobarbearias.pt/",
     "instagram": null,
     "facebook": "https://facebook.com/bentobarbearias/",
     "google_maps": null,
-    "horario": "Seg-Sex 9h-20h; Sáb 9h-17h",
+    "horario": "Seg 9h-19h; Ter-Sex 9h-20h; Sáb 9h-17h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/4773880694",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Bento%20Barbearias%20Estef%C3%A2nia%20Lisboa",
+      "data": "2026-10-11"
     },
     "observacoes": null,
     "coords": [
@@ -7965,12 +7982,15 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Magotto%20Portalegre",
+      "data": "2026-10-11"
+    },
+    "booking": "https://client.tuaagenda.com/c/MAGOTTOBARBEARIA",
+    "horario": "Seg-Sex 10h-13h e 14h30-19h30; Sáb 10h-13h e 14h-17h",
     "observacoes": null,
-    "coords": [
-      39.298,
-      -7.4298
-    ],
+    "coords": [39.2898654, -7.4332556],
     "status": "confirmado",
     "fontes": [
       "https://client.tuaagenda.com/c/MAGOTTOBARBEARIA"
@@ -11102,7 +11122,7 @@ const barbearias = [
     "email": null,
     "website": "https://www.fresha.com/lvp/barbers-tattoo-mg-rua-da-praia-monte-gordo-7xvAlX",
     "instagram": null,
-    "facebook": null,
+    "facebook": "https://www.facebook.com/barberstattoomg",
     "google_maps": null,
     "horario": "Seg-Sex 9h-20h; Sáb 8h30-13h",
     "horario_fonte": {
@@ -12206,11 +12226,16 @@ const barbearias = [
     "location_flags": [],
     "telefone": "+351 245 382 068",
     "email": null,
-    "website": null,
+    "website": "https://linktr.ee/BarbeariaLaminaFina",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20L%C3%A2mina%20Fina%20Portalegre",
+      "data": "2026-10-11"
+    },
+    "horario": "Seg-Qui 10h-13h e 14h30-19h30; Sex 10h-12h e 14h30-19h30; Sáb 10h-13h e 14h30-19h30",
     "observacoes": null,
     "coords": [
       39.2937238,
@@ -12410,7 +12435,13 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20da%20S%C3%A9%20Viseu",
+      "data": "2026-10-11"
+    },
+    "booking": "https://barbeariadase.setmore.com/",
+    "horario": "Seg-Sex 8h30-12h30 e 14h-19h; Sáb 7h30-13h e 14h-17h",
     "observacoes": null,
     "coords": [
       40.6597072,
@@ -14575,6 +14606,11 @@ const barbearias = [
     "coords": [39.2132, -8.6204],
     "mostrar_no_mapa": true,
     "ultima_validacao": "2026-06-09",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Pardal%20Almeirim",
+      "data": "2026-10-11"
+    },
     "status": "confirmado",
     "distrito": null,
     "concelho": null,
@@ -14584,7 +14620,7 @@ const barbearias = [
     "website": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Ter 10h-13h e 14h30-20h; Qui 10h-13h e 14h30-20h; Sex 9h-13h e 14h30-20h; Sáb 9h-13h e 14h30-18h",
     "observacoes": null,
     "fontes": [],
     "qualidade_ficha": "alta"
@@ -14929,12 +14965,18 @@ const barbearias = [
     "nome": "Barbearia Navalha Dourada",
     "slug": "barbearia-navalha-dourada-alenquer",
     "city": "Alenquer",
-    "morada": "R. Sacadura Cabral 46B, 2580-371 Alenquer",
+    "morada": "Rua Gago Coutinho 13 R/C, 2580-568 Alenquer",
     "telefone": "+351 917 700 907",
     "instagram": "https://instagram.com/navalha_dourada_alenquer",
-    "coords": [39.0600, -9.0135],
+    "coords": [39.0493305, -8.9987616],
     "mostrar_no_mapa": true,
-    "ultima_validacao": "2026-06-09",
+    "ultima_validacao": "2026-10-11",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Navalha%20Dourada%20Alenquer",
+      "data": "2026-10-11"
+    },
+    "booking": "https://buk.pt/navalha-dourada-alenquer",
     "status": "confirmado",
     "distrito": null,
     "concelho": null,
@@ -14944,7 +14986,7 @@ const barbearias = [
     "website": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h e 14h30-20h; Sáb 9h-13h",
     "observacoes": null,
     "fontes": [],
     "qualidade_ficha": "alta"
@@ -15030,17 +15072,22 @@ const barbearias = [
     "coords": [39.0228, -8.9742],
     "mostrar_no_mapa": true,
     "ultima_validacao": "2026-06-09",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Regis%20Barbershop%20Carregado",
+      "data": "2026-10-11"
+    },
     "status": "confirmado",
     "distrito": null,
     "concelho": null,
     "freguesia": null,
     "codigo_postal": null,
     "email": null,
-    "website": null,
+    "website": "https://regisbarbershop.com/",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-20h",
     "observacoes": null,
     "fontes": [],
     "qualidade_ficha": "alta"
@@ -15129,6 +15176,11 @@ const barbearias = [
     "coords": [38.7850497, -9.3493418],
     "mostrar_no_mapa": true,
     "ultima_validacao": "2026-06-25",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20100%20Cortes%20Sintra",
+      "data": "2026-10-11"
+    },
     "status": "confirmado",
     "data_confidence": "medium",
     "fontes": ["https://www.fresha.com/lp/pt/bt/barbearias/pt-lisboa/mem-martins"],
@@ -15141,7 +15193,7 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-21h",
     "observacoes": null,
     "qualidade_ficha": "alta"
   },
@@ -15155,6 +15207,12 @@ const barbearias = [
     "coords": [38.7960254, -9.3412307],
     "mostrar_no_mapa": true,
     "ultima_validacao": "2026-06-25",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Lord's%20Barbershop%20Mem%20Martins",
+      "data": "2026-10-11"
+    },
+    "booking": "https://widget.treatwell.pt/estabelecimento/lord-s-barbershop/",
     "status": "confirmado",
     "data_confidence": "medium",
     "fontes": ["https://www.fresha.com/lp/pt/bt/barbearias/pt-lisboa/mem-martins"],
@@ -15167,7 +15225,7 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg 9h-13h e 15h-18h; Ter-Sáb 9h-13h e 15h-19h30",
     "observacoes": null,
     "qualidade_ficha": "alta"
   },
@@ -15181,6 +15239,12 @@ const barbearias = [
     "coords": [38.7917332, -9.3457845],
     "mostrar_no_mapa": true,
     "ultima_validacao": "2026-06-25",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Just%20Men%20Cabeleireiro%20de%20Homens%20Mem%20Martins",
+      "data": "2026-10-11"
+    },
+    "booking": "https://buk.pt/just-men-cabeleireiro-de-homens",
     "status": "confirmado",
     "data_confidence": "high",
     "fontes": ["https://www.fresha.com/lp/pt/bt/barbearias/pt-lisboa/mem-martins"],
@@ -15193,7 +15257,7 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 8h30-13h",
     "observacoes": null,
     "qualidade_ficha": "alta"
   },
@@ -15311,6 +15375,12 @@ const barbearias = [
     "coords": [38.7048319, -9.3905985],
     "mostrar_no_mapa": true,
     "ultima_validacao": "2026-06-25",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=VVV%20Estoril%20Barbearia%20Cl%C3%A1ssica",
+      "data": "2026-10-11"
+    },
+    "booking": "https://buk.pt/vvv",
     "status": "confirmado",
     "data_confidence": "medium",
     "fontes": ["https://www.fresha.com/lp/en/bt/hair-salons/in/pt-lisbon/parede"],
@@ -15323,7 +15393,7 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 10h-13h e 14h-19h",
     "observacoes": null,
     "qualidade_ficha": "alta"
   },
@@ -16042,7 +16112,7 @@ const barbearias = [
     "zone": null,
     "morada": "Rua da Natária 21, 4250-326 Porto",
     "codigo_postal": "4250-326",
-    "telefone": null,
+    "telefone": "+351 920 358 487",
     "email": null,
     "website": "https://www.fresha.com/a/porto-barber-porto-rua-da-nataria-21-zyd7kyuw",
     "instagram": null,
