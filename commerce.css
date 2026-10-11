@@ -5470,3 +5470,52 @@ body[data-page="product"] .oc-stage-caption:hover {
   text-underline-offset: 3px;
 }
 /* OC-STAGE-LINK-END */
+
+/* OC-PRODUCT-DETAILS (2026-10-11) — ficha rápida, versão, como usar e FAQ nas páginas de produto
+   (scripts/apply-product-details.js). Fundo claro, entre o cabeçalho escuro e "Para quem é". */
+body[data-page="product"] .oc-product-details > .container {
+  display: grid;
+  gap: clamp(24px, 3vw, 36px);
+}
+body[data-page="product"] .oc-pd-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: start;
+}
+body[data-page="product"] .oc-pd-col h2 {
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  margin: 0 0 14px;
+}
+body[data-page="product"] .oc-pd-col h2 + p,
+body[data-page="product"] .oc-pd-col p + h2 { margin-top: 0; }
+body[data-page="product"] .oc-pd-col p + h2 { margin-top: 26px; }
+body[data-page="product"] .oc-pd-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+body[data-page="product"] .oc-pd-table th,
+body[data-page="product"] .oc-pd-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border, rgba(110, 90, 60, 0.2));
+}
+body[data-page="product"] .oc-pd-table th {
+  width: 36%;
+  padding-right: 16px;
+  font-weight: 700;
+  color: var(--text-primary, #1f1a14);
+}
+body[data-page="product"] .oc-pd-note {
+  margin: 10px 0 0;
+  font-size: 0.8rem;
+  color: var(--muted, #6b6156);
+}
+body[data-page="product"] .oc-pd-col .rich-list { margin: 0; }
+@media (max-width: 760px) {
+  body[data-page="product"] .oc-pd-grid { grid-template-columns: 1fr; }
+  body[data-page="product"] .oc-pd-table th { width: 42%; }
+}
+/* OC-PRODUCT-DETAILS-END */
