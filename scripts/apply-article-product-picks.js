@@ -243,11 +243,26 @@ const PICKS = {
       ["loreal-men-expert-hydra-energetic", "Primeiro creme", "Gel-creme de absorção rápida, para o dia a dia e depois da barba."],
       ["loreal-men-expert-power-age", "A partir dos 40", "Com ácido hialurónico, em frasco de 100 ml; junta FPS de dia."]
     ]
+  },
+  "protetor-solar-para-homem-qual-escolher": {
+    title: "Um protetor para cada caso",
+    items: [
+      ["isdin-fusion-water-magic-spf50", "A nossa escolha", "SPF 50 leve e de acabamento mate, para o rosto todos os dias."],
+      ["la-roche-posay-anthelios-oil-control", "Pele muito oleosa", "SPF 50+ formulado para pele oleosa e sensível."],
+      ["cerave-hidratante-rosto-spf50", "Pele seca", "Hidrata e protege (SPF 50) no mesmo passo."],
+      ["isdin-scalp-hair-spray-spf50", "Cabeça rapada", "Spray SPF 50 para o couro cabeludo, transparente e não gorduroso."],
+      ["heliocare-360-sport-stick", "Desporto e bolso", "Stick SPF 50+ resistente à água e ao suor, para reaplicar."]
+    ]
   }
 };
 
 // Barra fixa mobile nos guias de compra: produto + id da secção depois da qual aparece
 const STICKY = {
+  "protetor-solar-para-homem-qual-escolher": {
+    product: "isdin-fusion-water-magic-spf50",
+    label: "A nossa escolha",
+    after: "pele-oleosa"
+  },
   "creme-de-rosto-para-homem-como-escolher": {
     product: "cerave-hidratante-rosto-spf50",
     label: "A nossa escolha",
