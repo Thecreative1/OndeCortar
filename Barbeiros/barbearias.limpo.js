@@ -2155,11 +2155,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Ter-Sáb 9h30-19h; Dom 9h30-13h",
+    "booking": "https://buk.pt/barbearia-couto",
+    "horario": "Ter 9h30-19h; Qua-Sex 9h30-21h; Sáb 9h30-19h; Dom 9h-12h30",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/13173328368",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Couto%20Tocha",
+      "data": "2026-10-11"
     },
     "observacoes": null,
     "coords": [
@@ -2691,7 +2692,13 @@ const barbearias = [
     "instagram": "https://www.instagram.com/barrasbarbershop/",
     "facebook": "https://www.facebook.com/707341389474101/",
     "google_maps": null,
-    "horario": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barras%20Barbershop%20Castro%20Verde",
+      "data": "2026-10-11"
+    },
+    "booking": "https://barras-barbershop-barbearia.buk.pt",
+    "horario": "Seg-Sex 9h-13h e 15h-19h; Sáb 9h-13h",
     "observacoes": null,
     "coords": [
       37.6979327,
@@ -3412,12 +3419,15 @@ const barbearias = [
     "instagram": "https://www.instagram.com/newvision_barbershop/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=NewVision%20Barbershop%20Guimar%C3%A3es",
+      "data": "2026-10-11"
+    },
+    "booking": "https://noona.pt/newvision",
+    "horario": "Seg-Sex 9h-20h; Sáb 9h-19h",
     "observacoes": null,
-    "coords": [
-      41.4428,
-      -8.2905
-    ],
+    "coords": [41.4486212, -8.2974293],
     "status": "confirmado",
     "fontes": [
       "https://www.instagram.com/newvision_barbershop/"
@@ -4217,13 +4227,18 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 919 105 074",
     "email": null,
     "website": null,
     "instagram": null,
     "facebook": "https://facebook.com/people/Barbearia-Lorde/100090125014058",
     "google_maps": null,
-    "horario": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Lorde%20Coimbra",
+      "data": "2026-10-11"
+    },
+    "horario": "Seg-Sáb 9h-22h; Dom 10h-16h",
     "observacoes": null,
     "coords": [
       40.1990446,
@@ -4725,17 +4740,15 @@ const barbearias = [
     "instagram": "https://www.instagram.com/20agecuts/",
     "facebook": "https://www.facebook.com/20agecutsevora/",
     "google_maps": null,
-    "horario": "Ter-Sex 10h-19h; Sáb 9h-18h",
+    "booking": "https://buk.pt/20agecuts/",
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-18h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/6172914986",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=20Age%20Cuts%20%C3%89vora",
+      "data": "2026-10-11"
     },
     "observacoes": null,
-    "coords": [
-      38.5737,
-      -7.909
-    ],
+    "coords": [38.5716667, -7.9095544],
     "status": "confirmado",
     "fontes": [
       "https://www.20agecuts.com/",
@@ -6438,12 +6451,13 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 244 021 409",
     "email": null,
-    "website": "https://booksy.com/pt-pt/3362_barba-negra-leiria_barbearia_141679_leiria",
+    "website": "https://barbanegra.pt/",
     "instagram": "https://www.instagram.com/barbanegraleiria/",
     "facebook": null,
     "google_maps": null,
+    "booking": "https://booksy.com/pt-pt/3362_barba-negra-leiria_barbearia_141679_leiria",
     "horario": "Seg-Sáb 10h-20h",
     "horario_fonte": {
       "nome": "Booksy",
@@ -7057,11 +7071,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Qui 10h-19h; Sáb-Dom 10h-19h",
+    "booking": "https://obarbologo.setmore.com/",
+    "horario": "Ter-Sáb 10h-19h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/5383068021",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20O%20Barb%C3%B3logo%20Lisboa",
+      "data": "2026-10-11"
     },
     "observacoes": null,
     "coords": [
@@ -8782,12 +8797,13 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 914 906 533",
     "email": null,
     "website": "https://booksy.com/pt-pt/5221_garcias-barber-charneca-da-caparica_barbearia_240803_charneca-de-caparica",
     "instagram": "https://www.instagram.com/barber.garcias/",
     "facebook": null,
     "google_maps": null,
+    "booking": "https://booksy.com/pt-pt/5221_garcias-barber-charneca-da-caparica_barbearia_240803_charneca-de-caparica",
     "horario": "Seg-Sáb 9h-12h e 13h-20h; Dom 9h-13h",
     "horario_fonte": {
       "nome": "Booksy",
@@ -11585,12 +11601,14 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=The%20Barber%20King%20Beja",
+      "data": "2026-10-11"
+    },
+    "horario": "Seg-Sáb 10h-22h",
     "observacoes": null,
-    "coords": [
-      38.0143682,
-      -7.8613256
-    ],
+    "coords": [38.0110836, -7.8546931],
     "status": "confirmado",
     "fontes": [
       "https://guiaempresas.pt/barbearia/beja/the-barber-king/"
@@ -12315,7 +12333,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Cigarro%20Vila%20Real",
+      "data": "2026-10-11"
+    },
+    "horario": "Seg-Sex 10h-13h e 14h30-20h; Sáb 9h-13h e 14h30-18h",
     "observacoes": null,
     "coords": [
       41.3042622,
@@ -12355,7 +12378,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20da%20Pra%C3%A7a%20Vila%20Real",
+      "data": "2026-10-11"
+    },
+    "horario": "Seg-Sáb 8h-19h",
     "observacoes": null,
     "coords": [
       41.2970177,
@@ -13323,12 +13351,14 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Marques%20Avelar",
+      "data": "2026-10-11"
+    },
+    "horario": "Ter-Sáb 9h-13h e 15h-19h",
     "observacoes": null,
-    "coords": [
-      39.9232423,
-      -8.3623839
-    ],
+    "coords": [39.9220347, -8.3613294],
     "status": "confirmado",
     "fontes": [
       "https://guiaempresas.pt/barbearia/ansiao/barbearia-marques/"
@@ -14458,6 +14488,11 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Vasco%20Leit%C3%A3o%20Barbearia%20Senhora%20da%20Hora",
+      "data": "2026-10-11"
+    },
     "horario": "Seg-Sáb 9h-19h30",
     "observacoes": "Entrada estratégica para reforçar Matosinhos/Senhora da Hora.",
     "coords": [
@@ -14703,9 +14738,14 @@ const barbearias = [
     "city": "Cartaxo",
     "morada": "Rua Batalhoz 70, 2070-071 Cartaxo",
     "telefone": "+351 927 102 310",
-    "coords": [39.1609, -8.7880],
+    "coords": [39.1640662, -8.7911319],
     "mostrar_no_mapa": true,
     "ultima_validacao": "2026-06-09",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Carlos%20Rato%20Cartaxo",
+      "data": "2026-10-11"
+    },
     "status": "confirmado",
     "distrito": null,
     "concelho": null,
@@ -14716,7 +14756,7 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 9h30-19h30; Sáb 9h30-13h",
     "observacoes": null,
     "fontes": [],
     "qualidade_ficha": "alta"
@@ -15897,7 +15937,7 @@ const barbearias = [
     "zone": "Buarcos",
     "morada": "Foz Plaza Shopping Center, Rua dos Condados 254, Buarcos, 3080-216 Figueira da Foz",
     "codigo_postal": "3080-216",
-    "telefone": null,
+    "telefone": "+351 913 418 952",
     "email": null,
     "website": "https://www.fresha.com/lvp/don-juan-barbearia-figueira-da-foz-7xv0yX",
     "instagram": null,
