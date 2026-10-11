@@ -262,11 +262,26 @@ const PICKS = {
       ["loreal-men-expert-roll-on-olhos", "Noite curta", "Roll-on de efeito gelo, para aplicar sem dedos."],
       ["nivea-men-hyaluron-contorno-olhos", "Rugas, a partir dos 40", "Contorno anti-idade com ácido hialurónico."]
     ]
+  },
+  "serum-para-homem-para-que-serve": {
+    title: "Um sérum para cada problema",
+    items: [
+      ["the-ordinary-hyaluronic-acid-b5", "A nossa escolha", "Ácido hialurónico com ceramidas: hidrata e quase não irrita."],
+      ["neutrogena-hydro-boost-niacinamida", "Poros e brilho", "10% de niacinamida com ácido hialurónico, sem perfume."],
+      ["garnier-vitamina-c-serum", "Manchas", "Vitamina C, niacinamida e ácido salicílico; de manhã, com FPS."],
+      ["loreal-men-expert-serum-vitamina-c", "Vitamina C de homem", "Vitamina C pura a 10% para pele baça."],
+      ["the-ordinary-granactive-retinoid", "Rugas, à noite", "Retinoide a 2% em emulsão, para começar devagar."]
+    ]
   }
 };
 
 // Barra fixa mobile nos guias de compra: produto + id da secção depois da qual aparece
 const STICKY = {
+  "serum-para-homem-para-que-serve": {
+    product: "the-ordinary-hyaluronic-acid-b5",
+    label: "A nossa escolha",
+    after: "qual-escolher"
+  },
   "contorno-de-olhos-para-homem-olheiras-e-papos": {
     product: "cerave-contorno-olhos",
     label: "A nossa escolha",
