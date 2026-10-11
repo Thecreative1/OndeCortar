@@ -200,6 +200,7 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
 | `build-directory-static.js` | Build principal — **este é o único que precisas correr** |
 | `gerar-barbearias-limpo.js` | ⚠️ **Não correr.** Legado: **reescreve `barbearias.limpo.js`** a partir de `Barbeiros/barbeiros.js` (234 barbearias, abril 2026) — apagaria ~570 fichas. Desde então os dados editam-se diretamente no `barbearias.limpo.js` |
 | `audit-barber-locations.js` | Auditoria de qualidade de localização |
+| `audit-regioes-localizacao.js` | Só leitura — cruza as 802 fichas com o código postal e as coordenadas: cidade no filtro de região errado ou em falta em `REGIOES_PT`, coords fora de PT, longe da cidade/CP, pontos repetidos, distrito da ficha/página ≠ CP. `REGIAO`, `SEM-REGIAO` e `COORDS-FORA-PT` corrigem-se sempre; o resto são pistas (confirmar online). Em 2026-10-11 restavam só pistas já revistas (fronteiras de distrito, Terceira, Odemira, Couço, Sertã). Correr depois de acrescentar cidades novas |
 | `audit-geography-hierarchy.js` | Relatório de fichas que precisam de contexto geográfico (concelho/distrito) → `relatorio-hierarquia-geografica.md` na raiz + `.json/.csv` em `Barbeiros/` (último em abril 2026) |
 | `audit-site-links.js` | Verifica links internos e perfis gerados |
 | `smoke-missing-barbearias.js` | Smoke test: confirma que todos os slugs têm página gerada |
