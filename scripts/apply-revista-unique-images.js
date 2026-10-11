@@ -51,6 +51,7 @@ const NEW_HEROES = {
   "protetor-solar-para-homem-qual-escolher": ["homem-perfil-sol-forte.jpg", "Grande plano do rosto de um homem com sol forte na pele"],
   "contorno-de-olhos-para-homem-olheiras-e-papos": ["homem-grisalho-maos-rosto.jpg", "Homem grisalho de barba a esfregar os olhos cansados com as mãos"],
   "serum-para-homem-para-que-serve": ["frascos-serum-mesa.jpg", "Dois frascos de vidro âmbar com tampa preta sobre um pano de linho claro"],
+  "gel-de-limpeza-para-homem-como-lavar-a-cara": ["homem-lavar-cara-lavatorio.jpg", "Homem com degradê a passar água pela cara num lavatório"],
 };
 
 const stats = { heroes: 0, data: 0, cards: 0, files: 0 };

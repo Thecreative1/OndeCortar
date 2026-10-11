@@ -272,11 +272,26 @@ const PICKS = {
       ["loreal-men-expert-serum-vitamina-c", "Vitamina C de homem", "Vitamina C pura a 10% para pele baça."],
       ["the-ordinary-granactive-retinoid", "Rugas, à noite", "Retinoide a 2% em emulsão, para começar devagar."]
     ]
+  },
+  "gel-de-limpeza-para-homem-como-lavar-a-cara": {
+    title: "Um gel de limpeza para cada pele",
+    items: [
+      ["cerave-gel-limpeza-espumante", "A nossa escolha", "Pele normal a oleosa; sem perfume, também para o corpo."],
+      ["cerave-gel-limpeza-hidratante", "Pele seca ou sensível", "Limpeza suave com ceramidas e ácido hialurónico."],
+      ["cerave-blemish-control", "Acne e pontos negros", "Ácido salicílico, argila e niacinamida."],
+      ["la-roche-posay-effaclar-gel", "Pele oleosa com imperfeições", "Gel purificante micro-esfoliante com ácido salicílico."],
+      ["nivea-men-hydrocare-gel-limpeza", "Marca de homem", "Aloé vera e provitamina B5, sensação de frescura."]
+    ]
   }
 };
 
 // Barra fixa mobile nos guias de compra: produto + id da secção depois da qual aparece
 const STICKY = {
+  "gel-de-limpeza-para-homem-como-lavar-a-cara": {
+    product: "cerave-gel-limpeza-espumante",
+    label: "A nossa escolha",
+    after: "qual-escolher"
+  },
   "serum-para-homem-para-que-serve": {
     product: "the-ordinary-hyaluronic-acid-b5",
     label: "A nossa escolha",
