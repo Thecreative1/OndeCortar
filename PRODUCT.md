@@ -15,7 +15,10 @@ Diretório independente de barbearias em Portugal (mapa + perfis + pesquisa), co
 ## Brand & Tone
 
 - Voz: direta, prática, calorosa q.b. — "sem conversa de catálogo" é lema editorial. Frases concretas, zero hype.
-- Identidade visual existente (não renegociar): Playfair Display (títulos display) + Plus Jakarta Sans (corpo/UI); papel creme/bege quente, tinta escura, verde-oliva `#516255` como cor de marca, dourados discretos; cartões com cantos generosos e sombras suaves.
+- Identidade visual (não renegociar), em duas famílias desde 2026-10-01:
+  - **Diretório** (homepage, perfis, cidades, Sobre, FAQ, Privacidade, Registar): tema escuro "preto mate & verde-garrafa" — fundo `#141614`, cartões `#1E221F`, texto creme `#ECE7DD`, acento âmbar `#C8873A`, destaques verde-garrafa `#1F4D3A`; títulos Big Shoulders Display em maiúsculas, corpo Geist. Detalhes e armadilhas no CLAUDE.md ("Identidade visual dos perfis").
+  - **Revista**: clara — Playfair Display (títulos) + Plus Jakarta Sans (corpo), papel creme/bege quente, tinta escura, verde-oliva, dourados discretos; cartões com cantos generosos e sombras suaves.
+  - **Loja**: verde da marca `#425a47` + dourado, com painéis escuros "barbearia" nas zonas de destaque e o resto claro.
 - A revista tem alma de revista de barbearia clássica: cultura de ofício, ferramenta bem tratada, ritual sem cerimónia.
 
 ## Anti-references

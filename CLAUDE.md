@@ -14,12 +14,15 @@ Diretório de barbearias em Portugal. Site estático (HTML/CSS/JS puro), sem fra
 |---|---|
 | `Barbeiros/barbearias.limpo.js` | **Fonte única de dados** — define `const barbearias = [...]` com todas as barbearias |
 | `Barbeiros/barbearias.mapa.js` | Versão reduzida dos dados que a homepage carrega (só públicas, sem campos que o browser não lê, sem vazios) — **gerada pelo build, não editar**. Se o cliente passar a ler um campo novo, tirá-lo de `CLIENT_OMIT_FIELDS` no build |
-| `Barbeiros/barbearias-utils.js` | Utilitários partilhados: normalização de texto, geocoding, slugify. Contém `LOCALITY_FRONTEND_FORMS` — **localidades que levam artigo** ("no Porto", "na Póvoa de Varzim", "nas Velas"); acrescentar aqui cada cidade nova que não diga "em X", senão o `<title>`/`h1` fica "Barbearias em Póvoa de Varzim" |
+| `Barbeiros/barbearias-utils.js` | Utilitários partilhados: normalização de texto, geocoding, slugify. Contém `LOCALITY_FRONTEND_FORMS` — **localidades que levam artigo** ("no Porto", "na Póvoa de Varzim", "nas Velas"); acrescentar aqui cada cidade nova que não diga "em X", senão o `<title>`/`h1` fica "Barbearias em Póvoa de Varzim" (o mesmo artigo dá "concelho **do** Porto", "distrito **da** Guarda"). Contém também `MUNICIPIO_RULES` (concelho/distrito inferidos quando a ficha não os tem) — ver "Pesquisa e localização" |
 | `llms.txt` | Resumo do site para assistentes de IA (llmstxt.org) com todas as páginas de cidade — **gerado pelo build** (`buildLlmsTxt`), não editar |
 | `oc-analytics.js` | Toda a medição do site: GA4 em modo sem cookies (consentimento negado) + **GoatCounter** (`ondecortar.goatcounter.com`, sem cookies). Eventos `barber_contact_click` (Marcar/Ligar por perfil: `clique-booking/<slug>`, `clique-phone/<slug>`), cliques de afiliado (`amazon/<tipo>/<página>/<ASIN>`) e artigo/diretório → loja (`para-loja/…`). Os números para mostrar às barbearias vêm do GoatCounter (o GA4 sem consentimento quase não reporta) |
 | `scripts/build-directory-static.js` | **Script de build principal** — gera tudo a partir dos dados |
 | `index.html` | Homepage com mapa Leaflet + pesquisa dinâmica + lista estática SSR |
-| `script.js` | Normalização client-side dos dados da homepage (cidades, links, descrições) — o mapa Leaflet, pesquisa e filtros estão em script inline no `index.html` |
+| `script.js` | Normalização client-side dos dados da homepage (cidades, links, descrições) e `searchBarbers` (a pesquisa) — o mapa Leaflet, os filtros de região e a reposição da pesquisa ao voltar atrás estão em script inline no `index.html` |
+| `registar.html` | Formulário único (Formspree) para adicionar, atualizar ou corrigir uma barbearia. O site **não tem contas nem login** — não pôr botões "Entrar". `registar.html#atualizar=<nome>` abre em "Atualizar" com o nome preenchido (hash, não query, para não criar URLs) |
+| `AGENTS.md` | Aponta para este ficheiro (para Codex e outros agentes). Não duplicar regras lá |
+| `PRODUCT.md` | Propósito, público, tom e identidade visual — lido por skills de design |
 | `barbearias/{slug}/index.html` | Páginas de perfil individuais — **geradas pelo build, não editar manualmente** |
 | `cidades/{slug}/index.html` | Páginas por cidade — **geradas pelo build, não editar manualmente** |
 | `cidades/index.html` | Hub de cidades — **gerado pelo build, não editar manualmente** |
@@ -57,7 +60,7 @@ Procedimento quando as coords parecem erradas:
 
 ## Encontrar barbearias em zonas sem cobertura
 
-Estado em 2026-10-07: **802 barbearias, 315 cidades**. O `<title>` da homepage diz "800+" (atualizado 2026-10-07); quando passar de 900 ou 1000, atualizar title, og/twitter e description (pedir OK).
+Estado em 2026-10-07 (confirmado a 2026-10-11): **802 barbearias, 315 cidades**. O `<title>` da homepage diz "800+" (atualizado 2026-10-07); quando passar de 900 ou 1000, atualizar title, og/twitter e description (pedir OK).
 
 **Lista de lacunas:** artifact [Vilas sem barbearia](https://claude.ai/artifact/DgEHSWmsP3bXNVdT2FNTjQ) (db, coleção `vilas`, doc `{estado: por-ver|encontrei|sem, nota}`). Calculada com Overpass (`place=city|town` em PT) + distância à barbearia mais próxima > 10 km; concelho/distrito por Nominatim reverse. Em 2026-10-07 ficaram **111 de 171** tratadas; faltam ~60, quase todas aldeias pequenas (rendimento baixo). Ler com `ArtifactData list collection=vilas`; o utilizador também pode escrever notas lá.
 
@@ -70,7 +73,7 @@ Estado em 2026-10-07: **802 barbearias, 315 cidades**. O `<title>` da homepage d
 
 ## Mapa de regiões (filtros da homepage)
 
-Os filtros **Norte / Centro / Lisboa / Alentejo / Algarve / Ilhas** da homepage são controlados pelo objecto `REGIOES_PT` em `index.html` (linha ~4571). Este objecto **não é gerado pelo build** — é manual e tem de ser mantido à mão.
+Os filtros **Norte / Centro / Lisboa / Alentejo / Algarve / Ilhas** da homepage são controlados pelo objecto `REGIOES_PT` em `index.html` (procurar `var REGIOES_PT`; estava na linha ~6440 em 2026-10-11). Este objecto **não é gerado pelo build** — é manual e tem de ser mantido à mão.
 
 ### Regra obrigatória ao adicionar barbearias com cidade nova
 
@@ -110,6 +113,22 @@ else console.log('Todas mapeadas.');
 > **Atenção:** Alenquer e Santarém pertencem ao distrito de Lisboa / Ribatejo → região **Lisboa**, não Alentejo.
 > Alijo (Vila Real) e Vila Praia de Âncora (Viana do Castelo) são **Norte**, não Centro.
 
+## Pesquisa e localização — nomes que contêm outros nomes
+
+Há muitas localidades cujo nome contém outro: Porto / Porto de Mós / Porto Santo / Vila do Porto; Vila Real / Vila Real de Santo António; Paredes / Paredes de Coura; Mira / Praia de Mira / Mira de Aire; Leiria / Vieira de Leiria; Nazaré / Gafanha da Nazaré. Correção de 2026-10-11 (antes, "Porto" mostrava 20 barbearias, com os Açores e a Madeira):
+
+- **Pesquisa da homepage** (`searchBarbers` em `script.js`): primeiro cidade/localidade/zona **exata**; só se não houver nenhuma, procura por palavra e depois pelo nome. "Porto de Mós" escrito por extenso continua a funcionar.
+- **Concelho/distrito inferidos** (`encontrarRegraMunicipio` + `MUNICIPIO_RULES` em `barbearias-utils.js`): só o nome exato (ou o nome antes de parênteses/vírgula, ex.: "Horta (Angústias)"). Antes, "Porto de Mós" herdava concelho e `addressRegion` "Porto". Cidade sem regra fica sem distrito inferido — melhor vazio do que errado; se fizer falta, pôr `distrito` na ficha ou acrescentar uma regra.
+- **Cuidado ao acrescentar regras:** uma regra com `concelho` diferente da cidade pode **mudar a `city` pública** e apagar/criar páginas de cidade (visto com Vieira de Leiria → Marinha Grande; ficou só `distrito: "Leiria"` na ficha). Depois de mexer em regras, correr o build e ver em `git status` se apareceram ou desapareceram pastas em `cidades/`.
+- **Frases geradas** ("no concelho do Porto", "no distrito da Guarda", "na Região Autónoma dos Açores"): `municipalityPhrase` / `districtPhrase` no build, com o artigo tirado de `LOCALITY_FRONTEND_FORMS`.
+- Para testar: pesquisar no browser "Porto", "Vila Real", "Paredes" e "Mira" e confirmar que só aparecem essas cidades.
+
+## Navegação dos perfis e botões de registo
+
+- O topo dos perfis tem **"← Voltar"** (`data-oc-back`): volta à página anterior quando se vem do próprio site (a homepage repõe a pesquisa e o mapa ao voltar atrás); vindo de fora (Google), o link segue para a homepage. Em mobile substitui o antigo "← Barbearias".
+- Um só botão por função: homepage = "+ Adicionar barbearia"; perfil = "Atualizar perfil" (cabeçalho), "És o dono? Atualizar perfil" e o cartão do dono, todos para `registar.html#atualizar=<nome>`. Não voltar a pôr "Entrar" nem "Reclamar esta barbearia" ao lado de "Atualizar perfil" (iam todos para o mesmo formulário).
+- `audit-site-links.js` ignora hashes com `=` (são estado lido por JS, não âncoras).
+
 ## Progressive enhancement / SSR na homepage
 
 A `index.html` tem duas camadas:
@@ -128,12 +147,12 @@ A `index.html` tem duas camadas:
 ```html
 <!-- JSON-LD-BARBEARIAS-START -->...<!-- JSON-LD-BARBEARIAS-END -->
 ```
-*(no `<head>`, linha ~1920 — o build injeta o ItemList aqui)*
+*(no `<head>` — o build injeta o ItemList aqui)*
 
 ```html
 <div id="resultsList" ...><!-- STATIC-LIST-START -->...<!-- STATIC-LIST-END --></div>
 ```
-*(no `<body>`, linha ~2125 — o build injeta o `<ul>` estático aqui)*
+*(no `<body>` — o build injeta o `<ul>` estático aqui)*
 
 Se estes markers desaparecerem, o build falha com erro explícito. Não os remover.
 
@@ -177,8 +196,9 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
 | Script | Propósito |
 |---|---|
 | `build-directory-static.js` | Build principal — **este é o único que precisas correr** |
-| `gerar-barbearias-limpo.js` | Transforma/limpa dados brutos em `barbearias.limpo.js` |
+| `gerar-barbearias-limpo.js` | ⚠️ **Não correr.** Legado: **reescreve `barbearias.limpo.js`** a partir de `Barbeiros/barbeiros.js` (234 barbearias, abril 2026) — apagaria ~570 fichas. Desde então os dados editam-se diretamente no `barbearias.limpo.js` |
 | `audit-barber-locations.js` | Auditoria de qualidade de localização |
+| `audit-geography-hierarchy.js` | Relatório de fichas que precisam de contexto geográfico (concelho/distrito) → `relatorio-hierarquia-geografica.md` na raiz + `.json/.csv` em `Barbeiros/` (último em abril 2026) |
 | `audit-site-links.js` | Verifica links internos e perfis gerados |
 | `smoke-missing-barbearias.js` | Smoke test: confirma que todos os slugs têm página gerada |
 | `apply-revista-seo.js` | Idempotente — metadados SEO da revista (twitter:card, og:image por artigo, image no JSON-LD, `<time>`) |
@@ -195,6 +215,11 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
 | `apply-product-replacements.js` | Troca um produto por outro (campo `replaces` no ficheiro de dados, ex.: `scripts/data/produtos-2026-10-09-balsamo.js`): cartões, links e JSON-LD passam ao substituto; a página antiga fica (sem 404) com aviso e botões para o substituto. `note: {title, text, buyBox}` muda o aviso quando o motivo não é indisponibilidade. Depois: `add-store-products.js` com o mesmo ficheiro, `apply-product-quick-decision.js`, `gerar-webp.py`, `apply-webp-images.js`. Rever à mão frases de artigos que citam o produto antigo pelo nome |
 | `apply-site-enhancements.js` | ⚠️ **Não correr inteiro**: apesar de "idempotente", reescreve os blocos "Todas as opções" de 12 categorias e as contagens da loja a partir do catálogo desatualizado (visto em 2026-10-09) |
 | `build-black-friday-page.js` | Gera `loja/black-friday/` (página sazonal) a partir do modelo de `loja/para-oferecer/` + entrada no sitemap. Para o ano seguinte: atualizar `EVENT` (datas confirmadas pela Amazon) e `WATCH` |
+| `build-top-escolhas-page.js` | Idempotente — gera `loja/top-escolhas/` a partir do modelo de `loja/para-oferecer/`, só com os produtos de "Mais procurados"/"Em destaque" da loja; textos de `commerce-products-a/b.js`. Depois: `apply-webp-images.js` |
+| `apply-product-quick-decision.js` | Idempotente — "Compra esta se… / Evita esta se…" nas páginas de produto (markers OC-QUICK-DECISION-START/END), a partir de `summary` e `limits[0]` do catálogo |
+| `apply-revista-conversion.js` | Idempotente — tabela "Melhor para" (OC-ARTICLE-COMPARE) e "Se tivéssemos de escolher apenas um" (OC-SINGLE-PICK) nos guias de compra, só onde o artigo já indica uma preferência |
+| `check-amazon-links.js` | Estado dos links Amazon do catálogo → `amazon-product-health.json`. "blocked" = deteção de bots, não link partido; **não prova stock** (ver memória: `fetch('/dp/ASIN')` no browser em amazon.es) |
+| `check-amazon-products.ps1` | Legado: lê as páginas antigas da raiz (`maquinas.html`, `navalhas.html`…), que hoje são só redirecionamentos. Usar `check-amazon-links.js` |
 
 ## SEO e schema markup
 
@@ -279,11 +304,23 @@ node scripts/audit-barber-locations.js
 Nota: `audit-barber-locations.js` atualiza `Barbeiros/relatorio-localizacao.json` com timestamp. Não incluir esse ficheiro no diff se a única alteração for `generated_at`.
 
 Para alterações visuais/homepage:
-- abrir localmente com servidor estático (`python -m http.server 8123 --bind 127.0.0.1`);
+- abrir localmente com servidor estático (`.claude/launch.json` → `npx serve -l 5500 .`, ou `python -m http.server 8123 --bind 127.0.0.1`);
 - verificar homepage e pelo menos um perfil em browser;
-- em mobile, confirmar que o mapa tem altura visível e sem erros de consola.
+- em mobile, confirmar que o mapa tem altura visível e sem erros de consola. No browser integrado, se o painel estiver escondido, `innerWidth` dá 0 e o mapa parece vazio — fixar o tamanho com `resize_window` antes de medir.
 
-`npm test` inclui `validar-barbearias.js`; se falhar por erros de completude já existentes nos dados, reportar isso separadamente e não misturar com a alteração atual.
+**`npm test` = CI.** O workflow `.github/workflows/quality.yml` ("Quality") corre `npm test` (validar → build → smoke → audit de links) a cada push para `main`. Esteve vermelho de 2026-10-07 a 2026-10-11 sem ninguém dar por isso (o validador não aceitava `horario_fonte` "Google Maps" nem o "&" lido como "e" nos slugs). Depois de um push, confirmar com `gh run list --workflow Quality --limit 3`. Se o validador reclamar de algo que o CLAUDE.md permite, corrigir o validador (`validar-barbearias.js`), não os dados.
+
+**Testes de browser (Playwright, fora do CI):** `tests/smoke.spec.js` (layout da homepage, mapa, pesquisa, rodapé escuro, contagem). Precisam de um servidor na porta 4321:
+
+```bash
+npx serve -l 4321 .
+```
+
+```bash
+npx playwright test
+```
+
+Atualizar as cores esperadas quando o tema mudar (o rodapé passou a `#0C0E0C` com o tema escuro). O `playwright test` reescreve `test-results/` (que está no git) — repor com `git checkout -- test-results` antes do commit.
 
 ## Revisão visual (lições de 2026-10-10)
 
@@ -308,3 +345,10 @@ Para alterações visuais/homepage:
   - **Artigo novo — sequência completa (usada em 2026-10-09/10 para 14 artigos):** ficheiro de dados em `scripts/data/artigos-…js` → `build-revista-articles.js` → `apply-revista-seo.js` → `apply-revista-internal-links.js` → (se vende produtos) acrescentar ao `PICKS`/`STICKY` de `apply-article-product-picks.js` e correr → foto de capa nova do Unsplash em `imagens/revista/` + entrada em `NEW_HEROES` de `apply-revista-unique-images.js` e correr → `gerar-webp.py` → `apply-webp-images.js` → `audit-site-links.js`. Depois de publicar, juntar o URL à fila de indexação do Search Console (o utilizador pede ~10/dia à mão).
   - **Tom dos artigos que vendem:** editorial, não genérico — tomar posição (uma escolha clara), decisão prática antes das marcas, limitações honestas, CTA a meio do texto. Não afirmar o que não se pode provar ("a maioria dos barbeiros usa…", "é o padrão") nem "testámos"; descriptions ≤ 160 caracteres; FAQPage = as mesmas perguntas da página.
 - `index.html` (hero, nav, footer, CSS, secção de destaques) — HTML manual, só os markers são atualizados pelo build
+
+## Ficheiros legados (não apagar sem pensar nos URLs)
+
+- **Raiz:** `loja.html`, `maquinas.html`, `navalhas.html`, `kits.html`, `cremes.html`, `escovas.html`, `acessorios.html`, `produto.html`, `barbearia.html` são **redirecionamentos** de URLs antigos para `loja/…` e para a homepage (meta refresh + canonical). Apagá-los dá 404 a links antigos — conta como mudança de indexação. `obrigado.html` é a página depois do formulário.
+- **`Barbeiros/barbeiros.js`** e **`Barbeiros/barbearias.por-validar.js`**: dados de abril de 2026, usados só pelo `gerar-barbearias-limpo.js` (que não se corre). A fonte de verdade é `barbearias.limpo.js`.
+- **`relatorio-editorial-ptpt.md`**, **`relatorio-hierarquia-geografica.md`** (raiz) e `Barbeiros/relatorio-*`: relatórios antigos (abril 2026), não instruções.
+- `commerce.js` + `commerce-articles.js` + `scripts/sync-commerce-static.js`: renderer antigo da loja/revista — ver aviso acima, não correr o sync.

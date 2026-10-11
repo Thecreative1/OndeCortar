@@ -124,12 +124,12 @@ test.describe('OndeCortar — smoke tests', () => {
 
   // ── Footer ──────────────────────────────────────────────────────
 
-  test('footer has dark background (ink, not cream)', async ({ page }) => {
+  test('footer has dark background (not cream)', async ({ page }) => {
     const footer = page.locator('.site-footer');
     await footer.scrollIntoViewIfNeeded();
     const bg = await footer.evaluate(el => getComputedStyle(el).backgroundColor);
-    // rgb(20, 19, 15) = --oc-ink
-    expect(bg).toBe('rgb(20, 19, 15)');
+    // rgb(12, 14, 12) = #0C0E0C, tema escuro da homepage (fim de oc-style.css, desde 2026-10-01)
+    expect(bg).toBe('rgb(12, 14, 12)');
   });
 
   test('footer shell is transparent (no cream card override)', async ({ page }) => {
