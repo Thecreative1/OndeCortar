@@ -168,6 +168,27 @@ function linkSitemap(a) {
   return true;
 }
 
+// Hub compacto (2026-10-11): cada secção tem um número fixo de cartões com foto e os
+// restantes artigos numa lista (.rev-more-list). Ao entrar um cartão novo no topo, o
+// último cartão da grelha passa para o início da lista (mesmo link, mesmo título).
+function demoteLastCard(h, sectionAt) {
+  const sectionEnd = h.indexOf("</section>", sectionAt);
+  const listAt = h.indexOf('<ul class="rev-more-list"', sectionAt);
+  if (listAt === -1 || listAt > sectionEnd) return h;
+  const lastEnd = h.lastIndexOf("</article>", listAt);
+  const lastStart = h.lastIndexOf('<article class="rev-article-card">', lastEnd);
+  if (lastStart < sectionAt || lastEnd === -1) return h;
+  const art = h.slice(lastStart, lastEnd + "</article>".length);
+  const t = art.match(/<h3 class="rev-article-title"><a href="([^"]+)"[^>]*>([\s\S]*?)<\/a><\/h3>/);
+  const cat = (art.match(/<span class="rev-article-cat">([\s\S]*?)<\/span>/) || [])[1] || "";
+  if (!t) throw new Error("Hub: cartão sem título ao passar para a lista");
+  const li = '\n            <li class="rev-more-item"><a class="rev-more-title" href="' + t[1] + '">' + t[2].trim() + '</a><span class="rev-more-cat">' + cat.trim() + "</span></li>";
+  const lineStart = h.lastIndexOf("\n", lastStart);
+  h = h.slice(0, lineStart) + h.slice(lastEnd + "</article>".length);
+  const listOpenEnd = h.indexOf(">", h.indexOf('<ul class="rev-more-list"', sectionAt)) + 1;
+  return h.slice(0, listOpenEnd) + li + h.slice(listOpenEnd);
+}
+
 function linkHub(a) {
   let h = read("revista/index.html");
   const href = "../revista/" + a.slug + "/";
@@ -187,6 +208,7 @@ function linkHub(a) {
       '                <div class="rev-article-footer">\n                  <a class="rev-read-link" href="' + href + '">Ler guia</a>\n                </div>\n' +
       "              </div>\n            </article>";
     h = h.slice(0, insertAt) + card + h.slice(insertAt);
+    h = demoteLastCard(h, at);
     changed = true;
   }
   // ItemList do hub

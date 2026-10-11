@@ -46,7 +46,8 @@ const NEW_HEROES = {
   "primeiro-corte-de-cabelo-crianca-barbearia": ["corte-menino-barbeiro.jpg", "Barbeiro a cortar o cabelo a um menino, a preto e branco"],
   "pomada-cera-ou-gel-cabelo-homem": ["latas-pomada-cabelo.jpg", "Latas de pomada para o cabelo numa prateleira de barbearia"],
   "risco-no-cabelo-masculino": ["barbeiro-pentear-cliente-barbearia.jpg", "Barbeiro a pentear o cabelo de um cliente numa barbearia"],
-  "historia-do-poste-de-barbeiro": ["poste-barbeiro-espiral.jpg", "Poste de barbeiro em espiral vermelho, branco e azul"]
+  "historia-do-poste-de-barbeiro": ["poste-barbeiro-espiral.jpg", "Poste de barbeiro em espiral vermelho, branco e azul"],
+  "creme-de-rosto-para-homem-como-escolher": ["homem-creme-rosto-espelho.jpg", "Homem de barba ao espelho da casa de banho a aplicar um produto no rosto"],
 };
 
 const stats = { heroes: 0, data: 0, cards: 0, files: 0 };

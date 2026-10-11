@@ -230,13 +230,29 @@ const PICKS = {
     title: "Preparar a pele antes da lâmina",
     items: [
       ["proraso-pre-barba", "Pré-barba", "Para pele sensível: amolece os pelos antes do barbear."],
-      ["proraso-creme", "Creme de barbear", "Boa cobertura e deslize para navalha ou máquina de segurança."]
+      ["proraso-creme", "Creme de barbear", "Boa cobertura e deslize para navalha ou máquina de segurança."],
+      ["nivea-men-sensitive-fp15", "Depois da barba", "Creme sem álcool para pele sensível, com FPS 15: alternativa ao after-shave que arde."]
+    ]
+  },
+  "creme-de-rosto-para-homem-como-escolher": {
+    title: "Um creme para cada tipo de pele",
+    items: [
+      ["cerave-hidratante-rosto-spf50", "A nossa escolha", "Hidrata e protege do sol (SPF 50) no mesmo passo; para pele normal a seca."],
+      ["cerave-oil-control-gel", "Pele oleosa ou mista", "Gel-creme leve que a marca indica para controlar o brilho."],
+      ["nivea-men-sensitive-fp15", "Pele sensível e pós-barba", "Sem álcool, com camomila e FPS 15."],
+      ["loreal-men-expert-hydra-energetic", "Primeiro creme", "Gel-creme de absorção rápida, para o dia a dia e depois da barba."],
+      ["loreal-men-expert-power-age", "A partir dos 40", "Com ácido hialurónico, em frasco de 100 ml; junta FPS de dia."]
     ]
   }
 };
 
 // Barra fixa mobile nos guias de compra: produto + id da secção depois da qual aparece
 const STICKY = {
+  "creme-de-rosto-para-homem-como-escolher": {
+    product: "cerave-hidratante-rosto-spf50",
+    label: "A nossa escolha",
+    after: "tipo-de-pele"
+  },
   "melhores-maquinas-para-cortar-cabelo-em-casa": {
     product: "philips-hc5630-series-5000",
     label: "Melhor no geral",
