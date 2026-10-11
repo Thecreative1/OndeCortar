@@ -1,13 +1,14 @@
 // 2026-10-11 — artigo gel-de-limpeza-para-homem-como-lavar-a-cara (categoria Cuidados de rosto).
 // Escolhidos pela procura (sugestões Google PT: pele oleosa / acne / mista / seca / sensível, CeraVe,
 // Effaclar, Nivea Men) e pelo ranking de Beleza da Amazon.es. Os 5 confirmados na Amazon.es a 2026-10-11:
-// em stock, vendidos e enviados pela Amazon. Descartados: NIVEA MEN Menmalist rosto e barba (vendedor
+// em stock, vendidos e enviados pela Amazon. Gel espumante: o ASIN inicial (B0DVLG7GD1) era a recarga em saco;
+// trocado a 2026-10-11 pelo frasco com doseador B07C5XD33D (n.º 65 em Beleza, vendido pela Amazon). Descartados: NIVEA MEN Menmalist rosto e barba (vendedor
 // terceiro), Bulldog Sensitive (sem stock), L'Oréal Men Pure Charcoal (n.º 66 mil). Só dados do fabricante.
 const ARTICLE = "gel-de-limpeza-para-homem-como-lavar-a-cara";
 
 module.exports = [
   {
-    slug: "cerave-gel-limpeza-espumante", name: "CeraVe Gel de Limpeza Espumante", brand: "CeraVe", asin: "B0DVLG7GD1",
+    slug: "cerave-gel-limpeza-espumante", name: "CeraVe Gel de Limpeza Espumante", brand: "CeraVe", asin: "B07C5XD33D",
     image: "imagens/produtos/cerave-gel-limpeza-espumante.jpg", alt: "Embalagem do gel de limpeza espumante CeraVe para pele normal a oleosa",
     bestFor: "Pele normal a oleosa",
     summary: "Indicado para quem tem a pele normal, mista ou oleosa e quer um gel de limpeza que tire a oleosidade sem a deixar a repuxar.",

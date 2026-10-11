@@ -336,7 +336,7 @@ module.exports = [
     ],
     paraQuem: "Para quem tem pele normal a oleosa e quer um gel simples para a cara e o corpo.",
     ficha: [
-      ["Produto", "CeraVe Gel de Limpeza Espumante (473 g nesta oferta)"],
+      ["Produto", "CeraVe Gel de Limpeza Espumante, frasco com doseador"],
       ["Tipo de pele", "Normal a oleosa"],
       ["Ingredientes-chave", "Ceramidas essenciais, ácido hialurónico, niacinamida"],
       ["Textura", "Gel que faz espuma"],
@@ -344,7 +344,7 @@ module.exports = [
       ["Perfume", "Sem perfume; não comedogénico"]
     ],
     fonte: FONTE,
-    versao: "Este é o espumante (foaming), para pele normal a oleosa. O {{cerave-gel-limpeza-hidratante|CeraVe Gel de Limpeza Hidratante}} é para pele normal a seca, e o {{cerave-blemish-control|Blemish Control}} para acne. Há vários tamanhos; confirma o volume na Amazon.",
+    versao: "Este é o espumante (foaming), para pele normal a oleosa. O {{cerave-gel-limpeza-hidratante|CeraVe Gel de Limpeza Hidratante}} é para pele normal a seca, e o {{cerave-blemish-control|Blemish Control}} para acne. A oferta desta página é o frasco com doseador; a CeraVe também vende a recarga em saco (473 ml) e outros tamanhos, por isso confirma o formato na Amazon.",
     comoUsar: [
       "Molha a pele com água morna.",
       "Massaja o gel com movimentos circulares.",
