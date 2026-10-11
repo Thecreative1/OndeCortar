@@ -5233,3 +5233,216 @@ body[data-page] .article-directory-bridge .btn-secondary:hover {
     padding-right: 32px;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   OC-ARTICLE-MAGAZINE (2026-10-11) — artigos da revista com ar de revista
+   Só CSS, só body[data-page="article"] (os 50 artigos partilham a mesma
+   estrutura). Papel liso, cabeçalho sem caixa (título, entrada, assinatura
+   entre filetes), texto corrido numa coluna de leitura com capitular,
+   secções separadas por filete dourado em vez de uma caixa cada uma,
+   "Resposta rápida" num só painel e os 3 cartões de apoio como colunas.
+   ═══════════════════════════════════════════════════════════════════ */
+body[data-page="article"] {
+  --mag-paper: #FAF6EF;
+  --mag-ink: #1F1A14;
+  --mag-text: #2E2820;
+  --mag-muted: #6B6156;
+  --mag-rule: rgba(110, 90, 60, 0.22);
+  --mag-gold: #9A7232;
+  --mag-panel: #F2EBDF;
+  background: var(--mag-paper);
+}
+
+/* ── Cabeçalho: sem caixa, tipografia de capa ── */
+body[data-page="article"] .article-header.hero-card {
+  background: none;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+body[data-page="article"] .article-header--media {
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+  gap: clamp(28px, 4vw, 64px);
+}
+body[data-page="article"] .article-header-copy { gap: 16px; align-content: center; }
+/* ordem de revista: secção, título, entrada, assinatura, ações */
+body[data-page="article"] .article-header-copy .article-meta { order: 5; }
+body[data-page="article"] .article-header-copy .hero-actions { order: 6; }
+body[data-page="article"] .article-header-copy .section-flag {
+  background: none;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mag-gold);
+}
+body[data-page="article"] .article-header h1 {
+  font-size: clamp(2.4rem, 4.8vw, 4.3rem);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: var(--mag-ink);
+  max-width: 16ch;
+}
+/* entrada (lede) em serifa, como numa revista */
+body[data-page="article"] .article-header-copy > p:not(.article-subcopy) {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.15rem, 1.7vw, 1.38rem);
+  line-height: 1.5;
+  color: var(--mag-text);
+  max-width: 42ch;
+}
+body[data-page="article"] .article-header .article-subcopy {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--mag-muted);
+  max-width: 54ch;
+}
+body[data-page="article"] .article-header-copy .article-meta {
+  margin: 4px 0 0;
+  padding: 12px 0;
+  border-top: 1px solid var(--mag-rule);
+  border-bottom: 1px solid var(--mag-rule);
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--mag-muted);
+  gap: 6px 18px;
+}
+body[data-page="article"] .article-header-copy .article-meta strong { color: var(--mag-ink); }
+body[data-page="article"] .article-hero-media {
+  border: 0;
+  border-radius: 6px;
+  min-height: clamp(380px, 38vw, 560px);
+  box-shadow: 0 24px 60px -28px rgba(31, 25, 19, 0.45);
+}
+
+/* ── Etiquetas: texto dourado, sem pílula ── */
+body[data-page="article"] .eyebrow {
+  background: none;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  color: var(--mag-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  justify-self: start;
+  width: auto;
+}
+
+/* ── Resposta rápida: um painel só, dividido por filetes ── */
+body[data-page="article"] #resposta-rapida > .container { max-width: 900px; }
+body[data-page="article"] .quick-answer-grid {
+  gap: 0;
+  background: var(--mag-panel);
+  border: 1px solid var(--mag-rule);
+  border-radius: 8px;
+  overflow: hidden;
+}
+body[data-page="article"] .quick-answer-card {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 22px 26px;
+}
+body[data-page="article"] .quick-answer-card:nth-child(odd) { border-right: 1px solid var(--mag-rule); }
+body[data-page="article"] .quick-answer-card:nth-child(n+3) { border-top: 1px solid var(--mag-rule); }
+body[data-page="article"] .quick-answer-card strong {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.12rem;
+  color: var(--mag-ink);
+}
+body[data-page="article"] .quick-answer-card p { color: var(--mag-text); line-height: 1.65; }
+body[data-page="article"] .quick-answer-store-nudge {
+  border-left: 0;
+  border-radius: 8px;
+  background: none;
+  padding: 12px 0 0;
+}
+
+/* ── Cartões de apoio: colunas com filete no topo, sem caixa ── */
+body[data-page="article"] .article-support-grid { max-width: 1060px; gap: clamp(24px, 3vw, 44px); }
+body[data-page="article"] .article-support-card,
+body[data-page="article"] .article-support-card.article-trust-card {
+  background: none;
+  border: 0;
+  border-top: 2px solid var(--mag-ink);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 18px 0 0;
+}
+body[data-page="article"] .article-support-card h3 { font-size: 1.25rem; color: var(--mag-ink); }
+
+/* ── Corpo do artigo: coluna de leitura, texto corrido ── */
+body[data-page="article"] .article-body {
+  max-width: 700px;
+  gap: 0;
+}
+body[data-page="article"] .article-section {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+body[data-page="article"] .article-section + .article-section { margin-top: clamp(40px, 5vw, 56px); }
+body[data-page="article"] .article-section + .article-section::before {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 2px;
+  background: var(--mag-gold);
+  margin: 0 0 clamp(28px, 3.4vw, 40px);
+}
+body[data-page="article"] .article-section h2 {
+  font-size: clamp(1.65rem, 2.8vw, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--mag-ink);
+  margin: 0 0 18px;
+}
+body[data-page="article"] .article-section h3 { color: var(--mag-ink); margin: 26px 0 10px; }
+body[data-page="article"] .article-section p,
+body[data-page="article"] .article-section li {
+  font-size: 1.125rem;
+  line-height: 1.78;
+  color: var(--mag-text);
+}
+body[data-page="article"] .article-section p + p { margin-top: 1.05em; }
+body[data-page="article"] .article-section p a:not(.btn) {
+  color: var(--mag-ink);
+  text-decoration: underline;
+  text-decoration-color: rgba(154, 114, 50, 0.6);
+  text-underline-offset: 3px;
+}
+body[data-page="article"] .article-section p a:not(.btn):hover { text-decoration-color: var(--mag-gold); }
+/* capitular no primeiro parágrafo do artigo */
+body[data-page="article"] .article-body > .article-section:first-child > h2 + p::first-letter {
+  float: left;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 4.1em;
+  line-height: 0.82;
+  margin: 0.08em 0.1em 0 0;
+  color: var(--mag-gold);
+}
+
+@media (max-width: 900px) {
+  body[data-page="article"] .article-header--media { grid-template-columns: 1fr; gap: 22px; }
+  body[data-page="article"] .article-header h1 { max-width: none; }
+  body[data-page="article"] .article-hero-media { min-height: 0; border-radius: 4px; }
+}
+@media (max-width: 640px) {
+  body[data-page="article"] .quick-answer-card:nth-child(odd) { border-right: 0; }
+  body[data-page="article"] .quick-answer-card + .quick-answer-card { border-top: 1px solid var(--mag-rule); }
+  body[data-page="article"] .article-section p,
+  body[data-page="article"] .article-section li { font-size: 1.0625rem; line-height: 1.74; }
+  body[data-page="article"] .article-support-card { padding-top: 14px; }
+}
+/* OC-ARTICLE-MAGAZINE-END */
