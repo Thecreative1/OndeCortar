@@ -6444,7 +6444,7 @@
                      "barcelos","penafiel","amarante","felgueiras","baguim do monte rio tinto",
                      "paredes de coura","montalegre","alijo","vila nova de cerveira",
                      "vila praia de ancora","vila nova de foz coa","cabeceiras de basto",
-                     "mondim de basto","terras de bouro","argoncilhe"],
+                     "mondim de basto","terras de bouro","argoncilhe","quinta da redonda"],
         "Centro":   ["satao","mortagua","celorico da beira","oliveira de frades","vouzela","penalva do castelo","vila nova de poiares","manteigas","penamacor","palhaca","mamarrosa","moes","castro daire","carregal do sal","oleiros","paiao","castanheira de pera","pampilhosa da serra","belmonte","barcouco","mealhada","condeixa-a-nova","montemor-o-velho","nelas","penacova","idanha-a-nova","mangualde","alcains","pampilhosa do botao","canas de senhorim","gouveia","trancoso","bustos","sao pedro do sul","sabugal","meda","porto de mos","tondela","pataias","vieira de leiria","pombal","guia pombal","cantanhede","anadia","praia de mira","mira","febres","bombarral","benedita","mira de aire","sever do vouga","oliveira de azemeis","arouca","pardilho","santa maria de sardoura","castelo de paiva","abrantes","entroncamento","torres novas","alcanena","tramagal","vila nova da barquinha","sardoal","macao","aveiro","agueda","ovar","sao joao da madeira","s joao da madeira",
                      "s. joao da madeira","estarreja","tocha","pindelo","coimbra",
                      "figueira da foz","lousa","arganil","ansiao","tomar","ourem",
@@ -6452,14 +6452,14 @@
                      "sernancelhe","aguiar da beira","guarda","pinhel","figueira de castelo rodrigo",
                      "castelo branco","covilha","fundao","proenca-a-nova","serta","seia",
                      "penela","oliveira do hospital","tabua","figueiro dos vinhos","peniche",
-                     "albergaria-a-velha","gafanha da nazare","alcobaca"],
+                     "albergaria-a-velha","gafanha da nazare","alcobaca","ferreira do zezere"],
         "Lisboa":   ["couco","ericeira","mafra","malveira","venda do pinheiro","azambuja","coruche","sesimbra","rio maior","tremes","lisboa","sintra","agualva-cacem","algueirao-mem martins","belas","sabugo","loures","odivelas","amadora","oeiras","cascais","estoril","sao domingos de rana","carnaxide",
                      "prior velho","bucelas","povoa de santa iria","almada","seixal","barreiro",
                      "montijo","azeitao","setubal","alcochete","samora correia","alcantara",
                      "falagueira-venda nova amadora","parede jardins da parede",
-                     "parede - jardins da parede","torres vedras","mafra","quinta da redonda",
+                     "parede - jardins da parede","torres vedras","mafra",
                      "alenquer","carregado","alverca do ribatejo","benavente","cartaxo",
-                     "santarem","almeirim","ferreira do zezere","lourinha","carcavelos",
+                     "santarem","almeirim","lourinha","carcavelos",
                      "costa da caparica","chamusca","alpiarca","marinhais"],
         "Alentejo": ["pias","gaviao","elvas","campo maior","redondo","ferreira do alentejo","nisa","vidigueira","portel","castelo de vide","amareleja","alter do chao","mora","avis","crato","reguengos de monsaraz","evora","montemor-o-novo","vendas novas","estremoz","portalegre","ponte de sor",
                      "beja","grandola","santiago do cacem","sines","ourique","aljustrel",
@@ -7422,8 +7422,13 @@
       function updateDirectory(term) {
         // Nomes de região ("Algarve", "Norte", …) não existem como cidade/nome,
         // por isso searchBarbers devolveria 0 — delegar no filtro de região.
+        // Exceção: "Lisboa" é região e cidade; escrito na pesquisa, é a cidade
+        // (o chip "Lisboa" dos filtros chama filterByRegiao diretamente).
         const regiaoMatch = getRegiaoForTerm(term);
-        if (regiaoMatch) {
+        const termIsCity = regiaoMatch && allBarbers.some(function(b) {
+          return normCity(b.city) === normCity(term);
+        });
+        if (regiaoMatch && !termIsCity) {
           filterByRegiao(regiaoMatch);
           return;
         }

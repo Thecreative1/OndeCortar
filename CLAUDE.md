@@ -112,6 +112,8 @@ else console.log('Todas mapeadas.');
 > **Médio Tejo** (Abrantes, Entroncamento, Torres Novas, Tomar, Ourém, Mação, Sardoal, Alcanena…) está em **Centro**; Ribatejo/Lezíria (Santarém, Rio Maior, Coruche, Chamusca, Almeirim…) em **Lisboa**.
 > **Atenção:** Alenquer e Santarém pertencem ao distrito de Lisboa / Ribatejo → região **Lisboa**, não Alentejo.
 > Alijo (Vila Real) e Vila Praia de Âncora (Viana do Castelo) são **Norte**, não Centro.
+> **Exceções decididas (2026-10-11):** Espinho e Argoncilhe (distrito de Aveiro, Área Metropolitana do Porto), Lamego (Viseu) e Vila Nova de Foz Côa (Guarda) ficam em **Norte**, como na NUTS II.
+> "Lisboa" é nome de região e de cidade: escrito na pesquisa dá a **cidade** (`updateDirectory`); o chip "Lisboa" dos filtros dá a região.
 
 ## Pesquisa e localização — nomes que contêm outros nomes
 
