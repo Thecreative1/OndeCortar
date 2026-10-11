@@ -67,20 +67,27 @@
   <main>
 
     <!-- ══════════════════════════════════════════════════════════
-         1. HERO
+         1. CAPA — título da revista + guia de capa (antigo "Guia em destaque")
          ══════════════════════════════════════════════════════════ -->
-    <section class="section rev-hero" aria-labelledby="rev-h1">
-      <div class="container">
-        <div class="rev-hero-inner">
+    <section class="section rev-hero rev-cover-section" aria-labelledby="rev-h1">
+      <div class="container rev-cover">
+        <div class="rev-cover-head">
           <span class="rev-hero-kicker">Revista OndeCortar</span>
           <h1 id="rev-h1" class="rev-hero-h1">Grooming masculino<br>sem complicações.</h1>
-          <p class="rev-hero-sub">Guias práticos sobre cabelo, barba, barbear clássico, máquinas e produtos de barbearia — escritos para ajudar a escolher melhor, cuidar melhor e perder menos tempo.</p>
-          <div class="rev-hero-actions">
-            <a class="btn btn-primary" href="#guias">Ler guias</a>
-            <a class="btn btn-secondary" href="../loja/">Ver produtos recomendados</a>
-          </div>
-          <p class="rev-hero-trust">Guias práticos · Escolhas úteis · Sem conversa de catálogo</p>
+          <p class="rev-hero-sub">Guias práticos sobre cabelo, barba, barbear clássico, máquinas e produtos de barbearia, escritos para ajudar a escolher melhor, cuidar melhor e perder menos tempo.</p>
         </div>
+        <a class="rev-cover-photo" href="../revista/melhores-maquinas-para-cortar-cabelo-em-casa/" aria-hidden="true" tabindex="-1">
+          <picture style="display:contents"><source srcset="../imagens/revista/maquinas-pentes-dourados.webp" type="image/webp" style="display:none"><img src="../imagens/revista/maquinas-pentes-dourados.jpg" alt="Máquinas de cortar cabelo e pentes dourados alinhados na bancada do barbeiro" width="667" height="1000" loading="eager" fetchpriority="high" /></picture>
+        </a>
+        <article class="rev-cover-story" aria-labelledby="destaque-h">
+          <p class="rev-cover-label">Na capa <span aria-hidden="true">·</span> Guia de compra <span aria-hidden="true">·</span> 3 min</p>
+          <h2 id="destaque-h" class="rev-cover-title"><a href="../revista/melhores-maquinas-para-cortar-cabelo-em-casa/">Melhores máquinas para cortar cabelo em casa</a></h2>
+          <p class="rev-cover-desc">Cortar cabelo em casa pode ajudar a poupar tempo e dinheiro, desde que uses uma máquina alinhada com o teu ritmo e com o tipo de corte que costumas usar.</p>
+          <div class="rev-hero-actions">
+            <a class="btn btn-primary" href="../revista/melhores-maquinas-para-cortar-cabelo-em-casa/">Ler o guia de capa</a>
+            <a class="btn btn-secondary" href="#guias">Todos os guias</a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -101,38 +108,6 @@
           <a class="rev-cat-chip" href="../revista/estilo-e-tendencias/" role="listitem">Cultura de barbearia</a>
           <a class="rev-cat-chip" href="../revista/presentes-e-kits/" role="listitem">Presentes e kits</a>
         </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════════════════
-         3. GUIA EM DESTAQUE
-         ══════════════════════════════════════════════════════════ -->
-    <section class="section rev-feature-section" aria-labelledby="destaque-h">
-      <div class="container">
-        <div class="rev-section-header">
-          <div>
-            <span class="rev-eyebrow">Guia em destaque</span>
-            <h2 id="destaque-h" class="rev-section-h2" style="margin-top:6px">O guia mais completo do momento</h2>
-          </div>
-        </div>
-        <article class="rev-feature-card" aria-label="Artigo em destaque">
-          <a class="rev-feature-img" href="../revista/melhores-maquinas-para-cortar-cabelo-em-casa/" aria-hidden="true" tabindex="-1">
-            <picture style="display:contents"><source srcset="../imagens/revista/maquinas-pentes-dourados.webp" type="image/webp" style="display:none"><img src="../imagens/revista/maquinas-pentes-dourados.jpg" alt="Máquinas de cortar cabelo e pentes dourados alinhados na bancada do barbeiro" loading="eager" /></picture>
-          </a>
-          <div class="rev-feature-body">
-            <span class="rev-feature-cat">Máquinas de cortar</span>
-            <h3 class="rev-feature-title">
-              <a href="../revista/melhores-maquinas-para-cortar-cabelo-em-casa/" style="color:inherit;text-decoration:none">
-                Melhores máquinas para cortar cabelo em casa
-              </a>
-            </h3>
-            <p class="rev-feature-desc">Cortar cabelo em casa pode ajudar a poupar tempo e dinheiro, desde que uses uma máquina alinhada com o teu ritmo e com o tipo de corte que costumas usar.</p>
-            <p class="rev-feature-meta">Guia de compra · 3 min de leitura</p>
-            <div>
-              <a class="btn btn-primary" href="../revista/melhores-maquinas-para-cortar-cabelo-em-casa/">Ler guia completo</a>
-            </div>
-          </div>
-        </article>
       </div>
     </section>
 
