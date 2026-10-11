@@ -23,9 +23,10 @@ const write = (f, s) => fs.writeFileSync(path.join(ROOT, f), s, "utf8");
 const exists = (f) => fs.existsSync(path.join(ROOT, f));
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
+// Os atalhos usam o mesmo nome do h1 de cada categoria (e da grelha "Explorar por tipo de produto").
 const SHORTCUTS = [
-  ["acessorios-de-barbeiro/", "Acessórios"],
-  ["oleos-e-balms/", "Óleos e bálsamos"],
+  ["acessorios-de-barbeiro/", "Acessórios de barbeiro"],
+  ["oleos-e-balms/", "Óleos e balms"],
   ["cuidados-de-rosto/", "Cuidados de rosto"]
 ];
 
@@ -82,11 +83,12 @@ function card([slug, badge, why, avoid, [article, guide]]) {
 }
 
 function applyShortcuts(html) {
-  const anchor = '<a class="loja-hero-shortcut" href="manutencao-de-maquinas/">Manutenção</a>';
-  if (!html.includes(anchor)) throw new Error("Atalho 'Manutenção' não encontrado");
+  const m = html.match(/<a class="loja-hero-shortcut[^"]*" href="manutencao-de-maquinas\/">[^<]*<\/a>/);
+  if (!m) throw new Error("Atalho de manutenção não encontrado");
+  const anchor = m[0];
   let add = "";
   for (const [href, label] of SHORTCUTS) {
-    if (!html.includes('class="loja-hero-shortcut" href="' + href + '"')) {
+    if (!html.includes('href="' + href + '">')) {
       add += '\n              <a class="loja-hero-shortcut" href="' + href + '">' + label + "</a>";
     }
   }
