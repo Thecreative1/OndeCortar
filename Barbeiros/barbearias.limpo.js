@@ -13054,8 +13054,8 @@ const barbearias = [
     "horario": null,
     "observacoes": null,
     "coords": [
-      39.8052145,
-      -8.096441
+      39.805437,
+      -8.098187
     ],
     "status": "confirmado",
     "fontes": [
@@ -13134,8 +13134,8 @@ const barbearias = [
     "horario": null,
     "observacoes": null,
     "coords": [
-      39.8052145,
-      -8.096441
+      39.8116039,
+      -8.0969312
     ],
     "status": "confirmado",
     "fontes": [
@@ -13168,14 +13168,15 @@ const barbearias = [
     "telefone": "+351 969 128 737",
     "email": null,
     "website": null,
-    "instagram": null,
+    "instagram": "https://www.instagram.com/buzz.barber/",
     "facebook": null,
     "google_maps": null,
+    "booking": "https://buk.pt/buzzbbarber",
     "horario": null,
     "observacoes": null,
     "coords": [
-      39.8052145,
-      -8.096441
+      39.803379,
+      -8.1058655
     ],
     "status": "confirmado",
     "fontes": [
