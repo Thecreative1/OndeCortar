@@ -28,7 +28,7 @@ const NEW_HEROES = {
   "como-manter-a-maquina-de-cortar-cabelo-a-funcionar-bem-por-mais-tempo": ["maquina-nuca-cliente.jpg", "Barbeiro a passar a máquina na nuca de um cliente"],
   "trimmer-vs-shaver-diferencas-reais": ["aparar-barba-aparador.jpg", "Homem a aparar a barba com um aparador elétrico"],
   "7-erros-ao-comprar-uma-maquina-de-cortar-cabelo-barata": ["maquina-pente-fundo-azul.jpg", "Máquina de cortar cabelo com pente encaixado sobre fundo azul"],
-  "como-limpar-uma-maquina-de-cortar-cabelo": ["bancada-madeira-ferramentas.jpg", "Máquinas, tesouras e navalha arrumadas numa bancada de madeira"],
+  "como-limpar-uma-maquina-de-cortar-cabelo": ["maquinas-tapete-borracha.jpg", "Quatro máquinas de cortar cabelo alinhadas num tapete de borracha na bancada do barbeiro"],
   "numeros-da-maquina-de-cortar-cabelo": ["duas-maquinas-mesa.jpg", "Duas máquinas de cortar cabelo sobre uma mesa de madeira"],
   "melhor-kit-de-barba-para-comecar-sem-comprar-as-cegas": ["kit-barbearia-ardosia.jpg", "Máquinas, tesoura, pente e produtos de barbearia sobre ardósia"],
   "melhor-kit-de-barba-para-oferecer": ["produtos-barba-tabuleiro.jpg", "Produtos de barba arrumados num tabuleiro de madeira"],
