@@ -149,6 +149,7 @@
     { needles: ["loures"], distrito: "Lisboa", concelho: "Loures" },
     { needles: ["caldas da rainha"], distrito: "Leiria", concelho: "Caldas da Rainha" },
     { needles: ["leiria"], distrito: "Leiria", concelho: "Leiria" },
+    { needles: ["porto de mos", "porto de mós"], distrito: "Leiria", concelho: "Porto de Mós" },
     { needles: ["nazare", "nazaré"], distrito: "Leiria", concelho: "Nazaré" },
     { needles: ["coimbra"], distrito: "Coimbra", concelho: "Coimbra" },
     { needles: ["figueira da foz"], distrito: "Coimbra", concelho: "Figueira da Foz" },
@@ -181,6 +182,7 @@
     { needles: ["madalena"], distrito: "Açores", concelho: "Madalena" },
     { needles: ["sao roque do pico", "são roque do pico"], distrito: "Açores", concelho: "São Roque do Pico" },
     { needles: ["vila do porto"], distrito: "Açores", concelho: "Vila do Porto" },
+    { needles: ["porto santo"], distrito: "Madeira", concelho: "Porto Santo" },
     { needles: ["funchal"], distrito: "Madeira", concelho: "Funchal" }
   ];
 
@@ -639,19 +641,21 @@
       return null;
     }
 
-    function matchTerm(text, needle) {
-      const escapedNeedle = needle.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-      return new RegExp("(^|[\\s,;-])" + escapedNeedle + "($|[\\s,;-])").test(text);
+    // Só nome exato — "Porto de Mós", "Porto Santo" e "Vila do Porto" não são o Porto,
+    // nem "Vieira de Leiria" é o concelho de Leiria. Aceita-se o nome seguido de
+    // parênteses ou vírgula ("Horta (Angústias)", "Funchal, Madeira").
+    const candidates = [normalized];
+    const head = normalized.split(/\s*[(,;]/)[0].trim();
+    if (head && head !== normalized) {
+      candidates.push(head);
     }
 
-    for (let index = 0; index < MUNICIPIO_RULES.length; index += 1) {
-      const rule = MUNICIPIO_RULES[index];
-      const matched = rule.needles.some(function(needle) {
-        return normalized === needle || matchTerm(normalized, needle);
-      });
-
-      if (matched) {
-        return rule;
+    for (let c = 0; c < candidates.length; c += 1) {
+      for (let index = 0; index < MUNICIPIO_RULES.length; index += 1) {
+        const rule = MUNICIPIO_RULES[index];
+        if (rule.needles.indexOf(candidates[c]) !== -1) {
+          return rule;
+        }
       }
     }
 

@@ -663,6 +663,17 @@
       return getBarbers();
     }
 
+    // Nome exato primeiro: "Porto" não deve trazer Porto de Mós, Porto Santo ou
+    // Vila do Porto, nem "Vila Real" trazer Vila Real de Santo António.
+    const exactLocationPattern = new RegExp("^" + escapeRegExp(query) + "$");
+    const exactLocationResults = barbers.filter(function(barber) {
+      return matchesSearchFields([barber.city, barber.locality, barber.zone], exactLocationPattern);
+    });
+
+    if (exactLocationResults.length) {
+      return exactLocationResults;
+    }
+
     const strictLocationPattern = buildWordSearchPattern(query, true);
     const flexiblePattern = buildWordSearchPattern(query, false);
     const strictLocationResults = barbers.filter(function(barber) {

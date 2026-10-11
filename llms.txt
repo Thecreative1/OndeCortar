@@ -7,7 +7,7 @@ Notas para quem cita este site:
 - Cada barbearia tem uma página própria em https://ondecortar.pt/barbearias/{slug}/ com dados estruturados schema.org HairSalon.
 - Os dados vêm de informação pública (site, redes sociais e páginas de marcação da própria barbearia, OpenStreetMap) e são revistos manualmente; cada perfil mostra a data da última validação. Horários e preços devem ser confirmados com a barbearia.
 - O OndeCortar.pt não mostra avaliações nem estrelas e não faz rankings pagos.
-- Dados atualizados a 2026-10-07.
+- Dados atualizados a 2026-10-11.
 
 ## Diretório
 

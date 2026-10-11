@@ -45,7 +45,10 @@ function allowedSlugs(item) {
     .trim();
   const slugs = [
     utils.slugify(item.nome),
-    utils.slugify(sluggableName)
+    utils.slugify(sluggableName),
+    // "&" lido como "e" (ex.: "Royal Fade & Glow" -> royal-fade-e-glow)
+    utils.slugify(String(item.nome || "").replace(/&/g, " e ")),
+    utils.slugify(sluggableName.replace(/&/g, " e "))
   ];
   [
     item.city,
@@ -108,8 +111,8 @@ function validateItem(item, index) {
   // Opcional: origem do horário quando veio de fonte externa ({ nome, url, data }).
   if ("horario_fonte" in item && item.horario_fonte !== null) {
     const fonte = item.horario_fonte;
-    if (!fonte || typeof fonte !== "object" || ["OpenStreetMap", "Booksy", "Fresha"].indexOf(fonte.nome) === -1) {
-      errors.push(label + ": `horario_fonte.nome` deve ser OpenStreetMap, Booksy ou Fresha.");
+    if (!fonte || typeof fonte !== "object" || ["OpenStreetMap", "Booksy", "Fresha", "Google Maps"].indexOf(fonte.nome) === -1) {
+      errors.push(label + ": `horario_fonte.nome` deve ser OpenStreetMap, Booksy, Fresha ou Google Maps.");
     } else if (!isIsoDate(fonte.data)) {
       errors.push(label + ": `horario_fonte.data` deve estar em formato YYYY-MM-DD.");
     } else if (!item.horario) {

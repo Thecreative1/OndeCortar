@@ -23389,7 +23389,7 @@ const barbearias = [
   {
     "nome": "Barbearia Tavares",
     "slug": "barbearia-tavares-vieira-de-leiria",
-    "distrito": null,
+    "distrito": "Leiria",
     "concelho": null,
     "freguesia": null,
     "city": "Vieira de Leiria",

@@ -159,6 +159,25 @@ function locativeLabel(value) {
   return localityForm(value).locative || ("em " + String(value || "").trim());
 }
 
+// "concelho do Porto", "da Amadora", "de Leiria" — mesmo artigo que o locativo.
+function ofPlace(value) {
+  const text = String(value || "").trim();
+  const match = locativeLabel(text).match(/^(no|na|nos|nas)\s/);
+  const contraction = { no: "do", na: "da", nos: "dos", nas: "das" };
+  return (match ? contraction[match[1]] : "de") + " " + text;
+}
+
+function municipalityPhrase(value) {
+  return "no concelho " + ofPlace(value);
+}
+
+function districtPhrase(value) {
+  const key = utils.normalizarTexto(value);
+  if (key === "madeira") return "na Região Autónoma da Madeira";
+  if (key === "acores" || key === "açores") return "na Região Autónoma dos Açores";
+  return "no distrito " + ofPlace(value);
+}
+
 function barbersLabel(value) {
   return utils.barbeariasNaLocalidade(value);
 }
@@ -272,11 +291,11 @@ function buildLocationNarrative(barber) {
   }
 
   if (municipality && !sameGeoValue(municipality, primaryPlace)) {
-    parts.push("no concelho de " + municipality);
+    parts.push(municipalityPhrase(municipality));
   }
 
   if (district && !sameGeoValue(district, primaryPlace) && !sameGeoValue(district, municipality)) {
-    parts.push("no distrito de " + district);
+    parts.push(districtPhrase(district));
   }
 
   return parts.join(", ");
@@ -290,7 +309,7 @@ function buildCityContext(cityName, hierarchy) {
   }
 
   if (hierarchy && hierarchy.municipality && !sameGeoValue(hierarchy.municipality, cityName)) {
-    parts.push("no concelho de " + hierarchy.municipality);
+    parts.push(municipalityPhrase(hierarchy.municipality));
   }
 
   if (
@@ -299,7 +318,7 @@ function buildCityContext(cityName, hierarchy) {
     !sameGeoValue(hierarchy.district, cityName) &&
     !sameGeoValue(hierarchy.district, hierarchy.municipality)
   ) {
-    parts.push("no distrito de " + hierarchy.district);
+    parts.push(districtPhrase(hierarchy.district));
   }
 
   return parts.join(", ");
