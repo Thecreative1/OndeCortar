@@ -273,6 +273,24 @@ const PICKS = {
       ["the-ordinary-granactive-retinoid", "Rugas, à noite", "Retinoide a 2% em emulsão, para começar devagar."]
     ]
   },
+  "pomada-cera-ou-gel-cabelo-homem": {
+    title: "Um produto para cada corte",
+    items: [
+      ["american-crew-matte-clay", "Efeito seco", "Argila mate de fixação média a alta, para cabelo curto com textura."],
+      ["uppercut-deluxe-matt-pomade", "Pomada mate", "À base de água, sai à primeira lavagem; fixação média sem brilho."],
+      ["american-crew-pomade", "Com brilho", "Fixação média e brilho alto, para risca ou penteado para trás."],
+      ["american-crew-fiber", "Cabelo grosso", "Fixação forte com pouco brilho, para cabelo que desfaz o penteado."],
+      ["giorgi-line-gel-extra-forte", "Gel", "Fixação extra forte para o dia inteiro, com o efeito molhado do gel."],
+      ["cantu-creme-caracois", "Caracóis", "Creme sem enxaguar para definir os caracóis, em vez de cera."]
+    ]
+  },
+  "cabelo-encaracolado-homem-corte-e-cuidados": {
+    title: "Cremes para caracóis",
+    items: [
+      ["cantu-creme-caracois", "Caracóis secos ou com frizz", "Manteiga de karité e coco, sem sulfatos nem silicones; frasco de 340 g."],
+      ["tigi-catwalk-curls-rock", "Ondas e caracóis definidos", "Define os caracóis e controla o frizz com humidade, segundo a marca; 150 ml."]
+    ]
+  },
   "gel-de-limpeza-para-homem-como-lavar-a-cara": {
     title: "Um gel de limpeza para cada pele",
     items: [
@@ -422,7 +440,7 @@ function applyPicks(articleSlug, config, stats) {
     '<section class="section oc-top-picks oc-top-picks--unranked oc-article-picks" id="produtos-recomendados"><div class="container">' +
       '<div class="section-header section-header--compact"><div><span class="eyebrow">Da nossa seleção</span>' +
       "<h2>" + escapeHtml(config.title) + "</h2>" +
-      "<p>Escolhas editoriais com base nas características publicadas pelos fabricantes. Preço e disponibilidade confirmam-se na Amazon.es.</p></div></div>" +
+      "<p>Escolhas editoriais com base nas características publicadas pelos fabricantes. Preço e disponibilidade confirmam-se na Amazon.es. Como Afiliado da Amazon, o OndeCortar.pt obtém rendimentos com as compras elegíveis, sem custo extra para ti.</p></div></div>" +
       '<ul class="oc-top-picks-list">' + items.join("") + "</ul>" +
     "</div></section>" +
     "<!-- OC-ARTICLE-PICKS-END -->";

@@ -27,7 +27,8 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 const SHORTCUTS = [
   ["acessorios-de-barbeiro/", "Acessórios de barbeiro"],
   ["oleos-e-balms/", "Óleos e balms"],
-  ["cuidados-de-rosto/", "Cuidados de rosto"]
+  ["cuidados-de-rosto/", "Cuidados de rosto"],
+  ["pomadas-e-ceras/", "Pomadas e ceras"]
 ];
 
 // [slug, etiqueta, porquê, quando não escolher, [artigo, texto do link]]
