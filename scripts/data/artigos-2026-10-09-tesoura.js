@@ -77,7 +77,7 @@ module.exports = [
       ["Que tamanho de tesoura devo comprar para cortar cabelo em casa?", "Entre 5,5 e 6,5 polegadas é o habitual para cabelo masculino. Uma de 6,5 dá mais lâmina para a tesoura sobre o pente."],
       ["Para que serve a tesoura de desbaste?", "Para tirar volume ao cabelo sem cortar o comprimento. Não é necessária para começar a cortar em casa."]
     ],
-    faqCta: "Preferes deixar o topo a um profissional e fazer só a manutenção em casa? Encontra uma barbearia perto de ti no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes deixar o topo a um profissional e fazer só a manutenção em casa? Encontra uma barbearia perto de ti no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["como-cortar-o-cabelo-em-casa-com-maquina", "numeros-da-maquina-de-cortar-cabelo", "cabelo-encaracolado-homem-corte-e-cuidados"],
     finalCta: {
       h2: "A tesoura certa faz metade do trabalho",

@@ -69,7 +69,7 @@ module.exports = [
       ["Como deixar a barba grisalha mais macia?", "Lavar com um champô suave, hidratar com óleo ou bálsamo e escovar no sentido do crescimento. O pelo branco tende a ser mais áspero e beneficia de mais hidratação."],
       ["Como pintar a barba grisalha?", "Com uma tinta própria para barba, depois do teste de alergia indicado pelo fabricante, e num tom um pouco mais claro do que o cabelo para um resultado natural."]
     ],
-    faqCta: "Preferes que seja um profissional a aparar ou pintar? Encontra uma barbearia no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes que seja um profissional a aparar ou pintar? Encontra uma barbearia no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["como-aparar-a-barba-em-casa", "oleo-de-barba-para-que-serve", "cortes-de-cabelo-masculino-qual-combina-comigo"],
     finalCta: {
       h2: "Grisalha, mas por escolha",
@@ -137,7 +137,7 @@ module.exports = [
       ["Deve-se aparar a barba molhada ou seca?", "Seca e penteada. Molhada parece mais comprida e é fácil cortar demais."],
       ["Faz mal fazer a barba depois de comer?", "Não há razão conhecida para isso: barbear não interfere com a digestão."]
     ],
-    faqCta: "Preferes um barbear à moda antiga, com toalha quente? Encontra uma barbearia no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes um barbear à moda antiga, com toalha quente? Encontra uma barbearia no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["como-reduzir-irritacao-ao-fazer-a-barba", "creme-espuma-ou-gel-de-barbear-qual-escolher", "melhor-maquina-de-barbear-eletrica-qual-escolher"],
     finalCta: {
       h2: "Cada ferramenta, o seu momento",

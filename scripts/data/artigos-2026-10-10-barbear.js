@@ -76,7 +76,7 @@ module.exports = [
       },
       {
         h2: "Careca com barba: o que resulta",
-        html: "<p>A barba é o que dá estrutura a um rosto com a cabeça rapada. Em geral, resulta melhor <strong>curta a média e bem delineada</strong>: linhas limpas no pescoço e nas bochechas, e um comprimento que não compita com a cabeça. Uma barba muito comprida e descuidada desequilibra; uma barba de três dias com a cabeça lisa cria contraste.</p><p>Para a manter, um aparador com muitos comprimentos, como o <a href=\"../../produto/braun-bt5525-series-5/\">Braun BT5525</a>, e o método em <a href=\"../../revista/como-aparar-a-barba-em-casa/\">como aparar a barba em casa</a>. Para a forma certa para o teu rosto, um barbeiro vê em minutos — encontra um no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.</p>"
+        html: "<p>A barba é o que dá estrutura a um rosto com a cabeça rapada. Em geral, resulta melhor <strong>curta a média e bem delineada</strong>: linhas limpas no pescoço e nas bochechas, e um comprimento que não compita com a cabeça. Uma barba muito comprida e descuidada desequilibra; uma barba de três dias com a cabeça lisa cria contraste.</p><p>Para a manter, um aparador com muitos comprimentos, como o <a href=\"../../produto/braun-bt5525-series-5/\">Braun BT5525</a>, e o método em <a href=\"../../revista/como-aparar-a-barba-em-casa/\">como aparar a barba em casa</a>. Para a forma certa para o teu rosto, um barbeiro vê em minutos — encontra um no <a href=\"../../#explorar\">mapa do OndeCortar</a>.</p>"
       }
     ],
     faq: [
@@ -85,7 +85,7 @@ module.exports = [
       ["De quanto em quanto tempo se rapa a cabeça?", "Para a manter lisa, a cada um a três dias. Com sombra, uma vez por semana costuma chegar."],
       ["Que barba fica bem a um careca?", "Em geral, uma barba curta a média e bem delineada, que dá estrutura ao rosto sem competir com a cabeça."]
     ],
-    faqCta: "Preferes que seja um barbeiro a fazer a primeira vez? Encontra um perto de ti no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes que seja um barbeiro a fazer a primeira vez? Encontra um perto de ti no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["buzz-cut-corte-militar-que-numero-pedir", "como-aparar-a-barba-em-casa", "melhor-maquina-de-barbear-eletrica-qual-escolher"],
     finalCta: {
       h2: "Lisa ou com sombra, sem cortes",
@@ -170,7 +170,7 @@ module.exports = [
       ["A máquina de barbear elétrica irrita a pele?", "Pode irritar nas primeiras semanas, enquanto a pele se habitua. Não pressionar e dar-lhe duas ou três semanas costuma resolver."],
       ["Posso usar a máquina de barbear no duche?", "Se for 100% à prova de água, sim — e com gel ou espuma costuma irritar menos."]
     ],
-    faqCta: "Preferes um barbear clássico, feito por um profissional? Encontra uma barbearia no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes um barbear clássico, feito por um profissional? Encontra uma barbearia no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["trimmer-vs-shaver-diferencas-reais", "como-reduzir-irritacao-ao-fazer-a-barba", "qual-oneblade-comprar"],
     finalCta: {
       h2: "Escolhe o tipo, depois o modelo",
@@ -243,7 +243,7 @@ module.exports = [
       ["De quanto em quanto tempo se troca a lâmina do OneBlade?", "Quando começa a puxar, a deixar pelos ou a irritar. A Philips indica até 4 meses por lâmina, conforme a barba e o uso."],
       ["As lâminas OneBlade servem em todos os modelos?", "As lâminas originais OneBlade 360 encaixam em todos os OneBlade e OneBlade Pro."]
     ],
-    faqCta: "Preferes que um barbeiro desenhe as linhas da barba da primeira vez? Encontra um no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes que um barbeiro desenhe as linhas da barba da primeira vez? Encontra um no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["melhor-maquina-de-barbear-eletrica-qual-escolher", "aparador-corporal-masculino-qual-escolher", "como-aparar-a-barba-em-casa"],
     finalCta: {
       h2: "Um OneBlade, uma lâmina boa, e acabou",

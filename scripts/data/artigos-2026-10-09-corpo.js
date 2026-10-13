@@ -80,7 +80,7 @@ module.exports = [
       ["Qual é o melhor aparador corporal masculino?", "Um com proteção da pele na cabeça de corte, pentes de comprimento e corpo à prova de água. A nossa escolha é o Philips Body Groomer Série 3000 (BG3480/15), com sistema Triple Protect e pentes de 2 e 3 mm."],
       ["Posso usar o aparador corporal no duche?", "Se for à prova de água, sim. No duche a pele está mais macia e os pelos vão logo pelo ralo; lava o aparador no fim."]
     ],
-    faqCta: "Preferes tratar só da cabeça e da barba com um profissional? Encontra uma barbearia perto de ti no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes tratar só da cabeça e da barba com um profissional? Encontra uma barbearia perto de ti no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["aparador-de-pelos-do-nariz-qual-escolher", "como-reduzir-irritacao-ao-fazer-a-barba", "trimmer-vs-shaver-diferencas-reais"],
     finalCta: {
       h2: "A ferramenta certa, e o resto é calma",

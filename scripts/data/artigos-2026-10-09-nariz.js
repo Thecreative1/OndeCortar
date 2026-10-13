@@ -72,7 +72,7 @@ module.exports = [
       ["Com que frequência devo aparar os pelos do nariz?", "Uma vez por semana chega para a maioria das pessoas. Leva cerca de dois minutos."],
       ["O mesmo aparador serve para as orelhas e as sobrancelhas?", "Na maioria dos aparadores de nariz, sim: servem para a entrada das orelhas e para acertar o comprimento das sobrancelhas. Nas orelhas, nunca para dentro do canal."]
     ],
-    faqCta: "Preferes que seja o barbeiro a tratar dos detalhes? Pergunta se fazem nariz, orelhas e sobrancelhas no fim do corte — encontra uma barbearia no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes que seja o barbeiro a tratar dos detalhes? Pergunta se fazem nariz, orelhas e sobrancelhas no fim do corte — encontra uma barbearia no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["como-aparar-as-sobrancelhas-homem", "como-aparar-a-barba-em-casa", "aparador-multifuncoes-ou-maquina-profissional-qual-compensa-mais"],
     finalCta: {
       h2: "Dois minutos por semana, e acabou",

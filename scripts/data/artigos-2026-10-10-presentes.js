@@ -83,7 +83,7 @@ module.exports = [
       },
       {
         h2: "Na dúvida: oferece um corte",
-        html: "<p>Se nada disto encaixa, há um presente que funciona sempre: <strong>um corte ou uma barba numa boa barbearia</strong>. Algumas vendem vales de oferta — pergunta diretamente. Encontra uma perto dele no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a> ou procura <a href=\"../../cidades/\">por cidade</a>.</p>"
+        html: "<p>Se nada disto encaixa, há um presente que funciona sempre: <strong>um corte ou uma barba numa boa barbearia</strong>. Algumas vendem vales de oferta — pergunta diretamente. Encontra uma perto dele no <a href=\"../../#explorar\">mapa do OndeCortar</a> ou procura <a href=\"../../cidades/\">por cidade</a>.</p>"
       }
     ],
     faq: [
@@ -93,7 +93,7 @@ module.exports = [
       ["Que presente dar a um homem que já tem tudo?", "Melhora uma peça que ele usa todos os dias — um aparador mais completo — ou oferece uma experiência, como um corte numa boa barbearia."],
       ["Um kit de barba é um bom presente?", "Sim, se ele tem barba e ainda não tem rotina. Se já tem os produtos de que gosta, é melhor oferecer uma ferramenta, como um aparador."]
     ],
-    faqCta: "Preferes oferecer uma experiência? Encontra uma barbearia perto dele no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes oferecer uma experiência? Encontra uma barbearia perto dele no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["melhor-kit-de-barba-para-oferecer", "como-montar-uma-rotina-simples-de-barba-em-casa", "aparador-corporal-masculino-qual-escolher"],
     finalCta: {
       h2: "Um presente que ele usa, não que ele guarda",

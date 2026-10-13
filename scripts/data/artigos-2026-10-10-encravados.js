@@ -76,7 +76,7 @@ module.exports = [
       ["Posso tirar um pelo encravado com uma pinça?", "Não é recomendável escavar a pele com pinça ou agulha nem espremer: aumenta a inflamação e o risco de infeção. Se não passar ou inflamar, fala com um médico."],
       ["Fazer a barba com máquina evita pelos encravados?", "Ajuda, porque não corta tão rente como a lâmina. Deixar um ou dois milímetros com um aparador é ainda mais eficaz para quem tem pelos encravados com frequência."]
     ],
-    faqCta: "Preferes que um barbeiro trate da barba? Um bom barbeiro sabe barbear a favor do crescimento — encontra um no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes que um barbeiro trate da barba? Um bom barbeiro sabe barbear a favor do crescimento — encontra um no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["como-reduzir-irritacao-ao-fazer-a-barba", "aparador-corporal-masculino-qual-escolher", "melhor-maquina-de-barbear-eletrica-qual-escolher"],
     finalCta: {
       h2: "Um ou dois milímetros fazem a diferença",

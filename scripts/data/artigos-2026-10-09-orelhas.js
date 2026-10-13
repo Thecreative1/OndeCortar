@@ -51,7 +51,7 @@ module.exports = [
       {
         id: "como-tirar",
         h2: "A forma mais segura: aparador, por fora",
-        html: "<p>Um aparador de nariz e orelhas foi feito para isto: a lâmina fica <strong>escondida atrás de uma proteção</strong>, por isso corta o pelo sem tocar na pele, e a cabeça é estreita para chegar à borda e à entrada da orelha.</p><ol class=\"rich-list\"><li><strong>Boa luz e dois espelhos</strong> — um à frente e outro de mão — ou alguém que te ajude. A orelha não se vê de frente.</li><li><strong>Puxa ligeiramente a orelha</strong> para cima e para trás, para esticar a pele da entrada.</li><li><strong>Liga o aparador antes de o aproximar</strong> e passa-o devagar pela borda, pela parte de trás e pelo lóbulo.</li><li><strong>À entrada do canal, só por fora</strong>: pequenos círculos sem entrar. Se não chegas sem entrar, deixa ficar.</li><li><strong>Inclina a cabeça</strong> para os pelos cortados caírem para fora e limpa com uma toalha.</li><li><strong>Lava o aparador</strong> debaixo da torneira.</li></ol><p>A cada duas ou três semanas chega para a maioria. E se cortas o cabelo numa barbearia, pergunta se o fazem no fim do corte — encontra uma no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.</p>"
+        html: "<p>Um aparador de nariz e orelhas foi feito para isto: a lâmina fica <strong>escondida atrás de uma proteção</strong>, por isso corta o pelo sem tocar na pele, e a cabeça é estreita para chegar à borda e à entrada da orelha.</p><ol class=\"rich-list\"><li><strong>Boa luz e dois espelhos</strong> — um à frente e outro de mão — ou alguém que te ajude. A orelha não se vê de frente.</li><li><strong>Puxa ligeiramente a orelha</strong> para cima e para trás, para esticar a pele da entrada.</li><li><strong>Liga o aparador antes de o aproximar</strong> e passa-o devagar pela borda, pela parte de trás e pelo lóbulo.</li><li><strong>À entrada do canal, só por fora</strong>: pequenos círculos sem entrar. Se não chegas sem entrar, deixa ficar.</li><li><strong>Inclina a cabeça</strong> para os pelos cortados caírem para fora e limpa com uma toalha.</li><li><strong>Lava o aparador</strong> debaixo da torneira.</li></ol><p>A cada duas ou três semanas chega para a maioria. E se cortas o cabelo numa barbearia, pergunta se o fazem no fim do corte — encontra uma no <a href=\"../../#explorar\">mapa do OndeCortar</a>.</p>"
       },
       {
         id: "a-nossa-escolha",
@@ -69,7 +69,7 @@ module.exports = [
       ["Qual é a melhor forma de tirar os pelos das orelhas?", "Um aparador de nariz e orelhas, usado só na parte de fora e na entrada do canal, sem nunca entrar no canal auditivo."],
       ["De quanto em quanto tempo devo aparar os pelos das orelhas?", "A cada duas ou três semanas chega para a maioria das pessoas."]
     ],
-    faqCta: "Preferes que seja o barbeiro a tratar disso? Pede no fim do corte — encontra uma barbearia perto de ti no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes que seja o barbeiro a tratar disso? Pede no fim do corte — encontra uma barbearia perto de ti no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["aparador-de-pelos-do-nariz-qual-escolher", "como-aparar-as-sobrancelhas-homem", "aparador-corporal-masculino-qual-escolher"],
     finalCta: {
       h2: "Cinco minutos, de três em três semanas",

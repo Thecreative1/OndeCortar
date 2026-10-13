@@ -1087,7 +1087,7 @@ function renderHeader(prefix, currentSection) {
     <div class="container">
       <nav class="nav" aria-label="Navegação principal" data-mobile-nav data-mobile-nav-breakpoint="1100">
         <div class="nav-main-row">
-          <a class="brand" href="${prefix}index.html">
+          <a class="brand" href="${prefix || "./"}">
             <img src="${prefix}imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
             <span class="brand-text">
               <strong>OndeCortar.pt</strong>
@@ -1106,13 +1106,13 @@ function renderHeader(prefix, currentSection) {
           </div>
         </div>
         <div class="nav-links" id="siteNavLinks" aria-hidden="false">
-          <a href="${prefix}index.html#explorar">Explorar</a>
+          <a href="${prefix || "./"}#explorar">Explorar</a>
           <a class="${currentSection === "cidades" ? "is-current" : ""}" href="${prefix}cidades/">Cidades</a>
           <a href="${prefix}registar.html">Adicionar barbearia</a>
           <a class="${currentSection === "loja" ? "is-current" : ""}" href="${prefix}loja/">Loja</a>
           <a class="${currentSection === "revista" ? "is-current" : ""}" href="${prefix}revista/">Revista</a>
           <a href="${prefix}faq.html">FAQ</a>
-          <a class="nav-cta" href="${prefix}index.html#mapa">Voltar ao mapa</a>
+          <a class="nav-cta" href="${prefix || "./"}#mapa">Voltar ao mapa</a>
         </div>
       </nav>
       <button class="nav-backdrop" type="button" aria-label="Fechar menu" aria-hidden="true" data-nav-backdrop hidden></button>
@@ -1132,7 +1132,7 @@ function renderFooter(prefix) {
         <p>Diretório de barbearias em Portugal com páginas por cidade, perfis com morada e contactos, loja e revista num único site.</p>
       </div>
       <div class="footer-links">
-        <a href="${prefix}index.html">Homepage</a>
+        <a href="${prefix || "./"}">Homepage</a>
         <a href="${prefix}cidades/">Cidades</a>
         <a href="${prefix}loja/">Loja</a>
         <a href="${prefix}revista/">Revista</a>
@@ -1662,7 +1662,7 @@ ${renderHeader(prefix, "cidades")}
       <div class="hero-grid">
         <div class="hero-copy">
           <div class="breadcrumbs">
-            <a href="${prefix}index.html">OndeCortar.pt</a>
+            <a href="${prefix || "./"}">OndeCortar.pt</a>
             <span>/</span>
             <a href="${prefix}cidades/">Cidades</a>
             <span>/</span>
@@ -1756,7 +1756,7 @@ ${renderHeader(prefix, "cidades")}
       <div class="hero-grid">
         <div class="hero-copy">
           <div class="breadcrumbs">
-            <a href="${prefix}index.html">OndeCortar.pt</a>
+            <a href="${prefix || "./"}">OndeCortar.pt</a>
             <span>/</span>
             <span>Cidades</span>
           </div>
@@ -1765,7 +1765,7 @@ ${renderHeader(prefix, "cidades")}
           <p>Explora as páginas locais do OndeCortar.pt para encontrar barbearias por cidade, comparar perfis individuais e avançar para a ficha certa com morada, contactos, mapa e links úteis.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#lista-cidades">Ver cidades</a>
-            <a class="btn btn-secondary" href="${prefix}index.html#explorar">Voltar ao diretório</a>
+            <a class="btn btn-secondary" href="${prefix || "./"}#explorar">Voltar ao diretório</a>
           </div>
         </div>
         <aside class="summary-panel">

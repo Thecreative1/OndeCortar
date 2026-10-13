@@ -84,7 +84,7 @@ module.exports = [
       ["Que número pedir para um corte curto mas sem se ver a pele?", "Um 3 (cerca de 10 mm) ou acima. Do 2 para baixo, a pele começa a notar-se, sobretudo em cabelo claro ou fino."],
       ["Os pentes são iguais em todas as marcas?", "Não exatamente. As máquinas de barbearia seguem quase todas a mesma tabela, com diferenças de cerca de um milímetro. As máquinas domésticas costumam gravar os milímetros no próprio pente — confirma sempre esse valor."]
     ],
-    faqCta: "Preferes que seja um profissional a escolher o número? Encontra uma barbearia no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes que seja um profissional a escolher o número? Encontra uma barbearia no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["tipos-de-degrade-como-pedir-o-corte-certo", "como-cortar-o-cabelo-em-casa-com-maquina", "melhores-maquinas-para-cortar-cabelo-em-casa"],
     finalCta: {
       h2: "Já sabes o número — falta o resto",
@@ -166,7 +166,7 @@ module.exports = [
       ["Com que frequência posso cortar o cabelo em casa?", "Depende do comprimento: cortes muito curtos perdem a forma ao fim de 2 a 4 semanas, porque o cabelo cresce cerca de 1 cm por mês."],
       ["Que número usar na primeira vez?", "Um acima do que queres. Se correr bem, desces um número na mesma sessão; se cortares demasiado à primeira, não há forma de voltar atrás."]
     ],
-    faqCta: "Preferes deixar o corte a um profissional? Encontra uma barbearia no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes deixar o corte a um profissional? Encontra uma barbearia no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["numeros-da-maquina-de-cortar-cabelo", "melhores-maquinas-para-cortar-cabelo-em-casa", "como-limpar-uma-maquina-de-cortar-cabelo"],
     finalCta: {
       h2: "Pronto para o primeiro corte em casa?",
@@ -244,7 +244,7 @@ module.exports = [
       ["Como aparar o bigode com máquina?", "Penteia o bigode para baixo e usa o aparador sem pente, com a parte de cima da lâmina, em movimentos curtos ao longo do lábio superior."],
       ["De quanto em quanto tempo devo aparar a barba?", "Os contornos ficam melhor se forem limpos a cada poucos dias. O comprimento geral costuma pedir um retoque a cada uma ou duas semanas, conforme o crescimento."]
     ],
-    faqCta: "Queres uma primeira forma feita por um profissional? Encontra uma barbearia no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Queres uma primeira forma feita por um profissional? Encontra uma barbearia no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["como-montar-uma-rotina-simples-de-barba-em-casa", "trimmer-vs-shaver-diferencas-reais", "como-reduzir-irritacao-ao-fazer-a-barba"],
     finalCta: {
       h2: "Já sabes onde passar o aparador",

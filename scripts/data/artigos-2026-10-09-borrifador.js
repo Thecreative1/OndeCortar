@@ -73,7 +73,7 @@ module.exports = [
       ["Vale a pena um borrifador elétrico para barbeiro?", "Para quem tem problemas no pulso, pode valer. Para a maioria, um de névoa contínua manual faz o mesmo trabalho sem bateria para carregar."],
       ["De quanto em quanto tempo devo mudar a água do borrifador?", "Todos os dias. Esvazia ao fim do dia, enche de manhã com água limpa e lava o frasco uma vez por semana."]
     ],
-    faqCta: "Tens uma barbearia? Confirma se está no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a> — e, se não estiver, <a href=\"../../registar.html\">regista-a gratuitamente</a>.",
+    faqCta: "Tens uma barbearia? Confirma se está no <a href=\"../../#explorar\">mapa do OndeCortar</a> — e, se não estiver, <a href=\"../../registar.html\">regista-a gratuitamente</a>.",
     related: ["o-que-um-barbeiro-precisa-no-posto-de-trabalho", "o-essencial-para-manter-uma-bancada-de-barbeiro-organizada", "como-cortar-cabelo-masculino-com-tesoura-em-casa"],
     finalCta: {
       h2: "Menos apertos, melhor acabamento",

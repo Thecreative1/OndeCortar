@@ -67,7 +67,7 @@ module.exports = [
       ["O óleo de barba ajuda a barba a crescer?", "Não há provas sólidas de que faça crescer pelo onde ele não cresce. Ajuda a cuidar da barba enquanto cresce e reduz a comichão."],
       ["Qual é a diferença entre óleo e bálsamo de barba?", "O óleo hidrata e é leve. O bálsamo junta óleos, manteigas e cera: também hidrata, mas segura e dá forma a barbas médias e compridas."]
     ],
-    faqCta: "Preferes que um barbeiro te diga o que a tua barba precisa? Encontra uma barbearia no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes que um barbeiro te diga o que a tua barba precisa? Encontra uma barbearia no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["como-aparar-a-barba-em-casa", "como-montar-uma-rotina-simples-de-barba-em-casa", "barba-falhada-o-que-fazer"],
     finalCta: {
       h2: "Escolhe o teu óleo ou bálsamo",
@@ -121,7 +121,7 @@ module.exports = [
       },
       {
         h2: "Estilos que disfarçam as falhas",
-        html: "<ul class=\"rich-list\"><li><strong>Barba de três dias</strong> — curta e uniforme, a falha quase não se nota porque toda a barba tem o mesmo comprimento.</li><li><strong>Barba curta bem delineada</strong> — linhas do pescoço e das bochechas limpas dão aspeto cuidado mesmo com densidade média.</li><li><strong>Concentrar no queixo e no bigode</strong> — quando as bochechas são fracas, um estilo que vive no queixo evita as zonas falhadas.</li></ul><p>Em geral, quanto mais curta e uniforme, menos se notam as falhas. Uma barba comprida e irregular realça-as. Um barbeiro consegue ver em minutos o estilo que melhor aproveita a tua barba — encontra um no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.</p>"
+        html: "<ul class=\"rich-list\"><li><strong>Barba de três dias</strong> — curta e uniforme, a falha quase não se nota porque toda a barba tem o mesmo comprimento.</li><li><strong>Barba curta bem delineada</strong> — linhas do pescoço e das bochechas limpas dão aspeto cuidado mesmo com densidade média.</li><li><strong>Concentrar no queixo e no bigode</strong> — quando as bochechas são fracas, um estilo que vive no queixo evita as zonas falhadas.</li></ul><p>Em geral, quanto mais curta e uniforme, menos se notam as falhas. Uma barba comprida e irregular realça-as. Um barbeiro consegue ver em minutos o estilo que melhor aproveita a tua barba — encontra um no <a href=\"../../#explorar\">mapa do OndeCortar</a>.</p>"
       },
       {
         h2: "O que é mito",
@@ -138,7 +138,7 @@ module.exports = [
       ["Que estilo de barba fica melhor com falhas?", "Barbas curtas e uniformes, como a de três dias, ou estilos concentrados no queixo e bigode quando as bochechas são fracas."],
       ["Existe algum produto que faça crescer a barba?", "Não há provas sólidas de que óleos ou produtos cosméticos o façam. Para tratamentos médicos, fala com um dermatologista."]
     ],
-    faqCta: "Queres que um profissional desenhe o melhor estilo para a tua barba? Encontra uma barbearia no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Queres que um profissional desenhe o melhor estilo para a tua barba? Encontra uma barbearia no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["oleo-de-barba-para-que-serve", "como-aparar-a-barba-em-casa", "escova-de-barba-ou-pente-qual-usar-no-dia-a-dia"],
     finalCta: {
       h2: "Dá tempo à barba — e um bom contorno",
@@ -217,7 +217,7 @@ module.exports = [
       ["Qual é a diferença entre buzz cut e corte militar?", "O buzz cut tem o mesmo comprimento em toda a cabeça. O corte militar tem laterais e nuca muito curtas, que sobem alto, e o topo curto."],
       ["De quanto em quanto tempo se retoca um buzz cut?", "Os mais curtos perdem a definição ao fim de duas a três semanas; os mais compridos aguentam um pouco mais."]
     ],
-    faqCta: "Pronto para o corte? Encontra uma barbearia no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Pronto para o corte? Encontra uma barbearia no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["numeros-da-maquina-de-cortar-cabelo", "tipos-de-degrade-como-pedir-o-corte-certo", "como-cortar-o-cabelo-em-casa-com-maquina"],
     finalCta: {
       h2: "Já sabes o número — falta a cadeira",
@@ -288,7 +288,7 @@ module.exports = [
       ["Onde fica melhor o risco?", "Na risca natural do cabelo, onde ele se separa sozinho. Nas laterais, combina melhor com degradê."],
       ["Posso fazer um risco no cabelo em casa?", "Não é recomendável: é difícil fazer uma linha direita numa zona que não vês bem, e um erro não tem correção rápida."]
     ],
-    faqCta: "Encontra quem faça o risco certo no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Encontra quem faça o risco certo no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["tipos-de-degrade-como-pedir-o-corte-certo", "como-escolher-uma-barbearia-sinais-de-qualidade", "quanto-custa-cortar-o-cabelo-numa-barbearia-em-portugal"],
     finalCta: {
       h2: "Já sabes o que pedir — falta onde",
@@ -354,7 +354,7 @@ module.exports = [
       },
       {
         h2: "Quando pedir ao barbeiro",
-        html: "<p>Muitas barbearias fazem as sobrancelhas no fim do corte, em poucos minutos — é uma boa forma de teres uma primeira referência que depois manténs em casa. Se procuras um <a href=\"../../revista/risco-no-cabelo-masculino/\">risco na sobrancelha</a> ou noutro sítio, isso é trabalho para barbeiro. Encontra uma barbearia perto de ti no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.</p>"
+        html: "<p>Muitas barbearias fazem as sobrancelhas no fim do corte, em poucos minutos — é uma boa forma de teres uma primeira referência que depois manténs em casa. Se procuras um <a href=\"../../revista/risco-no-cabelo-masculino/\">risco na sobrancelha</a> ou noutro sítio, isso é trabalho para barbeiro. Encontra uma barbearia perto de ti no <a href=\"../../#explorar\">mapa do OndeCortar</a>.</p>"
       }
     ],
     faq: [
@@ -363,7 +363,7 @@ module.exports = [
       ["Como tirar a monocelha?", "Encosta um pente ao lado do nariz, na vertical: o que fica entre as duas linhas pode sair com pinça ou aparador de precisão."],
       ["De quanto em quanto tempo devo aparar as sobrancelhas?", "A cada três a quatro semanas costuma chegar para manter a forma limpa."]
     ],
-    faqCta: "Preferes uma primeira referência feita por um profissional? Encontra uma barbearia no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes uma primeira referência feita por um profissional? Encontra uma barbearia no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["como-aparar-a-barba-em-casa", "como-cortar-o-cabelo-em-casa-com-maquina", "risco-no-cabelo-masculino"],
     finalCta: {
       h2: "Limpo, não desenhado",

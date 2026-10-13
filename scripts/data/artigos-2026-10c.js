@@ -63,7 +63,7 @@ module.exports = [
       ["Porque é que o after shave arde?", "Normalmente por causa do álcool em contacto com pele irritada ou pequenos cortes. Um bálsamo ou gel sem álcool costuma resolver."],
       ["Devo pôr after shave se tenho barba?", "Só nas zonas que barbeaste. Na barba propriamente dita, usa óleo ou bálsamo de barba."]
     ],
-    faqCta: "Preferes um barbear clássico feito por um profissional? Encontra uma barbearia no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Preferes um barbear clássico feito por um profissional? Encontra uma barbearia no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["como-reduzir-irritacao-ao-fazer-a-barba", "creme-espuma-ou-gel-de-barbear-qual-escolher", "navalha-classica-ou-maquina-de-seguranca-diferencas-reais"],
     finalCta: {
       h2: "Um bom after shave começa antes",
@@ -131,7 +131,7 @@ module.exports = [
       },
       {
         h2: "Pede ao barbeiro para te mostrar",
-        html: "<p>No fim do corte, pede ao barbeiro para pentear com o produto que ele usaria em ti — e para te dizer a quantidade. É a forma mais rápida de acertar à primeira, sem comprar três latas. Encontra uma barbearia perto de ti no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.</p>"
+        html: "<p>No fim do corte, pede ao barbeiro para pentear com o produto que ele usaria em ti — e para te dizer a quantidade. É a forma mais rápida de acertar à primeira, sem comprar três latas. Encontra uma barbearia perto de ti no <a href=\"../../#explorar\">mapa do OndeCortar</a>.</p>"
       }
     ],
     faq: [
@@ -140,7 +140,7 @@ module.exports = [
       ["O que fixa mais: gel ou pomada?", "Em geral, o gel fixa mais, mas deixa o cabelo rígido e com efeito molhado. A pomada segura menos e deixa mexer."],
       ["Quanto produto devo usar no cabelo?", "Uma quantidade do tamanho de uma ervilha chega para a maioria dos cortes curtos. Começa com pouco e acrescenta se for preciso."]
     ],
-    faqCta: "Queres que um barbeiro te mostre o produto certo para o teu cabelo? Encontra uma barbearia no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Queres que um barbeiro te mostre o produto certo para o teu cabelo? Encontra uma barbearia no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["buzz-cut-corte-militar-que-numero-pedir", "tipos-de-degrade-como-pedir-o-corte-certo", "cabelo-encaracolado-homem-corte-e-cuidados"],
     finalCta: {
       h2: "O produto certo começa no corte certo",
@@ -211,7 +211,7 @@ module.exports = [
       ["Posso usar champô anticaspa na barba?", "Há casos em que ajuda, mas pode secar a pele do rosto. Se a caspa persistir, é melhor confirmar a causa com um dermatologista."],
       ["Quando devo ir ao médico por causa da caspa na barba?", "Se houver vermelhidão, crostas, comichão forte, flocos noutras zonas do rosto ou nenhuma melhoria ao fim de algumas semanas."]
     ],
-    faqCta: "Queres uma limpeza e um acerto da barba feitos por um profissional? Encontra uma barbearia no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Queres uma limpeza e um acerto da barba feitos por um profissional? Encontra uma barbearia no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["oleo-de-barba-para-que-serve", "como-montar-uma-rotina-simples-de-barba-em-casa", "escova-de-barba-ou-pente-qual-usar-no-dia-a-dia"],
     finalCta: {
       h2: "Rotina simples, barba sem flocos",
@@ -282,7 +282,7 @@ module.exports = [
       ["Como acalmar a criança no corte de cabelo?", "Ir a uma hora em que esteja descansada, levar um brinquedo ou algo para distrair e, nos mais pequenos, fazer o corte ao colo de um dos pais."],
       ["Todas as barbearias cortam cabelo a crianças?", "Não. Liga antes e pergunta se cortam cabelo a crianças e qual é a hora mais calma para ir."]
     ],
-    faqCta: "Encontra uma barbearia perto de ti no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a> e liga antes para confirmar.",
+    faqCta: "Encontra uma barbearia perto de ti no <a href=\"../../#explorar\">mapa do OndeCortar</a> e liga antes para confirmar.",
     related: ["como-escolher-uma-barbearia-sinais-de-qualidade", "quanto-custa-cortar-o-cabelo-numa-barbearia-em-portugal", "tipos-de-degrade-como-pedir-o-corte-certo"],
     finalCta: {
       h2: "Encontra uma barbearia para o primeiro corte",
@@ -353,7 +353,7 @@ module.exports = [
       ["Como reduzir o frizz no cabelo encaracolado?", "Lavar menos vezes, usar sempre condicionador, secar com toques e não escovar o cabelo a seco."],
       ["Que produto usar em cabelo encaracolado de homem?", "Cremes ou leave-in próprios para caracóis, aplicados com o cabelo húmido. Ceras pesadas tendem a desfazer a forma."]
     ],
-    faqCta: "Procura um barbeiro com experiência em caracóis no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Procura um barbeiro com experiência em caracóis no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["tipos-de-degrade-como-pedir-o-corte-certo", "pomada-cera-ou-gel-cabelo-homem", "como-escolher-uma-barbearia-sinais-de-qualidade"],
     finalCta: {
       h2: "Encontra quem saiba cortar caracóis",

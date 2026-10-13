@@ -65,7 +65,7 @@ module.exports = [
       {
         id: "como-pedir",
         h2: "Como pedir ao barbeiro sem surpresas",
-        html: "<ol class=\"rich-list\"><li><strong>Leva duas ou três fotografias</strong> do corte que queres — e, se possível, uma do que não queres.</li><li><strong>Diz os números</strong> das laterais se os souberes: um 2, um 3. A <a href=\"../../revista/numeros-da-maquina-de-cortar-cabelo/\">tabela dos números da máquina</a> ajuda.</li><li><strong>Fala da tua rotina</strong>: quanto tempo tens de manhã e se usas produto. Um corte que exige secador todos os dias não serve a quem não o tem.</li><li><strong>Pergunta a opinião dele</strong>. Um bom barbeiro diz-te quando a fotografia não vai resultar no teu cabelo — vê <a href=\"../../revista/como-escolher-uma-barbearia-sinais-de-qualidade/\">como escolher uma barbearia</a>.</li></ol><p>Encontra uma barbearia perto de ti no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a> ou <a href=\"../../cidades/\">por cidade</a>.</p>"
+        html: "<ol class=\"rich-list\"><li><strong>Leva duas ou três fotografias</strong> do corte que queres — e, se possível, uma do que não queres.</li><li><strong>Diz os números</strong> das laterais se os souberes: um 2, um 3. A <a href=\"../../revista/numeros-da-maquina-de-cortar-cabelo/\">tabela dos números da máquina</a> ajuda.</li><li><strong>Fala da tua rotina</strong>: quanto tempo tens de manhã e se usas produto. Um corte que exige secador todos os dias não serve a quem não o tem.</li><li><strong>Pergunta a opinião dele</strong>. Um bom barbeiro diz-te quando a fotografia não vai resultar no teu cabelo — vê <a href=\"../../revista/como-escolher-uma-barbearia-sinais-de-qualidade/\">como escolher uma barbearia</a>.</li></ol><p>Encontra uma barbearia perto de ti no <a href=\"../../#explorar\">mapa do OndeCortar</a> ou <a href=\"../../cidades/\">por cidade</a>.</p>"
       }
     ],
     faq: [
@@ -74,7 +74,7 @@ module.exports = [
       ["Qual é o melhor corte para quem tem entradas?", "Laterais curtas com o topo curto a médio e com textura, como um crop texturizado, ou um buzz cut. Penteado puxado para trás tende a realçar as entradas."],
       ["Que corte fica bem a um homem com mais de 50 anos?", "Cortes limpos e fáceis de manter, como a risca ao lado com taper discreto ou um corte curto texturizado. O grisalho costuma ficar melhor curto e arrumado."]
     ],
-    faqCta: "Pronto para mudar? Encontra uma barbearia perto de ti no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>.",
+    faqCta: "Pronto para mudar? Encontra uma barbearia perto de ti no <a href=\"../../#explorar\">mapa do OndeCortar</a>.",
     related: ["tipos-de-degrade-como-pedir-o-corte-certo", "cabelo-encaracolado-homem-corte-e-cuidados", "numeros-da-maquina-de-cortar-cabelo"],
     finalCta: {
       h2: "Já sabes o que pedir — falta onde",

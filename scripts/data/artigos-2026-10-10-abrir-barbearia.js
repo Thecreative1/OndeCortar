@@ -75,7 +75,7 @@ module.exports = [
       },
       {
         h2: "Abrir uma barbearia dá dinheiro?",
-        html: "<p>Pode dar — mas depende de três coisas que nenhum guia controla: <strong>a localização</strong>, <strong>o preço</strong> que o teu bairro aceita e <strong>quantas horas da agenda estão ocupadas</strong>. Uma cadeira vazia custa o mesmo que uma cheia.</p><p>Antes de abrir, vê quantas barbearias já existem na tua zona no <a href=\"../../index.html#explorar\">mapa do OndeCortar</a>, que preços praticam e que horários fazem. A concorrência ensina-te mais do que qualquer plano de negócios.</p>"
+        html: "<p>Pode dar — mas depende de três coisas que nenhum guia controla: <strong>a localização</strong>, <strong>o preço</strong> que o teu bairro aceita e <strong>quantas horas da agenda estão ocupadas</strong>. Uma cadeira vazia custa o mesmo que uma cheia.</p><p>Antes de abrir, vê quantas barbearias já existem na tua zona no <a href=\"../../#explorar\">mapa do OndeCortar</a>, que preços praticam e que horários fazem. A concorrência ensina-te mais do que qualquer plano de negócios.</p>"
       }
     ],
     faq: [

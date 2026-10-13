@@ -57,7 +57,7 @@ function bridgeHtml() {
     `${BRIDGE_START}<section class="section"><div class="container callout-card article-directory-bridge">` +
     `<span class="eyebrow">Directório OndeCortar</span><h2>Precisas de um profissional?</h2>` +
     `<p>Há coisas que compensa deixar nas mãos de um barbeiro. Encontra uma barbearia perto de ti no nosso mapa — com morada, contactos e horários verificados.</p>` +
-    `<div class="hero-actions"><a class="btn btn-primary" href="../../index.html#explorar">Ver mapa de barbearias</a>` +
+    `<div class="hero-actions"><a class="btn btn-primary" href="../../#explorar">Ver mapa de barbearias</a>` +
     `<a class="btn btn-secondary" href="../../cidades/">Procurar por cidade</a></div>` +
     `<p class="article-directory-cities">Cidades mais procuradas: <a href="../../cidades/lisboa/">Lisboa</a>, ` +
     `<a href="../../cidades/porto/">Porto</a>, <a href="../../cidades/braga/">Braga</a>, ` +
