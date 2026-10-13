@@ -60,7 +60,7 @@ Procedimento quando as coords parecem erradas:
 
 ## Encontrar barbearias em zonas sem cobertura
 
-Estado em 2026-10-07 (confirmado a 2026-10-11): **802 barbearias, 315 cidades**. O `<title>` da homepage diz "800+" (atualizado 2026-10-07); quando passar de 900 ou 1000, atualizar title, og/twitter e description (pedir OK).
+Estado em 2026-10-13: **855 barbearias, 315 cidades** (+53 em 19 cidades com 1–2 fichas, escolhidas pelas impressões no Search Console; ver memória `cidades-poucas-fichas`). O `<title>` da homepage diz "800+" (atualizado 2026-10-07); quando passar de 900 ou 1000, atualizar title, og/twitter e description (pedir OK).
 
 **Lista de lacunas:** artifact [Vilas sem barbearia](https://claude.ai/artifact/DgEHSWmsP3bXNVdT2FNTjQ) (db, coleção `vilas`, doc `{estado: por-ver|encontrei|sem, nota}`). Calculada com Overpass (`place=city|town` em PT) + distância à barbearia mais próxima > 10 km; concelho/distrito por Nominatim reverse. Em 2026-10-07 ficaram **111 de 171** tratadas; faltam ~60, quase todas aldeias pequenas (rendimento baixo). Ler com `ArtifactData list collection=vilas`; o utilizador também pode escrever notas lá.
 
@@ -69,7 +69,7 @@ Estado em 2026-10-07 (confirmado a 2026-10-11): **802 barbearias, 315 cidades**.
 2. **Fresha** — páginas de distrito `lp/en/bt/barbershops/in/pt-rural-{distrito}-district` (e `tt/men's-haircuts`, `bt/hair-salons`) dão links `/lvp/…` com JSON-LD (morada, geo, telefone, `sameAs` com Instagram/Facebook). Muitas páginas só trazem o 1.º turno no HTML → `horario: null`.
 3. **Booksy** (JSON-LD com geo e horário), listas de "Comércio e Serviços" das câmaras, OpenStreetMap.
 
-**Regras ao criar fichas em massa:** excluir fichas sem rua (só vila ou só CP), categorias que não são barbearia (bar, salão de senhora), horários incoerentes ("Aberto 24 horas", 7h–22h, cada dia diferente) → `horario: null`; não alterar nomes comerciais (só tirar emojis); cruzar com o diretório por distância (<150 m) e telefone antes de inserir; corrigir localidades abreviadas ou erradas na morada ("Pte. de Lima", "3350-153 Coimbra" em Poiares), porque **com `codigo_postal: null` o build lê a cidade da morada**. Nomes de localidade repetidos (Guia de Pombal vs Albufeira) → `city: "Guia (Pombal)"` + `codigo_postal` preenchido. No fim: regiões em `REGIOES_PT`, artigos em `LOCALITY_FRONTEND_FORMS`, build, smoke, audit de links e de localização, filtros da homepage a somar o total.
+**Regras ao criar fichas em massa:** excluir fichas sem rua (só vila ou só CP), categorias que não são barbearia (bar, salão de senhora), horários incoerentes ("Aberto 24 horas", 7h–22h, cada dia diferente) → `horario: null`; não alterar nomes comerciais (só tirar emojis); cruzar com o diretório por distância (<150 m) e telefone antes de inserir; corrigir localidades abreviadas ou erradas na morada ("Pte. de Lima", "3350-153 Coimbra" em Poiares), porque **com `codigo_postal: null` o build lê a cidade da morada**. Nomes de localidade repetidos (Guia de Pombal vs Albufeira) → `city: "Guia (Pombal)"` + `codigo_postal` preenchido. A localidade depois do CP na morada tem de ser **exatamente** a `city` (o Maps escreve "Costa de Caparica", "Cabanas" → corrigir), senão nasce uma página de cidade nova; CP de outra localidade (Altura, São Romão, Parada) → não entra no lote da cidade. No fim: regiões em `REGIOES_PT`, artigos em `LOCALITY_FRONTEND_FORMS`, build, smoke, audit de links e de localização, filtros da homepage a somar o total.
 
 ## Mapa de regiões (filtros da homepage)
 
