@@ -1,13 +1,13 @@
 # OndeCortar.pt
 
-> Diretório independente de barbearias em Portugal (continente, Madeira e Açores): 802 barbearias em 315 cidades e localidades, com morada, contactos públicos, horário quando conhecido e localização no mapa. Gratuito para quem pesquisa e para as barbearias. Inclui também uma revista de guias de barba e cabelo e uma loja de recomendações de produtos (links afiliados da Amazon.es, assinalados).
+> Diretório independente de barbearias em Portugal (continente, Madeira e Açores): 832 barbearias em 315 cidades e localidades, com morada, contactos públicos, horário quando conhecido e localização no mapa. Gratuito para quem pesquisa e para as barbearias. Inclui também uma revista de guias de barba e cabelo e uma loja de recomendações de produtos (links afiliados da Amazon.es, assinalados).
 
 Notas para quem cita este site:
 
 - Cada barbearia tem uma página própria em https://ondecortar.pt/barbearias/{slug}/ com dados estruturados schema.org HairSalon.
 - Os dados vêm de informação pública (site, redes sociais e páginas de marcação da própria barbearia, Google Maps, OpenStreetMap) e são revistos manualmente; cada perfil mostra a data da última validação e, quando o horário vem de fonte externa (Fresha, Booksy, Google Maps ou OpenStreetMap), qual e quando foi consultada. Horários e preços devem ser confirmados com a barbearia.
 - O OndeCortar.pt não mostra avaliações nem estrelas e não faz rankings pagos.
-- Dados atualizados a 2026-10-11.
+- Dados atualizados a 2026-10-13.
 
 ## Diretório
 
@@ -41,6 +41,7 @@ Notas para quem cita este site:
 - [Barbearias em Oeiras](https://ondecortar.pt/cidades/oeiras/): 6 barbearias
 - [Barbearias em Pombal](https://ondecortar.pt/cidades/pombal/): 6 barbearias
 - [Barbearias em Ponte de Lima](https://ondecortar.pt/cidades/ponte-de-lima/): 6 barbearias
+- [Barbearias em Rio Tinto](https://ondecortar.pt/cidades/rio-tinto/): 6 barbearias
 - [Barbearias em Setúbal](https://ondecortar.pt/cidades/setubal/): 6 barbearias
 - [Barbearias em Tavira](https://ondecortar.pt/cidades/tavira/): 6 barbearias
 - [Barbearias em Vila do Conde](https://ondecortar.pt/cidades/vila-do-conde/): 6 barbearias
@@ -50,19 +51,26 @@ Notas para quem cita este site:
 - [Barbearias em Beja](https://ondecortar.pt/cidades/beja/): 5 barbearias
 - [Barbearias em Cantanhede](https://ondecortar.pt/cidades/cantanhede/): 5 barbearias
 - [Barbearias no Entroncamento](https://ondecortar.pt/cidades/entroncamento/): 5 barbearias
+- [Barbearias em Fundão](https://ondecortar.pt/cidades/fundao/): 5 barbearias
 - [Barbearias na Guarda](https://ondecortar.pt/cidades/guarda/): 5 barbearias
+- [Barbearias em Maia](https://ondecortar.pt/cidades/maia/): 5 barbearias
 - [Barbearias em Odemira](https://ondecortar.pt/cidades/odemira/): 5 barbearias
+- [Barbearias em Peso da Régua](https://ondecortar.pt/cidades/peso-da-regua/): 5 barbearias
+- [Barbearias em Samora Correia](https://ondecortar.pt/cidades/samora-correia/): 5 barbearias
 - [Barbearias em Sertã](https://ondecortar.pt/cidades/serta/): 5 barbearias
+- [Barbearias em Tomar](https://ondecortar.pt/cidades/tomar/): 5 barbearias
 - [Barbearias em Vila Nova de Famalicão](https://ondecortar.pt/cidades/vila-nova-de-famalicao/): 5 barbearias
 - [Barbearias em Algueirão-Mem Martins](https://ondecortar.pt/cidades/algueirao-mem-martins/): 4 barbearias
 - [Barbearias em Aljustrel](https://ondecortar.pt/cidades/aljustrel/): 4 barbearias
 - [Barbearias em Almeirim](https://ondecortar.pt/cidades/almeirim/): 4 barbearias
 - [Barbearias em Alverca do Ribatejo](https://ondecortar.pt/cidades/alverca-do-ribatejo/): 4 barbearias
 - [Barbearias na Amadora](https://ondecortar.pt/cidades/amadora/): 4 barbearias
+- [Barbearias em Barcelos](https://ondecortar.pt/cidades/barcelos/): 4 barbearias
 - [Barbearias em Bragança](https://ondecortar.pt/cidades/braganca/): 4 barbearias
 - [Barbearias em Cartaxo](https://ondecortar.pt/cidades/cartaxo/): 4 barbearias
 - [Barbearias em Castelo Branco](https://ondecortar.pt/cidades/castelo-branco/): 4 barbearias
 - [Barbearias na Covilhã](https://ondecortar.pt/cidades/covilha/): 4 barbearias
+- [Barbearias em Lamego](https://ondecortar.pt/cidades/lamego/): 4 barbearias
 - [Barbearias em Loulé](https://ondecortar.pt/cidades/loule/): 4 barbearias
 - [Barbearias em Lousã](https://ondecortar.pt/cidades/lousa/): 4 barbearias
 - [Barbearias no Marco de Canaveses](https://ondecortar.pt/cidades/marco-de-canaveses/): 4 barbearias
@@ -117,6 +125,7 @@ Notas para quem cita este site:
 - [Barbearias em Trancoso](https://ondecortar.pt/cidades/trancoso/): 3 barbearias
 - [Barbearias em Viana do Castelo](https://ondecortar.pt/cidades/viana-do-castelo/): 3 barbearias
 - [Barbearias em Vila Franca do Campo](https://ondecortar.pt/cidades/vila-franca-do-campo/): 3 barbearias
+- [Barbearias em Vila Nova de Cacela](https://ondecortar.pt/cidades/vila-nova-de-cacela/): 3 barbearias
 - [Barbearias em Vila Nova de Poiares](https://ondecortar.pt/cidades/vila-nova-de-poiares/): 3 barbearias
 - [Barbearias em Vila Praia de Âncora](https://ondecortar.pt/cidades/vila-praia-de-ancora/): 3 barbearias
 - [Barbearias em Vouzela](https://ondecortar.pt/cidades/vouzela/): 3 barbearias
@@ -142,7 +151,6 @@ Notas para quem cita este site:
 - [Barbearias em Ferreira do Alentejo](https://ondecortar.pt/cidades/ferreira-do-alentejo/): 2 barbearias
 - [Barbearias na Figueira da Foz](https://ondecortar.pt/cidades/figueira-da-foz/): 2 barbearias
 - [Barbearias em Figueiró dos Vinhos](https://ondecortar.pt/cidades/figueiro-dos-vinhos/): 2 barbearias
-- [Barbearias em Fundão](https://ondecortar.pt/cidades/fundao/): 2 barbearias
 - [Barbearias na Guia (Albufeira)](https://ondecortar.pt/cidades/guia-albufeira/): 2 barbearias
 - [Barbearias na Guia (Pombal)](https://ondecortar.pt/cidades/guia-pombal/): 2 barbearias
 - [Barbearias na Ilha do Faial](https://ondecortar.pt/cidades/ilha-do-faial/): 2 barbearias
@@ -171,8 +179,6 @@ Notas para quem cita este site:
 - [Barbearias em Reguengos de Monsaraz](https://ondecortar.pt/cidades/reguengos-de-monsaraz/): 2 barbearias
 - [Barbearias em Ribeira de Pena](https://ondecortar.pt/cidades/ribeira-de-pena/): 2 barbearias
 - [Barbearias na Ribeira Grande](https://ondecortar.pt/cidades/ribeira-grande/): 2 barbearias
-- [Barbearias em Rio Tinto](https://ondecortar.pt/cidades/rio-tinto/): 2 barbearias
-- [Barbearias em Samora Correia](https://ondecortar.pt/cidades/samora-correia/): 2 barbearias
 - [Barbearias em Santa Cruz da Graciosa](https://ondecortar.pt/cidades/santa-cruz-da-graciosa/): 2 barbearias
 - [Barbearias em Seixal](https://ondecortar.pt/cidades/seixal/): 2 barbearias
 - [Barbearias em Sesimbra](https://ondecortar.pt/cidades/sesimbra/): 2 barbearias
@@ -205,7 +211,6 @@ Notas para quem cita este site:
 - [Barbearias em Arouca](https://ondecortar.pt/cidades/arouca/): 1 barbearia
 - [Barbearias em Avis](https://ondecortar.pt/cidades/avis/): 1 barbearia
 - [Barbearias em Baltar](https://ondecortar.pt/cidades/baltar/): 1 barbearia
-- [Barbearias em Barcelos](https://ondecortar.pt/cidades/barcelos/): 1 barbearia
 - [Barbearias em Barcouço](https://ondecortar.pt/cidades/barcouco/): 1 barbearia
 - [Barbearias na Benedita](https://ondecortar.pt/cidades/benedita/): 1 barbearia
 - [Barbearias em Borba](https://ondecortar.pt/cidades/borba/): 1 barbearia
@@ -245,11 +250,9 @@ Notas para quem cita este site:
 - [Barbearias em Idanha-a-Nova](https://ondecortar.pt/cidades/idanha-a-nova/): 1 barbearia
 - [Barbearias na Ilha do Pico](https://ondecortar.pt/cidades/ilha-do-pico/): 1 barbearia
 - [Barbearias em Lagoa](https://ondecortar.pt/cidades/lagoa/): 1 barbearia
-- [Barbearias em Lamego](https://ondecortar.pt/cidades/lamego/): 1 barbearia
 - [Barbearias em Lourinhã](https://ondecortar.pt/cidades/lourinha/): 1 barbearia
 - [Barbearias em Lousada](https://ondecortar.pt/cidades/lousada/): 1 barbearia
 - [Barbearias em Lustosa](https://ondecortar.pt/cidades/lustosa/): 1 barbearia
-- [Barbearias em Maia](https://ondecortar.pt/cidades/maia/): 1 barbearia
 - [Barbearias na Mamarrosa](https://ondecortar.pt/cidades/mamarrosa/): 1 barbearia
 - [Barbearias em Marinhais](https://ondecortar.pt/cidades/marinhais/): 1 barbearia
 - [Barbearias na Mealhada](https://ondecortar.pt/cidades/mealhada/): 1 barbearia
@@ -280,7 +283,6 @@ Notas para quem cita este site:
 - [Barbearias em Penafiel](https://ondecortar.pt/cidades/penafiel/): 1 barbearia
 - [Barbearias em Penalva do Castelo](https://ondecortar.pt/cidades/penalva-do-castelo/): 1 barbearia
 - [Barbearias em Penela](https://ondecortar.pt/cidades/penela/): 1 barbearia
-- [Barbearias em Peso da Régua](https://ondecortar.pt/cidades/peso-da-regua/): 1 barbearia
 - [Barbearias em Pias](https://ondecortar.pt/cidades/pias/): 1 barbearia
 - [Barbearias em Pindelo](https://ondecortar.pt/cidades/pindelo/): 1 barbearia
 - [Barbearias em Pinhel](https://ondecortar.pt/cidades/pinhel/): 1 barbearia
@@ -318,7 +320,6 @@ Notas para quem cita este site:
 - [Barbearias em Sousel](https://ondecortar.pt/cidades/sousel/): 1 barbearia
 - [Barbearias em Tábua](https://ondecortar.pt/cidades/tabua/): 1 barbearia
 - [Barbearias em Terras de Bouro](https://ondecortar.pt/cidades/terras-de-bouro/): 1 barbearia
-- [Barbearias em Tomar](https://ondecortar.pt/cidades/tomar/): 1 barbearia
 - [Barbearias em Torres Vedras](https://ondecortar.pt/cidades/torres-vedras/): 1 barbearia
 - [Barbearias no Tramagal](https://ondecortar.pt/cidades/tramagal/): 1 barbearia
 - [Barbearias em Tremês](https://ondecortar.pt/cidades/tremes/): 1 barbearia
@@ -328,7 +329,6 @@ Notas para quem cita este site:
 - [Barbearias em Vieira de Leiria](https://ondecortar.pt/cidades/vieira-de-leiria/): 1 barbearia
 - [Barbearias em Vieira do Minho](https://ondecortar.pt/cidades/vieira-do-minho/): 1 barbearia
 - [Barbearias em Vila Nova da Barquinha](https://ondecortar.pt/cidades/vila-nova-da-barquinha/): 1 barbearia
-- [Barbearias em Vila Nova de Cacela](https://ondecortar.pt/cidades/vila-nova-de-cacela/): 1 barbearia
 - [Barbearias em Vila Nova de Cerveira](https://ondecortar.pt/cidades/vila-nova-de-cerveira/): 1 barbearia
 - [Barbearias em Vila Nova de Foz Côa](https://ondecortar.pt/cidades/vila-nova-de-foz-coa/): 1 barbearia
 - [Barbearias em Vila Viçosa](https://ondecortar.pt/cidades/vila-vicosa/): 1 barbearia
