@@ -80,8 +80,7 @@ for (const d of entries) {
   html = swap(html, /<meta property="og:title" content="[^"]*" \/>/, '<meta property="og:title" content="' + esc(title) + '" />', "og:title", d.slug);
   html = swap(html, /<meta property="og:description" content="[^"]*" \/>/, '<meta property="og:description" content="' + esc(d.description) + '" />', "og:description", d.slug);
 
-  // JSON-LD Product: description
-  if (!/"@type":"Product"/.test(html)) throw new Error(d.slug + ": sem JSON-LD Product");
+  // JSON-LD Product (já não existe desde 2026-10-16; só atualiza páginas antigas que o tenham)
   html = html.replace(/(<script type="application\/ld\+json"[^>]*>)(\{"@context":"https:\/\/schema\.org","@type":"Product"[\s\S]*?)(<\/script>)/, (m, o, json, c) => {
     const ld = JSON.parse(json);
     ld.description = d.description;

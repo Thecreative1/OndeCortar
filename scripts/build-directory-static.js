@@ -1828,6 +1828,35 @@ ${renderFooter(prefix)}`;
   });
 }
 
+// Páginas de cidade que deixaram de existir e o Google ainda pede (404 no Search Console
+// a 2026-10-16): redirecionam para a cidade certa. O build mantém-nas em cidades/.
+const CITY_REDIRECTS = {
+  "carapecos": "barcelos",
+  "arganil-arganil": "arganil"
+};
+
+function buildCityRedirect(target) {
+  const url = SITE_URL + "cidades/" + target + "/";
+  return `<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecionar | OndeCortar.pt</title>
+  <meta name="robots" content="noindex,follow" />
+  <link rel="canonical" href="${url}" />
+  <meta http-equiv="refresh" content="0; url=${url}" />
+  <script>
+    window.location.replace("${url}");
+  </script>
+</head>
+<body>
+  <p>Esta página mudou para <a href="${url}">${url}</a>.</p>
+</body>
+</html>
+`;
+}
+
 function buildLegacyBarberRedirect() {
   return `<!DOCTYPE html>
 <html lang="pt-PT">
@@ -2068,7 +2097,9 @@ function main() {
   const citiesMap = new Map(data.cities.map((city) => [city.slug, city]));
 
   syncGeneratedSubdirectories("barbearias", data.barbers.map((barber) => barber.slug));
-  syncGeneratedSubdirectories("cidades", data.cities.map((city) => city.slug));
+  const cityRedirects = Object.entries(CITY_REDIRECTS)
+    .filter(([from, to]) => !citiesMap.has(from) && citiesMap.has(to));
+  syncGeneratedSubdirectories("cidades", data.cities.map((city) => city.slug).concat(cityRedirects.map(([from]) => from)));
 
   data.barbers.forEach((barber) => {
     writeFile(path.join("barbearias", barber.slug, "index.html"), renderProfilePage(barber, citiesMap));
@@ -2076,6 +2107,10 @@ function main() {
 
   data.cities.forEach((city) => {
     writeFile(path.join("cidades", city.slug, "index.html"), renderCityPage(city));
+  });
+
+  cityRedirects.forEach(([from, to]) => {
+    writeFile(path.join("cidades", from, "index.html"), buildCityRedirect(to));
   });
 
   writeFile(path.join("cidades", "index.html"), renderCitiesHub(data.cities));

@@ -82,11 +82,8 @@ function card(p) {
 function pageHead(p, cats) {
   const url = "https://ondecortar.pt/produto/" + p.slug + "/";
   const title = p.name + " | Recomendação OndeCortar";
-  const product = {
-    "@context": "https://schema.org", "@type": "Product", name: p.name, description: p.summary,
-    image: "https://ondecortar.pt/" + p.image, url, brand: { "@type": "Brand", name: p.brand },
-    category: cats.map((c) => c.name).join(", ")
-  };
+  // Sem JSON-LD Product (removido a 2026-10-16): sem preço (PA-API) nem avaliações, o Google
+  // marcava-o inválido ("Either offers, review, or aggregateRating should be specified").
   const crumbs = {
     "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
       { "@type": "ListItem", position: 1, name: "Loja", item: "https://ondecortar.pt/loja/" },
@@ -105,8 +102,7 @@ function pageHead(p, cats) {
       '  <meta property="og:url" content="' + url + '" />\n' +
       '  <meta property="og:type" content="product" />\n' +
       '  <meta property="og:image" content="https://ondecortar.pt/' + esc(p.image) + '" />',
-    ld: '<script type="application/ld+json" data-ondecortar-ld="true">' + JSON.stringify(product) + '</script>\n' +
-      '  <script type="application/ld+json" data-ondecortar-ld="true">' + JSON.stringify(crumbs) + '</script>'
+    ld: '<script type="application/ld+json" data-ondecortar-ld="true">' + JSON.stringify(crumbs) + '</script>'
   };
 }
 
