@@ -7868,7 +7868,11 @@
               "<strong>" + item.count + "</strong>" +
               "<h3>" + directory.escapeHtml(label) + "</h3>" +
               "<p>Vê as barbearias já listadas nesta cidade e abre a ficha certa mais depressa.</p>" +
-              '<button class="btn btn-secondary btn-small" type="button" data-city-search="' + directory.escapeHtml(item.city) + '">Explorar ' + directory.escapeHtml(item.city) + "</button>" +
+              // Link para a página da cidade (onde estão os filtros), não pesquisa no mapa:
+              // o Google segue estes links a partir da homepage. Slug = o do build (utils.slugify).
+              (window.BarbeariasUtils
+                ? '<a class="btn btn-secondary btn-small" href="cidades/' + window.BarbeariasUtils.slugify(item.city) + '/">Explorar ' + directory.escapeHtml(item.city) + "</a>"
+                : '<button class="btn btn-secondary btn-small" type="button" data-city-search="' + directory.escapeHtml(item.city) + '">Explorar ' + directory.escapeHtml(item.city) + "</button>") +
             "</article>"
           );
         }).join("");
