@@ -356,29 +356,61 @@
 
     
     [hidden] { display: none !important; }
-    .oc-filters { display: grid; gap: 10px; margin: 0 0 20px; }
+    .oc-filters {
+      display: grid;
+      gap: 12px;
+      margin: 0 0 22px;
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .oc-filters-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+    .oc-filters-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .oc-filters-sub { color: var(--muted); font-size: 0.88rem; }
     .oc-filters-row { display: flex; flex-wrap: wrap; gap: 10px; }
     .oc-filter {
-      min-height: 44px;
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--border-strong);
-      background: var(--surface);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 10px 18px 10px 14px;
+      border-radius: 12px;
+      border: 1.5px solid rgba(200, 135, 58, 0.65);
+      background: rgba(200, 135, 58, 0.08);
       color: var(--text);
       font: inherit;
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       font-weight: 700;
       cursor: pointer;
-      transition: background 0.2s ease, border-color 0.2s ease;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+      transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
     }
-    .oc-filter:hover { border-color: rgba(200, 135, 58, 0.7); }
+    .oc-filter-icon { flex: none; color: var(--gold); }
+    .oc-filter:hover { background: rgba(200, 135, 58, 0.18); border-color: var(--gold); transform: translateY(-1px); }
+    .oc-filter:active { transform: translateY(1px); box-shadow: none; }
     .oc-filter:focus-visible { outline: 3px solid rgba(227, 168, 99, 0.55); outline-offset: 2px; }
     .oc-filter[aria-pressed="true"] {
-      background: rgba(200, 135, 58, 0.2);
-      border-color: var(--gold);
+      background: #C8873A;
+      border-color: #C8873A;
+      color: #17130D;
     }
-    .oc-filter[aria-pressed="true"]::before { content: "✓ "; color: var(--gold); }
+    .oc-filter[aria-pressed="true"] .oc-filter-icon { color: #17130D; }
+    .oc-filter[aria-pressed="true"]::after { content: "✓"; font-weight: 800; margin-left: 2px; }
     .oc-filter:disabled { opacity: 0.7; cursor: progress; }
+    @media (max-width: 520px) {
+      .oc-filters { padding: 14px; }
+      .oc-filter { flex: 1 1 auto; justify-content: center; }
+    }
     .oc-filters-status { margin: 0; font-size: 0.92rem; }
     .oc-filters-status:empty { display: none; }
     .oc-filters-empty {
@@ -485,10 +517,14 @@
         </div>
       </div>
       <div class="oc-filters" data-oc-filters hidden>
-        <div class="oc-filters-row" role="group" aria-label="Filtrar barbearias">
-          <button type="button" class="oc-filter" data-filter="open" aria-pressed="false" hidden>Aberto agora</button>
-          <button type="button" class="oc-filter" data-filter="booking" aria-pressed="false" hidden>Marcação online</button>
-          <button type="button" class="oc-filter" data-filter="near" aria-pressed="false" hidden>Perto de mim</button>
+        <div class="oc-filters-head">
+          <span class="oc-filters-title" id="oc-filters-title"><svg class="oc-filter-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg>Filtrar</span>
+          <span class="oc-filters-sub">Toca para mostrar só as que te servem</span>
+        </div>
+        <div class="oc-filters-row" role="group" aria-labelledby="oc-filters-title">
+          <button type="button" class="oc-filter" data-filter="open" aria-pressed="false" hidden><svg class="oc-filter-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-label>Aberto agora</span></button>
+          <button type="button" class="oc-filter" data-filter="booking" aria-pressed="false" hidden><svg class="oc-filter-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-label>Marcação online</span></button>
+          <button type="button" class="oc-filter" data-filter="near" aria-pressed="false" hidden><svg class="oc-filter-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span data-label>Perto de mim</span></button>
         </div>
         <p class="oc-filters-status" aria-live="polite"></p>
         <div class="oc-filters-empty" hidden>
@@ -708,17 +744,18 @@
   if (btn.booking) btn.booking.addEventListener("click", function () { toggle("booking"); });
   if (btn.near) btn.near.addEventListener("click", function () {
     if (state.near) { setNear(false); return; }
-    var label = btn.near.textContent;
+    var labelEl = btn.near.querySelector("[data-label]") || btn.near;
+    var label = labelEl.textContent;
     btn.near.disabled = true;
-    btn.near.textContent = "A localizar…";
+    labelEl.textContent = "A localizar…";
     navigator.geolocation.getCurrentPosition(function (pos) {
       btn.near.disabled = false;
-      btn.near.textContent = label;
+      labelEl.textContent = label;
       count("near");
       setNear(true, pos);
     }, function () {
       btn.near.disabled = false;
-      btn.near.textContent = label;
+      labelEl.textContent = label;
       statusEl.textContent = "Não foi possível obter a tua localização. Confirma a permissão de localização do browser.";
     }, { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 });
   });
