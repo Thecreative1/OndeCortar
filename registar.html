@@ -156,6 +156,11 @@
     .opt { color: var(--muted); }
     .hint { margin: 6px 0 0; font-size: 0.8rem; line-height: 1.5; color: var(--muted); }
     .hint-private::before { content: "🔒 "; }
+    .price-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .price-label { font-size: 0.82rem; font-weight: 600; color: var(--muted); margin-bottom: 6px; }
+    .price-field { position: relative; }
+    .price-field input { padding-right: 34px !important; }
+    .price-field span { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); font-weight: 700; pointer-events: none; }
     input:not([type="checkbox"]):not([type="radio"]), textarea {
       width: 100%; min-height: 52px; padding: 0 16px;
       border-radius: var(--radius-md); border: 1px solid var(--border-strong);
@@ -411,10 +416,23 @@
                   <input type="text" id="horario" name="horario" placeholder="Ex.: Seg-Sex 9h-19h; Sáb 9h-13h" />
                 </div>
               </div>
-              <div>
-                <label for="precos">Preços <span class="opt">Opcional</span></label>
-                <input type="text" id="precos" name="precos" placeholder="Ex.: Corte 12 €, Barba 8 €, Corte + barba 18 €" />
-                <p class="hint">Aparecem no perfil como «desde», com a data em que nos enviaste.</p>
+              <div role="group" aria-labelledby="precos-label">
+                <label id="precos-label">Preços «desde» <span class="opt">Opcional</span></label>
+                <div class="price-grid">
+                  <div>
+                    <label class="price-label" for="preco_corte">Corte</label>
+                    <div class="price-field"><input type="text" id="preco_corte" name="preco_corte" inputmode="decimal" placeholder="12" autocomplete="off" /><span aria-hidden="true">€</span></div>
+                  </div>
+                  <div>
+                    <label class="price-label" for="preco_barba">Barba</label>
+                    <div class="price-field"><input type="text" id="preco_barba" name="preco_barba" inputmode="decimal" placeholder="8" autocomplete="off" /><span aria-hidden="true">€</span></div>
+                  </div>
+                  <div>
+                    <label class="price-label" for="preco_corte_barba">Corte + barba</label>
+                    <div class="price-field"><input type="text" id="preco_corte_barba" name="preco_corte_barba" inputmode="decimal" placeholder="18" autocomplete="off" /><span aria-hidden="true">€</span></div>
+                  </div>
+                </div>
+                <p class="hint">O preço mais baixo de cada serviço para adultos. Aparece no perfil como «Corte desde 12 €», com a data em que nos enviaste.</p>
               </div>
               <div>
                 <label for="responsavel">Nome do responsável <span class="opt">Opcional</span></label>
