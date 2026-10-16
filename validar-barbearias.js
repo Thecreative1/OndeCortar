@@ -120,6 +120,19 @@ function validateItem(item, index) {
     }
   }
 
+  // Opcional: preços "desde" publicados pela barbearia ({ corte, barba, corte_barba, fonte }).
+  if ("precos" in item && item.precos !== null) {
+    const p = item.precos;
+    const valores = ["corte", "barba", "corte_barba"].map(function(k) { return p ? p[k] : undefined; });
+    if (!p || typeof p !== "object" || valores.every(function(v) { return v == null; })) {
+      errors.push(label + ": `precos` precisa de pelo menos `corte`, `barba` ou `corte_barba`.");
+    } else if (valores.some(function(v) { return v != null && !(typeof v === "number" && v > 0 && v < 200); })) {
+      errors.push(label + ": os preços em `precos` devem ser números entre 0 e 200 (euros).");
+    } else if (!p.fonte || ["Booksy", "Fresha", "Buk", "Barbearia"].indexOf(p.fonte.nome) === -1 || !isIsoDate(p.fonte.data)) {
+      errors.push(label + ": `precos.fonte` precisa de `nome` (Booksy, Fresha, Buk ou Barbearia), `url` e `data` YYYY-MM-DD.");
+    }
+  }
+
   if (!(item.coords === null || utils.coordsSaoValidas(item.coords))) {
     errors.push(label + ": `coords` invalido ou fora de Portugal.");
   }

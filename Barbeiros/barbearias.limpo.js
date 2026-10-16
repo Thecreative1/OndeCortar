@@ -2162,6 +2162,15 @@ const barbearias = [
       "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Couto%20Tocha",
       "data": "2026-10-11"
     },
+    "precos": {
+      "corte": 9,
+      "barba": 5,
+      "fonte": {
+        "nome": "Buk",
+        "url": "https://buk.pt/barbearia-couto",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       40.3166346,
@@ -3064,6 +3073,16 @@ const barbearias = [
       "url": "https://booksy.com/pt-pt/6306_bmbarbeariamonte_barbearia_82575_braga",
       "data": "2026-10-01"
     },
+    "precos": {
+      "corte": 10,
+      "barba": 5,
+      "corte_barba": 15,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/6306_bmbarbeariamonte_barbearia_82575_braga",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       41.5445782,
@@ -3154,6 +3173,16 @@ const barbearias = [
       "nome": "Booksy",
       "url": "https://booksy.com/pt-pt/5705_m2-barbearia_barbearia_82575_braga",
       "data": "2026-10-01"
+    },
+    "precos": {
+      "corte": 13,
+      "barba": 10,
+      "corte_barba": 20,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/5705_m2-barbearia_barbearia_82575_braga",
+        "data": "2026-10-16"
+      }
     },
     "observacoes": null,
     "coords": [
@@ -3373,6 +3402,16 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
+    "precos": {
+      "corte": 10,
+      "barba": 8,
+      "corte_barba": 20,
+      "fonte": {
+        "nome": "Fresha",
+        "url": "https://www.fresha.com/pt/a/black-rock-barbearia-guimaraes-largo-da-republica-do-brasil-t7wbrdac",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       41.4421,
@@ -3552,6 +3591,16 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
+    "precos": {
+      "corte": 8,
+      "barba": 6,
+      "corte_barba": 14,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/1028_danniel-sampaio-barbearia_barbearia_93020_vila-nova-de-famalicao",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       41.4123852,
@@ -6464,6 +6513,16 @@ const barbearias = [
       "url": "https://booksy.com/pt-pt/3362_barba-negra-leiria_barbearia_141679_leiria",
       "data": "2026-10-01"
     },
+    "precos": {
+      "corte": 14,
+      "barba": 9.9,
+      "corte_barba": 23,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/3362_barba-negra-leiria_barbearia_141679_leiria",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       39.7440009,
@@ -6549,6 +6608,16 @@ const barbearias = [
       "url": "https://booksy.com/pt-pt/1973_bruno-cesar-barbeiro_barbearia_141679_leiria",
       "data": "2026-10-01"
     },
+    "precos": {
+      "corte": 14,
+      "barba": 5,
+      "corte_barba": 22,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/1973_bruno-cesar-barbeiro_barbearia_141679_leiria",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       39.7585654,
@@ -6596,6 +6665,16 @@ const barbearias = [
       "nome": "Booksy",
       "url": "https://booksy.com/pt-pt/1173_evolution-mens-salon_barbearia_141679_leiria",
       "data": "2026-10-01"
+    },
+    "precos": {
+      "corte": 12,
+      "barba": 7,
+      "corte_barba": 21,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/1173_evolution-mens-salon_barbearia_141679_leiria",
+        "data": "2026-10-16"
+      }
     },
     "observacoes": null,
     "coords": [
@@ -6685,6 +6764,16 @@ const barbearias = [
       "url": "https://booksy.com/pt-pt/2560_barbearia-brasileira_barbearia_145107_famalicao-nazare",
       "data": "2026-10-01"
     },
+    "precos": {
+      "corte": 12,
+      "barba": 12,
+      "corte_barba": 18,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/2560_barbearia-brasileira_barbearia_145107_famalicao-nazare",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       39.5357673,
@@ -6730,6 +6819,16 @@ const barbearias = [
       "nome": "Booksy",
       "url": "https://booksy.com/pt-pt/1325_mr-barber-lisboa_barbearia_150290_amadora",
       "data": "2026-10-01"
+    },
+    "precos": {
+      "corte": 15,
+      "barba": 8,
+      "corte_barba": 20,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/1325_mr-barber-lisboa_barbearia_150290_amadora",
+        "data": "2026-10-16"
+      }
     },
     "observacoes": null,
     "coords": [
@@ -6856,6 +6955,16 @@ const barbearias = [
       "nome": "Booksy",
       "url": "https://booksy.com/pt-pt/3412_aneel-barbershop_salao-de-cabeleireiro_157422_lisboa",
       "data": "2026-10-01"
+    },
+    "precos": {
+      "corte": 12,
+      "barba": 8,
+      "corte_barba": 18,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/3412_aneel-barbershop_salao-de-cabeleireiro_157422_lisboa",
+        "data": "2026-10-16"
+      }
     },
     "observacoes": null,
     "coords": [
@@ -7423,6 +7532,16 @@ const barbearias = [
       "url": "https://booksy.com/pt-pt/2059_casimiro-barbershop_barbearia_157422_lisboa",
       "data": "2026-10-01"
     },
+    "precos": {
+      "corte": 12,
+      "barba": 8,
+      "corte_barba": 17,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/2059_casimiro-barbershop_barbearia_157422_lisboa",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       38.7454417,
@@ -7593,6 +7712,16 @@ const barbearias = [
       "url": "https://booksy.com/pt-pt/5114_exodo-barbearia_barbearia_157422_lisboa",
       "data": "2026-10-01"
     },
+    "precos": {
+      "corte": 19,
+      "barba": 15,
+      "corte_barba": 30,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/5114_exodo-barbearia_barbearia_157422_lisboa",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       38.7415411,
@@ -7683,6 +7812,16 @@ const barbearias = [
       "nome": "Booksy",
       "url": "https://booksy.com/pt-pt/3549_ranzulla-barbershop_barbearia_157422_lisboa",
       "data": "2026-10-01"
+    },
+    "precos": {
+      "corte": 14,
+      "barba": 12,
+      "corte_barba": 24,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/3549_ranzulla-barbershop_barbearia_157422_lisboa",
+        "data": "2026-10-16"
+      }
     },
     "observacoes": null,
     "coords": [
@@ -7821,6 +7960,16 @@ const barbearias = [
       "url": "https://booksy.com/pt-pt/1257_2685-finest-barbearia_barbearia_166404_sacavem",
       "data": "2026-10-01"
     },
+    "precos": {
+      "corte": 9,
+      "barba": 8,
+      "corte_barba": 18,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/1257_2685-finest-barbearia_barbearia_166404_sacavem",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       38.7911203,
@@ -7911,6 +8060,16 @@ const barbearias = [
       "nome": "Booksy",
       "url": "https://booksy.com/pt-pt/5962_jd-barbearia-e-estetica-feminina_barbearia_165300_camarate",
       "data": "2026-10-01"
+    },
+    "precos": {
+      "corte": 13,
+      "barba": 10,
+      "corte_barba": 20,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/5962_jd-barbearia-e-estetica-feminina_barbearia_165300_camarate",
+        "data": "2026-10-16"
+      }
     },
     "observacoes": null,
     "coords": [
@@ -8086,6 +8245,16 @@ const barbearias = [
       "url": "https://booksy.com/pt-pt/2014_barbercrew-matosinhos_barbearia_203185_matosinhos",
       "data": "2026-10-01"
     },
+    "precos": {
+      "corte": 12,
+      "barba": 7,
+      "corte_barba": 20,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/2014_barbercrew-matosinhos_barbearia_203185_matosinhos",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       41.181217,
@@ -8130,6 +8299,15 @@ const barbearias = [
       "nome": "Booksy",
       "url": "https://booksy.com/pt-pt/5068_montes-barber-mlsg_barbearia_203185_matosinhos",
       "data": "2026-10-01"
+    },
+    "precos": {
+      "corte": 14,
+      "corte_barba": 22,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/5068_montes-barber-mlsg_barbearia_203185_matosinhos",
+        "data": "2026-10-16"
+      }
     },
     "observacoes": null,
     "coords": [
@@ -8302,6 +8480,15 @@ const barbearias = [
       "url": "https://booksy.com/pt-pt/3976_black-studio-bs_barbearia_208915_porto",
       "data": "2026-10-01"
     },
+    "precos": {
+      "corte": 9,
+      "barba": 5,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/3976_black-studio-bs_barbearia_208915_porto",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       41.1642121,
@@ -8471,6 +8658,16 @@ const barbearias = [
       "nome": "Booksy",
       "url": "https://booksy.com/pt-pt/5788_studio-mao-de-ouro_barbearia_221774_vila-nova-de-gaia",
       "data": "2026-10-01"
+    },
+    "precos": {
+      "corte": 15,
+      "barba": 10,
+      "corte_barba": 22,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/5788_studio-mao-de-ouro_barbearia_221774_vila-nova-de-gaia",
+        "data": "2026-10-16"
+      }
     },
     "observacoes": null,
     "coords": [
@@ -8809,6 +9006,16 @@ const barbearias = [
       "nome": "Booksy",
       "url": "https://booksy.com/pt-pt/5221_garcias-barber-charneca-da-caparica_barbearia_240803_charneca-de-caparica",
       "data": "2026-10-01"
+    },
+    "precos": {
+      "corte": 14,
+      "barba": 10,
+      "corte_barba": 18,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/5221_garcias-barber-charneca-da-caparica_barbearia_240803_charneca-de-caparica",
+        "data": "2026-10-16"
+      }
     },
     "observacoes": null,
     "coords": [
@@ -9424,6 +9631,16 @@ const barbearias = [
       "url": "https://booksy.com/pt-pt/1187_studio-fama-by-fabiano-the-barber_barbearia_252809_setubal",
       "data": "2026-10-01"
     },
+    "precos": {
+      "corte": 12,
+      "barba": 8,
+      "corte_barba": 15,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/1187_studio-fama-by-fabiano-the-barber_barbearia_252809_setubal",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       38.5342602,
@@ -9892,6 +10109,16 @@ const barbearias = [
       "url": "https://booksy.com/pt-pt/5769_balder_barbearia_279940_viseu",
       "data": "2026-10-01"
     },
+    "precos": {
+      "corte": 12,
+      "barba": 10,
+      "corte_barba": 22,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/5769_balder_barbearia_279940_viseu",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       40.64316391752402,
@@ -10023,6 +10250,14 @@ const barbearias = [
       "nome": "Booksy",
       "url": "https://booksy.com/pt-pt/3467_ebenezer-barber-shop_barbearia_279940_viseu",
       "data": "2026-10-01"
+    },
+    "precos": {
+      "corte": 12,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/3467_ebenezer-barber-shop_barbearia_279940_viseu",
+        "data": "2026-10-16"
+      }
     },
     "observacoes": null,
     "coords": [
@@ -10554,6 +10789,16 @@ const barbearias = [
       "url": "https://booksy.com/pt-pt/6264_pro-style-barber-shop_barbearia_185116_funchal",
       "data": "2026-10-01"
     },
+    "precos": {
+      "corte": 15,
+      "barba": 14,
+      "corte_barba": 24,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/6264_pro-style-barber-shop_barbearia_185116_funchal",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       32.6601652,
@@ -10675,6 +10920,16 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
+    "precos": {
+      "corte": 7,
+      "barba": 8,
+      "corte_barba": 17,
+      "fonte": {
+        "nome": "Buk",
+        "url": "https://buk.pt/barbeariamalveiro/",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       37.9402209,
@@ -13232,6 +13487,15 @@ const barbearias = [
     "google_maps": null,
     "booking": "https://buk.pt/buzzbbarber",
     "horario": null,
+    "precos": {
+      "corte": 10,
+      "barba": 6.5,
+      "fonte": {
+        "nome": "Buk",
+        "url": "https://buk.pt/buzzbbarber",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       39.803379,
@@ -13795,6 +14059,16 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
+    "precos": {
+      "corte": 11,
+      "barba": 6.5,
+      "corte_barba": 14.5,
+      "fonte": {
+        "nome": "Fresha",
+        "url": "https://www.fresha.com/a/corte-no-ponto-melgaco-avenida-capitao-avenida-salgueiro-maia-256-fqlukfmh",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       42.1080016,
@@ -13917,6 +14191,16 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
+    "precos": {
+      "corte": 11,
+      "barba": 6.5,
+      "corte_barba": 14.5,
+      "fonte": {
+        "nome": "Fresha",
+        "url": "https://www.fresha.com/lvp/steph-nobre-beauty-salon-em1096-a18NZ",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       42.0733747,
@@ -15027,6 +15311,16 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": "Seg-Sex 9h-13h e 14h30-20h; Sáb 9h-13h",
+    "precos": {
+      "corte": 12,
+      "barba": 8,
+      "corte_barba": 17,
+      "fonte": {
+        "nome": "Buk",
+        "url": "https://buk.pt/navalha-dourada-alenquer",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "fontes": [],
     "qualidade_ficha": "alta"
@@ -15298,6 +15592,16 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": "Seg-Sex 9h-19h; Sáb 8h30-13h",
+    "precos": {
+      "corte": 9,
+      "barba": 5.5,
+      "corte_barba": 11,
+      "fonte": {
+        "nome": "Buk",
+        "url": "https://buk.pt/just-men-cabeleireiro-de-homens",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "qualidade_ficha": "alta"
   },
@@ -15459,6 +15763,16 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
+    "precos": {
+      "corte": 12,
+      "barba": 10,
+      "corte_barba": 26,
+      "fonte": {
+        "nome": "Fresha",
+        "url": "https://www.fresha.com/a/escape-barbershop-oeiras-avenida-de-brasilia-35a-rgl6aatx",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "qualidade_ficha": "alta"
   },
@@ -15485,6 +15799,16 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
+    "precos": {
+      "corte": 15,
+      "barba": 10,
+      "corte_barba": 22,
+      "fonte": {
+        "nome": "Fresha",
+        "url": "https://www.fresha.com/a/fabius-barbershop-cascais-cascais-rua-de-alvide-lote-10-vpbcoczv",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "qualidade_ficha": "alta"
   },
@@ -16649,6 +16973,16 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": "Seg-Sáb 10h-20h",
+    "precos": {
+      "corte": 10,
+      "barba": 8,
+      "corte_barba": 15,
+      "fonte": {
+        "nome": "Fresha",
+        "url": "https://www.fresha.com/a/barbearia-cj-studio-terras-de-bouro-av-dos-bombeiros-voluntarios-avenida-dos-bombeiros-voluntarios-igr5oma7",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       41.717392,
@@ -17029,6 +17363,16 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": "Seg-Sex 9h-20h, Sáb 10h-20h",
+    "precos": {
+      "corte": 12,
+      "barba": 7,
+      "corte_barba": 15,
+      "fonte": {
+        "nome": "Fresha",
+        "url": "https://www.fresha.com/a/penareiabarber-peniche-rua-ramiro-de-matos-bilhau-3-z4hg0qlm",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       39.3606949,
@@ -19517,6 +19861,16 @@ const barbearias = [
       "nome": "Booksy",
       "url": "https://booksy.com/pt-pt/4435_librabarbershop_barbearia_228596_chamusca",
       "data": "2026-10-07"
+    },
+    "precos": {
+      "corte": 10,
+      "barba": 6.5,
+      "corte_barba": 17.5,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/4435_librabarbershop_barbearia_228596_chamusca",
+        "data": "2026-10-16"
+      }
     },
     "coords": [
       39.3546767,
@@ -23798,6 +24152,15 @@ const barbearias = [
       "url": "https://booksy.com/pt-pt/4554_barbearia-carvalho_barbearia_251932_sesimbra",
       "data": "2026-10-07"
     },
+    "precos": {
+      "corte": 14,
+      "barba": 10,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/4554_barbearia-carvalho_barbearia_251932_sesimbra",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       38.44321,
@@ -24251,6 +24614,16 @@ const barbearias = [
       "url": "https://www.google.com/maps/search/?api=1&query=Boss%20Cut%20Mangualde%20Mangualde",
       "data": "2026-10-07"
     },
+    "precos": {
+      "corte": 11,
+      "barba": 8,
+      "corte_barba": 17,
+      "fonte": {
+        "nome": "Buk",
+        "url": "https://buk.pt/bosscutsbarberstudio",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       40.6050803,
@@ -24682,6 +25055,16 @@ const barbearias = [
       "nome": "Google Maps",
       "url": "https://www.google.com/maps/search/?api=1&query=New%20H%20Barber%20Studio%20Pampilhosa%20do%20Bot%C3%A3o",
       "data": "2026-10-07"
+    },
+    "precos": {
+      "corte": 12,
+      "barba": 10,
+      "corte_barba": 19,
+      "fonte": {
+        "nome": "Buk",
+        "url": "https://buk.pt/new-h-barber-studio-",
+        "data": "2026-10-16"
+      }
     },
     "observacoes": null,
     "coords": [
@@ -26793,6 +27176,16 @@ const barbearias = [
       "url": "https://www.google.com/maps/search/?api=1&query=Silvestre%20Barber%20Cou%C3%A7o",
       "data": "2026-10-07"
     },
+    "precos": {
+      "corte": 14,
+      "barba": 12,
+      "corte_barba": 20,
+      "fonte": {
+        "nome": "Buk",
+        "url": "https://buk.pt/silvestrebarber",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       38.98318,
@@ -27642,6 +28035,16 @@ const barbearias = [
       "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Navalha%20Dourada%20Azambuja",
       "data": "2026-10-07"
     },
+    "precos": {
+      "corte": 12,
+      "barba": 8,
+      "corte_barba": 17,
+      "fonte": {
+        "nome": "Buk",
+        "url": "https://buk.pt/navalhadourada",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       39.069303,
@@ -28104,6 +28507,16 @@ const barbearias = [
       "nome": "Google Maps",
       "url": "https://www.google.com/maps/search/?api=1&query=NOVA%20barbearia%20Condeixa-a-Nova",
       "data": "2026-10-07"
+    },
+    "precos": {
+      "corte": 13,
+      "barba": 8,
+      "corte_barba": 19,
+      "fonte": {
+        "nome": "Buk",
+        "url": "https://buk.pt/novabarbearia",
+        "data": "2026-10-16"
+      }
     },
     "observacoes": null,
     "coords": [
@@ -30086,6 +30499,14 @@ const barbearias = [
       "url": "https://www.google.com/maps/place/?q=place_id:ChIJs7Z29zxjJA0RBXIGbzcLgMQ",
       "data": "2026-10-13"
     },
+    "precos": {
+      "barba": 6,
+      "fonte": {
+        "nome": "Booksy",
+        "url": "https://booksy.com/pt-pt/1636_the-sousa-barber_barberaria_197388_rio-tinto",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       41.17539,
@@ -30121,6 +30542,16 @@ const barbearias = [
       "nome": "Google Maps",
       "url": "https://www.google.com/maps/place/?q=place_id:ChIJFwuktj5jJA0Ro7QZdDV3ORU",
       "data": "2026-10-13"
+    },
+    "precos": {
+      "corte": 14,
+      "barba": 12,
+      "corte_barba": 20,
+      "fonte": {
+        "nome": "Buk",
+        "url": "https://buk.pt/blessedbarbershop",
+        "data": "2026-10-16"
+      }
     },
     "observacoes": null,
     "coords": [
@@ -31766,6 +32197,16 @@ const barbearias = [
       "url": "https://www.google.com/maps/place/?q=place_id:ChIJnRCuj67VPA0R5ZcuUtetRr8",
       "data": "2026-10-13"
     },
+    "precos": {
+      "corte": 10,
+      "barba": 7,
+      "corte_barba": 17,
+      "fonte": {
+        "nome": "Buk",
+        "url": "https://buk.pt/fora-da-caixa",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": null,
     "coords": [
       40.4204457,
@@ -32510,6 +32951,16 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJkVZFRUfJHg0RKmdFnGhvGb4",
     "horario": null,
     "horario_fonte": null,
+    "precos": {
+      "corte": 17,
+      "barba": 10,
+      "corte_barba": 25,
+      "fonte": {
+        "nome": "Buk",
+        "url": "https://buk.pt/jimmybarber",
+        "data": "2026-10-16"
+      }
+    },
     "observacoes": "Horário do Google Maps não publicado (todos os dias).",
     "coords": [
       38.6954984,

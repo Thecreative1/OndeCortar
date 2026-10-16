@@ -571,6 +571,48 @@ function buildHorarioFonteNote(fonte) {
     ". Confirma antes de ir.<\/p>";
 }
 
+// ── Preços "desde" (campo `precos`, de scripts/recolher-precos.js ou enviados pela barbearia).
+// Mostram-se sempre com fonte e data; "desde" = serviço de adulto mais barato desse tipo.
+const PRECO_LABELS = [["corte", "Corte"], ["barba", "Barba"], ["corte_barba", "Corte + barba"]];
+
+function normalizePrecos(p) {
+  if (!p || typeof p !== "object" || !p.fonte || !p.fonte.nome) return null;
+  const out = { fonte: p.fonte };
+  let any = false;
+  PRECO_LABELS.forEach(([k]) => {
+    if (typeof p[k] === "number" && p[k] > 0) { out[k] = p[k]; any = true; }
+  });
+  return any ? out : null;
+}
+
+function formatEuro(value) {
+  return (value % 1 ? value.toFixed(2).replace(".", ",") : String(value)) + " €";
+}
+
+function precosItems(precos) {
+  return precos ? PRECO_LABELS.filter(([k]) => precos[k]).map(([k, label]) => ({ label: label, value: precos[k] })) : [];
+}
+
+function precosRange(precos) {
+  const values = precosItems(precos).map((i) => i.value);
+  if (!values.length) return "";
+  const min = Math.min.apply(null, values), max = Math.max.apply(null, values);
+  return min === max ? formatEuro(min) : formatEuro(min).replace(" €", "") + "–" + formatEuro(max);
+}
+
+function buildPrecosFonteNote(fonte) {
+  const H = escapeHtml;
+  const m = String(fonte.data || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  const when = m ? " a " + Number(m[3]) + " " + MESES_CURTOS[Number(m[2]) - 1] + " " + m[1] : "";
+  if (fonte.nome === "Barbearia") {
+    return '<p class="oc-summary__note">Preços «desde» indicados pela barbearia' + when + ". Confirma antes de ir.<\/p>";
+  }
+  const link = fonte.url
+    ? '<a href="' + H(fonte.url) + '" target="_blank" rel="noopener nofollow" style="color:inherit">' + H(fonte.nome) + "<\/a>"
+    : H(fonte.nome);
+  return '<p class="oc-summary__note">Preços «desde» segundo a página de marcações (' + link + "), consultada" + when + ". Confirma antes de ir.<\/p>";
+}
+
 function buildProfileSeo(barber) {
   const placeLabel = barber.city ? " " + locativeLabel(barber.city) : "";
   const contactChannels = [];
@@ -588,6 +630,9 @@ function buildProfileSeo(barber) {
     : (contactChannels.length ? "Contacto, morada e mapa" : "Morada e mapa");
   const descriptionParts = [];
 
+  // Com preços, abre a description pelo preço do corte (ou do primeiro serviço com preço).
+  const firstPrice = precosItems(barber.precos)[0];
+  if (firstPrice) descriptionParts.push(firstPrice.label.toLowerCase() + " desde " + formatEuro(firstPrice.value));
   descriptionParts.push.apply(descriptionParts, contactChannels);
   if (barber.horario) {
     descriptionParts.push("horário");
@@ -687,6 +732,7 @@ function buildSlugData(rawBarbers) {
       google: links.google,
       horario: String(item.horario || "").trim(),
       horarioFonte: item.horario_fonte && item.horario_fonte.nome ? item.horario_fonte : null,
+      precos: normalizePrecos(item.precos),
       observacoes: String(item.observacoes || "").trim(),
       coords: utils.normalizarCoords(item.coords),
       zone: location.zone || "",
@@ -1263,6 +1309,7 @@ function renderProfilePage(barber, citiesMap) {
       } : undefined,
       // Só quando o texto PT se converte sem ambiguidade; o texto livre não é válido no schema.
       "openingHoursSpecification": horarioUtils.toSchemaSpecs(horarioUtils.parsePt(barber.horario)) || undefined,
+      "priceRange": precosRange(barber.precos) || undefined,
       "sameAs": barber.sameAs && barber.sameAs.length ? barber.sameAs : undefined,
       "geo": Array.isArray(barber.coords) ? {
         "@type": "GeoCoordinates",
@@ -1447,9 +1494,11 @@ function renderProfilePage(barber, citiesMap) {
           ? H(barber.morada) + (mapsUrl ? ' <a class="oc-summary__link" href="' + H(mapsUrl) + '" target="_blank" rel="noopener noreferrer">Como chegar ' + iArrowUR + "<\/a>" : "")
           : "") +
         summaryRow("Telefone", barber.telefone ? '<a href="' + H(phoneHrefVal) + '">' + H(barber.telefone) + "<\/a>" : "") +
+        summaryRow("Preços", precosItems(barber.precos).map((i) => H(i.label) + " desde <strong>" + H(formatEuro(i.value)) + "<\/strong>").join("<br>")) +
         summaryRow("Online", summaryOnline ? '<span class="oc-summary__online">' + summaryOnline + "<\/span>" : "") +
         summaryRow("Atualizada", H(formatDate(barber.lastmod))) +
       "<\/dl>" +
+      (barber.precos ? buildPrecosFonteNote(barber.precos.fonte) : "") +
     "<\/aside>";
   const summaryScript = summaryWeek
     ? "<script>(function(){var s=document.querySelector('.oc-summary__status[data-oc-week]');if(!s||!window.Intl)return;" +
@@ -2229,7 +2278,7 @@ function patchIndexHtml(staticListHtml, headJsonLd, totals) {
 // index.html) nunca lê — ficam só em barbearias.limpo.js.
 const CLIENT_OMIT_FIELDS = new Set([
   "complemento", "country", "data_confidence", "needs_review", "location_flags",
-  "fontes", "ultima_validacao", "qualidade_ficha", "valor_original", "horario_fonte"
+  "fontes", "ultima_validacao", "qualidade_ficha", "valor_original", "horario_fonte", "precos"
 ]);
 
 // Gera Barbeiros/barbearias.mapa.js para a homepage: só barbearias públicas, sem os
