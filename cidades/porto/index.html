@@ -355,6 +355,48 @@
     }
 
     
+    [hidden] { display: none !important; }
+    .oc-filters { display: grid; gap: 10px; margin: 0 0 20px; }
+    .oc-filters-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .oc-filter {
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      color: var(--text);
+      font: inherit;
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .oc-filter:hover { border-color: rgba(200, 135, 58, 0.7); }
+    .oc-filter:focus-visible { outline: 3px solid rgba(227, 168, 99, 0.55); outline-offset: 2px; }
+    .oc-filter[aria-pressed="true"] {
+      background: rgba(200, 135, 58, 0.2);
+      border-color: var(--gold);
+    }
+    .oc-filter[aria-pressed="true"]::before { content: "✓ "; color: var(--gold); }
+    .oc-filter:disabled { opacity: 0.7; cursor: progress; }
+    .oc-filters-status { margin: 0; font-size: 0.92rem; }
+    .oc-filters-status:empty { display: none; }
+    .oc-filters-empty {
+      display: grid;
+      justify-items: start;
+      gap: 10px;
+      padding: 18px;
+      border: 1px dashed var(--border-strong);
+      border-radius: var(--radius-md);
+    }
+    .oc-filters-empty p { margin: 0; }
+    .tag.is-open {
+      background: rgba(31, 77, 58, 0.6);
+      border-color: rgba(70, 170, 120, 0.65);
+      color: #D5EEDF;
+    }
+    .tag.is-closed { color: var(--muted); }
+
   </style>
   <link rel="stylesheet" href="../../mobile-nav.css" />
   <script src="../../mobile-nav.js" defer></script>
@@ -442,10 +484,23 @@
           <p>Todos os perfis abaixo mostram morada, contactos, mapa e acesso direto à ficha individual.</p>
         </div>
       </div>
+      <div class="oc-filters" data-oc-filters hidden>
+        <div class="oc-filters-row" role="group" aria-label="Filtrar barbearias">
+          <button type="button" class="oc-filter" data-filter="open" aria-pressed="false" hidden>Aberto agora</button>
+          <button type="button" class="oc-filter" data-filter="booking" aria-pressed="false" hidden>Marcação online</button>
+          <button type="button" class="oc-filter" data-filter="near" aria-pressed="false" hidden>Perto de mim</button>
+        </div>
+        <p class="oc-filters-status" aria-live="polite"></p>
+        <div class="oc-filters-empty" hidden>
+          <p>Nenhuma barbearia no Porto corresponde a estes filtros.</p>
+          <button type="button" class="btn btn-secondary" data-oc-filters-clear>Limpar filtros</button>
+        </div>
+      </div>
       <div class="barber-grid">
 
-  <article class="card">
+  <article class="card" data-oc-lat="41.1609" data-oc-lng="-8.6067">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/porto/">Porto</a></span></div>
+    <div class="tag-row"><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/barbearia-dom-cortes/">Barbearia Dom Cortês</a></h3>
     <p>Consulta a morada e a localização confirmada desta barbearia.</p>
     <p><strong>Morada:</strong> Rua de João Pedro Ribeiro 806, 4000-207 Porto</p>
@@ -454,9 +509,9 @@
       
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-week="[[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;10:00&quot;,&quot;20:00&quot;]],[],[]]" data-oc-lat="41.1581758" data-oc-lng="-8.6220726">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/porto/">Porto</a></span></div>
-    <div class="tag-row"><span class="tag">Horário disponível</span></div>
+    <div class="tag-row"><span class="tag" data-oc-status>Horário disponível</span><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/barbearia-e-tattoo-asgard-porto/">Barbearia e Tattoo Asgard Porto</a></h3>
     <p>Ficha com telefone, horário e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> Rua de Oliveira Monteiro, 4050-072 Porto</p>
@@ -465,9 +520,9 @@
       <a class="btn btn-primary" href="tel:+351928093329">Ligar agora</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-week="[[[&quot;09:00&quot;,&quot;19:00&quot;]],[[&quot;09:00&quot;,&quot;19:00&quot;]],[[&quot;09:00&quot;,&quot;19:00&quot;]],[[&quot;09:00&quot;,&quot;19:00&quot;]],[[&quot;09:00&quot;,&quot;19:00&quot;]],[[&quot;08:30&quot;,&quot;13:00&quot;]],[]]" data-oc-booking="1" data-oc-lat="41.1476" data-oc-lng="-8.6159">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/porto/">Porto</a></span></div>
-    <div class="tag-row"><span class="tag">Horário disponível</span></div>
+    <div class="tag-row"><span class="tag" data-oc-status>Horário disponível</span><span class="tag">Marcação online</span><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/barbearia-invicta/">Barbearia Invicta</a></h3>
     <p>Ficha com marcação online, horário e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> Praça de Carlos Alberto 123, Sala 11, 4050-190 Porto</p>
@@ -476,9 +531,9 @@
       <a class="btn btn-primary" href="https://www.fresha.com/a/barbearia-invicta-porto-praca-de-carlos-alberto-123-xwfvu71b" target="_blank" rel="nofollow noopener noreferrer">Marcar online</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-week="[[[&quot;09:00&quot;,&quot;13:00&quot;],[&quot;15:00&quot;,&quot;19:30&quot;]],[[&quot;09:00&quot;,&quot;13:00&quot;],[&quot;15:00&quot;,&quot;19:30&quot;]],[[&quot;09:00&quot;,&quot;13:00&quot;],[&quot;15:00&quot;,&quot;19:30&quot;]],[[&quot;09:00&quot;,&quot;13:00&quot;],[&quot;15:00&quot;,&quot;19:30&quot;]],[[&quot;09:00&quot;,&quot;13:00&quot;],[&quot;15:00&quot;,&quot;19:30&quot;]],[[&quot;09:00&quot;,&quot;13:00&quot;],[&quot;15:00&quot;,&quot;17:00&quot;]],[]]" data-oc-lat="41.16413" data-oc-lng="-8.6627928">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/porto/">Porto</a></span></div>
-    <div class="tag-row"><span class="tag">Horário disponível</span></div>
+    <div class="tag-row"><span class="tag" data-oc-status>Horário disponível</span><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/barbearia-maria-cruz/">Barbearia Maria Cruz</a></h3>
     <p>Ficha com telefone, horário e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> Avenida do Doutor Antunes Guimarães 47, 4100-079 Porto</p>
@@ -487,8 +542,9 @@
       <a class="btn btn-primary" href="tel:+351918515092">Ligar agora</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-booking="1" data-oc-lat="41.1566901" data-oc-lng="-8.5966365">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/porto/">Porto</a></span></div>
+    <div class="tag-row"><span class="tag">Marcação online</span><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/barbearia-porto-los-patrones/">Barbearia Porto Los Patrones</a></h3>
     <p>Ficha com marcação online e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> R. Aires de Ornelas, 4350-150 Porto</p>
@@ -497,9 +553,9 @@
       <a class="btn btn-primary" href="https://www.fresha.com/nl/lvp/barbearia-porto-los-patrones-rua-aires-de-ornelas-porto-oo5lzQ" target="_blank" rel="nofollow noopener noreferrer">Marcar online</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-week="[[[&quot;10:00&quot;,&quot;19:00&quot;]],[[&quot;10:00&quot;,&quot;19:00&quot;]],[[&quot;10:00&quot;,&quot;19:00&quot;]],[[&quot;10:00&quot;,&quot;19:00&quot;]],[[&quot;10:00&quot;,&quot;19:00&quot;]],[[&quot;10:00&quot;,&quot;19:00&quot;]],[]]" data-oc-booking="1" data-oc-lat="41.1463" data-oc-lng="-8.6103">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/porto/">Porto</a></span></div>
-    <div class="tag-row"><span class="tag">Horário disponível</span></div>
+    <div class="tag-row"><span class="tag" data-oc-status>Horário disponível</span><span class="tag">Marcação online</span><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/barbearia-tinoco-1929/">Barbearia Tinoco 1929</a></h3>
     <p>Ficha com marcação online, horário e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> Rua de Sá da Bandeira 13, 4000-433 Porto</p>
@@ -508,9 +564,9 @@
       <a class="btn btn-primary" href="https://www.fresha.com/a/barbearia-tinoco-1929-porto-rua-de-sa-da-bandeira-13-l1xqr1vy" target="_blank" rel="nofollow noopener noreferrer">Marcar online</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-week="[[],[[&quot;09:30&quot;,&quot;20:00&quot;]],[[&quot;09:30&quot;,&quot;20:00&quot;]],[[&quot;09:30&quot;,&quot;20:00&quot;]],[[&quot;09:30&quot;,&quot;20:00&quot;]],[[&quot;09:30&quot;,&quot;18:00&quot;]],[]]" data-oc-lat="41.1570918" data-oc-lng="-8.6100906">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/porto/">Porto</a></span></div>
-    <div class="tag-row"><span class="tag">Horário disponível</span></div>
+    <div class="tag-row"><span class="tag" data-oc-status>Horário disponível</span><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/barbershop-talentovanguarda/">Barbershop TalentoVanguarda</a></h3>
     <p>Ficha com telefone, horário e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> Rua de Camões 585, 4000-376 Porto</p>
@@ -519,9 +575,9 @@
       <a class="btn btn-primary" href="tel:+351937422525">Ligar agora</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-week="[[[&quot;09:00&quot;,&quot;19:45&quot;]],[[&quot;09:00&quot;,&quot;19:45&quot;]],[[&quot;09:00&quot;,&quot;19:45&quot;]],[[&quot;09:00&quot;,&quot;19:45&quot;]],[[&quot;09:00&quot;,&quot;19:45&quot;]],[[&quot;09:00&quot;,&quot;19:45&quot;]],[]]" data-oc-lat="41.1642121" data-oc-lng="-8.6241636">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/porto/">Porto</a></span></div>
-    <div class="tag-row"><span class="tag">Horário disponível</span></div>
+    <div class="tag-row"><span class="tag" data-oc-status>Horário disponível</span><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/black-studio-bs/">Black Studio Bs</a></h3>
     <p>Ficha com links úteis, horário e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> Rua de 9 de Julho 344, Loja, 4250-356 Porto</p>
@@ -530,9 +586,9 @@
       <a class="btn btn-primary" href="https://booksy.com/pt-pt/3976_black-studio-bs_barbearia_208915_porto" target="_blank" rel="nofollow noopener noreferrer">Abrir website</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-week="[[[&quot;09:30&quot;,&quot;20:00&quot;]],[[&quot;09:30&quot;,&quot;20:00&quot;]],[[&quot;09:30&quot;,&quot;20:00&quot;]],[[&quot;09:30&quot;,&quot;20:00&quot;]],[[&quot;09:30&quot;,&quot;20:00&quot;]],[[&quot;09:30&quot;,&quot;16:30&quot;]],[]]" data-oc-booking="1" data-oc-lat="41.1644962" data-oc-lng="-8.6254989">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/porto/">Porto</a></span><span><strong>Zona:</strong> Carvalhido</span></div>
-    <div class="tag-row"><span class="tag">Horário disponível</span></div>
+    <div class="tag-row"><span class="tag" data-oc-status>Horário disponível</span><span class="tag">Marcação online</span><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/fernando-simao-barber-shop/">Fernando Simão Barber Shop</a></h3>
     <p>Ficha com telefone, horário e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> Rua da Constituição 2300, 4250-164 Porto</p>
@@ -541,8 +597,9 @@
       <a class="btn btn-primary" href="tel:+351932617750">Ligar agora</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-lat="41.1462621" data-oc-lng="-8.6314269">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/porto/">Porto</a></span></div>
+    <div class="tag-row"><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/j-schwalbe-hair/">j.schwalbe.hair</a></h3>
     <p>Consulta a morada e a localização confirmada desta barbearia.</p>
     <p><strong>Morada:</strong> Rua da Restauração 321, 4050-465 Porto</p>
@@ -551,8 +608,9 @@
       
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-lat="41.1442" data-oc-lng="-8.5995">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/porto/">Porto</a></span></div>
+    <div class="tag-row"><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/luciffers-porto/">Luciffer&#39;s</a></h3>
     <p>Consulta a morada e a localização confirmada desta barbearia.</p>
     <p><strong>Morada:</strong> Praça da Alegria 60, 4000-029 Porto</p>
@@ -561,9 +619,9 @@
       
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-week="[[[&quot;10:00&quot;,&quot;19:00&quot;]],[[&quot;10:00&quot;,&quot;19:00&quot;]],[[&quot;10:00&quot;,&quot;19:00&quot;]],[[&quot;10:00&quot;,&quot;19:00&quot;]],[[&quot;10:00&quot;,&quot;19:00&quot;]],[[&quot;10:00&quot;,&quot;19:00&quot;]],[]]" data-oc-booking="1" data-oc-lat="41.1672" data-oc-lng="-8.6249">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/porto/">Porto</a></span></div>
-    <div class="tag-row"><span class="tag">Horário disponível</span></div>
+    <div class="tag-row"><span class="tag" data-oc-status>Horário disponível</span><span class="tag">Marcação online</span><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/porto-barber/">Porto Barber</a></h3>
     <p>Ficha com telefone, horário e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> Rua da Natária 21, 4250-326 Porto</p>
@@ -572,8 +630,9 @@
       <a class="btn btn-primary" href="tel:+351920358487">Ligar agora</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-lat="41.1502" data-oc-lng="-8.6169">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/porto/">Porto</a></span></div>
+    <div class="tag-row"><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/thiago-nipe-premium-barber/">Thiago Nipe | Premium Barber</a></h3>
     <p>Consulta a morada e a localização confirmada desta barbearia.</p>
     <p><strong>Morada:</strong> Rua de Cedofeita 170, 4050-179 Porto</p>
@@ -637,5 +696,136 @@
       </div>
     </div>
   </footer>
+<script>
+(function () {
+  var box = document.querySelector("[data-oc-filters]");
+  var grid = document.querySelector("#lista-barbearias .barber-grid");
+  if (!box || !grid) return;
+  var cards = [].slice.call(grid.querySelectorAll(".card"));
+  var original = cards.slice();
+  var state = { open: false, booking: false, near: false };
+  var statusEl = box.querySelector(".oc-filters-status");
+  var emptyEl = box.querySelector(".oc-filters-empty");
+  var btn = {};
+  [].forEach.call(box.querySelectorAll("[data-filter]"), function (b) { btn[b.getAttribute("data-filter")] = b; });
+
+  function count(name) {
+    if (window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: "filtro-cidade/" + name, title: "Filtro " + name + " · " + location.pathname, event: true });
+    }
+  }
+
+  // Hora de Lisboa, como no resumo do perfil
+  var day = null, now = "";
+  if (window.Intl) {
+    var p = {};
+    new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Lisbon", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
+      .formatToParts(new Date()).forEach(function (x) { p[x.type] = x.value; });
+    day = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 }[p.weekday];
+    now = p.hour + ":" + p.minute;
+  }
+
+  var hasWeek = false, hasBooking = false, hasCoords = false;
+  cards.forEach(function (c) {
+    c.ocBooking = c.hasAttribute("data-oc-booking");
+    c.ocLat = parseFloat(c.getAttribute("data-oc-lat"));
+    c.ocLng = parseFloat(c.getAttribute("data-oc-lng"));
+    if (c.ocBooking) hasBooking = true;
+    if (!isNaN(c.ocLat) && !isNaN(c.ocLng)) hasCoords = true;
+    c.ocOpen = false;
+    var raw = c.getAttribute("data-oc-week");
+    if (!raw || day === undefined || day === null) return;
+    var w;
+    try { w = JSON.parse(raw); } catch (e) { return; }
+    hasWeek = true;
+    (w[day] || []).forEach(function (s) { if (now >= s[0] && now < s[1]) c.ocOpen = true; });
+    var tag = c.querySelector("[data-oc-status]");
+    if (tag) {
+      tag.textContent = c.ocOpen ? "Aberto agora" : "Fechado agora";
+      tag.classList.add(c.ocOpen ? "is-open" : "is-closed");
+    }
+  });
+
+  if (hasWeek && btn.open) btn.open.hidden = false;
+  if (hasBooking && btn.booking) btn.booking.hidden = false;
+  if (hasCoords && navigator.geolocation && btn.near) btn.near.hidden = false;
+  if ((!btn.open || btn.open.hidden) && (!btn.booking || btn.booking.hidden) && (!btn.near || btn.near.hidden)) return;
+  box.hidden = false;
+
+  function apply() {
+    var shown = 0;
+    cards.forEach(function (c) {
+      var hide = (state.open && !c.ocOpen) || (state.booking && !c.ocBooking);
+      c.hidden = hide;
+      if (!hide) shown++;
+    });
+    var any = state.open || state.booking || state.near;
+    var msg = "";
+    if (state.open || state.booking) msg = "A mostrar " + shown + " de " + cards.length + " barbearias";
+    if (state.near) msg = (msg ? msg + " · " : "") + "Ordenadas pela distância a ti";
+    if (state.open) msg += " · \"Aberto agora\" segue o horário publicado; feriados podem variar.";
+    statusEl.textContent = any ? msg : "";
+    emptyEl.hidden = shown !== 0;
+  }
+
+  function toggle(name) {
+    state[name] = !state[name];
+    btn[name].setAttribute("aria-pressed", state[name] ? "true" : "false");
+    if (state[name]) count(name);
+    apply();
+  }
+
+  function km(a, b, c, d) {
+    var r = Math.PI / 180, x = Math.sin((c - a) * r / 2), y = Math.sin((d - b) * r / 2);
+    var h = x * x + Math.cos(a * r) * Math.cos(c * r) * y * y;
+    return 12742 * Math.asin(Math.sqrt(h));
+  }
+  function fmt(k) {
+    if (k < 1) return "a " + Math.max(50, Math.round(k * 20) * 50) + " m";
+    return "a " + (k < 10 ? k.toFixed(1).replace(".", ",") : Math.round(k)) + " km";
+  }
+
+  function setNear(on, pos) {
+    state.near = on;
+    btn.near.setAttribute("aria-pressed", on ? "true" : "false");
+    var order = original;
+    if (on) {
+      cards.forEach(function (c) {
+        c.ocKm = isNaN(c.ocLat) ? Infinity : km(pos.coords.latitude, pos.coords.longitude, c.ocLat, c.ocLng);
+        var t = c.querySelector("[data-oc-distance]");
+        if (t && c.ocKm !== Infinity) { t.textContent = fmt(c.ocKm); t.hidden = false; }
+      });
+      order = cards.slice().sort(function (a, b) { return a.ocKm - b.ocKm; });
+    } else {
+      cards.forEach(function (c) { var t = c.querySelector("[data-oc-distance]"); if (t) t.hidden = true; });
+    }
+    order.forEach(function (c) { grid.appendChild(c); });
+    apply();
+  }
+
+  if (btn.open) btn.open.addEventListener("click", function () { toggle("open"); });
+  if (btn.booking) btn.booking.addEventListener("click", function () { toggle("booking"); });
+  if (btn.near) btn.near.addEventListener("click", function () {
+    if (state.near) { setNear(false); return; }
+    var label = btn.near.textContent;
+    btn.near.disabled = true;
+    btn.near.textContent = "A localizar…";
+    navigator.geolocation.getCurrentPosition(function (pos) {
+      btn.near.disabled = false;
+      btn.near.textContent = label;
+      count("near");
+      setNear(true, pos);
+    }, function () {
+      btn.near.disabled = false;
+      btn.near.textContent = label;
+      statusEl.textContent = "Não foi possível obter a tua localização. Confirma a permissão de localização do browser.";
+    }, { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 });
+  });
+  box.querySelector("[data-oc-filters-clear]").addEventListener("click", function () {
+    ["open", "booking"].forEach(function (n) { state[n] = false; if (btn[n]) btn[n].setAttribute("aria-pressed", "false"); });
+    apply();
+  });
+})();
+</script>
 </body>
 </html>

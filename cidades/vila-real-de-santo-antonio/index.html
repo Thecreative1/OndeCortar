@@ -355,6 +355,48 @@
     }
 
     
+    [hidden] { display: none !important; }
+    .oc-filters { display: grid; gap: 10px; margin: 0 0 20px; }
+    .oc-filters-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .oc-filter {
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      color: var(--text);
+      font: inherit;
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .oc-filter:hover { border-color: rgba(200, 135, 58, 0.7); }
+    .oc-filter:focus-visible { outline: 3px solid rgba(227, 168, 99, 0.55); outline-offset: 2px; }
+    .oc-filter[aria-pressed="true"] {
+      background: rgba(200, 135, 58, 0.2);
+      border-color: var(--gold);
+    }
+    .oc-filter[aria-pressed="true"]::before { content: "✓ "; color: var(--gold); }
+    .oc-filter:disabled { opacity: 0.7; cursor: progress; }
+    .oc-filters-status { margin: 0; font-size: 0.92rem; }
+    .oc-filters-status:empty { display: none; }
+    .oc-filters-empty {
+      display: grid;
+      justify-items: start;
+      gap: 10px;
+      padding: 18px;
+      border: 1px dashed var(--border-strong);
+      border-radius: var(--radius-md);
+    }
+    .oc-filters-empty p { margin: 0; }
+    .tag.is-open {
+      background: rgba(31, 77, 58, 0.6);
+      border-color: rgba(70, 170, 120, 0.65);
+      color: #D5EEDF;
+    }
+    .tag.is-closed { color: var(--muted); }
+
   </style>
   <link rel="stylesheet" href="../../mobile-nav.css" />
   <script src="../../mobile-nav.js" defer></script>
@@ -442,10 +484,23 @@
           <p>Todos os perfis abaixo mostram morada, contactos, mapa e acesso direto à ficha individual.</p>
         </div>
       </div>
+      <div class="oc-filters" data-oc-filters hidden>
+        <div class="oc-filters-row" role="group" aria-label="Filtrar barbearias">
+          <button type="button" class="oc-filter" data-filter="open" aria-pressed="false" hidden>Aberto agora</button>
+          <button type="button" class="oc-filter" data-filter="booking" aria-pressed="false" hidden>Marcação online</button>
+          <button type="button" class="oc-filter" data-filter="near" aria-pressed="false" hidden>Perto de mim</button>
+        </div>
+        <p class="oc-filters-status" aria-live="polite"></p>
+        <div class="oc-filters-empty" hidden>
+          <p>Nenhuma barbearia em Vila Real de Santo António corresponde a estes filtros.</p>
+          <button type="button" class="btn btn-secondary" data-oc-filters-clear>Limpar filtros</button>
+        </div>
+      </div>
       <div class="barber-grid">
 
-  <article class="card">
+  <article class="card" data-oc-booking="1" data-oc-lat="37.1924928" data-oc-lng="-7.420598">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/vila-real-de-santo-antonio/">Vila Real de Santo António</a></span><span><strong>Distrito:</strong> Faro</span></div>
+    <div class="tag-row"><span class="tag">Marcação online</span><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/barbearia-manuel/">Barbearia Manuel</a></h3>
     <p>Ficha com telefone e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> R. Francisco Sá Carneiro 28, 8900-307 Vila Real de Santo António</p>
@@ -454,8 +509,9 @@
       <a class="btn btn-primary" href="tel:+351962790658">Ligar agora</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-lat="37.1944529" data-oc-lng="-7.4147137">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/vila-real-de-santo-antonio/">Vila Real de Santo António</a></span><span><strong>Distrito:</strong> Faro</span></div>
+    <div class="tag-row"><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/barber-house-village/">Barber House Village</a></h3>
     <p>Ficha com telefone e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> R. 5 de Outubro n 38, 8900-239 Vila Real de Santo António</p>
@@ -464,9 +520,9 @@
       <a class="btn btn-primary" href="tel:+351927692715">Ligar agora</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-week="[[],[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;10:00&quot;,&quot;20:00&quot;]],[]]" data-oc-booking="1" data-oc-lat="37.1931078" data-oc-lng="-7.4143685">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/vila-real-de-santo-antonio/">Vila Real de Santo António</a></span><span><strong>Distrito:</strong> Faro</span></div>
-    <div class="tag-row"><span class="tag">Horário disponível</span></div>
+    <div class="tag-row"><span class="tag" data-oc-status>Horário disponível</span><span class="tag">Marcação online</span><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/barber-shop-the-rock/">Barber shop The Rock</a></h3>
     <p>Ficha com telefone, horário e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> R. da Princesa 13A, 8900-266 Vila Real de Santo António</p>
@@ -475,8 +531,9 @@
       <a class="btn btn-primary" href="tel:+351962162395">Ligar agora</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-lat="37.1964587" data-oc-lng="-7.4194709">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/vila-real-de-santo-antonio/">Vila Real de Santo António</a></span><span><strong>Distrito:</strong> Faro</span></div>
+    <div class="tag-row"><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/barbershop-by-micael-rua/">Barbershop by Micael Rua</a></h3>
     <p>Ficha com telefone e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> R. do Exército 40, 8900-280 Vila Real de Santo António</p>
@@ -485,8 +542,9 @@
       <a class="btn btn-primary" href="tel:+351963178754">Ligar agora</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-lat="37.1943481" data-oc-lng="-7.4232112">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/vila-real-de-santo-antonio/">Vila Real de Santo António</a></span><span><strong>Distrito:</strong> Faro</span></div>
+    <div class="tag-row"><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/denis-men-salon/">Denis Men&#39;Salon</a></h3>
     <p>Ficha com telefone e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> R. António Vicente Campinas 20, 8900-249 Vila Real de Santo António</p>
@@ -495,9 +553,9 @@
       <a class="btn btn-primary" href="tel:+351969209628">Ligar agora</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-week="[[[&quot;09:00&quot;,&quot;18:00&quot;]],[[&quot;09:00&quot;,&quot;18:00&quot;]],[[&quot;09:00&quot;,&quot;18:00&quot;]],[[&quot;09:00&quot;,&quot;18:00&quot;]],[[&quot;09:00&quot;,&quot;18:00&quot;]],[[&quot;09:00&quot;,&quot;13:00&quot;]],[]]" data-oc-booking="1" data-oc-lat="37.1907539" data-oc-lng="-7.4173101">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/vila-real-de-santo-antonio/">Vila Real de Santo António</a></span><span><strong>Distrito:</strong> Faro</span></div>
-    <div class="tag-row"><span class="tag">Horário disponível</span></div>
+    <div class="tag-row"><span class="tag" data-oc-status>Horário disponível</span><span class="tag">Marcação online</span><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/rui-reis-men-s-studio/">Rui Reis Men&#39;s Studio</a></h3>
     <p>Ficha com telefone, horário e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> R. São Gonçalo de Lagos 5, 8900-276 Vila Real de Santo António</p>
@@ -506,8 +564,9 @@
       <a class="btn btn-primary" href="tel:+351968399665">Ligar agora</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-lat="37.1874686" data-oc-lng="-7.4164523">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/vila-real-de-santo-antonio/">Vila Real de Santo António</a></span><span><strong>Distrito:</strong> Faro</span></div>
+    <div class="tag-row"><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/symmetry-cabeleireiros-barber-shop/">Symmetry Cabeleireiros Barber Shop</a></h3>
     <p>Ficha com telefone e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> Av. Min. Duarte Pacheco 26, 8900-234 Vila Real de Santo António</p>
@@ -516,8 +575,9 @@
       <a class="btn btn-primary" href="tel:+351968473829">Ligar agora</a>
     </div>
   </article>
-  <article class="card">
+  <article class="card" data-oc-lat="37.1943067" data-oc-lng="-7.4178741">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/vila-real-de-santo-antonio/">Vila Real de Santo António</a></span><span><strong>Distrito:</strong> Faro</span></div>
+    <div class="tag-row"><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/two-w-barbershop/">Two w barbershop</a></h3>
     <p>Ficha com telefone e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> R. Dr. Teófilo Braga 66, 8900-303 Vila Real de Santo António</p>
@@ -581,5 +641,136 @@
       </div>
     </div>
   </footer>
+<script>
+(function () {
+  var box = document.querySelector("[data-oc-filters]");
+  var grid = document.querySelector("#lista-barbearias .barber-grid");
+  if (!box || !grid) return;
+  var cards = [].slice.call(grid.querySelectorAll(".card"));
+  var original = cards.slice();
+  var state = { open: false, booking: false, near: false };
+  var statusEl = box.querySelector(".oc-filters-status");
+  var emptyEl = box.querySelector(".oc-filters-empty");
+  var btn = {};
+  [].forEach.call(box.querySelectorAll("[data-filter]"), function (b) { btn[b.getAttribute("data-filter")] = b; });
+
+  function count(name) {
+    if (window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: "filtro-cidade/" + name, title: "Filtro " + name + " · " + location.pathname, event: true });
+    }
+  }
+
+  // Hora de Lisboa, como no resumo do perfil
+  var day = null, now = "";
+  if (window.Intl) {
+    var p = {};
+    new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Lisbon", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
+      .formatToParts(new Date()).forEach(function (x) { p[x.type] = x.value; });
+    day = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 }[p.weekday];
+    now = p.hour + ":" + p.minute;
+  }
+
+  var hasWeek = false, hasBooking = false, hasCoords = false;
+  cards.forEach(function (c) {
+    c.ocBooking = c.hasAttribute("data-oc-booking");
+    c.ocLat = parseFloat(c.getAttribute("data-oc-lat"));
+    c.ocLng = parseFloat(c.getAttribute("data-oc-lng"));
+    if (c.ocBooking) hasBooking = true;
+    if (!isNaN(c.ocLat) && !isNaN(c.ocLng)) hasCoords = true;
+    c.ocOpen = false;
+    var raw = c.getAttribute("data-oc-week");
+    if (!raw || day === undefined || day === null) return;
+    var w;
+    try { w = JSON.parse(raw); } catch (e) { return; }
+    hasWeek = true;
+    (w[day] || []).forEach(function (s) { if (now >= s[0] && now < s[1]) c.ocOpen = true; });
+    var tag = c.querySelector("[data-oc-status]");
+    if (tag) {
+      tag.textContent = c.ocOpen ? "Aberto agora" : "Fechado agora";
+      tag.classList.add(c.ocOpen ? "is-open" : "is-closed");
+    }
+  });
+
+  if (hasWeek && btn.open) btn.open.hidden = false;
+  if (hasBooking && btn.booking) btn.booking.hidden = false;
+  if (hasCoords && navigator.geolocation && btn.near) btn.near.hidden = false;
+  if ((!btn.open || btn.open.hidden) && (!btn.booking || btn.booking.hidden) && (!btn.near || btn.near.hidden)) return;
+  box.hidden = false;
+
+  function apply() {
+    var shown = 0;
+    cards.forEach(function (c) {
+      var hide = (state.open && !c.ocOpen) || (state.booking && !c.ocBooking);
+      c.hidden = hide;
+      if (!hide) shown++;
+    });
+    var any = state.open || state.booking || state.near;
+    var msg = "";
+    if (state.open || state.booking) msg = "A mostrar " + shown + " de " + cards.length + " barbearias";
+    if (state.near) msg = (msg ? msg + " · " : "") + "Ordenadas pela distância a ti";
+    if (state.open) msg += " · \"Aberto agora\" segue o horário publicado; feriados podem variar.";
+    statusEl.textContent = any ? msg : "";
+    emptyEl.hidden = shown !== 0;
+  }
+
+  function toggle(name) {
+    state[name] = !state[name];
+    btn[name].setAttribute("aria-pressed", state[name] ? "true" : "false");
+    if (state[name]) count(name);
+    apply();
+  }
+
+  function km(a, b, c, d) {
+    var r = Math.PI / 180, x = Math.sin((c - a) * r / 2), y = Math.sin((d - b) * r / 2);
+    var h = x * x + Math.cos(a * r) * Math.cos(c * r) * y * y;
+    return 12742 * Math.asin(Math.sqrt(h));
+  }
+  function fmt(k) {
+    if (k < 1) return "a " + Math.max(50, Math.round(k * 20) * 50) + " m";
+    return "a " + (k < 10 ? k.toFixed(1).replace(".", ",") : Math.round(k)) + " km";
+  }
+
+  function setNear(on, pos) {
+    state.near = on;
+    btn.near.setAttribute("aria-pressed", on ? "true" : "false");
+    var order = original;
+    if (on) {
+      cards.forEach(function (c) {
+        c.ocKm = isNaN(c.ocLat) ? Infinity : km(pos.coords.latitude, pos.coords.longitude, c.ocLat, c.ocLng);
+        var t = c.querySelector("[data-oc-distance]");
+        if (t && c.ocKm !== Infinity) { t.textContent = fmt(c.ocKm); t.hidden = false; }
+      });
+      order = cards.slice().sort(function (a, b) { return a.ocKm - b.ocKm; });
+    } else {
+      cards.forEach(function (c) { var t = c.querySelector("[data-oc-distance]"); if (t) t.hidden = true; });
+    }
+    order.forEach(function (c) { grid.appendChild(c); });
+    apply();
+  }
+
+  if (btn.open) btn.open.addEventListener("click", function () { toggle("open"); });
+  if (btn.booking) btn.booking.addEventListener("click", function () { toggle("booking"); });
+  if (btn.near) btn.near.addEventListener("click", function () {
+    if (state.near) { setNear(false); return; }
+    var label = btn.near.textContent;
+    btn.near.disabled = true;
+    btn.near.textContent = "A localizar…";
+    navigator.geolocation.getCurrentPosition(function (pos) {
+      btn.near.disabled = false;
+      btn.near.textContent = label;
+      count("near");
+      setNear(true, pos);
+    }, function () {
+      btn.near.disabled = false;
+      btn.near.textContent = label;
+      statusEl.textContent = "Não foi possível obter a tua localização. Confirma a permissão de localização do browser.";
+    }, { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 });
+  });
+  box.querySelector("[data-oc-filters-clear]").addEventListener("click", function () {
+    ["open", "booking"].forEach(function (n) { state[n] = false; if (btn[n]) btn[n].setAttribute("aria-pressed", "false"); });
+    apply();
+  });
+})();
+</script>
 </body>
 </html>

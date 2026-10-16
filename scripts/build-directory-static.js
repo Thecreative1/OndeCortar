@@ -1187,15 +1187,25 @@ function renderBarberCard(barber, prefix, options) {
   const primaryLink = barber.primaryLink
     ? '<a class="btn btn-primary" href="' + escapeHtml(barber.primaryLink.href) + '"' + (barber.primaryLink.external ? ' target="_blank" rel="nofollow noopener noreferrer"' : "") + ">" + escapeHtml(barber.primaryLink.label) + "</a>"
     : "";
+  // Dados para os filtros da página de cidade (Aberto agora / Marcação online / Perto de mim),
+  // lidos pelo CITY_FILTERS_SCRIPT no browser. Sem JS os cartões ficam iguais.
+  const week = options && options.filterData ? horarioUtils.parsePt(barber.horario) : null;
+  const filterAttrs = options && options.filterData ? [
+    week ? ' data-oc-week="' + escapeHtml(JSON.stringify(week)) + '"' : "",
+    barber.booking ? ' data-oc-booking="1"' : "",
+    Array.isArray(barber.coords) ? ' data-oc-lat="' + barber.coords[0] + '" data-oc-lng="' + barber.coords[1] + '"' : ""
+  ].join("") : "";
   const utilityTags = [
-    barber.horario ? '<span class="tag">Horário disponível</span>' : ""
+    barber.horario ? '<span class="tag"' + (week ? " data-oc-status" : "") + ">Horário disponível</span>" : "",
+    options && options.filterData && barber.booking ? '<span class="tag">Marcação online</span>' : "",
+    options && options.filterData && Array.isArray(barber.coords) ? '<span class="tag" data-oc-distance hidden></span>' : ""
   ].filter(Boolean).join("");
   const metaHtml = [
     locationSummary,
     utilityTags ? '<div class="tag-row">' + utilityTags + "</div>" : ""
   ].filter(Boolean).map((line) => "    " + line).join("\n");
   return `
-  <article class="card">
+  <article class="card"${filterAttrs}>
 ${metaHtml ? metaHtml + "\n" : ""}    <h3><a href="${escapeHtml(prefix + barber.profileUrl)}">${escapeHtml(barber.name)}</a></h3>
     <p>${escapeHtml(options && options.longCopy ? barber.editorial : barber.cardSummary)}</p>
     ${barber.morada ? '<p><strong>Morada:</strong> ' + escapeHtml(barber.morada) + "</p>" : ""}
@@ -1616,6 +1626,188 @@ function renderProfilePage(barber, citiesMap) {
     '  <script>(function(){var d=document.querySelector(".oc-desktop-nav"),m=document.querySelector(".oc-mobile-nav");function c(){var w=window.innerWidth>=1100;if(d)d.style.display=w?"flex":"none";if(m)m.style.display=w?"flex":"none";}c();window.addEventListener("resize",c);}());<\/script>\n\n<\/body>\n<\/html>';
 }
 
+// ── Filtros das páginas de cidade: Aberto agora / Marcação online / Perto de mim.
+// Tudo no browser, sem URLs novas nem conteúdo removido do HTML (os cartões continuam todos
+// no HTML; os filtros só os escondem). "Aberto agora" usa a hora de Lisboa e o horário
+// publicado (mesma lógica do resumo do perfil). GoatCounter conta `filtro-cidade/<filtro>`.
+const CITY_FILTERS_MIN = 3;
+
+const CITY_FILTERS_STYLES = `
+    [hidden] { display: none !important; }
+    .oc-filters { display: grid; gap: 10px; margin: 0 0 20px; }
+    .oc-filters-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .oc-filter {
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      color: var(--text);
+      font: inherit;
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .oc-filter:hover { border-color: rgba(200, 135, 58, 0.7); }
+    .oc-filter:focus-visible { outline: 3px solid rgba(227, 168, 99, 0.55); outline-offset: 2px; }
+    .oc-filter[aria-pressed="true"] {
+      background: rgba(200, 135, 58, 0.2);
+      border-color: var(--gold);
+    }
+    .oc-filter[aria-pressed="true"]::before { content: "✓ "; color: var(--gold); }
+    .oc-filter:disabled { opacity: 0.7; cursor: progress; }
+    .oc-filters-status { margin: 0; font-size: 0.92rem; }
+    .oc-filters-status:empty { display: none; }
+    .oc-filters-empty {
+      display: grid;
+      justify-items: start;
+      gap: 10px;
+      padding: 18px;
+      border: 1px dashed var(--border-strong);
+      border-radius: var(--radius-md);
+    }
+    .oc-filters-empty p { margin: 0; }
+    .tag.is-open {
+      background: rgba(31, 77, 58, 0.6);
+      border-color: rgba(70, 170, 120, 0.65);
+      color: #D5EEDF;
+    }
+    .tag.is-closed { color: var(--muted); }
+`;
+
+const CITY_FILTERS_SCRIPT = `<script>
+(function () {
+  var box = document.querySelector("[data-oc-filters]");
+  var grid = document.querySelector("#lista-barbearias .barber-grid");
+  if (!box || !grid) return;
+  var cards = [].slice.call(grid.querySelectorAll(".card"));
+  var original = cards.slice();
+  var state = { open: false, booking: false, near: false };
+  var statusEl = box.querySelector(".oc-filters-status");
+  var emptyEl = box.querySelector(".oc-filters-empty");
+  var btn = {};
+  [].forEach.call(box.querySelectorAll("[data-filter]"), function (b) { btn[b.getAttribute("data-filter")] = b; });
+
+  function count(name) {
+    if (window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: "filtro-cidade/" + name, title: "Filtro " + name + " · " + location.pathname, event: true });
+    }
+  }
+
+  // Hora de Lisboa, como no resumo do perfil
+  var day = null, now = "";
+  if (window.Intl) {
+    var p = {};
+    new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Lisbon", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
+      .formatToParts(new Date()).forEach(function (x) { p[x.type] = x.value; });
+    day = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 }[p.weekday];
+    now = p.hour + ":" + p.minute;
+  }
+
+  var hasWeek = false, hasBooking = false, hasCoords = false;
+  cards.forEach(function (c) {
+    c.ocBooking = c.hasAttribute("data-oc-booking");
+    c.ocLat = parseFloat(c.getAttribute("data-oc-lat"));
+    c.ocLng = parseFloat(c.getAttribute("data-oc-lng"));
+    if (c.ocBooking) hasBooking = true;
+    if (!isNaN(c.ocLat) && !isNaN(c.ocLng)) hasCoords = true;
+    c.ocOpen = false;
+    var raw = c.getAttribute("data-oc-week");
+    if (!raw || day === undefined || day === null) return;
+    var w;
+    try { w = JSON.parse(raw); } catch (e) { return; }
+    hasWeek = true;
+    (w[day] || []).forEach(function (s) { if (now >= s[0] && now < s[1]) c.ocOpen = true; });
+    var tag = c.querySelector("[data-oc-status]");
+    if (tag) {
+      tag.textContent = c.ocOpen ? "Aberto agora" : "Fechado agora";
+      tag.classList.add(c.ocOpen ? "is-open" : "is-closed");
+    }
+  });
+
+  if (hasWeek && btn.open) btn.open.hidden = false;
+  if (hasBooking && btn.booking) btn.booking.hidden = false;
+  if (hasCoords && navigator.geolocation && btn.near) btn.near.hidden = false;
+  if ((!btn.open || btn.open.hidden) && (!btn.booking || btn.booking.hidden) && (!btn.near || btn.near.hidden)) return;
+  box.hidden = false;
+
+  function apply() {
+    var shown = 0;
+    cards.forEach(function (c) {
+      var hide = (state.open && !c.ocOpen) || (state.booking && !c.ocBooking);
+      c.hidden = hide;
+      if (!hide) shown++;
+    });
+    var any = state.open || state.booking || state.near;
+    var msg = "";
+    if (state.open || state.booking) msg = "A mostrar " + shown + " de " + cards.length + " barbearias";
+    if (state.near) msg = (msg ? msg + " · " : "") + "Ordenadas pela distância a ti";
+    if (state.open) msg += " · \\"Aberto agora\\" segue o horário publicado; feriados podem variar.";
+    statusEl.textContent = any ? msg : "";
+    emptyEl.hidden = shown !== 0;
+  }
+
+  function toggle(name) {
+    state[name] = !state[name];
+    btn[name].setAttribute("aria-pressed", state[name] ? "true" : "false");
+    if (state[name]) count(name);
+    apply();
+  }
+
+  function km(a, b, c, d) {
+    var r = Math.PI / 180, x = Math.sin((c - a) * r / 2), y = Math.sin((d - b) * r / 2);
+    var h = x * x + Math.cos(a * r) * Math.cos(c * r) * y * y;
+    return 12742 * Math.asin(Math.sqrt(h));
+  }
+  function fmt(k) {
+    if (k < 1) return "a " + Math.max(50, Math.round(k * 20) * 50) + " m";
+    return "a " + (k < 10 ? k.toFixed(1).replace(".", ",") : Math.round(k)) + " km";
+  }
+
+  function setNear(on, pos) {
+    state.near = on;
+    btn.near.setAttribute("aria-pressed", on ? "true" : "false");
+    var order = original;
+    if (on) {
+      cards.forEach(function (c) {
+        c.ocKm = isNaN(c.ocLat) ? Infinity : km(pos.coords.latitude, pos.coords.longitude, c.ocLat, c.ocLng);
+        var t = c.querySelector("[data-oc-distance]");
+        if (t && c.ocKm !== Infinity) { t.textContent = fmt(c.ocKm); t.hidden = false; }
+      });
+      order = cards.slice().sort(function (a, b) { return a.ocKm - b.ocKm; });
+    } else {
+      cards.forEach(function (c) { var t = c.querySelector("[data-oc-distance]"); if (t) t.hidden = true; });
+    }
+    order.forEach(function (c) { grid.appendChild(c); });
+    apply();
+  }
+
+  if (btn.open) btn.open.addEventListener("click", function () { toggle("open"); });
+  if (btn.booking) btn.booking.addEventListener("click", function () { toggle("booking"); });
+  if (btn.near) btn.near.addEventListener("click", function () {
+    if (state.near) { setNear(false); return; }
+    var label = btn.near.textContent;
+    btn.near.disabled = true;
+    btn.near.textContent = "A localizar…";
+    navigator.geolocation.getCurrentPosition(function (pos) {
+      btn.near.disabled = false;
+      btn.near.textContent = label;
+      count("near");
+      setNear(true, pos);
+    }, function () {
+      btn.near.disabled = false;
+      btn.near.textContent = label;
+      statusEl.textContent = "Não foi possível obter a tua localização. Confirma a permissão de localização do browser.";
+    }, { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 });
+  });
+  box.querySelector("[data-oc-filters-clear]").addEventListener("click", function () {
+    ["open", "booking"].forEach(function (n) { state[n] = false; if (btn[n]) btn[n].setAttribute("aria-pressed", "false"); });
+    apply();
+  });
+})();
+</script>`;
+
 function renderCityPage(city) {
   const prefix = "../../";
   const canonical = absoluteUrl(city.url);
@@ -1625,6 +1817,21 @@ function renderCityPage(city) {
   const cityHierarchyText = renderHierarchyText(cityHierarchyEntries, prefix);
   const title = cityBarbersLabel + " | Onde cortar o cabelo | OndeCortar.pt";
   const description = cityBarbersLabel + " com morada, horário e mapa. Encontra o barbeiro certo, vê como chegar e escolhe onde cortar o cabelo no OndeCortar.pt.";
+  // Filtros só a partir de 3 fichas (com 1–2 não há o que filtrar). Ficam escondidos até o
+  // JS confirmar que há dados para cada um — sem JS não aparecem botões mortos.
+  const withFilters = city.barbearias.length >= CITY_FILTERS_MIN;
+  const filtersHtml = withFilters ? `      <div class="oc-filters" data-oc-filters hidden>
+        <div class="oc-filters-row" role="group" aria-label="Filtrar barbearias">
+          <button type="button" class="oc-filter" data-filter="open" aria-pressed="false" hidden>Aberto agora</button>
+          <button type="button" class="oc-filter" data-filter="booking" aria-pressed="false" hidden>Marcação online</button>
+          <button type="button" class="oc-filter" data-filter="near" aria-pressed="false" hidden>Perto de mim</button>
+        </div>
+        <p class="oc-filters-status" aria-live="polite"></p>
+        <div class="oc-filters-empty" hidden>
+          <p>Nenhuma barbearia ${escapeHtml(cityLocative)} corresponde a estes filtros.</p>
+          <button type="button" class="btn btn-secondary" data-oc-filters-clear>Limpar filtros</button>
+        </div>
+      </div>` : "";
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -1696,8 +1903,8 @@ ${renderHeader(prefix, "cidades")}
           <p>Todos os perfis abaixo mostram morada, contactos, mapa e acesso direto à ficha individual.</p>
         </div>
       </div>
-      <div class="barber-grid">
-${city.barbearias.map((barber) => renderBarberCard(barber, prefix, { showZone: true, longCopy: false })).join("")}
+${filtersHtml ? filtersHtml + "\n" : ""}      <div class="barber-grid">
+${city.barbearias.map((barber) => renderBarberCard(barber, prefix, { showZone: true, longCopy: false, filterData: withFilters })).join("")}
       </div>
     </div>
   </section>
@@ -1733,7 +1940,7 @@ ${city.barbearias.map((barber) => renderBarberCard(barber, prefix, { showZone: t
     </div>
   </section>
 </main>
-${renderFooter(prefix)}`;
+${renderFooter(prefix)}${withFilters ? "\n" + CITY_FILTERS_SCRIPT : ""}`;
 
   return renderDocument({
     title: title,
@@ -1741,6 +1948,7 @@ ${renderFooter(prefix)}`;
     canonical: canonical,
     prefix: prefix,
     structuredData: structuredData,
+    extraStyles: withFilters ? CITY_FILTERS_STYLES : "",
     body: body
   });
 }
