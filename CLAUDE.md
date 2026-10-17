@@ -60,7 +60,7 @@ Procedimento quando as coords parecem erradas:
 
 ## Encontrar barbearias em zonas sem cobertura
 
-Estado em 2026-10-13: **893 barbearias, 315 cidades** (+91 em 36 cidades com 1–2 fichas, escolhidas pelas impressões no Search Console; ver memória `cidades-poucas-fichas`). O `<title>` da homepage diz "800+" (atualizado 2026-10-07); quando passar de 900 ou 1000, atualizar title, og/twitter e description (pedir OK).
+Estado em 2026-10-17: **1016 barbearias, 315 cidades** (+123 a 17/10 em 50 cidades com 1–2 fichas — lote 5; antes +91 a 13/10; ver memória `cidades-poucas-fichas`). Ainda há 19 fichas antigas `status: "por_validar"` com telefone placeholder e coords no centro da cidade (ex.: "Barbearia Chaves, Rua Direita 12", "Barbearia Sines Moderna") — várias parecem inventadas; esconder ou validar mexe em URLs (pedir OK). O `<title>` da homepage diz "800+" (atualizado 2026-10-07); já passou de 1000 — atualizar title, og/twitter e description (pedir OK).
 
 **Lista de lacunas:** artifact [Vilas sem barbearia](https://claude.ai/artifact/DgEHSWmsP3bXNVdT2FNTjQ) (db, coleção `vilas`, doc `{estado: por-ver|encontrei|sem, nota}`). Calculada com Overpass (`place=city|town` em PT) + distância à barbearia mais próxima > 10 km; concelho/distrito por Nominatim reverse. Em 2026-10-07 ficaram **111 de 171** tratadas; faltam ~60, quase todas aldeias pequenas (rendimento baixo). Ler com `ArtifactData list collection=vilas`; o utilizador também pode escrever notas lá.
 

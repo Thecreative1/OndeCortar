@@ -33677,6 +33677,4366 @@ const barbearias = [
     "fontes": [
       "https://www.google.com/maps/place/?q=place_id:ChIJna_khh5lPA0R0Ze_VAxDKW8"
     ]
+  },
+  {
+    "nome": "Barbearia Morini",
+    "slug": "barbearia-morini",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Loulé",
+    "zone": null,
+    "morada": "R. Eng. Barata Correia 90, 8100-569 Loulé",
+    "codigo_postal": null,
+    "telefone": "+351 932 122 785",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ2T8ctHGxGg0RJ4BK6F-WGj0",
+    "horario": "Ter-Sex 9h-19h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ2T8ctHGxGg0RJ4BK6F-WGj0",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      37.1364399,
+      -8.0190905
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ2T8ctHGxGg0RJ4BK6F-WGj0"
+    ]
+  },
+  {
+    "nome": "Rocha's Barbershop",
+    "slug": "rocha-s-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Loulé",
+    "zone": null,
+    "morada": "R. David Teixeira 114, 8100-552 Loulé",
+    "codigo_postal": null,
+    "telefone": "+351 916 846 238",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/rochasbarbershop/",
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJd2BfY0qxGg0RahxcA_UBui8",
+    "horario": "Seg-Sex 10h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJd2BfY0qxGg0RahxcA_UBui8",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      37.1389555,
+      -8.0191687
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJd2BfY0qxGg0RahxcA_UBui8"
+    ]
+  },
+  {
+    "nome": "Barber's Touch",
+    "slug": "barber-s-touch",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Loulé",
+    "zone": null,
+    "morada": "R. Dra. Laura Ayres 9b, 8100-568 Loulé",
+    "codigo_postal": null,
+    "telefone": "+351 914 439 240",
+    "email": null,
+    "website": null,
+    "instagram": "https://instagram.com/barbers_touch",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJj4Zx3ROxGg0RwOgkzlJsdJ4",
+    "horario": "Seg-Sex 9h30-13h e 14h30-19h30; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJj4Zx3ROxGg0RwOgkzlJsdJ4",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      37.1376509,
+      -8.0177928
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJj4Zx3ROxGg0RwOgkzlJsdJ4"
+    ]
+  },
+  {
+    "nome": "Underground Concept",
+    "slug": "underground-concept",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Lagoa",
+    "zone": null,
+    "morada": "R. Francisco Sá Carneiro 1 Lj D, 8400-386 Lagoa",
+    "codigo_postal": null,
+    "telefone": "+351 925 228 379",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJez2GosHXGg0RxkC0iGvIPH8",
+    "horario": "Seg-Sex 9h-13h e 14h30-19h; Sáb 8h-15h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJez2GosHXGg0RxkC0iGvIPH8",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      37.1326351,
+      -8.4487703
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJez2GosHXGg0RxkC0iGvIPH8"
+    ]
+  },
+  {
+    "nome": "Mr Navalha",
+    "slug": "mr-navalha",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Lagoa",
+    "zone": null,
+    "morada": "R. Antero de Quental 2, 8400-340 Lagoa",
+    "codigo_postal": null,
+    "telefone": "+351 969 026 405",
+    "email": null,
+    "website": "https://pt.zappysoftware.com/m/mr.navalha",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJRflsO9jXGg0RphojRCgpHXE",
+    "horario": "Seg-Sex 9h30-19h30; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJRflsO9jXGg0RphojRCgpHXE",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      37.1339574,
+      -8.4520134
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJRflsO9jXGg0RphojRCgpHXE"
+    ]
+  },
+  {
+    "nome": "Smart Cut Barber Shop",
+    "slug": "smart-cut-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Lagoa",
+    "zone": null,
+    "morada": "Praça da República 2, 8400-305 Lagoa",
+    "codigo_postal": null,
+    "telefone": "+351 920 525 664",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJI7mqgJDXGg0RnUQPuUZYXcs",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": "Horário do Google Maps não publicado (aberto todos os dias, horário a confirmar).",
+    "coords": [
+      37.1357759,
+      -8.4529145
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJI7mqgJDXGg0RnUQPuUZYXcs"
+    ]
+  },
+  {
+    "nome": "Palma Barber",
+    "slug": "palma-barber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Moura",
+    "zone": null,
+    "morada": "R. 1 de Dezembro 9B, 7860-237 Moura",
+    "codigo_postal": null,
+    "telefone": "+351 926 162 250",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJr6jvSsG_EA0RYc4a9sE6Tzw",
+    "horario": "Seg-Sex 9h-13h e 15h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJr6jvSsG_EA0RYc4a9sE6Tzw",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      38.1423015,
+      -7.4497822
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJr6jvSsG_EA0RYc4a9sE6Tzw"
+    ]
+  },
+  {
+    "nome": "Dom Capela Barbearia",
+    "slug": "dom-capela-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Moura",
+    "zone": null,
+    "morada": "Rua dos Espingardeiros n.8, 7860-054 Moura",
+    "codigo_postal": null,
+    "telefone": "+351 967 961 071",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJAQ68w2i_EA0RFOXH5tjVRCc",
+    "horario": "Seg-Sex 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJAQ68w2i_EA0RFOXH5tjVRCc",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      38.1414092,
+      -7.4488113
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJAQ68w2i_EA0RFOXH5tjVRCc"
+    ]
+  },
+  {
+    "nome": "Carioca Barber",
+    "slug": "carioca-barber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Sines",
+    "zone": null,
+    "morada": "R. Júdice Fialho 12c, 7520-171 Sines",
+    "codigo_postal": null,
+    "telefone": "+351 915 320 919",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJZS4TQACVGw0Rjq9tHr22t70",
+    "horario": "Ter-Sex 9h-19h; Sáb 9h-15h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJZS4TQACVGw0Rjq9tHr22t70",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      37.9556485,
+      -8.8730349
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJZS4TQACVGw0Rjq9tHr22t70"
+    ]
+  },
+  {
+    "nome": "Fialho's Barbearia",
+    "slug": "fialho-s-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Sines",
+    "zone": null,
+    "morada": "R. Júdice Fialho 2A, 7520-450 Sines",
+    "codigo_postal": null,
+    "telefone": "+351 925 928 273",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/fialhosbarbearia/",
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJxWW1ueKVGw0ROiftHWuCcFc",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": null,
+    "coords": [
+      37.9555685,
+      -8.8718527
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJxWW1ueKVGw0ROiftHWuCcFc"
+    ]
+  },
+  {
+    "nome": "Resende Barbershop",
+    "slug": "resende-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Sines",
+    "zone": null,
+    "morada": "R. Francisco Luís Lopes 62, 7520-212 Sines",
+    "codigo_postal": null,
+    "telefone": "+351 932 604 942",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/resende_barber_shop/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJIzJ5PZGVGw0RyjBN2HQZvGg",
+    "horario": "Seg-Sex 10h-19h; Sáb 10h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJIzJ5PZGVGw0RyjBN2HQZvGg",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      37.9562683,
+      -8.8661206
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJIzJ5PZGVGw0RyjBN2HQZvGg"
+    ]
+  },
+  {
+    "nome": "Mafi Barber - Barbearia",
+    "slug": "mafi-barber-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Chaves",
+    "zone": null,
+    "morada": "R. Direita 18, 5400-220 Chaves",
+    "codigo_postal": null,
+    "telefone": "+351 924 719 857",
+    "email": null,
+    "website": "https://mafibarber.com/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJf3uge-LfOg0RCi4OzTQXteI",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": "Horário do Google Maps não publicado (aberto todos os dias, horário a confirmar).",
+    "coords": [
+      41.7394387,
+      -7.468971
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJf3uge-LfOg0RCi4OzTQXteI"
+    ]
+  },
+  {
+    "nome": "Barbearia d'Amo d'Elas",
+    "slug": "barbearia-d-amo-d-elas",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Chaves",
+    "zone": null,
+    "morada": "R. Bpo. Idácio 36, 5400-303 Chaves",
+    "codigo_postal": null,
+    "telefone": "+351 936 535 532",
+    "email": null,
+    "website": "https://damodelasbarbearia.setmore.com/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJV3-t-2jfOg0RMmN2nQhaAUI",
+    "horario": "Seg-Sex 8h30-20h; Sáb 7h30-14h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJV3-t-2jfOg0RMmN2nQhaAUI",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.7402515,
+      -7.470297
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJV3-t-2jfOg0RMmN2nQhaAUI"
+    ]
+  },
+  {
+    "nome": "Rubems Lopes Gentlemen's",
+    "slug": "rubems-lopes-gentlemen-s",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Chaves",
+    "zone": null,
+    "morada": "Centro Comercial Valadim, Av. Ten. Valadim 14, 5400-558 Chaves",
+    "codigo_postal": null,
+    "telefone": "+351 935 307 721",
+    "email": null,
+    "website": "https://rubemslopesbarber.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJKbNU1ATfOg0RCW6_VHpTOmU",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": "Horário do Google Maps não publicado (horário publicado incoerente).",
+    "coords": [
+      41.7417173,
+      -7.4735881
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJKbNU1ATfOg0RCW6_VHpTOmU"
+    ]
+  },
+  {
+    "nome": "Faded Barber Studio",
+    "slug": "faded-barber-studio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Chaves",
+    "zone": null,
+    "morada": "Rua de Santo Amaro 7, 5400-057 Chaves",
+    "codigo_postal": null,
+    "telefone": "+351 935 136 351",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/profile.php?id=61556099030817",
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJtzMYnqjfOg0RSaCiYsm-2QU",
+    "horario": "Ter-Sex 9h30-20h; Sáb 9h30-18h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJtzMYnqjfOg0RSaCiYsm-2QU",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.7408143,
+      -7.4769325
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJtzMYnqjfOg0RSaCiYsm-2QU"
+    ]
+  },
+  {
+    "nome": "Barbearia Corte & Navalha",
+    "slug": "barbearia-corte-navalha",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Grândola",
+    "zone": null,
+    "morada": "Praça Marquês de Pombal 6, 7570-139 Grândola",
+    "codigo_postal": null,
+    "telefone": "+351 926 629 446",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://facebook.com/corteenavalha/",
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJhcdUSc7TGw0RYubRK1iPVbg",
+    "horario": "Seg-Sex 9h30-13h e 15h-19h30; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJhcdUSc7TGw0RYubRK1iPVbg",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      38.1760157,
+      -8.5686268
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJhcdUSc7TGw0RYubRK1iPVbg"
+    ]
+  },
+  {
+    "nome": "Barbearia António Sousa",
+    "slug": "barbearia-antonio-sousa",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Grândola",
+    "zone": null,
+    "morada": "R. Mousinho de Albuquerque 26, 7570-139 Grândola",
+    "codigo_postal": null,
+    "telefone": "+351 961 050 688",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJJ6RLFgHSGw0R_nLV1kQA1U4",
+    "horario": "Ter-Sex 9h30-12h30 e 15h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJJ6RLFgHSGw0R_nLV1kQA1U4",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      38.1756096,
+      -8.5680825
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJJ6RLFgHSGw0R_nLV1kQA1U4"
+    ]
+  },
+  {
+    "nome": "Barbearia Da Vila",
+    "slug": "barbearia-da-vila-grandola",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Grândola",
+    "zone": null,
+    "morada": "R. São João de Deus 13, 7570-270 Grândola",
+    "codigo_postal": null,
+    "telefone": "+351 926 747 974",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJtYF6VAbSGw0RHN9w6i7C6DM",
+    "horario": "Ter-Sex 9h-19h; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJtYF6VAbSGw0RHN9w6i7C6DM",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      38.175309,
+      -8.5635504
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJtYF6VAbSGw0RHN9w6i7C6DM"
+    ]
+  },
+  {
+    "nome": "Barbearia Peixoto FIGUEIRA",
+    "slug": "barbearia-peixoto-figueira",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Figueira da Foz",
+    "zone": null,
+    "morada": "R. Fernandes Coelho 39, 3080-183 Figueira da Foz",
+    "codigo_postal": null,
+    "telefone": "+351 233 435 137",
+    "email": null,
+    "website": null,
+    "instagram": "https://instagram.com/barbeariapeixoto22",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJa26nqLg3Ig0Rm-PYRyDd0bw",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": null,
+    "coords": [
+      40.1530026,
+      -8.8580474
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJa26nqLg3Ig0Rm-PYRyDd0bw"
+    ]
+  },
+  {
+    "nome": "Barber Club 31",
+    "slug": "barber-club-31",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Figueira da Foz",
+    "zone": null,
+    "morada": "R. Liberdade 29, 3080-168 Figueira da Foz",
+    "codigo_postal": null,
+    "telefone": "+351 910 090 622",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ9-hY-ww3Ig0RzJ1c9mEaX3I",
+    "horario": "Seg-Sex 9h30-13h e 14h30-19h; Sáb 9h30-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ9-hY-ww3Ig0RzJ1c9mEaX3I",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.1498047,
+      -8.8647809
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ9-hY-ww3Ig0RzJ1c9mEaX3I"
+    ]
+  },
+  {
+    "nome": "Barbearia Apollo",
+    "slug": "barbearia-apollo",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Figueira da Foz",
+    "zone": null,
+    "morada": "R. Maestro David de Sousa 110, 3080-086 Figueira da Foz",
+    "codigo_postal": null,
+    "telefone": "+351 965 071 933",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJbVTV0V43Ig0Rabbt1t_BCJA",
+    "horario": "Ter-Sáb 9h-13h e 14h30-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJbVTV0V43Ig0Rabbt1t_BCJA",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.1509192,
+      -8.8656786
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJbVTV0V43Ig0Rabbt1t_BCJA"
+    ]
+  },
+  {
+    "nome": "Barbearia Moderna",
+    "slug": "barbearia-moderna-figueira-da-foz",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Figueira da Foz",
+    "zone": null,
+    "morada": "R. Bernardo Lopes 127, 3080-153 Figueira da Foz",
+    "codigo_postal": null,
+    "telefone": "+351 233 424 260",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJuz3Xd5Y3Ig0RvBLcZdBqwas",
+    "horario": "Seg-Sex 9h-13h30 e 15h30-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJuz3Xd5Y3Ig0RvBLcZdBqwas",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.1509377,
+      -8.8639444
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJuz3Xd5Y3Ig0RvBLcZdBqwas"
+    ]
+  },
+  {
+    "nome": "ManSpace Barbearia",
+    "slug": "manspace-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Fafe",
+    "zone": null,
+    "morada": "R. Dr. António Marques Mendes, 4820-250 Fafe",
+    "codigo_postal": null,
+    "telefone": "+351 919 175 272",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://noona.pt/manspace",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJlf_hNgDpJA0RdDjpkCiwaKc",
+    "horario": "Ter-Sex 9h-13h e 14h30-20h; Sáb 8h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJlf_hNgDpJA0RdDjpkCiwaKc",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.4512281,
+      -8.1698542
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJlf_hNgDpJA0RdDjpkCiwaKc"
+    ]
+  },
+  {
+    "nome": "Navalha Barbearia",
+    "slug": "navalha-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Fafe",
+    "zone": null,
+    "morada": "R. Visc. Moreira de Rei n°411, 4820-299 Fafe",
+    "codigo_postal": null,
+    "telefone": "+351 912 725 579",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJsfbtngHpJA0RdxP0k1luUMQ",
+    "horario": "Ter-Sex 9h-13h e 15h-19h30; Sáb 9h-19h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJsfbtngHpJA0RdxP0k1luUMQ",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.4496011,
+      -8.166314
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJsfbtngHpJA0RdxP0k1luUMQ"
+    ]
+  },
+  {
+    "nome": "LUKS BARBEARIA",
+    "slug": "luks-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Fafe",
+    "zone": null,
+    "morada": "R. João Crisóstomo 98, 4820-266 Fafe",
+    "codigo_postal": null,
+    "telefone": "+351 936 288 897",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/luksbarbearia/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJjW8jD4HpJA0RDEr2maWrT5g",
+    "horario": "Seg 9h-12h30 e 14h-19h; Ter-Qui 9h30-19h30; Sex-Sáb 9h-19h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJjW8jD4HpJA0RDEr2maWrT5g",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.4549096,
+      -8.1673336
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJjW8jD4HpJA0RDEr2maWrT5g"
+    ]
+  },
+  {
+    "nome": "Twenty Barbershop",
+    "slug": "twenty-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Fafe",
+    "zone": null,
+    "morada": "R. Monsenhor Vieira de Castro 283, 4820-279 Fafe",
+    "codigo_postal": null,
+    "telefone": "+351 935 279 875",
+    "email": null,
+    "website": null,
+    "instagram": "https://instagram.com/twenty.barbershop",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJz0-uNmnpJA0Re3hf7OAuX0o",
+    "horario": "Ter-Sáb 10h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJz0-uNmnpJA0Re3hf7OAuX0o",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.4481986,
+      -8.170293
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJz0-uNmnpJA0Re3hf7OAuX0o"
+    ]
+  },
+  {
+    "nome": "Slyn Barbershop",
+    "slug": "slyn-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "S. João da Madeira",
+    "zone": null,
+    "morada": "Av. Eng. Arantes e Oliveira 889, 3700-315 S. João da Madeira",
+    "codigo_postal": null,
+    "telefone": "+351 924 223 771",
+    "email": null,
+    "website": "https://studioslynbarbershop.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJm6XO2QGBIw0RQutWnsuyBwA",
+    "horario": "Seg 13h-18h; Ter-Sex 9h-20h; Sáb 9h-18h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJm6XO2QGBIw0RQutWnsuyBwA",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.9003457,
+      -8.4962451
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJm6XO2QGBIw0RQutWnsuyBwA"
+    ]
+  },
+  {
+    "nome": "Raw Barber Studio",
+    "slug": "raw-barber-studio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "S. João da Madeira",
+    "zone": null,
+    "morada": "R. António José de Oliveira Júnior 769, 3700-208 S. João da Madeira",
+    "codigo_postal": null,
+    "telefone": "+351 922 018 105",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJd3ArumqBIw0RQuRUVML40SE",
+    "horario": "Ter-Sex 9h30-13h e 14h30-19h; Sáb 8h30-12h30 e 13h30-16h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJd3ArumqBIw0RQuRUVML40SE",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.905658,
+      -8.4956616
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJd3ArumqBIw0RQuRUVML40SE"
+    ]
+  },
+  {
+    "nome": "Blade Club Barbershop",
+    "slug": "blade-club-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "S. João da Madeira",
+    "zone": null,
+    "morada": "Av. Dr. Renato Araújo 357, 3700-243 S. João da Madeira",
+    "codigo_postal": null,
+    "telefone": "+351 960 030 303",
+    "email": null,
+    "website": "https://sites.appbarber.com.br/davidbarberoficial",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJK7B_zvqBIw0RUJDVS0WEGoc",
+    "horario": "Seg 9h30-17h30; Ter-Sáb 9h30-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJK7B_zvqBIw0RUJDVS0WEGoc",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.8972975,
+      -8.4933282
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJK7B_zvqBIw0RUJDVS0WEGoc"
+    ]
+  },
+  {
+    "nome": "Low Fade Studio",
+    "slug": "low-fade-studio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "S. João da Madeira",
+    "zone": null,
+    "morada": "R. Alão de Morais 170, 3700-019 S. João da Madeira",
+    "codigo_postal": null,
+    "telefone": "+351 935 291 423",
+    "email": null,
+    "website": "https://www.lowfadestudio.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ6ZrvUVuBIw0R_XIHT5HE0M0",
+    "horario": "Seg 16h-20h; Ter-Qui 10h-12h e 13h-20h; Sex-Sáb 10h-12h e 13h-21h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ6ZrvUVuBIw0R_XIHT5HE0M0",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.9021135,
+      -8.4915887
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ6ZrvUVuBIw0R_XIHT5HE0M0"
+    ]
+  },
+  {
+    "nome": "Barbearia Fragoso",
+    "slug": "barbearia-fragoso",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Estremoz",
+    "zone": null,
+    "morada": "R. das Flores 2, 7100-454 Estremoz",
+    "codigo_postal": null,
+    "telefone": "+351 963 401 882",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJy1p2eXpvFw0RLT9TAM5Ts9M",
+    "horario": "Seg 9h-13h; Ter-Sex 9h-13h e 16h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJy1p2eXpvFw0RLT9TAM5Ts9M",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      38.8464163,
+      -7.5877132
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJy1p2eXpvFw0RLT9TAM5Ts9M"
+    ]
+  },
+  {
+    "nome": "BLACK EDITION STUDIO",
+    "slug": "black-edition-studio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Estremoz",
+    "zone": null,
+    "morada": "Urbanização de Medeiros 97 Lj R/C, 7100-151 Estremoz",
+    "codigo_postal": null,
+    "telefone": "+351 268 034 674",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://blackeditionstudio.buk.pt/",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ0RQcy-xvFw0RNPetvtxeJgA",
+    "horario": "Seg 10h-13h e 13h30-17h; Ter-Qui 10h-13h e 14h-20h; Sex 9h-13h e 14h-20h; Sáb 9h-14h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ0RQcy-xvFw0RNPetvtxeJgA",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      38.852547,
+      -7.5918018
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ0RQcy-xvFw0RNPetvtxeJgA"
+    ]
+  },
+  {
+    "nome": "Barbearia Plenitude (Victor)",
+    "slug": "barbearia-plenitude-victor",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Alenquer",
+    "zone": null,
+    "morada": "Largo Rainha Santa Isabel 18, 2580-372 Alenquer",
+    "codigo_postal": null,
+    "telefone": "+351 937 663 433",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://barbearia-plenitude.buk.pt/",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJq2apy_HbGA0R2ormzu85cAo",
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJq2apy_HbGA0R2ormzu85cAo",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.0558492,
+      -9.0068198
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJq2apy_HbGA0R2ormzu85cAo"
+    ]
+  },
+  {
+    "nome": "Barbearia Chefinho Cuts",
+    "slug": "barbearia-chefinho-cuts",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Alenquer",
+    "zone": null,
+    "morada": "R. de Triana 136, 2580-373 Alenquer",
+    "codigo_postal": null,
+    "telefone": "+351 910 101 960",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJCci8aATZGA0R0_15sJUi6tg",
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJCci8aATZGA0R0_15sJUi6tg",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.05523,
+      -9.0072895
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJCci8aATZGA0R0_15sJUi6tg"
+    ]
+  },
+  {
+    "nome": "Barbearia Fred Village",
+    "slug": "barbearia-fred-village",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Alenquer",
+    "zone": null,
+    "morada": "R. de Triana 30, 2580-373 Alenquer",
+    "codigo_postal": null,
+    "telefone": "+351 919 055 695",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJGbX85tLZGA0R1jhGlSyrckI",
+    "horario": "Seg-Ter 9h-20h; Qua 9h-19h; Qui-Sex 9h-20h; Sáb 8h30-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJGbX85tLZGA0R1jhGlSyrckI",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.0531959,
+      -9.0082179
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJGbX85tLZGA0R1jhGlSyrckI"
+    ]
+  },
+  {
+    "nome": "Barbearia O Fidalgo",
+    "slug": "barbearia-o-fidalgo",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ponte de Sor",
+    "zone": null,
+    "morada": "Av. da Liberdade 73A, 7400-215 Ponte de Sor",
+    "codigo_postal": null,
+    "telefone": "+351 934 238 836",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJVaHXhoc7GA0RXMOhBKWnlmg",
+    "horario": "Seg 9h-13h e 14h-19h; Ter 9h-13h e 14h-18h30; Qua 9h-13h e 14h-19h; Qui 9h-13h e 14h-18h30; Sex 9h-13h e 14h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJVaHXhoc7GA0RXMOhBKWnlmg",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.2514833,
+      -8.0095112
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJVaHXhoc7GA0RXMOhBKWnlmg"
+    ]
+  },
+  {
+    "nome": "Barbearia Caselhas",
+    "slug": "barbearia-caselhas",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ponte de Sor",
+    "zone": null,
+    "morada": "R. de Santo António, 7400-247 Ponte de Sor",
+    "codigo_postal": null,
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ83ZY-Jk7GA0ROVEk2r0t6RI",
+    "horario": "Seg-Sex 9h-13h e 15h-19h; Sáb 9h-16h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ83ZY-Jk7GA0ROVEk2r0t6RI",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.2477754,
+      -8.0099825
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ83ZY-Jk7GA0ROVEk2r0t6RI"
+    ]
+  },
+  {
+    "nome": "Jorge Barbeiro/Barbearia Moderna",
+    "slug": "jorge-barbeiro-barbearia-moderna",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Argoncilhe",
+    "zone": null,
+    "morada": "R. Sol no32, 4505-108 Argoncilhe",
+    "codigo_postal": null,
+    "telefone": "+351 912 879 157",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ2RwpS-N_JA0R9_AZBVUYr2k",
+    "horario": "Ter-Sex 9h-12h30 e 14h-19h30; Sáb 9h-12h30 e 13h45-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ2RwpS-N_JA0R9_AZBVUYr2k",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.0188919,
+      -8.550437
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ2RwpS-N_JA0R9_AZBVUYr2k"
+    ]
+  },
+  {
+    "nome": "TIMI NO 151 Barbearia 167",
+    "slug": "timi-no-151-barbearia-167",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Argoncilhe",
+    "zone": null,
+    "morada": "R. Relva no 167, 4505-060 Argoncilhe",
+    "codigo_postal": null,
+    "telefone": "+351 932 820 332",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJW7Mdk7F_JA0RwYF1Qv-UirU",
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJW7Mdk7F_JA0RwYF1Qv-UirU",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.0232681,
+      -8.5321017
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJW7Mdk7F_JA0RwYF1Qv-UirU"
+    ]
+  },
+  {
+    "nome": "Barbearia No Fio da Navalha",
+    "slug": "barbearia-no-fio-da-navalha",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Alcácer do Sal",
+    "zone": null,
+    "morada": "R. João Alves Sá Branco lote 2 loja B, 7580-161 Alcácer do Sal",
+    "codigo_postal": null,
+    "telefone": "+351 966 100 771",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ5XGM3JV_GQ0RCjxG5h1H6nA",
+    "horario": "Seg-Sex 9h30-13h e 15h-19h; Sáb 10h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ5XGM3JV_GQ0RCjxG5h1H6nA",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      38.3709135,
+      -8.5029993
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ5XGM3JV_GQ0RCjxG5h1H6nA"
+    ]
+  },
+  {
+    "nome": "Barbearia Borrego",
+    "slug": "barbearia-borrego",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Alcácer do Sal",
+    "zone": null,
+    "morada": "R. Bom Jesus dos Mártires 17A, 7580-131 Alcácer do Sal",
+    "codigo_postal": null,
+    "telefone": "+351 927 408 018",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJm0viVgx_GQ0RTqa5-hpO_Fo",
+    "horario": "Seg-Sex 10h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJm0viVgx_GQ0RTqa5-hpO_Fo",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      38.3734479,
+      -8.5126814
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJm0viVgx_GQ0RTqa5-hpO_Fo"
+    ]
+  },
+  {
+    "nome": "Barbearia Barrote Barber",
+    "slug": "barbearia-barrote-barber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Alcácer do Sal",
+    "zone": null,
+    "morada": "R. da Fonte da Talha, 7580-095 Alcácer do Sal",
+    "codigo_postal": null,
+    "telefone": "+351 964 618 972",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/Barrote-Barber-464170221077679/",
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJOcabs25_GQ0RKHD_9oO7z4g",
+    "horario": "Seg-Sex 10h-12h e 14h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJOcabs25_GQ0RKHD_9oO7z4g",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      38.3775978,
+      -8.5144612
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJOcabs25_GQ0RKHD_9oO7z4g"
+    ]
+  },
+  {
+    "nome": "Wellcut Barbershop",
+    "slug": "wellcut-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ferreira do Zêzere",
+    "zone": null,
+    "morada": "Galaria Séc. XX, R. João da Costa Loja 10, 2240-356 Ferreira do Zêzere",
+    "codigo_postal": null,
+    "telefone": "+351 926 409 489",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://wellcut-barbershop.buk.pt/",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJax4X2iSdIg0RixhiHfbXxn0",
+    "horario": "Seg-Sáb 10h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJax4X2iSdIg0RixhiHfbXxn0",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.6935058,
+      -8.2890068
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJax4X2iSdIg0RixhiHfbXxn0"
+    ]
+  },
+  {
+    "nome": "Barata Barbershop",
+    "slug": "barata-barbershop-arganil",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Arganil",
+    "zone": null,
+    "morada": "R. Dr. Veiga Simões 17, 3300-048 Arganil",
+    "codigo_postal": null,
+    "telefone": null,
+    "email": null,
+    "website": "https://widget.treatwell.pt/place/100019984/menu/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJM99nfpncIg0R6jE7cV-DjSk",
+    "horario": "Ter-Sex 10h-13h e 14h30-18h30; Sáb 10h-13h e 14h30-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJM99nfpncIg0R6jE7cV-DjSk",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.2170852,
+      -8.0544154
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJM99nfpncIg0R6jE7cV-DjSk"
+    ]
+  },
+  {
+    "nome": "Barbearia gdias",
+    "slug": "barbearia-gdias",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Tábua",
+    "zone": null,
+    "morada": "R. Cmte. Cândido Serra 5, Loja 23E, 3420-325 Tábua",
+    "codigo_postal": null,
+    "telefone": "+351 961 416 661",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ4xbi_18nIw0RYEXM6Qwjn0k",
+    "horario": "Ter-Sáb 9h30-13h e 14h30-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ4xbi_18nIw0RYEXM6Qwjn0k",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.3603827,
+      -8.0302325
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ4xbi_18nIw0RYEXM6Qwjn0k"
+    ]
+  },
+  {
+    "nome": "Barbearia Pente Quente",
+    "slug": "barbearia-pente-quente",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Tábua",
+    "zone": null,
+    "morada": "R. Cmte. Cândido Serra 15B, 3420-419 Tábua",
+    "codigo_postal": null,
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJaRjUC40nIw0RGPLmo6kxI-k",
+    "horario": "Ter-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJaRjUC40nIw0RGPLmo6kxI-k",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.3617526,
+      -8.0309959
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJaRjUC40nIw0RGPLmo6kxI-k"
+    ]
+  },
+  {
+    "nome": "Barbearia de Tábua",
+    "slug": "barbearia-de-tabua",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Tábua",
+    "zone": null,
+    "morada": "Praça Prof. Dr. António Castanheira Neves, 3420-419 Tábua",
+    "codigo_postal": null,
+    "telefone": "+351 969 000 663",
+    "email": null,
+    "website": "https://sites.appbarber.com.br/cortesdetabua-xvj1",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJnY6kIQAnIw0R99sbpLvPyYc",
+    "horario": "Ter-Sex 10h-13h30 e 14h30-20h; Sáb 10h-15h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJnY6kIQAnIw0R99sbpLvPyYc",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.361277,
+      -8.0302856
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJnY6kIQAnIw0R99sbpLvPyYc"
+    ]
+  },
+  {
+    "nome": "Barbearia AndréBarber",
+    "slug": "barbearia-andrebarber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila Nova de Foz Côa",
+    "zone": null,
+    "morada": "Zona industrial lote 54, Estrada Nacional 222, 5150-614 Vila Nova de Foz Côa",
+    "codigo_postal": null,
+    "telefone": "+351 931 451 255",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJyf_zkr9_Ow0RVhjlP063S9g",
+    "horario": "Seg-Sáb 9h-12h30 e 14h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJyf_zkr9_Ow0RVhjlP063S9g",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.0709611,
+      -7.1429859
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJyf_zkr9_Ow0RVhjlP063S9g"
+    ]
+  },
+  {
+    "nome": "TONY Barber",
+    "slug": "tony-barber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Figueiró dos Vinhos",
+    "zone": null,
+    "morada": "R. Luís Quaresma Vale do Rio 25, 3260-422 Figueiró dos Vinhos",
+    "codigo_postal": null,
+    "telefone": "+351 912 875 733",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJt0y2Y-6RIg0RH8PnCXNFsw0",
+    "horario": "Ter-Sex 9h-13h e 14h30-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJt0y2Y-6RIg0RH8PnCXNFsw0",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.9024233,
+      -8.2763721
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJt0y2Y-6RIg0RH8PnCXNFsw0"
+    ]
+  },
+  {
+    "nome": "Penteadinho Barbeiro",
+    "slug": "penteadinho-barbeiro",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Tocha",
+    "zone": null,
+    "morada": "R. Dr. José Gomes Cruz 130, 3060-714 Tocha",
+    "codigo_postal": null,
+    "telefone": "+351 964 859 280",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/penteadinhobarbeiro",
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJKaSmYCe1Iw0RJP0Zrw-7jxw",
+    "horario": "Ter-Sáb 9h30-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJKaSmYCe1Iw0RJP0Zrw-7jxw",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.3139831,
+      -8.7544237
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJKaSmYCe1Iw0RJP0Zrw-7jxw"
+    ]
+  },
+  {
+    "nome": "Barbearia Albuquerque",
+    "slug": "barbearia-albuquerque",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Tocha",
+    "zone": null,
+    "morada": "Travessa da Rua das Escolas Primárias 541, R/C A, 3060-711 Tocha",
+    "codigo_postal": null,
+    "telefone": "+351 913 907 395",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJoyiPlO-1Iw0RrY7ATHt30lo",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": null,
+    "coords": [
+      40.3144731,
+      -8.7511758
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJoyiPlO-1Iw0RrY7ATHt30lo"
+    ]
+  },
+  {
+    "nome": "BRUNO SALES BARBER STUDIO - Barbearia em Olhão",
+    "slug": "bruno-sales-barber-studio-barbearia-em-olhao",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Olhão",
+    "zone": null,
+    "morada": "R. 18 de Junho 89, 8700-421 Olhão",
+    "codigo_postal": null,
+    "telefone": "+351 936 932 800",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/bsstudiobarber",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJV1dI1bJVBQ0RBSs01WjNEfY",
+    "horario": "Seg 14h-19h; Ter-Sex 9h-12h e 14h-19h; Sáb 8h-12h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJV1dI1bJVBQ0RBSs01WjNEfY",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      37.0286076,
+      -7.8418714
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJV1dI1bJVBQ0RBSs01WjNEfY"
+    ]
+  },
+  {
+    "nome": "Barbearia 021",
+    "slug": "barbearia-021",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Olhão",
+    "zone": null,
+    "morada": "R. Dr. Francisco Fernandes Lopes 22, 8700-470 Olhão",
+    "codigo_postal": null,
+    "telefone": "+351 916 990 511",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://barber021.booksy.com/a/",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJFXHANkhVBQ0RoFUQxZ0PFo8",
+    "horario": "Ter-Sáb 9h-14h15 e 15h15-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJFXHANkhVBQ0RoFUQxZ0PFo8",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      37.0247437,
+      -7.839562
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJFXHANkhVBQ0RoFUQxZ0PFo8"
+    ]
+  },
+  {
+    "nome": "STYLE STUDIO BARBERSHOP",
+    "slug": "style-studio-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Peniche",
+    "zone": null,
+    "morada": "R. dos Hermínios 13b, 2520-420 Peniche",
+    "codigo_postal": null,
+    "telefone": "+351 937 934 536",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://barbeiro-mario.buk.pt/",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ6-h-t31FHw0RKqxpjXeXdXw",
+    "horario": "Seg-Sex 9h-20h; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ6-h-t31FHw0RKqxpjXeXdXw",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.3567911,
+      -9.3795618
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ6-h-t31FHw0RKqxpjXeXdXw"
+    ]
+  },
+  {
+    "nome": "Barbearia 1890",
+    "slug": "barbearia-1890",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Peniche",
+    "zone": null,
+    "morada": "Largo 5 de Outubro no 6, 2520-228 Peniche",
+    "codigo_postal": null,
+    "telefone": "+351 913 398 828",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/Barbearia1890/",
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJaZFUlWVFHw0RkBQDPs9yMTU",
+    "horario": "Seg-Sáb 8h30-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJaZFUlWVFHw0RkBQDPs9yMTU",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.3576142,
+      -9.3793033
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJaZFUlWVFHw0RkBQDPs9yMTU"
+    ]
+  },
+  {
+    "nome": "GOULART BARBERSHOP PENICHE",
+    "slug": "goulart-barbershop-peniche",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Peniche",
+    "zone": null,
+    "morada": "Av. do Porto de Pesca 15, 2520-208 Peniche",
+    "codigo_postal": null,
+    "telefone": "+351 934 176 480",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/goulartbarbershop.peniche",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJG-SrRetFHw0Rz49M2IZjTXk",
+    "horario": "Seg-Qua 10h-19h; Sex 10h-19h; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJG-SrRetFHw0Rz49M2IZjTXk",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.3587559,
+      -9.3716618
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJG-SrRetFHw0Rz49M2IZjTXk"
+    ]
+  },
+  {
+    "nome": "Barba Rija",
+    "slug": "barba-rija",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Peniche",
+    "zone": null,
+    "morada": "Largo de São Paulo 15, 2520-294 Peniche",
+    "codigo_postal": null,
+    "telefone": "+351 930 420 705",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJLfDmQeJFHw0RVuqskLG-z4s",
+    "horario": "Seg-Sáb 10h-13h e 14h30-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJLfDmQeJFHw0RVuqskLG-z4s",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.3569554,
+      -9.3822435
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJLfDmQeJFHw0RVuqskLG-z4s"
+    ]
+  },
+  {
+    "nome": "Barber's City",
+    "slug": "barber-s-city",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Felgueiras",
+    "zone": null,
+    "morada": "R. Julio Dinis 8, 4610-108 Felgueiras",
+    "codigo_postal": null,
+    "telefone": "+351 255 076 511",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ9z0vIr_rJA0RvI77CW8K1Yw",
+    "horario": "Ter-Sex 9h-19h; Sáb 8h-15h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ9z0vIr_rJA0RvI77CW8K1Yw",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.3668783,
+      -8.195259
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ9z0vIr_rJA0RvI77CW8K1Yw"
+    ]
+  },
+  {
+    "nome": "Barbearia Tony Almeida",
+    "slug": "barbearia-tony-almeida",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Felgueiras",
+    "zone": null,
+    "morada": "Av. Dr. Leonardo Coimbra 556, 4610-105 Felgueiras",
+    "codigo_postal": null,
+    "telefone": "+351 255 147 949",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJWcghRhDrJA0RhPY6gd9cZPQ",
+    "horario": "Seg-Ter 10h-20h; Qui-Sex 10h-20h; Sáb 9h-14h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJWcghRhDrJA0RhPY6gd9cZPQ",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.3628014,
+      -8.2009228
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJWcghRhDrJA0RhPY6gd9cZPQ"
+    ]
+  },
+  {
+    "nome": "XPERIENCE. barbearia | hairstudio.",
+    "slug": "xperience-barbearia-hairstudio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Felgueiras",
+    "zone": null,
+    "morada": "R. da Misericórdia 81, 4610-170 Felgueiras",
+    "codigo_postal": null,
+    "telefone": "+351 938 420 938",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJdWbZVPzrJA0RxujPotzTxGM",
+    "horario": "Seg-Sex 9h-21h; Sáb 8h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJdWbZVPzrJA0RxujPotzTxGM",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.3697296,
+      -8.2007306
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJdWbZVPzrJA0RxujPotzTxGM"
+    ]
+  },
+  {
+    "nome": "Maravilha Barbershop",
+    "slug": "maravilha-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Águeda",
+    "zone": null,
+    "morada": "R. Ten-Cel. Albano de Mello 55-A, 3750-166 Águeda",
+    "codigo_postal": null,
+    "telefone": "+351 924 295 111",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/maravilha.barbershop",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJN3V6uM4LIw0Ry2j_e-e2Xjk",
+    "horario": "Ter-Sex 9h-13h e 14h30-20h; Sáb 9h-13h e 14h30-18h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJN3V6uM4LIw0Ry2j_e-e2Xjk",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.5728514,
+      -8.4482645
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJN3V6uM4LIw0Ry2j_e-e2Xjk"
+    ]
+  },
+  {
+    "nome": "CELSIU’S BARBERSHOP",
+    "slug": "celsiu-s-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Águeda",
+    "zone": null,
+    "morada": "R. Dr. Manuel Alegre 40, 3750-139 Águeda",
+    "codigo_postal": null,
+    "telefone": "+351 911 739 808",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJP0cVjugLIw0RMOeTXuhwUco",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": null,
+    "coords": [
+      40.5759623,
+      -8.443202
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJP0cVjugLIw0RMOeTXuhwUco"
+    ]
+  },
+  {
+    "nome": "Tavarex barbearia",
+    "slug": "tavarex-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Águeda",
+    "zone": null,
+    "morada": "R. José de Sucena 124, 3750-146 Águeda",
+    "codigo_postal": null,
+    "telefone": "+351 913 584 989",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ8b7B5S8LIw0R70iNERzcBhs",
+    "horario": "Ter-Sáb 9h30-19h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ8b7B5S8LIw0R70iNERzcBhs",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.575754,
+      -8.4444664
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ8b7B5S8LIw0R70iNERzcBhs"
+    ]
+  },
+  {
+    "nome": "Barbearia Argolo",
+    "slug": "barbearia-argolo",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Águeda",
+    "zone": null,
+    "morada": "R. Dr. Adolfo Portela 15-A, R/C, 3750-119 Águeda",
+    "codigo_postal": null,
+    "telefone": "+351 961 607 832",
+    "email": null,
+    "website": "https://sites.appbarber.com.br/barbeariaargolo",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ-aLGDIMLIw0R4siOsNsABmo",
+    "horario": "Ter-Qui 9h-12h e 14h-20h; Sex 9h-13h e 14h-20h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ-aLGDIMLIw0R4siOsNsABmo",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.5751261,
+      -8.4471388
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ-aLGDIMLIw0R4siOsNsABmo"
+    ]
+  },
+  {
+    "nome": "Old Wood Barbershop",
+    "slug": "old-wood-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Espinho",
+    "zone": null,
+    "morada": "R. 29 527, 4500-297 Espinho",
+    "codigo_postal": null,
+    "telefone": "+351 919 527 593",
+    "email": null,
+    "website": "https://oldwoodbarbershop.setmore.com/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJw9y1MHN5JA0Rixf_hOS6VhM",
+    "horario": "Ter-Sex 9h-13h e 14h30-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJw9y1MHN5JA0Rixf_hOS6VhM",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.0054296,
+      -8.6397147
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJw9y1MHN5JA0Rixf_hOS6VhM"
+    ]
+  },
+  {
+    "nome": "Barbearia da Rua",
+    "slug": "barbearia-da-rua",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Espinho",
+    "zone": null,
+    "morada": "R. 21 no 248, 4500-227 Espinho",
+    "codigo_postal": null,
+    "telefone": "+351 224 907 329",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/barbeariadarua/",
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJQcVAbcZ5JA0RG0AKCqtJZwg",
+    "horario": "Ter 10h-12h e 14h30-19h30; Qua-Sáb 10h-12h30 e 14h30-19h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJQcVAbcZ5JA0RG0AKCqtJZwg",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.0080919,
+      -8.6427933
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJQcVAbcZ5JA0RG0AKCqtJZwg"
+    ]
+  },
+  {
+    "nome": "19 Men's Hair Studio",
+    "slug": "19-men-s-hair-studio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Espinho",
+    "zone": null,
+    "morada": "R. 15 252, 4500-234 Espinho",
+    "codigo_postal": null,
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://buk.pt/19hairstudio",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJyfl1GCZ5JA0R64cBP3W_g9Y",
+    "horario": "Ter-Sex 10h-12h30 e 14h-19h; Sáb 9h-12h30 e 14h-16h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJyfl1GCZ5JA0R64cBP3W_g9Y",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.0094028,
+      -8.6433008
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJyfl1GCZ5JA0R64cBP3W_g9Y"
+    ]
+  },
+  {
+    "nome": "Sopranos Barbershop & Lounge",
+    "slug": "sopranos-barbershop-lounge",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Torres Vedras",
+    "zone": null,
+    "morada": "R. Cândido dos Reis 78A, 2560-312 Torres Vedras",
+    "codigo_postal": null,
+    "telefone": "+351 927 643 602",
+    "email": null,
+    "website": "https://www.sopranos.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ1fgz3MAtHw0RGjESKxE9oQg",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": null,
+    "coords": [
+      39.0934668,
+      -9.258755
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ1fgz3MAtHw0RGjESKxE9oQg"
+    ]
+  },
+  {
+    "nome": "Barbearia Salão Studio 87",
+    "slug": "barbearia-salao-studio-87",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Torres Vedras",
+    "zone": null,
+    "morada": "R. 1o de Dezembro 19, 2560-300 Torres Vedras",
+    "codigo_postal": null,
+    "telefone": "+351 261 314 311",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJsyeMoZEtHw0RqN6SVdPtbZo",
+    "horario": "Seg-Sáb 9h30-20h; Dom 10h-12h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJsyeMoZEtHw0RqN6SVdPtbZo",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.0924251,
+      -9.2580337
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJsyeMoZEtHw0RqN6SVdPtbZo"
+    ]
+  },
+  {
+    "nome": "Barbearia West Cutz - Torres Vedras",
+    "slug": "barbearia-west-cutz-torres-vedras",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Torres Vedras",
+    "zone": null,
+    "morada": "R. da Várzea 12 Lj C, 2560-636 Torres Vedras",
+    "codigo_postal": null,
+    "telefone": "+351 913 425 665",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/west__cutz",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ9biGGM0tHw0R09GNZmahdL4",
+    "horario": "Ter-Sáb 9h30-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ9biGGM0tHw0R09GNZmahdL4",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.091946,
+      -9.2615327
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ9biGGM0tHw0R09GNZmahdL4"
+    ]
+  },
+  {
+    "nome": "Underboss Barbershop",
+    "slug": "underboss-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Torres Vedras",
+    "zone": null,
+    "morada": "R. António Batalha Reis 5 B, 2560-308 Torres Vedras",
+    "codigo_postal": null,
+    "telefone": "+351 932 815 104",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJZ2gP8CctHw0RRtrKnu9rp4Q",
+    "horario": "Ter-Sex 9h-20h; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJZ2gP8CctHw0RRtrKnu9rp4Q",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.0898778,
+      -9.2606532
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJZ2gP8CctHw0RRtrKnu9rp4Q"
+    ]
+  },
+  {
+    "nome": "Barbearia Olivio",
+    "slug": "barbearia-olivio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ourém",
+    "zone": null,
+    "morada": "R. Afonso Gaio 24, 2490-511 Ourém",
+    "codigo_postal": null,
+    "telefone": "+351 962 937 242",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbeariaolivio",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ6WGQI8aDGA0R7iDTc4ZL1UY",
+    "horario": "Ter-Sex 9h-19h; Sáb 8h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ6WGQI8aDGA0R7iDTc4ZL1UY",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.6551771,
+      -8.5787737
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ6WGQI8aDGA0R7iDTc4ZL1UY"
+    ]
+  },
+  {
+    "nome": "The Big Dogs Barbershop",
+    "slug": "the-big-dogs-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ourém",
+    "zone": null,
+    "morada": "R. Carvalho Araújo no 3 Loja 4, 2490-528 Ourém",
+    "codigo_postal": null,
+    "telefone": "+351 916 509 855",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJIw42GeeDGA0RTK6OmNNTwLY",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": null,
+    "coords": [
+      39.6560743,
+      -8.577454
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJIw42GeeDGA0RTK6OmNNTwLY"
+    ]
+  },
+  {
+    "nome": "BARBEARIA 84",
+    "slug": "barbearia-84",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ourém",
+    "zone": null,
+    "morada": "R. Dr. Francisco Sá Carneiro no84, 2490-548 Ourém",
+    "codigo_postal": null,
+    "telefone": "+351 249 595 159",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJUc9KSFWDGA0RMrCU-qV-YRg",
+    "horario": "Ter-Sex 10h-12h30 e 14h-21h; Sáb 9h-12h30 e 14h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJUc9KSFWDGA0RMrCU-qV-YRg",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.6548637,
+      -8.5750759
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJUc9KSFWDGA0RMrCU-qV-YRg"
+    ]
+  },
+  {
+    "nome": "Barbearia Supremos",
+    "slug": "barbearia-supremos",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ourém",
+    "zone": null,
+    "morada": "Av. Dom Nuno Álvares Pereira 169, 2490-483 Ourém",
+    "codigo_postal": null,
+    "telefone": "+351 935 172 561",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ25jCEbaDGA0RwAg6GLqduXM",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": null,
+    "coords": [
+      39.6569312,
+      -8.5752527
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ25jCEbaDGA0RwAg6GLqduXM"
+    ]
+  },
+  {
+    "nome": "Barbearia Hermanos BarberShop",
+    "slug": "barbearia-hermanos-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Alcobaça",
+    "zone": null,
+    "morada": "R. Araújo Guimarães 41, 2460-025 Alcobaça",
+    "codigo_postal": null,
+    "telefone": "+351 969 855 531",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/Hemanosbarbershop",
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJGx9aRIilGA0RrbGoVCBIRaA",
+    "horario": "Seg-Sex 10h-21h; Sáb 9h30-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJGx9aRIilGA0RrbGoVCBIRaA",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.5502105,
+      -8.978683
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJGx9aRIilGA0RrbGoVCBIRaA"
+    ]
+  },
+  {
+    "nome": "Urban Barbearia",
+    "slug": "urban-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila Nova de Famalicão",
+    "zone": null,
+    "morada": "R. Luís Barroso 22, 4760-153 Vila Nova de Famalicão",
+    "codigo_postal": null,
+    "telefone": "+351 923 334 625",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/urbanbarbearias/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJDc2yIlFZJA0RAuR7E1jQcvY",
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJDc2yIlFZJA0RAuR7E1jQcvY",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.4057212,
+      -8.5218981
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJDc2yIlFZJA0RAuR7E1jQcvY"
+    ]
+  },
+  {
+    "nome": "Capelo Gentleman’s Club",
+    "slug": "capelo-gentleman-s-club",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila Nova de Famalicão",
+    "zone": null,
+    "morada": "R. Ernesto Carvalho 48, 4760-143 Vila Nova de Famalicão",
+    "codigo_postal": null,
+    "telefone": "+351 911 037 969",
+    "email": null,
+    "website": null,
+    "instagram": "https://instagram.com/capelo_gentlemansclub",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJFTmc6w1ZJA0R7OivVKiHqYw",
+    "horario": "Ter-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJFTmc6w1ZJA0R7OivVKiHqYw",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.4082413,
+      -8.5223923
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJFTmc6w1ZJA0R7OivVKiHqYw"
+    ]
+  },
+  {
+    "nome": "Barbearia New Tricks",
+    "slug": "barbearia-new-tricks",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila Nova de Famalicão",
+    "zone": null,
+    "morada": "R. Barão de Trovisqueira 423, 4760-126 Vila Nova de Famalicão",
+    "codigo_postal": null,
+    "telefone": "+351 935 100 996",
+    "email": null,
+    "website": "https://sites.appbarber.com.br/agendamento/carlosmota-4kit",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJV_zLAJhZJA0Rg5C0NdvR3Vk",
+    "horario": "Seg-Sex 10h-20h; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJV_zLAJhZJA0Rg5C0NdvR3Vk",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.405463,
+      -8.526261
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJV_zLAJhZJA0Rg5C0NdvR3Vk"
+    ]
+  },
+  {
+    "nome": "Don Guilherme Barbearia",
+    "slug": "don-guilherme-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila Nova de Famalicão",
+    "zone": null,
+    "morada": "R. Padre Benjamin Salgado 110 Lj 05, 4760-104 Vila Nova de Famalicão",
+    "codigo_postal": null,
+    "telefone": "+351 935 310 646",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJkUvjdF5ZJA0RBQ1j7IYmPWI",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": null,
+    "coords": [
+      41.4038077,
+      -8.520802
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJkUvjdF5ZJA0RBQ1j7IYmPWI"
+    ]
+  },
+  {
+    "nome": "Brizzi Barbearia",
+    "slug": "brizzi-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "São Brás de Alportel",
+    "zone": null,
+    "morada": "R. João de Deus 32, 8150-152 São Brás de Alportel",
+    "codigo_postal": null,
+    "telefone": "+351 916 970 585",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbeariabrizzi",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJAwCfPtuuGg0RVXVkQPcsGZs",
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJAwCfPtuuGg0RVXVkQPcsGZs",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      37.153402,
+      -7.8866798
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJAwCfPtuuGg0RVXVkQPcsGZs"
+    ]
+  },
+  {
+    "nome": "Brito's Barbearia",
+    "slug": "brito-s-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "São Brás de Alportel",
+    "zone": null,
+    "morada": "R. Jornal O Sambrazense 20, 8150-101 São Brás de Alportel",
+    "codigo_postal": null,
+    "telefone": "+351 289 841 568",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJoWMJGQavGg0RfjQ0FlrwhxM",
+    "horario": "Seg-Sex 9h-20h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJoWMJGQavGg0RfjQ0FlrwhxM",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      37.1546478,
+      -7.8898189
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJoWMJGQavGg0RfjQ0FlrwhxM"
+    ]
+  },
+  {
+    "nome": "Baron de Ville Barbershop",
+    "slug": "baron-de-ville-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Lourinhã",
+    "zone": null,
+    "morada": "R. da Misericórdia 13, 2530-137 Lourinhã",
+    "codigo_postal": null,
+    "telefone": "+351 913 820 658",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/share/19F989GKsi/",
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJHV2rYLQ3Hw0RVoPjLrzVLHM",
+    "horario": "Seg-Sáb 9h-12h20 e 13h40-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJHV2rYLQ3Hw0RVoPjLrzVLHM",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.2424676,
+      -9.313596
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJHV2rYLQ3Hw0RVoPjLrzVLHM"
+    ]
+  },
+  {
+    "nome": "Imperium barbershop",
+    "slug": "imperium-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Lourinhã",
+    "zone": null,
+    "morada": "R. Miguel Bombarda 7, 2530-161 Lourinhã",
+    "codigo_postal": null,
+    "telefone": "+351 915 998 075",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/imperium.barbershop.ofc",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJwZTKhuo3Hw0R5WnSc4P4GPs",
+    "horario": "Seg-Sex 9h-20h; Sáb 8h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJwZTKhuo3Hw0R5WnSc4P4GPs",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.2416216,
+      -9.3108642
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJwZTKhuo3Hw0R5WnSc4P4GPs"
+    ]
+  },
+  {
+    "nome": "Old West Barbershop",
+    "slug": "old-west-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Lourinhã",
+    "zone": null,
+    "morada": "R. Heliodoro Salgado 18, 2530-158 Lourinhã",
+    "codigo_postal": null,
+    "telefone": "+351 912 790 078",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://oldwestbarbershop.buk.pt/",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJs7OWphc3Hw0Rp_XM4ypLDmQ",
+    "horario": "Seg-Ter 10h-13h e 14h-19h; Qui-Sáb 10h-13h e 14h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJs7OWphc3Hw0Rp_XM4ypLDmQ",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.24101,
+      -9.312281
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJs7OWphc3Hw0Rp_XM4ypLDmQ"
+    ]
+  },
+  {
+    "nome": "Barbearia Loba",
+    "slug": "barbearia-loba",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Lourinhã",
+    "zone": null,
+    "morada": "R. António Maria Roque Delgado 2 LOJA E, 2530-132 Lourinhã",
+    "codigo_postal": null,
+    "telefone": "+351 261 411 368",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ24vkbL83Hw0RHRkelkDo2U4",
+    "horario": "Seg-Sex 9h-20h; Sáb 9h-19h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ24vkbL83Hw0RHRkelkDo2U4",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.2420061,
+      -9.3104316
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ24vkbL83Hw0RHRkelkDo2U4"
+    ]
+  },
+  {
+    "nome": "RIKK BARBERSHOP",
+    "slug": "rikk-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Albergaria-a-Velha",
+    "zone": null,
+    "morada": "R. Eng. Brito Rebelo, 3850-022 Albergaria-a-Velha",
+    "codigo_postal": null,
+    "telefone": "+351 919 531 673",
+    "email": null,
+    "website": "https://rikkbarber.com/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJMQAsoWl1Iw0RIv8SJSOy_r0",
+    "horario": "Seg 14h-20h; Ter-Sex 9h-13h e 14h-20h; Sáb 9h-13h e 14h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJMQAsoWl1Iw0RIv8SJSOy_r0",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.6899581,
+      -8.4746699
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJMQAsoWl1Iw0RIv8SJSOy_r0"
+    ]
+  },
+  {
+    "nome": "Ladeira Barbershop",
+    "slug": "ladeira-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Albergaria-a-Velha",
+    "zone": null,
+    "morada": "R. José Nunes Alves 21 r/ch esq, 3850-076 Albergaria-a-Velha",
+    "codigo_postal": null,
+    "telefone": "+351 915 427 549",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://noona.pt/ladeirabarbershop",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJEfTHXFl1Iw0Rq5Gqldlva2E",
+    "horario": "Seg 14h-19h30; Ter-Sex 9h-12h30 e 14h-19h30; Sáb 9h-12h30 e 14h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJEfTHXFl1Iw0Rq5Gqldlva2E",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.6885367,
+      -8.4812132
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJEfTHXFl1Iw0Rq5Gqldlva2E"
+    ]
+  },
+  {
+    "nome": "RodriguesHairStyle",
+    "slug": "rodrigueshairstyle",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Alcobaça",
+    "zone": null,
+    "morada": "Avenida dos Combatentes da Grande Guerra N.o 23 A, 2460-039 Alcobaça",
+    "codigo_postal": null,
+    "telefone": "+351 913 393 757",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/_rodrigueshairstyle_/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJUcvxS_ClGA0RzW5nEms0JW8",
+    "horario": "Seg-Sex 10h-20h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJUcvxS_ClGA0RzW5nEms0JW8",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.5497899,
+      -8.9749086
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJUcvxS_ClGA0RzW5nEms0JW8"
+    ]
+  },
+  {
+    "nome": "Varela - Barbearia do Bairro",
+    "slug": "varela-barbearia-do-bairro",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Alcobaça",
+    "zone": null,
+    "morada": "R. de Angola 8 Loja 2, 2460-024 Alcobaça",
+    "codigo_postal": null,
+    "telefone": "+351 913 379 492",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://www.noona.pt/varelabarbeariadobairro",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJD5ACAqulGA0Reg7LbBNfB3Y",
+    "horario": "Seg-Sex 10h-19h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJD5ACAqulGA0Reg7LbBNfB3Y",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      39.544524,
+      -8.9752808
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJD5ACAqulGA0Reg7LbBNfB3Y"
+    ]
+  },
+  {
+    "nome": "Barbearia Dom Xila",
+    "slug": "barbearia-dom-xila",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Vila Viçosa",
+    "zone": null,
+    "morada": "Rua de Cambaia 67, 7160-275 Vila Viçosa",
+    "codigo_postal": null,
+    "telefone": "+351 968 237 355",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ-XQaty4VFw0RCTWYN_hQyc0",
+    "horario": "Seg-Sex 10h-19h; Sáb 10h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ-XQaty4VFw0RCTWYN_hQyc0",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      38.7778195,
+      -7.4169272
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ-XQaty4VFw0RCTWYN_hQyc0"
+    ]
+  },
+  {
+    "nome": "Spot 25",
+    "slug": "spot-25",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Aljezur",
+    "zone": null,
+    "morada": "R. 25 de Abril 51, 8670-057 Aljezur",
+    "codigo_postal": null,
+    "telefone": "+351 961 910 221",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://buk.pt/spot-25/",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJSzTKYAAVGw0RtYtUyxwYgcQ",
+    "horario": "Seg-Sáb 9h30-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJSzTKYAAVGw0RtYtUyxwYgcQ",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      37.3151715,
+      -8.8035994
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJSzTKYAAVGw0RtYtUyxwYgcQ"
+    ]
+  },
+  {
+    "nome": "Complexo da Beleza",
+    "slug": "complexo-da-beleza",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Aljezur",
+    "zone": null,
+    "morada": "Edifício D. Dinis, R. 25 de Abril 61, Loja C, 8670-156 Aljezur",
+    "codigo_postal": null,
+    "telefone": "+351 933 523 165",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/cpxbarbershop",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJQXQBRBwVGw0RjlbNHeCafNw",
+    "horario": "Seg-Sex 9h-12h e 14h-18h; Sáb 9h-12h e 14h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJQXQBRBwVGw0RjlbNHeCafNw",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      37.3148225,
+      -8.8034972
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJQXQBRBwVGw0RjlbNHeCafNw"
+    ]
+  },
+  {
+    "nome": "[FORJA] barbershop by Bruno Gomes",
+    "slug": "forja-barbershop-by-bruno-gomes",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Cabeceiras de Basto",
+    "zone": null,
+    "morada": "R. Fonte de São João 6, R/C, 4860-148 Cabeceiras de Basto",
+    "codigo_postal": null,
+    "telefone": "+351 964 235 093",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://forjabybrunogomes.buk.pt/",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJKWxVixjbJA0RI1F4B4wKNzE",
+    "horario": "Ter-Sex 10h-20h; Sáb 8h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJKWxVixjbJA0RI1F4B4wKNzE",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.5133406,
+      -7.9877694
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJKWxVixjbJA0RI1F4B4wKNzE"
+    ]
+  },
+  {
+    "nome": "Barbearia São Miguel",
+    "slug": "barbearia-sao-miguel",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Cabeceiras de Basto",
+    "zone": null,
+    "morada": "Av. Cardeal Dom António Ribeiro (Continente Bom Dia), 4860-306 Cabeceiras de Basto",
+    "codigo_postal": null,
+    "telefone": "+351 926 907 367",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJCVARmvnbJA0RusIGub1Cc-s",
+    "horario": "Seg-Sex 9h-19h30; Sáb 8h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJCVARmvnbJA0RusIGub1Cc-s",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.5109217,
+      -7.9883659
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJCVARmvnbJA0RusIGub1Cc-s"
+    ]
+  },
+  {
+    "nome": "Barbearia Spot4560",
+    "slug": "barbearia-spot4560",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Penafiel",
+    "zone": null,
+    "morada": "R. Dom António Ferreira Gomes 50A, 4560-568 Penafiel",
+    "codigo_postal": null,
+    "telefone": "+351 910 819 356",
+    "email": null,
+    "website": "https://www.spot4560.com/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJk6nul2GRJA0Rzkgewopqc48",
+    "horario": "Ter-Sex 9h30-12h30 e 14h-19h; Sáb 9h-13h e 14h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJk6nul2GRJA0Rzkgewopqc48",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.20733,
+      -8.2780295
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJk6nul2GRJA0Rzkgewopqc48"
+    ]
+  },
+  {
+    "nome": "Kolapso Barbershop",
+    "slug": "kolapso-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Penafiel",
+    "zone": null,
+    "morada": "R. Abílio Miranda 175 Lj A, 4560-501 Penafiel",
+    "codigo_postal": null,
+    "telefone": "+351 918 574 404",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/kolapso_barbershop/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJjdNdiouRJA0RMyAwfvaPhSA",
+    "horario": "Ter-Sáb 10h-13h e 14h-19h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJjdNdiouRJA0RMyAwfvaPhSA",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.2097191,
+      -8.2783563
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJjdNdiouRJA0RMyAwfvaPhSA"
+    ]
+  },
+  {
+    "nome": "Quintinus Barber Shop",
+    "slug": "quintinus-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Penafiel",
+    "zone": null,
+    "morada": "R. Dom António Ferreira Gomes 180B, 4560-568 Penafiel",
+    "codigo_postal": null,
+    "telefone": "+351 910 035 310",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJlcSKWjiRJA0Rq5JXz7BbbPo",
+    "horario": "Ter 10h-12h30 e 14h-20h30; Qua 9h-12h30 e 14h-19h; Qui 10h-12h30 e 14h-20h30; Sex 9h-12h30 e 14h-19h; Sáb 8h-12h e 13h30-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJlcSKWjiRJA0Rq5JXz7BbbPo",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.2072959,
+      -8.2763482
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJlcSKWjiRJA0Rq5JXz7BbbPo"
+    ]
+  },
+  {
+    "nome": "Barbearia Alium",
+    "slug": "barbearia-alium",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Penafiel",
+    "zone": null,
+    "morada": "Av. José Júlio 82, 4560-547 Penafiel",
+    "codigo_postal": null,
+    "telefone": "+351 910 047 634",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/alium_concept/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJo5vOcPGRJA0RnAZQ9GEzUxM",
+    "horario": "Seg 9h-13h; Ter-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJo5vOcPGRJA0RnAZQ9GEzUxM",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.2002197,
+      -8.2896364
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJo5vOcPGRJA0RnAZQ9GEzUxM"
+    ]
+  },
+  {
+    "nome": "Pettis Barbearia",
+    "slug": "pettis-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Paredes",
+    "zone": null,
+    "morada": "Av. Dr. Francisco Sá Carneiro 222, 4580-104 Paredes",
+    "codigo_postal": null,
+    "telefone": "+351 937 372 067",
+    "email": null,
+    "website": "https://sites.appbarber.com.br/pettisbarbearia-y5w3",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ535ceyiPJA0R_GKYNqSw_3M",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": null,
+    "coords": [
+      41.2030575,
+      -8.3284477
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ535ceyiPJA0R_GKYNqSw_3M"
+    ]
+  },
+  {
+    "nome": "Caesar’s Barbershop Barbearia",
+    "slug": "caesar-s-barbershop-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Paredes",
+    "zone": null,
+    "morada": "Av. das Comunidades 532 A, 4580-875 Paredes",
+    "codigo_postal": null,
+    "telefone": "+351 910 463 385",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJr8i_yaaPJA0R30YnGjxbRpA",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": null,
+    "coords": [
+      41.2074152,
+      -8.3279636
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJr8i_yaaPJA0R30YnGjxbRpA"
+    ]
+  },
+  {
+    "nome": "Zero27 barbershop",
+    "slug": "zero27-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Oliveira de Azeméis",
+    "zone": null,
+    "morada": "R. Velha de Santo António, 3720-222 Oliveira de Azeméis",
+    "codigo_postal": null,
+    "telefone": "+351 968 118 450",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJz7_tc-R5Iw0R-HFbRzv4QVk",
+    "horario": "Seg-Sex 9h-20h; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJz7_tc-R5Iw0R-HFbRzv4QVk",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.8405515,
+      -8.4760674
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJz7_tc-R5Iw0R-HFbRzv4QVk"
+    ]
+  },
+  {
+    "nome": "Resende BarberPub",
+    "slug": "resende-barberpub",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Oliveira de Azeméis",
+    "zone": null,
+    "morada": "R. António Bernardo 153, 3720-301 Oliveira de Azeméis",
+    "codigo_postal": null,
+    "telefone": "+351 912 867 019",
+    "email": null,
+    "website": null,
+    "instagram": "https://instagram.com/resendebarberpub",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJD1eH5ft5Iw0R1h1zmRpHsxo",
+    "horario": "Ter-Sex 9h30-12h30 e 13h30-19h; Sáb 9h-15h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJD1eH5ft5Iw0R1h1zmRpHsxo",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.8350202,
+      -8.4769064
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJD1eH5ft5Iw0R1h1zmRpHsxo"
+    ]
+  },
+  {
+    "nome": "JO \"El Barbero\"",
+    "slug": "jo-el-barbero",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Oliveira de Azeméis",
+    "zone": null,
+    "morada": "R. António Alegria 166, 3720-234 Oliveira de Azeméis",
+    "codigo_postal": null,
+    "telefone": "+351 918 601 948",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJWa72qgZ5Iw0RGILKZKo_4PI",
+    "horario": "Ter-Sex 9h30-19h30; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJWa72qgZ5Iw0RGILKZKo_4PI",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.837723,
+      -8.477985
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJWa72qgZ5Iw0RGILKZKo_4PI"
+    ]
+  },
+  {
+    "nome": "Bini Barber",
+    "slug": "bini-barber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Oliveira de Azeméis",
+    "zone": null,
+    "morada": "Av. António José de Almeida 46, 3720-239 Oliveira de Azeméis",
+    "codigo_postal": null,
+    "telefone": "+351 912 375 517",
+    "email": null,
+    "website": "https://binibarber.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ7xBS_715Iw0RBEE0IqAjjBU",
+    "horario": "Seg 14h-20h; Ter-Sex 9h-20h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ7xBS_715Iw0RBEE0IqAjjBU",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.8357366,
+      -8.4773996
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ7xBS_715Iw0RBEE0IqAjjBU"
+    ]
+  },
+  {
+    "nome": "Fifty’s Barbershop",
+    "slug": "fifty-s-barbershop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Quarteira",
+    "zone": null,
+    "morada": "R. Gonçalo Velho 47, 8125-221 Quarteira",
+    "codigo_postal": null,
+    "telefone": "+351 966 160 515",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/fiftys_barbershop/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ0f_ONiS1Gg0R7ab7K50euNg",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": null,
+    "coords": [
+      37.069625,
+      -8.1058133
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ0f_ONiS1Gg0R7ab7K50euNg"
+    ]
+  },
+  {
+    "nome": "Barbearia & Tattoo SnailShop",
+    "slug": "barbearia-tattoo-snailshop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Quarteira",
+    "zone": null,
+    "morada": "R. Manuel Pontes da Horta 7, 8125-232 Quarteira",
+    "codigo_postal": null,
+    "telefone": "+351 914 262 404",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://noona.app/snailshop",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJMbwrt1e1Gg0Rgl9KeHmelx4",
+    "horario": "Seg-Qua 9h-19h; Qui 9h-20h; Sex-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJMbwrt1e1Gg0Rgl9KeHmelx4",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      37.0707881,
+      -8.1067141
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJMbwrt1e1Gg0Rgl9KeHmelx4"
+    ]
+  },
+  {
+    "nome": "Coyotte BarberStudio",
+    "slug": "coyotte-barberstudio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Quarteira",
+    "zone": null,
+    "morada": "R. do Portão bloco F, 8125-406 Quarteira",
+    "codigo_postal": null,
+    "telefone": "+351 933 147 404",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://raffaelbarbeiro.buk.pt/",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJq-SoGq21Gg0R4ECFJFYPrHA",
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJq-SoGq21Gg0R4ECFJFYPrHA",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      37.0691172,
+      -8.0980953
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJq-SoGq21Gg0R4ECFJFYPrHA"
+    ]
+  },
+  {
+    "nome": "Barbearia Ferreira",
+    "slug": "barbearia-ferreira-arouca",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Arouca",
+    "zone": null,
+    "morada": "Galeria Comercial, R. Abel Botelho 8G, 4540-114 Arouca",
+    "codigo_postal": null,
+    "telefone": "+351 256 941 690",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJV0InoL5jIw0RZKEFl9yyNfo",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": null,
+    "coords": [
+      40.9292489,
+      -8.2485333
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJV0InoL5jIw0RZKEFl9yyNfo"
+    ]
+  },
+  {
+    "nome": "Daniel's Barber",
+    "slug": "daniel-s-barber",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Arouca",
+    "zone": null,
+    "morada": "R. Dr. Ângelo Miranda 10, 4540-104 Arouca",
+    "codigo_postal": null,
+    "telefone": "+351 915 963 468",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJZxzTV7tjIw0RZRlCZYxJ1N4",
+    "horario": "Seg 14h30-20h; Ter 10h-20h30; Qua 10h-19h30; Qui-Sex 10h-21h; Sáb 9h30-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJZxzTV7tjIw0RZRlCZYxJ1N4",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.9300058,
+      -8.2536145
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJZxzTV7tjIw0RZRlCZYxJ1N4"
+    ]
+  },
+  {
+    "nome": "The New Styles Barber Shop",
+    "slug": "the-new-styles-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Estarreja",
+    "zone": null,
+    "morada": "Largo dos Heróis da Grande Guerra 29, 3860-355 Estarreja",
+    "codigo_postal": null,
+    "telefone": "+351 928 416 513",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJHdflxJidIw0RUcW17uNmg10",
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJHdflxJidIw0RUcW17uNmg10",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.7517167,
+      -8.5710357
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJHdflxJidIw0RUcW17uNmg10"
+    ]
+  },
+  {
+    "nome": "Eagles Barber Shop",
+    "slug": "eagles-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Estarreja",
+    "zone": null,
+    "morada": "Praça de Francisco Barbosa 51, 3860-356 Estarreja",
+    "codigo_postal": null,
+    "telefone": "+351 925 413 690",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJI3ZeFTqdIw0RakhrSP8K-yo",
+    "horario": "Seg-Sáb 9h-12h30 e 14h-19h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJI3ZeFTqdIw0RakhrSP8K-yo",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.7529307,
+      -8.5701391
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJI3ZeFTqdIw0RakhrSP8K-yo"
+    ]
+  },
+  {
+    "nome": "Junior Barbeiro Classic",
+    "slug": "junior-barbeiro-classic",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Estarreja",
+    "zone": null,
+    "morada": "Centro Comercial Conjunto Altamira, R. Dom Manuel I 51, 3860-366 Estarreja",
+    "codigo_postal": null,
+    "telefone": "+351 931 132 790",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://noona.pt/juniorbarbeiroclassic",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJBbK9agCdIw0Rr68qfJaoKkA",
+    "horario": "Seg-Sáb 9h30-13h e 14h30-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJBbK9agCdIw0Rr68qfJaoKkA",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.7541145,
+      -8.5730522
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJBbK9agCdIw0Rr68qfJaoKkA"
+    ]
+  },
+  {
+    "nome": "Studio K11 Barber Shop-Tondela",
+    "slug": "studio-k11-barber-shop-tondela",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Tondela",
+    "zone": null,
+    "morada": "R. Dr. Teofilo da Cruz, 3460-073 Tondela",
+    "codigo_postal": null,
+    "telefone": "+351 914 088 672",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/carloslemosbarbeiro",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJX70SmQg9Iw0RIIKjlDrFs8w",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": null,
+    "coords": [
+      40.517106,
+      -8.0819846
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJX70SmQg9Iw0RIIKjlDrFs8w"
+    ]
+  },
+  {
+    "nome": "Barbershop O PEXITO",
+    "slug": "barbershop-o-pexito",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Sesimbra",
+    "zone": null,
+    "morada": "R. Rainha Dona Leonor 17, 2970-778 Sesimbra",
+    "codigo_postal": null,
+    "telefone": "+351 964 210 270",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJo_fxcyBSGQ0ReWepytgI-sE",
+    "horario": "Seg-Ter 10h-19h30; Qua-Sex 10h-14h e 14h30-19h30; Sáb 9h30-14h e 14h30-19h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJo_fxcyBSGQ0ReWepytgI-sE",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      38.4440342,
+      -9.1017348
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJo_fxcyBSGQ0ReWepytgI-sE"
+    ]
+  },
+  {
+    "nome": "Papi Barber Studio",
+    "slug": "papi-barber-studio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Sesimbra",
+    "zone": null,
+    "morada": "Av. 25 de Abril 6H, 2970-773 Sesimbra",
+    "codigo_postal": null,
+    "telefone": "+351 963 774 848",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/studiopapibarber",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJW7FndgBRGQ0R9-AYBVPf5XM",
+    "horario": "Seg-Sáb 9h-19h; Dom 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJW7FndgBRGQ0R9-AYBVPf5XM",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      38.4422611,
+      -9.0969627
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJW7FndgBRGQ0R9-AYBVPf5XM"
+    ]
+  },
+  {
+    "nome": "Lamina de Prata, Barber ,Tattoo and Body Piercing Shop",
+    "slug": "lamina-de-prata-barber-tattoo-and-body-piercing-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Sesimbra",
+    "zone": null,
+    "morada": "R. da República 46, 1.o andar, Loja 8, 2970-741 Sesimbra",
+    "codigo_postal": null,
+    "telefone": "+351 939 081 111",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJkyUagONRGQ0RiSYQgU1uQz4",
+    "horario": "Ter-Sáb 10h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJkyUagONRGQ0RiSYQgU1uQz4",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      38.4436804,
+      -9.1009153
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJkyUagONRGQ0RiSYQgU1uQz4"
+    ]
+  },
+  {
+    "nome": "Barbearia MANEL D'OLIVEIRA",
+    "slug": "barbearia-manel-d-oliveira",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mealhada",
+    "zone": null,
+    "morada": "Av. Q.ta da Nora 26, 3050-336 Mealhada",
+    "codigo_postal": null,
+    "telefone": "+351 919 156 508",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/barbeariamaneldoliveira/",
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJF9HKj-8AIw0RP4O4Ool1pf8",
+    "horario": "Seg 14h-18h; Ter-Sex 9h-18h; Sáb 8h-12h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJF9HKj-8AIw0RP4O4Ool1pf8",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.3778013,
+      -8.4503147
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJF9HKj-8AIw0RP4O4Ool1pf8"
+    ]
+  },
+  {
+    "nome": "Barbearia Dias",
+    "slug": "barbearia-dias",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mealhada",
+    "zone": null,
+    "morada": "R. Prof. Dr. Costa Simões 18, 3050-326 Mealhada",
+    "codigo_postal": null,
+    "telefone": "+351 231 405 984",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJyZF2feUAIw0RP3DBuoJAjH0",
+    "horario": null,
+    "horario_fonte": null,
+    "observacoes": null,
+    "coords": [
+      40.3785383,
+      -8.451174
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "media",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJyZF2feUAIw0RP3DBuoJAjH0"
+    ]
+  },
+  {
+    "nome": "ROYAL JACK Barber Shop",
+    "slug": "royal-jack-barber-shop",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mealhada",
+    "zone": null,
+    "morada": "R. Armindo Pêga 3, 3050-377 Mealhada",
+    "codigo_postal": null,
+    "telefone": "+351 912 857 313",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJkYcBviMBIw0R7Pu-ZDHbqpk",
+    "horario": "Seg 14h-20h; Ter-Sáb 10h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJkYcBviMBIw0R7Pu-ZDHbqpk",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.3776641,
+      -8.4509791
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJkYcBviMBIw0R7Pu-ZDHbqpk"
+    ]
+  },
+  {
+    "nome": "Barbearia Taveira",
+    "slug": "barbearia-taveira",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Mealhada",
+    "zone": null,
+    "morada": "R. Prof. Dr. Costa Simões, 3050-362 Mealhada",
+    "codigo_postal": null,
+    "telefone": "+351 965 353 986",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ6RiGg-UAIw0R0CLInBi5KfU",
+    "horario": "Ter-Sex 9h-20h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJ6RiGg-UAIw0R0CLInBi5KfU",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      40.37944,
+      -8.4507121
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJ6RiGg-UAIw0R0CLInBi5KfU"
+    ]
+  },
+  {
+    "nome": "O Palco Do Barbeiro",
+    "slug": "o-palco-do-barbeiro",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Valpaços",
+    "zone": null,
+    "morada": "Av. Nossa Sra. da Saúde 34, 5430-422 Valpaços",
+    "codigo_postal": null,
+    "telefone": "+351 930 405 287",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://opalcodobarbeiro.buk.pt/",
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJDRZ8TH4cOw0R6yDSrdz4hho",
+    "horario": "Ter-Sex 9h-19h; Sáb 9h-13h e 14h30-17h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJDRZ8TH4cOw0R6yDSrdz4hho",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.6105684,
+      -7.3101989
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJDRZ8TH4cOw0R6yDSrdz4hho"
+    ]
+  },
+  {
+    "nome": "Barbearia Do Asfalto",
+    "slug": "barbearia-do-asfalto",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Valpaços",
+    "zone": null,
+    "morada": "R. Heróis do Ultramar 16 B1 L-7, 5430-476 Valpaços",
+    "codigo_postal": null,
+    "telefone": "+351 910 671 954",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJb-Llnq8bOw0RNKB9rBaztDA",
+    "horario": "Seg-Sex 8h30-12h30 e 14h-19h; Sáb 8h30-12h30 e 14h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/place/?q=place_id:ChIJb-Llnq8bOw0RNKB9rBaztDA",
+      "data": "2026-10-17"
+    },
+    "observacoes": null,
+    "coords": [
+      41.6062356,
+      -7.3105676
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJb-Llnq8bOw0RNKB9rBaztDA"
+    ]
   }
 ];
 

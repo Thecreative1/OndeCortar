@@ -355,6 +355,80 @@
     }
 
     
+    [hidden] { display: none !important; }
+    .oc-filters {
+      display: grid;
+      gap: 12px;
+      margin: 0 0 22px;
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .oc-filters-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+    .oc-filters-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .oc-filters-sub { color: var(--muted); font-size: 0.88rem; }
+    .oc-filters-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .oc-filter {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 10px 18px 10px 14px;
+      border-radius: 12px;
+      border: 1.5px solid rgba(200, 135, 58, 0.65);
+      background: rgba(200, 135, 58, 0.08);
+      color: var(--text);
+      font: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+      transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+    }
+    .oc-filter-icon { flex: none; color: var(--gold); }
+    .oc-filter:hover { background: rgba(200, 135, 58, 0.18); border-color: var(--gold); transform: translateY(-1px); }
+    .oc-filter:active { transform: translateY(1px); box-shadow: none; }
+    .oc-filter:focus-visible { outline: 3px solid rgba(227, 168, 99, 0.55); outline-offset: 2px; }
+    .oc-filter[aria-pressed="true"] {
+      background: #C8873A;
+      border-color: #C8873A;
+      color: #17130D;
+    }
+    .oc-filter[aria-pressed="true"] .oc-filter-icon { color: #17130D; }
+    .oc-filter[aria-pressed="true"]::after { content: "✓"; font-weight: 800; margin-left: 2px; }
+    .oc-filter:disabled { opacity: 0.7; cursor: progress; }
+    @media (max-width: 520px) {
+      .oc-filters { padding: 14px; }
+      .oc-filter { flex: 1 1 auto; justify-content: center; }
+    }
+    .oc-filters-status { margin: 0; font-size: 0.92rem; }
+    .oc-filters-status:empty { display: none; }
+    .oc-filters-empty {
+      display: grid;
+      justify-items: start;
+      gap: 10px;
+      padding: 18px;
+      border: 1px dashed var(--border-strong);
+      border-radius: var(--radius-md);
+    }
+    .oc-filters-empty p { margin: 0; }
+    .tag.is-open {
+      background: rgba(31, 77, 58, 0.6);
+      border-color: rgba(70, 170, 120, 0.65);
+      color: #D5EEDF;
+    }
+    .tag.is-closed { color: var(--muted); }
+
   </style>
   <link rel="stylesheet" href="../../mobile-nav.css" />
   <script src="../../mobile-nav.js" defer></script>
@@ -362,7 +436,7 @@
 
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"OndeCortar.pt","item":"https://ondecortar.pt/"},{"@type":"ListItem","position":2,"name":"Cidades","item":"https://ondecortar.pt/cidades/"},{"@type":"ListItem","position":3,"name":"Alcobaça","item":"https://ondecortar.pt/cidades/alcobaca/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Barbearias em Alcobaça","description":"Barbearias em Alcobaça com morada, horário e mapa. Encontra o barbeiro certo, vê como chegar e escolhe onde cortar o cabelo no OndeCortar.pt.","url":"https://ondecortar.pt/cidades/alcobaca/"}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Barbearias em Alcobaça","itemListElement":[{"@type":"ListItem","position":1,"url":"https://ondecortar.pt/barbearias/barbearia-2460-alcobaca/","name":"Barbearia 2460"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Barbearias em Alcobaça","itemListElement":[{"@type":"ListItem","position":1,"url":"https://ondecortar.pt/barbearias/barbearia-2460-alcobaca/","name":"Barbearia 2460"},{"@type":"ListItem","position":2,"url":"https://ondecortar.pt/barbearias/barbearia-hermanos-barbershop/","name":"Barbearia Hermanos BarberShop"},{"@type":"ListItem","position":3,"url":"https://ondecortar.pt/barbearias/rodrigueshairstyle/","name":"RodriguesHairStyle"},{"@type":"ListItem","position":4,"url":"https://ondecortar.pt/barbearias/varela-barbearia-do-bairro/","name":"Varela - Barbearia do Bairro"}]}</script>
 </head>
 <body>
 
@@ -416,7 +490,7 @@
           </div>
           <span class="eyebrow">Página de cidade</span>
           <h1>Barbearias em Alcobaça</h1>
-          <p>Esta página reúne 1 barbearia já listada em Alcobaça, no distrito de Leiria. Podes comparar moradas, telefones, mapa e links úteis antes de escolher. Neste momento, 1 ficha mostra telefone e nenhuma ficha mostra presença online. Uma das opções já tem marcação online, o que facilita o primeiro contacto.</p>
+          <p>Esta página reúne 4 barbearias já listadas em Alcobaça, no distrito de Leiria. Podes comparar moradas, telefones, mapa e links úteis antes de escolher. Neste momento, 4 fichas mostram telefone e 2 fichas mostram presença online. Algumas opções também já têm marcação online, o que facilita o primeiro contacto.</p>
           <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/alcobaca/">Alcobaça</a></span><span><strong>Distrito:</strong> Leiria</span></div>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#lista-barbearias">Ver barbearias</a>
@@ -425,8 +499,8 @@
         </div>
         <aside class="summary-panel">
           <div class="summary-row"><span>Cidade</span>Alcobaça</div><div class="summary-row"><span>Distrito</span>Leiria</div>
-          <div class="summary-row"><span>Total listado</span>1 ficha</div>
-          <div class="summary-row"><span>Última atualização</span>6 de outubro de 2026</div>
+          <div class="summary-row"><span>Total listado</span>4 fichas</div>
+          <div class="summary-row"><span>Última atualização</span>17 de outubro de 2026</div>
           <div class="summary-row"><span>Exploração rápida</span><a href="#lista-barbearias">Perfis individuais</a></div>
         </aside>
       </div>
@@ -442,17 +516,66 @@
           <p>Todos os perfis abaixo mostram morada, contactos, mapa e acesso direto à ficha individual.</p>
         </div>
       </div>
+      <div class="oc-filters" data-oc-filters hidden>
+        <div class="oc-filters-head">
+          <span class="oc-filters-title" id="oc-filters-title"><svg class="oc-filter-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg>Filtrar</span>
+          <span class="oc-filters-sub">Toca para mostrar só as que te servem</span>
+        </div>
+        <div class="oc-filters-row" role="group" aria-labelledby="oc-filters-title">
+          <button type="button" class="oc-filter" data-filter="open" aria-pressed="false" hidden><svg class="oc-filter-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-label>Aberto agora</span></button>
+          <button type="button" class="oc-filter" data-filter="booking" aria-pressed="false" hidden><svg class="oc-filter-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-label>Marcação online</span></button>
+          <button type="button" class="oc-filter" data-filter="near" aria-pressed="false" hidden><svg class="oc-filter-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span data-label>Perto de mim</span></button>
+        </div>
+        <p class="oc-filters-status" aria-live="polite"></p>
+        <div class="oc-filters-empty" hidden>
+          <p>Nenhuma barbearia em Alcobaça corresponde a estes filtros.</p>
+          <button type="button" class="btn btn-secondary" data-oc-filters-clear>Limpar filtros</button>
+        </div>
+      </div>
       <div class="barber-grid">
 
-  <article class="card">
+  <article class="card" data-oc-week="[[],[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;09:00&quot;,&quot;17:00&quot;]],[]]" data-oc-booking="1" data-oc-lat="39.5485149" data-oc-lng="-8.9811894">
     <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/alcobaca/">Alcobaça</a></span><span><strong>Distrito:</strong> Leiria</span></div>
-    <div class="tag-row"><span class="tag">Horário disponível</span></div>
+    <div class="tag-row"><span class="tag" data-oc-status>Horário disponível</span><span class="tag">Marcação online</span><span class="tag" data-oc-distance hidden></span></div>
     <h3><a href="../../barbearias/barbearia-2460-alcobaca/">Barbearia 2460</a></h3>
     <p>Ficha com telefone, horário e morada para consultar rapidamente.</p>
     <p><strong>Morada:</strong> Praça 25 de Abril 30, 2460-018 Alcobaça</p>
     <div class="card-actions">
       <a class="btn btn-secondary" href="../../barbearias/barbearia-2460-alcobaca/">Ver perfil</a>
       <a class="btn btn-primary" href="tel:+351933229065">Ligar agora</a>
+    </div>
+  </article>
+  <article class="card" data-oc-week="[[[&quot;10:00&quot;,&quot;21:00&quot;]],[[&quot;10:00&quot;,&quot;21:00&quot;]],[[&quot;10:00&quot;,&quot;21:00&quot;]],[[&quot;10:00&quot;,&quot;21:00&quot;]],[[&quot;10:00&quot;,&quot;21:00&quot;]],[[&quot;09:30&quot;,&quot;18:00&quot;]],[]]" data-oc-lat="39.5502105" data-oc-lng="-8.978683">
+    <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/alcobaca/">Alcobaça</a></span></div>
+    <div class="tag-row"><span class="tag" data-oc-status>Horário disponível</span><span class="tag" data-oc-distance hidden></span></div>
+    <h3><a href="../../barbearias/barbearia-hermanos-barbershop/">Barbearia Hermanos BarberShop</a></h3>
+    <p>Ficha com telefone, horário e morada para consultar rapidamente.</p>
+    <p><strong>Morada:</strong> R. Araújo Guimarães 41, 2460-025 Alcobaça</p>
+    <div class="card-actions">
+      <a class="btn btn-secondary" href="../../barbearias/barbearia-hermanos-barbershop/">Ver perfil</a>
+      <a class="btn btn-primary" href="tel:+351969855531">Ligar agora</a>
+    </div>
+  </article>
+  <article class="card" data-oc-week="[[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;10:00&quot;,&quot;20:00&quot;]],[[&quot;09:00&quot;,&quot;13:00&quot;]],[]]" data-oc-lat="39.5497899" data-oc-lng="-8.9749086">
+    <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/alcobaca/">Alcobaça</a></span></div>
+    <div class="tag-row"><span class="tag" data-oc-status>Horário disponível</span><span class="tag" data-oc-distance hidden></span></div>
+    <h3><a href="../../barbearias/rodrigueshairstyle/">RodriguesHairStyle</a></h3>
+    <p>Ficha com telefone, horário e morada para consultar rapidamente.</p>
+    <p><strong>Morada:</strong> Avenida dos Combatentes da Grande Guerra N.o 23, A, 2460-039 Alcobaça</p>
+    <div class="card-actions">
+      <a class="btn btn-secondary" href="../../barbearias/rodrigueshairstyle/">Ver perfil</a>
+      <a class="btn btn-primary" href="tel:+351913393757">Ligar agora</a>
+    </div>
+  </article>
+  <article class="card" data-oc-week="[[[&quot;10:00&quot;,&quot;19:00&quot;]],[[&quot;10:00&quot;,&quot;19:00&quot;]],[[&quot;10:00&quot;,&quot;19:00&quot;]],[[&quot;10:00&quot;,&quot;19:00&quot;]],[[&quot;10:00&quot;,&quot;19:00&quot;]],[[&quot;09:00&quot;,&quot;17:00&quot;]],[]]" data-oc-booking="1" data-oc-lat="39.544524" data-oc-lng="-8.9752808">
+    <div class="location-compact"><span><strong>Cidade:</strong> <a href="../../cidades/alcobaca/">Alcobaça</a></span></div>
+    <div class="tag-row"><span class="tag" data-oc-status>Horário disponível</span><span class="tag">Marcação online</span><span class="tag" data-oc-distance hidden></span></div>
+    <h3><a href="../../barbearias/varela-barbearia-do-bairro/">Varela - Barbearia do Bairro</a></h3>
+    <p>Ficha com telefone, horário e morada para consultar rapidamente.</p>
+    <p><strong>Morada:</strong> R. de Angola 8 Loja 2, 2460-024 Alcobaça</p>
+    <div class="card-actions">
+      <a class="btn btn-secondary" href="../../barbearias/varela-barbearia-do-bairro/">Ver perfil</a>
+      <a class="btn btn-primary" href="tel:+351913379492">Ligar agora</a>
     </div>
   </article>
       </div>
@@ -510,5 +633,137 @@
       </div>
     </div>
   </footer>
+<script>
+(function () {
+  var box = document.querySelector("[data-oc-filters]");
+  var grid = document.querySelector("#lista-barbearias .barber-grid");
+  if (!box || !grid) return;
+  var cards = [].slice.call(grid.querySelectorAll(".card"));
+  var original = cards.slice();
+  var state = { open: false, booking: false, near: false };
+  var statusEl = box.querySelector(".oc-filters-status");
+  var emptyEl = box.querySelector(".oc-filters-empty");
+  var btn = {};
+  [].forEach.call(box.querySelectorAll("[data-filter]"), function (b) { btn[b.getAttribute("data-filter")] = b; });
+
+  function count(name) {
+    if (window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: "filtro-cidade/" + name, title: "Filtro " + name + " · " + location.pathname, event: true });
+    }
+  }
+
+  // Hora de Lisboa, como no resumo do perfil
+  var day = null, now = "";
+  if (window.Intl) {
+    var p = {};
+    new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Lisbon", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
+      .formatToParts(new Date()).forEach(function (x) { p[x.type] = x.value; });
+    day = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 }[p.weekday];
+    now = p.hour + ":" + p.minute;
+  }
+
+  var hasWeek = false, hasBooking = false, hasCoords = false;
+  cards.forEach(function (c) {
+    c.ocBooking = c.hasAttribute("data-oc-booking");
+    c.ocLat = parseFloat(c.getAttribute("data-oc-lat"));
+    c.ocLng = parseFloat(c.getAttribute("data-oc-lng"));
+    if (c.ocBooking) hasBooking = true;
+    if (!isNaN(c.ocLat) && !isNaN(c.ocLng)) hasCoords = true;
+    c.ocOpen = false;
+    var raw = c.getAttribute("data-oc-week");
+    if (!raw || day === undefined || day === null) return;
+    var w;
+    try { w = JSON.parse(raw); } catch (e) { return; }
+    hasWeek = true;
+    (w[day] || []).forEach(function (s) { if (now >= s[0] && now < s[1]) c.ocOpen = true; });
+    var tag = c.querySelector("[data-oc-status]");
+    if (tag) {
+      tag.textContent = c.ocOpen ? "Aberto agora" : "Fechado agora";
+      tag.classList.add(c.ocOpen ? "is-open" : "is-closed");
+    }
+  });
+
+  if (hasWeek && btn.open) btn.open.hidden = false;
+  if (hasBooking && btn.booking) btn.booking.hidden = false;
+  if (hasCoords && navigator.geolocation && btn.near) btn.near.hidden = false;
+  if ((!btn.open || btn.open.hidden) && (!btn.booking || btn.booking.hidden) && (!btn.near || btn.near.hidden)) return;
+  box.hidden = false;
+
+  function apply() {
+    var shown = 0;
+    cards.forEach(function (c) {
+      var hide = (state.open && !c.ocOpen) || (state.booking && !c.ocBooking);
+      c.hidden = hide;
+      if (!hide) shown++;
+    });
+    var any = state.open || state.booking || state.near;
+    var msg = "";
+    if (state.open || state.booking) msg = "A mostrar " + shown + " de " + cards.length + " barbearias";
+    if (state.near) msg = (msg ? msg + " · " : "") + "Ordenadas pela distância a ti";
+    if (state.open) msg += " · \"Aberto agora\" segue o horário publicado; feriados podem variar.";
+    statusEl.textContent = any ? msg : "";
+    emptyEl.hidden = shown !== 0;
+  }
+
+  function toggle(name) {
+    state[name] = !state[name];
+    btn[name].setAttribute("aria-pressed", state[name] ? "true" : "false");
+    if (state[name]) count(name);
+    apply();
+  }
+
+  function km(a, b, c, d) {
+    var r = Math.PI / 180, x = Math.sin((c - a) * r / 2), y = Math.sin((d - b) * r / 2);
+    var h = x * x + Math.cos(a * r) * Math.cos(c * r) * y * y;
+    return 12742 * Math.asin(Math.sqrt(h));
+  }
+  function fmt(k) {
+    if (k < 1) return "a " + Math.max(50, Math.round(k * 20) * 50) + " m";
+    return "a " + (k < 10 ? k.toFixed(1).replace(".", ",") : Math.round(k)) + " km";
+  }
+
+  function setNear(on, pos) {
+    state.near = on;
+    btn.near.setAttribute("aria-pressed", on ? "true" : "false");
+    var order = original;
+    if (on) {
+      cards.forEach(function (c) {
+        c.ocKm = isNaN(c.ocLat) ? Infinity : km(pos.coords.latitude, pos.coords.longitude, c.ocLat, c.ocLng);
+        var t = c.querySelector("[data-oc-distance]");
+        if (t && c.ocKm !== Infinity) { t.textContent = fmt(c.ocKm); t.hidden = false; }
+      });
+      order = cards.slice().sort(function (a, b) { return a.ocKm - b.ocKm; });
+    } else {
+      cards.forEach(function (c) { var t = c.querySelector("[data-oc-distance]"); if (t) t.hidden = true; });
+    }
+    order.forEach(function (c) { grid.appendChild(c); });
+    apply();
+  }
+
+  if (btn.open) btn.open.addEventListener("click", function () { toggle("open"); });
+  if (btn.booking) btn.booking.addEventListener("click", function () { toggle("booking"); });
+  if (btn.near) btn.near.addEventListener("click", function () {
+    if (state.near) { setNear(false); return; }
+    var labelEl = btn.near.querySelector("[data-label]") || btn.near;
+    var label = labelEl.textContent;
+    btn.near.disabled = true;
+    labelEl.textContent = "A localizar…";
+    navigator.geolocation.getCurrentPosition(function (pos) {
+      btn.near.disabled = false;
+      labelEl.textContent = label;
+      count("near");
+      setNear(true, pos);
+    }, function () {
+      btn.near.disabled = false;
+      labelEl.textContent = label;
+      statusEl.textContent = "Não foi possível obter a tua localização. Confirma a permissão de localização do browser.";
+    }, { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 });
+  });
+  box.querySelector("[data-oc-filters-clear]").addEventListener("click", function () {
+    ["open", "booking"].forEach(function (n) { state[n] = false; if (btn[n]) btn[n].setAttribute("aria-pressed", "false"); });
+    apply();
+  });
+})();
+</script>
 </body>
 </html>
