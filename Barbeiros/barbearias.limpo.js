@@ -30751,7 +30751,7 @@ const barbearias = [
     "telefone": "+351 933 515 470",
     "email": null,
     "website": null,
-    "instagram": null,
+    "instagram": "https://www.instagram.com/barbeariamaia.pt/",
     "facebook": null,
     "booking": null,
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJKYlYAgdnJA0R-AECDFu8vu0",
@@ -30767,7 +30767,7 @@ const barbearias = [
       -8.621426
     ],
     "mostrar_no_mapa": true,
-    "ultima_validacao": "2026-10-13",
+    "ultima_validacao": "2026-10-17",
     "status": "confirmado",
     "qualidade_ficha": "alta",
     "fontes": [
