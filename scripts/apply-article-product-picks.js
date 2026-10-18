@@ -141,6 +141,17 @@ const PICKS = {
       ["braun-aio7545-series-7", "Kit completo", "12 em 1 para barba, cabelo, orelhas, nariz e corpo."]
     ]
   },
+  "prendas-de-natal-para-homem": {
+    title: "As prendas por pessoa",
+    items: [
+      ["braun-series5-51-b1000s", "Para o pai", "Máquina de barbear de lâminas de rede, 3 lâminas flexíveis e AutoSense."],
+      ["braun-bt5525-series-5", "Marido ou namorado", "40 comprimentos em intervalos de 0,5 mm com bloqueio, 100% à prova de água."],
+      ["philips-oneblade-360-qp2724", "18 a 25 anos", "Apara, contorna e rapa com a mesma lâmina; pentes de 1, 3 e 5 mm."],
+      ["cusmay-kit-barba-11-em-1", "Barba sem rotina", "Kit 11 em 1 numa caixa de oferta, com óleos, bálsamo e ferramentas."],
+      ["king-c-rotina", "Original", "Máquina de segurança, pincel, creme e amaciador num conjunto clássico."],
+      ["proraso-balsamo-barba", "Amigo secreto", "Bálsamo de barba de uma marca italiana de barbearia desde 1948."]
+    ]
+  },
   "presentes-para-namorado-ideias": {
     title: "Os presentes por perfil",
     items: [
@@ -363,6 +374,11 @@ const STICKY = {
   "qual-oneblade-comprar": {
     product: "philips-oneblade-360-qp2724",
     label: "A nossa escolha",
+    after: "produtos-recomendados"
+  },
+  "prendas-de-natal-para-homem": {
+    product: "cusmay-kit-barba-11-em-1",
+    label: "A prenda mais fácil",
     after: "produtos-recomendados"
   },
   "presentes-para-namorado-ideias": {

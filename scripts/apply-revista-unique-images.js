@@ -23,6 +23,7 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").repl
 
 // slug do artigo → [ficheiro em imagens/revista/, alt]
 const NEW_HEROES = {
+  "prendas-de-natal-para-homem": ["prendas-natal-homem.jpg", "Prenda de Natal embrulhada em papel castanho, com fio vermelho e branco e um ramo de pinheiro"],
   "aparador-multifuncoes-ou-maquina-profissional-qual-compensa-mais": ["bancada-maquinas-escova.jpg", "Bancada de barbeiro com máquinas de cortar, escova e rolo de papel de pescoço"],
   "como-cortar-o-cabelo-em-casa-com-maquina": ["cortar-cabelo-maquina-espelho.jpg", "Homem a cortar o cabelo de outro com máquina, em frente a um espelho antigo"],
   "como-manter-a-maquina-de-cortar-cabelo-a-funcionar-bem-por-mais-tempo": ["maquina-nuca-cliente.jpg", "Barbeiro a passar a máquina na nuca de um cliente"],
