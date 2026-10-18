@@ -132,6 +132,7 @@
     ["#escolhas-rapidas", "quick_card"],
     ["#por-uso", "use_case"],
     ["#categorias", "category_grid"],
+    ["#por-pessoa", "by_person"],
     ["#top-escolhas", "top_picks"],
     ["#relacionados", "related"],
     ["#perfis-de-uso", "article_inline"],
