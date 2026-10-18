@@ -883,7 +883,9 @@ function renderBaseStyles(extraStyles) {
       text-decoration: none;
     }
     .brand-text { display: grid; gap: 3px; }
-    .brand-text strong { font-size: 1rem; }
+    .brand-text strong, .footer-brand strong { font-family: 'Big Shoulders Display', 'Arial Narrow', sans-serif; font-weight: 700; font-size: 22px; line-height: 1; letter-spacing: -0.01em; color: var(--text); }
+    .brand-text strong sup, .footer-brand strong sup { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 9px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #E3A863; vertical-align: super; margin-left: 2px; }
+    .site-header .brand img, .footer-brand img, .brand-text > span { display: none; }
     .brand-text span { font-size: 0.82rem; color: var(--muted); }
     .nav-links {
       display: flex;
@@ -1136,7 +1138,7 @@ function renderHeader(prefix, currentSection) {
           <a class="brand" href="${prefix || "./"}">
             <img src="${prefix}imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
             <span class="brand-text">
-              <strong>OndeCortar.pt</strong>
+              <strong>OndeCortar<sup>.pt</sup></strong>
               <span>Barbearias em Portugal</span>
             </span>
           </a>
@@ -1173,7 +1175,7 @@ function renderFooter(prefix) {
       <div class="footer-intro">
         <div class="footer-brand">
           <img src="${prefix}imagens/logo-ondecortar-round.png" alt="Logo OndeCortar.pt" />
-          <strong>OndeCortar.pt</strong>
+          <strong>OndeCortar<sup>.pt</sup></strong>
         </div>
         <p>Diretório de barbearias em Portugal com páginas por cidade, perfis com morada e contactos, loja e revista num único site.</p>
       </div>

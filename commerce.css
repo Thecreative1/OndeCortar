@@ -5587,3 +5587,16 @@ body[data-page="category"] .oc-gift-amazon { font-size: 0.9rem; font-weight: 600
 body[data-page="category"] .oc-gift-guide { margin-top: auto; padding-top: 6px; font-weight: 700; color: var(--green-primary); text-decoration: none; }
 body[data-page="category"] .oc-gift-guide:hover { text-decoration: underline; }
 /* OC-GIFT-PERSON-END */
+
+/* OC-WORDMARK-START — logótipo "OndeCortar" + ".pt" dourado (scripts/apply-wordmark.js) */
+.brand-text strong sup,
+.footer-brand strong sup {
+  font-size: 0.6em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8A5714;
+  vertical-align: super;
+  margin-left: 1px;
+}
+/* OC-WORDMARK-END */
