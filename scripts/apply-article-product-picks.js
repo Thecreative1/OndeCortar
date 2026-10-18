@@ -141,6 +141,17 @@ const PICKS = {
       ["braun-aio7545-series-7", "Kit completo", "12 em 1 para barba, cabelo, orelhas, nariz e corpo."]
     ]
   },
+  "o-que-oferecer-ao-pai": {
+    title: "As prendas pela forma como ele faz a barba",
+    items: [
+      ["braun-series5-51-b1000s", "Máquina de rede", "3 lâminas flexíveis e AutoSense, 100% à prova de água."],
+      ["philips-s5465-series-5000", "Máquina rotativa", "27 lâminas autoafiáveis e cabeças flexíveis a 360°, a seco ou no duche."],
+      ["remington-mb320c", "Barba ou bigode", "Lâminas de cerâmica sem óleo e janela que mostra o comprimento."],
+      ["panasonic-er-gn30", "Prenda pequena", "Aparador de nariz e orelhas com lâmina de fio duplo, lavável."],
+      ["king-c-rotina", "Faz a barba à lâmina", "Máquina de segurança, pincel, creme e amaciador num conjunto clássico."],
+      ["nivea-men-pack-hyaluron", "Pai que tem tudo", "Creme de dia FPS 15, contorno de olhos e after shave numa caixa."]
+    ]
+  },
   "prendas-de-natal-para-homem": {
     title: "As prendas por pessoa",
     items: [
@@ -374,6 +385,11 @@ const STICKY = {
   "qual-oneblade-comprar": {
     product: "philips-oneblade-360-qp2724",
     label: "A nossa escolha",
+    after: "produtos-recomendados"
+  },
+  "o-que-oferecer-ao-pai": {
+    product: "braun-series5-51-b1000s",
+    label: "A prenda mais segura",
     after: "produtos-recomendados"
   },
   "prendas-de-natal-para-homem": {
