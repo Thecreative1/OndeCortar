@@ -69,7 +69,7 @@ function cpDistrict(cp) {
 const MEDIO_TEJO_CP = p => (p >= 2200 && p <= 2269) || (p >= 2300 && p <= 2399) || p === 2435 || (p >= 2490 && p <= 2499) || (p >= 6120 && p <= 6129);
 const ALENTEJO_LITORAL_CP = p => p >= 7500 && p <= 7599;
 // Decisão de 2026-10-11: ficam em Norte (NUTS II), embora o distrito seja do Centro.
-const NORTE_EXCECOES = new Set(["espinho", "argoncilhe", "lamego", "vila nova de foz coa"]);
+const NORTE_EXCECOES = new Set(["espinho", "argoncilhe", "santa maria da feira", "lamego", "vila nova de foz coa"]);
 function expectedRegion(cp) {
   const d = cpDistrict(cp); if (!d) return null; const p = parseInt(cp, 10);
   if (["Viana do Castelo", "Braga", "Porto", "Vila Real", "Bragança"].includes(d)) return "Norte";

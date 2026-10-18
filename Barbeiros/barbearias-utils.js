@@ -40,6 +40,7 @@
     "nazare": { locative: "na Nazaré" },
     "nazaré": { locative: "na Nazaré" },
     "guarda": { locative: "na Guarda" },
+    "trofa": { locative: "na Trofa" },
     "covilha": { locative: "na Covilhã" },
     "covilhã": { locative: "na Covilhã" },
     "figueira da foz": { locative: "na Figueira da Foz" },
