@@ -2141,6 +2141,23 @@ const CITY_REDIRECTS = {
   "arganil-arganil": "arganil"
 };
 
+// Perfis escondidos que o Google ainda conhece: em vez de 404, levam à página da cidade
+// (noindex + canonical). 2026-10-18: fichas antigas "por_validar" que não existem no Google Maps.
+const PROFILE_REDIRECTS = {
+  "barbearia-beja-moderna": "beja",
+  "barbearia-braganca-classic": "braganca",
+  "cut-by-andre-silva": "lisboa",
+  "barbearia-alcacer-do-sal": "alcacer-do-sal",
+  "barbearia-grandola-classica": "grandola",
+  "barbearia-montijo-urbana": "montijo",
+  "barbearia-santiago-do-cacem": "santiago-do-cacem",
+  "barbearia-classica-setubal": "setubal",
+  "barbearia-sines-moderna": "sines",
+  "barbearia-chaves": "chaves",
+  "douro-barber-shop": "peso-da-regua",
+  "barbearia-barreiro-elite": "barreiro"
+};
+
 function buildCityRedirect(target) {
   const url = SITE_URL + "cidades/" + target + "/";
   return `<!DOCTYPE html>
@@ -2437,7 +2454,13 @@ function main() {
   const data = buildSlugData(rawBarbers);
   const citiesMap = new Map(data.cities.map((city) => [city.slug, city]));
 
-  syncGeneratedSubdirectories("barbearias", data.barbers.map((barber) => barber.slug));
+  const liveSlugs = new Set(data.barbers.map((barber) => barber.slug));
+  const profileRedirects = Object.entries(PROFILE_REDIRECTS)
+    .filter(([from, to]) => !liveSlugs.has(from) && citiesMap.has(to));
+  syncGeneratedSubdirectories("barbearias", [...liveSlugs].concat(profileRedirects.map(([from]) => from)));
+  profileRedirects.forEach(([from, to]) => {
+    writeFile(path.join("barbearias", from, "index.html"), buildCityRedirect(to));
+  });
   const cityRedirects = Object.entries(CITY_REDIRECTS)
     .filter(([from, to]) => !citiesMap.has(from) && citiesMap.has(to));
   syncGeneratedSubdirectories("cidades", data.cities.map((city) => city.slug).concat(cityRedirects.map(([from]) => from)));

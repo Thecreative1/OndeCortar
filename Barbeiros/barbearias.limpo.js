@@ -2496,7 +2496,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
-    "observacoes": null,
+    "observacoes": "Escondida a 2026-10-18: não encontrada no Google Maps nesta morada e o site citado em fontes não existe.",
     "coords": [
       38.0151,
       -7.8632
@@ -2506,7 +2506,7 @@ const barbearias = [
       "https://www.barbeariabejamoderna.pt/"
     ],
     "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
+    "mostrar_no_mapa": false,
     "qualidade_ficha": "media",
     "valor_original": {
       "telefone": "+351 284 321 654",
@@ -3384,24 +3384,24 @@ const barbearias = [
     "freguesia": "",
     "city": "Guimarães",
     "zone": "",
-    "morada": "Largo da República do Brasil Loja 32, C. Comercial São Francisco, Guimarães",
-    "address_raw": "Largo da República do Brasil, C. Comercial São Francisco, Loja 32, Guimarães",
+    "morada": "Centro Comercial São Francisco, Largo da República do Brasil, 1.º andar, loja 13, 4810-286 Guimarães",
+    "address_raw": "Centro Comercial São Francisco, Largo da República do Brasil, 1.º andar, loja 13, 4810-286 Guimarães",
     "street": "Largo da República do Brasil",
-    "street_number": "Loja 32",
-    "complemento": "C. Comercial São Francisco",
+    "street_number": "",
+    "complemento": "Centro Comercial São Francisco, 1.º andar, loja 13",
     "localidade": "Guimarães",
     "codigo_postal": "",
     "country": "Portugal",
-    "data_confidence": "medium",
+    "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 911 194 661",
     "email": null,
     "website": "https://www.fresha.com/pt/a/black-rock-barbearia-guimaraes-largo-da-republica-do-brasil-t7wbrdac",
     "instagram": null,
     "facebook": null,
-    "google_maps": null,
-    "horario": null,
+    "google_maps": "https://maps.google.com/?cid=2450533068190756998",
+    "horario": "Seg 10h-20h; Ter-Sex 9h30-20h; Sáb 9h30-18h",
     "precos": {
       "corte": 10,
       "barba": 8,
@@ -3412,16 +3412,17 @@ const barbearias = [
         "data": "2026-10-16"
       }
     },
-    "observacoes": null,
+    "observacoes": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
     "coords": [
-      41.4421,
-      -8.2913
+      41.4411836,
+      -8.2918889
     ],
-    "status": "por_validar",
+    "status": "confirmado",
     "fontes": [
+      "https://maps.google.com/?cid=2450533068190756998",
       "https://www.fresha.com/pt/a/black-rock-barbearia-guimaraes-largo-da-republica-do-brasil-t7wbrdac"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-18",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -3430,6 +3431,11 @@ const barbearias = [
       "motivos": [
         "telefone_placeholder"
       ]
+    },
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=2450533068190756998",
+      "data": "2026-10-18"
     }
   },
   {
@@ -3814,7 +3820,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
-    "observacoes": null,
+    "observacoes": "Escondida a 2026-10-18: não encontrada no Google Maps nesta morada e o site citado em fontes não existe.",
     "coords": [
       41.8061,
       -6.7562
@@ -3822,7 +3828,7 @@ const barbearias = [
     "status": "por_validar",
     "fontes": [],
     "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
+    "mostrar_no_mapa": false,
     "qualidade_ficha": "media",
     "valor_original": {
       "telefone": "+351 273 987 654",
@@ -3840,32 +3846,34 @@ const barbearias = [
     "freguesia": "",
     "city": "Macedo de Cavaleiros",
     "zone": "",
-    "morada": "Av. Professor Doutor Cavaco Silva 100, 5340-278 Macedo de Cavaleiros",
-    "address_raw": "Av. Professor Doutor Cavaco Silva 100, 5340-278 Macedo de Cavaleiros",
-    "street": "Av. Professor Doutor Cavaco Silva",
-    "street_number": "100",
+    "morada": "Rua Fonte do Paço 6, 5340-230 Macedo de Cavaleiros",
+    "address_raw": "Rua Fonte do Paço 6, 5340-230 Macedo de Cavaleiros",
+    "street": "Rua Fonte do Paço",
+    "street_number": "6",
     "complemento": "",
     "localidade": "Macedo de Cavaleiros",
-    "codigo_postal": "5340-278",
+    "codigo_postal": "5340-230",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 910 496 517",
     "email": null,
     "website": null,
     "instagram": null,
     "facebook": null,
-    "google_maps": null,
-    "horario": null,
-    "observacoes": null,
+    "google_maps": "https://maps.google.com/?cid=9026131002783094160",
+    "horario": "Seg-Sex 9h-12h30 e 14h30-19h; Sáb 9h-13h",
+    "observacoes": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
     "coords": [
-      41.5385,
-      -6.961
+      41.5388744,
+      -6.9610998
     ],
-    "status": "por_validar",
-    "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "status": "confirmado",
+    "fontes": [
+      "https://maps.google.com/?cid=9026131002783094160"
+    ],
+    "ultima_validacao": "2026-10-18",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -3873,6 +3881,11 @@ const barbearias = [
       "motivos": [
         "telefone_placeholder"
       ]
+    },
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=9026131002783094160",
+      "data": "2026-10-18"
     }
   },
   {
@@ -5740,11 +5753,11 @@ const barbearias = [
     "freguesia": "",
     "city": "Albufeira",
     "zone": "",
-    "morada": "Rua do Movimento das Forças Armadas 32, 8200-157 Albufeira",
-    "address_raw": "Rua do Movimento das Forças Armadas 32, 8200-157 Albufeira",
+    "morada": "Rua do Movimento das Forças Armadas 32, Bloco B, 8200-157 Albufeira",
+    "address_raw": "Rua do Movimento das Forças Armadas 32, Bloco B, 8200-157 Albufeira",
     "street": "Rua do Movimento das Forças Armadas",
     "street_number": "32",
-    "complemento": "",
+    "complemento": "Bloco B (em frente às Finanças)",
     "localidade": "Albufeira",
     "codigo_postal": "8200-157",
     "country": "Portugal",
@@ -5753,26 +5766,26 @@ const barbearias = [
     "location_flags": [],
     "telefone": "+351 937 155 768",
     "email": null,
-    "website": "https://www.treatwell.pt/estabelecimentos/na-barbearia-1/em-albufeira-portugal-2/",
+    "website": null,
     "instagram": "https://www.instagram.com/patrickbarbershopmfa/",
     "facebook": null,
-    "google_maps": null,
+    "google_maps": "https://maps.google.com/?cid=12909883003719535751",
     "horario_fonte": {
       "nome": "Google Maps",
-      "url": "https://www.google.com/maps/search/?api=1&query=Patrick%20Barbershop%20MFA%20Albufeira",
-      "data": "2026-10-11"
+      "url": "https://maps.google.com/?cid=12909883003719535751",
+      "data": "2026-10-18"
     },
     "horario": "Seg-Sáb 9h-21h; Dom 9h-14h",
-    "observacoes": null,
+    "observacoes": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
     "coords": [
-      37.088,
-      -8.244
+      37.090807,
+      -8.2464241
     ],
-    "status": "por_validar",
+    "status": "confirmado",
     "fontes": [
-      "https://www.treatwell.pt/estabelecimentos/na-barbearia-1/em-albufeira-portugal-2/"
+      "https://maps.google.com/?cid=12909883003719535751"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-18",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -6249,34 +6262,34 @@ const barbearias = [
     "freguesia": "",
     "city": "Portimão",
     "zone": "",
-    "morada": "Rua M de Albuquerque 1, 8500-510 Portimão",
-    "address_raw": "Rua M de Albuquerque 1, 8500-510 Portimão",
-    "street": "Rua M de Albuquerque",
-    "street_number": "1",
+    "morada": "Rua Mouzinho de Albuquerque 21, 8500-710 Portimão",
+    "address_raw": "Rua Mouzinho de Albuquerque 21, 8500-710 Portimão",
+    "street": "Rua Mouzinho de Albuquerque",
+    "street_number": "21",
     "complemento": "",
     "localidade": "Portimão",
-    "codigo_postal": "8500-510",
+    "codigo_postal": "8500-710",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 932 251 434",
     "email": null,
-    "website": "https://www.treatwell.pt/estabelecimentos/na-barbearia-1/em-portimao-algarve-portugal/",
+    "website": null,
     "instagram": null,
     "facebook": null,
-    "google_maps": null,
-    "horario": null,
-    "observacoes": null,
+    "google_maps": "https://maps.google.com/?cid=15388254102215592184",
+    "horario": "Seg-Sáb 9h-13h e 15h-19h",
+    "observacoes": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
     "coords": [
-      37.136,
-      -8.5382
+      37.1383571,
+      -8.5394275
     ],
-    "status": "por_validar",
+    "status": "confirmado",
     "fontes": [
-      "https://www.treatwell.pt/estabelecimentos/na-barbearia-1/em-portimao-algarve-portugal/"
+      "https://maps.google.com/?cid=15388254102215592184"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-18",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -6284,6 +6297,11 @@ const barbearias = [
       "motivos": [
         "telefone_placeholder"
       ]
+    },
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=15388254102215592184",
+      "data": "2026-10-18"
     }
   },
   {
@@ -7623,7 +7641,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
-    "observacoes": null,
+    "observacoes": "Escondida a 2026-10-18: não encontrada no Google Maps nesta morada e o site citado em fontes não existe.",
     "coords": [
       38.7174,
       -9.1472
@@ -7633,7 +7651,7 @@ const barbearias = [
       "https://cutbyandresilva.pt"
     ],
     "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
+    "mostrar_no_mapa": false,
     "qualidade_ficha": "media",
     "valor_original": {
       "telefone": "+351 912 345 678",
@@ -8866,7 +8884,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
-    "observacoes": null,
+    "observacoes": "Escondida a 2026-10-18: não encontrada no Google Maps nesta morada e o site citado em fontes não existe.",
     "coords": [
       38.3717,
       -8.5145
@@ -8876,7 +8894,7 @@ const barbearias = [
       "https://www.barbeariaalcacerdosal.pt/"
     ],
     "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
+    "mostrar_no_mapa": false,
     "qualidade_ficha": "media",
     "valor_original": {
       "telefone": "+351 265 432 109",
@@ -8893,35 +8911,35 @@ const barbearias = [
     "municipality": "Almada",
     "freguesia": "",
     "city": "Almada",
-    "zone": "",
-    "morada": "Rua Capitão Leitão 103, 2800-135 Almada",
-    "address_raw": "Rua Capitão Leitão 103, 2800-135 Almada",
-    "street": "Rua Capitão Leitão",
-    "street_number": "103",
-    "complemento": "",
+    "zone": "Cova da Piedade",
+    "morada": "Rua dos Bombeiros Voluntários 1A, Cova da Piedade, 2805-102 Almada",
+    "address_raw": "Rua dos Bombeiros Voluntários 1A, Cova da Piedade, 2805-102 Almada",
+    "street": "Rua dos Bombeiros Voluntários",
+    "street_number": "1A",
+    "complemento": "junto ao Mercado Municipal da Cova da Piedade",
     "localidade": "Almada",
-    "codigo_postal": "2800-135",
+    "codigo_postal": "2805-102",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 928 059 918",
     "email": null,
-    "website": null,
+    "website": "https://monte-cristo.my.canva.site/",
     "instagram": null,
     "facebook": null,
-    "google_maps": null,
-    "horario": null,
-    "observacoes": null,
+    "google_maps": "https://maps.google.com/?cid=6376844000670269873",
+    "horario": "Ter-Sex 10h-13h e 14h30-19h; Sáb 10h-13h e 14h30-18h",
+    "observacoes": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
     "coords": [
-      38.679,
-      -9.156
+      38.6714313,
+      -9.1585516
     ],
-    "status": "por_validar",
+    "status": "confirmado",
     "fontes": [
-      "https://barbeariamontecristo.pt/"
+      "https://maps.google.com/?cid=6376844000670269873"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-18",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -8929,6 +8947,11 @@ const barbearias = [
       "motivos": [
         "telefone_placeholder"
       ]
+    },
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=6376844000670269873",
+      "data": "2026-10-18"
     }
   },
   {
@@ -9057,7 +9080,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
-    "observacoes": null,
+    "observacoes": "No Maps só existe uma «Barbearia Elite» noutra rua (R. São Gonçalo, 2830-058), sem telefone. Escondida a 2026-10-18: não encontrada no Google Maps nesta morada e o site citado em fontes não existe.",
     "coords": [
       38.6631,
       -9.0724
@@ -9067,7 +9090,7 @@ const barbearias = [
       "https://www.barreirolitebarbearia.pt/"
     ],
     "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
+    "mostrar_no_mapa": false,
     "qualidade_ficha": "media",
     "valor_original": {
       "telefone": "+351 212 345 789",
@@ -9103,7 +9126,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
-    "observacoes": null,
+    "observacoes": "Escondida a 2026-10-18: não encontrada no Google Maps nesta morada e o site citado em fontes não existe.",
     "coords": [
       38.1776,
       -8.567
@@ -9113,7 +9136,7 @@ const barbearias = [
       "https://www.barbergrandola.pt/"
     ],
     "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
+    "mostrar_no_mapa": false,
     "qualidade_ficha": "media",
     "valor_original": {
       "telefone": "+351 269 876 543",
@@ -9192,7 +9215,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
-    "observacoes": null,
+    "observacoes": "Escondida a 2026-10-18: não encontrada no Google Maps nesta morada e o site citado em fontes não existe.",
     "coords": [
       38.7069,
       -8.9762
@@ -9202,7 +9225,7 @@ const barbearias = [
       "https://www.montijourbanabarbearia.pt/"
     ],
     "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
+    "mostrar_no_mapa": false,
     "qualidade_ficha": "media",
     "valor_original": {
       "telefone": "+351 212 678 901",
@@ -9328,7 +9351,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
-    "observacoes": null,
+    "observacoes": "Escondida a 2026-10-18: não encontrada no Google Maps nesta morada e o site citado em fontes não existe.",
     "coords": [
       38.0168,
       -8.6945
@@ -9338,7 +9361,7 @@ const barbearias = [
       "https://www.barbeariasantiagocacem.pt/"
     ],
     "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
+    "mostrar_no_mapa": false,
     "qualidade_ficha": "media",
     "valor_original": {
       "telefone": "+351 269 123 456",
@@ -9457,7 +9480,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
-    "observacoes": null,
+    "observacoes": "Escondida a 2026-10-18: não encontrada no Google Maps nesta morada e o site citado em fontes não existe.",
     "coords": [
       38.5244,
       -8.8882
@@ -9467,7 +9490,7 @@ const barbearias = [
       "https://www.barbeariaclassicasetubal.pt/"
     ],
     "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
+    "mostrar_no_mapa": false,
     "qualidade_ficha": "media",
     "valor_original": {
       "telefone": "+351 265 123 456",
@@ -9684,7 +9707,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
-    "observacoes": null,
+    "observacoes": "Escondida a 2026-10-18: não encontrada no Google Maps nesta morada e o site citado em fontes não existe.",
     "coords": [
       37.9561,
       -8.8697
@@ -9694,7 +9717,7 @@ const barbearias = [
       "https://www.barbeariasinesmoderna.pt/"
     ],
     "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
+    "mostrar_no_mapa": false,
     "qualidade_ficha": "media",
     "valor_original": {
       "telefone": "+351 269 987 654",
@@ -9770,7 +9793,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
-    "observacoes": null,
+    "observacoes": "Escondida a 2026-10-18: não encontrada no Google Maps nesta morada e o site citado em fontes não existe.",
     "coords": [
       41.7404,
       -7.4688
@@ -9778,7 +9801,7 @@ const barbearias = [
     "status": "por_validar",
     "fontes": [],
     "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
+    "mostrar_no_mapa": false,
     "qualidade_ficha": "media",
     "valor_original": {
       "telefone": "+351 276 123 456",
@@ -9814,7 +9837,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": null,
-    "observacoes": null,
+    "observacoes": "Escondida a 2026-10-18: não encontrada no Google Maps nesta morada e o site citado em fontes não existe.",
     "coords": [
       41.1601,
       -7.7899
@@ -9822,7 +9845,7 @@ const barbearias = [
     "status": "por_validar",
     "fontes": [],
     "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
+    "mostrar_no_mapa": false,
     "qualidade_ficha": "media",
     "valor_original": {
       "telefone": "+351 254 321 987",
@@ -9921,32 +9944,34 @@ const barbearias = [
     "freguesia": "",
     "city": "Vila Real",
     "zone": "",
-    "morada": "Rua de Santo António 45, 5000-607 Vila Real",
-    "address_raw": "Rua de Santo António 45, 5000-607 Vila Real",
-    "street": "Rua de Santo António",
-    "street_number": "45",
+    "morada": "Rua de Santa Iria 11B, 5000-446 Vila Real",
+    "address_raw": "Rua de Santa Iria 11B, 5000-446 Vila Real",
+    "street": "Rua de Santa Iria",
+    "street_number": "11B",
     "complemento": "",
     "localidade": "Vila Real",
-    "codigo_postal": "5000-607",
+    "codigo_postal": "5000-446",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 911 767 425",
     "email": null,
     "website": null,
     "instagram": null,
     "facebook": null,
-    "google_maps": null,
-    "horario": null,
-    "observacoes": null,
+    "google_maps": "https://maps.google.com/?cid=7549052318276913208",
+    "horario": "Seg 8h-13h e 14h-19h30; Ter-Sex 8h-13h e 14h-19h; Sáb 8h-13h e 14h-18h",
+    "observacoes": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
     "coords": [
-      41.295,
-      -7.745
+      41.3065266,
+      -7.741967
     ],
-    "status": "por_validar",
-    "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "status": "confirmado",
+    "fontes": [
+      "https://maps.google.com/?cid=7549052318276913208"
+    ],
+    "ultima_validacao": "2026-10-18",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -9954,6 +9979,11 @@ const barbearias = [
       "motivos": [
         "telefone_placeholder"
       ]
+    },
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=7549052318276913208",
+      "data": "2026-10-18"
     }
   },
   {
@@ -10014,21 +10044,23 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 962 466 660",
     "email": null,
     "website": null,
     "instagram": null,
     "facebook": null,
-    "google_maps": null,
-    "horario": null,
-    "observacoes": null,
+    "google_maps": "https://maps.google.com/?cid=17462582230925060606",
+    "horario": "Ter-Sáb 9h-12h e 14h-19h",
+    "observacoes": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
     "coords": [
-      41.3,
-      -7.744
+      41.301014,
+      -7.7430828
     ],
-    "status": "por_validar",
-    "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "status": "confirmado",
+    "fontes": [
+      "https://maps.google.com/?cid=17462582230925060606"
+    ],
+    "ultima_validacao": "2026-10-18",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media",
     "valor_original": {
@@ -10037,6 +10069,11 @@ const barbearias = [
       "motivos": [
         "telefone_placeholder"
       ]
+    },
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=17462582230925060606",
+      "data": "2026-10-18"
     }
   },
   {
