@@ -44,13 +44,15 @@ function recentUrls() {
 }
 
 async function waitForDeploy() {
-  const local = fs.readFileSync(path.join(ROOT, "sitemap.xml"), "utf8").replace(/\r\n/g, "\n").trim();
+  // Compara o índice E os sitemaps filhos: uma mudança só num filho (ex.: um artigo) não mexe no índice
+  const norm = (s) => s.replace(/\r\n/g, "\n").trim();
+  const files = ["sitemap.xml", ...SITEMAPS];
+  const local = files.map((f) => norm(fs.readFileSync(path.join(ROOT, f), "utf8")));
   for (let i = 0; i < 40; i++) {
     try {
-      const res = await fetch(SITE + "sitemap.xml?ts=" + Date.now(), { cache: "no-store" });
-      const live = (await res.text()).replace(/\r\n/g, "\n").trim();
+      const live = await Promise.all(files.map((f) => fetch(SITE + f + "?ts=" + Date.now(), { cache: "no-store" }).then((r) => r.text()).then(norm)));
       const key = await fetch(SITE + KEY + ".txt?ts=" + Date.now()).then((r) => (r.ok ? r.text() : ""));
-      if (live === local && key.trim() === KEY) { console.log("Site publicado já tem o sitemap atual e a chave."); return true; }
+      if (live.every((x, j) => x === local[j]) && key.trim() === KEY) { console.log("Site publicado já tem os sitemaps atuais e a chave."); return true; }
     } catch (e) { /* tenta outra vez */ }
     await new Promise((r) => setTimeout(r, 15000));
   }
