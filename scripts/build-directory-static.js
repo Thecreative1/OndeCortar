@@ -2219,6 +2219,41 @@ function buildSitemap(entries) {
   return lines.join("\n") + "\n";
 }
 
+// lastmod exato das páginas estáticas (FAQ, Registar, Sobre, Privacidade): a Google só usa o
+// <lastmod> se for consistentemente exato. Guarda-se um hash do conteúdo de cada ficheiro em
+// Barbeiros/paginas-lastmod.json e a data só muda quando o conteúdo muda. Na primeira vez, a data
+// vem do último commit do ficheiro (ou de hoje, sem git). O JSON vai para o git com o build.
+const STATIC_LASTMOD_FILE = path.join(ROOT, "Barbeiros", "paginas-lastmod.json");
+function staticPageLastmod(relFile) {
+  const crypto = require("crypto");
+  let cache = {};
+  try { cache = JSON.parse(fs.readFileSync(STATIC_LASTMOD_FILE, "utf8")); } catch (e) { cache = {}; }
+  const content = fs.readFileSync(path.join(ROOT, relFile), "utf8").replace(/\r\n/g, "\n");
+  const hash = crypto.createHash("sha1").update(content).digest("hex");
+  const prev = cache[relFile];
+  if (prev && prev.hash === hash) return prev.lastmod;
+  let lastmod = TODAY;
+  if (!prev) {
+    try {
+      const out = require("child_process").execSync('git log -1 --format=%cs -- "' + relFile + '"', { cwd: ROOT, stdio: ["ignore", "pipe", "ignore"] }).toString().trim();
+      if (/^\d{4}-\d{2}-\d{2}$/.test(out)) lastmod = out;
+    } catch (e) { /* sem git: fica a data de hoje */ }
+  }
+  cache[relFile] = { hash, lastmod };
+  const sorted = Object.fromEntries(Object.keys(cache).sort().map((k) => [k, cache[k]]));
+  fs.writeFileSync(STATIC_LASTMOD_FILE, JSON.stringify(sorted, null, 2) + "\n", "utf8");
+  return lastmod;
+}
+
+// Data mais recente dentro de um sitemap filho (para o índice sitemap.xml)
+function latestLastmodInSitemap(relFile) {
+  try {
+    const dates = (fs.readFileSync(path.join(ROOT, relFile), "utf8").match(/<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/g) || [])
+      .map((m) => m.slice(9, 19)).sort();
+    return dates.length ? dates[dates.length - 1] : TODAY;
+  } catch (e) { return TODAY; }
+}
+
 function buildSitemapIndex(entries) {
   const lines = [
     '<?xml version="1.0" encoding="UTF-8"?>',
@@ -2425,10 +2460,10 @@ function main() {
   writeFile("sitemap-pages.xml", buildSitemap([
     { loc: SITE_URL, lastmod: data.siteLastmod },
     { loc: SITE_URL + "cidades/", lastmod: data.siteLastmod },
-    { loc: SITE_URL + "faq.html", lastmod: data.siteLastmod },
-    { loc: SITE_URL + "registar.html", lastmod: data.siteLastmod },
-    { loc: SITE_URL + "sobre/", lastmod: data.siteLastmod },
-    { loc: SITE_URL + "privacidade.html", lastmod: data.siteLastmod }
+    { loc: SITE_URL + "faq.html", lastmod: staticPageLastmod("faq.html") },
+    { loc: SITE_URL + "registar.html", lastmod: staticPageLastmod("registar.html") },
+    { loc: SITE_URL + "sobre/", lastmod: staticPageLastmod("sobre/index.html") },
+    { loc: SITE_URL + "privacidade.html", lastmod: staticPageLastmod("privacidade.html") }
   ]));
 
   writeFile("sitemap-cidades.xml", buildSitemap(data.cities.map((city) => ({
@@ -2442,11 +2477,11 @@ function main() {
   }))));
 
   writeFile("sitemap.xml", buildSitemapIndex([
-    { loc: SITE_URL + "sitemap-pages.xml", lastmod: data.siteLastmod },
-    { loc: SITE_URL + "sitemap-barbearias.xml", lastmod: data.siteLastmod },
-    { loc: SITE_URL + "sitemap-cidades.xml", lastmod: data.siteLastmod },
-    { loc: SITE_URL + "sitemap-loja.xml", lastmod: data.siteLastmod },
-    { loc: SITE_URL + "sitemap-revista.xml", lastmod: data.siteLastmod }
+    { loc: SITE_URL + "sitemap-pages.xml", lastmod: latestLastmodInSitemap("sitemap-pages.xml") },
+    { loc: SITE_URL + "sitemap-barbearias.xml", lastmod: latestLastmodInSitemap("sitemap-barbearias.xml") },
+    { loc: SITE_URL + "sitemap-cidades.xml", lastmod: latestLastmodInSitemap("sitemap-cidades.xml") },
+    { loc: SITE_URL + "sitemap-loja.xml", lastmod: latestLastmodInSitemap("sitemap-loja.xml") },
+    { loc: SITE_URL + "sitemap-revista.xml", lastmod: latestLastmodInSitemap("sitemap-revista.xml") }
   ]));
 
   writeFile("llms.txt", buildLlmsTxt(data));
