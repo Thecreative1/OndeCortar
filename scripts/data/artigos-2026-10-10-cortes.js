@@ -78,7 +78,7 @@ module.exports = [
     related: ["tipos-de-degrade-como-pedir-o-corte-certo", "cabelo-encaracolado-homem-corte-e-cuidados", "numeros-da-maquina-de-cortar-cabelo"],
     finalCta: {
       h2: "Já sabes o que pedir — falta onde",
-      text: "Mais de 800 barbearias em Portugal, com morada, contactos e horário.",
+      text: "Mais de 1000 barbearias em Portugal, com morada, contactos e horário.",
       actions: [["../../index.html#explorar", "Ver o mapa"], ["../../cidades/", "Procurar por cidade"]]
     }
   }
