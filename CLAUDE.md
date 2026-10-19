@@ -382,6 +382,8 @@ Para alterações visuais/homepage:
 **Armadilhas práticas (2026-10-18):**
 - `npm test` corre o build: se os dados não mudaram, o build só muda datas em `llms.txt`, `sitemap.xml` e `sitemap-pages.xml` → repor com `git checkout --` antes do commit.
 - No Windows, `apply-webp-images.js` falha às vezes com `UNKNOWN: unknown error, open …index.html` (ficheiro preso pelo `serve` ou pelo antivírus). É passageiro: repetir (`for i in 1 2 3 4 5; do node scripts/apply-webp-images.js && break; sleep 2; done`).
+- `sed -i` num HTML com fins de linha CRLF reescreve o ficheiro todo (diff de centenas de linhas no `revista/index.html` a 18/10) → editar com `node` (ler, `replace`, escrever) e confirmar `git diff --stat`.
+- **Números de barbearias escritos à mão** (revista "Mais de 339", artigo dos cortes "800", até 18/10) ficam velhos: usar "Mais de 1000" como no título da homepage e procurar `grep -rnoE "Mais de [0-9]+ barbearias"` quando o total mudar de patamar.
 - Na shell Git Bash, regex com `\s`/`\[` dentro de `node -e` ou heredoc pode perder as barras → escrever o script num ficheiro no scratchpad.
 - `grep -o '.\{200\}texto.\{200\}'` num HTML minificado (uma linha de 100 KB) pode ficar minutos pendurado → ler secções de páginas com um script `node` (`split(/(?=<section)/)` + tirar tags).
 
