@@ -28,12 +28,12 @@ module.exports = [
     heroActions: [["#passos", "Ver os passos"], ["#clientes", "Como ter clientes"]],
     quick: [
       ["Preciso de licença para abrir?", "Não há uma licença específica de abertura: as barbearias não estão na lista de atividades sujeitas a comunicação prévia do regime do comércio e serviços. Mas o espaço, as obras e o reclamo na rua passam pela câmara."],
-      ["Que CAE uso?", "O 96021 — Salões de cabeleireiro, que inclui as barbearias e o corte e aparo de barba."],
+      ["Que CAE uso?", "O 96210 — Atividades de salões de cabeleireiro e barbeiros (CAE-Rev.4, em vigor desde 2025; antes era o 96021)."],
       ["Preciso de carteira profissional?", "A carteira profissional de barbeiro deixou de existir em 2011. A formação certificada continua a ser recomendada; confirma com o IEFP ou um contabilista se é exigida no teu caso."],
       ["Quanto custa?", "Depende sobretudo da renda e das obras. Desconfia de quem dá um número fechado sem conhecer o espaço."]
     ],
     summary: [
-      "CAE 96021 e início de atividade nas Finanças e na Segurança Social",
+      "CAE 96210 e início de atividade nas Finanças e na Segurança Social",
       "Sem licença de abertura própria, mas o espaço tem de estar licenciado",
       "Obras, mudança de uso e reclamos: câmara municipal",
       "Livro de reclamações, preços e horário afixados",
@@ -54,7 +54,7 @@ module.exports = [
       {
         id: "passos",
         h2: "Os passos, por ordem",
-        html: "<ol class=\"rich-list\"><li><strong>Decide a forma jurídica:</strong> empresário em nome individual ou sociedade. Um contabilista ajuda a escolher pelo volume que esperas.</li><li><strong>Início de atividade nas Finanças</strong> com o <strong>CAE 96021</strong> (salões de cabeleireiro, que inclui barbearias) e inscrição na <strong>Segurança Social</strong>.</li><li><strong>Confirma o espaço</strong>: licença de utilização, obras e reclamo na câmara municipal.</li><li><strong>Livro de reclamações</strong> físico no estabelecimento e adesão ao livro eletrónico.</li><li><strong>Preços dos serviços afixados</strong> de forma visível e <strong>horário de funcionamento</strong> afixado, dentro das regras da tua câmara.</li><li><strong>Se tiveres trabalhadores:</strong> contratos, seguro de acidentes de trabalho e serviços de segurança e saúde no trabalho.</li><li><strong>Faturação</strong>: emite as faturas num programa certificado ou no Portal das Finanças — confirma com o contabilista o que se aplica ao teu volume.</li></ol><p>Os requisitos gerais de exercício estão no portal ePortugal e no guia da DGAE. Como as regras municipais variam, confirma sempre na câmara do concelho onde vais abrir.</p>"
+        html: "<ol class=\"rich-list\"><li><strong>Decide a forma jurídica:</strong> empresário em nome individual ou sociedade. Um contabilista ajuda a escolher pelo volume que esperas.</li><li><strong>Início de atividade nas Finanças</strong> com o <strong>CAE 96210</strong> (atividades de salões de cabeleireiro e barbeiros) e inscrição na <strong>Segurança Social</strong>.</li><li><strong>Confirma o espaço</strong>: licença de utilização, obras e reclamo na câmara municipal.</li><li><strong>Livro de reclamações</strong> físico no estabelecimento e adesão ao livro eletrónico.</li><li><strong>Preços dos serviços afixados</strong> de forma visível e <strong>horário de funcionamento</strong> afixado, dentro das regras da tua câmara.</li><li><strong>Se tiveres trabalhadores:</strong> contratos, seguro de acidentes de trabalho e serviços de segurança e saúde no trabalho.</li><li><strong>Faturação</strong>: emite as faturas num programa certificado ou no Portal das Finanças — confirma com o contabilista o que se aplica ao teu volume.</li></ol><p>Os requisitos gerais de exercício estão no portal ePortugal e no guia da DGAE. Como as regras municipais variam, confirma sempre na câmara do concelho onde vais abrir.</p>"
       },
       {
         h2: "Carteira profissional e formação",
@@ -80,7 +80,7 @@ module.exports = [
     ],
     faq: [
       ["É preciso licença para abrir uma barbearia em Portugal?", "Não há uma licença de abertura própria: as barbearias não constam da lista de atividades sujeitas a comunicação prévia ou autorização do regime do comércio e serviços (RJACSR). O espaço tem de ter licença de utilização adequada, e obras ou reclamos na via pública passam pela câmara municipal."],
-      ["Qual é o CAE de uma barbearia?", "O CAE 96021 — Salões de cabeleireiro, que inclui expressamente as barbearias e o corte e aparo de barba."],
+      ["Qual é o CAE de uma barbearia?", "O CAE 96210 — Atividades de salões de cabeleireiro e barbeiros (CAE-Rev.4, em vigor desde 2025). O código antigo, 96021, era da Revisão 3."],
       ["É obrigatório ter curso para ser barbeiro em Portugal?", "A carteira profissional foi revogada em 2011 (Decreto-Lei n.º 92/2011). Há leituras de que o diploma exige formação profissional certificada; confirma com o IEFP ou com um contabilista antes de abrir."],
       ["Como pôr a minha barbearia no Google Maps?", "Criando um perfil da empresa no Google (Google Business Profile) com morada, horário e fotos, e verificando-o. Também podes registar a barbearia gratuitamente no OndeCortar."]
     ],
