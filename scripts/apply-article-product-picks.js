@@ -141,6 +141,17 @@ const PICKS = {
       ["braun-aio7545-series-7", "Kit completo", "12 em 1 para barba, cabelo, orelhas, nariz e corpo."]
     ]
   },
+  "melhor-kit-de-barba-para-oferecer": {
+    title: "Os kits pela barba de quem recebe",
+    items: [
+      ["viking-sandalwood", "Barba comprida", "Champô, condicionador, óleo, bálsamo e pente, com aroma a sândalo."],
+      ["oukzon-kit-barba-10-em-1", "Com condicionador", "Champô e condicionador de barba, óleo, bálsamo e ferramentas para dar forma."],
+      ["viking-revolution-beard-grooming-kit", "Primeiro kit", "Escova, pente, bálsamo, óleo e tesoura numa caixa de apresentação."],
+      ["cusmay-kit-barba-11-em-1", "Tudo numa caixa", "11 peças, de champô e óleos a tesoura, navalha e bolsa de viagem."],
+      ["king-c-gillette-beard-trimmer-kit", "Barba curta", "Aparador sem fios com três pentes para vários comprimentos."],
+      ["king-c-rotina", "Faz a barba todos os dias", "Máquina de segurança, pincel, creme e amaciador num conjunto clássico."]
+    ]
+  },
   "o-que-oferecer-ao-pai": {
     title: "As prendas pela forma como ele faz a barba",
     items: [
@@ -385,6 +396,11 @@ const STICKY = {
   "qual-oneblade-comprar": {
     product: "philips-oneblade-360-qp2724",
     label: "A nossa escolha",
+    after: "produtos-recomendados"
+  },
+  "melhor-kit-de-barba-para-oferecer": {
+    product: "viking-sandalwood",
+    label: "O kit mais seguro",
     after: "produtos-recomendados"
   },
   "o-que-oferecer-ao-pai": {
