@@ -133,6 +133,14 @@ function validateItem(item, index) {
     }
   }
 
+  // Opcional: WhatsApp confirmado pelo dono (formulário). Telemóvel português, ex.: "+351 961 540 429".
+  if ("whatsapp" in item && item.whatsapp !== null) {
+    const digitos = String(item.whatsapp).replace(/\D/g, "").replace(/^351/, "");
+    if (typeof item.whatsapp !== "string" || !/^9[1236]\d{7}$/.test(digitos)) {
+      errors.push(label + ": `whatsapp` deve ser um telemóvel português (ex.: +351 961 540 429) ou null.");
+    }
+  }
+
   if (!(item.coords === null || utils.coordsSaoValidas(item.coords))) {
     errors.push(label + ": `coords` invalido ou fora de Portugal.");
   }

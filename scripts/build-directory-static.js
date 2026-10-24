@@ -726,6 +726,8 @@ function buildSlugData(rawBarbers) {
       country: location.country || "Portugal",
       telefone: phone,
       email: utils.validarEmail(item.email || ""),
+      // WhatsApp só quando o dono o confirmou no formulário (campo `whatsapp`); 9 dígitos, sem 351
+      whatsapp: String(item.whatsapp || "").replace(/\D/g, "").replace(/^351/, ""),
       website: links.website,
       booking: links.booking,
       instagram: links.instagram,
@@ -1343,6 +1345,7 @@ function renderProfilePage(barber, citiesMap) {
   const iSpark   = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/><\/svg>';
   const iInsta   = '<svg class="oc-icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/><\/svg>';
   const iCal     = '<svg class="oc-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><\/svg>';
+  const iChat    = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.4 8.4 0 1 1 21 11.5z"/><\/svg>';
 
   // ── Helpers
   function H(s) { return escapeHtml(String(s || "")); }
@@ -1404,10 +1407,11 @@ function renderProfilePage(barber, citiesMap) {
       ["Horário", barber.horario],
       ["Website", barber.website],
       ["Instagram", barber.instagram],
-      ["Email", barber.email]
+      // WhatsApp em vez do email: o email do formulário é privado e ninguém escreve a um barbeiro por email
+      ["WhatsApp", barber.whatsapp]
     ];
     const missing = fields.filter(function(f) { return !f[1]; }).map(function(f) {
-      return f[0] === "Instagram" ? f[0] : f[0].toLowerCase();
+      return f[0] === "Instagram" || f[0] === "WhatsApp" ? f[0] : f[0].toLowerCase();
     });
     const filled = fields.length - missing.length;
     const complete = missing.length === 0;
@@ -1527,8 +1531,8 @@ function renderProfilePage(barber, citiesMap) {
     summaryScript;
 
   // ── Contacts
-  const missingNote = (!barber.email && !barber.website)
-    ? '<div style="display:flex;align-items:center;gap:10px;padding:14px 0;color:var(--subtext);font-size:13px;font-style:italic">' + iSpark + " Email e website ainda por adicionar pela barbearia.<\/div>"
+  const missingNote = (!barber.whatsapp && !barber.website)
+    ? '<div style="display:flex;align-items:center;gap:10px;padding:14px 0;color:var(--subtext);font-size:13px;font-style:italic">' + iSpark + " WhatsApp e website ainda por adicionar pela barbearia.<\/div>"
     : "";
   const instaHandle = barber.instagram
     ? "@" + (barber.instagram.replace(/\/$/, "").split("/").pop() || "")
@@ -1546,9 +1550,15 @@ function renderProfilePage(barber, citiesMap) {
     ? '<div class="oc-contact-row"><span style="color:var(--subtext)">' + iCal + "<\/span><div style=\"min-width:0\"><div class=\"oc-contact-row__label\">Marcação online<\/div><div class=\"oc-contact-row__value\">" + H(bookingPlatform) + "<\/div><\/div>"
       + '<a href="' + H(barber.booking) + '" class="oc-contact-row__action" target="_blank" rel="nofollow noopener" data-oc-click="booking">Marcar<\/a><\/div>'
     : "";
+  // WhatsApp (confirmado pelo dono): abre a conversa com uma linha a dizer de onde vem o cliente.
+  const whatsappRow = barber.whatsapp
+    ? '<div class="oc-contact-row"><span style="color:var(--subtext)">' + iChat + "<\/span><div style=\"min-width:0\"><div class=\"oc-contact-row__label\">WhatsApp<\/div><div class=\"oc-contact-row__value\">" + H(formatarTelefoneVisual("351" + barber.whatsapp)) + "<\/div><\/div>"
+      + '<a href="' + H("https://wa.me/351" + barber.whatsapp + "?text=" + encodeURIComponent("Olá! Vi a vossa barbearia no OndeCortar.pt.")) + '" class="oc-contact-row__action" target="_blank" rel="nofollow noopener" data-oc-click="whatsapp">Escrever<\/a><\/div>'
+    : "";
   const contactsInner =
     contactRow(iPin,   "Morada",    barber.morada,   "Copiar", null) +
     contactRow(iPhone, "Telefone",  barber.telefone, "Ligar",  phoneHrefVal) +
+    whatsappRow +
     bookingRow +
     contactRow(iMail,  "Email",     barber.email,    "Enviar", barber.email ? "mailto:" + barber.email : "") +
     contactRow(iGlobe, "Website",   barber.website ? barber.website.replace(/^https?:\/\//, "") : "", "Abrir", barber.website) +
@@ -2382,7 +2392,7 @@ function patchIndexHtml(staticListHtml, headJsonLd, totals) {
 // index.html) nunca lê — ficam só em barbearias.limpo.js.
 const CLIENT_OMIT_FIELDS = new Set([
   "complemento", "country", "data_confidence", "needs_review", "location_flags",
-  "fontes", "ultima_validacao", "qualidade_ficha", "valor_original", "horario_fonte", "precos"
+  "fontes", "ultima_validacao", "qualidade_ficha", "valor_original", "horario_fonte", "precos", "whatsapp"
 ]);
 
 // Gera Barbeiros/barbearias.mapa.js para a homepage: só barbearias públicas, sem os

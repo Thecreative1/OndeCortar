@@ -574,6 +574,17 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center;
 }
 .owner-cta-left .oc-eyebrow { color: var(--oc-clay); margin-bottom: 12px; }
+/* Aviso "Novo" (WhatsApp no perfil, 2026-10-24) */
+.owner-new-badge {
+  display: inline-flex; align-items: center; gap: 10px; margin-bottom: 16px;
+  padding: 5px 14px 5px 5px; border: 1px solid var(--oc-clay); border-radius: 999px;
+  font-size: 13px; line-height: 1.35; color: var(--oc-ink); text-decoration: none;
+}
+.owner-new-badge span {
+  flex: none; padding: 3px 9px; border-radius: 999px; background: var(--oc-clay); color: #17130D;
+  font-family: 'Geist Mono', ui-monospace, monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.owner-new-badge:hover { background: rgba(200,135,58,0.12); }
 .owner-cta-headline {
   font-family: var(--oc-font-display); font-weight: 700;
   font-size: clamp(1.5rem, 2.8vw, 2.1rem); letter-spacing: -0.025em; line-height: 1.08;
