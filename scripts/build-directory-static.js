@@ -676,7 +676,11 @@ function buildCityIntro(cityName, cityBarbers, hierarchy) {
       ? (withBooking === 1
         ? "Uma das opções já tem marcação online, o que facilita o primeiro contacto."
         : "Algumas opções também já têm marcação online, o que facilita o primeiro contacto.")
-      : "Mesmo quando a marcação online ainda não está disponível, esta lista ajuda a perceber quais as barbearias com informação suficiente para comparar e contactar."
+      : (withPhone || withSocial)
+        ? (cityBarbers.length === 1
+          ? "Ainda não tem marcação online: o contacto faz-se por telefone ou pelas redes sociais."
+          : "Nenhuma tem ainda marcação online: o contacto faz-se por telefone ou pelas redes sociais.")
+        : (cityBarbers.length === 1 ? "Ainda não tem marcação online." : "Nenhuma tem ainda marcação online.")
   ].join(" ");
 }
 
@@ -1342,7 +1346,6 @@ function renderProfilePage(barber, citiesMap) {
   const iSciss   = '<svg class="oc-icon" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/><\/svg>';
   const iCheck   = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/><\/svg>';
   const iBadge   = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="m12 3 2 2.5L17 5l.5 3L20 9l-1 3 1 3-2.5 1L17 19l-3-.5L12 21l-2-2.5L7 19l-.5-3L4 15l1-3-1-3 2.5-1L7 5l3 .5z"/><path d="m9 12 2 2 4-4"/><\/svg>';
-  const iSpark   = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/><\/svg>';
   const iInsta   = '<svg class="oc-icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/><\/svg>';
   const iCal     = '<svg class="oc-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><\/svg>';
   // Ícone oficial do WhatsApp (Simple Icons, CC0) no verde da marca: o único contacto a verde no perfil
@@ -1353,7 +1356,7 @@ function renderProfilePage(barber, citiesMap) {
 
   function contactRow(icon, label, value, actionLabel, actionHref) {
     if (!value) return "";
-    const disp = H(value.length > 42 ? value.substring(0, 40) + "…" : value);
+    const disp = H(label !== "Morada" && value.length > 42 ? value.substring(0, 40) + "…" : value);
     const act = actionHref
       ? '<a href="' + H(actionHref) + '" class="oc-contact-row__action"' + (actionHref.startsWith("http") ? ' target="_blank" rel="noopener noreferrer"' : "") + ">" + H(actionLabel) + "<\/a>"
       : '<button class="oc-contact-row__action" onclick="' + H("navigator.clipboard&&navigator.clipboard.writeText(" + JSON.stringify(value) + ")") + '">' + H(actionLabel) + "<\/button>";
@@ -1375,6 +1378,15 @@ function renderProfilePage(barber, citiesMap) {
       "&bboxSR=3857&imageSR=3857&size=640,360&format=jpg&f=image";
   }
 
+  // Morada curta para os cartões: só a rua (antes do código postal), sem cortar a meio de uma palavra
+  function shortStreet(morada) {
+    let rua = String(morada).split(/,?\s*\d{4}-\d{3}/)[0].replace(/[,\s]+$/, "");
+    if (rua.length <= 34) return rua;
+    rua = rua.slice(0, 34);
+    const corte = Math.max(rua.lastIndexOf(","), rua.lastIndexOf(" "));
+    return (corte > 12 ? rua.slice(0, corte) : rua).replace(/[,\s]+$/, "") + "…";
+  }
+
   function relatedCard(item) {
     const mapUrl = relatedMapUrl(item.coords);
     const ph = '<div class="oc-photo oc-related__photo' + (mapUrl ? " oc-related__photo--map" : "") + '">' +
@@ -1393,7 +1405,7 @@ function renderProfilePage(barber, citiesMap) {
         '<p style="font-size:13.5px;color:var(--subtext);line-height:1.5">' + H(item.cardSummary || item.editorial || "") + "<\/p>" +
       "<\/div>" +
       '<div style="display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--hairline)">' +
-        '<span class="oc-meta" style="display:flex;align-items:center;gap:6px">' + iPin + " " + H((item.morada || item.city || "").substring(0, 32)) + "<\/span>" +
+        '<span class="oc-meta" style="display:flex;align-items:center;gap:6px">' + iPin + " " + H(shortStreet(item.morada || item.city || "")) + "<\/span>" +
         '<span style="display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase">Ver perfil ' + iArrow + "<\/span>" +
       "<\/div>" +
     "<\/a>";
@@ -1531,10 +1543,10 @@ function renderProfilePage(barber, citiesMap) {
     "<\/section>" +
     summaryScript;
 
+  // Dados enviados pelo próprio dono (formulário): WhatsApp confirmado ou preços com fonte "Barbearia"
+  const ownerSourced = Boolean(barber.whatsapp || (barber.precos && barber.precos.fonte && barber.precos.fonte.nome === "Barbearia"));
+
   // ── Contacts
-  const missingNote = (!barber.whatsapp && !barber.website)
-    ? '<div style="display:flex;align-items:center;gap:10px;padding:14px 0;color:var(--subtext);font-size:13px;font-style:italic">' + iSpark + " WhatsApp e website ainda por adicionar pela barbearia.<\/div>"
-    : "";
   const instaHandle = barber.instagram
     ? "@" + (barber.instagram.replace(/\/$/, "").split("/").pop() || "")
     : "";
@@ -1563,8 +1575,7 @@ function renderProfilePage(barber, citiesMap) {
     bookingRow +
     contactRow(iMail,  "Email",     barber.email,    "Enviar", barber.email ? "mailto:" + barber.email : "") +
     contactRow(iGlobe, "Website",   barber.website ? barber.website.replace(/^https?:\/\//, "") : "", "Abrir", barber.website) +
-    contactRow(iInsta, "Instagram", instaHandle,     "Ver",    barber.instagram) +
-    missingNote;
+    contactRow(iInsta, "Instagram", instaHandle,     "Ver",    barber.instagram);
 
   // ── Hours
   const hoursWeek = horarioUtils.parsePt(barber.horario);
@@ -1643,7 +1654,7 @@ function renderProfilePage(barber, citiesMap) {
         '<span class="oc-meta">Diretório · PT<\/span>' +
       "<\/div>" +
       '<div class="oc-hr" style="margin:0 0 14px"><\/div>' +
-      '<p style="font-size:12px;color:var(--subtext);line-height:1.6;margin-bottom:10px">Ficha pública de ' + H(barber.name) + (barber.city ? ", " + H(barber.city) : "") + (barber.district ? ", " + H(barber.district) : "") + ". Esta página foi gerada a partir de informação pública. Se és o dono e queres atualizar dados, clica em <em>Atualizar perfil<\/em>.<\/p>" +
+      '<p style="font-size:12px;color:var(--subtext);line-height:1.6;margin-bottom:10px">Ficha pública: ' + H(barber.name) + (barber.city ? ", " + H(barber.city) : "") + (barber.district ? ", " + H(barber.district) : "") + ". " + (ownerSourced ? "Inclui dados enviados pela própria barbearia." : "Dados reunidos a partir de informação pública.") + " Se és o dono e queres atualizar dados, clica em <em>Atualizar perfil<\/em>.<\/p>" +
       '<div class="oc-meta">© 2026 OndeCortar · Barbearias em Portugal<\/div>' +
     "<\/footer>";
 
@@ -2012,7 +2023,7 @@ ${renderHeader(prefix, "cidades")}
         <div>
           <span class="eyebrow">Perfis locais</span>
           <h2>${escapeHtml(cityBarbersLabel)}</h2>
-          <p>Todos os perfis abaixo mostram morada, contactos, mapa e acesso direto à ficha individual.</p>
+          <p>Cada perfil abaixo mostra a morada, o mapa e os contactos que a barbearia tem públicos.</p>
         </div>
       </div>
 ${filtersHtml ? filtersHtml + "\n" : ""}      <div class="barber-grid">
@@ -2042,7 +2053,7 @@ ${city.barbearias.map((barber) => renderBarberCard(barber, prefix, { showZone: t
         </article>
         <article class="card">
             <h3>És dono de uma barbearia ${escapeHtml(cityLocative)}?</h3>
-          <p>Uma ficha completa melhora a presença nesta página de cidade, acrescenta contactos úteis e cria um perfil mais forte para Google e utilizadores.</p>
+          <p>Se a tua barbearia já está nesta lista, completa a ficha com horário, preços e WhatsApp. Se ainda não está, adiciona-a — é gratuito.</p>
           <div class="card-actions">
             <a class="btn btn-primary" href="${prefix}registar.html">Adicionar ou atualizar</a>
             <a class="btn btn-soft" href="${prefix}faq.html">Ver FAQ</a>
