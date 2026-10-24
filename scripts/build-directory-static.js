@@ -433,7 +433,8 @@ function classifyLink(url) {
   if (lower.includes("fresha.com") || lower.includes("treatwell.") || lower.includes("ongenda.com") || lower.includes("buk.pt")) {
     return { kind: "booking", href: value };
   }
-  if (lower.includes("google.com/maps") || lower.includes("goo.gl/maps") || lower.includes("maps.app.goo.gl")) {
+  // inclui o link estável da ficha (maps.google.com/?cid=…), usado nos lotes tirados do Maps
+  if (lower.includes("google.com/maps") || lower.includes("maps.google.") || lower.includes("goo.gl/maps") || lower.includes("maps.app.goo.gl")) {
     return { kind: "google", href: value };
   }
   return { kind: "website", href: value };
