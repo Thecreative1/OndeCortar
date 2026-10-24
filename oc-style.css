@@ -1460,3 +1460,11 @@ h1 em, h2 em, .dir-headline em, .cities-headline em, .owner-cta-headline em, h1 
   color: #E3A863; vertical-align: super; margin-left: 2px;
 }
 @media (max-width: 640px) { .site-header .brand-text strong { font-size: 19px; } }
+
+/* Etiqueta "Novo" no botão "+ Adicionar barbearia" do cabeçalho (WhatsApp no perfil, 2026-10-24) */
+.nav-new-tag {
+  display: inline-block; margin-left: 6px; padding: 2px 6px; border-radius: 999px;
+  background: #C8873A; color: #17130D; vertical-align: 1px;
+  font-family: 'Geist Mono', ui-monospace, monospace; font-size: 9px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.3;
+}
