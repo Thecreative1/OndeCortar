@@ -14,7 +14,8 @@ Diretório independente de barbearias em Portugal (mapa + perfis + pesquisa), co
 
 ## Brand & Tone
 
-- Voz: direta, prática, calorosa q.b. — "sem conversa de catálogo" é lema editorial. Frases concretas, zero hype.
+- Voz: próxima, moderna, confiante, profissional e clara — como quem conhece o setor da barbearia. Direta e prática, "sem conversa de catálogo" (lema editorial). Frases concretas, zero hype.
+- Tratamento: **por tu**, em português europeu, para clientes e donos de barbearias (decisão de 2026-10-24). Nunca «você» nem tratamento formal; textos legais (privacidade) em estilo neutro.
 - Identidade visual (não renegociar), em duas famílias desde 2026-10-01:
   - **Diretório** (homepage, perfis, cidades, Sobre, FAQ, Privacidade, Registar): tema escuro "preto mate & verde-garrafa" — fundo `#141614`, cartões `#1E221F`, texto creme `#ECE7DD`, acento âmbar `#C8873A`, destaques verde-garrafa `#1F4D3A`; títulos Big Shoulders Display em maiúsculas, corpo Geist. Detalhes e armadilhas no CLAUDE.md ("Identidade visual dos perfis").
   - **Revista**: clara — Playfair Display (títulos) + Plus Jakarta Sans (corpo), papel creme/bege quente, tinta escura, verde-oliva, dourados discretos; cartões com cantos generosos e sombras suaves.
