@@ -816,3 +816,8 @@ button { cursor: pointer; font-family: var(--sans); }
 .oc-map-wrap .leaflet-bar a, .oc-map-wrap .leaflet-bar a:hover { background: var(--card); color: var(--ink); border-color: var(--hairline); }
 .oc-map-wrap .leaflet-control-attribution { background: rgba(20,22,20,.82); color: var(--subtext); }
 .oc-map-wrap .leaflet-control-attribution a { color: var(--gold-soft); }
+
+/* WhatsApp (2026-10-24): ícone oficial e botão no verde da marca WhatsApp */
+.oc-icon--wa { fill: #25D366; stroke: none; }
+.oc-contact-row__action--wa { color: #25D366; border-color: rgba(37,211,102,.55); }
+.oc-contact-row__action--wa:hover { background: rgba(37,211,102,.12); border-color: #25D366; }
