@@ -41244,6 +41244,598 @@ const barbearias = [
     "fontes": [
       "https://maps.google.com/?cid=8687310123815801597"
     ]
+  },
+  {
+    "nome": "O Truque Barbearia",
+    "slug": "o-truque-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Coimbra",
+    "zone": null,
+    "morada": "Rua do Brasil 264, 3030-775 Coimbra",
+    "codigo_postal": null,
+    "telefone": "+351 931 766 453",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbershopotruque",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://maps.google.com/?cid=18011676107734856445",
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      40.2018282,
+      -8.4123339
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=18011676107734856445"
+    ]
+  },
+  {
+    "nome": "Barbeiro Arda",
+    "slug": "barbeiro-arda",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Castelo de Paiva",
+    "zone": "Raiva",
+    "morada": "Av. Jean Tyssen 383, 4550-592 Raiva",
+    "codigo_postal": "4550-592",
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://maps.google.com/?cid=10110398504172042169",
+    "horario": "Ter-Sex 9h-19h30; Sáb 8h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=10110398504172042169",
+      "data": "2026-10-24"
+    },
+    "observacoes": null,
+    "coords": [
+      41.0380891,
+      -8.3585758
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=10110398504172042169"
+    ]
+  },
+  {
+    "nome": "Twenty Four Barbearia",
+    "slug": "twenty-four-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Felgueiras",
+    "zone": null,
+    "morada": "R. Dr. José de Barros Rocha Carneiro, 4610-182 Felgueiras",
+    "codigo_postal": null,
+    "telefone": "+351 917 683 209",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://noona.pt/twentyfourbarbearia",
+    "google_maps": "https://maps.google.com/?cid=1943654760687753175",
+    "horario": "Ter-Sex 9h-20h; Sáb 8h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=1943654760687753175",
+      "data": "2026-10-24"
+    },
+    "observacoes": null,
+    "coords": [
+      41.3711359,
+      -8.199686
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=1943654760687753175"
+    ]
+  },
+  {
+    "nome": "Igor França men’s salon",
+    "slug": "igor-franca-men-s-salon",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Ponte de Lima",
+    "zone": null,
+    "morada": "Av. da Central de Camionagem 31, 4990-150 Ponte de Lima",
+    "codigo_postal": null,
+    "telefone": "+351 913 288 720",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://maps.google.com/?cid=886672413025126417",
+    "horario": "Seg-Sex 9h-13h e 14h-21h; Sáb 9h-13h e 14h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=886672413025126417",
+      "data": "2026-10-24"
+    },
+    "observacoes": null,
+    "coords": [
+      41.7592727,
+      -8.5798963
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=886672413025126417"
+    ]
+  },
+  {
+    "nome": "Barbearia 3 de Janeiro",
+    "slug": "barbearia-3-de-janeiro",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Porto",
+    "zone": null,
+    "morada": "R. Prof. Correia de Araújo, 4200-205 Porto",
+    "codigo_postal": null,
+    "telefone": "+351 912 420 916",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://noona.pt/barbearia3dejaneiro",
+    "google_maps": "https://maps.google.com/?cid=11670690319465760027",
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      41.1639033,
+      -8.5987501
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=11670690319465760027"
+    ]
+  },
+  {
+    "nome": "Barbearia Ricardo Alves",
+    "slug": "barbearia-ricardo-alves",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Viseu",
+    "zone": null,
+    "morada": "Bairro quinta da carreira 4 RCESQ, 3500-175 Viseu",
+    "codigo_postal": null,
+    "telefone": "+351 936 022 447",
+    "email": null,
+    "website": "http://barbeariaricardoalves.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://maps.google.com/?cid=18012642031334721812",
+    "horario": "Seg-Sex 9h-20h; Sáb 8h30-16h; Dom 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=18012642031334721812",
+      "data": "2026-10-24"
+    },
+    "observacoes": null,
+    "coords": [
+      40.6634963,
+      -7.9022642
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=18012642031334721812"
+    ]
+  },
+  {
+    "nome": "Velho Jack Barbershop Espinho",
+    "slug": "velho-jack-barbershop-espinho",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Espinho",
+    "zone": null,
+    "morada": "Av. 8 592 Loja 4, 4500-000 Espinho",
+    "codigo_postal": null,
+    "telefone": "+351 227 326 314",
+    "email": null,
+    "website": "http://www.velhojackbarbershop.pt/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://maps.google.com/?cid=3859227104041651112",
+    "horario": "Seg-Sex 10h-19h; Sáb 10h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=3859227104041651112",
+      "data": "2026-10-24"
+    },
+    "observacoes": null,
+    "coords": [
+      41.0081008,
+      -8.644824
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=3859227104041651112"
+    ]
+  },
+  {
+    "nome": "Cortes da Linha Casal de Cambra",
+    "slug": "cortes-da-linha-casal-de-cambra",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Sintra",
+    "zone": "Casal de Cambra",
+    "morada": "Av. Dinamarca 158, 2605-722 Casal de Cambra",
+    "codigo_postal": "2605-722",
+    "telefone": "+351 932 096 084",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/cortes_da_linha/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://maps.google.com/?cid=1986534207833276114",
+    "horario": "Seg-Sex 9h-20h; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=1986534207833276114",
+      "data": "2026-10-24"
+    },
+    "observacoes": null,
+    "coords": [
+      38.804569,
+      -9.2285162
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=1986534207833276114"
+    ]
+  },
+  {
+    "nome": "Barbearia Sherlocks",
+    "slug": "barbearia-sherlocks",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Guarda",
+    "zone": null,
+    "morada": "R. Dr. Manuel de Arriaga 24, 6300-701 Guarda",
+    "codigo_postal": null,
+    "telefone": "+351 914 364 567",
+    "email": null,
+    "website": null,
+    "instagram": "https://www.instagram.com/barbershop_sherlocks/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://maps.google.com/?cid=3885189756305517319",
+    "horario": "Seg-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=3885189756305517319",
+      "data": "2026-10-24"
+    },
+    "observacoes": null,
+    "coords": [
+      40.539915,
+      -7.2654844
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=3885189756305517319"
+    ]
+  },
+  {
+    "nome": "Barbearia Deo",
+    "slug": "barbearia-deo",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Lousã",
+    "zone": null,
+    "morada": "R. Inês de Castro 8 Loja A, 3200-150 Lousã",
+    "codigo_postal": null,
+    "telefone": "+351 968 775 580",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://buk.pt/barbearia-deo",
+    "google_maps": "https://maps.google.com/?cid=2303055899020362960",
+    "horario": "Ter-Sex 9h30-13h e 14h30-18h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=2303055899020362960",
+      "data": "2026-10-24"
+    },
+    "observacoes": null,
+    "coords": [
+      40.1104355,
+      -8.2502262
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=2303055899020362960"
+    ]
+  },
+  {
+    "nome": "Barbearia do Arco",
+    "slug": "barbearia-do-arco",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Lisboa",
+    "zone": null,
+    "morada": "Av. Duque de Ávila n8c, 1000-140 Lisboa",
+    "codigo_postal": null,
+    "telefone": "+351 215 983 303",
+    "email": null,
+    "website": "https://barbearia-do-arco.lovable.app/",
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://maps.google.com/?cid=10267393447881235948",
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=10267393447881235948",
+      "data": "2026-10-24"
+    },
+    "observacoes": null,
+    "coords": [
+      38.7353989,
+      -9.1414843
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=10267393447881235948"
+    ]
+  },
+  {
+    "nome": "Tribuna Barbearia",
+    "slug": "tribuna-barbearia",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Porto",
+    "zone": null,
+    "morada": "Rua de Costa Cabral 2300, 4200-218 Porto",
+    "codigo_postal": null,
+    "telefone": "+351 964 555 166",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://buk.pt/tribuna-barbearia",
+    "google_maps": "https://maps.google.com/?cid=18049064311686300048",
+    "horario": "Ter-Sex 10h-13h e 14h-20h; Sáb 9h15-13h e 14h-18h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=18049064311686300048",
+      "data": "2026-10-24"
+    },
+    "observacoes": null,
+    "coords": [
+      41.1758619,
+      -8.5854599
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=18049064311686300048"
+    ]
+  },
+  {
+    "nome": "Barbearia Ramos",
+    "slug": "barbearia-ramos-sesimbra",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Sesimbra",
+    "zone": "Quinta do Conde",
+    "morada": "R. Manuel de Arriaga Lote - 1342 Lj B, 2975-329 Quinta do Conde",
+    "codigo_postal": "2975-329",
+    "telefone": "+351 967 034 540",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "https://buk.pt/barbearia-ramos",
+    "google_maps": "https://maps.google.com/?cid=13873522291487867848",
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.5594457,
+      -9.0448191
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=13873522291487867848"
+    ]
+  },
+  {
+    "nome": "Barbearia Lima Almancil",
+    "slug": "barbearia-lima-almancil",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Almancil",
+    "zone": null,
+    "morada": "Av. 5 de Outubro 66, 8135-155 Almancil",
+    "codigo_postal": null,
+    "telefone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": "http://barbearialima.buk.pt/",
+    "google_maps": "https://maps.google.com/?cid=3670745763631029588",
+    "horario": "Seg-Sáb 9h-12h e 14h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=3670745763631029588",
+      "data": "2026-10-24"
+    },
+    "observacoes": null,
+    "coords": [
+      37.0872973,
+      -8.0323879
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=3670745763631029588"
+    ]
+  },
+  {
+    "nome": "Barbearia do Patio",
+    "slug": "barbearia-do-patio",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Sintra",
+    "zone": "Colares",
+    "morada": "Pátio do Banzão, R. da Liberdade 112 Lj10, 2705-229 Colares",
+    "codigo_postal": "2705-229",
+    "telefone": "+351 917 101 342",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/barbeariadopatio/",
+    "booking": null,
+    "google_maps": "https://maps.google.com/?cid=6290786965924663299",
+    "horario": "Seg-Sáb 9h30-13h e 14h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=6290786965924663299",
+      "data": "2026-10-24"
+    },
+    "observacoes": null,
+    "coords": [
+      38.8062862,
+      -9.4498558
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=6290786965924663299"
+    ]
+  },
+  {
+    "nome": "Barbearia Pedro Medina",
+    "slug": "barbearia-pedro-medina",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Coimbra",
+    "zone": null,
+    "morada": "Av. da Guarda Inglesa 3, 3040-270 Coimbra",
+    "codigo_postal": null,
+    "telefone": "+351 239 814 970",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://maps.google.com/?cid=13376771813824190250",
+    "horario": "Seg-Sex 9h-13h e 15h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=13376771813824190250",
+      "data": "2026-10-24"
+    },
+    "observacoes": null,
+    "coords": [
+      40.2046542,
+      -8.4360449
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=13376771813824190250"
+    ]
+  },
+  {
+    "nome": "The Barber Company Rio Sul",
+    "slug": "the-barber-company-rio-sul",
+    "distrito": null,
+    "concelho": null,
+    "freguesia": null,
+    "city": "Seixal",
+    "zone": null,
+    "morada": "Rio Sul Shopping, Loja 0.44, 2840-168 Seixal",
+    "codigo_postal": null,
+    "telefone": "+351 210 523 039",
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "facebook": "https://www.facebook.com/TheBarberCompanyRioSul",
+    "booking": null,
+    "google_maps": "https://maps.google.com/?cid=9985582169864399269",
+    "horario": null,
+    "observacoes": null,
+    "coords": [
+      38.6123728,
+      -9.1040087
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-24",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://maps.google.com/?cid=9985582169864399269"
+    ]
   }
 ];
 
