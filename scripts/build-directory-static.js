@@ -1431,7 +1431,7 @@ function renderProfilePage(barber, citiesMap) {
           '<div class="oc-owner__progress-label"><span>Ficha<\/span><span class="oc-mono">' + filled + "\/" + fields.length + " completa<\/span><\/div>" +
           '<div class="oc-owner__progress" aria-hidden="true"><span style="width:' + Math.round(100 * filled / fields.length) + '%"><\/span><\/div>' +
           '<ul class="oc-owner-check">' + checklist + "<\/ul>" +
-          '<a href="' + H(updateHref) + '" class="oc-btn oc-btn--gold oc-owner__cta">' + (complete ? "Atualizar perfil" : "Reclamar e completar") + " " + iArrow + "<\/a>" +
+          '<a href="' + H(updateHref) + '" class="oc-btn oc-btn--gold oc-owner__cta">' + (complete ? "Atualizar perfil" : "Completar a ficha") + " " + iArrow + "<\/a>" +
         "<\/div>" +
       "<\/div>" +
     "<\/div>";
