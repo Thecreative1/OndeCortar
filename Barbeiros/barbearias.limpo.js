@@ -39767,7 +39767,7 @@ const barbearias = [
     "freguesia": null,
     "city": "Parede - Jardins da Parede",
     "zone": "Parede",
-    "morada": "Praceta António Vicente 2, Alto do Murtal, 2775-073 Parede",
+    "morada": "Praceta António Vicente 2A R/C, Alto do Murtal, 2775-073 Parede",
     "codigo_postal": "2775-073",
     "telefone": "+351 961 540 429",
     "email": null,
@@ -39782,13 +39782,23 @@ const barbearias = [
       "url": "https://maps.google.com/?cid=7945656637764271922",
       "data": "2026-10-18"
     },
+    "precos": {
+      "corte": 15,
+      "barba": 12,
+      "corte_barba": 20,
+      "fonte": {
+        "nome": "Barbearia",
+        "url": null,
+        "data": "2026-10-23"
+      }
+    },
     "observacoes": null,
     "coords": [
       38.7018957,
       -9.3632395
     ],
     "mostrar_no_mapa": true,
-    "ultima_validacao": "2026-10-18",
+    "ultima_validacao": "2026-10-23",
     "status": "confirmado",
     "qualidade_ficha": "alta",
     "fontes": [
