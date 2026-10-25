@@ -8,7 +8,7 @@ const ROOT = path.resolve(__dirname, "..");
 const SITE_URL = "https://ondecortar.pt/";
 const TODAY = new Date().toISOString().slice(0, 10);
 // Imagem de partilha 1200×630 gerada por scripts/gerar-imagens-partilha.js (antes: banner 1536×316, cortado pelo Facebook)
-const DEFAULT_OG_IMAGE = SITE_URL + "imagens/partilha/ondecortar.jpg";
+const DEFAULT_OG_IMAGE = SITE_URL + "imagens/partilha/ondecortar-v2.jpg";
 const DEFAULT_OG_IMAGE_ALT = "OndeCortar.pt — encontra uma barbearia perto de ti: mapa de Portugal com mais de 1000 barbearias";
 // Etiquetas comuns de partilha (Facebook, WhatsApp, X) — só quando a imagem é a de 1200×630
 function ogImageTags(image, alt) {

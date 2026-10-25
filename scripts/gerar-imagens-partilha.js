@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 /**
  * Gera as imagens de partilha (Open Graph, 1200×630) em imagens/partilha/:
- * - ondecortar.jpg — homepage, perfis, páginas de cidade e páginas institucionais
- * - ondecortar-donos.jpg — registar.html (para donos de barbearias)
+ * - ondecortar-v2.jpg — homepage, perfis, páginas de cidade e páginas institucionais
+ * - ondecortar-donos-v2.jpg — registar.html (para donos de barbearias)
+ *   (os ondecortar.jpg / ondecortar-donos.jpg antigos ficam para partilhas já feitas)
  * - ondecortar-loja.jpg / ondecortar-revista.jpg — páginas da loja e índices/categorias da revista
  *   (os artigos e os produtos usam a própria foto; ver apply-share-tags.js)
  *
- * O mapa de fundo é desenhado com as coordenadas reais das barbearias públicas do continente
- * (Barbeiros/barbearias.limpo.js). Identidade dos perfis: preto mate, creme, âmbar, Big Shoulders + Geist.
+ * Cartões principais: verde-escuro, símbolo dourado (imagens/logo-ondecortar-512.png) e mapa de Portugal
+ * (imagens/partilha/mapa-portugal.png), como a capa do Facebook. Big Shoulders + Geist.
  * Correr de novo se o número de barbearias mudar de patamar (o texto diz "Mais de 1000").
  *
  * Uso: node scripts/gerar-imagens-partilha.js   (usa o Chromium do Playwright, que já é dependência)
@@ -18,40 +19,30 @@ const { chromium } = require("@playwright/test");
 
 const ROOT = path.resolve(__dirname, "..");
 const OUT = path.join(ROOT, "imagens", "partilha");
-const { barbearias } = require(path.join(ROOT, "Barbeiros", "barbearias.limpo.js"));
 
-// Continente: caixa de coordenadas → área do mapa à direita do cartão
-const BOX = { latMin: 36.95, latMax: 42.16, lonMin: -9.52, lonMax: -6.18 };
-// Margem de ~130 px de cada lado: o WhatsApp mostra só o centro (corta ~120 px a cada lado)
-const MAP = { x: 800, y: 50, h: 530 };
-MAP.w = MAP.h * ((BOX.lonMax - BOX.lonMin) * Math.cos((39.5 * Math.PI) / 180)) / (BOX.latMax - BOX.latMin);
-
-const pontos = barbearias
-  .filter((b) => b.mostrar_no_mapa !== false && Array.isArray(b.coords))
-  .map((b) => [Number(b.coords[0]), Number(b.coords[1])])
-  .filter(([lat, lon]) => lat >= BOX.latMin && lat <= BOX.latMax && lon >= BOX.lonMin && lon <= BOX.lonMax)
-  .map(([lat, lon]) => [
-    MAP.x + ((lon - BOX.lonMin) / (BOX.lonMax - BOX.lonMin)) * MAP.w,
-    MAP.y + ((BOX.latMax - lat) / (BOX.latMax - BOX.latMin)) * MAP.h,
-  ]);
-const dots = pontos.map(([x, y]) => `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.2"/>`).join("");
+// Identidade nova (2026-10-25, igual à capa do Facebook): verde-escuro, símbolo dourado e mapa de Portugal
+// com as cidades. Tudo entre x 140 e 1070: o WhatsApp mostra só o centro (corta ~120 px de cada lado).
+// Nome do ficheiro com versão (-v2): o Facebook e o WhatsApp guardam a imagem por URL — mudar o nome obriga a nova recolha.
+const png64 = (rel) => "data:image/png;base64," + fs.readFileSync(path.join(ROOT, rel)).toString("base64");
+const LOGO = png64("imagens/logo-ondecortar-512.png");
+const MAPA = png64("imagens/partilha/mapa-portugal.png");
 
 const WA = "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z";
 
 const CARDS = [
   {
-    file: "ondecortar.jpg",
+    file: "ondecortar-v2.jpg",
     eyebrow: "Barbearias em Portugal",
-    title: 'Encontra uma<br>barbearia<br><em>perto de ti</em>',
-    sub: "Mais de 1000 barbearias em 320 cidades",
-    chips: ["Mapa", "Horário", "Contactos", "Marcação"],
+    title: "Encontra uma<br>barbearia<br><em>perto de ti</em>",
+    sub: "Mais de 1000 barbearias,<br>com mapa e horário",
+    pill: "ONDECORTAR.PT",
   },
   {
-    file: "ondecortar-donos.jpg",
+    file: "ondecortar-donos-v2.jpg",
     eyebrow: "Para barbeiros",
-    title: 'Põe a tua barbearia <em>no mapa</em>',
-    sub: "Ficha gratuita, sem comissões",
-    chips: ["Sem mensalidade", `<svg viewBox="0 0 24 24" class="wa"><path d="${WA}"/></svg> Agora com WhatsApp`],
+    title: "Põe a tua<br>barbearia<br><em>no mapa</em>",
+    sub: "Ficha gratuita,<br>sem comissões",
+    pill: `<svg viewBox="0 0 24 24" class="wa"><path d="${WA}"/></svg> Agora com WhatsApp`,
   },
 ];
 
@@ -59,36 +50,31 @@ const html = (c) => `<!doctype html><html lang="pt-PT"><head><meta charset="utf-
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Geist:wght@400;500;600&display=block" rel="stylesheet">
 <style>
   *{margin:0;box-sizing:border-box}
-  body{width:1200px;height:630px;overflow:hidden;background:#141614;font-family:Geist,sans-serif;color:#ECE7DD;position:relative}
-  .bg{position:absolute;inset:0;background:
-    repeating-linear-gradient(135deg,rgba(255,255,255,.018) 0 2px,transparent 2px 14px),
-    radial-gradient(circle at 80% 45%,rgba(200,135,58,.20),transparent 46%),
-    linear-gradient(160deg,#1B2A21 0%,#141614 62%)}
-  .bar{position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,#C8873A,transparent 75%)}
-  svg.map{position:absolute;left:0;top:0;width:1200px;height:630px}
-  svg.map circle{fill:#E3A863;opacity:.55}
-  .copy{position:absolute;left:150px;top:52px;width:620px}
-  .brand{font-family:"Big Shoulders Display";font-weight:800;font-size:44px;letter-spacing:.01em}
-  .brand sup{font-family:Geist;font-size:15px;font-weight:600;letter-spacing:.14em;color:#E3A863;margin-left:4px;vertical-align:22px}
-  .eyebrow{margin-top:34px;display:inline-block;padding:7px 16px;border:1.5px solid rgba(200,135,58,.6);border-radius:999px;color:#E3A863;font-size:17px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
-  h1{margin-top:20px;font-family:"Big Shoulders Display";font-weight:800;font-size:82px;line-height:.9;text-transform:uppercase;letter-spacing:.005em}
+  body{width:1200px;height:630px;overflow:hidden;position:relative;font-family:Geist,sans-serif;color:#F3ECDD;
+    background:radial-gradient(ellipse at 76% 50%,#143024 0%,rgba(20,48,36,0) 45%),radial-gradient(ellipse at 25% 45%,#10241b 0%,rgba(16,36,27,0) 50%),linear-gradient(120deg,#07110d 0%,#0e1c17 55%,#0b1712 100%)}
+  .stripes{position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.018) 0 2px,transparent 2px 16px)}
+  .bar{position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,transparent,#D9A55A 30%,#D9A55A 70%,transparent)}
+  .mapa{position:absolute;left:752px;top:62px;height:506px;-webkit-mask-image:linear-gradient(to right,transparent,#000 9%,#000 91%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);-webkit-mask-composite:source-in}
+  .vline{position:absolute;left:728px;top:120px;width:1.5px;height:390px;background:linear-gradient(transparent,rgba(217,165,90,.55),transparent)}
+  .copy{position:absolute;left:142px;top:58px;width:570px}
+  .brand{display:flex;align-items:center;gap:18px}
+  .logo{width:112px;height:112px;border-radius:50%;background:url(${LOGO}) center/100% no-repeat;box-shadow:0 0 36px rgba(217,165,90,.3);flex:none}
+  .eyebrow{font-size:16px;font-weight:600;letter-spacing:.2em;color:#E3A863;text-transform:uppercase}
+  .wm{font-family:"Big Shoulders Display";font-weight:800;font-size:42px;margin-top:2px}
+  .wm sup{font-family:Geist;font-size:14px;font-weight:600;letter-spacing:.14em;color:#E3A863;margin-left:3px;vertical-align:19px}
+  h1{margin-top:22px;font-family:"Big Shoulders Display";font-weight:800;font-size:76px;line-height:.92;text-transform:uppercase}
   h1 em{font-style:normal;color:#E3A863}
-  .rule{width:84px;height:5px;background:#C8873A;border-radius:3px;margin:22px 0 18px}
-  .sub{font-size:28px;font-weight:500;color:#D6CFC2}
-  .chips{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
-  .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:20px;font-weight:500;color:#ECE7DD}
-  .chip .wa{width:22px;height:22px;fill:#25D366}
-  .url{position:absolute;left:150px;bottom:44px;font-size:20px;font-weight:600;letter-spacing:.06em;color:#9A9384}
+  .foot{margin-top:22px;display:flex;align-items:center;gap:18px}
+  .sub{font-size:22px;font-weight:500;line-height:1.3;color:#D9D1C1}
+  .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:12px;background:#1F5A3D;border:1.5px solid #3E8A61;font-family:"Big Shoulders Display";font-weight:800;font-size:24px;letter-spacing:.04em;white-space:nowrap}
+  .pill .wa{width:22px;height:22px;fill:#25D366}
 </style></head><body>
-<div class="bg"></div><div class="bar"></div>
-<svg class="map" viewBox="0 0 1200 630">${dots}</svg>
+<div class="stripes"></div><div class="bar"></div>
+<img class="mapa" src="${MAPA}"><div class="vline"></div>
 <div class="copy">
-  <div class="brand">OndeCortar<sup>.PT</sup></div>
-  <div class="eyebrow">${c.eyebrow}</div>
+  <div class="brand"><div class="logo"></div><div><div class="eyebrow">${c.eyebrow}</div><div class="wm">OndeCortar<sup>.PT</sup></div></div></div>
   <h1>${c.title}</h1>
-  <div class="rule"></div>
-  <div class="sub">${c.sub}</div>
-  <div class="chips">${c.chips.map((t) => `<span class="chip">${t}</span>`).join("")}</div>
+  <div class="foot"><div class="sub">${c.sub}</div><div class="pill">${c.pill}</div></div>
 </div>
 </body></html>`;
 
@@ -170,5 +156,4 @@ const htmlSecao = (c) => {
     console.log("imagens/partilha/" + c.file);
   }
   await browser.close();
-  console.log("pontos no mapa: " + pontos.length);
 })();
