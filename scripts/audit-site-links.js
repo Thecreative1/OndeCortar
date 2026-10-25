@@ -146,12 +146,35 @@ function collectAssetSources(contents) {
   return sources;
 }
 
+// Texto do link → destino que tem de ter
+const TEXT_RULES = [
+  [/^contactos?$|^contacta|^fala connosco/i, /^mailto:|contacto/],
+  [/^sobre( n[óo]s)?$/i, /sobre/],
+  [/^faq$|^perguntas frequentes$/i, /faq/],
+  [/^privacidade$|pol[íi]tica de privacidade/i, /privacidade/],
+  [/^loja$/i, /loja/],
+  [/^revista$/i, /revista/],
+  [/^cidades$|^todas as cidades$/i, /cidades/],
+  [/^\+? ?adicionar (a minha )?barbearia$|^atualizar perfil$|^completar a ficha$/i, /registar/]
+];
+
 function auditFile(filePath) {
   if (!fs.existsSync(filePath)) {
     return;
   }
 
   const contents = fs.readFileSync(filePath, "utf8");
+
+  // Link cujo texto promete outro destino (a 2026-10-25, "Contacto" no rodapé da homepage ia para registar.html)
+  for (const m of contents.matchAll(/<a\b[^>]*\bhref="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi)) {
+    const text = m[2].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+    if (!text || text.length > 40) continue;
+    const rule = TEXT_RULES.find(([re]) => re.test(text));
+    if (rule && !rule[1].test(m[1])) {
+      ISSUES.push({ type: "wrong_destination", file: path.relative(ROOT, filePath), text, href: m[1] });
+    }
+  }
+
   const hrefRegex = /<a\b[^>]*\bhref=["']([^"']+)["'][^>]*>/gi;
   let match;
 
@@ -220,3 +243,5 @@ console.log(JSON.stringify({
   byType: grouped,
   samples: ISSUES.slice(0, 20)
 }, null, 2));
+// Falha o npm test / CI quando há links partidos ou trocados
+if (ISSUES.length) process.exitCode = 1;
