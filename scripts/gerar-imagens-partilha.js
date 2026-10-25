@@ -22,7 +22,8 @@ const { barbearias } = require(path.join(ROOT, "Barbeiros", "barbearias.limpo.js
 
 // Continente: caixa de coordenadas → área do mapa à direita do cartão
 const BOX = { latMin: 36.95, latMax: 42.16, lonMin: -9.52, lonMax: -6.18 };
-const MAP = { x: 760, y: 40, h: 550 };
+// Margem de ~130 px de cada lado: o WhatsApp mostra só o centro (corta ~120 px a cada lado)
+const MAP = { x: 800, y: 50, h: 530 };
 MAP.w = MAP.h * ((BOX.lonMax - BOX.lonMin) * Math.cos((39.5 * Math.PI) / 180)) / (BOX.latMax - BOX.latMin);
 
 const pontos = barbearias
@@ -66,7 +67,7 @@ const html = (c) => `<!doctype html><html lang="pt-PT"><head><meta charset="utf-
   .bar{position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,#C8873A,transparent 75%)}
   svg.map{position:absolute;left:0;top:0;width:1200px;height:630px}
   svg.map circle{fill:#E3A863;opacity:.55}
-  .copy{position:absolute;left:72px;top:52px;width:650px}
+  .copy{position:absolute;left:150px;top:52px;width:620px}
   .brand{font-family:"Big Shoulders Display";font-weight:800;font-size:44px;letter-spacing:.01em}
   .brand sup{font-family:Geist;font-size:15px;font-weight:600;letter-spacing:.14em;color:#E3A863;margin-left:4px;vertical-align:22px}
   .eyebrow{margin-top:34px;display:inline-block;padding:7px 16px;border:1.5px solid rgba(200,135,58,.6);border-radius:999px;color:#E3A863;font-size:17px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
@@ -77,7 +78,7 @@ const html = (c) => `<!doctype html><html lang="pt-PT"><head><meta charset="utf-
   .chips{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
   .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:20px;font-weight:500;color:#ECE7DD}
   .chip .wa{width:22px;height:22px;fill:#25D366}
-  .url{position:absolute;left:72px;bottom:44px;font-size:20px;font-weight:600;letter-spacing:.06em;color:#9A9384}
+  .url{position:absolute;left:150px;bottom:44px;font-size:20px;font-weight:600;letter-spacing:.06em;color:#9A9384}
 </style></head><body>
 <div class="bg"></div><div class="bar"></div>
 <svg class="map" viewBox="0 0 1200 630">${dots}</svg>
@@ -126,18 +127,18 @@ const htmlSecao = (c) => {
     background:${loja ? "repeating-linear-gradient(135deg,rgba(255,255,255,.02) 0 2px,transparent 2px 16px),radial-gradient(circle at 78% 40%,rgba(200,160,80,.22),transparent 45%),linear-gradient(150deg,#121a15,#1f3025)" : "radial-gradient(circle at 12% 10%,rgba(176,138,74,.16),transparent 40%),#F4EDE1"};
     color:${loja ? "#F3ECDD" : "#1F1913"}}
   .bar{position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,${loja ? "#D4A752" : "#8A5714"},transparent 75%)}
-  .copy{position:absolute;left:68px;top:54px;width:${loja ? 560 : 540}px}
+  .copy{position:absolute;left:140px;top:54px;width:${loja ? 500 : 480}px}
   .brand{font-family:"Playfair Display";font-weight:800;font-size:40px}
   .brand sup{font-family:"Plus Jakarta Sans";font-size:15px;font-weight:700;letter-spacing:.14em;color:${loja ? "#D4A752" : "#8A5714"};margin-left:4px;vertical-align:20px}
   .eyebrow{margin-top:30px;display:inline-block;padding:7px 16px;border:1.5px solid ${loja ? "rgba(212,167,82,.65)" : "rgba(138,87,20,.45)"};border-radius:999px;color:${loja ? "#D4A752" : "#8A5714"};font-size:16px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-  h1{margin-top:20px;font-family:"Playfair Display";font-weight:800;font-size:66px;line-height:1.02}
+  h1{margin-top:20px;font-family:"Playfair Display";font-weight:800;font-size:${loja ? 56 : 62}px;line-height:1.04}
   h1 em{font-style:italic;color:${loja ? "#D4A752" : "#8A5714"}}
   .rule{width:84px;height:5px;background:${loja ? "#D4A752" : "#8A5714"};border-radius:3px;margin:22px 0 16px}
   .sub{font-size:24px;font-weight:500;line-height:1.35;color:${loja ? "#D9D1C1" : "#4E473D"}}
   .chips{margin-top:20px;display:flex;gap:10px}
   .chip{padding:7px 15px;border-radius:999px;font-size:18px;font-weight:600;
     background:${loja ? "rgba(255,255,255,.07)" : "rgba(138,87,20,.08)"};border:1px solid ${loja ? "rgba(255,255,255,.14)" : "rgba(138,87,20,.2)"}}
-  .fotos{position:absolute;right:56px;top:70px;width:470px;height:490px}
+  .fotos{position:absolute;right:135px;top:80px;width:470px;height:490px;transform:scale(.88);transform-origin:right top}
   .quadro{position:absolute;background:#f6efe3;border-radius:22px;padding:18px;box-shadow:0 18px 40px rgba(0,0,0,.35);border:2px solid rgba(212,167,82,.5)}
   .quadro img{display:block;width:100%;height:100%;object-fit:contain;border-radius:10px;background:#fff}
   .q0{left:0;top:40px;width:250px;height:300px;transform:rotate(-4deg)}
