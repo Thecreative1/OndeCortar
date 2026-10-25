@@ -39,7 +39,7 @@ const GROUPS = [
       ["philips-oneblade-360-qp2724", "Melhor para a barba", "trimmer-vs-shaver-diferencas-reais"],
       ["king-c-dupla", "Melhor para barbear à clássica", "navalha-classica-ou-maquina-de-seguranca-diferencas-reais"],
       ["viking-sandalwood", "Melhor kit para começar", "melhor-kit-de-barba-para-oferecer"],
-      ["shave-factory-clippercare", "Essencial de manutenção", "como-limpar-uma-maquina-de-cortar-cabelo"]
+      ["beardburys-spray", "Essencial de manutenção", "como-limpar-uma-maquina-de-cortar-cabelo"]
     ]
   }
 ];

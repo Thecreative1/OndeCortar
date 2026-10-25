@@ -74,7 +74,7 @@ module.exports = [
   },
   {
     slug: "shave-factory-clippercare", name: "The Shave Factory Clippercare 6 em 1", brand: "The Shave Factory", asin: "B0D3XY51CB",
-    replaces: "beardburys-spray",
+    replaces: "beardburys-spray", // revertido a 2026-10-25 (produtos-2026-10-25-substitutos.js): não voltar a correr este ficheiro no apply-product-replacements
     image: "imagens/produtos/shave-factory-clippercare.jpg", alt: "Spray de manutenção The Shave Factory Clippercare 6 em 1 de 500 ml para lâminas de máquinas",
     bestFor: "Manutenção rápida",
     summary: "Indicado para barbeiros e para quem usa máquina de cortar com regularidade e quer arrefecer, limpar e lubrificar as lâminas num só passo.",

@@ -60,13 +60,13 @@ const STORE_PICK_VARIANTS = [
   ],
   [
     { slug: "remington-colourcut-hc5035", label: "Primeira máquina para cortar em casa" },
-    { slug: "philips-bt3238", label: "Aparador para a barba" },
+    { slug: "philips-bt3619-series-3000", label: "Aparador para a barba" },
     { slug: "braun-series-5-aio5545", label: "Cabelo, barba e corpo num só aparelho" }
   ],
   [
     { slug: "wahl-rapid-clip", label: "Máquina sem fios para retoques entre cortes" },
     { slug: "remington-mb320c", label: "Aparador de barba simples" },
-    { slug: "shave-factory-clippercare", label: "Manutenção da máquina" }
+    { slug: "beardburys-spray", label: "Manutenção da máquina" }
   ]
 ];
 

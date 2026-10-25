@@ -178,6 +178,8 @@ for (const { old, oldAsin, fresh } of pairs) {
   const before = html;
   const oldHref = new RegExp('href="https://www\\.amazon\\.es/[^"]*dp/' + oldAsin + '[^"]*"([^>]*)>[^<]*</a>', "g");
   html = html.replace(oldHref, (m, attrs) => 'href="' + amazonHref(fresh.asin) + '"' + attrs + ">Ver alternativa na Amazon.es</a>");
+  // links que envolvem imagem (ex.: foto do topo, apply-product-image-links.js): só o destino muda
+  html = html.replace(new RegExp('href="https://www\\.amazon\\.es/[^"]*dp/' + oldAsin + '[^"]*"', "g"), 'href="' + amazonHref(fresh.asin) + '"');
   // barra fixa mobile: o botão leva ao substituto, por isso é o nome dele que aparece
   html = html.replace(/<span class="oc-sticky-cta-name">[\s\S]*?<\/span>(?=\s*<a)/,
     '<span class="oc-sticky-cta-name"><small>Alternativa</small>' + esc(fresh.name) + "</span>");
@@ -189,7 +191,7 @@ for (const { old, oldAsin, fresh } of pairs) {
   const custom = fresh.note || {};
   const note = "<!-- OC-UNAVAILABLE-START -->" +
     '<div class="oc-unavailable-note" role="note"><strong>' + esc(custom.title || "Indisponível na Amazon.es") + "</strong>" +
-    "<p>" + esc(custom.text || "Este produto deixou de estar disponível na Amazon.es (confirmado a " + CHECKED_ON + ").") + " " +
+    "<p>" + esc(custom.text || "Este produto deixou de estar disponível na Amazon.es (confirmado a " + (fresh.checkedOn || CHECKED_ON) + ").") + " " +
     'A alternativa que recomendamos é o <a href="../../produto/' + fresh.slug + '/">' + esc(fresh.name) + "</a>.</p></div>" +
     "<!-- OC-UNAVAILABLE-END -->";
   html = html.replace(/(<h1>[^<]*<\/h1><p>[^<]*<\/p>)/, (m) => m + note);

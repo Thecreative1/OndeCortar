@@ -61,7 +61,7 @@ const PICKS = {
   "como-aparar-a-barba-em-casa": {
     title: "O que usar para aparar a barba",
     items: [
-      ["philips-bt3238", "Para começar", "20 posições de comprimento para acertar a barba aos poucos."],
+      ["philips-bt3619-series-3000", "Para começar", "20 posições de comprimento para acertar a barba aos poucos."],
       ["braun-bt5525-series-5", "Mais afinação", "40 comprimentos em intervalos de 0,5 mm, com bloqueio."],
       ["philips-oneblade-360-qp2724", "Contornos", "Lâmina 360 que acompanha o contorno do rosto no pescoço e no bigode."],
       ["viking-revolution-beard-oil", "Acabamento", "Óleo com argão e jojoba para o passo final."]
@@ -88,7 +88,7 @@ const PICKS = {
     title: "Para aparar sem mostrar as falhas",
     items: [
       ["braun-bt5525-series-5", "Muitos comprimentos", "40 comprimentos em intervalos de 0,5 mm para encontrar a altura certa."],
-      ["philips-bt3238", "Mais simples", "20 posições de comprimento para manter a barba alinhada."],
+      ["philips-bt3619-series-3000", "Mais simples", "20 posições de comprimento para manter a barba alinhada."],
       ["viking-revolution-beard-oil", "Óleo", "Para a secura das primeiras semanas. Não faz crescer barba."]
     ]
   },
