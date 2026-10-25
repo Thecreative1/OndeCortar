@@ -4,7 +4,8 @@ const vm = require("vm");
 const utils = require("../Barbeiros/barbearias-utils.js");
 
 const ROOT_DIR = path.resolve(__dirname, "..");
-const SOURCE_FILE = path.join(ROOT_DIR, "Barbeiros", "barbeiros.js");
+// Fonte única dos dados (até 2026-10-25 lia o barbeiros.js de abril, com 234 fichas)
+const SOURCE_FILE = path.join(ROOT_DIR, "Barbeiros", "barbearias.limpo.js");
 const OUTPUT_JSON = path.join(ROOT_DIR, "Barbeiros", "relatorio-localizacao.json");
 const OUTPUT_CSV = path.join(ROOT_DIR, "Barbeiros", "relatorio-localizacao.csv");
 
@@ -13,7 +14,7 @@ function loadLegacyBarbers() {
   const context = {};
   vm.createContext(context);
   vm.runInContext(source + "\nthis.__barbearias = barbearias;", context);
-  return Array.isArray(context.__barbearias) ? context.__barbearias : [];
+  return Array.isArray(context.__barbearias) ? context.__barbearias.filter((b) => b.mostrar_no_mapa !== false) : [];
 }
 
 function csvEscape(value) {

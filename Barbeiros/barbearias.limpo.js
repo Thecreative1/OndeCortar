@@ -13977,8 +13977,8 @@ const barbearias = [
     "horario": null,
     "observacoes": null,
     "coords": [
-      41.912065,
-      -8.5608462
+      41.912438,
+      -8.5622643
     ],
     "status": "confirmado",
     "fontes": [
@@ -14058,8 +14058,8 @@ const barbearias = [
     "horario": null,
     "observacoes": null,
     "coords": [
-      41.912065,
-      -8.5608462
+      41.9124127,
+      -8.5613109
     ],
     "status": "confirmado",
     "fontes": [

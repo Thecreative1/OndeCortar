@@ -453,6 +453,12 @@ button { cursor: pointer; font-family: var(--sans); }
 .oc-summary__online { display: flex; flex-wrap: wrap; gap: 6px 14px; }
 .oc-summary__online a { display: inline-flex; align-items: center; gap: 6px; }
 .oc-summary .oc-icon { width: 14px; height: 14px; }
+/* Ecrãs de toque: área mínima de 24 px nos links do resumo (WCAG 2.5.8); links a meio de frases ficam como estão */
+@media (pointer: coarse) {
+  .oc-summary__row dd > a, .oc-summary__link, .oc-summary__online a {
+    display: inline-flex; align-items: center; min-height: 28px; padding-block: 4px;
+  }
+}
 
 .oc-visually-hidden {
   position: absolute; width: 1px; height: 1px; overflow: hidden;
