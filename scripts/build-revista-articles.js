@@ -248,3 +248,5 @@ for (const a of articles) {
   const s = linkSitemap(a), hub = linkHub(a), cat = linkCategory(a);
   console.log(a.slug + " | página ok | sitemap " + (s ? "+" : "=") + " | hub " + (hub ? "+" : "=") + " | categoria " + (cat ? "+" : "="));
 }
+// Etiquetas de partilha (og:image:width/height/alt…): o modelo traz as medidas da capa dele
+require("child_process").execFileSync(process.execPath, [require("path").join(__dirname, "apply-share-tags.js")], { stdio: "inherit" });

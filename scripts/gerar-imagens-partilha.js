@@ -3,6 +3,8 @@
  * Gera as imagens de partilha (Open Graph, 1200×630) em imagens/partilha/:
  * - ondecortar.jpg — homepage, perfis, páginas de cidade e páginas institucionais
  * - ondecortar-donos.jpg — registar.html (para donos de barbearias)
+ * - ondecortar-loja.jpg / ondecortar-revista.jpg — páginas da loja e índices/categorias da revista
+ *   (os artigos e os produtos usam a própria foto; ver apply-share-tags.js)
  *
  * O mapa de fundo é desenhado com as coordenadas reais das barbearias públicas do continente
  * (Barbeiros/barbearias.limpo.js). Identidade dos perfis: preto mate, creme, âmbar, Big Shoulders + Geist.
@@ -89,12 +91,79 @@ const html = (c) => `<!doctype html><html lang="pt-PT"><head><meta charset="utf-
 </div>
 </body></html>`;
 
+// Loja e revista: identidade própria (commerce.css) — Playfair Display + Plus Jakarta Sans.
+// Loja = painel verde-escuro com riscas, linha dourada e fotos em quadro creme; revista = creme com foto editorial.
+const img64 = (rel) => "data:image/jpeg;base64," + fs.readFileSync(path.join(ROOT, rel)).toString("base64");
+const SECOES = [
+  {
+    file: "ondecortar-loja.jpg", theme: "loja",
+    eyebrow: "Loja OndeCortar",
+    title: "Cortar e cuidar da barba <em>em casa</em>",
+    sub: "Máquinas, aparadores e kits que recomendamos, com link para a Amazon.es",
+    chips: ["Máquinas", "Barba", "Prendas"],
+    fotos: ["imagens/produtos/philips-hc5630.jpg", "imagens/produtos/philips-oneblade-360-qp2724.jpg", "imagens/produtos/VikingRevolution.jpg"],
+  },
+  {
+    file: "ondecortar-revista.jpg", theme: "revista",
+    eyebrow: "Revista OndeCortar",
+    title: "Guias práticos de <em>barbearia</em>",
+    sub: "Cortes, barba e máquinas, explicados em português de Portugal",
+    chips: ["Cortes", "Barba", "Guias de compra"],
+    foto: "imagens/revista/barbeiro-degrade-maquina.jpg",
+  },
+];
+
+const htmlSecao = (c) => {
+  const loja = c.theme === "loja";
+  const art = loja
+    ? `<div class="fotos">${c.fotos.map((f, i) => `<div class="quadro q${i}"><img src="${img64(f)}"></div>`).join("")}</div>`
+    : `<div class="foto"><img src="${img64(c.foto)}"></div>`;
+  return `<!doctype html><html lang="pt-PT"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=block" rel="stylesheet">
+<style>
+  *{margin:0;box-sizing:border-box}
+  body{width:1200px;height:630px;overflow:hidden;position:relative;font-family:"Plus Jakarta Sans",sans-serif;
+    background:${loja ? "repeating-linear-gradient(135deg,rgba(255,255,255,.02) 0 2px,transparent 2px 16px),radial-gradient(circle at 78% 40%,rgba(200,160,80,.22),transparent 45%),linear-gradient(150deg,#121a15,#1f3025)" : "radial-gradient(circle at 12% 10%,rgba(176,138,74,.16),transparent 40%),#F4EDE1"};
+    color:${loja ? "#F3ECDD" : "#1F1913"}}
+  .bar{position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,${loja ? "#D4A752" : "#8A5714"},transparent 75%)}
+  .copy{position:absolute;left:68px;top:54px;width:${loja ? 560 : 540}px}
+  .brand{font-family:"Playfair Display";font-weight:800;font-size:40px}
+  .brand sup{font-family:"Plus Jakarta Sans";font-size:15px;font-weight:700;letter-spacing:.14em;color:${loja ? "#D4A752" : "#8A5714"};margin-left:4px;vertical-align:20px}
+  .eyebrow{margin-top:30px;display:inline-block;padding:7px 16px;border:1.5px solid ${loja ? "rgba(212,167,82,.65)" : "rgba(138,87,20,.45)"};border-radius:999px;color:${loja ? "#D4A752" : "#8A5714"};font-size:16px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+  h1{margin-top:20px;font-family:"Playfair Display";font-weight:800;font-size:66px;line-height:1.02}
+  h1 em{font-style:italic;color:${loja ? "#D4A752" : "#8A5714"}}
+  .rule{width:84px;height:5px;background:${loja ? "#D4A752" : "#8A5714"};border-radius:3px;margin:22px 0 16px}
+  .sub{font-size:24px;font-weight:500;line-height:1.35;color:${loja ? "#D9D1C1" : "#4E473D"}}
+  .chips{margin-top:20px;display:flex;gap:10px}
+  .chip{padding:7px 15px;border-radius:999px;font-size:18px;font-weight:600;
+    background:${loja ? "rgba(255,255,255,.07)" : "rgba(138,87,20,.08)"};border:1px solid ${loja ? "rgba(255,255,255,.14)" : "rgba(138,87,20,.2)"}}
+  .fotos{position:absolute;right:56px;top:70px;width:470px;height:490px}
+  .quadro{position:absolute;background:#f6efe3;border-radius:22px;padding:18px;box-shadow:0 18px 40px rgba(0,0,0,.35);border:2px solid rgba(212,167,82,.5)}
+  .quadro img{display:block;width:100%;height:100%;object-fit:contain;border-radius:10px;background:#fff}
+  .q0{left:0;top:40px;width:250px;height:300px;transform:rotate(-4deg)}
+  .q1{right:0;top:0;width:220px;height:260px;transform:rotate(3deg)}
+  .q2{right:30px;bottom:0;width:260px;height:230px;transform:rotate(-2deg)}
+  .foto{position:absolute;right:0;top:0;width:560px;height:630px;overflow:hidden}
+  .foto img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+  .foto::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#F4EDE1 0%,rgba(244,237,225,0) 22%)}
+</style></head><body>
+<div class="bar"></div>${art}
+<div class="copy">
+  <div class="brand">OndeCortar<sup>.PT</sup></div>
+  <div class="eyebrow">${c.eyebrow}</div>
+  <h1>${c.title}</h1>
+  <div class="rule"></div>
+  <div class="sub">${c.sub}</div>
+  <div class="chips">${c.chips.map((t) => `<span class="chip">${t}</span>`).join("")}</div>
+</div></body></html>`;
+};
+
 (async () => {
   fs.mkdirSync(OUT, { recursive: true });
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });
-  for (const c of CARDS) {
-    await page.setContent(html(c), { waitUntil: "networkidle" });
+  for (const c of [...CARDS, ...SECOES]) {
+    await page.setContent(c.theme ? htmlSecao(c) : html(c), { waitUntil: "networkidle" });
     await page.evaluate(() => document.fonts.ready);
     await page.screenshot({ path: path.join(OUT, c.file), type: "jpeg", quality: 86 });
     console.log("imagens/partilha/" + c.file);

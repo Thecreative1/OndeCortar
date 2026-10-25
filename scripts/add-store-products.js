@@ -213,3 +213,5 @@ console.log("sitemap +" + (urls.match(/<url>/g) || []).length + ", dados +" + (e
 require("./apply-product-image-links.js");
 // Detalhes verificados (ficha, versão, como usar, FAQ) das páginas já enriquecidas
 require("child_process").execFileSync(process.execPath, [require("path").join(__dirname, "apply-product-details.js")], { stdio: "inherit" });
+// Etiquetas de partilha (og:image:width/height/alt…) com as medidas da foto de cada página nova
+require("child_process").execFileSync(process.execPath, [require("path").join(__dirname, "apply-share-tags.js")], { stdio: "inherit" });

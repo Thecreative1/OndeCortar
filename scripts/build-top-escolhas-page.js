@@ -147,3 +147,5 @@ if (!sitemap.includes(URL)) {
   fs.writeFileSync(path.join(ROOT, "sitemap-loja.xml"), sitemap, "utf8");
 }
 console.log("loja/" + SLUG + "/ gerada (" + all.length + " produtos)");
+// Etiquetas de partilha com as medidas da imagem desta página (o modelo traz as da página copiada)
+require("child_process").execFileSync(process.execPath, [path.join(__dirname, "apply-share-tags.js")], { stdio: "inherit" });

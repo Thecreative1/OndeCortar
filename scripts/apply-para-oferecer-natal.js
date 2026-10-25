@@ -176,3 +176,5 @@ if (!/Como Afiliado da Amazon/.test(html)) throw new Error("Aviso de afiliado de
 
 fs.writeFileSync(path.join(ROOT, REL), html, "utf8");
 console.log("ok: " + REL + " | destaques " + TOP.length + " | pessoas " + PEOPLE.length + " | faq " + FAQ.length);
+// Etiquetas de partilha com as medidas da imagem desta página (o modelo traz as da página copiada)
+require("child_process").execFileSync(process.execPath, [path.join(__dirname, "apply-share-tags.js")], { stdio: "inherit" });
