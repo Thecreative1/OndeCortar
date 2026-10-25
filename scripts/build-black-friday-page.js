@@ -38,7 +38,7 @@ const WATCH = [
       ["philips-oneblade-360-qp2724", "Melhor para a barba", "Apara, faz contornos e barbeia com a lâmina 360. À prova de água."],
       ["braun-aio7545-series-7", "Tudo em um topo de gama", "12 em 1 para barba, cabelo e corpo, com até 120 minutos de bateria."],
       ["philips-mg3930-series-3000", "Tudo em um económico", "7 acessórios para barba, cabelo, nariz e orelhas, com carga USB."],
-      ["remington-mb320c", "Aparador simples", "Lâminas de cerâmica e 9 comprimentos de 1,5 a 18 mm, com ou sem fio."]
+      ["philips-oneblade-pro-360", "Barba e corpo", "Lâmina 360, pente de 20 comprimentos e kit para o corpo, num só aparelho."]
     ]
   },
   {
@@ -96,6 +96,10 @@ const main = '<main>' +
   WATCH.map((g, i) => '<section class="section' + (i % 2 === 0 ? ' loja-feat-panel' : '') + '" id="' + g.id + '"><div class="container"><div class="section-header section-header--compact"><div>' +
     '<span class="eyebrow">A vigiar</span><h2>' + esc(g.title) + '</h2><p>' + esc(g.intro) + '</p></div></div>' +
     '<div class="loja-feat-grid">' + g.items.map(card).join("") + '</div></div></section>').join("") +
+  '<section class="section" id="quando"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Datas</span>' +
+  '<h2>Quando é a Black Friday ' + EVENT.year + ' na Amazon.es?</h2>' +
+  '<p>A Black Friday é na ' + esc(EVENT.blackFriday) + ' e a Cyber Monday na ' + esc(EVENT.cyberMonday) + '. ' + esc(EVENT.previous) +
+  ' As ofertas costumam começar uns dias antes da sexta-feira; atualizamos esta página quando a Amazon.es anunciar as datas deste ano.</p></div></div></div></section>' +
   '<section class="section" id="dicas"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Antes de comprar</span>' +
   '<h2>Como saber se o desconto é mesmo bom</h2></div></div><div class="quick-answer-grid">' +
   TIPS.map(([t, d]) => '<article class="quick-answer-card"><strong>' + esc(t) + '</strong><p>' + esc(d) + '</p></article>').join("") + '</div></div></section>' +
