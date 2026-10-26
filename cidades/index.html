@@ -3148,6 +3148,11 @@
       var note = c.el.querySelector(".city-finder-alias");
       if (note) note.remove();
       if (m && m.alias) c.el.querySelector("h3").insertAdjacentElement("afterend", aliasNote(m.alias));
+      // Por uma localidade, a página da cidade destaca as barbearias de lá (CITY_HIGHLIGHT_SCRIPT)
+      var hash = m && m.alias ? "#destacar=" + m.alias[1].map(function (b) { return b[1]; }).join(",") + "&em=" + encodeURIComponent(m.alias[0]) : "";
+      [].forEach.call(c.el.querySelectorAll('a[href^="../cidades/"]'), function (a) {
+        a.setAttribute("href", a.getAttribute("href").replace(/#.*$/, "") + hash);
+      });
       if (m) found.push({ c: c, rank: m.rank, alias: m.alias });
     });
     found.sort(function (a, b) { return a.rank - b.rank || a.c.order - b.c.order; });
@@ -3173,7 +3178,7 @@
     return found.length === 1 && found[0].alias && found[0].alias[1].length === 1 ? found[0].alias[1][0] : null;
   }
   function citySlug(link) {
-    return link.getAttribute("href").replace(/^\.\.\/cidades\/|\/$/g, "");
+    return link.getAttribute("href").replace(/#.*$/, "").replace(/^\.\.\/cidades\/|\/$/g, "");
   }
   form.hidden = false;
   input.addEventListener("input", apply);

@@ -9035,7 +9035,10 @@
             text +
             // Link para a página da cidade (onde estão os filtros), não pesquisa no mapa:
             // o Google segue estes links a partir da homepage.
-            '<a class="btn btn-secondary btn-small" href="cidades/' + city.slug + '/" data-city-finder-slug="' + city.slug + '">' + directory.escapeHtml(button) + "</a>" +
+            // Por uma localidade, a página da cidade destaca as barbearias de lá (#destacar, lido no build)
+            '<a class="btn btn-secondary btn-small" href="cidades/' + city.slug + "/" +
+              (alias ? "#destacar=" + alias[1].map(function(b) { return b[1]; }).join(",") + "&em=" + encodeURIComponent(alias[0]) : "") +
+              '" data-city-finder-slug="' + city.slug + '">' + directory.escapeHtml(button) + "</a>" +
           "</article>"
         );
       }

@@ -1939,6 +1939,65 @@ const CITY_FILTERS_SCRIPT = `<script>
 })();
 </script>`;
 
+// Vindo do localizador de cidades por uma localidade ("Perafita" → Matosinhos), o link traz
+// #destacar=<slug>[,<slug>]&em=<localidade>: esses cartões passam para o topo, com brilho e a
+// etiqueta "Em Perafita", e a página desce até eles. Hash e não query, para não criar URLs.
+// Corre antes do CITY_FILTERS_SCRIPT, que guarda a ordem dos cartões ao carregar.
+const CITY_HIGHLIGHT_STYLES = `
+    .barber-grid > .card.is-destaque {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 2px rgba(227, 168, 99, 0.6), 0 0 32px rgba(227, 168, 99, 0.3);
+      animation: oc-destaque 1.4s ease-out 2;
+    }
+    @keyframes oc-destaque {
+      0% { box-shadow: 0 0 0 2px rgba(227, 168, 99, 0.6), 0 0 0 rgba(227, 168, 99, 0); }
+      50% { box-shadow: 0 0 0 4px rgba(227, 168, 99, 0.85), 0 0 48px rgba(227, 168, 99, 0.5); }
+      100% { box-shadow: 0 0 0 2px rgba(227, 168, 99, 0.6), 0 0 32px rgba(227, 168, 99, 0.3); }
+    }
+    @media (prefers-reduced-motion: reduce) { .barber-grid > .card.is-destaque { animation: none; } }
+    .tag.tag-destaque { background: #C8873A; border-color: #C8873A; color: #17130D; font-weight: 800; }
+`;
+
+const CITY_HIGHLIGHT_SCRIPT = `<script>
+(function () {
+  var grid = document.querySelector("#lista-barbearias .barber-grid");
+  if (!grid || !window.URLSearchParams) return;
+  var params = new URLSearchParams(location.hash.slice(1));
+  var slugs = (params.get("destacar") || "").split(",").filter(Boolean);
+  if (!slugs.length) return;
+  var label = (params.get("em") || "").slice(0, 60);
+  var marked = [];
+  [].slice.call(grid.querySelectorAll(".card")).forEach(function (card) {
+    var link = card.querySelector("h3 a");
+    var m = link && link.getAttribute("href").match(/barbearias\\/([^/]+)\\/$/);
+    if (!m || slugs.indexOf(m[1]) === -1) return;
+    card.classList.add("is-destaque");
+    if (label) {
+      var tag = document.createElement("span");
+      tag.className = "tag tag-destaque";
+      tag.textContent = "Em " + label;
+      var row = card.querySelector(".tag-row");
+      if (row) {
+        row.insertBefore(tag, row.firstChild);
+      } else {
+        row = document.createElement("div");
+        row.className = "tag-row";
+        row.appendChild(tag);
+        card.insertBefore(row, card.querySelector("h3"));
+      }
+    }
+    marked.push(card);
+  });
+  if (!marked.length) return;
+  marked.slice().reverse().forEach(function (card) { grid.insertBefore(card, grid.firstChild); });
+  // Depois do load e com folga: o browser ainda mexe no scroll por causa do # da página
+  function go() {
+    setTimeout(function () { marked[0].scrollIntoView({ block: "center", behavior: "smooth" }); }, 300);
+  }
+  if (document.readyState === "complete") go(); else window.addEventListener("load", go);
+})();
+</script>`;
+
 function renderCityPage(city) {
   const prefix = "../../";
   const canonical = absoluteUrl(city.url);
@@ -2075,7 +2134,7 @@ ${city.barbearias.map((barber) => renderBarberCard(barber, prefix, { showZone: t
     </div>
   </section>
 </main>
-${renderFooter(prefix)}${withFilters ? "\n" + CITY_FILTERS_SCRIPT : ""}`;
+${renderFooter(prefix)}${city.hasFinderAliases ? "\n" + CITY_HIGHLIGHT_SCRIPT : ""}${withFilters ? "\n" + CITY_FILTERS_SCRIPT : ""}`;
 
   return renderDocument({
     title: title,
@@ -2083,7 +2142,7 @@ ${renderFooter(prefix)}${withFilters ? "\n" + CITY_FILTERS_SCRIPT : ""}`;
     canonical: canonical,
     prefix: prefix,
     structuredData: structuredData,
-    extraStyles: withFilters ? CITY_FILTERS_STYLES : "",
+    extraStyles: (withFilters ? CITY_FILTERS_STYLES : "") + (city.hasFinderAliases ? CITY_HIGHLIGHT_STYLES : ""),
     body: body
   });
 }
@@ -2178,6 +2237,11 @@ const CITY_FINDER_SCRIPT = `<script>
       var note = c.el.querySelector(".city-finder-alias");
       if (note) note.remove();
       if (m && m.alias) c.el.querySelector("h3").insertAdjacentElement("afterend", aliasNote(m.alias));
+      // Por uma localidade, a página da cidade destaca as barbearias de lá (CITY_HIGHLIGHT_SCRIPT)
+      var hash = m && m.alias ? "#destacar=" + m.alias[1].map(function (b) { return b[1]; }).join(",") + "&em=" + encodeURIComponent(m.alias[0]) : "";
+      [].forEach.call(c.el.querySelectorAll('a[href^="../cidades/"]'), function (a) {
+        a.setAttribute("href", a.getAttribute("href").replace(/#.*$/, "") + hash);
+      });
       if (m) found.push({ c: c, rank: m.rank, alias: m.alias });
     });
     found.sort(function (a, b) { return a.rank - b.rank || a.c.order - b.c.order; });
@@ -2203,7 +2267,7 @@ const CITY_FINDER_SCRIPT = `<script>
     return found.length === 1 && found[0].alias && found[0].alias[1].length === 1 ? found[0].alias[1][0] : null;
   }
   function citySlug(link) {
-    return link.getAttribute("href").replace(/^\\.\\.\\/cidades\\/|\\/$/g, "");
+    return link.getAttribute("href").replace(/#.*$/, "").replace(/^\\.\\.\\/cidades\\/|\\/$/g, "");
   }
   form.hidden = false;
   input.addEventListener("input", apply);
@@ -2712,7 +2776,10 @@ function main() {
     writeFile(path.join("barbearias", barber.slug, "index.html"), renderProfilePage(barber, citiesMap));
   });
 
+  // Cidades com localidades no localizador: a página recebe o script do #destacar
+  const finderAliases = cityFinderAliases(data.cities);
   data.cities.forEach((city) => {
+    city.hasFinderAliases = finderAliases.has(city.slug);
     writeFile(path.join("cidades", city.slug, "index.html"), renderCityPage(city));
   });
 
