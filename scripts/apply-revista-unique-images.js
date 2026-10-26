@@ -23,6 +23,7 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").repl
 
 // slug do artigo → [ficheiro em imagens/revista/, alt]
 const NEW_HEROES = {
+  "melhor-aparador-de-barba": ["aparador-pente-barba.jpg", "Aparador com pente guia a aparar uma barba, em grande plano a preto e branco"],
   "o-que-oferecer-ao-pai": ["prenda-pai.jpg", "Barbeiro de óculos a fazer a barba a um cliente mais velho numa barbearia antiga"],
   "prendas-de-natal-para-homem": ["prendas-natal-homem.jpg", "Prenda de Natal embrulhada em papel castanho, com fio vermelho e branco e um ramo de pinheiro"],
   "aparador-multifuncoes-ou-maquina-profissional-qual-compensa-mais": ["bancada-maquinas-escova.jpg", "Bancada de barbeiro com máquinas de cortar, escova e rolo de papel de pescoço"],

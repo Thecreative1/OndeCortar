@@ -89,6 +89,10 @@ const SINGLE_PICKS = {
     slug: "king-c-dupla",
     why: "Para quem está a entrar no barbear clássico, a máquina de segurança é mais previsível e mais fácil de repetir do que a navalha. Esta junta construção em metal sólido e compatibilidade com lâminas de duplo gume standard."
   },
+  "melhor-aparador-de-barba": {
+    slug: "philips-bt5765-series-5000",
+    why: "Para quem apara a barba curta a média em casa, é o que junta mais afinação a menos trabalho: 40 comprimentos em passos de 0,2 mm, lâminas que não precisam de óleo e corpo 100% à prova de água. Se queres contornos ao pormenor, o Série 7000 acrescenta a cabeça larga."
+  },
   "trimmer-vs-shaver-diferencas-reais": {
     slug: "braun-series-5-aio5545",
     why: "Se queres manter a barba e tratar do resto com um só aparelho e um só orçamento, um multifunções de qualidade compensa mais do que dois aparelhos medianos. Este cobre cabelo, barba e corpo."

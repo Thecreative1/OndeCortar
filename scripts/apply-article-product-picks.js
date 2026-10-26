@@ -33,6 +33,19 @@ function escapeHtml(value) {
 
 // [slug do produto, etiqueta, nota]
 const PICKS = {
+  "melhor-aparador-de-barba": {
+    title: "Os 8 melhores aparadores de barba",
+    items: [
+      ["philips-bt5765-series-5000", "Melhor no geral", "40 comprimentos em passos de 0,2 mm e pentes de 0,4 a 20 mm."],
+      ["philips-bt7670-series-7000", "Contornos definidos", "O mesmo que o 5000, com cabeça larga em T e aparador de precisão."],
+      ["braun-bt5525-series-5", "Mais bateria", "Até 120 minutos sem fio e bloqueio do comprimento."],
+      ["philips-bt3619-series-3000", "Para começar", "20 comprimentos de 0,5 a 10 mm e lâminas que não precisam de óleo."],
+      ["philips-mg3930-series-3000", "Barba e cabelo", "7 acessórios para barba, cabelo curto, nariz e orelhas."],
+      ["braun-aio7545-series-7", "Tudo em um completo", "12 em 1, cabeça de precisão e até 120 minutos de bateria."],
+      ["philips-oneblade-360-qp2724", "Aparar e barbear", "Apara, faz contornos e barbeia com a mesma lâmina."],
+      ["cecotec-bamba-precisioncare-pro-5em1", "Mais em conta", "5 em 1, à prova de água, com ou sem fio."]
+    ]
+  },
   "como-cortar-o-cabelo-em-casa-com-maquina": {
     title: "O que usar para cortar em casa",
     items: [
@@ -338,6 +351,11 @@ const PICKS = {
 
 // Barra fixa mobile nos guias de compra: produto + id da secção depois da qual aparece
 const STICKY = {
+  "melhor-aparador-de-barba": {
+    product: "philips-bt5765-series-5000",
+    label: "A nossa escolha",
+    after: "so-barba-ou-tudo-em-um"
+  },
   "gel-de-limpeza-para-homem-como-lavar-a-cara": {
     product: "cerave-gel-limpeza-espumante",
     label: "A nossa escolha",
