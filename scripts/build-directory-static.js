@@ -2088,9 +2088,126 @@ ${renderFooter(prefix)}${withFilters ? "\n" + CITY_FILTERS_SCRIPT : ""}`;
   });
 }
 
+// Localizador do hub cidades/ (o da homepage está no script inline de index.html, com a mesma
+// ordem): esconde os cartões que não correspondem e põe à frente o nome exato, como na pesquisa.
+const CITY_FINDER_STYLES = `
+    .city-finder { display: grid; gap: 8px; max-width: 560px; margin: 0 0 24px; }
+    .city-finder[hidden], .city-finder-empty[hidden], .city-grid > .card[hidden] { display: none; }
+    .city-finder-label { font-size: 0.9rem; font-weight: 700; color: var(--text); }
+    .city-finder-field { position: relative; }
+    .city-finder-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--gold); pointer-events: none; }
+    .city-finder-input {
+      width: 100%;
+      min-height: 50px;
+      padding: 12px 16px 12px 44px;
+      border-radius: 12px;
+      border: 1.5px solid var(--border-strong);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      font: inherit;
+      font-size: 16px;
+    }
+    .city-finder-input::placeholder { color: var(--muted); }
+    .city-finder-input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(227, 168, 99, 0.35); }
+    .city-finder-status { margin: 0; min-height: 1.3em; font-size: 0.9rem; color: var(--muted); }
+    .city-finder-empty {
+      display: grid;
+      gap: 10px;
+      padding: 18px;
+      border: 1px dashed var(--border-strong);
+      border-radius: var(--radius-md);
+    }
+    .city-finder-empty p, .city-finder-alias { margin: 0; }
+    .city-finder-alias { color: var(--gold); font-size: 0.9rem; font-weight: 700; }
+`;
+
+const CITY_FINDER_SCRIPT = `<script>
+(function () {
+  var form = document.querySelector("[data-city-finder]");
+  var grid = document.querySelector(".city-grid");
+  if (!form || !grid) return;
+  var input = form.querySelector("input");
+  var statusEl = form.querySelector(".city-finder-status");
+  var emptyEl = form.querySelector(".city-finder-empty");
+  function norm(v) {
+    return String(v || "").normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  }
+  var cards = [].slice.call(grid.querySelectorAll(".card[data-cidade]")).map(function (card, i) {
+    var aliases = (card.getAttribute("data-localidades") || "").split("|").filter(Boolean);
+    return { el: card, order: i, key: norm(card.getAttribute("data-cidade")), aliases: aliases, aliasKeys: aliases.map(norm) };
+  });
+  // Nome exato > começa por > palavra que começa por > localidade da cidade > contém (3+ letras)
+  function match(c, q) {
+    if (c.key === q) return { rank: 0 };
+    if (c.key.indexOf(q) === 0) return { rank: 1 };
+    if ((" " + c.key).indexOf(" " + q) !== -1) return { rank: 2 };
+    for (var i = 0; i < c.aliasKeys.length; i++) {
+      if ((" " + c.aliasKeys[i]).indexOf(" " + q) !== -1) return { rank: 3, alias: c.aliases[i] };
+    }
+    if (q.length >= 3 && c.key.indexOf(q) !== -1) return { rank: 4 };
+    return null;
+  }
+  function count(path, title) {
+    if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: path, title: title, event: true });
+  }
+  var found = [], missTimer = null, missCounted = {};
+  function apply() {
+    var q = norm(input.value);
+    found = [];
+    cards.forEach(function (c) {
+      var m = q ? match(c, q) : { rank: 0 };
+      c.el.hidden = !m;
+      var note = c.el.querySelector(".city-finder-alias");
+      if (m && m.alias) {
+        if (!note) {
+          note = document.createElement("p");
+          note.className = "city-finder-alias";
+          c.el.querySelector("h3").insertAdjacentElement("afterend", note);
+        }
+        note.textContent = "Inclui " + m.alias;
+      } else if (note) {
+        note.remove();
+      }
+      if (m) found.push({ c: c, rank: m.rank });
+    });
+    found.sort(function (a, b) { return a.rank - b.rank || a.c.order - b.c.order; });
+    found.forEach(function (f) { grid.appendChild(f.c.el); });
+    statusEl.textContent = !q ? ""
+      : !found.length ? "Nenhuma cidade com esse nome."
+      : found.length === 1 ? "1 cidade. Carrega em Enter para abrir."
+      : found.length + " cidades.";
+    emptyEl.hidden = !q || found.length > 0;
+    clearTimeout(missTimer);
+    var key = q.replace(/ /g, "-").slice(0, 40);
+    if (key.length >= 3 && !found.length && !missCounted[key]) {
+      missTimer = setTimeout(function () {
+        missCounted[key] = true;
+        count("procurar-cidade-sem-resultado/" + key, "Cidade sem resultado: " + input.value.trim());
+      }, 1500);
+    }
+  }
+  form.hidden = false;
+  input.addEventListener("input", apply);
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!norm(input.value) || !found.length) return;
+    var link = found[0].c.el.querySelector("h3 a");
+    count("procurar-cidade/" + link.getAttribute("href").replace(/^\\.\\.\\/cidades\\/|\\/$/g, ""), "Procurar cidade: " + input.value.trim());
+    window.location.href = link.href;
+  });
+  grid.addEventListener("click", function (e) {
+    var link = e.target.closest("a[href]");
+    if (link && norm(input.value)) {
+      count("procurar-cidade/" + link.getAttribute("href").replace(/^\\.\\.\\/cidades\\/|\\/$/g, ""), "Procurar cidade: " + input.value.trim());
+    }
+  });
+})();
+</script>`;
+
 function renderCitiesHub(cities) {
   const prefix = "../";
   const canonical = SITE_URL + "cidades/";
+  const aliases = cityFinderAliases(cities);
   const body = `
 ${renderHeader(prefix, "cidades")}
 <main>
@@ -2129,9 +2246,24 @@ ${renderHeader(prefix, "cidades")}
           <p>Cada página de cidade reúne perfis individuais, texto útil, orientação prática e links para a loja e para a revista.</p>
         </div>
       </div>
+      <form class="city-finder" data-city-finder role="search" action="./" hidden>
+        <label class="city-finder-label" for="cityFinderInput">Procura a tua cidade</label>
+        <div class="city-finder-field">
+          <svg class="city-finder-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input class="city-finder-input" id="cityFinderInput" type="search" autocomplete="off" spellcheck="false" enterkeyhint="go" placeholder="Cidade ou localidade, ex.: Braga, Perafita" aria-describedby="cityFinderStatus" />
+        </div>
+        <p class="city-finder-status" id="cityFinderStatus" aria-live="polite"></p>
+        <div class="city-finder-empty" hidden>
+          <p>Ainda não temos página para essa localidade. Experimenta o nome do concelho, procura no mapa a barbearia mais perto ou adiciona uma que conheças.</p>
+          <div class="card-actions">
+            <a class="btn btn-secondary" href="${prefix}#mapa">Procurar no mapa</a>
+            <a class="btn btn-soft" href="${prefix}registar.html">Adicionar barbearia</a>
+          </div>
+        </div>
+      </form>
       <div class="city-grid">
         ${cities.map((city) => `
-          <article class="card">
+          <article class="card" data-cidade="${escapeHtml(city.name)}"${aliases.has(city.slug) ? ` data-localidades="${escapeHtml(aliases.get(city.slug).join("|"))}"` : ""}>
             <span class="pill">${escapeHtml(String(city.barbearias.length))} barbearia${city.barbearias.length === 1 ? "" : "s"}</span>
             <h3><a href="${prefix + city.url}">${escapeHtml(barbersLabel(city.name))}</a></h3>
             <p>${escapeHtml(city.intro)}</p>
@@ -2143,10 +2275,12 @@ ${renderHeader(prefix, "cidades")}
     </div>
   </section>
 </main>
-${renderFooter(prefix)}`;
+${renderFooter(prefix)}
+${CITY_FINDER_SCRIPT}`;
 
   return renderDocument({
     title: "Barbearias por cidade | OndeCortar.pt",
+    extraStyles: CITY_FINDER_STYLES,
     description: "Explora páginas locais com barbearias por cidade, perfis individuais, moradas, contactos e ligações úteis no OndeCortar.pt.",
     canonical: canonical,
     prefix: prefix,
@@ -2422,7 +2556,7 @@ const CLIENT_OMIT_FIELDS = new Set([
 // Gera Barbeiros/barbearias.mapa.js para a homepage: só barbearias públicas, sem os
 // campos acima e sem valores vazios (o cliente trata null e ausente da mesma forma).
 // Define o mesmo `const barbearias` que o ficheiro fonte.
-function buildClientDataFile(rawBarbers) {
+function buildClientDataFile(rawBarbers, cities) {
   const isEmpty = (value) => value === null || value === undefined || value === ""
     || (Array.isArray(value) && value.length === 0);
   const slim = rawBarbers.map((barber) => {
@@ -2435,7 +2569,50 @@ function buildClientDataFile(rawBarbers) {
     return out;
   });
   return "// Gerado por scripts/build-directory-static.js a partir de barbearias.limpo.js — não editar.\n"
-    + "const barbearias = " + JSON.stringify(slim) + ";\n";
+    + "const barbearias = " + JSON.stringify(slim) + ";\n"
+    + "// Cidades com página própria para o localizador da homepage: [nome, slug, n.º de barbearias, localidades]\n"
+    + "const cidadesDiretorio = " + JSON.stringify(buildCityFinderData(cities)) + ";\n";
+}
+
+// Localizador de cidades (homepage e cidades/): junta a cada cidade as localidades e zonas das
+// fichas, para quem escreve "Perafita" ou "Alfena" chegar a Matosinhos ou Valongo. Ficam de fora
+// restos de morada ("Fração B", "R/C A"), uniões de freguesias, "Centro…" e nomes que são outra
+// cidade com página ou que aparecem em mais de uma cidade.
+const CITY_FINDER_ALIAS_JUNK = /fracao|r\/c|\bcave\b|divisao|lugar de|uniao das|^centro\b| e /;
+
+function cityFinderAliases(cities) {
+  const norm = (value) => utils.normalizarTexto(value).replace(/\s+/g, " ").trim();
+  const cityNames = new Set(cities.map((city) => norm(city.name)));
+  const owners = new Map();
+  cities.forEach((city) => {
+    city.barbearias.forEach((barber) => {
+      [barber.zone, barber.locality].forEach((value) => {
+        const label = trimText(value);
+        const key = norm(label);
+        if (!key || key.length < 3 || cityNames.has(key) || CITY_FINDER_ALIAS_JUNK.test(key)) return;
+        if (!owners.has(key)) owners.set(key, { label: label, slugs: new Set() });
+        owners.get(key).slugs.add(city.slug);
+      });
+    });
+  });
+  const bySlug = new Map();
+  owners.forEach((entry) => {
+    if (entry.slugs.size !== 1) return;
+    const slug = [...entry.slugs][0];
+    if (!bySlug.has(slug)) bySlug.set(slug, []);
+    bySlug.get(slug).push(entry.label);
+  });
+  return bySlug;
+}
+
+function buildCityFinderData(cities) {
+  const aliases = cityFinderAliases(cities);
+  return cities.map((city) => {
+    const entry = [city.name, city.slug, city.barbearias.length];
+    const extra = (aliases.get(city.slug) || []).sort((a, b) => a.localeCompare(b, "pt"));
+    if (extra.length) entry.push(extra);
+    return entry;
+  });
 }
 
 // llms.txt (https://llmstxt.org): resumo em Markdown para assistentes de IA (ChatGPT, Claude,
@@ -2487,8 +2664,8 @@ function buildLlmsTxt(data) {
 
 function main() {
   const rawBarbers = loadBarbers();
-  writeFile(path.join("Barbeiros", "barbearias.mapa.js"), buildClientDataFile(rawBarbers));
   const data = buildSlugData(rawBarbers);
+  writeFile(path.join("Barbeiros", "barbearias.mapa.js"), buildClientDataFile(rawBarbers, data.cities));
   const citiesMap = new Map(data.cities.map((city) => [city.slug, city]));
 
   const liveSlugs = new Set(data.barbers.map((barber) => barber.slug));

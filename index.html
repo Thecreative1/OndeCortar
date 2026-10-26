@@ -1962,7 +1962,7 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="oc-style.css?v=20261011-mobile" />
+  <link rel="stylesheet" href="oc-style.css?v=20261026-cidades" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -7821,6 +7821,14 @@
         <h2 id="cities-heading" class="cities-headline">
           De norte a sul, <em>barbearias</em> ao teu alcance.
         </h2>
+        <form class="city-finder" id="cityFinder" role="search" action="cidades/" hidden>
+          <label class="city-finder__label" for="cityFinderInput">Procura a tua cidade</label>
+          <div class="city-finder__field">
+            <svg class="city-finder__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input class="city-finder__input" id="cityFinderInput" type="search" autocomplete="off" spellcheck="false" enterkeyhint="go" placeholder="Cidade ou localidade, ex.: Braga, Perafita" aria-describedby="cityFinderStatus" />
+          </div>
+          <p class="city-finder__status" id="cityFinderStatus" aria-live="polite"></p>
+        </form>
         <div class="cities-grid" id="citiesGrid">
           <article class="city-card">
             <strong>Guimarães</strong>
@@ -8070,6 +8078,7 @@
       renderRegionChips(directoryCities);
       renderFeatured();
       renderCities();
+      setupCityFinder();
 
       // Vista inicial só com o continente: incluir Madeira e Açores encolhia o continente
       // a uma mancha de marcadores. As ilhas continuam acessíveis pelo filtro "Ilhas".
@@ -8952,22 +8961,153 @@
         }).join("");
       }
 
+      // ─── Cidades: as 8 com mais fichas + "Ver todas", e o localizador "Procura a tua cidade" ───
+      // A lista vem do build (cidadesDiretorio em barbearias.mapa.js: nome, slug, n.º, localidades),
+      // por isso links e contagens são os das páginas de cidade. Sem ela, volta às cidades da pesquisa.
+      // var sem valor: renderCities() e setupCityFinder() correm mais acima, antes destas linhas
+      var cityDirectoryCache;
+      var cityFinderQuery;
+
+      function normFinder(value) {
+        return String(value || "").normalize("NFD").replace(/[̀-ͯ]/g, "")
+          .toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+      }
+
+      function getCityDirectory() {
+        if (cityDirectoryCache) return cityDirectoryCache;
+        if (typeof cidadesDiretorio !== "undefined" && cidadesDiretorio.length) {
+          cityDirectoryCache = cidadesDiretorio.map(function(entry) {
+            const aliases = entry[3] || [];
+            return { name: entry[0], slug: entry[1], count: entry[2], key: normFinder(entry[0]), aliases: aliases, aliasKeys: aliases.map(normFinder) };
+          });
+        } else if (window.BarbeariasUtils) {
+          cityDirectoryCache = popularCities.map(function(item) {
+            return { name: item.city, slug: window.BarbeariasUtils.slugify(item.city), count: item.count, key: normFinder(item.city), aliases: [], aliasKeys: [] };
+          });
+        } else {
+          cityDirectoryCache = [];
+        }
+        return cityDirectoryCache;
+      }
+
+      // Nome exato > começa por > palavra que começa por > localidade da cidade > contém (3+ letras).
+      // Assim "Porto" mostra o Porto antes de Porto de Mós, Porto Santo e Vila do Porto.
+      function matchCity(city, q) {
+        if (city.key === q) return { rank: 0 };
+        if (city.key.indexOf(q) === 0) return { rank: 1 };
+        if ((" " + city.key).indexOf(" " + q) !== -1) return { rank: 2 };
+        for (let i = 0; i < city.aliasKeys.length; i++) {
+          if ((" " + city.aliasKeys[i]).indexOf(" " + q) !== -1) return { rank: 3, alias: city.aliases[i] };
+        }
+        if (q.length >= 3 && city.key.indexOf(q) !== -1) return { rank: 4 };
+        return null;
+      }
+
+      function findCities(query) {
+        const q = normFinder(query);
+        const cities = getCityDirectory();
+        if (!q) return cities.map(function(city) { return { city: city }; });
+        return cities.reduce(function(found, city, index) {
+          const match = matchCity(city, q);
+          if (match) found.push({ city: city, alias: match.alias, rank: match.rank, order: index });
+          return found;
+        }, []).sort(function(a, b) { return a.rank - b.rank || a.order - b.order; });
+      }
+
+      function cityCardHtml(city, alias) {
+        const text = alias
+          ? "Inclui " + alias + ". Vê as barbearias listadas e abre a ficha certa."
+          : "Vê as barbearias já listadas nesta cidade e abre a ficha certa mais depressa.";
+        return (
+          '<article class="city-card">' +
+            "<strong>" + city.count + "</strong>" +
+            "<h3>" + directory.escapeHtml(directory.getBarbersLabel(city.name)) + "</h3>" +
+            "<p>" + directory.escapeHtml(text) + "</p>" +
+            // Link para a página da cidade (onde estão os filtros), não pesquisa no mapa:
+            // o Google segue estes links a partir da homepage.
+            '<a class="btn btn-secondary btn-small" href="cidades/' + city.slug + '/" data-city-finder-slug="' + city.slug + '">Explorar ' + directory.escapeHtml(city.name) + "</a>" +
+          "</article>"
+        );
+      }
+
       function renderCities() {
-        citiesGrid.innerHTML = popularCities.map(function(item) {
-          const label = directory.getBarbersLabel(item.city);
-          return (
-            '<article class="city-card">' +
-              "<strong>" + item.count + "</strong>" +
-              "<h3>" + directory.escapeHtml(label) + "</h3>" +
-              "<p>Vê as barbearias já listadas nesta cidade e abre a ficha certa mais depressa.</p>" +
-              // Link para a página da cidade (onde estão os filtros), não pesquisa no mapa:
-              // o Google segue estes links a partir da homepage. Slug = o do build (utils.slugify).
-              (window.BarbeariasUtils
-                ? '<a class="btn btn-secondary btn-small" href="cidades/' + window.BarbeariasUtils.slugify(item.city) + '/">Explorar ' + directory.escapeHtml(item.city) + "</a>"
-                : '<button class="btn btn-secondary btn-small" type="button" data-city-search="' + directory.escapeHtml(item.city) + '">Explorar ' + directory.escapeHtml(item.city) + "</button>") +
+        const found = findCities(cityFinderQuery);
+        const total = getCityDirectory().length;
+        const shown = found.slice(0, 8);
+        let html = shown.map(function(item) { return cityCardHtml(item.city, item.alias); }).join("");
+        if (cityFinderQuery && !found.length) {
+          html += (
+            '<article class="city-card city-card--empty">' +
+              "<strong>Sem resultados</strong>" +
+              "<h3>Ainda não temos «" + directory.escapeHtml(cityFinderQuery) + "»</h3>" +
+              "<p>Experimenta o nome do concelho. Conheces uma barbearia aí? Adiciona-a, é gratuito.</p>" +
+              '<a class="btn btn-secondary btn-small" href="registar.html">Adicionar barbearia</a>' +
             "</article>"
           );
-        }).join("");
+        }
+        html += (
+          '<article class="city-card city-card--all">' +
+            "<strong>" + (total > 8 ? total + " cidades" : "Todas") + "</strong>" +
+            "<h3>Ver todas as cidades</h3>" +
+            "<p>De norte a sul e ilhas: todas as cidades com página própria no diretório.</p>" +
+            '<a class="btn btn-secondary btn-small" href="cidades/">Ver todas as cidades</a>' +
+          "</article>"
+        );
+        citiesGrid.innerHTML = html;
+
+        const status = document.getElementById("cityFinderStatus");
+        if (status) {
+          status.textContent = !cityFinderQuery ? ""
+            : !found.length ? "Nenhuma cidade com esse nome."
+            : found.length === 1 ? "1 cidade. Carrega em Enter para abrir."
+            : found.length > 8 ? found.length + " cidades: mostramos as 8 com mais barbearias."
+            : found.length + " cidades.";
+        }
+        return found;
+      }
+
+      function countCityFinder(path, title) {
+        if (window.goatcounter && window.goatcounter.count) {
+          window.goatcounter.count({ path: path, title: title, event: true });
+        }
+      }
+
+      function setupCityFinder() {
+        const form = document.getElementById("cityFinder");
+        const input = document.getElementById("cityFinderInput");
+        if (!form || !input || getCityDirectory().length < 9) return;
+        form.hidden = false;
+        let missTimer = null;
+        const missCounted = {};
+
+        input.addEventListener("input", function() {
+          cityFinderQuery = input.value.trim();
+          const found = renderCities();
+          // Cidades que as pessoas procuram e ainda não temos: pistas para os próximos lotes
+          clearTimeout(missTimer);
+          const key = normFinder(cityFinderQuery).replace(/ /g, "-").slice(0, 40);
+          if (key.length >= 3 && !found.length && !missCounted[key]) {
+            missTimer = setTimeout(function() {
+              missCounted[key] = true;
+              countCityFinder("procurar-cidade-sem-resultado/" + key, "Cidade sem resultado: " + cityFinderQuery);
+            }, 1500);
+          }
+        });
+
+        form.addEventListener("submit", function(event) {
+          event.preventDefault();
+          const first = findCities(cityFinderQuery)[0];
+          if (!cityFinderQuery || !first) return;
+          countCityFinder("procurar-cidade/" + first.city.slug, "Procurar cidade: " + first.city.name);
+          window.location.href = "cidades/" + first.city.slug + "/";
+        });
+
+        citiesGrid.addEventListener("click", function(event) {
+          const link = event.target.closest("[data-city-finder-slug]");
+          if (link && cityFinderQuery) {
+            countCityFinder("procurar-cidade/" + link.getAttribute("data-city-finder-slug"), "Procurar cidade: " + cityFinderQuery);
+          }
+        });
       }
 
       function updateDirectory(term) {
