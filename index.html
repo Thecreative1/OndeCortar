@@ -1962,7 +1962,7 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="oc-style.css?v=20261026-cidades" />
+  <link rel="stylesheet" href="oc-style.css?v=20261026-localidades" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -8978,7 +8978,8 @@
         if (typeof cidadesDiretorio !== "undefined" && cidadesDiretorio.length) {
           cityDirectoryCache = cidadesDiretorio.map(function(entry) {
             const aliases = entry[3] || [];
-            return { name: entry[0], slug: entry[1], count: entry[2], key: normFinder(entry[0]), aliases: aliases, aliasKeys: aliases.map(normFinder) };
+            // aliases: [[localidade, [[barbearia, slug do perfil], …]], …]
+            return { name: entry[0], slug: entry[1], count: entry[2], key: normFinder(entry[0]), aliases: aliases, aliasKeys: aliases.map(function(a) { return normFinder(a[0]); }) };
           });
         } else if (window.BarbeariasUtils) {
           cityDirectoryCache = popularCities.map(function(item) {
@@ -9015,19 +9016,33 @@
       }
 
       function cityCardHtml(city, alias) {
+        // Procura por uma localidade (ex.: Perafita → Matosinhos): mostra logo as barbearias de lá
+        // (até 3), com link para o perfil, em vez de deixar procurar entre todas as da cidade.
         const text = alias
-          ? "Inclui " + alias + ". Vê as barbearias listadas e abre a ficha certa."
-          : "Vê as barbearias já listadas nesta cidade e abre a ficha certa mais depressa.";
+          ? '<p class="city-card__local">Em ' + directory.escapeHtml(alias[0]) + ": " +
+              alias[1].slice(0, 3).map(function(b) {
+                return '<a href="barbearias/' + b[1] + '/" data-city-finder-profile="' + b[1] + '">' + directory.escapeHtml(b[0]) + "</a>";
+              }).join(", ") +
+              (alias[1].length > 3 ? " e mais " + (alias[1].length - 3) : "") + "</p>"
+          : "<p>Vê as barbearias já listadas nesta cidade e abre a ficha certa mais depressa.</p>";
+        const button = alias
+          ? "Ver as " + city.count + " " + directory.getBarbersLabel(city.name).replace(/^Barbearias /, "")
+          : "Explorar " + city.name;
         return (
           '<article class="city-card">' +
             "<strong>" + city.count + "</strong>" +
             "<h3>" + directory.escapeHtml(directory.getBarbersLabel(city.name)) + "</h3>" +
-            "<p>" + directory.escapeHtml(text) + "</p>" +
+            text +
             // Link para a página da cidade (onde estão os filtros), não pesquisa no mapa:
             // o Google segue estes links a partir da homepage.
-            '<a class="btn btn-secondary btn-small" href="cidades/' + city.slug + '/" data-city-finder-slug="' + city.slug + '">Explorar ' + directory.escapeHtml(city.name) + "</a>" +
+            '<a class="btn btn-secondary btn-small" href="cidades/' + city.slug + '/" data-city-finder-slug="' + city.slug + '">' + directory.escapeHtml(button) + "</a>" +
           "</article>"
         );
+      }
+
+      // Uma só cidade encontrada por uma localidade com uma só barbearia: Enter abre logo o perfil
+      function soleCityProfile(found) {
+        return found.length === 1 && found[0].alias && found[0].alias[1].length === 1 ? found[0].alias[1][0] : null;
       }
 
       function renderCities() {
@@ -9056,9 +9071,11 @@
         citiesGrid.innerHTML = html;
 
         const status = document.getElementById("cityFinderStatus");
+        const only = soleCityProfile(found);
         if (status) {
           status.textContent = !cityFinderQuery ? ""
             : !found.length ? "Nenhuma cidade com esse nome."
+            : only ? found[0].alias[0] + " fica " + directory.getBarbersLabel(found[0].city.name).replace(/^Barbearias /, "") + ". Enter abre o perfil: " + only[0] + "."
             : found.length === 1 ? "1 cidade. Carrega em Enter para abrir."
             : found.length > 8 ? found.length + " cidades: mostramos as 8 com mais barbearias."
             : found.length + " cidades.";
@@ -9096,17 +9113,24 @@
 
         form.addEventListener("submit", function(event) {
           event.preventDefault();
-          const first = findCities(cityFinderQuery)[0];
+          const found = findCities(cityFinderQuery);
+          const first = found[0];
           if (!cityFinderQuery || !first) return;
+          const only = soleCityProfile(found);
+          if (only) {
+            countCityFinder("procurar-cidade/perfil/" + only[1], "Procurar cidade: " + cityFinderQuery);
+            window.location.href = "barbearias/" + only[1] + "/";
+            return;
+          }
           countCityFinder("procurar-cidade/" + first.city.slug, "Procurar cidade: " + first.city.name);
           window.location.href = "cidades/" + first.city.slug + "/";
         });
 
         citiesGrid.addEventListener("click", function(event) {
-          const link = event.target.closest("[data-city-finder-slug]");
-          if (link && cityFinderQuery) {
-            countCityFinder("procurar-cidade/" + link.getAttribute("data-city-finder-slug"), "Procurar cidade: " + cityFinderQuery);
-          }
+          const link = event.target.closest("[data-city-finder-slug], [data-city-finder-profile]");
+          if (!link || !cityFinderQuery) return;
+          const profile = link.getAttribute("data-city-finder-profile");
+          countCityFinder(profile ? "procurar-cidade/perfil/" + profile : "procurar-cidade/" + link.getAttribute("data-city-finder-slug"), "Procurar cidade: " + cityFinderQuery);
         });
       }
 

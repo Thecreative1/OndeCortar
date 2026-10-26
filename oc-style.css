@@ -1333,6 +1333,9 @@ body {
 .city-finder__input:focus { outline: none; border-color: #F0B978; box-shadow: 0 0 0 3px rgba(240,185,120,.35); }
 .city-finder__status { margin: 0; min-height: 1.3em; font-size: 13px; color: rgba(244,239,227,.78); }
 .city-card--all { border-style: dashed !important; border-color: rgba(240,185,120,.5) !important; }
+.city-card p.city-card__local { font-size: 14px; font-weight: 700; color: #F2EEE6 !important; }
+.city-card__local a { color: #F0B978; text-decoration: underline; text-underline-offset: 3px; }
+.city-card__local a:hover { color: #FFD3A0; }
 .footer-bottom { color: rgba(244,239,227,.62) !important; }
 .site-footer { background: #0C0E0C !important; border-top: 1px solid #262B27; }
 

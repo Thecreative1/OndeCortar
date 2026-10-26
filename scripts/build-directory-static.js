@@ -2118,7 +2118,8 @@ const CITY_FINDER_STYLES = `
       border-radius: var(--radius-md);
     }
     .city-finder-empty p, .city-finder-alias { margin: 0; }
-    .city-finder-alias { color: var(--gold); font-size: 0.9rem; font-weight: 700; }
+    .city-finder-alias { color: var(--text); font-size: 0.95rem; font-weight: 700; }
+    .city-finder-alias a { color: var(--link, var(--gold)); text-decoration: underline; text-underline-offset: 3px; }
 `;
 
 const CITY_FINDER_SCRIPT = `<script>
@@ -2133,9 +2134,26 @@ const CITY_FINDER_SCRIPT = `<script>
     return String(v || "").normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
   }
   var cards = [].slice.call(grid.querySelectorAll(".card[data-cidade]")).map(function (card, i) {
-    var aliases = (card.getAttribute("data-localidades") || "").split("|").filter(Boolean);
-    return { el: card, order: i, key: norm(card.getAttribute("data-cidade")), aliases: aliases, aliasKeys: aliases.map(norm) };
+    var aliases = [];
+    try { aliases = JSON.parse(card.getAttribute("data-localidades") || "[]"); } catch (e) { aliases = []; }
+    return { el: card, order: i, key: norm(card.getAttribute("data-cidade")), aliases: aliases, aliasKeys: aliases.map(function (a) { return norm(a[0]); }) };
   });
+  // "Em Perafita: Barbearia 31 de Janeiro" (até 3 nomes), com link direto para cada perfil
+  function aliasNote(alias) {
+    var note = document.createElement("p");
+    note.className = "city-finder-alias";
+    note.appendChild(document.createTextNode("Em " + alias[0] + ": "));
+    alias[1].slice(0, 3).forEach(function (b, i) {
+      if (i) note.appendChild(document.createTextNode(", "));
+      var a = document.createElement("a");
+      a.href = "../barbearias/" + b[1] + "/";
+      a.setAttribute("data-city-finder-profile", b[1]);
+      a.textContent = b[0];
+      note.appendChild(a);
+    });
+    if (alias[1].length > 3) note.appendChild(document.createTextNode(" e mais " + (alias[1].length - 3)));
+    return note;
+  }
   // Nome exato > começa por > palavra que começa por > localidade da cidade > contém (3+ letras)
   function match(c, q) {
     if (c.key === q) return { rank: 0 };
@@ -2158,22 +2176,16 @@ const CITY_FINDER_SCRIPT = `<script>
       var m = q ? match(c, q) : { rank: 0 };
       c.el.hidden = !m;
       var note = c.el.querySelector(".city-finder-alias");
-      if (m && m.alias) {
-        if (!note) {
-          note = document.createElement("p");
-          note.className = "city-finder-alias";
-          c.el.querySelector("h3").insertAdjacentElement("afterend", note);
-        }
-        note.textContent = "Inclui " + m.alias;
-      } else if (note) {
-        note.remove();
-      }
-      if (m) found.push({ c: c, rank: m.rank });
+      if (note) note.remove();
+      if (m && m.alias) c.el.querySelector("h3").insertAdjacentElement("afterend", aliasNote(m.alias));
+      if (m) found.push({ c: c, rank: m.rank, alias: m.alias });
     });
     found.sort(function (a, b) { return a.rank - b.rank || a.c.order - b.c.order; });
     found.forEach(function (f) { grid.appendChild(f.c.el); });
+    var only = soleProfile();
     statusEl.textContent = !q ? ""
       : !found.length ? "Nenhuma cidade com esse nome."
+      : only ? found[0].alias[0] + " fica " + found[0].c.el.getAttribute("data-locativo") + ". Enter abre o perfil: " + only[0] + "."
       : found.length === 1 ? "1 cidade. Carrega em Enter para abrir."
       : found.length + " cidades.";
     emptyEl.hidden = !q || found.length > 0;
@@ -2186,20 +2198,33 @@ const CITY_FINDER_SCRIPT = `<script>
       }, 1500);
     }
   }
+  // Uma só cidade encontrada por uma localidade com uma só barbearia: Enter abre logo o perfil
+  function soleProfile() {
+    return found.length === 1 && found[0].alias && found[0].alias[1].length === 1 ? found[0].alias[1][0] : null;
+  }
+  function citySlug(link) {
+    return link.getAttribute("href").replace(/^\\.\\.\\/cidades\\/|\\/$/g, "");
+  }
   form.hidden = false;
   input.addEventListener("input", apply);
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (!norm(input.value) || !found.length) return;
+    var only = soleProfile();
+    if (only) {
+      count("procurar-cidade/perfil/" + only[1], "Procurar cidade: " + input.value.trim());
+      window.location.href = "../barbearias/" + only[1] + "/";
+      return;
+    }
     var link = found[0].c.el.querySelector("h3 a");
-    count("procurar-cidade/" + link.getAttribute("href").replace(/^\\.\\.\\/cidades\\/|\\/$/g, ""), "Procurar cidade: " + input.value.trim());
+    count("procurar-cidade/" + citySlug(link), "Procurar cidade: " + input.value.trim());
     window.location.href = link.href;
   });
   grid.addEventListener("click", function (e) {
     var link = e.target.closest("a[href]");
-    if (link && norm(input.value)) {
-      count("procurar-cidade/" + link.getAttribute("href").replace(/^\\.\\.\\/cidades\\/|\\/$/g, ""), "Procurar cidade: " + input.value.trim());
-    }
+    if (!link || !norm(input.value)) return;
+    var profile = link.getAttribute("data-city-finder-profile");
+    count(profile ? "procurar-cidade/perfil/" + profile : "procurar-cidade/" + citySlug(link), "Procurar cidade: " + input.value.trim());
   });
 })();
 </script>`;
@@ -2263,7 +2288,7 @@ ${renderHeader(prefix, "cidades")}
       </form>
       <div class="city-grid">
         ${cities.map((city) => `
-          <article class="card" data-cidade="${escapeHtml(city.name)}"${aliases.has(city.slug) ? ` data-localidades="${escapeHtml(aliases.get(city.slug).join("|"))}"` : ""}>
+          <article class="card" data-cidade="${escapeHtml(city.name)}" data-locativo="${escapeHtml(locativeLabel(city.name))}"${aliases.has(city.slug) ? ` data-localidades="${escapeHtml(JSON.stringify(aliases.get(city.slug)))}"` : ""}>
             <span class="pill">${escapeHtml(String(city.barbearias.length))} barbearia${city.barbearias.length === 1 ? "" : "s"}</span>
             <h3><a href="${prefix + city.url}">${escapeHtml(barbersLabel(city.name))}</a></h3>
             <p>${escapeHtml(city.intro)}</p>
@@ -2570,7 +2595,8 @@ function buildClientDataFile(rawBarbers, cities) {
   });
   return "// Gerado por scripts/build-directory-static.js a partir de barbearias.limpo.js — não editar.\n"
     + "const barbearias = " + JSON.stringify(slim) + ";\n"
-    + "// Cidades com página própria para o localizador da homepage: [nome, slug, n.º de barbearias, localidades]\n"
+    + "// Cidades com página própria para o localizador da homepage:\n"
+    + "// [nome, slug, n.º de barbearias, [[localidade, [[barbearia, slug do perfil], …]], …]]\n"
     + "const cidadesDiretorio = " + JSON.stringify(buildCityFinderData(cities)) + ";\n";
 }
 
@@ -2580,6 +2606,8 @@ function buildClientDataFile(rawBarbers, cities) {
 // cidade com página ou que aparecem em mais de uma cidade.
 const CITY_FINDER_ALIAS_JUNK = /fracao|r\/c|\bcave\b|divisao|lugar de|uniao das|^centro\b| e /;
 
+// Devolve, por slug de cidade, [[localidade, [[nome da barbearia, slug do perfil], …]], …]: quem
+// escreve "Perafita" vê logo a barbearia de lá em vez de procurar entre as 5 de Matosinhos.
 function cityFinderAliases(cities) {
   const norm = (value) => utils.normalizarTexto(value).replace(/\s+/g, " ").trim();
   const cityNames = new Set(cities.map((city) => norm(city.name)));
@@ -2590,8 +2618,9 @@ function cityFinderAliases(cities) {
         const label = trimText(value);
         const key = norm(label);
         if (!key || key.length < 3 || cityNames.has(key) || CITY_FINDER_ALIAS_JUNK.test(key)) return;
-        if (!owners.has(key)) owners.set(key, { label: label, slugs: new Set() });
+        if (!owners.has(key)) owners.set(key, { label: label, slugs: new Set(), barbers: new Map() });
         owners.get(key).slugs.add(city.slug);
+        owners.get(key).barbers.set(barber.slug, barber.name);
       });
     });
   });
@@ -2600,8 +2629,9 @@ function cityFinderAliases(cities) {
     if (entry.slugs.size !== 1) return;
     const slug = [...entry.slugs][0];
     if (!bySlug.has(slug)) bySlug.set(slug, []);
-    bySlug.get(slug).push(entry.label);
+    bySlug.get(slug).push([entry.label, [...entry.barbers].map(([barberSlug, name]) => [name, barberSlug])]);
   });
+  bySlug.forEach((list) => list.sort((a, b) => a[0].localeCompare(b[0], "pt")));
   return bySlug;
 }
 
@@ -2609,8 +2639,7 @@ function buildCityFinderData(cities) {
   const aliases = cityFinderAliases(cities);
   return cities.map((city) => {
     const entry = [city.name, city.slug, city.barbearias.length];
-    const extra = (aliases.get(city.slug) || []).sort((a, b) => a.localeCompare(b, "pt"));
-    if (extra.length) entry.push(extra);
+    if (aliases.has(city.slug)) entry.push(aliases.get(city.slug));
     return entry;
   });
 }
