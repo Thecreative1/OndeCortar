@@ -3412,7 +3412,8 @@ const barbearias = [
         "data": "2026-10-16"
       }
     },
-    "observacoes": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
+    "observacoes": null,
+    "nota_interna": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
     "coords": [
       41.4411836,
       -8.2918889
@@ -3864,7 +3865,8 @@ const barbearias = [
     "facebook": null,
     "google_maps": "https://maps.google.com/?cid=9026131002783094160",
     "horario": "Seg-Sex 9h-12h30 e 14h30-19h; Sáb 9h-13h",
-    "observacoes": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
+    "observacoes": null,
+    "nota_interna": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
     "coords": [
       41.5388744,
       -6.9610998
@@ -5776,7 +5778,8 @@ const barbearias = [
       "data": "2026-10-18"
     },
     "horario": "Seg-Sáb 9h-21h; Dom 9h-14h",
-    "observacoes": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
+    "observacoes": null,
+    "nota_interna": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
     "coords": [
       37.090807,
       -8.2464241
@@ -6280,7 +6283,8 @@ const barbearias = [
     "facebook": null,
     "google_maps": "https://maps.google.com/?cid=15388254102215592184",
     "horario": "Seg-Sáb 9h-13h e 15h-19h",
-    "observacoes": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
+    "observacoes": null,
+    "nota_interna": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
     "coords": [
       37.1383571,
       -8.5394275
@@ -8930,7 +8934,8 @@ const barbearias = [
     "facebook": null,
     "google_maps": "https://maps.google.com/?cid=6376844000670269873",
     "horario": "Ter-Sex 10h-13h e 14h30-19h; Sáb 10h-13h e 14h30-18h",
-    "observacoes": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
+    "observacoes": null,
+    "nota_interna": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
     "coords": [
       38.6714313,
       -9.1585516
@@ -9962,7 +9967,8 @@ const barbearias = [
     "facebook": null,
     "google_maps": "https://maps.google.com/?cid=7549052318276913208",
     "horario": "Seg 8h-13h e 14h-19h30; Ter-Sex 8h-13h e 14h-19h; Sáb 8h-13h e 14h-18h",
-    "observacoes": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
+    "observacoes": null,
+    "nota_interna": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
     "coords": [
       41.3065266,
       -7.741967
@@ -10051,7 +10057,8 @@ const barbearias = [
     "facebook": null,
     "google_maps": "https://maps.google.com/?cid=17462582230925060606",
     "horario": "Ter-Sáb 9h-12h e 14h-19h",
-    "observacoes": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
+    "observacoes": null,
+    "nota_interna": "Validada no Google Maps a 2026-10-18 (morada, telefone, coordenadas e horário).",
     "coords": [
       41.301014,
       -7.7430828
@@ -14562,7 +14569,7 @@ const barbearias = [
     "facebook": "https://www.facebook.com/958062377590099",
     "google_maps": null,
     "horario": "Seg-Sex 9h-13h e 15h-20h; Sáb 8h30-19h",
-    "observacoes": "Entrada estratégica para reforçar cobertura no concelho da Maia.",
+    "observacoes": null,
     "coords": [
       41.14789,
       -8.59947
@@ -14603,7 +14610,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": "Ter-Sáb 9h-12h30 e 14h30-19h",
-    "observacoes": "Entrada estratégica para reforçar cobertura no centro de Gondomar.",
+    "observacoes": null,
     "coords": [
       41.140264,
       -8.532964
@@ -14643,7 +14650,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": "Ter-Sex 9h-19h; Sáb 8h-18h",
-    "observacoes": "Entrada estratégica para abrir cobertura pública no concelho de Sintra.",
+    "observacoes": null,
     "coords": [
       38.800631,
       -9.228527
@@ -14684,7 +14691,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": "Seg-Sex 9h-20h; Sáb 9h-19h",
-    "observacoes": "Entrada estratégica para abrir cobertura pública em Oeiras/Paço de Arcos.",
+    "observacoes": null,
     "coords": [
       38.696446,
       -9.299011
@@ -14726,7 +14733,7 @@ const barbearias = [
     "facebook": "https://www.facebook.com/104011408427803",
     "google_maps": null,
     "horario": "Seg-Sáb 9h-20h; pausa 13h-15h",
-    "observacoes": "Entrada estratégica para abrir cobertura pública no Seixal/Fernão Ferro.",
+    "observacoes": null,
     "coords": [
       38.566041,
       -9.09004
@@ -14768,7 +14775,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": "Seg-Sex 9h-20h; Sáb 10h-17h",
-    "observacoes": "Entrada estratégica para reforçar cobertura na Amadora.",
+    "observacoes": null,
     "coords": [
       38.757646,
       -9.229808
@@ -14815,7 +14822,7 @@ const barbearias = [
       "data": "2026-10-11"
     },
     "horario": "Seg-Sáb 9h-19h30",
-    "observacoes": "Entrada estratégica para reforçar Matosinhos/Senhora da Hora.",
+    "observacoes": null,
     "coords": [
       41.191288,
       -8.651731
@@ -14856,7 +14863,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": "9h-19h",
-    "observacoes": "Entrada estratégica para reforçar Vila Nova de Gaia fora do eixo central.",
+    "observacoes": null,
     "coords": [
       41.079313,
       -8.602743
@@ -14898,7 +14905,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": "Seg-Sáb 10h-20h",
-    "observacoes": "Entrada estratégica para reforçar Braga centro.",
+    "observacoes": null,
     "coords": [
       41.55264,
       -8.42371
@@ -14938,7 +14945,7 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "horario": "Seg-Sex 9h-19h; Sáb 9h-17h",
-    "observacoes": "Entrada estratégica para reforçar Aveiro no eixo da Avenida Lourenço Peixinho.",
+    "observacoes": null,
     "coords": [
       40.642935,
       -8.646317
@@ -30730,7 +30737,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJd2kUKTGtJA0RBqR0beOqfco",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (cada dia diferente).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (cada dia diferente).",
     "coords": [
       41.164713,
       -7.7930688
@@ -30970,7 +30978,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ9acCEwx_GA0R947Z3Y5_T2Y",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (todos os dias 9h30-20h30).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (todos os dias 9h30-20h30).",
     "coords": [
       39.6043323,
       -8.4128808
@@ -31002,7 +31011,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJPUHmFAB_GA0Rzztmj_UqCNc",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (todos os dias 9h-20h).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (todos os dias 9h-20h).",
     "coords": [
       39.6042103,
       -8.4117959
@@ -31106,7 +31116,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJP_PenXQbEA0RPD-0PUKW0SM",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (todos os dias).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (todos os dias).",
     "coords": [
       37.1749466,
       -7.5334372
@@ -31498,7 +31509,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ53cKp8VTJA0R42gfO1e9nNg",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (abre às 6h/7h).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (abre às 6h/7h).",
     "coords": [
       41.5345025,
       -8.6198927
@@ -31530,7 +31542,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ63Dl-QtTJA0RAPfQWivyJPc",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (cada dia diferente).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (cada dia diferente).",
     "coords": [
       41.5400029,
       -8.6174121
@@ -31562,7 +31575,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJQci0XDiTJA0RmGfX9IX517Q",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (quinta até às 22h, por confirmar).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (quinta até às 22h, por confirmar).",
     "coords": [
       41.2776283,
       -8.2776013
@@ -31882,7 +31896,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJKaJXEPbKHg0R9Hjrtn7GszE",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (todos os dias).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (todos os dias).",
     "coords": [
       38.6495646,
       -9.2333912
@@ -31950,7 +31965,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJdWmIWSkJJQ0Rd6ORMK3ZeNs",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (cada dia diferente).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (cada dia diferente).",
     "coords": [
       41.8476556,
       -8.4184002
@@ -32162,7 +32178,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJI4N14CLVPA0RcgqcNvJzJiY",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (abre às 7h, por confirmar).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (abre às 7h, por confirmar).",
     "coords": [
       40.4134164,
       -7.7061518
@@ -32668,7 +32685,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJFdJiMQfVIg0RHPOXIHthZvU",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (cada dia diferente).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (cada dia diferente).",
     "coords": [
       40.3598055,
       -7.8606246
@@ -32998,7 +33016,8 @@ const barbearias = [
         "data": "2026-10-16"
       }
     },
-    "observacoes": "Horário do Google Maps não publicado (todos os dias).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (todos os dias).",
     "coords": [
       38.6954984,
       -9.3368056
@@ -33278,7 +33297,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJlbnBeDzOHg0RyPJH6JD3nmI",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (quinta diferente).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (quinta diferente).",
     "coords": [
       38.7699093,
       -9.3060385
@@ -33666,7 +33686,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJ31BpmufWVUcRa4AKnz7sORA",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (todos os dias 7h-21h).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (todos os dias 7h-21h).",
     "coords": [
       37.6407146,
       -7.6600731
@@ -33914,7 +33935,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJI7mqgJDXGg0RnUQPuUZYXcs",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (aberto todos os dias, horário a confirmar).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (aberto todos os dias, horário a confirmar).",
     "coords": [
       37.1357759,
       -8.4529145
@@ -34122,7 +34144,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJf3uge-LfOg0RCi4OzTQXteI",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (aberto todos os dias, horário a confirmar).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (aberto todos os dias, horário a confirmar).",
     "coords": [
       41.7394387,
       -7.468971
@@ -34190,7 +34213,8 @@ const barbearias = [
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJKbNU1ATfOg0RCW6_VHpTOmU",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (horário publicado incoerente).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (horário publicado incoerente).",
     "coords": [
       41.7417173,
       -7.4735881
@@ -39390,7 +39414,8 @@ const barbearias = [
     "google_maps": "https://maps.google.com/?cid=5874231604572377019",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (incoerente: quarta-feira até às 23h).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (incoerente: quarta-feira até às 23h).",
     "coords": [
       41.3397408,
       -8.549084
@@ -40072,7 +40097,8 @@ const barbearias = [
     "google_maps": "https://maps.google.com/?cid=16608694083421871545",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (horário incoerente (00:00–08:00 e 09:00–00:00)).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (horário incoerente (00:00–08:00 e 09:00–00:00)).",
     "coords": [
       39.2592823,
       -8.5835372
@@ -40212,7 +40238,8 @@ const barbearias = [
     "google_maps": "https://maps.google.com/?cid=9233663077596514906",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (\"Aberto 24 horas\" ao domingo e segunda).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (\"Aberto 24 horas\" ao domingo e segunda).",
     "coords": [
       40.7327064,
       -8.3717303
@@ -40244,7 +40271,8 @@ const barbearias = [
     "google_maps": "https://maps.google.com/?cid=1917687243378059125",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (abre às 7h ao sábado).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (abre às 7h ao sábado).",
     "coords": [
       41.337401,
       -8.3185951
@@ -40664,7 +40692,8 @@ const barbearias = [
     "google_maps": "https://maps.google.com/?cid=9548988671226718693",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (horário parcial incoerente (19h–21h)).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (horário parcial incoerente (19h–21h)).",
     "coords": [
       40.4007168,
       -8.6289146
@@ -40840,7 +40869,8 @@ const barbearias = [
     "google_maps": "https://maps.google.com/?cid=9276709836234845742",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (quinta até às 22h).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (quinta até às 22h).",
     "coords": [
       41.6361782,
       -8.1453685
@@ -41016,7 +41046,8 @@ const barbearias = [
     "google_maps": "https://maps.google.com/?cid=1646918637966787210",
     "horario": null,
     "horario_fonte": null,
-    "observacoes": "Horário do Google Maps não publicado (até às 22h).",
+    "observacoes": null,
+    "nota_interna": "Horário do Google Maps não publicado (até às 22h).",
     "coords": [
       40.0919778,
       -8.3296919

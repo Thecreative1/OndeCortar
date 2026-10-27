@@ -2639,7 +2639,7 @@ function patchIndexHtml(staticListHtml, headJsonLd, totals) {
 // index.html) nunca lê — ficam só em barbearias.limpo.js.
 const CLIENT_OMIT_FIELDS = new Set([
   "complemento", "country", "data_confidence", "needs_review", "location_flags",
-  "fontes", "ultima_validacao", "qualidade_ficha", "valor_original", "horario_fonte", "precos", "whatsapp"
+  "fontes", "ultima_validacao", "qualidade_ficha", "valor_original", "horario_fonte", "precos", "whatsapp", "nota_interna"
 ]);
 
 // Gera Barbeiros/barbearias.mapa.js para a homepage: só barbearias públicas, sem os

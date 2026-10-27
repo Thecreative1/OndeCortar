@@ -183,6 +183,8 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
   "whatsapp": "+351 961 540 429",        // opcional — SÓ se o dono confirmou no formulário; telemóvel PT (o validador verifica)
   "coords": [38.7223, -9.1393],          // [lat, lng] — necessário para aparecer no mapa
   "horario": "Seg-Sex 9h-19h",           // ver secção Horário abaixo; horario_fonte opcional
+  "observacoes": null,                   // PÚBLICO — a homepage mostra-o como descrição do cartão (script.js buildDescription); só texto para o cliente
+  "nota_interna": "...",                 // opcional — notas de trabalho (porquê horário null, validação…); fora do barbearias.mapa.js (CLIENT_OMIT_FIELDS)
   "mostrar_no_mapa": true,               // false = excluído do site público
   "ultima_validacao": "2026-04-21",      // data ISO — usada no sitemap e nas páginas
   "status": "confirmado"
