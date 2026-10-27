@@ -212,6 +212,7 @@ const PICKS = {
     items: [
       ["philips-s5465-series-5000", "A nossa escolha", "Rotativa com 27 lâminas autoafiáveis, cabeças a 360° e aparador de encaixar."],
       ["braun-series5-51-b1000s", "De lâminas", "3 lâminas flexíveis e AutoSense, que ajusta a potência à barba."],
+      ["braun-series-3-310s", "Lâminas, para começar", "2 redes e aparador central, 100% à prova de água."],
       ["philips-x3053-series-3000", "Primeira máquina", "Rotativa de entrada com SkinProtect, a seco ou no duche."],
       ["philips-oneblade-360-qp2724", "Barba de poucos dias", "Apara, contorna e rapa com a lâmina 360."]
     ]

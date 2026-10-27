@@ -93,6 +93,8 @@ module.exports = [
       actions: [["../../produto/philips-hs7980-head-shaver/", "Ver a nossa escolha"], ["../../loja/trimmers-e-shavers/", "Ver shavers"]]
     }
   },
+  // ⚠️ Versão antiga (10/10). O artigo foi reescrito a 27/10 em artigos-2026-10-27-barbear.js:
+  // não correr este ficheiro inteiro, senão volta o texto antigo.
   {
     slug: "melhor-maquina-de-barbear-eletrica-qual-escolher",
     category: "guias-de-compra",

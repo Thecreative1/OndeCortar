@@ -93,6 +93,10 @@ const SINGLE_PICKS = {
     slug: "philips-bt5765-series-5000",
     why: "Para quem apara a barba curta a média em casa, é o que junta mais afinação a menos trabalho: 40 comprimentos em passos de 0,2 mm, lâminas que não precisam de óleo e corpo 100% à prova de água. Se queres contornos ao pormenor, o Série 7000 acrescenta a cabeça larga."
   },
+  "melhor-maquina-de-barbear-eletrica-qual-escolher": {
+    slug: "philips-s5465-series-5000",
+    why: "Para quem rapa a cara todos os dias ou quase, é a que serve mais gente: rotativa com cabeças flexíveis a 360°, 27 lâminas autoafiáveis, aparador de encaixar para bigode e patilhas e 100% à prova de água. Se barbeias a direito e tens barba densa, a Braun Series 5 é a alternativa de lâminas."
+  },
   "trimmer-vs-shaver-diferencas-reais": {
     slug: "braun-series-5-aio5545",
     why: "Se queres manter a barba e tratar do resto com um só aparelho e um só orçamento, um multifunções de qualidade compensa mais do que dois aparelhos medianos. Este cobre cabelo, barba e corpo."
