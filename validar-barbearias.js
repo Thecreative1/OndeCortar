@@ -35,7 +35,16 @@ const SLUGS_PUBLICADOS = new Set([
   "lords-barbershop-mem-martins",
   "barbearia-moderna-oliveira-do-hospital",
   "villains-barbershop-baguim-do-monte",
-  "mans-house-portimao" // renomeada "Brell Studio" em 2026-10-01; URL mantido
+  "mans-house-portimao", // renomeada "Brell Studio" em 2026-10-01; URL mantido
+  // Renomeadas a 2026-10-28 (revalidação no Google Maps, autorizadas pelo utilizador); URL mantido
+  "the-barbers", // The Barber Company Loulé
+  "barbearia-alves", // Barbearia Caciano
+  "el-patron-barbershop", // Barbearia Whystop São Domingos Benfica
+  "bento-s-barber-shop-vespa-bar", // Beto's Barber Shop & Vespa Bar
+  "fred-barber-caminha", // Abreu Barber - Barbearia (outro negócio no mesmo espaço)
+  "casablanca-barbershop", // Barbearia DRYE
+  "barbearia-tradicional-valenca", // Barbearia Barber-Show (outro negócio no mesmo espaço)
+  "o-brasileiro-canelas" // Barboterapia Canelas (outro negócio no mesmo espaço)
 ]);
 
 function allowedSlugs(item) {

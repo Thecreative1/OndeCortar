@@ -2230,7 +2230,7 @@ const barbearias = [
     "qualidade_ficha": "alta"
   },
   {
-    "nome": "Bento's Barber Shop & Vespa Bar",
+    "nome": "Beto's Barber Shop & Vespa Bar",
     "slug": "bento-s-barber-shop-vespa-bar",
     "distrito": "",
     "concelho": "Tocha",
@@ -4944,7 +4944,7 @@ const barbearias = [
     "qualidade_ficha": "alta"
   },
   {
-    "nome": "Barbearia Alves",
+    "nome": "Barbearia Caciano",
     "slug": "barbearia-alves",
     "distrito": "Évora",
     "concelho": "Évora",
@@ -4952,8 +4952,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Évora",
     "zone": "",
-    "morada": "Avenida de São Sebastião, Évora",
-    "address_raw": "Avenida de São Sebastião, Évora",
+    "morada": "Avenida de São Sebastião 11A, 7000-767 Évora",
+    "address_raw": "Avenida de São Sebastião 11A, 7000-767 Évora",
     "street": "Avenida de São Sebastião",
     "street_number": "",
     "complemento": "",
@@ -4981,8 +4981,10 @@ const barbearias = [
       -7.9174934
     ],
     "status": "confirmado",
-    "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Caciano%20%C3%89vora"
+    ],
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5461,10 +5463,10 @@ const barbearias = [
     "freguesia": "",
     "city": "Évora",
     "zone": "",
-    "morada": "Rua de Serpa Pinto 73, 7000-537 Évora",
-    "address_raw": "Rua de Serpa Pinto 73, 7000-537 Évora",
+    "morada": "Rua de Serpa Pinto 31, 7000-537 Évora",
+    "address_raw": "Rua de Serpa Pinto 31, 7000-537 Évora",
     "street": "Rua de Serpa Pinto",
-    "street_number": "73",
+    "street_number": "31",
     "complemento": "",
     "localidade": "Évora",
     "codigo_postal": "7000-537",
@@ -5475,18 +5477,24 @@ const barbearias = [
     "telefone": "+351 913 602 847",
     "email": null,
     "website": null,
+    "booking": "https://rjcortes.buk.pt/",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 11h-21h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=RPDOCORTE%20%C3%89vora",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
-      38.5715,
-      -7.9071
+      38.5710025,
+      -7.910343
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -6420,7 +6428,7 @@ const barbearias = [
     "qualidade_ficha": "alta"
   },
   {
-    "nome": "The Barbers",
+    "nome": "The Barber Company Loulé",
     "slug": "the-barbers",
     "distrito": "Faro",
     "concelho": "Loulé",
@@ -6428,20 +6436,20 @@ const barbearias = [
     "freguesia": "Almancil",
     "city": "Loulé",
     "zone": "Almancil",
-    "morada": "Mar Shopping Algarve, Avenida do Algarve Loja 1.38, 8135-185 Almancil",
-    "address_raw": "Mar Shopping Algarve, Avenida do Algarve Loja 1.38, 8135-185 Almancil",
+    "morada": "Mar Shopping Algarve, Avenida do Algarve Loja 1.38, 8135-182 Almancil",
+    "address_raw": "Mar Shopping Algarve, Avenida do Algarve Loja 1.38, 8135-182 Almancil",
     "street": "Mar Shopping Algarve",
     "street_number": "",
     "complemento": "Avenida do Algarve Loja 1.38",
     "localidade": "Almancil",
-    "codigo_postal": "8135-185",
+    "codigo_postal": "8135-182",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
     "telefone": "+351 289 992 084",
     "email": null,
-    "website": "https://thebarbers.pt/",
+    "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
@@ -6455,9 +6463,9 @@ const barbearias = [
     "coords": [37.0980693, -7.9975335],
     "status": "confirmado",
     "fontes": [
-      "https://thebarbers.pt/"
+      "https://www.google.com/maps/search/?api=1&query=The%20Barber%20Company%20Loul%C3%A9"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -7905,7 +7913,7 @@ const barbearias = [
     }
   },
   {
-    "nome": "El Patron Barbershop",
+    "nome": "Barbearia Whystop São Domingos Benfica",
     "slug": "el-patron-barbershop",
     "distrito": "Lisboa",
     "concelho": "Lisboa",
@@ -7930,7 +7938,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-20h; Sáb 10h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Whystop%20S%C3%A3o%20Domingos%20Benfica",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.7442378,
@@ -7938,7 +7951,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -8810,7 +8823,7 @@ const barbearias = [
     "qualidade_ficha": "alta"
   },
   {
-    "nome": "Casablanca Barbershop",
+    "nome": "Barbearia DRYE",
     "slug": "casablanca-barbershop",
     "distrito": "Porto",
     "concelho": "Vila Nova de Gaia",
@@ -8829,23 +8842,23 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 913 888 409",
     "email": null,
-    "website": "https://booksy.com/pt-pt/2385_casablanca-barbershop_barbearia_221774_vila-nova-de-gaia",
+    "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
     "horario": null,
     "observacoes": null,
     "coords": [
-      41.1133989,
-      -8.6149932
+      41.1116511,
+      -8.6157301
     ],
     "status": "confirmado",
     "fontes": [
-      "https://booksy.com/pt-pt/s/barbearia/221774_vila-nova-de-gaia"
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20DRYE%20Vila%20Nova%20de%20Gaia"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14241,7 +14254,7 @@ const barbearias = [
     "qualidade_ficha": "alta"
   },
   {
-    "nome": "Fred Barber BARBEARIA",
+    "nome": "Abreu Barber - Barbearia",
     "slug": "fred-barber-caminha",
     "distrito": "Viana do Castelo",
     "concelho": "Caminha",
@@ -14260,23 +14273,29 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 929 329 727",
+    "telefone": "+351 915 983 446",
     "email": null,
-    "website": null,
+    "website": "https://www.abreubarber.pt/",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Qua 10h-19h; Qui-Sex 10h-20h; Sáb 9h-18h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Abreu%20Barber%20Caminha",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
-      41.8756466,
-      -8.8358234
+      41.8745737,
+      -8.8353148
     ],
     "status": "confirmado",
     "fontes": [
-      "https://www.fresha.com/en-GB/lvp/fred-barber-barbearia-avenida-manuel-xavier-caminha-BK8nk3"
+      "https://www.google.com/maps/search/?api=1&query=Abreu%20Barber%20Caminha",
+      "https://www.abreubarber.pt/"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14957,7 +14976,7 @@ const barbearias = [
     "qualidade_ficha": "alta"
   },
   {
-    "nome": "Barbearia Tradicional",
+    "nome": "Barbearia Barber-Show",
     "slug": "barbearia-tradicional-valenca",
     "distrito": "Viana do Castelo",
     "concelho": "Valença",
@@ -14965,8 +14984,8 @@ const barbearias = [
     "freguesia": "União das Freguesias de Valença, Cristelo Covo e Arão",
     "city": "Valença",
     "zone": "",
-    "morada": "Rua Val Flores 14 loja 18 r/c, 4930-746 Valença",
-    "address_raw": "Rua Val Flores 14 loja 18 r/c, 4930-746 Valença",
+    "morada": "Travessa Vale de Flores 14, Loja 18 R/C, 4930-746 Valença",
+    "address_raw": "Travessa Vale de Flores 14, Loja 18 R/C, 4930-746 Valença",
     "street": "Rua Val Flores",
     "street_number": "14",
     "complemento": "loja 18 r/c",
@@ -14976,23 +14995,28 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 926 578 122",
-    "email": "barbertradi.pt@gmail.com",
+    "telefone": "+351 937 235 800",
+    "email": null,
     "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 8h-20h; Sáb 8h-14h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Barber-Show%20Valen%C3%A7a",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
-      42.0216922,
-      -8.6493396
+      42.0254075,
+      -8.6434694
     ],
     "status": "confirmado",
     "fontes": [
-      "https://www.portugalplease.com/viana-do-castelo/valenca/servicos/cabeleireiros-barbeiros/barbearia-tradicional"
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Barber-Show%20Valen%C3%A7a"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -15397,7 +15421,7 @@ const barbearias = [
     "qualidade_ficha": "alta"
   },
   {
-    "nome": "O Brasileiro Canelas",
+    "nome": "Barboterapia Canelas",
     "slug": "o-brasileiro-canelas",
     "distrito": "Porto",
     "concelho": "Vila Nova de Gaia",
@@ -15416,25 +15440,28 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 932 214 016",
+    "telefone": "+351 961 383 220",
     "email": null,
-    "website": "https://obrasileiro.pt/",
+    "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "9h-19h",
+    "horario": "Ter-Sex 9h-19h30; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barboterapia%20Canelas",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
-      41.079313,
-      -8.602743
+      41.0794869,
+      -8.6025127
     ],
     "status": "confirmado",
     "fontes": [
-      "https://obrasileiro.pt/",
-      "https://obrasileiro.pt/contacto/",
-      "https://www.codigo-postal.pt/4410-234/"
+      "https://www.google.com/maps/search/?api=1&query=Barboterapia%20Canelas"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
