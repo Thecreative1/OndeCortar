@@ -1500,3 +1500,10 @@ h1 em, h2 em, .dir-headline em, .cities-headline em, .owner-cta-headline em, h1 
   background: #C8873A !important; color: #17130D !important; border-color: #C8873A !important;
 }
 .result-actions .btn-map .btn-map-icon { flex: none; }
+
+/* Filtro de região ativo (2026-10-28): antes não se via qual estava escolhido.
+   Cheio em âmbar; tocar outra vez desliga o filtro (index.html, markRegionChip). */
+.city-chip.is-active,
+.city-chip.is-active:hover {
+  background: #C8873A !important; color: #17130D !important; border-color: #C8873A !important;
+}

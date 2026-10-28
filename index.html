@@ -1962,7 +1962,7 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="oc-style.css?v=20261028-ver-no-mapa" />
+  <link rel="stylesheet" href="oc-style.css?v=20261028-filtros" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -8244,6 +8244,12 @@
 
         if (regionButton) {
           const regiao = regionButton.getAttribute("data-region-search") || "";
+          // Tocar outra vez na região escolhida desliga o filtro e volta a mostrar todas.
+          if (regionButton.classList.contains("is-active")) {
+            syncSearchInputs("");
+            updateDirectory("");
+            return;
+          }
           filterByRegiao(regiao);
           setTimeout(scrollToResults, 50);
           return;
@@ -8821,6 +8827,7 @@
           });
           renderMarkers(nearbyBarbers);
           saveLocationSearchState(coords, nearbyBarbers);
+          markRegionChip(null);
         }, function(error) {
           if (requestId !== state.locateRequestId) {
             return;
@@ -8874,9 +8881,17 @@
           mode: "region",
           regiao: regiao
         });
-        // Mark active chip
+        markRegionChip(regiao);
+      }
+
+      // Chip da região ativa (null = nenhuma). Pesquisas e "Usar localização" desmarcam-no.
+      function markRegionChip(regiao) {
         const chips = directoryCities ? directoryCities.querySelectorAll("[data-region-search]") : [];
-        chips.forEach(function(c) { c.classList.toggle("is-active", c.getAttribute("data-region-search") === regiao); });
+        chips.forEach(function(c) {
+          const active = Boolean(regiao) && c.getAttribute("data-region-search") === regiao;
+          c.classList.toggle("is-active", active);
+          c.setAttribute("aria-pressed", active ? "true" : "false");
+        });
       }
 
       function renderRegionChips(container) {
@@ -8888,7 +8903,7 @@
           if (r) counts[r]++;
         });
         container.innerHTML = Object.keys(REGIOES_PT).map(function(regiao) {
-          return '<button class="city-chip" type="button" data-region-search="' +
+          return '<button class="city-chip" type="button" aria-pressed="false" data-region-search="' +
             directory.escapeHtml(regiao) + '">' +
             directory.escapeHtml(regiao) +
             ' <span aria-hidden="true">(' + (counts[regiao] || 0) + ')</span>' +
@@ -9158,6 +9173,7 @@
         updateSummary(state.results, term);
         renderMarkers(state.results);
         saveTermSearchState(term);
+        markRegionChip(null);
       }
 
       function renderHeroResults(list, term, options) {
