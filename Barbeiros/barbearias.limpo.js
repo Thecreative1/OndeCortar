@@ -38,7 +38,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -1011,11 +1011,11 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Sáb 9h-19h",
+    "horario": "Seg-Sex 9h-12h e 14h-19h; Sáb 9h-19h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/12060205984",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Paulo%20Freitas%20Arganil",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -1024,7 +1024,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1092,11 +1092,11 @@ const barbearias = [
     "instagram": "https://www.instagram.com/cortesediscos.barbershop/",
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg 9h-13h e 14h30-20h; Qua-Sáb 9h-13h e 14h30-20h",
+    "horario": "Seg 9h-20h; Qua-Sáb 9h-20h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/13510128717",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Cortes%20%26%20Discos%20barbershop%20Azeit%C3%A3o",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -1107,7 +1107,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/cortesediscos.barbershop/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1292,8 +1292,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Carnaxide",
     "zone": "",
-    "morada": "Largo Terra Grande 7, 2790-157 Carnaxide",
-    "address_raw": "Largo Terra Grande 7, 2790-157 Carnaxide",
+    "morada": "Largo Terra Grande 7C, 2790-157 Carnaxide",
+    "address_raw": "Largo Terra Grande 7C, 2790-157 Carnaxide",
     "street": "Largo Terra Grande",
     "street_number": "7",
     "complemento": "",
@@ -1309,7 +1309,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h e 15h-19h; Sáb 9h-13h e 15h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=FADO%20Barbearia%20Carnaxide",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.7266369,
@@ -1317,7 +1322,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1843,8 +1848,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Samora Correia",
     "zone": "",
-    "morada": "Rua General Vasco Gonçalves, 2135-130 Samora Correia",
-    "address_raw": "Rua General Vasco Gonçalves, 2135-130 Samora Correia",
+    "morada": "Rua General Vasco Gonçalves, Bloco A, Loja 2, 2135-130 Samora Correia",
+    "address_raw": "Rua General Vasco Gonçalves, Bloco A, Loja 2, 2135-130 Samora Correia",
     "street": "Rua General Vasco Gonçalves",
     "street_number": "",
     "complemento": "",
@@ -1860,11 +1865,11 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Sex 9h-20h; Sáb 7h30-13h30",
+    "horario": "Seg-Sex 9h30-13h e 15h-20h; Sáb 8h30-13h30",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/13520636686",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%2098%20Men's%20Space%20Samora%20Correia",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -1873,7 +1878,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -4746,7 +4751,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 8h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%2099%20Estremoz",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.8455,
@@ -4754,7 +4764,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5066,7 +5076,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-14h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Perdig%C3%A3o%20desde%201987%20%C3%89vora",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.5747,
@@ -5074,7 +5089,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5697,13 +5712,13 @@ const barbearias = [
     "freguesia": "",
     "city": "Vila Viçosa",
     "zone": "",
-    "morada": "Largo Mouzinho de Albuquerque 35, 7160-274 Vila Viçosa",
-    "address_raw": "Largo Mouzinho de Albuquerque 35, 7160-274 Vila Viçosa",
+    "morada": "Largo Mouzinho de Albuquerque 35, 7160-208 Vila Viçosa",
+    "address_raw": "Largo Mouzinho de Albuquerque 35, 7160-208 Vila Viçosa",
     "street": "Largo Mouzinho de Albuquerque",
     "street_number": "35",
     "complemento": "",
     "localidade": "Vila Viçosa",
-    "codigo_postal": "7160-274",
+    "codigo_postal": "7160-208",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
@@ -5714,7 +5729,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter 9h-19h; Qua 9h-17h; Qui 9h-19h; Sex 9h-20h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Pinto%20Vila%20Vi%C3%A7osa",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.7808,
@@ -5722,7 +5742,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5932,7 +5952,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/barbearia_evandro_garcia_1/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-20h; Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Evandro%20Garcia%20Faro",
+      "data": "2026-10-28"
+    },
     "observacoes": "Barbearia e tatuagem",
     "coords": [
       37.0212356,
@@ -5942,7 +5967,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/barbearia_evandro_garcia_1/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -6045,13 +6070,13 @@ const barbearias = [
     "freguesia": "",
     "city": "Faro",
     "zone": "",
-    "morada": "Largo Dr. Francisco Sá Carneiro 47, 8000-151 Faro",
-    "address_raw": "Largo Dr. Francisco Sá Carneiro 47, 8000-151 Faro",
+    "morada": "Rua Aboim Ascensão 65, 8000-199 Faro",
+    "address_raw": "Rua Aboim Ascensão 65, 8000-199 Faro",
     "street": "Largo Dr. Francisco Sá Carneiro",
     "street_number": "47",
     "complemento": "",
     "localidade": "Faro",
-    "codigo_postal": "8000-151",
+    "codigo_postal": "8000-199",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
@@ -6065,14 +6090,14 @@ const barbearias = [
     "horario": null,
     "observacoes": "Segunda a sábado 09:00–21:00",
     "coords": [
-      37.0197372,
-      -7.9294337
+      37.0214482,
+      -7.9352298
     ],
     "status": "confirmado",
     "fontes": [
       "https://www.instagram.com/cj_barberia_faro/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -6125,8 +6150,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Faro",
     "zone": "",
-    "morada": "Rua Doutor José de Matos 33, Faro",
-    "address_raw": "Rua Doutor José de Matos 33, Faro",
+    "morada": "Rua Doutor José de Matos 33, 8000-151 Faro",
+    "address_raw": "Rua Doutor José de Matos 33, 8000-151 Faro",
     "street": "Rua Doutor José de Matos",
     "street_number": "33",
     "complemento": "",
@@ -6136,13 +6161,18 @@ const barbearias = [
     "data_confidence": "medium",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 933 340 863",
     "email": null,
     "website": null,
     "instagram": "https://www.instagram.com/oprofetabarber/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h30-19h30; Sáb 9h30-18h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=OProfeta%20Barbearia%20Faro",
+      "data": "2026-10-28"
+    },
     "observacoes": "Barbearia moderna",
     "coords": [
       37.015459,
@@ -6152,7 +6182,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/oprofetabarber/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -6230,7 +6260,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h e 14h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=BarberShop%20Abreu%20Lagos",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       37.101654,
@@ -6240,7 +6275,7 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/lp/en/tt/men%27s-haircuts/in/pt-rural-faro-district/lagos"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -6711,17 +6746,17 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 911 559 774",
     "email": null,
     "website": "https://booksy.com/pt-pt/1173_evolution-mens-salon_barbearia_141679_leiria",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Ter-Sex 9h-13h e 14h30-19h30; Sáb 9h-13h e 14h30-18h",
+    "horario": "Ter-Sex 9h-13h e 14h30-20h30; Sáb 9h-13h e 14h30-19h",
     "horario_fonte": {
-      "nome": "Booksy",
-      "url": "https://booksy.com/pt-pt/1173_evolution-mens-salon_barbearia_141679_leiria",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=EVOLUTION%20Men's%20Salon%20Leiria",
+      "data": "2026-10-28"
     },
     "precos": {
       "corte": 12,
@@ -6742,7 +6777,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/1173_evolution-mens-salon_barbearia_141679_leiria"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -7762,17 +7797,17 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 934 713 396",
     "email": null,
     "website": "https://booksy.com/pt-pt/5114_exodo-barbearia_barbearia_157422_lisboa",
     "instagram": "https://www.instagram.com/exodo.barbearia/",
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Sex 9h30-13h e 14h30-19h; Sáb 9h-13h",
+    "horario": "Seg-Sex 9h30-19h; Sáb 9h-13h",
     "horario_fonte": {
-      "nome": "Booksy",
-      "url": "https://booksy.com/pt-pt/5114_exodo-barbearia_barbearia_157422_lisboa",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20%C3%8Axodo%20Avenida%20Marconi%20Lisboa",
+      "data": "2026-10-28"
     },
     "precos": {
       "corte": 19,
@@ -7793,7 +7828,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/157422_lisboa"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -9956,8 +9991,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Vila Real",
     "zone": "",
-    "morada": "5000-446 Vila Real",
-    "address_raw": "5000-446 Vila Real",
+    "morada": "Praça de Nossa Senhora da Conceição P9, 5000-446 Vila Real",
+    "address_raw": "Praça de Nossa Senhora da Conceição P9, 5000-446 Vila Real",
     "street": "",
     "street_number": "",
     "complemento": "",
@@ -9986,7 +10021,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -10714,13 +10749,18 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 291 642 542",
+    "telefone": "+351 936 169 601",
     "email": "barbeariaalegria@gmail.com",
     "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-19h; Sáb 10h-15h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Alegria%20Funchal",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       32.6485371,
@@ -10728,7 +10768,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -11880,7 +11920,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 8h-13h e 15h-19h; Sáb 8h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Vintage%20Palma%20Beja",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.0134465,
@@ -11890,7 +11935,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/beja/barbearia-vintage-palma/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -12452,7 +12497,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h30; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Cl%C3%A1ssica%20Guarda",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       40.5413664,
@@ -12462,7 +12512,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/guarda/barbearia-classica/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -12998,7 +13048,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 8h30-12h30 e 14h-19h; Sáb 8h-12h30 e 14h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Novo%20Visual%20Barber%20Shop%20Moimenta%20da%20Beira",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       40.9786416,
@@ -13008,7 +13063,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/moimenta-da-beira/novo-visual-barber-shop-barbea/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13119,7 +13174,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h e 14h30-19h; Sáb 8h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Nelo%20Sabrosa",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       41.2673884,
@@ -13129,7 +13189,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/sabrosa/barbearia-nelo/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13279,7 +13339,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 10h-13h e 14h30-21h; Sáb 10h-13h e 14h30-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%203200%20Lous%C3%A3",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       40.1111532,
@@ -13289,7 +13354,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/lousa/barbearia-3200/"
     ],
-    "ultima_validacao": "2026-04-19",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13931,7 +13996,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-19h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Olimpo%20Space%20Barbearia%20Vila%20Praia%20de%20%C3%82ncora",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       41.8135428,
@@ -13941,7 +14011,7 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/pt/lvp/olimpo-space-barbearia-praca-da-republica-vila-praia-de-ancora-oo5R6a"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13954,8 +14024,8 @@ const barbearias = [
     "freguesia": "Vila Praia de Âncora",
     "city": "Vila Praia de Âncora",
     "zone": "",
-    "morada": "R. Gontinhães 10-128, 4910-490 Vila Praia de Âncora",
-    "address_raw": "R. Gontinhães 10-128, 4910-490 Vila Praia de Âncora",
+    "morada": "Rua Gontinhães 117, 4910-490 Vila Praia de Âncora",
+    "address_raw": "Rua Gontinhães 117, 4910-490 Vila Praia de Âncora",
     "street": "R. Gontinhães",
     "street_number": "10-128",
     "complemento": "",
@@ -13971,7 +14041,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 10h-19h; Sáb 10h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=BARBILHA'S%20Vila%20Praia%20de%20%C3%82ncora",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       41.8158269,
@@ -13981,7 +14056,7 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/es/lvp/barbilhas-rua-gontinhaes-vila-praia-de-ancora-2MRJ9o"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14193,7 +14268,7 @@ const barbearias = [
       "https://www.fresha.com/a/corte-no-ponto-melgaco-avenida-capitao-avenida-salgueiro-maia-256-fqlukfmh",
       "https://linktr.ee/cortenoponto"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
