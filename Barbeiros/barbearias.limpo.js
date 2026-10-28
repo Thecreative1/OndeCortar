@@ -594,8 +594,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Samora Correia",
     "zone": "",
-    "morada": "Avenida O Século",
-    "address_raw": "Avenida O Século",
+    "morada": "Avenida O Século 60, 2135-231 Samora Correia",
+    "address_raw": "Avenida O Século 60, 2135-231 Samora Correia",
     "street": "Avenida O Século",
     "street_number": "",
     "complemento": "",
@@ -611,7 +611,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-20h; Sáb 8h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Kadette%20Barbershop%20Samora%20Correia",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.9368344,
@@ -619,7 +624,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -637,8 +642,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Viana do Castelo",
     "zone": "",
-    "morada": "Rua Cidade de Riom 466",
-    "address_raw": "Rua Cidade de Riom 466",
+    "morada": "Rua Cidade de Riom 466, 4900-380 Viana do Castelo",
+    "address_raw": "Rua Cidade de Riom 466, 4900-380 Viana do Castelo",
     "street": "Rua Cidade de Riom",
     "street_number": "466",
     "complemento": "",
@@ -648,17 +653,17 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 964 208 103",
+    "telefone": "+351 920 195 124",
     "email": "barberlosmoustachios@gmail.com",
     "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Ter-Sex 9h30-12h30 e 14h-19h30; Sáb 9h-12h30 e 14h-19h",
+    "horario": "Seg-Sáb 9h-19h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/8948366097",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Los%20Moustachios%20Viana%20do%20Castelo",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -667,7 +672,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -913,13 +918,13 @@ const barbearias = [
     "freguesia": "",
     "city": "Alcântara",
     "zone": "",
-    "morada": "Rua dos Lusíadas 127B, 1300-369 Alcântara",
-    "address_raw": "Rua dos Lusíadas 127B, 1300-369 Alcântara",
+    "morada": "Rua Luís de Camões 123, 1300-356 Alcântara",
+    "address_raw": "Rua Luís de Camões 123, 1300-356 Alcântara",
     "street": "Rua dos Lusíadas",
     "street_number": "127B",
     "complemento": "",
     "localidade": "Alcântara",
-    "codigo_postal": "1300-369",
+    "codigo_postal": "1300-356",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
@@ -930,15 +935,20 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 8h30-19h; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Portugal%20por%20Jo%C3%A3o%20Alves%20Lisboa",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
-      38.7032304,
-      -9.1835864
+      38.7038519,
+      -9.1825362
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -951,13 +961,13 @@ const barbearias = [
     "freguesia": "",
     "city": "Arganil",
     "zone": "",
-    "morada": "Rua José Castanheira Nunes 13, 3300-062 Arganil",
-    "address_raw": "Rua José Castanheira Nunes 13, 3300-062 Arganil",
+    "morada": "Rua José Castanheira Nunes 13, 3300-055 Arganil",
+    "address_raw": "Rua José Castanheira Nunes 13, 3300-055 Arganil",
     "street": "Rua José Castanheira Nunes",
     "street_number": "13",
     "complemento": "",
     "localidade": "Arganil",
-    "codigo_postal": "3300-062",
+    "codigo_postal": "3300-055",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
@@ -968,11 +978,11 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Ter 10h-19h; Qui 8h-18h; Sex-Sáb 10h-19h",
+    "horario": "Seg-Qua 10h-13h e 14h-19h; Qui 8h-13h e 14h-18h; Sex-Sáb 10h-13h e 14h-19h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/11378229463",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20do%20Senhor%20Arganil",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -981,7 +991,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2004,7 +2014,7 @@ const barbearias = [
     "fontes": [
       "https://you.zappysoftware.com/nineteencuts"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -3132,11 +3142,11 @@ const barbearias = [
     "instagram": "https://www.instagram.com/fgoncalvesbarber/",
     "facebook": null,
     "google_maps": null,
-    "horario": "Ter-Sex 10h-13h e 14h30-20h; Sáb 10h-13h e 14h30-19h",
+    "horario": "Ter-Sex 10h-13h e 14h-20h; Sáb 8h-14h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/10893197102",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=FG%20Male%20Image%20%26%20Grooming%20Braga",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -3148,7 +3158,7 @@ const barbearias = [
       "https://fgmaleimage.pt/",
       "https://www.instagram.com/fgoncalvesbarber/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -3509,8 +3519,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Guimarães",
     "zone": "",
-    "morada": "Rua Teixeira de Pascoais 40B, Guimarães",
-    "address_raw": "Rua Teixeira de Pascoais, 40B, Guimarães",
+    "morada": "Rua Teixeira de Pascoais 40B, 4800-073 Guimarães",
+    "address_raw": "Rua Teixeira de Pascoais 40B, 4800-073 Guimarães",
     "street": "Rua Teixeira de Pascoais",
     "street_number": "40B",
     "complemento": "",
@@ -3520,13 +3530,18 @@ const barbearias = [
     "data_confidence": "medium",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 968 896 660",
     "email": null,
     "website": null,
     "instagram": null,
     "facebook": "https://www.facebook.com/BarbeariaTheBarbersStudio/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-21h; Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20The%20Barbers%20Studio%20Guimar%C3%A3es",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       41.4425,
@@ -3536,7 +3551,7 @@ const barbearias = [
     "fontes": [
       "https://www.facebook.com/BarbeariaTheBarbersStudio/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -4164,8 +4179,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Coimbra",
     "zone": "",
-    "morada": "Rua Mouzinho de Albuquerque 56, 3030-063 Coimbra",
-    "address_raw": "Rua Mouzinho de Albuquerque 56, 3030-063 Coimbra",
+    "morada": "Rua Mouzinho de Albuquerque 56, Loja 2, 3030-063 Coimbra",
+    "address_raw": "Rua Mouzinho de Albuquerque 56, Loja 2, 3030-063 Coimbra",
     "street": "Rua Mouzinho de Albuquerque",
     "street_number": "56",
     "complemento": "",
@@ -4181,11 +4196,11 @@ const barbearias = [
     "instagram": "https://www.instagram.com/barbeariacandeias/",
     "facebook": "https://www.facebook.com/barbeariacandeias",
     "google_maps": null,
-    "horario": "Seg-Sex 9h-19h; Sáb 9h-18h",
+    "horario": "Ter-Sáb 9h-13h e 14h-19h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/10158873821",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Candeias%20Coimbra",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -4197,7 +4212,7 @@ const barbearias = [
       "https://www.instagram.com/barbeariacandeias/",
       "https://www.facebook.com/barbeariacandeias"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -4794,7 +4809,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/RoxoBarber/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 10h-13h e 15h-19h; Sáb 10h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Tira%20Barber%20Estremoz",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.8443,
@@ -4804,7 +4824,7 @@ const barbearias = [
     "fontes": [
       "https://www.facebook.com/RoxoBarber/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5008,7 +5028,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5444,7 +5464,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/bfbarbearia1/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 10h-13h e 15h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=BF%20Barbearia%20Montemor-o-Novo",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.6474,
@@ -5454,7 +5479,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/bfbarbearia1/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -5470,13 +5495,13 @@ const barbearias = [
     "freguesia": "",
     "city": "Montemor-o-Novo",
     "zone": "",
-    "morada": "Rua do Passo 3, 7050-169 Montemor-o-Novo",
-    "address_raw": "Rua do Passo 3, 7050-169 Montemor-o-Novo",
+    "morada": "Rua Sophia de Mello Breyner 5, R/C Dto, 7050-165 Montemor-o-Novo",
+    "address_raw": "Rua Sophia de Mello Breyner 5, R/C Dto, 7050-165 Montemor-o-Novo",
     "street": "Rua do Passo",
     "street_number": "3",
     "complemento": "",
     "localidade": "Montemor-o-Novo",
-    "codigo_postal": "7050-169",
+    "codigo_postal": "7050-165",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
@@ -5487,15 +5512,20 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 10h-19h30; Sáb 9h-15h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20do%20Av%C3%B4%20Z%C3%A9%20Montemor-o-Novo",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
-      38.6468,
-      -8.219
+      38.6475707,
+      -8.2222062
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -7007,7 +7037,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/cutsandwhiskey/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-20h; Sáb 9h-18h; Dom 12h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Cuts%20and%20Whiskey%20Barbershop%20Cascais",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.6972,
@@ -7017,7 +7052,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/cutsandwhiskey/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -7030,8 +7065,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Lisboa",
     "zone": "",
-    "morada": "Rua Marquês de Sá da Bandeira 66, 1050-150 Lisboa",
-    "address_raw": "Rua Marquês de Sá da Bandeira 66, 1050-150 Lisboa",
+    "morada": "Rua Marquês de Sá da Bandeira 68, 1050-150 Lisboa",
+    "address_raw": "Rua Marquês de Sá da Bandeira 68, 1050-150 Lisboa",
     "street": "Rua Marquês de Sá da Bandeira",
     "street_number": "66",
     "complemento": "",
@@ -7041,17 +7076,17 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 920 558 835",
     "email": null,
     "website": "https://booksy.com/pt-pt/3412_aneel-barbershop_salao-de-cabeleireiro_157422_lisboa",
     "instagram": "https://www.instagram.com/aneel_barbershop/",
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Qua 10h30-20h; Sex-Sáb 10h30-20h",
+    "horario": "Seg-Sáb 10h-20h",
     "horario_fonte": {
-      "nome": "Booksy",
-      "url": "https://booksy.com/pt-pt/3412_aneel-barbershop_salao-de-cabeleireiro_157422_lisboa",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Aneel%20barbershop%20Lisboa",
+      "data": "2026-10-28"
     },
     "precos": {
       "corte": 12,
@@ -7072,7 +7107,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/3412_aneel-barbershop_salao-de-cabeleireiro_157422_lisboa"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -7085,8 +7120,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Lisboa",
     "zone": "",
-    "morada": "Rua da Glória 17, 1250-115 Lisboa",
-    "address_raw": "Rua da Glória 17, 1250-115 Lisboa",
+    "morada": "Rua da Glória 71, 1250-115 Lisboa",
+    "address_raw": "Rua da Glória 71, 1250-115 Lisboa",
     "street": "Rua da Glória",
     "street_number": "17",
     "complemento": "",
@@ -7117,7 +7152,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/barbearia1025ro"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -8476,13 +8511,13 @@ const barbearias = [
     "freguesia": "",
     "city": "Porto",
     "zone": "",
-    "morada": "Avenida do Doutor Antunes Guimarães 47, 4100-079 Porto",
-    "address_raw": "Avenida do Doutor Antunes Guimarães 47, 4100-079 Porto",
+    "morada": "Avenida do Doutor Antunes Guimarães 47, 4100-073 Porto",
+    "address_raw": "Avenida do Doutor Antunes Guimarães 47, 4100-073 Porto",
     "street": "Avenida do Doutor Antunes Guimarães",
     "street_number": "47",
     "complemento": "",
     "localidade": "Porto",
-    "codigo_postal": "4100-079",
+    "codigo_postal": "4100-073",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
@@ -8493,11 +8528,11 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Sex 9h-13h e 15h-19h30; Sáb 9h-13h e 15h-17h",
+    "horario": "Seg-Sex 9h30-13h e 15h-19h30; Sáb 9h-13h e 15h-17h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/8261781459",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Maria%20Cruz%20Barbearia%20Porto",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -8506,7 +8541,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -9504,8 +9539,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Setúbal",
     "zone": "",
-    "morada": "Rua António José Batista Loja 35, 2910-400 Setúbal",
-    "address_raw": "Rua António José Batista, Loja 35, 2910-400, Setúbal",
+    "morada": "Rua António José Baptista 35, 2910-400 Setúbal",
+    "address_raw": "Rua António José Baptista 35, 2910-400 Setúbal",
     "street": "Rua António José Batista",
     "street_number": "Loja 35",
     "complemento": "",
@@ -9521,7 +9556,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/barbearia.bueno.pt/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Qua 9h-19h; Qui 9h-20h; Sex 9h-19h; Sáb 9h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Bueno%20Set%C3%BAbal",
+      "data": "2026-10-28"
+    },
     "observacoes": "Premium",
     "coords": [
       38.531500005829365,
@@ -9531,7 +9571,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/barbearia.bueno.pt/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -9953,13 +9993,13 @@ const barbearias = [
     "freguesia": "",
     "city": "Vila Real",
     "zone": "",
-    "morada": "Rua dos Combatentes da Grande Guerra 47, 5000-635 Vila Real",
-    "address_raw": "Rua dos Combatentes da Grande Guerra 47, 5000-635 Vila Real",
+    "morada": "Rua dos Combatentes da Grande Guerra 47, 5000-651 Vila Real",
+    "address_raw": "Rua dos Combatentes da Grande Guerra 47, 5000-651 Vila Real",
     "street": "Rua dos Combatentes da Grande Guerra",
     "street_number": "47",
     "complemento": "",
     "localidade": "Vila Real",
-    "codigo_postal": "5000-635",
+    "codigo_postal": "5000-651",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
@@ -9978,7 +10018,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -10410,8 +10450,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Viseu",
     "zone": "",
-    "morada": "Rua Fernando Teixeira, Viseu",
-    "address_raw": "Rua Fernando Teixeira, Lote 31 – Abraveses, Viseu",
+    "morada": "Rua Fernando Teixeira 31, 3515-156 Viseu",
+    "address_raw": "Rua Fernando Teixeira 31, 3515-156 Viseu",
     "street": "Rua Fernando Teixeira",
     "street_number": "",
     "complemento": "",
@@ -10427,7 +10467,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/risebarbearia",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 10h30-19h; Sáb 10h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Rise%20Barbearia%20Viseu",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       40.679708,
@@ -10437,7 +10482,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/risebarbearia"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -11148,7 +11193,7 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 914 532 341",
+    "telefone": "+351 913 487 042",
     "email": null,
     "website": "https://www.fresha.com/pt/lvp/barbearia-bons-rapazes-praca-zacarias-guerreiro-tavira-vwyZMP",
     "instagram": null,
@@ -11165,7 +11210,7 @@ const barbearias = [
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT-biz/barbearia-bons-rapazes",
       "https://www.fresha.com/pt/lvp/barbearia-bons-rapazes-praca-zacarias-guerreiro-tavira-vwyZMP"
     ],
-    "ultima_validacao": "2026-04-17",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -11283,7 +11328,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Qua-Sex 10h-18h30; Sáb-Dom 10h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=S%C3%A1bio's%20Barbearia%20Portuguesa%20Tavira",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       37.1242667,
@@ -11295,7 +11345,7 @@ const barbearias = [
       "https://www.fresha.com/pt/lvp/sabios-barbearia-portuguesa-rua-da-silva-tavira-VqW82l",
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT/tavira/barbeiros/"
     ],
-    "ultima_validacao": "2026-04-17",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13219,7 +13269,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-12h e 14h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Beto%20Sernancelhe",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       40.8966594,
@@ -13229,7 +13284,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/sernancelhe/barbearia-beto/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13259,7 +13314,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 9h-12h30 e 14h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20DF15%20Vila%20Nova%20de%20Foz%20C%C3%B4a",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       41.0827876,
@@ -13269,7 +13329,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/vila-nova-de-foz-coa/barbearia-df15/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13714,7 +13774,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h30; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Oliveira%20Barbershop%20Proen%C3%A7a-a-Nova",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       39.753218,
@@ -13724,7 +13789,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/proenca-a-nova/barbearia-oliveira/"
     ],
-    "ultima_validacao": "2026-04-19",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13876,7 +13941,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 10h-13h e 14h30-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20President%20Caminha",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       41.8718351,
@@ -13886,7 +13956,7 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/pt-PT/lvp/barbearia-president-rua-fonte-da-vila-caminha-5zP5L2"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14069,8 +14139,8 @@ const barbearias = [
     "freguesia": "Vila Praia de Âncora",
     "city": "Vila Praia de Âncora",
     "zone": "",
-    "morada": "R. 31 de Janeiro 72, 4910-455 Vila Praia de Âncora",
-    "address_raw": "R. 31 de Janeiro 72, 4910-455 Vila Praia de Âncora",
+    "morada": "Rua 5 de Outubro 306A, 4910-455 Vila Praia de Âncora",
+    "address_raw": "Rua 5 de Outubro 306A, 4910-455 Vila Praia de Âncora",
     "street": "R. 31 de Janeiro",
     "street_number": "72",
     "complemento": "",
@@ -14086,17 +14156,22 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 10h-13h e 14h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Baixinho%20Barbershop%20Vila%20Praia%20de%20%C3%82ncora",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
-      41.8079064,
-      -8.8568382
+      41.8194578,
+      -8.8687349
     ],
     "status": "confirmado",
     "fontes": [
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT-biz/baixinho-barbershop"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14862,7 +14937,7 @@ const barbearias = [
       "https://www.fabius.pt/contactos.html",
       "https://www.codigo-postal.pt/oeiras/rua-actor-antonio-sacramento/"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
