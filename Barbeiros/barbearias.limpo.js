@@ -251,8 +251,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Coimbra",
     "zone": "",
-    "morada": "Rua Joaquim António de Aguiar 124",
-    "address_raw": "Rua Joaquim António de Aguiar 124",
+    "morada": "Rua Joaquim António de Aguiar 124, 3000-214 Coimbra",
+    "address_raw": "Rua Joaquim António de Aguiar 124, 3000-214 Coimbra",
     "street": "Rua Joaquim António de Aguiar",
     "street_number": "124",
     "complemento": "",
@@ -281,7 +281,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -1628,8 +1628,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Parede - Jardins da Parede",
     "zone": "",
-    "morada": "Avenida das Tílias 136, 2775-335 Parede - Jardins da Parede",
-    "address_raw": "Avenida das Tílias 136, 2775-335 Parede - Jardins da Parede",
+    "morada": "Avenida das Tílias 136C, 2775-335 Parede - Jardins da Parede",
+    "address_raw": "Avenida das Tílias 136C, 2775-335 Parede - Jardins da Parede",
     "street": "Avenida das Tílias",
     "street_number": "136",
     "complemento": "",
@@ -1645,11 +1645,11 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Sáb 10h-20h",
+    "horario": "Seg-Sex 10h-20h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/12068845622",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Men%20Concept%20Parede",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -1658,7 +1658,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1840,8 +1840,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Quinta da Redonda",
     "zone": "",
-    "morada": "Rua dos 3 Lagares Lote 1, 5000-577 Quinta da Redonda",
-    "address_raw": "Rua dos 3 Lagares Lote 1, 5000-577 Quinta da Redonda",
+    "morada": "Rua dos Três Lagares, Lote 1, R/C Loja G, 5000-577 Quinta da Redonda",
+    "address_raw": "Rua dos Três Lagares, Lote 1, R/C Loja G, 5000-577 Quinta da Redonda",
     "street": "Rua dos 3 Lagares Lote",
     "street_number": "1",
     "complemento": "",
@@ -1857,7 +1857,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-13h e 15h-19h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Valgrind%20The%20Viking%20Barber%20Tattoo%20Studio%20Vila%20Real",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       41.2998222,
@@ -1865,7 +1870,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2233,13 +2238,13 @@ const barbearias = [
     "freguesia": "",
     "city": "Tocha",
     "zone": "",
-    "morada": "Rua do Cemitério 209, 3060-655 Tocha",
-    "address_raw": "Rua do Cemitério 209, 3060-655 Tocha",
+    "morada": "Rua do Cemitério 209, 3060-586 Tocha",
+    "address_raw": "Rua do Cemitério 209, 3060-586 Tocha",
     "street": "Rua do Cemitério",
     "street_number": "209",
     "complemento": "",
     "localidade": "Tocha",
-    "codigo_postal": "3060-655",
+    "codigo_postal": "3060-586",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
@@ -2250,11 +2255,11 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/betovespabarbershop/",
     "google_maps": null,
-    "horario": "Seg-Ter 14h30-22h; Qui 14h30-22h; Sex 14h30-19h",
+    "horario": "Seg-Ter 9h-12h30 e 14h30-22h; Qua 9h-12h30 e 14h30-19h; Qui 9h-12h30 e 14h30-22h; Sex-Sáb 9h-12h30 e 14h30-19h; Dom 9h-12h30",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/way/1467269802",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Beto's%20Barber%20Shop%20%26%20Vespa%20Bar%20Tocha",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -2265,7 +2270,7 @@ const barbearias = [
     "fontes": [
       "https://www.facebook.com/betovespabarbershop/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2726,7 +2731,7 @@ const barbearias = [
     "fontes": [
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT/aljustrel/cabeleireiros/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media"
   },
@@ -3843,7 +3848,7 @@ const barbearias = [
     "fontes": [
       "https://www.facebook.com/lordjackandfriends/?locale=pt_PT"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -4488,11 +4493,11 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Ter-Sáb 9h-19h",
+    "horario": "Seg-Sáb 8h-20h30",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/10909799437",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Vitor%20Quintas%20Coimbra",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -4503,7 +4508,7 @@ const barbearias = [
     "fontes": [
       "https://iva-cabeleireiro.negocio.site/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -4645,8 +4650,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Coimbra",
     "zone": "",
-    "morada": "Rua Câmara Pestana Lote 3, 3030-163 Coimbra",
-    "address_raw": "Rua Câmara Pestana Lote 3, 3030-163 Coimbra",
+    "morada": "Rua Câmara Pestana 3, Loja 14, 3030-163 Coimbra",
+    "address_raw": "Rua Câmara Pestana 3, Loja 14, 3030-163 Coimbra",
     "street": "Rua Câmara Pestana Lote",
     "street_number": "3",
     "complemento": "",
@@ -4662,11 +4667,11 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/WingsBarbershop",
     "google_maps": null,
-    "horario": "Seg-Sex 10h-13h e 14h30-21h",
+    "horario": "Seg-Sex 10h-13h e 14h30-21h; Sáb 10h-13h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/10156178476",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Wings%20Men's%20HairShop%20Coimbra",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -4677,7 +4682,7 @@ const barbearias = [
     "fontes": [
       "https://www.facebook.com/WingsBarbershop"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5015,7 +5020,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5299,7 +5304,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 8h-14h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=CarapinhaStylus%20Barbearia%20%C3%89vora",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.5652,
@@ -5307,7 +5317,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -5425,7 +5435,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Leno%20dos%20Cortes%20%C3%89vora",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.572,
@@ -5433,7 +5448,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5640,7 +5655,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h e 15h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Eben%C3%A9zer%20Montemor-o-Novo",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.6481,
@@ -5648,7 +5668,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -6558,7 +6578,7 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 934 549 390",
     "email": null,
     "website": null,
     "instagram": "https://www.instagram.com/gomesbarbershop_monchique/",
@@ -6574,7 +6594,7 @@ const barbearias = [
     "fontes": [
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT/vila-nova-de-milfontes/barbeiros/?p=4"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media"
   },
@@ -9074,7 +9094,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 10h-19h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Fuzeiro%20Tomar",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       39.6062,
@@ -9082,7 +9107,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -10656,7 +10681,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/2186_barbearia-faialense_barberaria_53709_horta"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -10992,13 +11017,13 @@ const barbearias = [
     "freguesia": "",
     "city": "Funchal",
     "zone": "",
-    "morada": "Rua da Casa Branca 53, 9000-113 Funchal",
-    "address_raw": "Rua da Casa Branca 53, 9000-113 Funchal",
+    "morada": "Rua da Casa Branca 53, 9060-343 Funchal",
+    "address_raw": "Rua da Casa Branca 53, 9060-343 Funchal",
     "street": "Rua da Casa Branca",
     "street_number": "53",
     "complemento": "",
     "localidade": "Funchal",
-    "codigo_postal": "9000-113",
+    "codigo_postal": "9060-343",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
@@ -11017,7 +11042,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -11150,7 +11175,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/the.undergroundbarbershop/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-19h; Sáb 10h-15h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=The%20Underground%20Barbershop%20Funchal",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       32.6515492,
@@ -11160,7 +11190,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/the.undergroundbarbershop/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -11511,7 +11541,7 @@ const barbearias = [
       "https://www.fresha.com/lvp/barbearia-tavares-rua-poeta-emiliano-da-costa-tavira-3oLLvL",
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT/tavira/barbeiros/"
     ],
-    "ultima_validacao": "2026-04-17",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13348,7 +13378,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 8h30-12h e 14h-19h; Sáb 8h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=O%20Barbeiro%20Moimenta%20da%20Beira",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       40.979964,
@@ -13359,7 +13394,7 @@ const barbearias = [
       "https://guiaempresas.pt/barbearia/moimenta-da-beira/o-barbeiro/",
       "https://www.openstreetmap.org/way/145464824"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13699,7 +13734,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-14h e 15h-20h; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=BarBearia%20Marmousets%20Lous%C3%A3",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       40.110931,
@@ -13709,7 +13749,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/lousa/barbearia-marmousets/"
     ],
-    "ultima_validacao": "2026-04-19",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13834,7 +13874,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/serta/barbearia-papillon/"
     ],
-    "ultima_validacao": "2026-04-19",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13847,13 +13887,13 @@ const barbearias = [
     "freguesia": "",
     "city": "Sertã",
     "zone": "",
-    "morada": "R. Sertório 13, 6100-746 Sertã",
-    "address_raw": "R. Sertório 13, 6100-746 Sertã",
+    "morada": "Rua Proença-a-Nova 19A, 6100-751 Sertã",
+    "address_raw": "Rua Proença-a-Nova 19A, 6100-751 Sertã",
     "street": "R. Sertório",
     "street_number": "13",
     "complemento": "",
     "localidade": "Sertã",
-    "codigo_postal": "6100-746",
+    "codigo_postal": "6100-751",
     "country": "Portugal",
     "data_confidence": "medium",
     "needs_review": false,
@@ -13864,17 +13904,22 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h e 14h30-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Sal%C3%A3o%20Central%20Frank%20Sert%C3%A3",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
-      39.8055189,
-      -8.1001034
+      39.798801,
+      -8.091189
     ],
     "status": "confirmado",
     "fontes": [
       "https://guiaempresas.pt/barbearia/serta/barbearia-salao-central-frank/"
     ],
-    "ultima_validacao": "2026-04-19",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13904,7 +13949,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 15h-20h; Sáb 10h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20S%C3%A3o%20Jos%C3%A9%20Sert%C3%A3",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       39.8116039,
@@ -13914,7 +13964,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/serta/barbearia-sao-jose/"
     ],
-    "ultima_validacao": "2026-04-19",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14044,7 +14094,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg 14h-19h; Ter-Sex 9h-19h; Sáb 9h-15h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Tony%20barbeiro%20Proen%C3%A7a-a-Nova",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       39.7499795,
@@ -14054,7 +14109,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/proenca-a-nova/tony/"
     ],
-    "ultima_validacao": "2026-04-19",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14487,7 +14542,7 @@ const barbearias = [
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT/paredes-de-coura/cabeleireiros/",
       "https://www.codigos-postal.com/viana-do-castelo/paredes-de-coura/paredes-de-coura/largo-hintz-ribeiro/"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -15013,7 +15068,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-12h30 e 14h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20da%20Vila%20Vila%20Nova%20de%20Cerveira",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       41.9419349,
@@ -15023,7 +15083,7 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/lvp/barbearia-da-vila-travessa-do-forte-vila-nova-de-cerveira-zXDVR4"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
