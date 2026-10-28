@@ -1962,7 +1962,7 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="oc-style.css?v=20261026-localidades" />
+  <link rel="stylesheet" href="oc-style.css?v=20261028-ver-no-mapa" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -8118,10 +8118,11 @@
               if (zoom >= 13) return 20;
               return window.innerWidth <= 860 ? 44 : 48;
             },
-            // Leque para barbearias no mesmo ponto (ex.: vizinhas na mesma rua): linhas douradas
-            // finas em vez das pretas por omissão, e mais afastadas por causa dos marcadores de 26px.
+            // Leque para barbearias no mesmo ponto (ex.: vizinhas na mesma rua): mais afastadas por
+            // causa dos marcadores de 26px e sem as linhas até ao centro (2026-10-28: pareciam um
+            // traço a ligar duas barbearias).
             spiderfyDistanceMultiplier: 1.5,
-            spiderLegPolylineOptions: { weight: 1.5, color: "#a6772d", opacity: 0.9 },
+            spiderLegPolylineOptions: { weight: 0, opacity: 0 },
             iconCreateFunction: function(cluster) {
               const count = cluster.getChildCount();
               const small = window.innerWidth <= 860;
@@ -9272,7 +9273,9 @@
                 '<div class="result-actions">' +
                   '<a class="btn btn-secondary btn-small" href="' + barber.url + '">Ver perfil</a>' +
                   renderContactAction(barber, "btn btn-primary btn-small") +
-                  '<button class="btn btn-soft btn-small" type="button" data-focus-marker="' + barber.slug + '">Ver no mapa</button>' +
+                  '<button class="btn btn-soft btn-small btn-map" type="button" data-focus-marker="' + barber.slug + '">' +
+                    '<svg class="btn-map-icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>' +
+                    'Ver no mapa</button>' +
                 "</div>" +
               "</div>" +
             "</article>"

@@ -1486,3 +1486,17 @@ h1 em, h2 em, .dir-headline em, .cities-headline em, .owner-cta-headline em, h1 
   font-family: 'Geist Mono', ui-monospace, monospace; font-size: 9px; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.3;
 }
+
+/* ══ "Ver no mapa" em âmbar (2026-10-28): o mapa é o motor do diretório ══
+   Antes era um terciário cinzento e parecia desativado. Contorno e texto âmbar
+   (como o botão Procurar), fundo âmbar suave; ao passar, fica cheio. */
+.result-actions .btn-map {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(200,135,58,.14) !important; color: #F0B978 !important;
+  border: 1px solid #C8873A !important; font-weight: 600;
+}
+.result-actions .btn-map:hover,
+.result-actions .btn-map:focus-visible {
+  background: #C8873A !important; color: #17130D !important; border-color: #C8873A !important;
+}
+.result-actions .btn-map .btn-map-icon { flex: none; }
