@@ -134,7 +134,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -448,8 +448,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Aveiro",
     "zone": "",
-    "morada": "Rua Manuel Barbuda e Vasconcelos 1",
-    "address_raw": "Rua Manuel Barbuda e Vasconcelos 1",
+    "morada": "Rua Dom Manuel Barbuda e Vasconcelos 1, 3810-498 Aveiro",
+    "address_raw": "Rua Dom Manuel Barbuda e Vasconcelos 1, 3810-498 Aveiro",
     "street": "Rua Manuel Barbuda e Vasconcelos",
     "street_number": "1",
     "complemento": "",
@@ -459,18 +459,18 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 234 423 468",
+    "telefone": "+351 911 772 480",
     "email": null,
     "website": "https://championsbarbershop.pt/",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
     "booking": "https://championsbarbershop.pt/marcacao/",
-    "horario": "Seg-Qui 9h-22h; Sex-Sáb 9h-23h",
+    "horario": "Seg-Qui 9h-21h; Sex-Sáb 9h-22h; Dom 9h-21h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/12613153141",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Champions%20Barber%20Shop%20Aveiro",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -481,7 +481,7 @@ const barbearias = [
     "fontes": [
       "https://championsbarbershop.pt/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -2180,7 +2180,7 @@ const barbearias = [
     "fontes": [
       "https://buk.pt/barbearia-couto"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2717,7 +2717,7 @@ const barbearias = [
     "fontes": [
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT/castro-verde/cabeleireiros/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -3209,8 +3209,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Fafe",
     "zone": "",
-    "morada": "Rua Ponte do Ranha, Fafe",
-    "address_raw": "Rua Ponte do Ranha, nº 298, Fafe",
+    "morada": "Rua Ponte do Ranha 298, 4820-201 Fafe",
+    "address_raw": "Rua Ponte do Ranha, nº 298, 4820-201 Fafe",
     "street": "Rua Ponte do Ranha",
     "street_number": "",
     "complemento": "",
@@ -3241,7 +3241,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/barbearia_fafense/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -3478,7 +3478,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/newvision_barbershop/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -3979,8 +3979,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Covilhã",
     "zone": "",
-    "morada": "Rua Centro de Artes Lote 7, 6200-505 Covilhã",
-    "address_raw": "Rua Centro de Artes Lote 7, 6200-505 Covilhã",
+    "morada": "Rua Centro de Artes 5, r/c Loja D, 6200-505 Covilhã",
+    "address_raw": "Rua Centro de Artes 5, r/c Loja D, 6200-505 Covilhã",
     "street": "Rua Centro de Artes Lote",
     "street_number": "7",
     "complemento": "",
@@ -3996,11 +3996,11 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Sex 9h-19h; Sáb 9h-17h",
+    "horario": "Seg-Sex 9h-20h; Sáb 9h-18h; Dom 10h-17h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/11993162247",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Bronk's%20Barber%20Shop%20Covilh%C3%A3",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -4009,7 +4009,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -4312,7 +4312,7 @@ const barbearias = [
     "fontes": [
       "https://facebook.com/people/Barbearia-Lorde/100090125014058"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -4819,7 +4819,7 @@ const barbearias = [
       "https://www.instagram.com/20agecuts/",
       "https://www.facebook.com/20agecutsevora/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5222,7 +5222,7 @@ const barbearias = [
     "fontes": [
       "https://cortesdelisboa.pt/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5824,7 +5824,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Rua%C3%A7a%20Barbershop%20Albufeira",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       37.0891,
@@ -5834,7 +5839,7 @@ const barbearias = [
     "fontes": [
       "https://xn--ruaa-barbershop-gmb.pt/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5874,7 +5879,7 @@ const barbearias = [
     "fontes": [
       "https://1920barbershop.pt/a-1920-barbershop/faro-forum-algarve/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -6511,13 +6516,13 @@ const barbearias = [
     "freguesia": "",
     "city": "Leiria",
     "zone": "",
-    "morada": "Largo Marechal Gomes da Costa 38, 2400-148 Leiria",
-    "address_raw": "Largo Marechal Gomes da Costa 38, 2400-148 Leiria",
+    "morada": "Largo Marechal Gomes da Costa 38, 2400-097 Leiria",
+    "address_raw": "Largo Marechal Gomes da Costa 38, 2400-097 Leiria",
     "street": "Largo Marechal Gomes da Costa",
     "street_number": "38",
     "complemento": "",
     "localidade": "Leiria",
-    "codigo_postal": "2400-148",
+    "codigo_postal": "2400-097",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
@@ -6554,7 +6559,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/3362_barba-negra-leiria_barbearia_141679_leiria"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -7185,8 +7190,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Lisboa",
     "zone": "",
-    "morada": "R. Cervantes 2, 1000-095 Lisboa",
-    "address_raw": "R. Cervantes 2, 1000-095 Lisboa",
+    "morada": "R. Cervantes 2B, 1000-095 Lisboa",
+    "address_raw": "R. Cervantes 2B, 1000-095 Lisboa",
     "street": "R. Cervantes",
     "street_number": "2",
     "complemento": "",
@@ -7216,7 +7221,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -7434,7 +7439,7 @@ const barbearias = [
     "fontes": [
       "https://facebook.com/bentobarbearias/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -8172,7 +8177,7 @@ const barbearias = [
     "data_confidence": "medium",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 245 094 420",
+    "telefone": "+351 245 092 494",
     "email": null,
     "website": "https://client.tuaagenda.com/c/MAGOTTOBARBEARIA",
     "instagram": null,
@@ -8191,7 +8196,7 @@ const barbearias = [
     "fontes": [
       "https://client.tuaagenda.com/c/MAGOTTOBARBEARIA"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -8353,8 +8358,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Porto",
     "zone": "",
-    "morada": "Rua de Oliveira Monteiro, 4050-072 Porto",
-    "address_raw": "Rua de Oliveira Monteiro, 4050-072 Porto",
+    "morada": "Rua de Oliveira Monteiro 214, 4050-072 Porto",
+    "address_raw": "Rua de Oliveira Monteiro 214, 4050-072 Porto",
     "street": "Rua de Oliveira Monteiro",
     "street_number": "",
     "complemento": "",
@@ -8370,11 +8375,11 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Sex 10h-20h",
+    "horario": "Ter-Sex 10h-13h e 14h-20h; Sáb 10h-13h e 14h-18h30",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/way/1408179600",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20e%20Tattoo%20Asgard%20Porto",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -8383,7 +8388,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -9054,7 +9059,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/154702_junqueiro"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -10243,11 +10248,11 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Dom 9h-20h",
+    "horario": "Seg 9h-20h; Ter 10h-20h; Qua-Dom 9h-20h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/12514065383",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Resende%20Viseu",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -10256,7 +10261,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -10963,7 +10968,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h e 14h30-19h30; Sáb 9h-14h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Malveiro%20Serpa",
+      "data": "2026-10-28"
+    },
     "precos": {
       "corte": 7,
       "barba": 8,
@@ -10984,7 +10994,7 @@ const barbearias = [
       "https://bussola-pt.com/36764/barbearia-malveiro",
       "https://buk.pt/barbeariamalveiro/"
     ],
-    "ultima_validacao": "2026-04-17",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -11455,7 +11465,7 @@ const barbearias = [
       "https://www.fresha.com/lvp/barbers-tattoo-mg-rua-da-praia-monte-gordo-7xvAlX",
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT/monte-gordo/barbeiros/"
     ],
-    "ultima_validacao": "2026-04-17",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -11912,7 +11922,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/beja/the-barber-king/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -12562,7 +12572,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/portalegre/barbearia-lamina-fina/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -12647,7 +12657,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/vila-real/barbearia-cigarro/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -12692,7 +12702,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/vila-real/barbearia-da-praca/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -12756,7 +12766,7 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 232 435 664",
+    "telefone": "+351 962 026 438",
     "email": null,
     "website": null,
     "instagram": null,
@@ -12778,7 +12788,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/viseu/barbearia-da-se/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13671,7 +13681,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/ansiao/barbearia-marques/"
     ],
-    "ultima_validacao": "2026-04-19",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14660,7 +14670,7 @@ const barbearias = [
       "https://xbcabeleireirosbarbearias.com/barbearia-sintra/",
       "https://www.cttcodigopostal.pt/lisboa/sintra/casal-de-cambra/981403/"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14832,7 +14842,7 @@ const barbearias = [
       "https://vascoleitaobarbearia.com/",
       "https://www.codigo-postal.pt/4460-388/"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
