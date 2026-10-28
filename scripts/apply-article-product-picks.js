@@ -50,9 +50,9 @@ const PICKS = {
     title: "O que usar para cortar em casa",
     items: [
       ["philips-hc5630-series-5000", "Melhor no geral", "28 comprimentos (0,5–28 mm) numa roda: desces meio número sem trocar de pente."],
+      ["wahl-rapid-clip", "Para cortar sozinho", "Sem fio, até 120 minutos: roda na nuca sem o cabo a prender. 10 pentes de 3 a 28 mm."],
       ["remington-colourcut-hc5035", "Para o primeiro corte", "9 pentes coloridos de 1,5 a 25 mm, para não confundir o 2 com o 3."],
-      ["ecence-capa-corte", "Capa", "Impermeável e fácil de limpar depois de cada corte."],
-      ["wahl-clipper-oil", "Manutenção", "Óleo para lubrificar a lâmina no fim, como no último passo deste guia."]
+      ["ecence-capa-corte", "Capa", "Impermeável e fácil de limpar depois de cada corte."]
     ]
   },
   "numeros-da-maquina-de-cortar-cabelo": {
