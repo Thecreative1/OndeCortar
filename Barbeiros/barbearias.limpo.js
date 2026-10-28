@@ -1150,7 +1150,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -1549,8 +1549,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Odivelas",
     "zone": "",
-    "morada": "Rua Guilherme Gomes Fernandes 81, B, Odivelas",
-    "address_raw": "Rua Guilherme Gomes Fernandes 81 B, 2675 Odivelas",
+    "morada": "Rua Combatentes da Grande Guerra 11A, 2675-322 Odivelas",
+    "address_raw": "Rua Combatentes da Grande Guerra 11A, 2675-322 Odivelas",
     "street": "Rua Guilherme Gomes Fernandes",
     "street_number": "81",
     "complemento": "B",
@@ -1560,28 +1560,28 @@ const barbearias = [
     "data_confidence": "medium",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 918 242 400",
+    "telefone": "+351 216 084 712",
     "email": null,
     "website": null,
     "instagram": null,
     "facebook": "https://www.facebook.com/cabeleireirocarlosvaz/timeline",
     "google_maps": null,
-    "horario": "Seg-Sex 9h-12h45 e 15h-20h; Sáb 8h-14h",
+    "horario": "Seg-Sex 9h-13h e 14h-19h; Sáb 8h30-13h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/3509894001",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Carlos%20Vaz%20Odivelas",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
-      38.7907065,
-      -9.1810906
+      38.7929051,
+      -9.1833656
     ],
     "status": "confirmado",
     "fontes": [
       "https://www.facebook.com/cabeleireirocarlosvaz/timeline"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -2541,7 +2541,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 9h30-19h; Sáb 9h-15h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=O%20Barbeiro%20Rua%20Serpa%20Pinto%20Moura",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.1408,
@@ -2549,7 +2554,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -3301,8 +3306,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Guimarães",
     "zone": "",
-    "morada": "GuimarãeShopping, Guimarães",
-    "address_raw": "GuimarãeShopping, Guimarães",
+    "morada": "GuimarãeShopping, Alameda Dr. Mariano Felgueiras, Loja 206, 4805-075 Guimarães",
+    "address_raw": "GuimarãeShopping, Alameda Dr. Mariano Felgueiras, Loja 206, 4805-075 Guimarães",
     "street": "GuimarãeShopping",
     "street_number": "",
     "complemento": "",
@@ -3312,13 +3317,18 @@ const barbearias = [
     "data_confidence": "medium",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 253 079 753",
     "email": null,
     "website": "https://www.guimaraeshopping.pt/lojas/1920-barber-shop/",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Qui 10h-22h; Sex-Sáb 10h-23h; Dom 10h-22h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=1920%20BarberShop%20Guimar%C3%A3es",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       41.4375,
@@ -3328,7 +3338,7 @@ const barbearias = [
     "fontes": [
       "https://www.guimaraeshopping.pt/lojas/1920-barber-shop/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -3591,13 +3601,18 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 938 945 973",
     "email": null,
     "website": "https://booksy.com/pt-pt/1028_danniel-sampaio-barbearia_barbearia_93020_vila-nova-de-famalicao",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Qua 10h-20h; Qui 10h-23h30; Sex 10h-20h; Sáb 9h-17h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Danniel%20Sampaio%20Barbearia%20Vila%20Nova%20de%20Famalic%C3%A3o",
+      "data": "2026-10-28"
+    },
     "precos": {
       "corte": 8,
       "barba": 6,
@@ -3617,7 +3632,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/madeixas"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -4416,13 +4431,13 @@ const barbearias = [
     "freguesia": "",
     "city": "Coimbra",
     "zone": "",
-    "morada": "Rua Carlos Seixas 187, 3030-177 Coimbra",
-    "address_raw": "Rua Carlos Seixas 187, 3030-177 Coimbra",
+    "morada": "Rua Antero de Quental 263, Piso 6, Loja 603, 3004-544 Coimbra",
+    "address_raw": "Rua Antero de Quental 263, Piso 6, Loja 603, 3004-544 Coimbra",
     "street": "Rua Carlos Seixas",
     "street_number": "187",
     "complemento": "",
     "localidade": "Coimbra",
-    "codigo_postal": "3030-177",
+    "codigo_postal": "3004-544",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
@@ -4433,15 +4448,20 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 9h-13h e 14h30-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Gon%C3%A7alo%20Santos%20Barber%20Shop%20Coimbra",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
-      40.1945473,
-      -8.4173011
+      40.2120648,
+      -8.4231023
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5084,11 +5104,11 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/nunoperdigaobarber/",
     "google_maps": null,
-    "horario": "Seg-Sex 9h-19h20; Sáb 9h-14h",
+    "horario": "Seg-Qui 9h-13h e 14h-19h; Sex-Sáb 9h-13h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/4754786431",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbeiro%20Nuno%20Perdig%C3%A3o%20%C3%89vora",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -5099,7 +5119,7 @@ const barbearias = [
     "fontes": [
       "https://www.facebook.com/nunoperdigaobarber/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -6162,7 +6182,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg 10h-19h30; Ter-Qui 9h-19h; Sex 9h-18h; Sáb 9h-16h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Alfa%20Excellence%20Premium%20Barbershop%20Lagos",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       37.1058363,
@@ -6172,7 +6197,7 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/lp/en/bt/barbershops/in/pt-rural-faro-district/lagos"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -6572,24 +6597,29 @@ const barbearias = [
     "freguesia": "",
     "city": "Leiria",
     "zone": "",
-    "morada": "Avenida Nossa Senhora de Fátima 62, 2414-140 Leiria",
-    "address_raw": "Avenida Nossa Senhora de Fátima 62, 2414-140 Leiria",
+    "morada": "Avenida Nossa Senhora de Fátima 46, 2410-140 Leiria",
+    "address_raw": "Avenida Nossa Senhora de Fátima 46, 2410-140 Leiria",
     "street": "Avenida Nossa Senhora de Fátima",
     "street_number": "62",
     "complemento": "",
     "localidade": "Leiria",
-    "codigo_postal": "2414-140",
+    "codigo_postal": "2410-140",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 244 856 299",
+    "telefone": "+351 912 718 845",
     "email": "ofbrothers13@gmail.com",
     "website": "https://ofbrothers13.wixsite.com/barbeariaofbrothers",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-20h; Sáb 10h-18h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20of%20Brothers%20Leiria",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       39.7402837,
@@ -6599,7 +6629,7 @@ const barbearias = [
     "fontes": [
       "https://ofbrothers13.wixsite.com/barbeariaofbrothers"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -6893,13 +6923,18 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 215 871 573",
+    "telefone": "+351 924 362 215",
     "email": null,
     "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h e 14h30-20h; Sáb 8h-14h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Ricky%20Barber%20Shop%20Amadora",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.7556198,
@@ -6907,7 +6942,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -7164,11 +7199,11 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Sex 9h-14h e 16h-19h; Sáb 9h-13h",
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-13h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/10799677329",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Cabeleireiro%20de%20Homens%20Nova%20Lisboa%20Avenida%20da%20Igreja",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -7177,7 +7212,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -7320,8 +7355,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Lisboa",
     "zone": "",
-    "morada": "Rua da Indústria 50B, Lisboa",
-    "address_raw": "Rua da Indústria 50B, 1300 Lisboa",
+    "morada": "Rua da Indústria 50B, 1300-302 Lisboa",
+    "address_raw": "Rua da Indústria 50B, 1300-302 Lisboa",
     "street": "Rua da Indústria",
     "street_number": "50B",
     "complemento": "",
@@ -7331,17 +7366,17 @@ const barbearias = [
     "data_confidence": "medium",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 213 640 185",
     "email": null,
     "website": null,
     "instagram": null,
     "facebook": "https://www.facebook.com/BarbeariaZeNunesalcantara/",
     "google_maps": null,
-    "horario": "Seg-Sex 9h30-19h30; Sáb 9h-19h",
+    "horario": "Seg 7h-19h30; Ter-Sex 7h-18h; Sáb 7h-17h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/4959910330",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Z%C3%A9%20Nunes%20Lisboa",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -7352,7 +7387,7 @@ const barbearias = [
     "fontes": [
       "https://www.facebook.com/BarbeariaZeNunesalcantara/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -7872,8 +7907,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Lisboa",
     "zone": "",
-    "morada": "Travessa da Boa Hora à Ajuda 33, A, 1300-102 Lisboa",
-    "address_raw": "Travessa da Boa Hora à Ajuda 33 A, 1300-102 Lisboa",
+    "morada": "Travessa da Boa Hora à Ajuda 33A, 1300-102 Lisboa",
+    "address_raw": "Travessa da Boa Hora à Ajuda 33A, 1300-102 Lisboa",
     "street": "Travessa da Boa Hora à Ajuda",
     "street_number": "33",
     "complemento": "A",
@@ -7889,11 +7924,11 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Sex 9h-19h; Sáb 9h-14h",
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-16h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/8694195638",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Ricardu's%20Barber%20Shop%20Lisboa",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -7902,7 +7937,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -8226,7 +8261,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/kortejbbarbershop/",
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg a Sab, 09:00 às 20:00",
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Korte%20JB%20Barbershop%20Lousada",
+      "data": "2026-10-28"
+    },
     "observacoes": "Atendimento por ordem de chegada.",
     "coords": [
       41.2778327,
@@ -8236,7 +8276,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/kortejbbarbershop/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -8674,7 +8714,7 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 914 336 403",
     "email": null,
     "website": "https://booksy.com/pt-pt/5788_studio-mao-de-ouro_barbearia_221774_vila-nova-de-gaia",
     "instagram": "https://www.instagram.com/studio_maodeouro01/",
@@ -8705,7 +8745,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/221774_vila-nova-de-gaia"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -9264,7 +9304,7 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 962 248 966",
     "email": null,
     "website": "https://www.fresha.com/pt/lvp/cannon-barber-rua-cidade-de-ponta-delgada-montijo-vwyvnY",
     "instagram": null,
@@ -9285,7 +9325,7 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/pt/lvp/cannon-barber-rua-cidade-de-ponta-delgada-montijo-vwyvnY"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -9745,8 +9785,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Viana do Castelo",
     "zone": "",
-    "morada": "Rua Rodrigo da Fontinha 6, Viana do Castelo",
-    "address_raw": "Rua Rodrigo da Fontinha 6, Viana do Castelo",
+    "morada": "Rua Rodrigo da Fontinha 6, 4900-420 Viana do Castelo",
+    "address_raw": "Rua Rodrigo da Fontinha 6, 4900-420 Viana do Castelo",
     "street": "Rua Rodrigo da Fontinha",
     "street_number": "6",
     "complemento": "",
@@ -9762,7 +9802,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/barbershowviana/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-20h; Sáb 8h-14h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barber%20Show%20Viana",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       41.6955,
@@ -9772,7 +9817,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/barbershowviana/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -10786,13 +10831,18 @@ const barbearias = [
     "data_confidence": "medium",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 913 770 545",
+    "telefone": "+351 291 601 084",
     "email": "geral@oldskull.pt",
     "website": null,
     "instagram": "https://www.instagram.com/oldskullbarbershopp/",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sáb 10h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Old%20Skull%20BarberShop%20Funchal",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       32.6480989,
@@ -10802,7 +10852,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/oldskullbarbershopp/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -10826,7 +10876,7 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 939 135 742",
     "email": null,
     "website": "https://booksy.com/pt-pt/6264_pro-style-barber-shop_barbearia_185116_funchal",
     "instagram": null,
@@ -10857,7 +10907,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/6264_pro-style-barber-shop_barbearia_185116_funchal"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -12272,7 +12322,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h e 14h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=J%20BarberShop%20Fund%C3%A3o",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       40.1477349,
@@ -12282,7 +12337,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/fundao/j-barbershop/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -12898,7 +12953,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter 9h-19h; Qua 9h30-12h e 14h-19h; Qui-Sex 9h-19h; Sáb 9h-17h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20da%20Vila%20Moimenta%20da%20Beira",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       40.9812483,
@@ -12908,7 +12968,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/moimenta-da-beira/barbearia-da-vila/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14163,7 +14223,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-12h30 e 14h30-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Black%20Diamond%20Barber%20Shop%20Melga%C3%A7o",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       42.1121261,
@@ -14173,7 +14238,7 @@ const barbearias = [
     "fontes": [
       "https://fr.cybo.com/PT/melga%C3%A7o-%28portugal%29/salons-de-coiffure/"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14480,35 +14545,40 @@ const barbearias = [
     "freguesia": "União das Freguesias de Valença, Cristelo Covo e Arão",
     "city": "Valença",
     "zone": "",
-    "morada": "Centro Comercial Europa, Av. Sá Carneiro loja 42, 4930-587 Valença",
-    "address_raw": "Centro Comercial Europa, Av. Sá Carneiro loja 42, 4930-587 Valença",
+    "morada": "Centro Comercial Farruco, Avenida Miguel Dantas, 4930-678 Valença",
+    "address_raw": "Centro Comercial Farruco, Avenida Miguel Dantas, 4930-678 Valença",
     "street": "Av. Sá Carneiro",
     "street_number": "",
     "complemento": "Centro Comercial Europa, loja 42",
     "localidade": "Valença",
-    "codigo_postal": "4930-587",
+    "codigo_postal": "4930-678",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 934 507 990",
+    "telefone": "+351 910 035 534",
     "email": null,
     "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-18h; Dom 9h-14h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Imperial%20Barbershop%20Valen%C3%A7a",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
-      42.0227132,
-      -8.6459121
+      42.0262857,
+      -8.6420993
     ],
     "status": "confirmado",
     "fontes": [
       "https://www.fresha.com/es/lvp/barbearia-imperial-barbershop-valenca-avenida-sa-carneiro-valenca-k9PxLo",
       "https://www.codigos-postal.com/viana-do-castelo/valenca/valenca/avenida-sa-carneiro/"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14578,7 +14648,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/958062377590099",
     "google_maps": null,
-    "horario": "Seg-Sex 9h-13h e 15h-20h; Sáb 8h30-19h",
+    "horario": "Seg-Sex 9h-13h e 15h-20h; Sáb 8h30-13h e 15h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Montecarlo%20Maia",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       41.14789,
@@ -14589,7 +14664,7 @@ const barbearias = [
       "https://www.beautynailhairsalons.com/PT/Maia/958062377590099/Barbearia-Montecarlo-porto-maia",
       "https://portugal.worldplaces.me/view-place/52237734-barbearia-montecarlo-porto-maia.html"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14965,7 +15040,7 @@ const barbearias = [
       "https://barbeariaaveirense.com/",
       "https://www.codigo-postal.pt/3800-161/"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
