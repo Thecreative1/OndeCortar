@@ -203,8 +203,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Coimbra",
     "zone": "",
-    "morada": "Rua Direita 86",
-    "address_raw": "Rua Direita 86",
+    "morada": "Rua João Cabreira 4, 3000-142 Coimbra",
+    "address_raw": "Rua João Cabreira 4, 3000-142 Coimbra",
     "street": "Rua Direita",
     "street_number": "86",
     "complemento": "",
@@ -233,7 +233,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -379,7 +379,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -1200,11 +1200,11 @@ const barbearias = [
     "instagram": "https://www.instagram.com/barbeariadogui2022/",
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Sáb 9h-20h",
+    "horario": "Seg-Sáb 10h-20h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/9567397213",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20do%20Gui%20Bucelas",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -1215,7 +1215,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/barbeariadogui2022/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2897,7 +2897,7 @@ const barbearias = [
     "fontes": [
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT/castro-verde/cabeleireiros/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -3232,17 +3232,17 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 912 074 936",
     "email": null,
     "website": "https://booksy.com/pt-pt/5705_m2-barbearia_barbearia_82575_braga",
     "instagram": "https://www.instagram.com/m2_barbearia/",
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Sex 10h-19h; Sáb 9h-19h",
+    "horario": "Seg-Sáb 9h-19h",
     "horario_fonte": {
-      "nome": "Booksy",
-      "url": "https://booksy.com/pt-pt/5705_m2-barbearia_barbearia_82575_braga",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=M2%20Barbearia%20Braga",
+      "data": "2026-10-28"
     },
     "precos": {
       "corte": 13,
@@ -3263,7 +3263,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/82575_braga"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -3873,11 +3873,11 @@ const barbearias = [
     "instagram": "https://www.instagram.com/pluma_barbershop",
     "facebook": "https://www.facebook.com/TattooeBarberShop/",
     "google_maps": null,
-    "horario": "Seg-Ter 9h-13h e 15h-19h; Qui-Sáb 9h-13h e 15h-19h",
+    "horario": "Seg-Ter 9h-19h; Qui-Sáb 9h-19h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/13278054770",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Pluma%20Barber%20Shop%20Vila%20Nova%20de%20Famalic%C3%A3o",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -3890,7 +3890,7 @@ const barbearias = [
       "https://www.instagram.com/pluma_barbershop",
       "https://www.facebook.com/TattooeBarberShop/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5382,7 +5382,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=DM%20Cuts%20%C3%89vora",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.5683,
@@ -5390,7 +5395,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -6127,7 +6132,7 @@ const barbearias = [
     "fontes": [
       "https://www.facebook.com/s.barbaearia/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -6169,7 +6174,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -6514,7 +6519,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/barbearia.chula/",
     "facebook": "https://www.facebook.com/142112993147324/",
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Chula%20Monchique",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       37.3153317,
@@ -6524,7 +6534,7 @@ const barbearias = [
     "fontes": [
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT/vila-nova-de-milfontes/barbeiros/?p=3"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -7794,8 +7804,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Lisboa",
     "zone": "",
-    "morada": "Rua Ernesto da Silva 10, 1500-267 Lisboa",
-    "address_raw": "Rua Ernesto da Silva 10, 1500-267 Lisboa",
+    "morada": "Rua Ernesto da Silva 10A, 1500-267 Lisboa",
+    "address_raw": "Rua Ernesto da Silva 10A, 1500-267 Lisboa",
     "street": "Rua Ernesto da Silva",
     "street_number": "10",
     "complemento": "",
@@ -7805,13 +7815,18 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 211 391 566",
+    "telefone": "+351 964 178 141",
     "email": null,
     "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-20h; Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barber%20shop%20Cristiano%20Lisboa",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.7514723,
@@ -7819,7 +7834,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -8855,7 +8870,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/studiogenese.pt"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -11853,7 +11868,7 @@ const barbearias = [
       "https://www.fresha.com/lvp/barbearia-manuel-rua-francisco-sa-carneiro-vila-real-de-santo-antonio-JyreR3",
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT/vila-real-de-santo-ant%C3%B3nio-%28freguesia%29/barbeiros/"
     ],
-    "ultima_validacao": "2026-04-17",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -11974,7 +11989,12 @@ const barbearias = [
     "instagram": "https://instagram.com/micaelrua_barbeiro",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 10h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbershop%20by%20Micael%20Rua%20Vila%20Real%20de%20Santo%20Ant%C3%B3nio",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       37.1964587,
@@ -11984,7 +12004,7 @@ const barbearias = [
     "fontes": [
       "https://www.cybo.com/PT/vila-real-de-santo-ant%C3%B3nio-%28parish%29/barbers/"
     ],
-    "ultima_validacao": "2026-04-17",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -12140,7 +12160,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-21h; Sáb 9h-14h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=H.B.%20Barber%20Shop%20Beja",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.0150307,
@@ -12150,7 +12175,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/beja/h-b-barber-shop/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13347,13 +13372,13 @@ const barbearias = [
     "freguesia": "",
     "city": "Pinhel",
     "zone": "",
-    "morada": "Av. Carneiro de Gusmão 6400, 6400-302 Pinhel",
-    "address_raw": "Av. Carneiro de Gusmão 6400, 6400-302 Pinhel",
+    "morada": "Avenida Gago Coutinho, 6400-467 Pinhel",
+    "address_raw": "Avenida Gago Coutinho, 6400-467 Pinhel",
     "street": "Av. Carneiro de Gusmão",
     "street_number": "6400",
     "complemento": "",
     "localidade": "Pinhel",
-    "codigo_postal": "6400-302",
+    "codigo_postal": "6400-467",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
@@ -13364,17 +13389,22 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Maxuxos%20Place%20Pinhel",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
-      40.7731003,
-      -7.0689226
+      40.7725183,
+      -7.0754044
     ],
     "status": "confirmado",
     "fontes": [
       "https://guiaempresas.pt/barbearia/pinhel/maxuxos-place/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14106,7 +14136,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/ansiao/barbearia-senhora-da-guia/"
     ],
-    "ultima_validacao": "2026-04-19",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14487,7 +14517,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg 9h-12h30; Ter-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Brito%20Paredes%20de%20Coura",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       41.9124127,
@@ -14497,7 +14532,7 @@ const barbearias = [
     "fontes": [
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT-biz/barbearia-brito"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14801,7 +14836,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg 14h-20h; Ter-Sáb 9h-12h e 14h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Mon%C3%A7%C3%A3o%20Barbershop",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       42.0734786,
@@ -14811,7 +14851,7 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/pt/lvp/moncaobarbershop-rua-sao-juliao-moncao-P2yelV"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -15187,7 +15227,12 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/104011408427803",
     "google_maps": null,
-    "horario": "Seg-Sáb 9h-20h; pausa 13h-15h",
+    "horario": "Seg-Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Berto%20Barber%20Studio%20Fern%C3%A3o%20Ferro",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.566041,
@@ -15199,7 +15244,7 @@ const barbearias = [
       "https://www.cylex.pt/fernao-ferro/berto-barber-studio-132872.html",
       "https://www.codigo-postal.pt/2865-601/"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
