@@ -44,7 +44,9 @@ const SLUGS_PUBLICADOS = new Set([
   "fred-barber-caminha", // Abreu Barber - Barbearia (outro negócio no mesmo espaço)
   "casablanca-barbershop", // Barbearia DRYE
   "barbearia-tradicional-valenca", // Barbearia Barber-Show (outro negócio no mesmo espaço)
-  "o-brasileiro-canelas" // Barboterapia Canelas (outro negócio no mesmo espaço)
+  "o-brasileiro-canelas", // Barboterapia Canelas (outro negócio no mesmo espaço)
+  "sousa-barbershop", // TJBarbershop (outro negócio no mesmo espaço)
+  "new-look-barbearia" // Barbearia Dom Beto (a New Look fechou; mesmo espaço)
 ]);
 
 function allowedSlugs(item) {

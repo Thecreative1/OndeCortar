@@ -786,7 +786,7 @@ const barbearias = [
     }
   },
   {
-    "nome": "SOUSA Barbershop",
+    "nome": "TJBarbershop",
     "slug": "sousa-barbershop",
     "distrito": "Lisboa",
     "concelho": "Amadora",
@@ -794,9 +794,9 @@ const barbearias = [
     "freguesia": "",
     "city": "Amadora",
     "zone": "",
-    "morada": "Rua Bernando Santareno 23, 2650-424",
-    "address_raw": "Rua Bernando Santareno 23, 2650-424",
-    "street": "Rua Bernando Santareno",
+    "morada": "Rua Bernardo Santareno 23, 2650-424 Amadora",
+    "address_raw": "Rua Bernardo Santareno 23, 2650-424 Amadora",
+    "street": "Rua Bernardo Santareno",
     "street_number": "23",
     "complemento": "",
     "localidade": "Amadora",
@@ -805,17 +805,17 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 911 966 408",
+    "telefone": "+351 925 752 476",
     "email": null,
     "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Dom 9h-20h",
+    "horario": "Seg-Sáb 9h-20h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/12386710301",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=TJBarbershop%20Amadora",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -823,8 +823,10 @@ const barbearias = [
       -9.2233573
     ],
     "status": "confirmado",
-    "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=TJBarbershop%20Amadora"
+    ],
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -2157,7 +2159,12 @@ const barbearias = [
     "instagram": "https://www.instagram.com/madeira_island_tattoo",
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 11h-19h; Sáb 11h-15h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Madeira%20Island%20Tattoo%20Funchal",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       32.6360476,
@@ -2167,7 +2174,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/madeira_island_tattoo"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -2378,14 +2385,14 @@ const barbearias = [
     "telefone": "+351 934 829 393",
     "email": null,
     "website": null,
-    "instagram": "https://www.instagram.com/pontohoficial/?next=%2F",
+    "instagram": "https://www.instagram.com/pontohoficial/",
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Sáb 9h-12h e 13h-20h",
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-17h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/12604017654",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Ponto%20H%20Aveiro",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -2396,7 +2403,7 @@ const barbearias = [
     "fontes": [
       "https://www.instagram.com/pontohoficial/?next=%2F"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -3735,32 +3742,39 @@ const barbearias = [
     "freguesia": "",
     "city": "Vila Nova de Famalicao",
     "zone": "",
-    "morada": "Rua Augusto Correia 48, 4760-125 Vila Nova de Famalicao",
-    "address_raw": "Rua Augusto Correia 48, 4760-125 Vila Nova de Famalicao",
-    "street": "Rua Augusto Correia",
-    "street_number": "48",
+    "morada": "Avenida Marechal Humberto Delgado, 4760-012 Vila Nova de Famalicão",
+    "address_raw": "Avenida Marechal Humberto Delgado, 4760-012 Vila Nova de Famalicão",
+    "street": "Avenida Marechal Humberto Delgado",
+    "street_number": "",
     "complemento": "",
     "localidade": "Vila Nova de Famalicao",
-    "codigo_postal": "4760-125",
+    "codigo_postal": "4760-012",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 919 423 135",
+    "telefone": "+351 932 575 617",
     "email": null,
     "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sáb 9h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Francisco%20Maia%20Barbearia%20BarberShop%20Cabeleireiro%20Masculino",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
-      41.4088434,
-      -8.520114
+      41.4011469,
+      -8.5156006
     ],
     "status": "confirmado",
-    "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Francisco%20Maia%20Barbearia%20BarberShop%20Cabeleireiro%20Masculino"
+    ],
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -4448,11 +4462,11 @@ const barbearias = [
     "instagram": null,
     "facebook": "https://www.facebook.com/Barbearia.Number.One",
     "google_maps": null,
-    "horario": "Seg-Sáb 9h30-13h e 14h30-20h",
+    "horario": "Seg-Sáb 9h30-20h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/8875900891",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Number%20One%20Coimbra",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
@@ -4464,7 +4478,7 @@ const barbearias = [
       "https://barbearia-number-one.negocio.site/",
       "https://www.facebook.com/Barbearia.Number.One"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -4597,7 +4611,7 @@ const barbearias = [
     "qualidade_ficha": "alta"
   },
   {
-    "nome": "New Look Barbearia",
+    "nome": "Barbearia Dom Beto",
     "slug": "new-look-barbearia",
     "distrito": "Coimbra",
     "concelho": "Coimbra",
@@ -4605,40 +4619,39 @@ const barbearias = [
     "freguesia": "",
     "city": "Coimbra",
     "zone": "",
-    "morada": "Rua João de Deus Ramos, 3030-328 Coimbra",
-    "address_raw": "Rua João de Deus Ramos, 3030-328 Coimbra",
+    "morada": "Rua João de Deus Ramos 138, Loja 41, 3030-327 Coimbra",
+    "address_raw": "Rua João de Deus Ramos 138, Loja 41, 3030-327 Coimbra",
     "street": "Rua João de Deus Ramos",
-    "street_number": "",
+    "street_number": "138",
     "complemento": "",
     "localidade": "Coimbra",
-    "codigo_postal": "3030-328",
+    "codigo_postal": "3030-327",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 938 258 422",
+    "telefone": "+351 960 408 768",
     "email": null,
     "website": null,
-    "instagram": "https://www.instagram.com/bb.newlook/",
-    "facebook": "https://www.facebook.com/barbnewlook",
+    "instagram": null,
+    "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Sex 10h-19h; Sáb 10h-13h",
+    "horario": "Seg-Sáb 9h-20h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/10910523937",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Dom%20Beto%20Coimbra%20Gira%20Solum",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
-      40.2038294,
-      -8.4052156
+      40.203562,
+      -8.4051939
     ],
     "status": "confirmado",
     "fontes": [
-      "https://www.instagram.com/bb.newlook/",
-      "https://www.facebook.com/barbnewlook"
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Dom%20Beto%20Coimbra%20Gira%20Solum"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -4807,7 +4820,7 @@ const barbearias = [
       "https://www.20agecuts.com/",
       "https://www.instagram.com/20agecuts/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -6845,7 +6858,8 @@ const barbearias = [
     "location_flags": [],
     "telefone": null,
     "email": null,
-    "website": "https://booksy.com/pt-pt/1973_bruno-cesar-barbeiro_barbearia_141679_leiria",
+    "website": null,
+    "booking": "https://booksy.com/pt-pt/1973_bruno-cesar-barbeiro_barbearia_141679_leiria",
     "instagram": "https://www.instagram.com/bruno86b3/",
     "facebook": null,
     "google_maps": null,
@@ -6874,7 +6888,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/1973_bruno-cesar-barbeiro_barbearia_141679_leiria"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -7521,7 +7535,7 @@ const barbearias = [
     "telefone": "+351 210 965 372",
     "email": null,
     "website": null,
-    "instagram": "https://www.instagram.com/barbeariavintage_lisboa/",
+    "instagram": null,
     "facebook": null,
     "google_maps": null,
     "horario": null,
@@ -8285,7 +8299,7 @@ const barbearias = [
     "location_flags": [],
     "telefone": null,
     "email": null,
-    "website": "https://booksy.com/pt-pt/s/barbearia/167922_santo-antonio-dos-cavaleiros",
+    "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
@@ -8515,9 +8529,10 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 929 086 374",
     "email": null,
-    "website": "https://booksy.com/pt-pt/2014_barbercrew-matosinhos_barbearia_203185_matosinhos",
+    "website": null,
+    "booking": "https://booksy.com/pt-pt/2014_barbercrew-matosinhos_barbearia_203185_matosinhos",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
@@ -8546,7 +8561,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/2014_barbercrew-matosinhos_barbearia_203185_matosinhos"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -10480,32 +10495,39 @@ const barbearias = [
     "freguesia": "",
     "city": "Viseu",
     "zone": "",
-    "morada": "Rua Formosa 170, 3500-137 Viseu",
-    "address_raw": "Rua Formosa 170, 3500-137 Viseu",
-    "street": "Rua Formosa",
-    "street_number": "170",
+    "morada": "Avenida Doutor António José de Almeida 345, 3510-048 Viseu",
+    "address_raw": "Avenida Doutor António José de Almeida 345, 3510-048 Viseu",
+    "street": "Avenida Doutor António José de Almeida",
+    "street_number": "345",
     "complemento": "",
     "localidade": "Viseu",
-    "codigo_postal": "3500-137",
+    "codigo_postal": "3510-048",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 232 421 657",
+    "telefone": "+351 232 088 164",
     "email": null,
     "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 8h30-19h; Sáb 7h30-12h30",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Loureiro%20Viseu",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
-      40.6578,
-      -7.9122
+      40.6642751,
+      -7.9160318
     ],
     "status": "confirmado",
-    "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "fontes": [
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Loureiro%20Viseu"
+    ],
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14719,10 +14741,10 @@ const barbearias = [
     "freguesia": "",
     "city": "Monção",
     "zone": "",
-    "morada": "Estrada Nacional 101 C, Monção",
-    "address_raw": "Estrada Nacional 101 C, Monção",
-    "street": "Estrada Nacional 101 C",
-    "street_number": "",
+    "morada": "Rua das Andorinhas 46, 4950-854 Monção",
+    "address_raw": "Rua das Andorinhas 46, 4950-854 Monção",
+    "street": "Rua das Andorinhas",
+    "street_number": "46",
     "complemento": "",
     "localidade": "Monção",
     "codigo_postal": "",
@@ -14736,18 +14758,23 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-12h30 e 14h30-19h30; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Hen%20Destak%20Barbearia%20Mon%C3%A7%C3%A3o",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
-      42.0732153,
-      -8.4052238
+      42.0751079,
+      -8.4858877
     ],
     "status": "confirmado",
     "fontes": [
-      "https://www.top-rated.online/cities/Mon%C3%A7%C3%A3o/place/p/15563276/Destak%2Bbarbearia",
+      "https://www.google.com/maps/search/?api=1&query=Hen%20Destak%20Barbearia%20Mon%C3%A7%C3%A3o",
       "https://www.fresha.com/fr/lvp/destak-barbearia-estrada-municipal-101-moncao-RrNley"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14774,6 +14801,7 @@ const barbearias = [
     "telefone": null,
     "email": null,
     "website": "https://linktr.ee/cortenoponto",
+    "booking": "https://www.fresha.com/pt/book-now/corte-no-ponto-zgmr59sq/all-offer?id=2776759&pId=948106",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
@@ -14798,7 +14826,7 @@ const barbearias = [
       "https://www.fresha.com/lvp/steph-nobre-beauty-salon-em1096-a18NZ",
       "https://linktr.ee/cortenoponto"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -15374,7 +15402,7 @@ const barbearias = [
       "https://www.cylex.pt/porto/barbearia-arf%27s-169284.html",
       "https://www.codigo-postal.pt/2700-315/"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
