@@ -1,6 +1,6 @@
 # OndeCortar.pt
 
-> Diretório independente de barbearias em Portugal (continente, Madeira e Açores): 1110 barbearias em 322 cidades e localidades, com morada, contactos públicos, horário quando conhecido e localização no mapa. Gratuito para quem pesquisa e para as barbearias. Inclui também uma revista de guias de barba e cabelo e uma loja de recomendações de produtos (links afiliados da Amazon.es, assinalados).
+> Diretório independente de barbearias em Portugal (continente, Madeira e Açores): 1109 barbearias em 322 cidades e localidades, com morada, contactos públicos, horário quando conhecido e localização no mapa. Gratuito para quem pesquisa e para as barbearias. Inclui também uma revista de guias de barba e cabelo e uma loja de recomendações de produtos (links afiliados da Amazon.es, assinalados).
 
 Notas para quem cita este site:
 
@@ -120,7 +120,6 @@ Notas para quem cita este site:
 - [Barbearias na Tocha](https://ondecortar.pt/cidades/tocha/): 4 barbearias
 - [Barbearias em Tondela](https://ondecortar.pt/cidades/tondela/): 4 barbearias
 - [Barbearias em Albergaria-a-Velha](https://ondecortar.pt/cidades/albergaria-a-velha/): 3 barbearias
-- [Barbearias em Albufeira](https://ondecortar.pt/cidades/albufeira/): 3 barbearias
 - [Barbearias em Alcácer do Sal](https://ondecortar.pt/cidades/alcacer-do-sal/): 3 barbearias
 - [Barbearias em Alcains](https://ondecortar.pt/cidades/alcains/): 3 barbearias
 - [Barbearias em Alcanena](https://ondecortar.pt/cidades/alcanena/): 3 barbearias
@@ -212,6 +211,7 @@ Notas para quem cita este site:
 - [Barbearias em Vila Praia de Âncora](https://ondecortar.pt/cidades/vila-praia-de-ancora/): 3 barbearias
 - [Barbearias em Vila Verde](https://ondecortar.pt/cidades/vila-verde/): 3 barbearias
 - [Barbearias em Vouzela](https://ondecortar.pt/cidades/vouzela/): 3 barbearias
+- [Barbearias em Albufeira](https://ondecortar.pt/cidades/albufeira/): 2 barbearias
 - [Barbearias em Alcântara](https://ondecortar.pt/cidades/alcantara/): 2 barbearias
 - [Barbearias em Alpiarça](https://ondecortar.pt/cidades/alpiarca/): 2 barbearias
 - [Barbearias na Amareleja](https://ondecortar.pt/cidades/amareleja/): 2 barbearias

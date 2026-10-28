@@ -4203,40 +4203,41 @@ const barbearias = [
     "freguesia": "",
     "city": "Coimbra",
     "zone": "",
-    "morada": "Rua Brigadeiro Correia Cardoso 213, 3030-084 Coimbra",
-    "address_raw": "Rua Brigadeiro Correia Cardoso 213, 3030-084 Coimbra",
-    "street": "Rua Brigadeiro Correia Cardoso",
-    "street_number": "213",
+    "morada": "Rua José Castilho 16, 3030-301 Coimbra",
+    "address_raw": "Rua José Castilho 16, 3030-301 Coimbra",
+    "street": "Rua José Castilho",
+    "street_number": "16",
     "complemento": "",
     "localidade": "Coimbra",
-    "codigo_postal": "3030-084",
+    "codigo_postal": "3030-301",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
     "telefone": "+351 933 282 992",
     "email": null,
-    "website": null,
+    "website": "https://barbeariabagaca.com/",
     "instagram": "https://www.instagram.com/barbeariabagaca/",
     "facebook": "https://www.facebook.com/barbeariabagaca",
     "google_maps": null,
-    "horario": "Ter-Sáb 9h-19h30",
+    "horario": "Seg-Sáb 10h-20h",
     "horario_fonte": {
-      "nome": "OpenStreetMap",
-      "url": "https://www.openstreetmap.org/node/10617174786",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbearia%20Baga%C3%A7a%20Coimbra",
+      "data": "2026-10-28"
     },
     "observacoes": null,
     "coords": [
-      40.2173348,
-      -8.3987386
+      40.2121056,
+      -8.4004696
     ],
     "status": "confirmado",
     "fontes": [
-      "https://www.instagram.com/barbeariabagaca/",
-      "https://www.facebook.com/barbeariabagaca"
+      "https://barbeariabagaca.com/",
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Baga%C3%A7a%20Coimbra",
+      "https://www.instagram.com/barbeariabagaca/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -5926,12 +5927,13 @@ const barbearias = [
       37.0885,
       -8.25
     ],
-    "status": "confirmado",
+    "status": "por_validar",
     "fontes": [
       "https://www.instagram.com/chacals_barbearia/"
     ],
-    "ultima_validacao": "2026-04-05",
-    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-10-28",
+    "nota_interna": "Escondida a 2026-10-28: no Google Maps está 'encerrado temporariamente' (última avaliação há ~7 meses), sem rua, CP 8200-077 e tel. 936 146 233; o nosso telefone e a nossa rua não aparecem em lado nenhum. Redireciona para cidades/albufeira (PROFILE_REDIRECTS).",
+    "mostrar_no_mapa": false,
     "qualidade_ficha": "alta"
   },
   {
@@ -9913,21 +9915,22 @@ const barbearias = [
     "municipality": "Setúbal",
     "freguesia": "Cave Direita",
     "city": "Setúbal",
-    "zone": "Cave Direita",
-    "morada": "Praceta Fernando Pessoa 15, 2900-692 Setúbal",
-    "address_raw": "Praceta Fernando Pessoa, 15, Cave Direita, 2900-692 Setúbal",
-    "street": "Praceta Fernando Pessoa",
-    "street_number": "15",
+    "zone": "",
+    "morada": "Travessa do Garim 3, 2900-386 Setúbal",
+    "address_raw": "Travessa do Garim 3, 2900-386 Setúbal",
+    "street": "Travessa do Garim",
+    "street_number": "3",
     "complemento": "",
     "localidade": "Setúbal",
-    "codigo_postal": "2900-692",
+    "codigo_postal": "2900-386",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 967 795 623",
     "email": null,
-    "website": "https://booksy.com/pt-pt/1187_studio-fama-by-fabiano-the-barber_barbearia_252809_setubal",
+    "website": null,
+    "booking": "https://booksy.com/pt-pt/1187_studio-fama-by-fabiano-the-barber_barbearia_252809_setubal",
     "instagram": "https://www.instagram.com/studiofama.pt/",
     "facebook": null,
     "google_maps": null,
@@ -9935,7 +9938,7 @@ const barbearias = [
     "horario_fonte": {
       "nome": "Booksy",
       "url": "https://booksy.com/pt-pt/1187_studio-fama-by-fabiano-the-barber_barbearia_252809_setubal",
-      "data": "2026-10-01"
+      "data": "2026-10-28"
     },
     "precos": {
       "corte": 12,
@@ -9949,14 +9952,15 @@ const barbearias = [
     },
     "observacoes": null,
     "coords": [
-      38.5342602,
-      -8.8961469
+      38.5246116,
+      -8.8895208
     ],
     "status": "confirmado",
     "fontes": [
-      "https://booksy.com/pt-pt/1187_studio-fama-by-fabiano-the-barber_barbearia_252809_setubal"
+      "https://booksy.com/pt-pt/1187_studio-fama-by-fabiano-the-barber_barbearia_252809_setubal",
+      "https://www.google.com/maps/search/?api=1&query=Barbearia%20Studio%20Fama%20by%20Fabiano%20S%C3%A1"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {

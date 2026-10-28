@@ -2415,7 +2415,9 @@ const PROFILE_REDIRECTS = {
   "barbearia-sines-moderna": "sines",
   "barbearia-chaves": "chaves",
   "douro-barber-shop": "peso-da-regua",
-  "barbearia-barreiro-elite": "barreiro"
+  "barbearia-barreiro-elite": "barreiro",
+  // 2026-10-28: "encerrado temporariamente" no Google Maps há meses, telefone e rua sem confirmação
+  "chacal-s-barbearia": "albufeira"
 };
 
 function buildCityRedirect(target) {
