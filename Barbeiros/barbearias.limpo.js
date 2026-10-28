@@ -56,8 +56,8 @@ const barbearias = [
     "freguesia": "",
     "city": "Santiago do Cacém",
     "zone": "",
-    "morada": "Rua de Lisboa EN120, 7540-163",
-    "address_raw": "Rua de Lisboa EN120, 7540-163",
+    "morada": "Rua de Lisboa EN120, R/C Loja 8, 7540-163 Santiago do Cacém",
+    "address_raw": "Rua de Lisboa EN120, R/C Loja 8, 7540-163 Santiago do Cacém",
     "street": "Rua de Lisboa EN120",
     "street_number": "",
     "complemento": "",
@@ -86,7 +86,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -549,24 +549,29 @@ const barbearias = [
     "freguesia": "",
     "city": "Lisboa",
     "zone": "",
-    "morada": "Rua da Madalena 63, 1100-321",
-    "address_raw": "Rua da Madalena 63, 1100-321",
+    "morada": "Rua da Madalena 63, 1100-318 Lisboa",
+    "address_raw": "Rua da Madalena 63, 1100-318 Lisboa",
     "street": "Rua da Madalena",
     "street_number": "63",
     "complemento": "",
     "localidade": "Lisboa",
-    "codigo_postal": "1100-321",
+    "codigo_postal": "1100-318",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 213 470 199",
     "email": null,
     "website": "https://figaroslisboa.com/",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Dom 10h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Figaro's%20Barbershop%20Lisboa",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.709796,
@@ -576,7 +581,7 @@ const barbearias = [
     "fontes": [
       "https://figaroslisboa.com/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -1959,13 +1964,13 @@ const barbearias = [
     "freguesia": "",
     "city": "Santo Tirso",
     "zone": "",
-    "morada": "Rua Dom Nuno Álvares Pereira, 4780-439 Santo Tirso",
-    "address_raw": "Rua Dom Nuno Álvares Pereira, 4780-439 Santo Tirso",
+    "morada": "Praça General Humberto Delgado 127, 4780-376 Santo Tirso",
+    "address_raw": "Praça General Humberto Delgado 127, 4780-376 Santo Tirso",
     "street": "Rua Dom Nuno Álvares Pereira",
     "street_number": "",
     "complemento": "",
     "localidade": "Santo Tirso",
-    "codigo_postal": "4780-439",
+    "codigo_postal": "4780-376",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
@@ -1976,15 +1981,20 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 8h-19h30; Sáb 8h-19h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=JL%20Barbearia%20Santo%20Tirso",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
-      41.3402317,
-      -8.477157
+      41.340308,
+      -8.4772159
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -2792,7 +2802,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Qui 10h-13h e 14h-19h30; Sex-Sáb 10h-13h e 14h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Dom's%20BarberShop%20Odemira",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       37.5965088,
@@ -2802,7 +2817,7 @@ const barbearias = [
     "fontes": [
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT/vila-nova-de-milfontes/barbeiros/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -3037,7 +3052,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Eddie's%20Barber%20Shop%20Aljustrel",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       37.8780753,
@@ -3047,7 +3067,7 @@ const barbearias = [
     "fontes": [
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT/aljustrel/cabeleireiros/"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -3111,17 +3131,17 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 927 968 716",
     "email": null,
     "website": "https://booksy.com/pt-pt/6306_bmbarbeariamonte_barbearia_82575_braga",
     "instagram": "https://www.instagram.com/Bmbarbeariamonte_/",
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg 9h30-19h; Ter-Qui 9h30-12h e 15h-19h; Sex 9h30-12h e 14h-19h; Sáb 10h-13h e 14h-17h",
+    "horario": "Seg-Sex 9h-19h; Sáb 9h-17h",
     "horario_fonte": {
-      "nome": "Booksy",
-      "url": "https://booksy.com/pt-pt/6306_bmbarbeariamonte_barbearia_82575_braga",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Bmbarbearia%20Rua%20do%20Fujacal%20Braga",
+      "data": "2026-10-28"
     },
     "precos": {
       "corte": 10,
@@ -3142,7 +3162,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/6306_bmbarbeariamonte_barbearia_82575_braga"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -7304,7 +7324,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -8008,7 +8028,7 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 966 065 723",
     "email": null,
     "website": "https://booksy.com/pt-pt/3549_ranzulla-barbershop_barbearia_157422_lisboa",
     "instagram": "https://www.instagram.com/ranzullabarbershop/",
@@ -8039,7 +8059,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/s/barbearia/157422_lisboa"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -8669,28 +8689,28 @@ const barbearias = [
     "freguesia": "",
     "city": "Porto",
     "zone": "",
-    "morada": "Rua de 9 de Julho 344, Loja, 4250-356 Porto",
-    "address_raw": "Rua de 9 de Julho 344, Loja, 4250-356 Porto",
+    "morada": "Rua de 9 de Julho 344, 4250-164 Porto",
+    "address_raw": "Rua de 9 de Julho 344, 4250-164 Porto",
     "street": "Rua de 9 de Julho",
     "street_number": "344",
     "complemento": "Loja",
     "localidade": "Porto",
-    "codigo_postal": "4250-356",
+    "codigo_postal": "4250-164",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 932 121 575",
     "email": null,
     "website": "https://booksy.com/pt-pt/3976_black-studio-bs_barbearia_208915_porto",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Sáb 9h-19h45",
+    "horario": "Seg-Sáb 9h-20h",
     "horario_fonte": {
-      "nome": "Booksy",
-      "url": "https://booksy.com/pt-pt/3976_black-studio-bs_barbearia_208915_porto",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Black%20Studio%20Rua%209%20de%20Julho%20Porto",
+      "data": "2026-10-28"
     },
     "precos": {
       "corte": 9,
@@ -8710,7 +8730,7 @@ const barbearias = [
     "fontes": [
       "https://booksy.com/pt-pt/3976_black-studio-bs_barbearia_208915_porto"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -9601,7 +9621,7 @@ const barbearias = [
     "fontes": [
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT/vila-nova-de-milfontes/barbeiros/?p=2"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "media"
   },
@@ -10345,28 +10365,28 @@ const barbearias = [
     "freguesia": "",
     "city": "Viseu",
     "zone": "",
-    "morada": "Lg São Pedro 52 Loja AM, 3500-695 Viseu",
-    "address_raw": "Lg São Pedro 52, Loja AM, 3500-695 Viseu",
+    "morada": "Avenida Luís Martins 74, 3500-719 Viseu",
+    "address_raw": "Avenida Luís Martins 74, 3500-719 Viseu",
     "street": "Lg São Pedro 52",
     "street_number": "Loja AM",
     "complemento": "",
     "localidade": "Viseu",
-    "codigo_postal": "3500-695",
+    "codigo_postal": "3500-719",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 937 932 785",
     "email": null,
     "website": "https://booksy.com/pt-pt/5769_balder_barbearia_279940_viseu",
     "instagram": "https://www.instagram.com/balderbarbearia_/",
     "facebook": null,
     "google_maps": null,
-    "horario": "Seg-Sáb 10h-21h",
+    "horario": "Seg-Sáb 9h-21h",
     "horario_fonte": {
-      "nome": "Booksy",
-      "url": "https://booksy.com/pt-pt/5769_balder_barbearia_279940_viseu",
-      "data": "2026-10-01"
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Balder%20Barbearia%20Viseu",
+      "data": "2026-10-28"
     },
     "precos": {
       "corte": 12,
@@ -10380,14 +10400,14 @@ const barbearias = [
     },
     "observacoes": null,
     "coords": [
-      40.64316391752402,
-      -7.924450526303929
+      40.6431935,
+      -7.9243208
     ],
     "status": "confirmado",
     "fontes": [
       "https://booksy.com/pt-pt/5769_balder_barbearia_279940_viseu"
     ],
-    "ultima_validacao": "2026-04-05",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta",
     "valor_original": {
@@ -11608,7 +11628,7 @@ const barbearias = [
       "https://www.fresha.com/uk/lvp/igors-barbershop-rua-terra-estreita-santa-luzia-NynKaX",
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT/tavira/barbeiros/"
     ],
-    "ultima_validacao": "2026-04-17",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -11792,7 +11812,7 @@ const barbearias = [
       "https://www.fresha.com/lvp/barber-shop-the-rock-rua-da-princesa-vila-real-de-santo-antonio-r6z3Ny",
       "https://www.cybo.com/PT/vila-real-de-santo-ant%C3%B3nio-%28parish%29/barbers/"
     ],
-    "ultima_validacao": "2026-04-17",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -12332,7 +12352,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 10h-13h e 14h30-19h; Sáb 10h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=DP%20Barber%20Shop%20Castelo%20Branco",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       39.8164324,
@@ -12342,7 +12367,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/castelo-branco/dp-barber-shop/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -12627,7 +12652,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg 15h-19h30; Ter-Sex 10h-19h30; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=koureia%20Barbearia%20%C3%89vora",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       38.5708266,
@@ -12637,7 +12667,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/evora/koureia-barbearia/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -12797,7 +12827,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Sex 9h-13h e 14h-19h; Sáb 9h-13h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Z%C3%A9%20Ginja%20Guarda",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       40.5447455,
@@ -12807,7 +12842,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/guarda/ze-ginja/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13504,7 +13539,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Seg-Qui 10h-19h; Sex 10h-12h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barber%20N%C2%BA1%20Studio%20Figueira%20de%20Castelo%20Rodrigo",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       40.8919742,
@@ -13514,7 +13554,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/figueira-de-castelo-rodrigo/barber-ndeg1-studio/"
     ],
-    "ultima_validacao": "2026-04-18",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -13875,7 +13915,12 @@ const barbearias = [
     "facebook": null,
     "google_maps": null,
     "booking": "https://buk.pt/buzzbbarber",
-    "horario": null,
+    "horario": "Ter-Qui 10h-13h e 14h-19h; Sex 10h-19h; Sáb 9h-15h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=BuzzbBarber%20Sert%C3%A3",
+      "data": "2026-10-28"
+    },
     "precos": {
       "corte": 10,
       "barba": 6.5,
@@ -13894,7 +13939,7 @@ const barbearias = [
     "fontes": [
       "https://guiaempresas.pt/barbearia/serta/buzzbbarber/"
     ],
-    "ultima_validacao": "2026-04-19",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -14159,8 +14204,8 @@ const barbearias = [
     "freguesia": "Caminha (Matriz) e Vilarelho",
     "city": "Caminha",
     "zone": "",
-    "morada": "R. da Corredoura 60, Caminha",
-    "address_raw": "R. da Corredoura 60, Caminha",
+    "morada": "Rua da Corredoura 60, 4910-133 Caminha",
+    "address_raw": "Rua da Corredoura 60, 4910-133 Caminha",
     "street": "R. da Corredoura",
     "street_number": "60",
     "complemento": "",
@@ -14176,7 +14221,12 @@ const barbearias = [
     "instagram": null,
     "facebook": null,
     "google_maps": null,
-    "horario": null,
+    "horario": "Ter-Sex 9h30-19h; Sáb 9h-14h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=The%20Sousa's%20Barber%20Caminha",
+      "data": "2026-10-28"
+    },
     "observacoes": null,
     "coords": [
       41.8740979,
@@ -14186,7 +14236,7 @@ const barbearias = [
     "fontes": [
       "https://www.fresha.com/pt/lvp/the-sousas-barber-rua-da-corredoura-caminha-bLzLbD"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
@@ -15303,7 +15353,7 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 966 337 444",
+    "telefone": "+351 923 307 599",
     "email": null,
     "website": "https://www.brothersbarbershop.pt/",
     "instagram": null,
@@ -15319,7 +15369,7 @@ const barbearias = [
     "fontes": [
       "https://www.brothersbarbershop.pt/"
     ],
-    "ultima_validacao": "2026-04-21",
+    "ultima_validacao": "2026-10-28",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
