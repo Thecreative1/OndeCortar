@@ -1507,3 +1507,22 @@ h1 em, h2 em, .dir-headline em, .cities-headline em, .owner-cta-headline em, h1 
 .city-chip.is-active:hover {
   background: #C8873A !important; color: #17130D !important; border-color: #C8873A !important;
 }
+
+/* Homepage mais leve (2026-10-31): o browser só desenha os cartões da lista que estão
+   no ecrã (são 1 109). Os outros continuam no HTML, na pesquisa do browser (Ctrl+F) e
+   para leitores de ecrã. contain-intrinsic-size = altura do conteúdo (sem padding nem
+   borda), medida: ~183px no telemóvel, ~291px entre 761 e 860px, ~191px no computador;
+   "auto" faz o browser lembrar a altura real depois de desenhar o cartão uma vez.
+   flex-shrink: 0: a lista é uma coluna flex e os cartões por desenhar encolhiam para
+   ~30px (no computador a barra de scroll saltava).
+   overflow-clip-margin: o contorno de foco dos botões não fica cortado na borda.
+   Testado e posto de parte: a mesma regra na lista sem JS (#resultsList > ul > li)
+   adiantava o 1.º desenho mas aumentava o tempo bloqueado (TBT +150 ms). */
+.result-card {
+  flex-shrink: 0;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 191px;
+  overflow-clip-margin: 8px;
+}
+@media (max-width: 860px) { .result-card { contain-intrinsic-size: auto 291px; } }
+@media (max-width: 760px) { .result-card { contain-intrinsic-size: auto 183px; } }
