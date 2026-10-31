@@ -57,6 +57,16 @@ const NEW_HEROES = {
   "gel-de-limpeza-para-homem-como-lavar-a-cara": ["homem-lavar-cara-lavatorio.jpg", "Homem com degradê a passar água pela cara num lavatório"],
 };
 
+// Artigos com cartão de partilha próprio (imagens/partilha/artigos/, gerado por gerar-imagens-partilha.js
+// a 2400×1260): og:image e twitter:image apontam para o cartão; a capa e o "image" do JSON-LD não mudam.
+const SHARE_CARDS = {
+  "o-que-oferecer-ao-pai": "imagens/partilha/artigos/o-que-oferecer-ao-pai.jpg",
+};
+const shareImage = (slug, fallback) => (SHARE_CARDS[slug] ? SITE + SHARE_CARDS[slug] : fallback);
+for (const [slug, file] of Object.entries(SHARE_CARDS)) {
+  if (!exists(file)) throw new Error("Cartão de partilha em falta: " + file + " (node scripts/gerar-imagens-partilha.js " + slug + ")");
+}
+
 const stats = { heroes: 0, data: 0, cards: 0, files: 0 };
 const articleFile = (slug) => "revista/" + slug + "/index.html";
 
@@ -70,8 +80,8 @@ for (const [slug, [file, alt]] of Object.entries(NEW_HEROES)) {
   const rel = "imagens/revista/" + file;
   const newImg = '<img src="../../' + rel + '" alt="' + esc(alt) + '" loading="eager" fetchpriority="high" />';
   html = html.replace(/(<figure class="article-hero-media">)([\s\S]*?)(<\/figure>)/, (m, a, inner, b) => a + newImg + b);
-  html = html.replace(/(<meta property="og:image" content=")[^"]*(")/, "$1" + SITE + rel + "$2");
-  html = html.replace(/(<meta name="twitter:image" content=")[^"]*(")/, "$1" + SITE + rel + "$2");
+  html = html.replace(/(<meta property="og:image" content=")[^"]*(")/, "$1" + shareImage(slug, SITE + rel) + "$2");
+  html = html.replace(/(<meta name="twitter:image" content=")[^"]*(")/, "$1" + shareImage(slug, SITE + rel) + "$2");
   html = html.replace(/(<script type="application\/ld\+json"[^>]*>)(\{[^<]*?"BlogPosting"[^<]*?)(<\/script>)/, (m, o, j, c) => {
     const d = JSON.parse(j); d.image = SITE + rel; return o + JSON.stringify(d) + c;
   });
@@ -89,8 +99,8 @@ for (const d of fs.readdirSync(path.join(ROOT, "revista"))) {
   if (!m) continue;
   const url = SITE + m[1];
   const before = html;
-  html = html.replace(/(<meta property="og:image" content=")[^"]*(")/, "$1" + url + "$2")
-    .replace(/(<meta name="twitter:image" content=")[^"]*(")/, "$1" + url + "$2")
+  html = html.replace(/(<meta property="og:image" content=")[^"]*(")/, "$1" + shareImage(d, url) + "$2")
+    .replace(/(<meta name="twitter:image" content=")[^"]*(")/, "$1" + shareImage(d, url) + "$2")
     .replace(/(<script type="application\/ld\+json"[^>]*>)(\{[^<]*?"BlogPosting"[^<]*?)(<\/script>)/, (x, o, j, c) => {
       const data = JSON.parse(j); data.image = url; return o + JSON.stringify(data) + c;
     });

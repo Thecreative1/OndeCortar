@@ -100,6 +100,22 @@ const SECOES = [
   },
 ];
 
+// Cartões de artigos que se partilham nas redes (Facebook, WhatsApp): mesmo desenho da revista, mas a 2×
+// (2400×1260) para não perder nitidez quando o Facebook recomprime. Foto original grande em
+// imagens/partilha/fotos/ (a capa do artigo só tem 1200×675). O og:image do artigo aponta para o
+// cartão através de SHARE_CARDS em apply-revista-unique-images.js (o JSON-LD continua com a capa).
+// Gerar só um: node scripts/gerar-imagens-partilha.js o-que-oferecer-ao-pai
+const ARTIGOS = [
+  {
+    file: "artigos/o-que-oferecer-ao-pai.jpg", theme: "revista", scale: 2,
+    eyebrow: "Guia de prendas",
+    title: "O que oferecer <em>ao pai</em>",
+    sub: "Prendas que ele vai mesmo usar, no Natal, nos anos ou no Dia do Pai",
+    chips: ["Natal", "Anos", "Dia do Pai"],
+    foto: "imagens/partilha/fotos/barbeiro-oculos-barba-1600.jpg", fotoPos: "50% 32%",
+  },
+];
+
 const htmlSecao = (c) => {
   const loja = c.theme === "loja";
   const art = loja
@@ -131,7 +147,7 @@ const htmlSecao = (c) => {
   .q1{right:0;top:0;width:220px;height:260px;transform:rotate(3deg)}
   .q2{right:30px;bottom:0;width:260px;height:230px;transform:rotate(-2deg)}
   .foto{position:absolute;right:0;top:0;width:560px;height:630px;overflow:hidden}
-  .foto img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+  .foto img{width:100%;height:100%;object-fit:cover;object-position:${c.fotoPos || "62% 50%"}}
   .foto::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#F4EDE1 0%,rgba(244,237,225,0) 22%)}
 </style></head><body>
 <div class="bar"></div>${art}
@@ -148,11 +164,16 @@ const htmlSecao = (c) => {
 (async () => {
   fs.mkdirSync(OUT, { recursive: true });
   const browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });
-  for (const c of [...CARDS, ...SECOES]) {
+  // Com argumentos, gera só os cartões cujo ficheiro os contém (não reescreve os outros JPEG)
+  const only = process.argv.slice(2);
+  const todos = [...CARDS, ...SECOES, ...ARTIGOS].filter((c) => !only.length || only.some((a) => c.file.includes(a)));
+  for (const c of todos) {
+    const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: c.scale || 1 });
+    fs.mkdirSync(path.dirname(path.join(OUT, c.file)), { recursive: true });
     await page.setContent(c.theme ? htmlSecao(c) : html(c), { waitUntil: "networkidle" });
     await page.evaluate(() => document.fonts.ready);
-    await page.screenshot({ path: path.join(OUT, c.file), type: "jpeg", quality: 86 });
+    await page.screenshot({ path: path.join(OUT, c.file), type: "jpeg", quality: c.scale ? 90 : 86 });
+    await page.close();
     console.log("imagens/partilha/" + c.file);
   }
   await browser.close();
