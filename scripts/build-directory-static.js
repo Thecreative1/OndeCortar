@@ -1360,6 +1360,7 @@ function renderProfilePage(barber, citiesMap) {
   const iBadge   = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="m12 3 2 2.5L17 5l.5 3L20 9l-1 3 1 3-2.5 1L17 19l-3-.5L12 21l-2-2.5L7 19l-.5-3L4 15l1-3-1-3 2.5-1L7 5l3 .5z"/><path d="m9 12 2 2 4-4"/><\/svg>';
   const iInsta   = '<svg class="oc-icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/><\/svg>';
   const iCal     = '<svg class="oc-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><\/svg>';
+  const iFacebook = '<svg class="oc-icon" viewBox="0 0 24 24"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2z"/><\/svg>';
   // Ícone oficial do WhatsApp (Simple Icons, CC0) no verde da marca: o único contacto a verde no perfil
   const iWhatsApp = '<svg class="oc-icon oc-icon--wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/><\/svg>';
 
@@ -1475,7 +1476,8 @@ function renderProfilePage(barber, citiesMap) {
   const mapBtn     = mapsUrl ? '<a class="oc-btn oc-btn--ghost" href="#mapa" style="flex:1">' + iPin + " Abrir mapa<\/a>" : "";
   const webBtn     = barber.website ? '<a class="oc-btn oc-btn--ghost" href="' + H(barber.website) + '" target="_blank" rel="noopener noreferrer" style="flex:1">' + iGlobe + " Website<\/a>" : "";
   const instBtn    = !barber.website && barber.instagram ? '<a class="oc-btn oc-btn--ghost" href="' + H(barber.instagram) + '" target="_blank" rel="noopener noreferrer" style="flex:1">' + iInsta + " Instagram<\/a>" : "";
-  const secondRow  = (mapBtn || webBtn || instBtn) ? '<div style="display:flex;gap:10px">' + mapBtn + (webBtn || instBtn) + "<\/div>" : "";
+  const fbBtn      = !barber.website && !barber.instagram && barber.facebook ? '<a class="oc-btn oc-btn--ghost" href="' + H(barber.facebook) + '" target="_blank" rel="noopener noreferrer" style="flex:1">' + iFacebook + " Facebook<\/a>" : "";
+  const secondRow  = (mapBtn || webBtn || instBtn || fbBtn) ? '<div style="display:flex;gap:10px">' + mapBtn + (webBtn || instBtn || fbBtn) + "<\/div>" : "";
   const claimLink  = '<a class="oc-btn oc-btn--link" href="' + H(updateHref) + '" style="align-self:flex-start;font-size:13px">És o dono? Atualizar perfil ' + iArrow + "<\/a>";
 
   const pubPill  = '<span class="oc-pill">Ficha pública<\/span>';
@@ -1512,7 +1514,8 @@ function renderProfilePage(barber, citiesMap) {
         '<span class="oc-summary__status-text">Horário ainda por indicar<\/span><\/div>';
   const summaryOnline = [
     barber.website ? '<a href="' + H(barber.website) + '" target="_blank" rel="noopener noreferrer">' + iGlobe + " Website<\/a>" : "",
-    barber.instagram ? '<a href="' + H(barber.instagram) + '" target="_blank" rel="noopener noreferrer">' + iInsta + " Instagram<\/a>" : ""
+    barber.instagram ? '<a href="' + H(barber.instagram) + '" target="_blank" rel="noopener noreferrer">' + iInsta + " Instagram<\/a>" : "",
+    barber.facebook ? '<a href="' + H(barber.facebook) + '" target="_blank" rel="noopener noreferrer">' + iFacebook + " Facebook<\/a>" : ""
   ].filter(Boolean).join("");
   const summaryRow = (label, value) => value
     ? '<div class="oc-summary__row"><dt>' + H(label) + "<\/dt><dd>" + value + "<\/dd><\/div>"
@@ -1580,6 +1583,17 @@ function renderProfilePage(barber, citiesMap) {
     ? '<div class="oc-contact-row"><span style="color:var(--subtext)">' + iWhatsApp + "<\/span><div style=\"min-width:0\"><div class=\"oc-contact-row__label\">WhatsApp<\/div><div class=\"oc-contact-row__value\">" + H(formatarTelefoneVisual("351" + barber.whatsapp)) + "<\/div><\/div>"
       + '<a href="' + H("https://wa.me/351" + barber.whatsapp + "?text=" + encodeURIComponent("Olá! Vi a vossa barbearia no OndeCortar.pt.")) + '" class="oc-contact-row__action oc-contact-row__action--wa" target="_blank" rel="nofollow noopener" data-oc-click="whatsapp">Escrever<\/a><\/div>'
     : "";
+  // Nome da página quando o URL o tem: facebook.com/nome → "@nome"; facebook.com/people|pg/Nome-Da-Pagina/123
+  // → "Nome Da Pagina"; IDs numéricos e profile.php ficam "Página de Facebook"
+  const fbHandle = (() => {
+    if (!barber.facebook) return "";
+    const path = barber.facebook.replace(/^https?:\/\/[^/]+/, "").replace(/[?#].*$/, "").split("/").filter(Boolean);
+    const named = path[0] === "people" || path[0] === "pg";
+    const raw = named ? (path[1] || "") : (["pages", "p", "share", "groups"].includes(path[0]) ? "" : (path[0] || ""));
+    const name = decodeURIComponent(raw).replace(/-?\d{6,}$/, "").replace(/-+$/, "");
+    if (!name || /^\d+$/.test(name) || /\.php$/.test(name)) return "Página de Facebook";
+    return named ? name.replace(/-/g, " ") : "@" + name;
+  })();
   const contactsInner =
     contactRow(iPin,   "Morada",    barber.morada,   "Copiar", null) +
     contactRow(iPhone, "Telefone",  barber.telefone, "Ligar",  phoneHrefVal) +
@@ -1587,7 +1601,8 @@ function renderProfilePage(barber, citiesMap) {
     bookingRow +
     contactRow(iMail,  "Email",     barber.email,    "Enviar", barber.email ? "mailto:" + barber.email : "") +
     contactRow(iGlobe, "Website",   barber.website ? barber.website.replace(/^https?:\/\//, "") : "", "Abrir", barber.website) +
-    contactRow(iInsta, "Instagram", instaHandle,     "Ver",    barber.instagram);
+    contactRow(iInsta, "Instagram", instaHandle,     "Ver",    barber.instagram) +
+    contactRow(iFacebook, "Facebook", fbHandle,      "Ver",    barber.facebook);
 
   // ── Hours
   const hoursWeek = horarioUtils.parsePt(barber.horario);
@@ -1687,7 +1702,7 @@ function renderProfilePage(barber, citiesMap) {
       '\n  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin defer><\/script>'
     : "";
 
-  const leafletInit = Array.isArray(barber.coords) ? '<script>(function(){\n  function init(){\n    if(!window.L||!document.getElementById("detailMap"))return;\n    var c=' + JSON.stringify(barber.coords) + ';\n    var m=L.map("detailMap",{scrollWheelZoom:false}).setView(c,15);\n    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",{attribution:"Tiles &copy; Esri &mdash; Esri, HERE, Garmin, USGS, OpenStreetMap contributors",maxZoom:16}).addTo(m);\n    var gi=L.divIcon({className:"",html:\'<div style="width:32px;height:32px;background:#C8873A;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.5);border:2px solid #141614"><div style="width:8px;height:8px;border-radius:50%;background:#141614;transform:rotate(45deg)"></div></div>\',iconSize:[32,32],iconAnchor:[16,32],popupAnchor:[0,-36]});\n    L.marker(c,{icon:gi}).addTo(m).bindPopup(' + JSON.stringify(barber.name) + ').openPopup();\n  }\n  document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){setTimeout(init,120);}):setTimeout(init,120);\n})();<\/script>' : "";
+  const leafletInit = Array.isArray(barber.coords) ? '<script>(function(){\n  function init(){\n    if(!window.L||!document.getElementById("detailMap"))return;\n    var c=' + JSON.stringify(barber.coords) + ';\n    var m=L.map("detailMap",{scrollWheelZoom:false}).setView(c,15);\n    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",{attribution:"Tiles &copy; Esri &mdash; Esri, HERE, Garmin, USGS, OpenStreetMap contributors",maxZoom:16}).addTo(m);\n    var gi=L.divIcon({className:"",html:\'<div style="width:32px;height:32px;background:#C8873A;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.5);border:2px solid #141614"><div style="width:8px;height:8px;border-radius:50%;background:#141614;transform:rotate(45deg)"></div></div>\',iconSize:[32,32],iconAnchor:[16,32],popupAnchor:[0,-36]});\n    L.marker(c,{icon:gi,title:' + JSON.stringify("Localização de " + barber.name) + '}).addTo(m).bindPopup(' + JSON.stringify(barber.name) + ').openPopup();\n  }\n  document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){setTimeout(init,120);}):setTimeout(init,120);\n})();<\/script>' : "";
 
   // ── Breadcrumb
   const crumbItems =

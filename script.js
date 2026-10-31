@@ -278,7 +278,8 @@
     if (
       lower.indexOf("fresha.com") !== -1 ||
       lower.indexOf("treatwell.") !== -1 ||
-      lower.indexOf("ongenda.com") !== -1
+      lower.indexOf("ongenda.com") !== -1 ||
+      lower.indexOf("buk.pt") !== -1
     ) {
       return { kind: "booking", href: value };
     }

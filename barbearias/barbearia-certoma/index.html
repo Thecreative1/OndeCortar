@@ -82,7 +82,7 @@
     var m=L.map("detailMap",{scrollWheelZoom:false}).setView(c,15);
     L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",{attribution:"Tiles &copy; Esri &mdash; Esri, HERE, Garmin, USGS, OpenStreetMap contributors",maxZoom:16}).addTo(m);
     var gi=L.divIcon({className:"",html:'<div style="width:32px;height:32px;background:#C8873A;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.5);border:2px solid #141614"><div style="width:8px;height:8px;border-radius:50%;background:#141614;transform:rotate(45deg)"></div></div>',iconSize:[32,32],iconAnchor:[16,32],popupAnchor:[0,-36]});
-    L.marker(c,{icon:gi}).addTo(m).bindPopup("Barbearia Certoma").openPopup();
+    L.marker(c,{icon:gi,title:"Localização de Barbearia Certoma"}).addTo(m).bindPopup("Barbearia Certoma").openPopup();
   }
   document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){setTimeout(init,120);}):setTimeout(init,120);
 })();</script>
