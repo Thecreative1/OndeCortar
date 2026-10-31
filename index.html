@@ -2077,13 +2077,13 @@
 
           <!-- City filter chips -->
           <div class="filter-row">
-            <div id="directoryCities" class="chips-row" aria-label="Filtrar por cidade"></div>
+            <div id="directoryCities" class="chips-row" aria-label="Filtrar por cidade"><button class="city-chip" type="button" aria-pressed="false" data-region-search="Norte">Norte <span aria-hidden="true">(<span data-regiao-total="Norte">310</span>)</span></button><button class="city-chip" type="button" aria-pressed="false" data-region-search="Centro">Centro <span aria-hidden="true">(<span data-regiao-total="Centro">346</span>)</span></button><button class="city-chip" type="button" aria-pressed="false" data-region-search="Lisboa">Lisboa <span aria-hidden="true">(<span data-regiao-total="Lisboa">195</span>)</span></button><button class="city-chip" type="button" aria-pressed="false" data-region-search="Alentejo">Alentejo <span aria-hidden="true">(<span data-regiao-total="Alentejo">110</span>)</span></button><button class="city-chip" type="button" aria-pressed="false" data-region-search="Algarve">Algarve <span aria-hidden="true">(<span data-regiao-total="Algarve">77</span>)</span></button><button class="city-chip" type="button" aria-pressed="false" data-region-search="Ilhas">Ilhas <span aria-hidden="true">(<span data-regiao-total="Ilhas">71</span>)</span></button></div>
           </div>
 
           <!-- Results status -->
           <div class="results-status-row">
             <span id="searchCount" aria-live="polite">A mostrar <span data-barbearias-total>1109</span> barbearias</span>
-            <p id="resultsMessage" role="status" aria-live="polite"></p>
+            <p id="resultsMessage" role="status" aria-live="polite">Procura por cidade, zona ou nome da barbearia.</p>
           </div>
 
           <noscript>
@@ -8705,7 +8705,11 @@
         }
 
         heroLocateBtn.disabled = isLoading;
-        heroLocateBtn.textContent = isLoading ? "A localizar..." : "Usar localização";
+        // Guarda o rótulo do HTML (ícone + "Perto de mim") para o repor: antes o JS trocava-o
+        // por "Usar localização" sem ícone ao carregar a página
+        if (!heroLocateBtn.dataset.label) heroLocateBtn.dataset.label = heroLocateBtn.innerHTML;
+        if (isLoading) heroLocateBtn.textContent = "A localizar...";
+        else heroLocateBtn.innerHTML = heroLocateBtn.dataset.label;
       }
 
       function clearUserLocation() {

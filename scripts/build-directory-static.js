@@ -2648,6 +2648,25 @@ function patchIndexHtml(staticListHtml, headJsonLd, totals) {
   html = html.replace(/(<(?:span|strong)[^>]*data-cidades-total[^>]*>)[^<]*(<\/(?:span|strong)>)/g,
     "$1" + totals.cities + "$2");
 
+  // Chips de região (Norte, Centro…) já no HTML com as contagens: a fila tem a altura final antes
+  // do JS, e o mapa deixa de descer ~30 px quando os chips aparecem (CLS). O JS volta a desenhá-los
+  // com os mesmos números; a contagem espelha getRegiaoForCity/normCity do index.html.
+  const regioesMatch = html.match(/REGIOES_PT\s*=\s*(\{[\s\S]*?\});/);
+  if (regioesMatch) {
+    const regioes = vm.runInNewContext("(" + regioesMatch[1] + ")");
+    const normCity = (s) => String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+      .replace(/[()]/g, "").replace(/\s+/g, " ").trim();
+    const counts = {};
+    Object.keys(regioes).forEach((r) => { counts[r] = 0; });
+    totals.cityNames.forEach((city) => {
+      const cn = normCity(city);
+      const regiao = Object.keys(regioes).find((r) => regioes[r].indexOf(cn) >= 0);
+      if (regiao) counts[regiao]++;
+    });
+    html = html.replace(/(<span data-regiao-total="([^"]+)">)[^<]*(<\/span>)/g,
+      (m, open, regiao, close) => open + (counts[regiao] || 0) + close);
+  }
+
   fs.writeFileSync(indexPath, html, "utf8");
 }
 
@@ -2840,7 +2859,8 @@ function main() {
     buildHomepageItemListJsonLd(data.barbers),
     {
       barbers: data.barbers.length,
-      cities: data.cities.length
+      cities: data.cities.length,
+      cityNames: data.barbers.map((barber) => barber.city)
     }
   );
 
