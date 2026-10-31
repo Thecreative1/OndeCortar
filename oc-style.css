@@ -1281,7 +1281,28 @@ body.nav-open { overflow: hidden; }
   --oc-open: #5FA77C; --oc-closed: #D9735F;
   --oc-shadow-sm: 0 1px 2px rgba(0,0,0,.3); --oc-shadow-md: 0 6px 18px rgba(0,0,0,.35);
   --oc-shadow-lg: 0 24px 48px rgba(0,0,0,.45); --oc-shadow-clay: 0 0 0 4px rgba(200,135,58,.22);
-  --oc-font-title: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --oc-font-title: "Big Shoulders Display", "Big Shoulders Fallback", "Big Shoulders Fallback Roboto", "Arial Narrow", sans-serif;
+}
+
+/* Fonte provisória dos títulos (2026-10-31): enquanto a Big Shoulders não chega, o browser
+   usava uma fonte mais larga e o título "Encontra uma barbearia perto de ti" ocupava mais uma
+   linha; quando a fonte chegava, a pesquisa e a lista subiam 47px (CLS 0,068–0,084 no
+   computador). Estas fontes do sistema ficam com a mesma largura e as mesmas medidas verticais
+   da Big Shoulders 800 (medido nos títulos da homepage em maiúsculas: largura 0,641 da Arial
+   Bold e 0,698 da Roboto Bold; ascent 98%, descent 21%). Arial/Helvetica/Liberation Sans
+   (Windows, Mac, iPhone, Linux); sem nenhuma delas, Roboto (Android). */
+@font-face {
+  font-family: "Big Shoulders Fallback";
+  src: local("Arial Bold"), local("Arial-BoldMT"), local("Helvetica Bold"), local("Helvetica-Bold"),
+       local("Liberation Sans Bold"), local("LiberationSans-Bold"), local("Arimo Bold"), local("Arimo-Bold");
+  font-weight: 700 800;
+  size-adjust: 64.09%; ascent-override: 152.91%; descent-override: 32.77%; line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Big Shoulders Fallback Roboto";
+  src: local("Roboto Bold"), local("Roboto-Bold");
+  font-weight: 700 800;
+  size-adjust: 69.8%; ascent-override: 140.4%; descent-override: 30.09%; line-gap-override: 0%;
 }
 body {
   background:
