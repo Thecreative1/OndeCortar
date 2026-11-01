@@ -214,6 +214,8 @@ const PICKS = {
       ["braun-series5-51-b1000s", "De lâminas", "3 lâminas flexíveis e AutoSense, que ajusta a potência à barba."],
       ["braun-series-3-310s", "Lâminas, para começar", "2 redes e aparador central, 100% à prova de água."],
       ["philips-x3053-series-3000", "Primeira máquina", "Rotativa de entrada com SkinProtect, a seco ou no duche."],
+      ["philips-s7887-series-7000", "Rotativa, gama alta", "45 lâminas autoafiáveis e sensor que ajusta a potência à barba."],
+      ["braun-series-9-pro-9625s", "Lâminas, gama de topo", "5 elementos de corte, cabeça a 40° e estojo de carga PowerCase."],
       ["philips-oneblade-360-qp2724", "Barba de poucos dias", "Apara, contorna e rapa com a lâmina 360."]
     ]
   },
