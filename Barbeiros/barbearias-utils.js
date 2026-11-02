@@ -579,6 +579,16 @@
     }
 
     const normalized = normalizarTexto(text);
+
+    // Andar ou fração da morada ("R/C Dto", "Fração B", "Divisão A", "Cave Direita") não é zona.
+    if (/^(?:(?:r\/c|rc)\b|fracao\b|divisao [a-z0-9]+$|cave(?: (?:direita|esquerda|dto|esq|frente))?$)/.test(normalized)) {
+      return {
+        valid: false,
+        value: text,
+        reason: ""
+      };
+    }
+
     const city = context && context.city ? normalizarTexto(context.city) : "";
     const municipality = context && context.municipality ? normalizarTexto(context.municipality) : "";
     const district = context && context.district ? normalizarTexto(context.district) : "";
