@@ -15,6 +15,7 @@
   const VENUE_REGEX = /(shopping|centro comercial|forum|fórum|loja|mercado|studio|barbershop|barber shop|barbearia)/i;
   const COUNTRY_SEGMENTS = new Set(["portugal", "portugal continental", "pt"]);
   const LOCALITY_FRONTEND_FORMS = {
+    "marques": { locative: "no Marquês" },
     "lisboa": { locative: "em Lisboa" },
     "guimaraes": { locative: "em Guimarães" },
     "braga": { locative: "em Braga" },

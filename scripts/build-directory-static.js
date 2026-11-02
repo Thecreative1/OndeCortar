@@ -296,7 +296,7 @@ function buildLocationNarrative(barber) {
   const primaryPlace = city || locality;
 
   if (zone && ![city, locality, municipality, district].some((value) => sameGeoValue(zone, value))) {
-    parts.push("na zona de " + zone);
+    parts.push("na zona " + ofPlace(zone));
   }
 
   if (primaryPlace) {

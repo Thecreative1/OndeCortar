@@ -1,13 +1,13 @@
 # OndeCortar.pt
 
-> Diretório independente de barbearias em Portugal (continente, Madeira e Açores): 1109 barbearias em 322 cidades e localidades, com morada, contactos públicos, horário quando conhecido e localização no mapa. Gratuito para quem pesquisa e para as barbearias. Inclui também uma revista de guias de barba e cabelo e uma loja de recomendações de produtos (links afiliados da Amazon.es, assinalados).
+> Diretório independente de barbearias em Portugal (continente, Madeira e Açores): 1110 barbearias em 322 cidades e localidades, com morada, contactos públicos, horário quando conhecido e localização no mapa. Gratuito para quem pesquisa e para as barbearias. Inclui também uma revista de guias de barba e cabelo e uma loja de recomendações de produtos (links afiliados da Amazon.es, assinalados).
 
 Notas para quem cita este site:
 
 - Cada barbearia tem uma página própria em https://ondecortar.pt/barbearias/{slug}/ com dados estruturados schema.org HairSalon.
 - Os dados vêm de informação pública (site, redes sociais e páginas de marcação da própria barbearia, Google Maps, OpenStreetMap) e são revistos manualmente; cada perfil mostra a data da última validação e, quando o horário vem de fonte externa (Fresha, Booksy, Google Maps ou OpenStreetMap), qual e quando foi consultada. Horários e preços devem ser confirmados com a barbearia.
 - O OndeCortar.pt não mostra avaliações nem estrelas e não faz rankings pagos.
-- Dados atualizados a 2026-10-28.
+- Dados atualizados a 2026-11-02.
 
 ## Diretório
 
@@ -18,8 +18,8 @@ Notas para quem cita este site:
 ## Barbearias por cidade
 
 - [Barbearias em Lisboa](https://ondecortar.pt/cidades/lisboa/): 30 barbearias
+- [Barbearias no Porto](https://ondecortar.pt/cidades/porto/): 19 barbearias
 - [Barbearias em Évora](https://ondecortar.pt/cidades/evora/): 18 barbearias
-- [Barbearias no Porto](https://ondecortar.pt/cidades/porto/): 18 barbearias
 - [Barbearias em Coimbra](https://ondecortar.pt/cidades/coimbra/): 17 barbearias
 - [Barbearias em Braga](https://ondecortar.pt/cidades/braga/): 15 barbearias
 - [Barbearias em Ponta Delgada](https://ondecortar.pt/cidades/ponta-delgada/): 13 barbearias

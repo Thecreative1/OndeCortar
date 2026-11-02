@@ -42486,6 +42486,49 @@ const barbearias = [
     "fontes": [
       "https://maps.google.com/?cid=9985582169864399269"
     ]
+  },
+  {
+    "nome": "Pentehouse",
+    "slug": "pentehouse",
+    "distrito": "Porto",
+    "concelho": "Porto",
+    "freguesia": null,
+    "city": "Porto",
+    "zone": "Marquês",
+    "morada": "Rua da Constituição 656, Loja 20, 4200-194 Porto",
+    "codigo_postal": "4200-194",
+    "telefone": "+351 916 605 673",
+    "email": null,
+    "website": "https://pentehouse.pt/",
+    "instagram": "https://www.instagram.com/pentehouse_barbearia/",
+    "facebook": null,
+    "booking": null,
+    "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJgdPqtldlJA0RcfObBuHD4rk",
+    "horario": "Seg-Sex 10h-20h; Sáb 10h-18h",
+    "precos": {
+      "corte": 13.5,
+      "barba": 6,
+      "corte_barba": 16,
+      "fonte": {
+        "nome": "Barbearia",
+        "url": "https://pentehouse.pt/",
+        "data": "2026-11-02"
+      }
+    },
+    "observacoes": null,
+    "nota_interna": "Pedido por email de quem faz a divulgação digital da barbearia, 2/11/2026. Horário do site da barbearia; o Google Maps diz terça 10h-17h.",
+    "coords": [
+      41.1622963,
+      -8.6054526
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-11-02",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://pentehouse.pt/",
+      "https://www.google.com/maps/place/?q=place_id:ChIJgdPqtldlJA0RcfObBuHD4rk"
+    ]
   }
 ];
 
