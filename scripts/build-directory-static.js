@@ -1442,7 +1442,7 @@ function renderProfilePage(barber, citiesMap) {
     const complete = missing.length === 0;
     const body = complete
       ? "A ficha tem todos os dados principais. Se alguma coisa mudar — horário, contactos, morada — atualiza-a para quem te procura ver a informação certa."
-      : "Faltam " + joinNatural(missing) + ". Quanto mais completa a ficha, mais fácil é os clientes encontrarem-te e contactarem-te.";
+      : (missing.length === 1 ? "Falta " : "Faltam ") + joinNatural(missing) + ". Quanto mais completa a ficha, mais fácil é os clientes encontrarem-te e contactarem-te.";
     const checklist = fields.map(function(f) {
       return '<li class="oc-owner-check__item' + (f[1] ? " is-done" : "") + '">' +
         '<span class="oc-owner-check__mark" aria-hidden="true">' + (f[1] ? iCheck : "") + "<\/span>" +
