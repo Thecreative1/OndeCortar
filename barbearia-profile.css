@@ -836,7 +836,12 @@ button { cursor: pointer; font-family: var(--sans); }
   transition: background .18s ease;
 }
 .oc-summary__cta:hover { background: #3FE27E; }
+.oc-summary__cta + .oc-summary__cta { margin-top: 10px; }
+.oc-summary .oc-summary__cta .oc-icon { width: 18px; height: 18px; }
 .oc-summary .oc-summary__cta .oc-icon--wa { width: 20px; height: 20px; fill: currentColor; }
+/* Marcar online: âmbar, a cor dos botões principais do perfil; o verde fica só para o WhatsApp */
+.oc-summary__cta--booking { background: var(--gold); color: #141614; }
+.oc-summary__cta--booking:hover { background: var(--gold-soft); }
 /* Título do cartão: voz de venda, na letra dos títulos das secções */
 .oc-summary .oc-summary__eyebrow {
   font-family: var(--serif); font-size: 27px; font-weight: 800; line-height: 1;

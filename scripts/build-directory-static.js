@@ -453,6 +453,20 @@ function classifyLink(url) {
   return { kind: "website", href: value };
 }
 
+// Botão "Marcar online" só onde se marca mesmo: ter link não chega (scripts/verificar-marcacao.js)
+const MARCACAO_VERIFICADA = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(__dirname, "..", "Barbeiros", "marcacao-verificada.json"), "utf8")).fichas;
+  } catch (err) {
+    return {};
+  }
+})();
+
+function marcaOnlineConfirmado(barber) {
+  const ficha = MARCACAO_VERIFICADA[barber.slug];
+  return Boolean(ficha && ficha.marca && ficha.url === barber.booking);
+}
+
 function normalizeLinks(item) {
   const result = { website: "", instagram: "", facebook: "", booking: "", google: "" };
   // campo explícito de marcação (ex.: Noona) — conta como booking seja qual for o domínio
@@ -1524,10 +1538,12 @@ function renderProfilePage(barber, citiesMap) {
   const whatsappHref = barber.whatsapp
     ? "https://wa.me/351" + barber.whatsapp + "?text=" + encodeURIComponent("Olá! Vi a vossa barbearia no OndeCortar.pt.")
     : "";
-  // "whatsapp-resumo" separa no GoatCounter os cliques deste botão dos da linha nos contactos
-  const summaryCta = whatsappHref
+  // "-resumo" separa no GoatCounter os cliques destes botões dos das linhas nos contactos
+  const summaryCta = (marcaOnlineConfirmado(barber)
+    ? '<a class="oc-summary__cta oc-summary__cta--booking" href="' + H(barber.booking) + '" target="_blank" rel="nofollow noopener" data-oc-click="booking-resumo">' + iCal + " Marcar online<\/a>"
+    : "") + (whatsappHref
     ? '<a class="oc-summary__cta" href="' + H(whatsappHref) + '" target="_blank" rel="nofollow noopener" data-oc-click="whatsapp-resumo">' + iWhatsApp + " Escrever no WhatsApp<\/a>"
-    : "";
+    : "");
   const summaryCard =
     '<aside class="oc-card oc-summary" aria-label="Resumo rápido">' +
       '<div class="oc-eyebrow oc-summary__eyebrow">Pronto para cortar?<\/div>' +
@@ -1719,7 +1735,7 @@ function renderProfilePage(barber, citiesMap) {
     '<span class="oc-crumb__sep">\/<\/span><span style="color:var(--ink)">' + H(barber.name) + "<\/span>";
 
   // ── Full page
-  return "<!DOCTYPE html>\n<html lang=\"pt-PT\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <meta name=\"theme-color\" content=\"#14110D\" />\n  <title>" + H(title) + "<\/title>\n  <meta name=\"description\" content=\"" + H(description) + "\" />\n  <link rel=\"canonical\" href=\"" + H(canonical) + "\" />\n  <meta property=\"og:title\" content=\"" + H(title) + "\" />\n  <meta property=\"og:description\" content=\"" + H(description) + "\" />\n  <meta property=\"og:url\" content=\"" + H(canonical) + "\" />\n  <meta property=\"og:type\" content=\"website\" />\n  " + ogImageTags(DEFAULT_OG_IMAGE) + "\n  <link rel=\"icon\" href=\"" + H(prefix) + "favicon.ico\" type=\"image/x-icon\" />\n  <link rel=\"apple-touch-icon\" href=\"" + H(prefix) + "apple-touch-icon.png\" />\n  " + fontes.fontStyleTag(prefix, fontes.PROFILE_FACES) + leafletHead + "\n  <link rel=\"stylesheet\" href=\"" + H(prefix) + "barbearia-profile.css?v=20261103-resumo\" />\n  <script defer src=\"" + H(prefix) + "oc-analytics.js\"><\/script>\n" + jsonLd + "\n<\/head>\n<body>\n\n  <header class=\"oc-topnav oc-mobile-nav\">\n    <a class=\"oc-topnav__back\" href=\"" + H(prefix) + "\" data-oc-back>" + iArrowL + " Voltar<\/a>\n    <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n    <a href=\"" + H(canonical) + "\" class=\"oc-topnav__action\" aria-label=\"Partilhar\">" + iShare + "<\/a>\n  <\/header>\n\n  <header class=\"oc-desktop-nav oc-desktop-only\" style=\"display:none\">\n    <div style=\"display:flex;align-items:center;gap:32px\">\n      <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n      <nav class=\"oc-desktop-nav__links\" aria-label=\"Navegação principal\">\n        <a href=\"" + H(prefix) + "\">Barbearias<\/a>\n        <a href=\"" + H(prefix) + "cidades\/\">Cidades<\/a>\n        <a href=\"" + H(prefix) + "registar.html\">Adicionar barbearia<\/a>\n      <\/nav>\n    <\/div>\n    <div class=\"oc-desktop-nav__actions\">\n      <a href=\"" + H(prefix) + "\" data-oc-back class=\"oc-btn oc-btn--ghost\" style=\"height:38px;padding:0 16px;font-size:13px\">" + iArrowL + " Voltar<\/a>\n      <a href=\"" + H(updateHref) + "\" class=\"oc-btn oc-btn--primary\" style=\"height:38px;padding:0 16px;font-size:13px\">Atualizar perfil " + iArrow + "<\/a>\n    <\/div>\n  <\/header>\n\n  <div class=\"oc-page\">\n    <nav class=\"oc-crumb-wrap oc-section\" style=\"padding:14px 20px 0\" aria-label=\"breadcrumb\">\n      <div class=\"oc-crumb\">" + crumbItems + "<\/div>\n    <\/nav>\n\n    <main>\n      <article itemscope itemtype=\"https://schema.org/HairSalon\">\n" +
+  return "<!DOCTYPE html>\n<html lang=\"pt-PT\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <meta name=\"theme-color\" content=\"#14110D\" />\n  <title>" + H(title) + "<\/title>\n  <meta name=\"description\" content=\"" + H(description) + "\" />\n  <link rel=\"canonical\" href=\"" + H(canonical) + "\" />\n  <meta property=\"og:title\" content=\"" + H(title) + "\" />\n  <meta property=\"og:description\" content=\"" + H(description) + "\" />\n  <meta property=\"og:url\" content=\"" + H(canonical) + "\" />\n  <meta property=\"og:type\" content=\"website\" />\n  " + ogImageTags(DEFAULT_OG_IMAGE) + "\n  <link rel=\"icon\" href=\"" + H(prefix) + "favicon.ico\" type=\"image/x-icon\" />\n  <link rel=\"apple-touch-icon\" href=\"" + H(prefix) + "apple-touch-icon.png\" />\n  " + fontes.fontStyleTag(prefix, fontes.PROFILE_FACES) + leafletHead + "\n  <link rel=\"stylesheet\" href=\"" + H(prefix) + "barbearia-profile.css?v=20261103-marcar\" />\n  <script defer src=\"" + H(prefix) + "oc-analytics.js\"><\/script>\n" + jsonLd + "\n<\/head>\n<body>\n\n  <header class=\"oc-topnav oc-mobile-nav\">\n    <a class=\"oc-topnav__back\" href=\"" + H(prefix) + "\" data-oc-back>" + iArrowL + " Voltar<\/a>\n    <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n    <a href=\"" + H(canonical) + "\" class=\"oc-topnav__action\" aria-label=\"Partilhar\">" + iShare + "<\/a>\n  <\/header>\n\n  <header class=\"oc-desktop-nav oc-desktop-only\" style=\"display:none\">\n    <div style=\"display:flex;align-items:center;gap:32px\">\n      <a href=\"" + H(prefix) + "\" class=\"oc-topnav__brand\">OndeCortar<sup>.pt<\/sup><\/a>\n      <nav class=\"oc-desktop-nav__links\" aria-label=\"Navegação principal\">\n        <a href=\"" + H(prefix) + "\">Barbearias<\/a>\n        <a href=\"" + H(prefix) + "cidades\/\">Cidades<\/a>\n        <a href=\"" + H(prefix) + "registar.html\">Adicionar barbearia<\/a>\n      <\/nav>\n    <\/div>\n    <div class=\"oc-desktop-nav__actions\">\n      <a href=\"" + H(prefix) + "\" data-oc-back class=\"oc-btn oc-btn--ghost\" style=\"height:38px;padding:0 16px;font-size:13px\">" + iArrowL + " Voltar<\/a>\n      <a href=\"" + H(updateHref) + "\" class=\"oc-btn oc-btn--primary\" style=\"height:38px;padding:0 16px;font-size:13px\">Atualizar perfil " + iArrow + "<\/a>\n    <\/div>\n  <\/header>\n\n  <div class=\"oc-page\">\n    <nav class=\"oc-crumb-wrap oc-section\" style=\"padding:14px 20px 0\" aria-label=\"breadcrumb\">\n      <div class=\"oc-crumb\">" + crumbItems + "<\/div>\n    <\/nav>\n\n    <main>\n      <article itemscope itemtype=\"https://schema.org/HairSalon\">\n" +
     heroSection + "\n" +
     '        <div class="oc-pole-wrap oc-section" style="padding:0 20px 28px"><div class="oc-pole"><\/div><\/div>\n' +
     infoRow + "\n" +
