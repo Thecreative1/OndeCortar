@@ -4938,7 +4938,7 @@ const barbearias = [
     "instagram": "https://www.instagram.com/20agecuts/",
     "facebook": "https://www.facebook.com/20agecutsevora/",
     "google_maps": null,
-    "booking": "https://buk.pt/20agecuts/",
+    "booking": "https://buk.pt/20age-cuts",
     "horario": "Seg-Sex 9h-19h; Sáb 9h-18h",
     "horario_fonte": {
       "nome": "Google Maps",
@@ -6371,7 +6371,7 @@ const barbearias = [
     "location_flags": [],
     "telefone": "+351 924 714 409",
     "email": null,
-    "website": "https://www.fresha.com/lp/en/bt/barbershops/in/pt-rural-faro-district/lagos",
+    "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
@@ -6382,6 +6382,7 @@ const barbearias = [
       "data": "2026-10-28"
     },
     "observacoes": null,
+    "nota_interna": "No Google Maps e no Fresha aparece como ALFA EXCELLENCE - PREMIUM BARBERSHOP, na mesma morada e com o mesmo telefone (3/11/2026). Sem marcação online: o Fresha só diz Call to book.",
     "coords": [
       37.1058363,
       -8.6807401
@@ -6419,7 +6420,7 @@ const barbearias = [
     "location_flags": [],
     "telefone": "+351 966 715 356",
     "email": null,
-    "website": "https://www.fresha.com/lp/en/tt/men%27s-haircuts/in/pt-rural-faro-district/lagos",
+    "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
@@ -6430,6 +6431,7 @@ const barbearias = [
       "data": "2026-10-28"
     },
     "observacoes": null,
+    "nota_interna": "Sem marcação online a 3/11/2026: o Fresha só diz Call to book.",
     "coords": [
       37.101654,
       -8.6796676
@@ -11519,7 +11521,7 @@ const barbearias = [
     "location_flags": [],
     "telefone": "+351 966 361 099",
     "email": null,
-    "website": "https://buk.pt/sabio-s-barbearia/",
+    "website": "https://buk.pt/sabios-barbearia-portuguesa",
     "instagram": null,
     "facebook": null,
     "google_maps": null,
@@ -11536,7 +11538,7 @@ const barbearias = [
     ],
     "status": "confirmado",
     "fontes": [
-      "https://buk.pt/sabio-s-barbearia/",
+      "https://buk.pt/sabios-barbearia-portuguesa",
       "https://www.fresha.com/pt/lvp/sabios-barbearia-portuguesa-rua-da-silva-tavira-VqW82l",
       "https://xn--directrio-de-empresas-qcc.cybo.com/PT/tavira/barbeiros/"
     ],
@@ -18002,12 +18004,13 @@ const barbearias = [
     "codigo_postal": "2530-161",
     "telefone": "+351 911 068 581",
     "email": null,
-    "website": "https://www.fresha.com/lvp/barbearia-toca-do-careca-rua-miguel-bombarda-lourinha-Nyno57",
+    "website": null,
     "instagram": null,
     "facebook": null,
     "google_maps": null,
     "horario": "Seg-Sáb 9h-20h, Dom 9h-14h",
     "observacoes": null,
+    "nota_interna": "A página do Fresha deu 404 e não apareceu no Google Maps a 3/11/2026. Telefone por confirmar.",
     "coords": [
       39.2415979,
       -9.3114596
@@ -40508,7 +40511,7 @@ const barbearias = [
     "website": null,
     "instagram": null,
     "facebook": null,
-    "booking": "https://www.dopamen.buk.pt",
+    "booking": "https://buk.pt/dopamen",
     "google_maps": "https://maps.google.com/?cid=7215475825287424126",
     "horario": "Ter-Sex 9h-13h30 e 15h-20h; Sáb 9h-13h30 e 15h-19h",
     "horario_fonte": {

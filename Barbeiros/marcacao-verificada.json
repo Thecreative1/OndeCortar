@@ -12,9 +12,9 @@
       "url": "https://buk.pt/19hairstudio"
     },
     "20age-cuts": {
-      "marca": false,
-      "motivo": "buk-nao-encontrada",
-      "url": "https://buk.pt/20agecuts/"
+      "marca": true,
+      "motivo": "Buk",
+      "url": "https://buk.pt/20age-cuts"
     },
     "2675-barber-shop": {
       "marca": false,
@@ -55,11 +55,6 @@
       "marca": false,
       "motivo": "fresha-sem-parceria",
       "url": "https://www.fresha.com/lvp/abarbearia-rua-serpa-pinto-horta-1Y4VXz"
-    },
-    "alfa-barbers-barbearia": {
-      "marca": false,
-      "motivo": "fresha-listagem",
-      "url": "https://www.fresha.com/lp/en/bt/barbershops/in/pt-rural-faro-district/lagos"
     },
     "amber-barbearia": {
       "marca": false,
@@ -692,11 +687,6 @@
       "motivo": "fresha-offline",
       "url": "https://www.fresha.com/a/barbearia-tinoco-1929-porto-rua-de-sa-da-bandeira-13-l1xqr1vy"
     },
-    "barbearia-toca-do-careca-lourinha": {
-      "marca": false,
-      "motivo": "erro-404",
-      "url": "https://www.fresha.com/lvp/barbearia-toca-do-careca-rua-miguel-bombarda-lourinha-Nyno57"
-    },
     "barbearia-urban-art": {
       "marca": true,
       "motivo": "Buk",
@@ -806,11 +796,6 @@
       "marca": false,
       "motivo": "fresha-sem-parceria",
       "url": "https://www.fresha.com/lvp/barbearia-351-rua-do-infante-dom-henrique-machico-9R5ajD"
-    },
-    "barbershop-abreu": {
-      "marca": false,
-      "motivo": "fresha-listagem",
-      "url": "https://www.fresha.com/lp/en/tt/men%27s-haircuts/in/pt-rural-faro-district/lagos"
     },
     "barbershop-amarante": {
       "marca": false,
@@ -1029,9 +1014,9 @@
       "url": "https://www.fresha.com/lvp/don-juan-barbearia-figueira-da-foz-7xv0yX"
     },
     "dopamen": {
-      "marca": false,
-      "motivo": "erro-ligacao",
-      "url": "https://www.dopamen.buk.pt"
+      "marca": true,
+      "motivo": "Buk",
+      "url": "https://buk.pt/dopamen"
     },
     "dope-barber-shop-caldas-da-rainha": {
       "marca": false,
@@ -1493,9 +1478,9 @@
       "url": "https://www.fresha.com/pt/lvp/rui-reis-mens-studio-rua-sao-goncalo-de-lagos-vila-real-de-santo-antonio-MV7qyz"
     },
     "sabio-s-barbearia-portuguesa": {
-      "marca": false,
-      "motivo": "buk-nao-encontrada",
-      "url": "https://buk.pt/sabio-s-barbearia/"
+      "marca": true,
+      "motivo": "Buk",
+      "url": "https://buk.pt/sabios-barbearia-portuguesa"
     },
     "santos-e-braga-barbershop": {
       "marca": false,
