@@ -42503,6 +42503,7 @@ const barbearias = [
     "instagram": "https://www.instagram.com/pentehouse_barbearia/",
     "facebook": null,
     "booking": null,
+    "whatsapp": "+351 916 605 673",
     "google_maps": "https://www.google.com/maps/place/?q=place_id:ChIJgdPqtldlJA0RcfObBuHD4rk",
     "horario": "Seg-Sex 10h-20h; Sáb 10h-18h",
     "precos": {
@@ -42516,13 +42517,13 @@ const barbearias = [
       }
     },
     "observacoes": null,
-    "nota_interna": "Pedido por email de quem faz a divulgação digital da barbearia, 2/11/2026. Horário do site da barbearia; o Google Maps diz terça 10h-17h.",
+    "nota_interna": "Pedido por email de quem faz a divulgação digital da barbearia, 2/11/2026. Horário do site da barbearia; a equipa confirmou por email, a 3/11/2026, que à terça fecha às 20h (o Google Maps diz terça 10h-17h). WhatsApp pedido e confirmado no mesmo email.",
     "coords": [
       41.1622963,
       -8.6054526
     ],
     "mostrar_no_mapa": true,
-    "ultima_validacao": "2026-11-02",
+    "ultima_validacao": "2026-11-03",
     "status": "confirmado",
     "qualidade_ficha": "alta",
     "fontes": [
