@@ -827,3 +827,18 @@ button { cursor: pointer; font-family: var(--sans); }
 .oc-icon--wa { fill: #25D366; stroke: none; }
 .oc-contact-row__action--wa { color: #25D366; border-color: rgba(37,211,102,.55); }
 .oc-contact-row__action--wa:hover { background: rgba(37,211,102,.12); border-color: #25D366; }
+/* Botão principal do cartão do topo: texto e ícone escuros, porque branco sobre #25D366 não dá contraste */
+.oc-summary__cta {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 50px; margin-top: 16px; padding: 0 16px; border-radius: 14px;
+  background: #25D366; color: #08200F;
+  font-size: 15.5px; font-weight: 600; letter-spacing: -.01em;
+  transition: background .18s ease;
+}
+.oc-summary__cta:hover { background: #3FE27E; }
+.oc-summary .oc-summary__cta .oc-icon--wa { width: 20px; height: 20px; fill: currentColor; }
+/* Título do cartão: voz de venda, na letra dos títulos das secções */
+.oc-summary .oc-summary__eyebrow {
+  font-family: var(--serif); font-size: 27px; font-weight: 800; line-height: 1;
+  letter-spacing: .01em; color: var(--ink); margin-bottom: 16px;
+}
