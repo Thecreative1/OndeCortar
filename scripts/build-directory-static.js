@@ -540,6 +540,7 @@ function buildProfileEditorial(barber) {
     : "A ficha pública ainda não mostra uma morada completa.";
   const channels = [];
   if (barber.telefone) channels.push("telefone");
+  if (barber.whatsapp) channels.push("WhatsApp");
   if (barber.booking) channels.push("ligação para marcação");
   if (barber.website) channels.push("website");
   if (barber.instagram) channels.push("Instagram");
