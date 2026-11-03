@@ -17,16 +17,29 @@ const HEADERS = {
 const PLATAFORMAS = [[/fresha\.com$/, "Fresha"], [/noona\.(pt|app)$/, "Noona"], [/buk\.pt$/, "Buk"], [/booksy\.com$/, "Booksy"],
   [/treatwell\./, "Treatwell"], [/ongenda\.com$/, "Ongenda"], [/setmore\.com$/, "Setmore"], [/tuaagenda\.com$/, "Tua Agenda"]];
 
-// O mesmo link que o build publica (normalizeLinks + classifyLink)
-function linkMarcacao(item) {
-  const booking = String(item.booking || "").trim();
-  if (booking) return booking;
+// Os links que o build pode publicar, pela mesma ordem (normalizeLinks + classifyLink)
+function linksMarcacao(item) {
+  const links = [String(item.booking || "").trim()];
   for (const campo of ["website", "instagram", "facebook", "google_maps", "google"]) {
     const value = String(item[campo] || "").trim();
     if (/instagram\.com|facebook\.com|fb\.com/i.test(value)) continue;
-    if (/fresha\.com|treatwell\.|ongenda\.com|buk\.pt/i.test(value)) return value;
+    if (/fresha\.com|treatwell\.|ongenda\.com|buk\.pt/i.test(value)) links.push(value);
   }
-  return "";
+  return [...new Set(links.filter(Boolean))];
+}
+
+// Fica o primeiro link que marca; os outros vão para `falhados`, que o build não publica
+async function verificarFicha(links) {
+  const falhados = [];
+  let primeiro = null;
+  for (const url of links) {
+    const resultado = await verificar(url);
+    if (resultado.marca) return { ...resultado, url, ...(falhados.length ? { falhados } : {}) };
+    primeiro = primeiro || { ...resultado, url };
+    falhados.push(url);
+    await new Promise((done) => setTimeout(done, 500));
+  }
+  return { ...primeiro, ...(falhados.length > 1 ? { falhados: falhados.slice(1) } : {}) };
 }
 
 function avaliar(status, finalUrl, html) {
@@ -61,14 +74,14 @@ async function verificar(url) {
 (async () => {
   const fichas = barbearias
     .filter((b) => b.mostrar_no_mapa !== false)
-    .map((b) => ({ slug: b.slug, url: linkMarcacao(b) }))
-    .filter((b) => b.url);
+    .map((b) => ({ slug: b.slug, links: linksMarcacao(b) }))
+    .filter((b) => b.links.length);
   const resultado = {};
   const fila = fichas.slice();
   await Promise.all(Array.from({ length: 4 }, async () => {
     while (fila.length) {
-      const { slug, url } = fila.shift();
-      resultado[slug] = { ...(await verificar(url)), url };
+      const { slug, links } = fila.shift();
+      resultado[slug] = await verificarFicha(links);
       await new Promise((done) => setTimeout(done, 500));
     }
   }));

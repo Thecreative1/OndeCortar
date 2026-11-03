@@ -453,7 +453,7 @@ function classifyLink(url) {
   return { kind: "website", href: value };
 }
 
-// Botão "Marcar online" só onde se marca mesmo: ter link não chega (scripts/verificar-marcacao.js)
+// Marcação só onde se marca mesmo: ter link não chega (scripts/verificar-marcacao.js)
 const MARCACAO_VERIFICADA = (() => {
   try {
     return JSON.parse(fs.readFileSync(path.join(__dirname, "..", "Barbeiros", "marcacao-verificada.json"), "utf8")).fichas;
@@ -467,19 +467,29 @@ function marcaOnlineConfirmado(barber) {
   return Boolean(ficha && ficha.marca && ficha.url === barber.booking);
 }
 
+// As /lvp/ e /lp/ do Fresha nunca marcam, mesmo em fichas novas ainda por verificar
+function marcacaoNaoFunciona(slug, url) {
+  if (/fresha\.com\/(?:[a-z-]+\/)?(?:lvp|lp)\//i.test(url)) return true;
+  const ficha = MARCACAO_VERIFICADA[slug];
+  if (!ficha) return false;
+  return (ficha.url === url && !ficha.marca) || (ficha.falhados || []).includes(url);
+}
+
 function normalizeLinks(item) {
   const result = { website: "", instagram: "", facebook: "", booking: "", google: "" };
   // campo explícito de marcação (ex.: Noona) — conta como booking seja qual for o domínio
-  const booking = String(item.booking || "").trim();
-  if (booking) result.booking = booking;
+  const marcacoes = [String(item.booking || "").trim()].filter(Boolean);
   ["website", "instagram", "facebook", "google_maps", "google"].forEach((field) => {
     const value = String(item[field] || "").trim();
     if (!value) return;
     const classified = classifyLink(value);
-    if (classified.kind && !result[classified.kind]) {
+    if (classified.kind === "booking") {
+      marcacoes.push(classified.href);
+    } else if (classified.kind && !result[classified.kind]) {
       result[classified.kind] = classified.href;
     }
   });
+  result.booking = marcacoes.find((url) => !marcacaoNaoFunciona(item.slug, url)) || "";
   return result;
 }
 
@@ -706,9 +716,9 @@ function buildCityIntro(cityName, cityBarbers, hierarchy) {
         : "Algumas opções também já têm marcação online, o que facilita o primeiro contacto.")
       : (withPhone || withSocial)
         ? (cityBarbers.length === 1
-          ? "Ainda não tem marcação online: o contacto faz-se por telefone ou pelas redes sociais."
-          : "Nenhuma tem ainda marcação online: o contacto faz-se por telefone ou pelas redes sociais.")
-        : (cityBarbers.length === 1 ? "Ainda não tem marcação online." : "Nenhuma tem ainda marcação online.")
+          ? "Ainda não indica marcação online: o contacto faz-se por telefone ou pelas redes sociais."
+          : "Nenhuma indica ainda marcação online: o contacto faz-se por telefone ou pelas redes sociais.")
+        : (cityBarbers.length === 1 ? "Ainda não indica marcação online." : "Nenhuma indica ainda marcação online.")
   ].join(" ");
 }
 
@@ -2714,6 +2724,10 @@ function buildClientDataFile(rawBarbers, cities) {
       if (!CLIENT_OMIT_FIELDS.has(key) && !isEmpty(barber[key])) {
         out[key] = barber[key];
       }
+    });
+    // O cliente também lê links do Fresha como marcação (script.js): os que não marcam não vão
+    ["booking", "website", "google_maps", "google"].forEach((key) => {
+      if (out[key] && marcacaoNaoFunciona(barber.slug, out[key])) delete out[key];
     });
     return out;
   });

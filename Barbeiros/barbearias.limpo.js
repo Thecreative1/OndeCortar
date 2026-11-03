@@ -8725,7 +8725,7 @@ const barbearias = [
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": null,
+    "telefone": "+351 968 125 663",
     "email": null,
     "website": "https://www.fresha.com/nl/lvp/barbearia-porto-los-patrones-rua-aires-de-ornelas-porto-oo5lzQ",
     "instagram": null,
@@ -8733,6 +8733,7 @@ const barbearias = [
     "google_maps": null,
     "horario": null,
     "observacoes": null,
+    "nota_interna": "Telefone da página da barbearia no Fresha, consultada a 3/11/2026.",
     "coords": [
       41.1566901,
       -8.5966365
@@ -16572,7 +16573,7 @@ const barbearias = [
     "city": "Vila Nova de Gaia",
     "morada": "Rua do Paniceiro 358, 4400-536 Vila Nova de Gaia",
     "codigo_postal": "4400-536",
-    "telefone": null,
+    "telefone": "+351 966 615 579",
     "email": null,
     "website": "https://www.fresha.com/lvp/barbearia-magina-rua-do-paniceiro-vila-nova-de-gaia-85rwZ5",
     "instagram": null,
@@ -16585,6 +16586,7 @@ const barbearias = [
       "data": "2026-10-01"
     },
     "observacoes": null,
+    "nota_interna": "Telefone da página da barbearia no Fresha, consultada a 3/11/2026.",
     "coords": [
       41.1234,
       -8.6469
@@ -16606,7 +16608,7 @@ const barbearias = [
     "city": "Vila Nova de Gaia",
     "morada": "Avenida dos Aliados 177, 4400-011 Vila Nova de Gaia",
     "codigo_postal": "4400-011",
-    "telefone": null,
+    "telefone": "+351 223 751 485",
     "email": null,
     "website": "https://www.fresha.com/lvp/barbearia-espaco-novo-avenida-aliados-vila-nova-de-gaia-oo5q9x",
     "instagram": null,
@@ -16614,6 +16616,7 @@ const barbearias = [
     "google_maps": null,
     "horario": "Seg-Sex 9h-13h e 15h-20h, Sáb 8h-13h",
     "observacoes": null,
+    "nota_interna": "Telefone da página da barbearia no Fresha, consultada a 3/11/2026.",
     "coords": [
       41.1248,
       -8.6327
@@ -16664,7 +16667,7 @@ const barbearias = [
     "city": "Braga",
     "morada": "Rua Nova de Santa Cruz 260, 4710-409 Braga",
     "codigo_postal": "4710-409",
-    "telefone": null,
+    "telefone": "+351 923 126 385",
     "email": null,
     "website": "https://www.fresha.com/lvp/barbearia-resenha-rua-nova-de-santa-cruz-braga-7xvRZX",
     "instagram": null,
@@ -16677,6 +16680,7 @@ const barbearias = [
       "data": "2026-10-01"
     },
     "observacoes": null,
+    "nota_interna": "Telefone da página da barbearia no Fresha, consultada a 3/11/2026.",
     "coords": [
       41.5552,
       -8.4039
@@ -16698,7 +16702,7 @@ const barbearias = [
     "city": "Portimão",
     "morada": "Rua Damião Luís Faria de Castro 11, 8500-802 Portimão",
     "codigo_postal": "8500-802",
-    "telefone": null,
+    "telefone": "+351 963 556 480",
     "email": null,
     "website": "https://www.fresha.com/lvp/a-barbearia-de-portimao-rua-damiao-luis-faria-de-castro-portimao-qLXlqy",
     "instagram": null,
@@ -16711,6 +16715,7 @@ const barbearias = [
       "data": "2026-10-01"
     },
     "observacoes": null,
+    "nota_interna": "Telefone da página da barbearia no Fresha, consultada a 3/11/2026.",
     "coords": [
       37.1215,
       -8.5378
@@ -16766,7 +16771,7 @@ const barbearias = [
     "city": "Loulé",
     "morada": "Rua Serpa Pinto 39, 8100-714 Loulé",
     "codigo_postal": "8100-714",
-    "telefone": null,
+    "telefone": "+351 289 146 757",
     "email": null,
     "website": "https://www.fresha.com/lvp/mansclass-barbershop-rua-serpa-pinto-loule-Kk5q8R",
     "instagram": null,
@@ -16774,6 +16779,7 @@ const barbearias = [
     "google_maps": null,
     "horario": "Seg-Sex 9h-19h, Sáb 9h-16h",
     "observacoes": null,
+    "nota_interna": "Telefone da página da barbearia no Fresha, consultada a 3/11/2026.",
     "coords": [
       37.1394,
       -8.027
@@ -16795,7 +16801,7 @@ const barbearias = [
     "city": "Matosinhos",
     "morada": "Avenida Menéres 611, 4450-189 Matosinhos",
     "codigo_postal": "4450-189",
-    "telefone": null,
+    "telefone": "+351 229 383 121",
     "email": null,
     "website": "https://www.fresha.com/lvp/barbearia-corte-real-r-matosinhos-avenida-meneres-matosinhos-k9Porw",
     "instagram": null,
@@ -16803,6 +16809,7 @@ const barbearias = [
     "google_maps": null,
     "horario": "Seg-Sex 9h-19h, Sáb 8h30-17h",
     "observacoes": null,
+    "nota_interna": "Telefone da página da barbearia no Fresha, consultada a 3/11/2026.",
     "coords": [
       41.1787,
       -8.6855
@@ -16855,7 +16862,7 @@ const barbearias = [
     "zone": "Colinas do Cruzeiro",
     "morada": "Avenida Miguel Torga 14, 2675-663 Odivelas",
     "codigo_postal": "2675-663",
-    "telefone": null,
+    "telefone": "+351 964 779 557",
     "email": null,
     "website": "https://www.fresha.com/lvp/2675-barber-shop-avenida-miguel-torga-odivelas-l18vB8",
     "instagram": null,
@@ -16868,6 +16875,7 @@ const barbearias = [
       "data": "2026-10-01"
     },
     "observacoes": null,
+    "nota_interna": "Telefone da página da barbearia no Fresha, consultada a 3/11/2026.",
     "coords": [
       38.7834,
       -9.1929
@@ -16889,7 +16897,7 @@ const barbearias = [
     "city": "Barreiro",
     "morada": "Rua Dom Afonso de Albuquerque 11B, 2830-177 Barreiro",
     "codigo_postal": "2830-177",
-    "telefone": null,
+    "telefone": "+351 931 871 120",
     "email": null,
     "website": "https://www.fresha.com/lvp/atelier-do-barbeiro-rua-dom-afonso-de-albuquerque-barreiro-zXDRn4",
     "instagram": null,
@@ -16902,6 +16910,7 @@ const barbearias = [
       "data": "2026-10-01"
     },
     "observacoes": null,
+    "nota_interna": "Telefone da página da barbearia no Fresha, consultada a 3/11/2026.",
     "coords": [
       38.6452,
       -9.054
@@ -17079,7 +17088,7 @@ const barbearias = [
     "zone": null,
     "morada": "Praça de Carlos Alberto 123, Sala 11, 4050-190 Porto",
     "codigo_postal": "4050-190",
-    "telefone": null,
+    "telefone": "+351 932 798 443",
     "email": null,
     "website": "https://www.fresha.com/a/barbearia-invicta-porto-praca-de-carlos-alberto-123-xwfvu71b",
     "instagram": null,
@@ -17087,6 +17096,7 @@ const barbearias = [
     "google_maps": null,
     "horario": "Seg-Sex 9h-19h, Sáb 8h30-13h",
     "observacoes": null,
+    "nota_interna": "Telefone da página da barbearia no Fresha, consultada a 3/11/2026.",
     "coords": [
       41.1476,
       -8.6159
@@ -17109,7 +17119,7 @@ const barbearias = [
     "zone": null,
     "morada": "Rua de Sá da Bandeira 13, 4000-433 Porto",
     "codigo_postal": "4000-433",
-    "telefone": null,
+    "telefone": "+351 912 265 723",
     "email": null,
     "website": "https://www.fresha.com/a/barbearia-tinoco-1929-porto-rua-de-sa-da-bandeira-13-l1xqr1vy",
     "instagram": null,
@@ -17117,6 +17127,7 @@ const barbearias = [
     "google_maps": null,
     "horario": "Seg-Sáb 10h-19h",
     "observacoes": null,
+    "nota_interna": "Telefone da página da barbearia no Fresha, consultada a 3/11/2026.",
     "coords": [
       41.1463,
       -8.6103
@@ -18019,7 +18030,7 @@ const barbearias = [
     "zone": null,
     "morada": "Rua Ramiro de Matos Bilhau 3, 2520-408 Peniche",
     "codigo_postal": "2520-408",
-    "telefone": null,
+    "telefone": "+351 922 233 166",
     "email": null,
     "website": "https://www.fresha.com/a/penareiabarber-peniche-rua-ramiro-de-matos-bilhau-3-z4hg0qlm",
     "instagram": null,
@@ -18037,6 +18048,7 @@ const barbearias = [
       }
     },
     "observacoes": null,
+    "nota_interna": "Telefone da página da barbearia no Fresha, consultada a 3/11/2026.",
     "coords": [
       39.3606949,
       -9.3791332

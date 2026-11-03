@@ -152,9 +152,12 @@
       "url": "https://www.fresha.com/lvp/barbearia-2460-praca-25-de-abril-alcobaca-W4WK8Z"
     },
     "barbearia-2r": {
-      "marca": false,
-      "motivo": "fresha-sem-parceria",
-      "url": "https://www.fresha.com/lvp/barbearia-2r-avenida-bombeiros-voluntarios-mirandela-wXDEMG"
+      "marca": true,
+      "motivo": "Buk",
+      "url": "https://barbearia2r.buk.pt/",
+      "falhados": [
+        "https://www.fresha.com/lvp/barbearia-2r-avenida-bombeiros-voluntarios-mirandela-wXDEMG"
+      ]
     },
     "barbearia-3-de-janeiro": {
       "marca": true,
@@ -537,9 +540,12 @@
       "url": "https://www.noona.pt/barbershopmartins7"
     },
     "barbearia-martins-vila-pouca-de-aguiar": {
-      "marca": false,
-      "motivo": "fresha-sem-parceria",
-      "url": "https://www.fresha.com/lvp/barbearia-martins-praca-25-de-abril-vila-pouca-de-aguiar-wXDqoW"
+      "marca": true,
+      "motivo": "Buk",
+      "url": "https://barbearia-martins.buk.pt/",
+      "falhados": [
+        "https://www.fresha.com/lvp/barbearia-martins-praca-25-de-abril-vila-pouca-de-aguiar-wXDqoW"
+      ]
     },
     "barbearia-mena": {
       "marca": false,
@@ -812,9 +818,12 @@
       "url": "https://www.fresha.com/lvp/barbershop-amarante-avenida-25-de-abril-amarante-D1rkbY"
     },
     "barbershop-bernardo-fernandes": {
-      "marca": false,
-      "motivo": "fresha-sem-parceria",
-      "url": "https://www.fresha.com/lvp/barbershop-bernardo-fernandes-rua-tomaz-ribeiro-tondela-D1rW0Y"
+      "marca": true,
+      "motivo": "Buk",
+      "url": "https://barbershopbernardofernandes.buk.pt/",
+      "falhados": [
+        "https://www.fresha.com/lvp/barbershop-bernardo-fernandes-rua-tomaz-ribeiro-tondela-D1rW0Y"
+      ]
     },
     "barbershop-duart": {
       "marca": true,
@@ -852,9 +861,12 @@
       "url": "https://barras-barbershop-barbearia.buk.pt"
     },
     "bibikas-barbershop": {
-      "marca": false,
-      "motivo": "fresha-sem-parceria",
-      "url": "https://www.fresha.com/lvp/bibikas-barbershop-rua-tomas-ribeiro-torre-de-moncorvo-Ek5ByL"
+      "marca": true,
+      "motivo": "Buk",
+      "url": "https://bibikas-barbershop.buk.pt/",
+      "falhados": [
+        "https://www.fresha.com/lvp/bibikas-barbershop-rua-tomas-ribeiro-torre-de-moncorvo-Ek5ByL"
+      ]
     },
     "billy-boys-barbershop-leiria": {
       "marca": false,
@@ -1027,9 +1039,12 @@
       "url": "https://www.fresha.com/lvp/dope-barber-shop-praca-5-de-outubro-caldas-da-rainha-BK81b8"
     },
     "duarte-s-barbershop": {
-      "marca": false,
-      "motivo": "fresha-sem-parceria",
-      "url": "https://www.fresha.com/lvp/duartes-barbershop-rua-rei-da-memoria-benedita-X0EBV5"
+      "marca": true,
+      "motivo": "Buk",
+      "url": "https://buk.pt/duartesbarbershop",
+      "falhados": [
+        "https://www.fresha.com/lvp/duartes-barbershop-rua-rei-da-memoria-benedita-X0EBV5"
+      ]
     },
     "eazy-cuts-barbershop": {
       "marca": true,
@@ -1157,9 +1172,12 @@
       "url": "https://www.fresha.com/lvp/hacker-style-barberia-largo-do-cardal-pombal-bLzy1D"
     },
     "hairstop-kiko-barbershop": {
-      "marca": false,
-      "motivo": "fresha-sem-parceria",
-      "url": "https://www.fresha.com/lvp/hairstop-kiko-barbershop-rua-da-liberdade-guia-5zPJPR"
+      "marca": true,
+      "motivo": "Buk",
+      "url": "https://hairstopkikobarbershop.buk.pt/",
+      "falhados": [
+        "https://www.fresha.com/lvp/hairstop-kiko-barbershop-rua-da-liberdade-guia-5zPJPR"
+      ]
     },
     "helder-barros-barbershop": {
       "marca": false,
@@ -1297,9 +1315,12 @@
       "url": "https://www.fresha.com/lvp/medieval-barbershop-rua-republica-mirandela-QkGWKA"
     },
     "men-s-corvo": {
-      "marca": false,
-      "motivo": "fresha-sem-parceria",
-      "url": "https://www.fresha.com/lvp/mens-corvo-rua-flores-torre-de-moncorvo-alzyjv"
+      "marca": true,
+      "motivo": "Buk",
+      "url": "https://menscorvo.buk.pt/",
+      "falhados": [
+        "https://www.fresha.com/lvp/mens-corvo-rua-flores-torre-de-moncorvo-alzyjv"
+      ]
     },
     "mil128-barbearia": {
       "marca": false,
