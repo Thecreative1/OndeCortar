@@ -33,6 +33,14 @@ function escapeHtml(value) {
 
 // [slug do produto, etiqueta, nota]
 const PICKS = {
+  "laminas-oneblade-qual-comprar-e-quanto-duram": {
+    title: "Lâminas e máquinas OneBlade",
+    items: [
+      ["philips-oneblade-laminas-360", "A nossa escolha", "Pack de 3 lâminas originais 360, encaixam em todos os OneBlade e OneBlade Pro."],
+      ["philips-oneblade-360-qp2724", "Ainda sem máquina", "Lâmina 360 e duas lâminas incluídas, para barba curta e de poucos dias."],
+      ["philips-oneblade-pro-360", "Comprimentos variados", "Pente de 20 comprimentos, para rosto e corpo."]
+    ]
+  },
   "melhor-aparador-de-barba": {
     title: "Os 8 melhores aparadores de barba",
     items: [
@@ -354,6 +362,11 @@ const PICKS = {
 
 // Barra fixa mobile nos guias de compra: produto + id da secção depois da qual aparece
 const STICKY = {
+  "laminas-oneblade-qual-comprar-e-quanto-duram": {
+    product: "philips-oneblade-laminas-360",
+    label: "A nossa escolha",
+    after: "qual-lamina"
+  },
   "melhor-aparador-de-barba": {
     product: "philips-bt5765-series-5000",
     label: "A nossa escolha",
