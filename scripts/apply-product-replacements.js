@@ -137,7 +137,10 @@ for (const file of files) {
         .split(esc(pair.old.name)).join(esc(pair.fresh.name));
       html = html.replace(/<!-- OC-UNAVAILABLE-START -->[\s\S]*?<!-- OC-UNAVAILABLE-END -->/, swapIn)
         .replace(/(<p>[^<]*(?:alternativa que recomendamos|bálsamo que recomendamos)[^<]*: )([^<]*)(\.<\/p>)/, (m, a, name, b) =>
-          name === esc(pair.old.name) ? a + esc(pair.fresh.name) + b : m);
+          name === esc(pair.old.name) ? a + esc(pair.fresh.name) + b : m)
+        // barra fixa mobile (o botão já leva ao novo substituto; faltava o nome — visto a 2026-11-06)
+        .split("<small>Alternativa</small>" + esc(pair.old.name) + "</span>")
+        .join("<small>Alternativa</small>" + esc(pair.fresh.name) + "</span>");
     }
     // ItemList JSON-LD (loja/index.html)
     html = html.replace(
