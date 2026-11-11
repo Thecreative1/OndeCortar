@@ -18,8 +18,11 @@ const EVENT = {
   year: 2026,
   blackFriday: "sexta-feira, 27 de novembro de 2026",
   cyberMonday: "segunda-feira, 30 de novembro de 2026",
-  // Fonte: aboutamazon.es — Semana de Black Friday 2025 de 20/11 a 1/12
-  previous: "Em 2025, a Semana de Black Friday da Amazon.es durou de 20 de novembro a 1 de dezembro."
+  // Fonte: aboutamazon.es, 10/11/2026 — "La Semana de Black Friday de Amazon vuelve del 19 al 30 de noviembre"
+  announced: "10 de novembro",
+  week: "de 19 a 30 de novembro",
+  // Mesma fonte: prazo de devolução alargado para a maioria dos artigos comprados de 1/11 a 6/1
+  returns: "A Amazon.es alarga o prazo de devolução da maioria dos artigos comprados entre 1 de novembro e 6 de janeiro: podem ser devolvidos até 6 de fevereiro."
 };
 
 const WATCH = [
@@ -91,15 +94,17 @@ const main = '<main>' +
   '<div class="hero-actions"><a class="btn btn-primary" href="#' + WATCH[0].id + '">Ver a lista</a>' +
   '<a class="btn btn-secondary" href="' + bfUrl + '" ' + LINK + '>Ofertas na Amazon.es</a></div></div>' +
   '<div class="hero-side"><div class="store-note"><strong>Datas a apontar</strong><ul class="rich-list">' +
+  '<li>Semana de Black Friday na Amazon.es: ' + esc(EVENT.week) + '</li>' +
   '<li>Black Friday: ' + esc(EVENT.blackFriday) + '</li><li>Cyber Monday: ' + esc(EVENT.cyberMonday) + '</li>' +
-  '<li>' + esc(EVENT.previous) + ' Confirma as datas deste ano na Amazon.es.</li></ul></div></div></div></div></section>' +
+  '<li>Devoluções até 6 de fevereiro na maioria dos artigos comprados até 6 de janeiro.</li></ul></div></div></div></div></section>' +
   WATCH.map((g, i) => '<section class="section' + (i % 2 === 0 ? ' loja-feat-panel' : '') + '" id="' + g.id + '"><div class="container"><div class="section-header section-header--compact"><div>' +
     '<span class="eyebrow">A vigiar</span><h2>' + esc(g.title) + '</h2><p>' + esc(g.intro) + '</p></div></div>' +
     '<div class="loja-feat-grid">' + g.items.map(card).join("") + '</div></div></section>').join("") +
   '<section class="section" id="quando"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Datas</span>' +
   '<h2>Quando é a Black Friday ' + EVENT.year + ' na Amazon.es?</h2>' +
-  '<p>A Black Friday é na ' + esc(EVENT.blackFriday) + ' e a Cyber Monday na ' + esc(EVENT.cyberMonday) + '. ' + esc(EVENT.previous) +
-  ' As ofertas costumam começar uns dias antes da sexta-feira; atualizamos esta página quando a Amazon.es anunciar as datas deste ano.</p></div></div></div></section>' +
+  '<p>A Amazon.es anunciou a ' + esc(EVENT.announced) + ' a Semana de Black Friday: ' + esc(EVENT.week) + '. A Black Friday é na ' + esc(EVENT.blackFriday) +
+  ', e a Cyber Monday na ' + esc(EVENT.cyberMonday) + ', o último dia da semana. Ao longo da semana entram ofertas novas: se o modelo que queres não baixar no primeiro dia, vale a pena voltar a ver.</p>' +
+  '<p>' + esc(EVENT.returns) + ' Se é para oferecer, dá para tratar já da prenda de Natal sem a troca ficar fora de prazo. Confirma o prazo na página do artigo antes de comprar.</p></div></div></div></section>' +
   '<section class="section" id="dicas"><div class="container"><div class="section-header section-header--compact"><div><span class="eyebrow">Antes de comprar</span>' +
   '<h2>Como saber se o desconto é mesmo bom</h2></div></div><div class="quick-answer-grid">' +
   TIPS.map(([t, d]) => '<article class="quick-answer-card"><strong>' + esc(t) + '</strong><p>' + esc(d) + '</p></article>').join("") + '</div></div></section>' +
