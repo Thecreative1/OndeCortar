@@ -18,6 +18,6 @@ module.exports = [
     limits: ["só um pente, de 3 mm: quem quer deixar mais comprimento precisa de outra máquina", "na Amazon.es é vendido por um vendedor externo, não pela Amazon; 30 minutos de bateria e carrega por USB-A sem adaptador"],
     categories: ["trimmers-e-shavers"],
     articles: ["como-aparar-pelos-intimos-masculinos", "aparador-corporal-masculino-qual-escolher", "laminas-oneblade-qual-comprar-e-quanto-duram"],
-    related: ["philips-bodygroom-bg3480", "philips-oneblade-360-qp2724", "philips-oneblade-laminas-360"]
+    related: ["philips-oneblade-laminas-skinprotect", "philips-bodygroom-bg3480", "philips-oneblade-360-qp2724"]
   }
 ];

@@ -38,7 +38,7 @@ const PICKS = {
     items: [
       ["philips-bodygroom-bg3480", "Para o corpo todo", "Pentes de 2 e 3 mm e cabeça para rapar, à prova de água, até 80 minutos de bateria."],
       ["philips-oneblade-intimate-qp1924", "Só zona íntima e axilas", "Lâmina SkinProtect de pontas arredondadas e pente de 3 mm."],
-      ["philips-oneblade-laminas-360", "Já tens um OneBlade", "Lâminas de substituição: usa uma só para o corpo."]
+      ["philips-oneblade-laminas-skinprotect", "Lâminas para a zona íntima", "Lâminas SkinProtect do Intimate; também encaixam em qualquer OneBlade."]
     ]
   },
   "laminas-oneblade-qual-comprar-e-quanto-duram": {

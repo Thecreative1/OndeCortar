@@ -89,7 +89,7 @@ module.exports = [
           cta("B0FJM3MZ9T", "philips-bodygroom-bg3480") +
           "<p><strong>Se é sobretudo para a zona íntima, o " + p("philips-oneblade-intimate-qp1924", "OneBlade Intimate") + " é a opção mais específica.</strong> Segundo a Philips, a lâmina SkinProtect tem bordas e pontas arredondadas para as zonas sensíveis, corta nos dois sentidos para chegar às zonas difíceis e é 100% à prova de água (IPX7). Traz 2 lâminas, que a marca diz durarem até 4 meses cada. As limitações: só tem um pente, de 3 mm, e na Amazon.es é vendido por um vendedor externo, não pela própria Amazon.</p>" +
           cta("B0DFYN8174", "philips-oneblade-intimate-qp1924") +
-          "<p>Vale a pena o Intimate se já tens um OneBlade? Em parte. A Philips vende a lâmina SkinProtect em separado (QP229) e ela encaixa nos OneBlade normais; explicamos tudo em " + r("laminas-oneblade-qual-comprar-e-quanto-duram", "lâminas OneBlade: qual comprar") + ". O Intimate faz sentido para quem quer uma máquina só para esta zona, sem andar a trocar lâminas.</p>"
+          "<p>Vale a pena o Intimate se já tens um OneBlade? Em parte. A Philips vende as " + p("philips-oneblade-laminas-skinprotect", "lâminas SkinProtect (QP229)") + " em separado, e encaixam nos OneBlade normais; explicamos tudo em " + r("laminas-oneblade-qual-comprar-e-quanto-duram", "lâminas OneBlade: qual comprar") + ". O Intimate faz sentido para quem quer uma máquina só para esta zona, sem andar a trocar lâminas.</p>"
       },
       {
         id: "passo-a-passo",
