@@ -42545,6 +42545,54 @@ const barbearias = [
       "https://pentehouse.pt/",
       "https://www.google.com/maps/place/?q=place_id:ChIJgdPqtldlJA0RcfObBuHD4rk"
     ]
+  },
+  {
+    "nome": "Barbearia 27 de Agosto",
+    "slug": "barbearia-27-de-agosto",
+    "distrito": "Braga",
+    "concelho": "Braga",
+    "freguesia": null,
+    "city": "Braga",
+    "zone": null,
+    "morada": "Rua Adelino Arantes 10, 4700-357 Braga",
+    "codigo_postal": "4700-357",
+    "telefone": "+351 910 179 842",
+    "email": null,
+    "website": "https://barbearia27deagosto.pt/",
+    "instagram": "https://www.instagram.com/barbearia27deagosto/",
+    "facebook": null,
+    "booking": null,
+    "whatsapp": "+351 910 179 842",
+    "google_maps": "https://maps.google.com/?cid=10540818458543667961",
+    "horario": "Seg-Sex 10h-20h; Sáb 9h-20h",
+    "horario_fonte": {
+      "nome": "Google Maps",
+      "url": "https://maps.google.com/?cid=10540818458543667961",
+      "data": "2026-11-17"
+    },
+    "precos": {
+      "corte": 16,
+      "corte_barba": 22,
+      "fonte": {
+        "nome": "Barbearia",
+        "url": null,
+        "data": "2026-11-16"
+      }
+    },
+    "observacoes": null,
+    "nota_interna": "Pedido pelo formulário registar.html a 16/11/2026 (responsável no email do Formspree). WhatsApp confirmado no formulário (whatsapp: sim). Morada, CP e telefone confirmados no Google Maps a 17/11/2026; horário do Maps (o formulário veio sem horário). Email do formulário não publicado (não pedido em Informação adicional). O site liga a facebook.com/geldocorte, nome diferente — não posto.",
+    "coords": [
+      41.5578377,
+      -8.4185295
+    ],
+    "mostrar_no_mapa": true,
+    "ultima_validacao": "2026-11-17",
+    "status": "confirmado",
+    "qualidade_ficha": "alta",
+    "fontes": [
+      "https://barbearia27deagosto.pt/",
+      "https://maps.google.com/?cid=10540818458543667961"
+    ]
   }
 ];
 
