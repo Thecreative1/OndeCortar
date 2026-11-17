@@ -33,6 +33,14 @@ function escapeHtml(value) {
 
 // [slug do produto, etiqueta, nota]
 const PICKS = {
+  "como-aparar-pelos-intimos-masculinos": {
+    title: "Aparadores para a zona íntima",
+    items: [
+      ["philips-bodygroom-bg3480", "Para o corpo todo", "Pentes de 2 e 3 mm e cabeça para rapar, à prova de água, até 80 minutos de bateria."],
+      ["philips-oneblade-intimate-qp1924", "Só zona íntima e axilas", "Lâmina SkinProtect de pontas arredondadas e pente de 3 mm."],
+      ["philips-oneblade-laminas-360", "Já tens um OneBlade", "Lâminas de substituição: usa uma só para o corpo."]
+    ]
+  },
   "laminas-oneblade-qual-comprar-e-quanto-duram": {
     title: "Lâminas e máquinas OneBlade",
     items: [
@@ -362,6 +370,11 @@ const PICKS = {
 
 // Barra fixa mobile nos guias de compra: produto + id da secção depois da qual aparece
 const STICKY = {
+  "como-aparar-pelos-intimos-masculinos": {
+    product: "philips-bodygroom-bg3480",
+    label: "A nossa escolha",
+    after: "que-aparador"
+  },
   "laminas-oneblade-qual-comprar-e-quanto-duram": {
     product: "philips-oneblade-laminas-360",
     label: "A nossa escolha",
