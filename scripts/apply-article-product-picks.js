@@ -33,6 +33,15 @@ function escapeHtml(value) {
 
 // [slug do produto, etiqueta, nota]
 const PICKS = {
+  "cabelos-brancos-homem-como-disfarcar": {
+    title: "Para os cabelos brancos",
+    items: [
+      ["just-for-men-control-gx-cabelo", "Escurecer aos poucos", "Champô que reduz os brancos a cada lavagem, sem amoníaco nem peróxido."],
+      ["just-for-men-control-gx-2em1", "Champô e condicionador", "O mesmo efeito gradual, num 2 em 1 que se pode usar todos os dias."],
+      ["just-for-men-tinta-cabelo-h45", "Tapar tudo", "Tinta em gel, 5 minutos, até 8 semanas. Do castanho claro ao preto."],
+      ["loreal-professionnel-silver-champo", "Assumir o grisalho", "Champô roxo que neutraliza o tom amarelado do cabelo branco."]
+    ]
+  },
   "laminas-gillette-fusion5-proglide-ou-mach3": {
     title: "Recargas Gillette",
     items: [
