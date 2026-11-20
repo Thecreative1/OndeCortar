@@ -13,7 +13,10 @@ module.exports = {
     "depilacao homem", "pelos peito homem", "pelos costas", "aparador corporal", "unhas homem",
     "kit barba", "prenda homem", "presente homem", "prenda pai", "material barbeiro", "produtos barbearia",
     "tesoura cabelo", "pente barba", "escova barba", "secador cabelo homem", "escova alisadora",
-    "perfume barbearia", "desodorizante homem"
+    "perfume barbearia", "desodorizante homem",
+    // temas tabu / envergonhados (20/11): compra-se às escondidas
+    "fibras capilares", "disfarcar calvicie", "protese capilar homem", "corretor olheiras homem", "maquilhagem homem",
+    "creme depilatorio homem", "gel intimo homem", "minoxidil barba", "derma roller barba", "suor axilas homem"
   ],
   // Prefixos/sufixos que mostram intenção (compra, dúvida). Terminar em espaço = prefixo.
   MODIFICADORES_PT: ["melhor ", "qual ", "como ", "para", "de"],
@@ -24,7 +27,9 @@ module.exports = {
     "hombre pelo", "champu hombre", "cera pelo hombre", "pomada pelo", "canas hombre", "calvo",
     "crema hombre", "crema facial hombre", "contorno ojos hombre", "protector solar hombre", "cejas hombre",
     "nariz", "orejas pelo", "depiladora hombre", "corporal hombre", "kit barba", "regalo hombre",
-    "barbero", "barberia", "tijeras pelo", "peine barba", "cepillo barba", "secador hombre", "cepillo alisador"
+    "barbero", "barberia", "tijeras pelo", "peine barba", "cepillo barba", "secador hombre", "cepillo alisador",
+    "fibras capilares", "corrector ojeras hombre", "maquillaje hombre", "crema depilatoria hombre", "gel intimo hombre",
+    "desodorante intimo hombre", "minoxidil barba", "derma roller barba", "afeitadora espalda"
   ],
   // Um termo só conta se tiver uma destas palavras (sem acentos).
   NICHO: [

@@ -33,6 +33,14 @@ function escapeHtml(value) {
 
 // [slug do produto, etiqueta, nota]
 const PICKS = {
+  "creme-depilatorio-homem-como-usar": {
+    title: "Cremes depilatórios para homem",
+    items: [
+      ["no-hair-crew-creme-intimo", "Zona íntima", "Púbis, virilhas, testículos e glúteos, 4 a 8 minutos. Teste de pele 24 h antes."],
+      ["veet-men-kit-zonas-intimas", "Íntimo, com bálsamo", "Creme e bálsamo pós-depilação. Segue o folheto da caixa."],
+      ["veet-men-creme-depilatorio-corpo", "Peito e costas", "Pele sensível, 5 a 10 minutos, resultado até 7 dias. Não é para a zona íntima."]
+    ]
+  },
   "champo-anticaspa-homem-qual-escolher": {
     title: "Champôs anticaspa",
     items: [
