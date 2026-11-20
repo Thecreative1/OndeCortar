@@ -23,6 +23,7 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").repl
 
 // slug do artigo → [ficheiro em imagens/revista/, alt]
 const NEW_HEROES = {
+  "tinta-para-barba-como-pintar-a-barba-branca": ["tinta-para-barba.jpg", "Homem de meia-idade com barba aparada e grisalha, de casaco claro, a olhar para a câmara"],
   "como-aparar-pelos-intimos-masculinos": ["aparar-pelos-intimos-masculinos.jpg", "Duas toalhas de banho dobradas, uma vermelha e outra azul, sobre uma mesa branca"],
   "laminas-oneblade-qual-comprar-e-quanto-duram": ["laminas-oneblade-aparador-philips.jpg", "Lâmina de um aparador em grande plano, sobre fundo escuro"],
   "melhor-aparador-de-barba": ["aparador-pente-barba.jpg", "Aparador com pente guia a aparar uma barba, em grande plano a preto e branco"],

@@ -33,6 +33,14 @@ function escapeHtml(value) {
 
 // [slug do produto, etiqueta, nota]
 const PICKS = {
+  "tinta-para-barba-como-pintar-a-barba-branca": {
+    title: "Para os brancos da barba",
+    items: [
+      ["just-for-men-control-gx-barba", "Para começar", "Champô que escurece os brancos aos poucos, a cada lavagem, com um resultado subtil."],
+      ["just-for-men-bigode-barba-m40", "Tapar tudo", "Tinta em gel com pincel, 5 minutos, do castanho claro ao preto."],
+      ["just-for-men-retoque-instantaneo-barba", "Só por um dia", "Cobre brancos e falhas e sai ao lavar. Serve também nas sobrancelhas."]
+    ]
+  },
   "como-aparar-pelos-intimos-masculinos": {
     title: "Aparadores para a zona íntima",
     items: [
