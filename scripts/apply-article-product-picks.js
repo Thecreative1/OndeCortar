@@ -335,11 +335,12 @@ const PICKS = {
     ]
   },
   "after-shave-para-que-serve": {
-    title: "Preparar a pele antes da lâmina",
+    title: "Os after shaves que escolhemos",
     items: [
-      ["proraso-pre-barba", "Pré-barba", "Para pele sensível: amolece os pelos antes do barbear."],
-      ["proraso-creme", "Creme de barbear", "Boa cobertura e deslize para navalha ou máquina de segurança."],
-      ["nivea-men-sensitive-fp15", "Depois da barba", "Creme sem álcool para pele sensível, com FPS 15: alternativa ao after-shave que arde."]
+      ["nivea-men-sensitive-balsamo-after-shave", "Pele sensível", "Bálsamo com 0% álcool, camomila e vitamina E: não arde."],
+      ["proraso-after-shave-balsamo-refrescante", "Fresco, de barbearia", "Loção com eucalipto, mentol e hamamélis."],
+      ["nivea-men-hyaluron-balsamo-after-shave", "Antirrugas", "Bálsamo com ácido hialurónico. Tem álcool na fórmula."],
+      ["old-spice-captain-after-shave", "Loção clássica", "Perfume marcado e propriedades antissépticas para pequenos cortes."]
     ]
   },
   "creme-de-rosto-para-homem-como-escolher": {
