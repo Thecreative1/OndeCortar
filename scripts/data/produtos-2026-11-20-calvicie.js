@@ -7,13 +7,13 @@ const ART = "como-disfarcar-a-calvicie-fibras-capilares";
 module.exports = [
   {
     slug: "toppik-fibras-capilares-castanho-escuro", name: "Toppik fibras capilares, castanho escuro (12 g)", brand: "Toppik", asin: "B0009FHJRS",
-    image: "imagens/produtos/toppik-fibras-capilares-castanho-escuro.jpg", alt: "Frasco de 12 g de fibras capilares Toppik Hair Building Fibers com as fibras espalhadas ao lado",
+    image: "imagens/produtos/toppik-fibras-capilares-castanho-escuro.jpg", alt: "Frasco de fibras capilares Toppik ao lado das amostras das cores: preto, castanho escuro, castanho médio, castanho claro e louro médio",
     bestFor: "Disfarçar cabelo fino",
     summary: "Indicado para quem tem o cabelo fino no topo, na risca ou nas entradas e quer que pareça mais denso no dia a dia.",
     useCase: "Com o cabelo lavado, seco e penteado, aplica-se como um saleiro (ou com o aplicador em spray, vendido à parte) só nas zonas finas, e toca-se de leve com os dedos. Sai ao lavar.",
     highlight: "Fibras capilares de queratina corada da Toppik, que se agarram aos fios por carga eletrostática e se misturam com o cabelo para o fazer parecer mais denso, segundo a marca; 12 g, castanho escuro, vendidas pela Amazon.",
     strengths: ["fibras de queratina que se misturam com o cabelo, segundo a marca", "a marca que aparece nas pesquisas de fibras capilares em Portugal", "vendida e enviada pela Amazon"],
-    limits: ["só castanho escuro na versão vendida pela Amazon, e a foto da ficha mostra o frasco preto: confirma a cor antes de comprar", "não resulta em zonas sem cabelo; evitar os olhos e não inalar"],
+    limits: ["só castanho escuro na versão vendida pela Amazon (a 2.ª amostra da foto); as fotos da Amazon mostram sempre o frasco preto, por isso confirma a cor antes de comprar", "não resulta em zonas sem cabelo; evitar os olhos e não inalar"],
     categories: ["cuidados-de-cabelo"],
     articles: [ART],
     related: ["imperio-fibras-capilares", "philips-hs7980-head-shaver", "just-for-men-control-gx-cabelo"]
