@@ -2,8 +2,8 @@
 // radar de procura (20/11), pedido pelo utilizador. Amazon.es "comprados el mes pasado" (20/11): Control GX champô
 // 3 000+, Control GX 2 em 1 2 000+, L'Oréal Professionnel Silver 600+, tinta em gel H45 400+. Os 4 vendidos pela
 // Amazon e em stock a 20/11. Touch of Grey (200+) ficou de fora: a ficha não tem informação (thin affiliate).
-// Categoria: pomadas-e-ceras é a única de cabelo; quando houver o nicho do champô anticaspa, criar "Cuidados de cabelo"
-// e mover estes para lá. Só dados das fichas na Amazon.es; as da série H estão mal escritas (packs de 3, champô de barba):
+// Categoria: começou em pomadas-e-ceras; mudou a 20/11 para loja/cuidados-de-cabelo/ (criada com o nicho do anticaspa)
+// Só dados das fichas na Amazon.es; as da série H estão mal escritas (packs de 3, champô de barba):
 // usados só os factos que se repetem (5 min, sem amoníaco, até 8 semanas, queratina, azeite, vitamina E, H25–H55).
 const ART = "cabelos-brancos-homem-como-disfarcar";
 module.exports = [
@@ -16,7 +16,7 @@ module.exports = [
     highlight: "Champô colorante da Just For Men para o cabelo: reduz os brancos gradualmente a cada uso, sem mudanças repentinas, com queratina e sem amoníaco nem peróxido, segundo a marca.",
     strengths: ["escurece aos poucos, sem o ar de cabelo pintado", "usa-se como um champô normal, sem misturas", "sem amoníaco nem peróxido, segundo a marca"],
     limits: ["não é para quem quer o cabelo escuro no próprio dia: o efeito acumula-se com as lavagens", "é para o cabelo: para a barba há o Control GX próprio; como colorante, pode dar alergia"],
-    categories: ["pomadas-e-ceras"],
+    categories: ["cuidados-de-cabelo"],
     articles: [ART, "tinta-para-barba-como-pintar-a-barba-branca"],
     related: ["just-for-men-control-gx-2em1", "just-for-men-control-gx-barba", "just-for-men-tinta-cabelo-h45"]
   },
@@ -29,7 +29,7 @@ module.exports = [
     highlight: "Versão 2 em 1 do Control GX: champô e condicionador que reduz os cabelos brancos gradualmente a cada uso, sem amoníaco nem peróxido, e que a marca diz poder usar-se todos os dias.",
     strengths: ["champô e condicionador num só frasco", "pode usar-se todos os dias, segundo a marca", "resultado gradual e discreto"],
     limits: ["tal como o normal, o efeito é gradual", "entre os ingredientes há corantes como uma fenilenodiamina e aminofenóis: quem é alérgico a tintas deve ter cuidado"],
-    categories: ["pomadas-e-ceras"],
+    categories: ["cuidados-de-cabelo"],
     articles: [ART],
     related: ["just-for-men-control-gx-cabelo", "just-for-men-tinta-cabelo-h45", "loreal-professionnel-silver-champo"]
   },
@@ -42,7 +42,7 @@ module.exports = [
     highlight: "Tinta em gel da Just For Men para o cabelo (série H): 5 minutos, sem amoníaco, com queratina, azeite e vitamina E, e até 8 semanas sem desbotar com as lavagens, segundo a marca.",
     strengths: ["tapa os brancos em 5 minutos", "até 8 semanas sem desbotar com as lavagens, segundo a marca", "várias cores, do castanho claro ao preto"],
     limits: ["teste de alergia antes de cada uso, como pede o folheto; não é para quem já reagiu a tintas", "a raiz branca volta a ver-se à medida que o cabelo cresce, e a cor errada nota-se"],
-    categories: ["pomadas-e-ceras"],
+    categories: ["cuidados-de-cabelo"],
     articles: [ART],
     related: ["just-for-men-control-gx-cabelo", "just-for-men-bigode-barba-m40", "just-for-men-control-gx-2em1"]
   },
@@ -55,7 +55,7 @@ module.exports = [
     highlight: "Champô neutralizador da L'Oréal Professionnel para cabelo branco ou grisalho: micropigmentos violeta que neutralizam os tons amarelados, com aminoácidos para suavidade e brilho, segundo a marca.",
     strengths: ["neutraliza os tons amarelados do cabelo branco ou grisalho", "usa-se como um champô normal", "da linha profissional da L'Oréal"],
     limits: ["não escurece nem tapa os brancos: é para quem os assume", "é um champô de uso ocasional para o tom: para lavar todos os dias continuas a precisar do teu champô"],
-    categories: ["pomadas-e-ceras"],
+    categories: ["cuidados-de-cabelo"],
     articles: [ART],
     related: ["just-for-men-control-gx-cabelo", "just-for-men-control-gx-2em1", "proraso-balsamo-barba"]
   }

@@ -188,6 +188,10 @@ Object.entries(byCategory).forEach(([slug, prods]) => {
   block = block.replace(/A seleção completa \(\d+ produtos?\)/, "A seleção completa (" + count + " produtos)");
   write(rel, html.slice(0, start) + block + html.slice(end));
   console.log("catálogo " + rel + " +" + fresh.length + " (" + count + ")");
+  // Contagem "N produtos" do cartão da categoria na página da loja (ficava desatualizada; corrigido a 2026-11-20)
+  const loja = read("loja/index.html");
+  const re = new RegExp('(href="\\.\\./loja/' + slug + '/">[\\s\\S]*?<span class="loja-cat-count">)\\d+ produtos?(</span>)');
+  if (re.test(loja)) write("loja/index.html", loja.replace(re, "$1" + count + " produtos$2"));
 });
 
 // Sitemap

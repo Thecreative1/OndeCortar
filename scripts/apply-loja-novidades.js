@@ -28,7 +28,8 @@ const SHORTCUTS = [
   ["acessorios-de-barbeiro/", "Acessórios de barbeiro"],
   ["oleos-e-balms/", "Óleos e balms"],
   ["cuidados-de-rosto/", "Cuidados de rosto"],
-  ["pomadas-e-ceras/", "Pomadas e ceras"]
+  ["pomadas-e-ceras/", "Pomadas e ceras"],
+  ["cuidados-de-cabelo/", "Cuidados de cabelo"]
 ];
 
 // [slug, etiqueta, porquê, quando não escolher, [artigo, texto do link]]

@@ -33,6 +33,15 @@ function escapeHtml(value) {
 
 // [slug do produto, etiqueta, nota]
 const PICKS = {
+  "champo-anticaspa-homem-qual-escolher": {
+    title: "Champôs anticaspa",
+    items: [
+      ["vichy-dercos-anticaspa-oleoso", "A nossa escolha", "Caspa persistente e cabelo oleoso: selénio DS e ácido salicílico, 4 semanas."],
+      ["vichy-dercos-anticaspa-seco", "Couro cabeludo seco", "A mesma fórmula, para couro cabeludo seco ou sensível."],
+      ["hs-classic-anticaspa", "Todos os dias", "Piroctona olamina, para uso diário em todo o tipo de cabelo."],
+      ["hs-clinical-strength-anticaspa", "Comichão forte", "1% de sulfureto de selénio, para caspa persistente com comichão."]
+    ]
+  },
   "cabelos-brancos-homem-como-disfarcar": {
     title: "Para os cabelos brancos",
     items: [
