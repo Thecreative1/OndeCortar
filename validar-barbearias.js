@@ -36,6 +36,7 @@ const SLUGS_PUBLICADOS = new Set([
   "barbearia-moderna-oliveira-do-hospital",
   "villains-barbershop-baguim-do-monte",
   "mans-house-portimao", // renomeada "Brell Studio" em 2026-10-01; URL mantido
+  "koureia-barbearia", // renomeada "koureia Barbershop" pelo dono a 2026-11-20 (formulário); URL mantido
   // Renomeadas a 2026-10-28 (revalidação no Google Maps, autorizadas pelo utilizador); URL mantido
   "the-barbers", // The Barber Company Loulé
   "barbearia-alves", // Barbearia Caciano

@@ -12724,7 +12724,7 @@ const barbearias = [
     "qualidade_ficha": "alta"
   },
   {
-    "nome": "koureia Barbearia",
+    "nome": "koureia Barbershop",
     "slug": "koureia-barbearia",
     "distrito": "Évora",
     "concelho": "Évora",
@@ -12732,13 +12732,13 @@ const barbearias = [
     "freguesia": "",
     "city": "Évora",
     "zone": "",
-    "morada": "Rua Bernardino Piteira 2, 1.º Esq., 7005-161 Évora",
-    "address_raw": "Rua Bernardino Piteira 2, 1.º Esq., 7005-161 Évora",
-    "street": "Rua Bernardino Piteira",
-    "street_number": "2",
-    "complemento": "1.º Esq.",
+    "morada": "Rua de Serpa Pinto 54-C, 7000-556 Évora",
+    "address_raw": "Rua de Serpa Pinto 54-C, 7000-556 Évora",
+    "street": "Rua de Serpa Pinto",
+    "street_number": "54-C",
+    "complemento": "",
     "localidade": "Évora",
-    "codigo_postal": "7005-161",
+    "codigo_postal": "7000-556",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
@@ -12748,7 +12748,7 @@ const barbearias = [
     "website": null,
     "instagram": "https://www.instagram.com/koureia_barbershop/",
     "facebook": null,
-    "google_maps": null,
+    "google_maps": "https://maps.google.com/?cid=9075013352886210366",
     "whatsapp": "+351 968 457 642",
     "horario": "Seg 15h-19h30; Ter-Sex 10h-19h30; Sáb 9h-13h",
     "horario_fonte": {
@@ -12767,10 +12767,10 @@ const barbearias = [
       }
     },
     "observacoes": null,
-    "nota_interna": "Atualizada pelo dono no formulário, 20/11/2026: morada nova (antes R. de Serpa Pinto 54, 7000-556; o Google Maps ainda mostra essa a 20/11), telemóvel (antes fixo 266 098 164), Instagram, preços e WhatsApp confirmado (whatsapp: sim). Rua, CP e coords da morada nova confirmados no Google Maps a 20/11. Horário do formulário vazio: fica o do Maps.",
+    "nota_interna": "Atualizada pelo dono no formulário, 20/11/2026, em 3 envios: 05:05 com a Rua Bernardino Piteira 2, 1.º esq. (publicada por engano de manhã), corrigida às 15:50 para Rua Serpa Pinto 54-C (a morada que o Google Maps tem), e às 15:56 com o nome koureia Barbershop. Telemóvel 968 457 642 (antes fixo 266 098 164), Instagram, preços e WhatsApp confirmado (whatsapp: sim, 05:05 e 15:50). Coordenadas da ficha do Google Maps (cid 9075013352886210366). Horário do formulário vazio: fica o do Maps.",
     "coords": [
-      38.5655916,
-      -7.8973326
+      38.5708078,
+      -7.911932
     ],
     "status": "confirmado",
     "fontes": [
