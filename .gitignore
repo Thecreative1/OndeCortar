@@ -1,3 +1,6 @@
 node_modules/
 playwright-report/
 .claude/worktrees/
+
+# Radar de procura (relatórios internos — não publicar)
+/radar/
