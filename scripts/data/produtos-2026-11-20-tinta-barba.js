@@ -34,11 +34,11 @@ module.exports = [
     related: ["just-for-men-control-gx-barba", "just-for-men-retoque-instantaneo-barba", "proraso-balsamo-barba"]
   },
   {
-    slug: "just-for-men-retoque-instantaneo-barba", name: "Just For Men Retoque Instantâneo (barba e sobrancelhas)", brand: "Just For Men", asin: "B0CB45W2SG",
+    slug: "just-for-men-retoque-instantaneo-barba", name: "Just For Men Retoque Instantâneo, castanho médio (barba e sobrancelhas)", brand: "Just For Men", asin: "B0CB45W2SG",
     image: "imagens/produtos/just-for-men-retoque-canas-barba.jpg", alt: "Embalagem do Just For Men Retoque Instantâneo para barba e sobrancelhas, com escova aplicadora, castanho médio",
     bestFor: "Um dia ou disfarçar falhas",
     summary: "Indicado para cobrir os brancos ou as falhas da barba só por um dia, num evento ou para experimentar uma cor antes de pintar.",
-    useCase: "Aplica-se com a escova, como uma máscara de pestanas, diretamente nos brancos ou nas zonas com menos pelo. Ao fim de 5 minutos está pronto e aguenta o dia; sai ao lavar com sabão ou gel de barba e água morna.",
+    useCase: "Aplica-se com a escova, como uma máscara de pestanas, diretamente nos brancos ou nas zonas com menos pelo. Ao fim de 5 minutos está pronto e aguenta o dia; sai ao lavar com sabão ou gel de barba e água morna. Esta é a cor castanho médio; na mesma página da Amazon há castanho escuro e preto.",
     highlight: "Cor temporária da Just For Men para barba e sobrancelhas: cobre os brancos, preenche as zonas com menos pelo, dura o dia e sai ao lavar. Há 3 tons.",
     strengths: ["temporário: sai ao lavar, sem compromisso", "disfarça também as falhas da barba", "serve para as sobrancelhas, ao contrário da tinta em gel"],
     limits: ["dura só um dia: para todos os dias, a tinta ou o champô gradual dão menos trabalho", "só 3 tons; pode irritar a pele, e aí deve deixar de ser usado"],
