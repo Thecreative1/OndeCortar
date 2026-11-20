@@ -33,6 +33,15 @@ function escapeHtml(value) {
 
 // [slug do produto, etiqueta, nota]
 const PICKS = {
+  "como-disfarcar-a-calvicie-fibras-capilares": {
+    title: "Para disfarçar ou rapar",
+    items: [
+      ["toppik-fibras-capilares-castanho-escuro", "Fibras capilares", "Queratina que se agarra ao cabelo fino. Castanho escuro, vendida pela Amazon."],
+      ["imperio-fibras-capilares", "Sem queratina", "Algodão orgânico, 10 cores. Fixa-se com laca."],
+      ["philips-hs7980-head-shaver", "Rapar a cabeça", "Cabeça flexível a 360°, feita para o couro cabeludo."],
+      ["skull-shaver-pitbull-sx5", "Rapar, na palma da mão", "Shaver com pega ergonómica, resistente à água."]
+    ]
+  },
   "creme-depilatorio-homem-como-usar": {
     title: "Cremes depilatórios para homem",
     items: [

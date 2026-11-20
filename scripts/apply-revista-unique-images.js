@@ -23,6 +23,7 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").repl
 
 // slug do artigo → [ficheiro em imagens/revista/, alt]
 const NEW_HEROES = {
+  "como-disfarcar-a-calvicie-fibras-capilares": ["disfarcar-calvicie-entradas.jpg", "Barbeiro a cortar o cabelo de um cliente com a máquina, com os lados curtos e o topo penteado com pente"],
   "creme-depilatorio-homem-como-usar": ["creme-depilatorio-homem.jpg", "Tubo de creme e dois boiões num nicho de duche com vapor"],
   "champo-anticaspa-homem-qual-escolher": ["champo-anticaspa-homem.jpg", "Homem no duche, de perfil, a ler o rótulo de um frasco de champô"],
   "cabelos-brancos-homem-como-disfarcar": ["cabelos-brancos-homem.jpg", "Homem de meia-idade com o cabelo grisalho curto e pera branca, ao ar livre junto a um rio"],
