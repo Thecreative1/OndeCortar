@@ -12732,39 +12732,52 @@ const barbearias = [
     "freguesia": "",
     "city": "Évora",
     "zone": "",
-    "morada": "R. de Serpa Pinto 54, 7000-556 Évora",
-    "address_raw": "R. de Serpa Pinto 54, 7000-556 Évora",
-    "street": "R. de Serpa Pinto",
-    "street_number": "54",
-    "complemento": "",
+    "morada": "Rua Bernardino Piteira 2, 1.º Esq., 7005-161 Évora",
+    "address_raw": "Rua Bernardino Piteira 2, 1.º Esq., 7005-161 Évora",
+    "street": "Rua Bernardino Piteira",
+    "street_number": "2",
+    "complemento": "1.º Esq.",
     "localidade": "Évora",
-    "codigo_postal": "7000-556",
+    "codigo_postal": "7005-161",
     "country": "Portugal",
     "data_confidence": "high",
     "needs_review": false,
     "location_flags": [],
-    "telefone": "+351 266 098 164",
+    "telefone": "+351 968 457 642",
     "email": null,
     "website": null,
-    "instagram": null,
+    "instagram": "https://www.instagram.com/koureia_barbershop/",
     "facebook": null,
     "google_maps": null,
+    "whatsapp": "+351 968 457 642",
     "horario": "Seg 15h-19h30; Ter-Sex 10h-19h30; Sáb 9h-13h",
     "horario_fonte": {
       "nome": "Google Maps",
       "url": "https://www.google.com/maps/search/?api=1&query=koureia%20Barbearia%20%C3%89vora",
       "data": "2026-10-28"
     },
+    "precos": {
+      "corte": 13,
+      "barba": 9,
+      "corte_barba": 18,
+      "fonte": {
+        "nome": "Barbearia",
+        "url": "https://www.instagram.com/koureia_barbershop/",
+        "data": "2026-11-20"
+      }
+    },
     "observacoes": null,
+    "nota_interna": "Atualizada pelo dono no formulário, 20/11/2026: morada nova (antes R. de Serpa Pinto 54, 7000-556; o Google Maps ainda mostra essa a 20/11), telemóvel (antes fixo 266 098 164), Instagram, preços e WhatsApp confirmado (whatsapp: sim). Rua, CP e coords da morada nova confirmados no Google Maps a 20/11. Horário do formulário vazio: fica o do Maps.",
     "coords": [
-      38.5708266,
-      -7.911948
+      38.5655916,
+      -7.8973326
     ],
     "status": "confirmado",
     "fontes": [
-      "https://guiaempresas.pt/barbearia/evora/koureia-barbearia/"
+      "https://guiaempresas.pt/barbearia/evora/koureia-barbearia/",
+      "https://www.instagram.com/koureia_barbershop/"
     ],
-    "ultima_validacao": "2026-10-28",
+    "ultima_validacao": "2026-11-20",
     "mostrar_no_mapa": true,
     "qualidade_ficha": "alta"
   },
