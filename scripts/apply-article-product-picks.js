@@ -33,6 +33,15 @@ function escapeHtml(value) {
 
 // [slug do produto, etiqueta, nota]
 const PICKS = {
+  "laminas-gillette-fusion5-proglide-ou-mach3": {
+    title: "Recargas Gillette",
+    items: [
+      ["gillette-proglide-recargas", "A nossa escolha", "5 lâminas, Flexball, até 30 barbeados. Cabos ProGlide e Fusion5."],
+      ["gillette-fusion5-recargas", "A escolha segura", "5 lâminas e aparador, até 20 barbeados. Cabos Fusion5 e ProGlide."],
+      ["gillette-mach3-recargas", "Cabo Mach3", "3 lâminas, até 15 barbeados. Só cabos Mach3."],
+      ["gillette-skinguard-sensitive-recargas", "Pele sensível", "2 lâminas com proteção SkinGuard. Cabos ProGlide, ProShield e Fusion."]
+    ]
+  },
   "tinta-para-barba-como-pintar-a-barba-branca": {
     title: "Para os brancos da barba",
     items: [
