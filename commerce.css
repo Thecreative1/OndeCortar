@@ -5600,3 +5600,22 @@ body[data-page="category"] .oc-gift-guide:hover { text-decoration: underline; }
   margin-left: 1px;
 }
 /* OC-WORDMARK-END */
+
+/* OC-HERO-SEM-CORTE-START — capa dos artigos sem corte nem zoom (2026-11-20).
+   Antes a figure esticava até à altura do texto (align-items: stretch + img absoluta com cover):
+   59 de 64 capas são ao largo (1200x675/800) e apareciam ao alto, com zoom de 1,7x a 3x no desktop;
+   no mobile o 16/10 fixo cortava as 5 capas ao alto. Agora a foto mostra-se na proporção dela. */
+body[data-page="article"] .article-header--media { align-items: center; }
+body[data-page="article"] .article-hero-media { min-height: 0; align-self: center; }
+body[data-page="article"] .article-hero-media img {
+  position: static;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  max-height: 640px;
+  object-fit: cover;
+}
+@media (max-width: 900px) {
+  body[data-page="article"] .article-hero-media img { max-height: 70vh; }
+}
+/* OC-HERO-SEM-CORTE-END */
