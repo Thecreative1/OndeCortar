@@ -31,7 +31,8 @@ const OUT_DIR = path.join(ROOT, "amazon-api");
 const PARTNER_TAG = "ondecortar27-21";
 const MARKETPLACE = "www.amazon.es";
 const TOKEN_URL = process.env.AMAZON_CREATORS_TOKEN_URL || "https://api.amazon.co.uk/auth/o2/token";
-const API_URL = "https://creatorsapi.amazon/catalog/v1/getItems";
+const TOKEN_URLS_ALT = ["https://api.amazon.co.uk/auth/o2/token", "https://api.amazon.com/auth/o2/token", "https://api.amazon.co.jp/auth/o2/token"];
+const API_URL ="https://creatorsapi.amazon/catalog/v1/getItems";
 const BATCH = 10;
 const DELAY_MS = 1200;
 const RESOURCES = [
@@ -95,21 +96,29 @@ async function getToken() {
   if (!id || !secret) {
     throw new Error("Faltam AMAZON_CREATORS_ID e/ou AMAZON_CREATORS_SECRET nas variáveis de ambiente.");
   }
-  const res = await fetch(TOKEN_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ grant_type: "client_credentials", client_id: id, client_secret: secret, scope: "creatorsapi::default" })
-  });
-  const text = await res.text();
-  if (!res.ok) {
+  // O endpoint depende da versão da credencial (3.2 = EU, 3.1 = NA, 3.3 = FE). Tenta o europeu
+  // primeiro e, se a credencial for recusada, os outros; o que funcionar fica no log.
+  const urls = [TOKEN_URL, ...TOKEN_URLS_ALT.filter((u) => u !== TOKEN_URL)];
+  let lastErr = null;
+  for (const url of urls) {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ grant_type: "client_credentials", client_id: id, client_secret: secret, scope: "creatorsapi::default" })
+    });
+    const text = await res.text();
+    if (res.ok) {
+      const data = JSON.parse(text);
+      if (!data.access_token) throw new Error("Resposta do token sem access_token.");
+      console.log(`Token obtido em ${url}`);
+      return data.access_token;
+    }
     // Nunca escrever o pedido (tem o segredo); a resposta de erro do LwA não tem credenciais.
-    const err = new Error(`Token recusado (${res.status}) em ${TOKEN_URL}: ${text.slice(0, 300)}`);
-    err.status = res.status;
-    throw err;
+    lastErr = new Error(`Token recusado (${res.status}) em ${urls.join(", ")}: ${text.slice(0, 300)}`);
+    lastErr.status = res.status;
+    if (res.status !== 400 && res.status !== 401) break;
   }
-  const data = JSON.parse(text);
-  if (!data.access_token) throw new Error("Resposta do token sem access_token.");
-  return data.access_token;
+  throw lastErr;
 }
 
 async function getItems(token, asins) {
