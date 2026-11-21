@@ -1,0 +1,41 @@
+name: Amazon stock
+
+# Verificação diária do stock e do vendedor dos produtos da loja pela Creators API da Amazon.
+# Só leitura: não muda páginas nem dados. O resumo do job lista os problemas (sem preços).
+# Falha (e o GitHub manda email) quando há produtos sem stock que não estão em
+# scripts/data/amazon-stock-ignorar.js. Script e regras: scripts/verificar-amazon-api.js.
+
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  stock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Verificar stock na Amazon.es
+        env:
+          AMAZON_CREATORS_ID: ${{ secrets.AMAZON_CREATORS_ID }}
+          AMAZON_CREATORS_SECRET: ${{ secrets.AMAZON_CREATORS_SECRET }}
+        run: node scripts/verificar-amazon-api.js
+
+      - name: Guardar relatório
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: amazon-stock
+          path: amazon-api/*.json
+          retention-days: 14
+          if-no-files-found: ignore

@@ -4,3 +4,6 @@ playwright-report/
 
 # Radar de procura (relatórios internos — não publicar)
 /radar/
+
+# Relatórios da Creators API da Amazon (internos — não publicar)
+/amazon-api/

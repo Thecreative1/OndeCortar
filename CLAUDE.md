@@ -253,6 +253,7 @@ Se estes markers desaparecerem, o build falha com erro explícito. Não os remov
 | `apply-product-quick-decision.js` | Idempotente — "Compra esta se… / Evita esta se…" nas páginas de produto (markers OC-QUICK-DECISION-START/END), a partir de `summary` e `limits[0]` do catálogo |
 | `apply-revista-conversion.js` | Idempotente — tabela "Melhor para" (OC-ARTICLE-COMPARE) e "Se tivéssemos de escolher apenas um" (OC-SINGLE-PICK) nos guias de compra, só onde o artigo já indica uma preferência |
 | `check-amazon-links.js` | Estado dos links Amazon do catálogo → `amazon-product-health.json`. "blocked" = deteção de bots, não link partido; **não prova stock** (ver memória: `fetch('/dp/ASIN')` no browser em amazon.es) |
+| `verificar-amazon-api.js` | Stock, vendedor e buy box dos produtos da loja pela **Creators API** (app "ondecortar", configurada a 2026-11-21; credenciais só nos segredos do GitHub `AMAZON_CREATORS_ID`/`AMAZON_CREATORS_SECRET`, nunca em ficheiros — o repositório é o site). Só leitura; relatório em `amazon-api/` (fora do git) **sem preços**. Corre todos os dias no workflow `Amazon stock` (06h30 UTC) e falha — email do GitHub — se houver produtos ativos sem stock que não estejam em `scripts/data/amazon-stock-ignorar.js`. Fase 1 de 3 (depois fotos pela API, preços só em teste). O acesso cai se as vendas descerem de 10 em 30 dias |
 | `check-amazon-products.ps1` | Legado: lê as páginas antigas da raiz (`maquinas.html`, `navalhas.html`…), que hoje são só redirecionamentos. Usar `check-amazon-links.js` |
 
 ## SEO e schema markup
