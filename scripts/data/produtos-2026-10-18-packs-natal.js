@@ -9,7 +9,7 @@ const NATAL = "prendas-de-natal-para-homem";
 
 module.exports = [
   {
-    slug: "loreal-men-expert-power-age-rotina", name: "L'Oréal Men Expert Power Age Rotina (sérum + creme)", brand: "L'Oréal Men Expert", asin: "B0BZJQ3LQT",
+    slug: "loreal-men-expert-power-age-rotina", name: "L'Oréal Men Expert Power Age Rotina (sérum + creme)", brand: "L'Oréal Men Expert", asin: "B0GQVGR5MM",
     image: "imagens/produtos/loreal-men-expert-power-age-rotina.jpg", alt: "Necessaire de oferta L'Oréal Men Expert Power Age com sérum de ácido hialurónico e creme anti-idade",
     bestFor: "Prenda de rosto anti-idade",
     summary: "Indicada para oferecer a quem começa a notar rugas e pele baça e ainda não tem rotina: dois passos, sérum e creme, numa necessaire.",
