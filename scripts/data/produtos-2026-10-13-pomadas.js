@@ -90,13 +90,13 @@ module.exports = [
     related: ["got2b-beach-matt", "american-crew-fiber", "american-crew-matte-clay"]
   },
   {
-    slug: "giorgi-line-gel-extra-forte", name: "Giorgi Line Gel Fixador Extra Forte", brand: "Giorgi Line", asin: "B09WHMN5MG",
-    image: "imagens/produtos/giorgi-line-gel-extra-forte.jpg", alt: "Tubo amarelo de gel fixador Giorgi Line Extra Forte de 170 ml",
+    slug: "giorgi-line-gel-extra-forte", name: "Giorgi Line Gel Fixador Extra Forte", brand: "Giorgi Line", asin: "B09WHPS1BG",
+    image: "imagens/produtos/giorgi-line-gel-extra-forte.jpg", alt: "Tubo amarelo de gel fixador Giorgi Line Extra Forte XXL de 240 ml",
     bestFor: "Gel, fixação o dia todo",
     summary: "Indicado para quem quer o penteado no sítio o dia inteiro, sem mexer, e não se importa com o efeito molhado do gel.",
     useCase: "Faz sentido em penteados que têm de aguentar trabalho, vento ou capacete: aplica em cabelo húmido ou seco e molda com os dedos ou o pente.",
-    highlight: "Gel fixador extra forte (nível 3), tubo de 170 ml; a marca promete até 48 horas e uma textura não oleosa.",
-    strengths: ["fixação extra forte, até 48 horas segundo a marca", "textura não oleosa e sem resíduos visíveis, diz a marca", "tubo de 170 ml para uso diário"],
+    highlight: "Gel fixador extra forte (nível 3), tubo XXL de 240 ml; a marca promete até 48 horas e uma textura não oleosa.",
+    strengths: ["fixação extra forte, até 48 horas segundo a marca", "textura não oleosa e sem resíduos visíveis, diz a marca", "tubo XXL de 240 ml para uso diário"],
     limits: ["como todos os géis, deixa o cabelo rígido: não dá para remodelar", "para ar natural e sem brilho, uma argila"],
     categories: ["pomadas-e-ceras"],
     articles: [POMADA],
