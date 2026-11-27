@@ -90,12 +90,28 @@ function loadIgnore() {
   return require(file);
 }
 
+// Valores colados à mão trazem às vezes espaços, quebras de linha ou aspas à volta.
+const cleanCredential = (v) => String(v || "").trim().replace(/^["']+|["']+$/g, "").trim();
+
+// Para perceber um "invalid_client" sem nunca escrever o segredo: fim do ID (o ID não é
+// secreto, aparece na página da Creators API), tamanhos e se o formato é o esperado.
+function describeCredential(rawId, rawSecret, id, secret) {
+  const limpo = (raw, v) => (String(raw || "") !== v ? " — tinha espaços/aspas à volta (limpos)" : "");
+  return [
+    `ID: termina em …${id.slice(-6)}, ${id.length} caracteres, começa por "amzn1.application-oa2-client.": ${id.startsWith("amzn1.application-oa2-client.") ? "sim" : "não"}${limpo(rawId, id)}`,
+    `Segredo: ${secret.length} caracteres, começa por "amzn1.oa2-cs.v1.": ${secret.startsWith("amzn1.oa2-cs.v1.") ? "sim" : "não"}, espaços no meio: ${/\s/.test(secret) ? "sim" : "não"}${limpo(rawSecret, secret)}`
+  ];
+}
+
 async function getToken() {
-  const id = process.env.AMAZON_CREATORS_ID;
-  const secret = process.env.AMAZON_CREATORS_SECRET;
+  const rawId = process.env.AMAZON_CREATORS_ID;
+  const rawSecret = process.env.AMAZON_CREATORS_SECRET;
+  const id = cleanCredential(rawId);
+  const secret = cleanCredential(rawSecret);
   if (!id || !secret) {
     throw new Error("Faltam AMAZON_CREATORS_ID e/ou AMAZON_CREATORS_SECRET nas variáveis de ambiente.");
   }
+  describeCredential(rawId, rawSecret, id, secret).forEach((line) => console.log(line));
   // O endpoint depende da versão da credencial (3.2 = EU, 3.1 = NA, 3.3 = FE). Tenta o europeu
   // primeiro e, se a credencial for recusada, os outros; o que funcionar fica no log.
   const urls = [TOKEN_URL, ...TOKEN_URLS_ALT.filter((u) => u !== TOKEN_URL)];
