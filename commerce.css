@@ -2553,8 +2553,19 @@ body[data-page="article"] .article-header p {
     padding: 18px 0;
   }
 
+  /* Menu mobile: o backdrop-filter faz do cabeçalho o contentor dos filhos
+     position: fixed (.nav-links, .nav-backdrop) e o fundo escurecido só cobria
+     o cabeçalho, por cima do botão "Fechar". Sem ele, o fundo cobre o ecrã e o
+     z-index do .nav deixa a barra (e o painel) por cima do fundo. */
+  .site-header {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
   .nav {
     display: block;
+    position: relative;
+    z-index: 55;
     padding: 12px 14px;
     border-radius: 24px;
   }
